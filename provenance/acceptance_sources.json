@@ -4,9 +4,9 @@
   "upstream_commit": "a614c7173822a93c1e64ac28d1541cbac028cbd8",
   "coolprop_wrapper_commit": "a7c40902ff66faf6ed668986398bb1b9faa16e13",
   "database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
-  "native_source_commit": "9371346112e6e2d6de16a35291402b3495b0845e",
+  "native_source_commit": "dfbcaa1d4cbb9c84c69e4fe3f56618150829e06c",
   "native_version": "0.2.1",
-  "ci_tested_code_commit": "9b3d67e8e56f30381a7ae127792de42079148546",
+  "ci_tested_code_commit": "dfbcaa1d4cbb9c84c69e4fe3f56618150829e06c",
   "literature": [
     {
       "file_name": "Chan2025.pdf",
@@ -50,6 +50,8 @@
     "sensitivity_checks_total": 32,
     "experimental_status": "descriptive_only; combined uncertainty and independence not established",
     "matlab_status": "not_run",
-    "executed_source_note": "Report records executed module hashes. Snapshots retain runner before GUI serialization repair and comparator before invalid-quantity/unit rejection guard. Both later changes leave valid numerical pilot inputs and outputs unchanged."
+    "executed_source_note": "Report records executed module hashes. Snapshots retain runner before GUI serialization repair and comparator before invalid-quantity/unit rejection guard. Both later changes leave valid numerical pilot inputs and outputs unchanged.",
+    "ci_receipt": "outputs/verification/bartolomey-windows-ci.json",
+    "wheel_smoke_receipt": "outputs/verification/bartolomey-wheel-smoke.json"
   }
 }

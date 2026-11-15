@@ -1,0 +1,13 @@
+{
+  "schema": "openstream-bartolomey-wheel-smoke-v1",
+  "code_commit": "dfbcaa1d4cbb9c84c69e4fe3f56618150829e06c",
+  "wheel_sha256": "3eb4f8b2d47a166578952bf1c0beb4ecf571c1f5abe98a801b085e0993590f23",
+  "installation": "Separate target, --no-deps; runtime dependencies from pinned project environment.",
+  "checks": {
+    "imported_both_modules_from_wheel_target": true,
+    "all_34_source_records_loaded": true,
+    "first_record_native_input_construction": true,
+    "exact_linear_comparison": true
+  },
+  "scope": "Packaging smoke only; does not replace numerical/experimental acceptance."
+}

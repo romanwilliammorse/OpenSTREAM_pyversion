@@ -15,6 +15,17 @@ outputs/validation/bartolomey-pilot-01. No fitting, MATLAB execution or
 uncertainty-qualified experimental pass is claimed. The acceptance matrix
 now includes this later evidence; the initial audit paragraph below is historical.
 
+Published numerical/code checkpoint: `dfbcaa1d4cbb9c84c69e4fe3f56618150829e06c`.
+Fresh Windows CI: 298 Python tests, 9 JavaScript tests, successful wheel/sdist
+build, with two retained existing FourField warnings. Separate installed-wheel
+smoke passed. Receipts are in outputs/verification/bartolomey-*.
+Next: freeze a separate study addressing the zero-quality interpolation and
+heated-end mesh effects, retain the three original failures, quantify the
+measurement/input/digitization uncertainty, then reproduce calibrated MRM
+settings separately from independent validation. New MATLAB references and
+other dataset/framework acceptance requirements remain open.
+
+
 After completing and publishing the acceptance audit, implemented the requested
 GUI usability changes: original name-tag spelling in run titles/history/footer,
 an initial four-model chooser, prominent workspace model selection, and a

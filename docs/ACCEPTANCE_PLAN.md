@@ -23,6 +23,12 @@ The GUI Windows CI checkpoint passed 213 Python and nine JavaScript tests, with 
 
 ## Ordered work
 
+Latest clean Windows code checkpoint `dfbcaa1` passes 298 Python and nine
+JavaScript tests, with two retained FourField warnings, and builds both
+distributions. The separate wheel-install smoke also passes. These are
+functional/reproducibility checks; the pilot still fails three frozen mesh
+criteria. Evidence: [CI receipt](../outputs/verification/bartolomey-windows-ci.json).
+
 ### 1. Establish trustworthy case and data contracts (P0)
 
 Create a case registry with exact source/data revision, dataset/record ID, geometry, heating profile, input variables and units, closure coefficients, property backend/version, mesh/time controls, output definitions, comparison coordinates and calibration membership. Preserve raw source values beside normalized values and record every transformation. Missing coordinates, uncertainty or onset data must not become zeros.

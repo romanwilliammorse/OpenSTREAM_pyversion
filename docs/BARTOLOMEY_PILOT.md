@@ -122,6 +122,16 @@ framework requirements remain open in the [acceptance matrix](ACCEPTANCE_MATRIX.
 
 ## Reproducible artifacts
 
+Clean Windows CI at code commit `dfbcaa1d4cbb9c84c69e4fe3f56618150829e06c`
+passed **298 Python tests and 9 JavaScript tests**, and built the wheel
+and source distribution. Two existing FourField zero-slip runtime warnings
+remain visible; the Bartolomey pilot itself emitted none. See the
+[CI receipt](../outputs/verification/bartolomey-windows-ci.json) and
+[workflow run](https://github.com/romanwilliammorse/OpenSTREAM_pyversion/actions/runs/43665945457).
+These checks do not close the three failed numerical sensitivity criteria.
+
+- [Focused native test log](../outputs/verification/bartolomey-tests.log): 85 passed, including injected export-failure accounting.
+- [Final package build log](../outputs/verification/bartolomey-build-final.log) and [separate-target wheel smoke receipt](../outputs/verification/bartolomey-wheel-smoke.json): installed modules read all 34 records, construct native inputs, and reproduce an exact linear comparison; pinned dependencies remain supplied by the project environment.
 - [Raw campaign report](../outputs/validation/bartolomey-pilot-01/report.json): every run, comparison, physical gate and sensitivity result.
 - [Summary table](../outputs/validation/bartolomey-pilot-01/summary/summary.md) and [all-run CSV](../outputs/validation/bartolomey-pilot-01/summary/all_runs.csv).
 - [Complete case registry](../outputs/validation/bartolomey-pilot-01/case_registry.json): raw/normalized values, missing data, source hashes and selection reasons.

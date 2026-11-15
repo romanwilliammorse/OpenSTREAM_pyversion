@@ -8,9 +8,9 @@
     "upstream_commit": "a614c7173822a93c1e64ac28d1541cbac028cbd8",
     "coolprop_wrapper_commit": "a7c40902ff66faf6ed668986398bb1b9faa16e13",
     "database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
-    "native_source_commit": "9371346112e6e2d6de16a35291402b3495b0845e",
+    "native_source_commit": "dfbcaa1d4cbb9c84c69e4fe3f56618150829e06c",
     "native_version": "0.2.1",
-    "ci_tested_code_commit": "9b3d67e8e56f30381a7ae127792de42079148546",
+    "ci_tested_code_commit": "dfbcaa1d4cbb9c84c69e4fe3f56618150829e06c",
     "literature": [
       {
         "file_name": "Chan2025.pdf",
@@ -54,7 +54,9 @@
       "sensitivity_checks_total": 32,
       "experimental_status": "descriptive_only; combined uncertainty and independence not established",
       "matlab_status": "not_run",
-      "executed_source_note": "Report records executed module hashes. Snapshots retain runner before GUI serialization repair and comparator before invalid-quantity/unit rejection guard. Both later changes leave valid numerical pilot inputs and outputs unchanged."
+      "executed_source_note": "Report records executed module hashes. Snapshots retain runner before GUI serialization repair and comparator before invalid-quantity/unit rejection guard. Both later changes leave valid numerical pilot inputs and outputs unchanged.",
+      "ci_receipt": "outputs/verification/bartolomey-windows-ci.json",
+      "wheel_smoke_receipt": "outputs/verification/bartolomey-wheel-smoke.json"
     }
   },
   "scope_and_status_rules": [
@@ -247,7 +249,7 @@
     "docs/acceptance/plan.json": "2e345a7027f1f0df002c0197251c3702238cecd83d80d7e1a65ec9629595d0ad",
     "docs/upstream_inventory.json": "c9034bacef4e464ffba4256341b02267ef6c42518a6465af21933c66fdce0b3b",
     "docs/METHOD_COVERAGE.json": "0b356e757d99ee3bb32f4cf1730c98d7daf03034ae19a8ebfdbaf316804af0ed",
-    "provenance/acceptance_sources.json": "ef21b1839c820cbc594b663ae385b745c804fe6710cfeb10108bc3e45dd3deff",
+    "provenance/acceptance_sources.json": "c328413a3e0e75d1e52a31055ead61b2a083bcec1269b81a2d6f027ab5ca584d",
     "tools/build_acceptance_matrix.py": "a25c0c7a0299a0bc15ac6b758a0d9734e4477b85f167448fffa6605a32edbf92"
   },
   "requirements": [
