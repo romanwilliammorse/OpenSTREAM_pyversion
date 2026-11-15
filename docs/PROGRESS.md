@@ -2,6 +2,34 @@
 
 The user's requested full native port is **not yet complete**. Continue implementation and verification without replacing the preserved source or changing equations to obtain passing tests.
 
+## Results editor and CSV downloads — 2026-11-15 (in progress)
+
+Requested: separate completed-run CSV downloads for inputs, boundary conditions,
+geometry and results; multiple figures through Add a plot; optional legends
+inside the upper-left plot bounds; arbitrary equal-length X/Y vectors across
+simulation and mixture precursor outputs. No governing-equation changes.
+
+Implementation uses existing local Plotly, saved NPZ arrays and authenticated
+read-only routes. CSV endpoint contract: `/api/runs/<id>/export/<kind>.csv`,
+where kind is `inputs`, `boundary-conditions`, `geometry` or `results`.
+Results retain raw array shapes, indices, coordinates, units and nonfinite
+values. The vector editor selects axial or time vectors and explicit components,
+rejects incompatible lengths, and labels index pairing across different grids
+or states. Mixture precursor initialization is also exposed when saved.
+
+Local preview uses copies of four retained hosted baselines in
+`tmp/gui-results-preview/` on port 8780; originals remain unchanged. All 829
+Python tests and 24 frontend checks passed; wheel/source builds passed.
+Read-only HTTP checks exactly recovered all 358,223 result scalar rows and 920
+input/boundary/geometry rows. Browser checks covered cross-stage plotting,
+multiple figures/series, upper-left legends, length rejection, PNG and CSV.
+A transient Windows status-read race was fixed with bounded permission-error
+retries. Historical full-source replay guards remain strict; the current-release
+test explicitly separates the two changed presentation modules from the 24
+unchanged modules. See `docs/GUI_RESULTS_EDITOR.md`. Interface evidence was added
+to API-012/013/014 without changing any scientific criterion or status.
+Production publication and authenticated live export verification are next.
+
 ## Password-protected hosted GUI — 2026-11-15 (deployed and tested)
 
 The user authorized publication at `https://openstream-py.vercel.app` and a

@@ -1,0 +1,97 @@
+{
+  "schema": "openstream-results-editor-acceptance-integrity-v1",
+  "checked_at": "2026-11-15T23:39:29.398319+00:00",
+  "baseline_commit": "51afcd09d82e0322713e128cf127c82a69d99756",
+  "requirements": 81,
+  "identical_id_set": true,
+  "preserved_fields": [
+    "acceptance_criteria",
+    "implementation",
+    "native_tests",
+    "matlab",
+    "physical",
+    "experimental",
+    "scope",
+    "priority",
+    "next_action"
+  ],
+  "updated_rows_and_fields": {
+    "API-012": [
+      "evidence",
+      "gap",
+      "python"
+    ],
+    "API-013": [
+      "evidence",
+      "gap",
+      "python"
+    ],
+    "API-014": [
+      "evidence",
+      "gap",
+      "python"
+    ]
+  },
+  "source_ledger_sha256_lf": {
+    "docs/acceptance/core.json": {
+      "before_sha256_lf": "cd0cc196b1f50620f262a9e89ca8fb5e2aa552d3662a3b8372ea4040ddb33882",
+      "after_sha256_lf": "cd0cc196b1f50620f262a9e89ca8fb5e2aa552d3662a3b8372ea4040ddb33882"
+    },
+    "docs/acceptance/interfaces.json": {
+      "before_sha256_lf": "5b33b1ae1a7e6b19e9857a851bf7d74677a6d402df2b79400421136533de179f",
+      "after_sha256_lf": "3d94ec8c89a28f01d4642852e10500bd1057e933d521e736c2668f79f589a14d"
+    },
+    "docs/acceptance/experimental.json": {
+      "before_sha256_lf": "3acdcf324a19b7838e35e46b7383ed0f1358b1ab99d60b8ddeffd8b072560117",
+      "after_sha256_lf": "3acdcf324a19b7838e35e46b7383ed0f1358b1ab99d60b8ddeffd8b072560117"
+    }
+  },
+  "method_inventory_changes": {
+    "changed_top_level_keys": [
+      "native_files"
+    ],
+    "changed_native_fingerprint_files": [
+      "src/openstream/gui.py",
+      "src/openstream/gui_exports.py"
+    ],
+    "method_entries_and_classification_counts_unchanged": true
+  },
+  "status_counts_unchanged": true,
+  "exact_historical_numeric_source_hashes_preserved": {
+    "annular.py": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+    "cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+    "database.py": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
+    "experimental_comparison.py": "03c12bcfe1e8de115092d0ea1a19e21ec177c5983c575b63183a67453b3fd1f4",
+    "ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+    "fields.py": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+    "fourfield.py": "5dafef4ee0d26f71e9e9083a61304b6d06f36e5a852f6981f0092269064692c8",
+    "gui_launcher.py": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+    "gui_lock.py": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+    "gui_reference.py": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+    "gui_schema.py": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+    "gui_worker.py": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
+    "inputs.py": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+    "multifield_output.py": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+    "numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+    "output.py": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+    "plotting.py": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+    "properties.py": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+    "solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+    "tf_fields.py": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+    "threefield.py": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+    "twofluid.py": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c",
+    "__init__.py": "3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+  },
+  "historical_scope_note": "The frozen25-file manifest and strict replay guards remain untouched. Current-release verification explicitly allows changed gui.py and new gui_exports.py only; all24 other original module byte hashes remain identical. Strict historical replay requires its registered checkout.",
+  "generated_artifact_sha256_lf": {
+    "docs/METHOD_COVERAGE.json": "1bc83301f07ea78a15725b36c532e9530fe3bd87881b342aa802de4b1d25ffe0",
+    "docs/ACCEPTANCE_MATRIX.json": "fdabbbab0e9d68ef0ba79923aab1a38d52306004c3a935f6aedcfdf64ada3bec",
+    "docs/ACCEPTANCE_MATRIX.md": "4c646aa1b5a3cad352ae471643687713847108da26a9fe0fec36fb9179dd16d3",
+    "docs/ACCEPTANCE_MATRIX.csv": "86e56a6c9cb93dadd7f4366495f01e30f7c464dfdd970cd795f45f06b83f875c",
+    "docs/ACCEPTANCE_METHODS.csv": "a770d820864e2366b84d3c97f73bdc66f554e93e7f6950842fc5afc99ebb73b6",
+    "docs/ACCEPTANCE_OPTIONS.csv": "e56890e841904ad32e0bb50d3954907dfe83a683f4aad0665e834eb6e79b5b18"
+  },
+  "matrix_check_stdout": "{\n  \"requirements\": 81,\n  \"tracks\": {\n    \"matlab_equivalence\": 27,\n    \"numerical_verification\": 10,\n    \"interface_parity\": 19,\n    \"reference_infrastructure\": 5,\n    \"release\": 2,\n    \"literature_scope\": 6,\n    \"experimental_validation\": 12\n  },\n  \"priorities\": {\n    \"P1\": 41,\n    \"P0\": 31,\n    \"P2\": 9\n  },\n  \"implementation\": {\n    \"implemented\": 46,\n    \"partial\": 31,\n    \"unsupported_source_defect\": 1,\n    \"missing\": 3\n  },\n  \"status_axes\": {\n    \"native_tests\": {\n      \"passed_scoped\": 35,\n      \"partial\": 35,\n      \"failed\": 5,\n      \"not_run\": 6\n    },\n    \"matlab\": {\n      \"passed_scoped\": 13,\n      \"failed\": 1,\n      \"not_run\": 51,\n      \"not_applicable\": 12,\n      \"partial\": 4\n    },\n    \"physical\": {\n      \"passed_scoped\": 4,\n      \"failed\": 14,\n      \"not_applicable\": 32,\n      \"partial\": 22,\n      \"not_run\": 9\n    },\n    \"experimental\": {\n      \"not_run\": 37,\n      \"not_applicable\": 35,\n      \"partial\": 9\n    }\n  },\n  \"enum_types\": 41,\n  \"enum_choices\": 127,\n  \"interpolation_choices\": 16,\n  \"public_method_entries_with_inheritance\": 585\n}\nAcceptance ledger integrity and generated files: PASS\n",
+  "limitation": "Interface evidence and ledger integrity only; no new solver execution, scientific status change, MATLAB-equivalence claim, experimental validation or full-suite pass claim."
+}

@@ -13,6 +13,10 @@ const state = {
 // from the current editor or the server's case-normalized change list.
 const savedInputs = new Map();
 const pendingInputs = new Map();
+// Presentation preferences are isolated by saved run; numerical data stay immutable.
+const plotWorkspaces = new Map();
+const plotColors = ["#2980b9", "#8e44ad", "#d28b26", "#278b61", "#b45455", "#566c83", "#776b9e", "#977342"];
+const datasetLabels = {physical: "Physical result", initialization: "Initialization (pseudo-time)", precursor: "Mixture precursor", precursor_initialization: "Mixture precursor initialization (pseudo-time)"};
 const frameworkNames = {Mixture: "Mixture", TwoFluid: "Two-fluid", ThreeField: "Three-field", FourField: "Four-field"};
 const terminalStates = new Set(["completed", "failed", "cancelled"]);
 const primaryFieldPrefixes = ["", "liquid.", "vapor.", "film.", "drop.", "film.base.", "film.wave."];
@@ -64,7 +68,7 @@ function setSidebarCollapsed(collapsed) {
   $("toggle-sidebar").setAttribute("aria-label", collapsed ? "Show sidebar" : "Hide sidebar");
   $("toggle-sidebar").title = collapsed ? "Show sidebar" : "Hide sidebar";
   try { localStorage.setItem("openstream-sidebar-collapsed", String(collapsed)); } catch { /* Optional preference. */ }
-  if (state.data && !$("results-view").hidden && window.Plotly) requestAnimationFrame(() => Plotly.Plots.resize($("profile-plot")));
+  if (state.data && !$("results-view").hidden && window.Plotly) requestAnimationFrame(resizePlots);
 }
 
 function primaryQuantityFields(names, suffix) {
@@ -116,7 +120,7 @@ function showView(view) {
     if (name === view) $(`${name}-tab`).setAttribute("aria-current", "page");
     else $(`${name}-tab`).removeAttribute("aria-current");
   }
-  if (view === "results" && state.data) requestAnimationFrame(renderPlot);
+  if (view === "results" && state.data) requestAnimationFrame(() => {renderPlot(); renderCustomPlots();});
 }
 
 function inputGroup(inputs, group) {
@@ -524,6 +528,14 @@ function renderRun(run) {
 
 function renderDownloads(files) {
   $("download-links").replaceChildren(); $("primary-downloads").replaceChildren();
+  if (state.selectedRun?.status === "completed") {
+    for (const [kind, label] of [["inputs", "Inputs CSV"], ["boundary-conditions", "Boundary conditions CSV"], ["geometry", "Geometry CSV"], ["results", "Results CSV"]]) {
+      const link = element("a", "download-link csv-download", label);
+      link.href = `/api/runs/${encodeURIComponent(state.selectedRun.id)}/export/${kind}.csv`;
+      link.download = `${kind}.csv`;
+      $("primary-downloads").append(link);
+    }
+  }
   const normalized = Array.isArray(files) ? files : Object.entries(files).map(([name, url]) => ({name, url}));
   for (const file of normalized) {
     const name = typeof file === "string" ? file : file.name;
@@ -544,11 +556,14 @@ async function loadRunData(run) {
     if (state.selectedRun?.id !== run.id) return;
     state.data = result; const datasets = result.datasets || result;
     $("dataset-select").replaceChildren();
-    for (const [key, label] of [["physical", "Physical result"], ["initialization", "Initialization (pseudo-time)"], ["precursor", "Mixture precursor"]]) {
+    for (const key of Object.keys(datasets)) {
+      const label = datasetLabels[key] || key;
       if (datasets[key] && Object.keys(datasets[key].fields || {}).length) {const option = element("option", "", label); option.value = key; $("dataset-select").append(option);}
     }
     if (!$("dataset-select").options.length) { state.data = null; return; }
-    state.dataset = $("dataset-select").value; $("plots-panel").hidden = false; refreshPlotControls();
+    state.dataset = $("dataset-select").value; $("plots-panel").hidden = false;
+    if (!plotWorkspaces.has(run.id)) plotWorkspaces.set(run.id, {plots: [], nextId: 2, primaryLegend: true});
+    refreshPlotControls(); renderPlotBuilderCards();
   } catch (error) {notice(`Numerical plot data could not be loaded: ${error.message}`, "warning");}
 }
 
@@ -579,7 +594,7 @@ function refreshPlotControls() {
   else if (state.quantities.has("quantity:W")) $("quantity-select").value = "quantity:W";
   $("time-select").replaceChildren();
   const times = dataset.time || [];
-  times.forEach((time, index) => {const option = element("option", "", `${index === times.length - 1 ? "Final · " : ""}${state.dataset === "initialization" ? "τ" : "t"} = ${numberText(time)} s`); option.value = index; $("time-select").append(option);});
+  times.forEach((time, index) => {const option = element("option", "", `${index === times.length - 1 ? "Final · " : ""}${pseudoTime(state.dataset, dataset) ? "τ" : "t"} = ${numberText(time)} s`); option.value = index; $("time-select").append(option);});
   if (!times.length) {const option = element("option", "", "Final state"); option.value = 0; $("time-select").append(option);}
   $("time-select").value = String(Math.max(0, times.length - 1));
   renderPlot();
@@ -611,7 +626,7 @@ function renderPlot() {
   const dataset = selectedDataset(), quantity = state.quantities.get($("quantity-select").value);
   if (!dataset || !quantity) return;
   const z = dataset.z || [], timeIndex = Number($("time-select").value || 0);
-  const colors = ["#2980b9", "#8e44ad", "#d28b26", "#278b61", "#b45455", "#566c83", "#776b9e", "#977342"];
+  const colors = plotColors;
   const physicalTime = dataset.time?.[timeIndex];
   const referenceIndex = referenceIndexForTime(dataset.reference_time, physicalTime);
   const traces = []; let unit = "";
@@ -621,12 +636,308 @@ function renderPlot() {
     const reference = dataset.reference_fields?.[key];
     if (reference && referenceIndex >= 0) traces.push(...makeTraces(reference, key, dataset.reference_z || z, referenceIndex, colors[index % colors.length], true));
   });
-  const annularNote = ["ThreeField", "FourField"].includes(state.selectedRun.framework) && state.dataset !== "precursor" ? "Before annular onset, fields are initialization quantities." : "";
+  const annularNote = ["ThreeField", "FourField"].includes(state.selectedRun.framework) && !state.dataset.startsWith("precursor") ? "Before annular onset, fields are initialization quantities." : "";
   const referenceNote = dataset.reference_fields ? referenceIndex >= 0 ? "Dotted: MATLAB archive at matching time." : "No archived state at this time; reference omitted." : "";
-  $("plot-context").textContent = [state.dataset === "initialization" ? "Pseudo-time, not physical time." : "", annularNote, referenceNote].filter(Boolean).join(" ");
+  $("plot-context").textContent = [pseudoTime(state.dataset, dataset) ? "Pseudo-time, not physical time." : "", annularNote, referenceNote].filter(Boolean).join(" ");
   $("plot-context").hidden = !$("plot-context").textContent;
-  const layout = {margin: {l: 75, r: 22, t: 30, b: 85}, paper_bgcolor: "#fcfcfc", plot_bgcolor: "#fcfcfc", font: {family: 'Lato,"Helvetica Neue",Arial,sans-serif', size: 12, color: "#404040"}, hovermode: "closest", xaxis: {title: {text: "Axial position, z (m)", standoff: 12}, gridcolor: "#e1e4e5", zerolinecolor: "#ccc", linecolor: "#ccc", showline: true, mirror: false}, yaxis: {title: {text: `${quantity.label}${unit && unit !== "1" ? ` (${unit})` : ""}`, standoff: 15}, gridcolor: "#e1e4e5", zerolinecolor: "#ccc", exponentformat: "e", automargin: true}, legend: {orientation: "h", y: -0.23, x: 0}, uirevision: `${state.selectedRun.id}:${state.dataset}:${$("quantity-select").value}`, autosize: true};
-  Plotly.react($("profile-plot"), traces, layout, {responsive: true, displaylogo: false, modeBarButtonsToRemove: ["select2d", "lasso2d"], toImageButtonOptions: {format: "png", filename: `OpenSTREAM-${state.selectedRun.framework}-${quantity.label.replaceAll(" ", "-")}`, width: 1400, height: 850, scale: 1.5}});
+  const legend = plotWorkspace()?.primaryLegend ?? true;
+  $("profile-legend").textContent = legend ? "Remove legend" : "Add legend";
+  $("profile-legend").setAttribute("aria-pressed", String(legend));
+  const layout = plotLayout("Axial position, z (m)", `${quantity.label}${unit && unit !== "1" ? ` (${unit})` : ""}`, legend,
+    `${state.selectedRun.id}:${state.dataset}:${$("quantity-select").value}`);
+  Plotly.react($("profile-plot"), traces, layout, plotConfig(`OpenSTREAM-${state.selectedRun.framework}-${quantity.label.replaceAll(" ", "-")}`));
+}
+
+function insideLegend() {
+  return {orientation: "v", x: 0.02, y: 0.98, xref: "paper", yref: "paper",
+    xanchor: "left", yanchor: "top", bgcolor: "rgba(252,252,252,0.88)",
+    bordercolor: "#d9dfe2", borderwidth: 1, font: {size: 11}};
+}
+
+function datasetsOf(data) { return data?.datasets || data || {}; }
+function datasetName(key) { return datasetLabels[key] || key; }
+function pseudoTime(key, dataset) { return key.includes("initialization") || /pseudo/i.test(dataset.time_label || ""); }
+
+function rectangularShape(value) {
+  if (!Array.isArray(value)) {
+    if (value === null || (typeof value === "number" && Number.isFinite(value))) return [];
+    throw new Error("The selected field contains a nonnumeric value.");
+  }
+  if (!value.length) throw new Error("The selected field has an empty dimension.");
+  const inner = rectangularShape(value[0]);
+  for (let index = 1; index < value.length; index++) {
+    const shape = rectangularShape(value[index]);
+    if (!equal(inner, shape)) throw new Error("The selected field has inconsistent array dimensions.");
+  }
+  return [value.length, ...inner];
+}
+
+function componentIndices(shape) {
+  return shape.reduce((indices, size) => indices.flatMap((prefix) =>
+    Array.from({length: size}, (_, index) => [...prefix, index])), [[]]);
+}
+
+function vectorOptions(data, datasetKey) {
+  const dataset = datasetsOf(data)[datasetKey];
+  if (!dataset) return [];
+  return ["Z", "TIME", ...Object.keys(dataset.fields || {}).sort()];
+}
+
+function defaultAxis(data, {dataset = "physical", field = "Z", direction = "channel"} = {}) {
+  const datasets = datasetsOf(data);
+  if (!datasets[dataset]) dataset = Object.keys(datasets).find((key) => datasets[key]?.fields) || "";
+  const keys = vectorOptions(data, dataset);
+  if (!keys.includes(field)) field = keys.includes("U") ? "U" : keys.find((key) => !["Z", "TIME"].includes(key)) || "Z";
+  return normalizeAxis(data, {dataset, field, direction,
+    fixed: Math.max(0, ((direction === "time" ? datasets[dataset]?.z : datasets[dataset]?.time)?.length || 1) - 1), component: []});
+}
+
+function normalizeAxis(data, selection) {
+  const result = {...selection, component: [...(selection.component || [])]};
+  const dataset = datasetsOf(data)[result.dataset];
+  if (!dataset) return result;
+  if (!vectorOptions(data, result.dataset).includes(result.field)) result.field = "Z";
+  if (result.field === "Z") result.direction = "channel";
+  if (result.field === "TIME") result.direction = "time";
+  const length = result.direction === "time" ? dataset.z?.length : dataset.time?.length;
+  if (!Number.isInteger(result.fixed) || result.fixed < 0 || result.fixed >= length) result.fixed = Math.max(0, (length || 1) - 1);
+  if (["Z", "TIME"].includes(result.field)) result.component = [];
+  else {
+    try {
+      const trailing = rectangularShape(dataset.fields[result.field].values).slice(2);
+      if (result.component.length !== trailing.length || result.component.some((value, index) => !Number.isInteger(value) || value < 0 || value >= trailing[index])) {
+        result.component = trailing.map(() => 0);
+      }
+    } catch { /* The selected field's precise error is displayed in the figure. */ }
+  }
+  return result;
+}
+
+function outputVector(data, selection) {
+  const dataset = datasetsOf(data)[selection.dataset];
+  if (!dataset) throw new Error("Select an available dataset.");
+  const coordinate = selection.field === "Z" || selection.field === "TIME";
+  const direction = coordinate ? selection.field === "Z" ? "channel" : "time" : selection.direction;
+  if (!["channel", "time"].includes(direction)) throw new Error("Select a vector direction.");
+  const axis = direction === "channel" ? dataset.z : dataset.time;
+  if (!Array.isArray(axis) || !axis.length || !axis.every(Number.isFinite)) throw new Error("The selected vector has no finite coordinate axis.");
+  let values, unit, fixedValue = null;
+  const component = selection.component || [];
+  if (coordinate) {
+    values = [...axis];
+    unit = selection.field === "Z" ? "m" : "s";
+  } else {
+    const field = dataset.fields?.[selection.field];
+    if (!field) throw new Error("Select an available result quantity.");
+    const shape = rectangularShape(field.values);
+    if (shape.length < 2 || shape[0] !== dataset.time?.length || shape[1] !== dataset.z?.length) {
+      throw new Error("Field dimensions do not match the saved time and channel coordinates.");
+    }
+    if (component.length !== shape.length - 2 || component.some((value, index) => !Number.isInteger(value) || value < 0 || value >= shape[index + 2])) {
+      throw new Error("Select one valid component of the result array.");
+    }
+    const fixedSize = direction === "channel" ? shape[0] : shape[1];
+    if (!Number.isInteger(selection.fixed) || selection.fixed < 0 || selection.fixed >= fixedSize) throw new Error("The selected state or node is unavailable.");
+    const componentValue = (value) => component.reduce((current, index) => current[index], value);
+    values = direction === "channel" ? field.values[selection.fixed].map(componentValue)
+      : field.values.map((row) => componentValue(row[selection.fixed]));
+    unit = field.unit ?? field.units ?? "";
+    fixedValue = direction === "channel" ? dataset.time[selection.fixed] : dataset.z[selection.fixed];
+  }
+  const componentLabel = component.length ? ` [${component.map((index) => index + 1).join(",")}]` : "";
+  const label = selection.field === "Z" ? "Axial position, z" : selection.field === "TIME"
+    ? pseudoTime(selection.dataset, dataset) ? "Initialization pseudo-time" : "Time" : selection.field + componentLabel;
+  return {values, coordinates: [...axis], direction, unit, label, key: selection.field, dataset: selection.dataset,
+    fixedValue, pseudo: pseudoTime(selection.dataset, dataset), coordinate};
+}
+
+function pairOutputVectors(data, xSelection, ySelection) {
+  const x = outputVector(data, xSelection), y = outputVector(data, ySelection);
+  if (x.values.length !== y.values.length) throw new Error(`X has ${x.values.length} values; Y has ${y.values.length}. Select vectors with equal lengths.`);
+  if (!x.values.some((value, index) => Number.isFinite(value) && Number.isFinite(y.values[index]))) {
+    throw new Error("The selected vectors have no finite X/Y pairs. Saved gaps are preserved.");
+  }
+  const notes = [];
+  if (x.direction !== y.direction || !equal(x.coordinates, y.coordinates)) notes.push("Paired by index: X and Y have different coordinates.");
+  if (!x.coordinate && !y.coordinate && (x.fixedValue !== y.fixedValue || x.direction !== y.direction || x.pseudo !== y.pseudo)) {
+    notes.push("X and Y use different fixed states or nodes.");
+  }
+  if (x.pseudo || y.pseudo) notes.push("Initialization uses pseudo-time.");
+  if (x.values.some((value, index) => value === null || y.values[index] === null)) notes.push("Nonfinite saved values appear as gaps.");
+  return {x, y, notes};
+}
+
+function buildCustomFigure(data, plot) {
+  if (!plot.series.length) throw new Error("Add at least one series.");
+  const pairs = plot.series.map((series) => pairOutputVectors(data, series.x, series.y));
+  const first = pairs[0];
+  if (pairs.some((pair) => pair.x.unit !== first.x.unit || pair.y.unit !== first.y.unit)) {
+    throw new Error("Series on one plot must have the same recorded X units and Y units. Use another plot for different units.");
+  }
+  const traces = pairs.map((pair, index) => ({
+    x: pair.x.values, y: pair.y.values, type: "scatter", mode: plot.mode || "lines",
+    name: plot.series[index].name.trim() || `${pair.y.label} · ${datasetName(pair.y.dataset)}`,
+    line: {color: plotColors[index % plotColors.length], width: 2.2},
+    marker: {color: plotColors[index % plotColors.length], size: 6}, connectgaps: false,
+    hovertemplate: `X = %{x:.7g} ${pair.x.unit}<br>Y = %{y:.7g} ${pair.y.unit}<extra>%{fullData.name}</extra>`,
+  }));
+  const label = (axis) => {
+    const names = [...new Set(pairs.map((pair) => pair[axis].label))];
+    const unit = first[axis].unit;
+    return `${names.length === 1 ? names[0] : axis.toUpperCase()}${unit && unit !== "1" ? ` (${unit})` : unit === "" ? " (unit unavailable)" : " (1)"}`;
+  };
+  return {traces, xTitle: label("x"), yTitle: label("y"), notes: [...new Set(pairs.flatMap((pair) => pair.notes))]};
+}
+
+function plotWorkspace() { return plotWorkspaces.get(state.selectedRun?.id); }
+function resizePlots() {
+  if (!window.Plotly) return;
+  for (const node of document.querySelectorAll("#profile-plot, .custom-plot-canvas")) {
+    if (node.data) Plotly.Plots.resize(node);
+  }
+}
+function plotLayout(xTitle, yTitle, legend, revision) {
+  const axis = {gridcolor: "#e1e4e5", zerolinecolor: "#ccc", linecolor: "#ccc", showline: true, exponentformat: "e", automargin: true};
+  return {margin: {l: 75, r: 22, t: 25, b: 70}, paper_bgcolor: "#fcfcfc", plot_bgcolor: "#fcfcfc",
+    font: {family: 'Lato,"Helvetica Neue",Arial,sans-serif', size: 12, color: "#404040"}, hovermode: "closest",
+    xaxis: {...axis, title: {text: xTitle, standoff: 12}},
+    yaxis: {...axis, title: {text: yTitle, standoff: 15}},
+    showlegend: Boolean(legend), legend: insideLegend(), uirevision: revision, autosize: true};
+}
+function plotConfig(filename) {
+  return {responsive: true, displaylogo: false, showSendToCloud: false,
+    modeBarButtonsToRemove: ["select2d", "lasso2d", "sendDataToCloud"],
+    toImageButtonOptions: {format: "png", filename, width: 1400, height: 850, scale: 1.5}};
+}
+function savePlotImage(node, suffix) {
+  if (window.Plotly && node?.data?.length) Plotly.downloadImage(node, {format: "png",
+    filename: `OpenSTREAM-${state.selectedRun.framework}-${suffix}`, width: 1400, height: 850, scale: 1.5});
+}
+function renderCustomPlot(plot) {
+  if (!plot.nodes || !state.data || !window.Plotly || $("results-view").hidden) return;
+  try {
+    const figure = buildCustomFigure(state.data, plot);
+    plot.nodes.error.hidden = true; plot.nodes.canvas.hidden = false;
+    plot.nodes.context.textContent = figure.notes.join(" "); plot.nodes.context.hidden = !figure.notes.length;
+    plot.nodes.save.disabled = false;
+    Plotly.react(plot.nodes.canvas, figure.traces, plotLayout(figure.xTitle, figure.yTitle, plot.legend,
+      `${state.selectedRun.id}:${plot.id}:${JSON.stringify(plot.series.map((series) => [series.x, series.y]))}`),
+      plotConfig(`OpenSTREAM-${state.selectedRun.framework}-plot-${plot.id}`));
+  } catch (error) {
+    plot.nodes.error.textContent = error.message; plot.nodes.error.hidden = false;
+    plot.nodes.context.hidden = true; plot.nodes.save.disabled = true; plot.nodes.canvas.hidden = true;
+    if (plot.nodes.canvas.data) Plotly.purge(plot.nodes.canvas);
+  }
+}
+function renderCustomPlots() { for (const plot of plotWorkspace()?.plots || []) renderCustomPlot(plot); }
+
+function labelledSelect(container, id, label, choices, value, onChange) {
+  const wrapper = element("label", "", label); wrapper.htmlFor = id;
+  const control = element("select"); control.id = id;
+  for (const choice of choices) { const option = element("option", "", choice.label); option.value = choice.value; control.append(option); }
+  control.value = String(value); control.addEventListener("change", onChange);
+  wrapper.append(control); container.append(wrapper); return control;
+}
+
+function renderAxisControls(container, plot, series, axisName, seriesIndex) {
+  container.replaceChildren(); const current = series[axisName];
+  const dataset = datasetsOf(state.data)[current.dataset];
+  const prefix = `plot-${plot.id}-series-${seriesIndex}-${axisName}`;
+  const redraw = (property, value) => {
+    current[property] = value;
+    if (property === "dataset") current.fixed = Math.max(0, ((current.direction === "time" ? datasetsOf(state.data)[value]?.z : datasetsOf(state.data)[value]?.time)?.length || 1) - 1);
+    if (property === "direction") current.fixed = Math.max(0, ((value === "time" ? dataset.z : dataset.time)?.length || 1) - 1);
+    series[axisName] = normalizeAxis(state.data, current);
+    renderAxisControls(container, plot, series, axisName, seriesIndex); renderCustomPlot(plot);
+    document.getElementById(`${prefix}-${property}`)?.focus({preventScroll: true});
+  };
+  container.append(element("strong", "axis-name", axisName.toUpperCase()));
+  const controls = element("div", "axis-controls"); container.append(controls);
+  labelledSelect(controls, prefix + "-dataset", "Dataset", Object.keys(datasetsOf(state.data)).filter((key) => datasetsOf(state.data)[key]?.fields).map((key) => ({value: key, label: datasetName(key)})), current.dataset, (event) => redraw("dataset", event.target.value));
+  labelledSelect(controls, prefix + "-field", "Quantity", vectorOptions(state.data, current.dataset).map((key) => ({value: key, label: key === "Z" ? "Z · Axial position (m)" : key === "TIME" ? "TIME · Time (s)" : `${key}${dataset.fields[key].unit || dataset.fields[key].units ? ` (${dataset.fields[key].unit || dataset.fields[key].units})` : ""}`})), current.field, (event) => redraw("field", event.target.value));
+  const coordinate = ["Z", "TIME"].includes(current.field);
+  if (!coordinate) {
+    labelledSelect(controls, prefix + "-direction", "Vector", [{value: "channel", label: "Along channel"}, {value: "time", label: "Over time"}], current.direction, (event) => redraw("direction", event.target.value));
+    const nodes = current.direction === "time";
+    labelledSelect(controls, prefix + "-fixed", nodes ? "Node" : "State", (nodes ? dataset.z : dataset.time).map((value, index, values) => ({
+      value: index, label: nodes ? `${index + 1} · z = ${numberText(value)} m` : `${index === values.length - 1 ? "Final · " : ""}${pseudoTime(current.dataset, dataset) ? "τ" : "t"} = ${numberText(value)} s`,
+    })), current.fixed, (event) => redraw("fixed", Number(event.target.value)));
+    try {
+      const shape = rectangularShape(dataset.fields[current.field].values).slice(2);
+      if (shape.length) {
+        labelledSelect(controls, prefix + "-component", shape.length === 1 ? "Component / wall" : "Component indices",
+          componentIndices(shape).map((indices) => ({value: JSON.stringify(indices), label: indices.map((value) => value + 1).join(", ")})),
+          JSON.stringify(current.component), (event) => redraw("component", JSON.parse(event.target.value)));
+      }
+    } catch { /* renderCustomPlot reports malformed arrays. */ }
+  }
+}
+function renderSeriesControls(plot) {
+  plot.nodes.series.replaceChildren();
+  plot.series.forEach((series, index) => {
+    const row = element("div", "plot-series");
+    const heading = element("div", "series-heading");
+    const nameLabel = element("label", "series-name", "Legend label");
+    const name = element("input"); name.type = "text"; name.value = series.name; name.placeholder = "Automatic";
+    name.id = `plot-${plot.id}-series-${index}-name`; nameLabel.htmlFor = name.id; name.maxLength = 160;
+    name.addEventListener("input", () => {series.name = name.value; renderCustomPlot(plot);});
+    nameLabel.append(name); heading.append(element("span", "series-number", `Series ${index + 1}`), nameLabel);
+    if (plot.series.length > 1) {
+      const remove = element("button", "text-button", "Remove series"); remove.type = "button";
+      remove.addEventListener("click", () => {plot.series.splice(index, 1); renderSeriesControls(plot); renderCustomPlot(plot);}); heading.append(remove);
+    }
+    row.append(heading);
+    for (const axis of ["x", "y"]) {const container = element("div", "plot-axis"); row.append(container); renderAxisControls(container, plot, series, axis, index);}
+    plot.nodes.series.append(row);
+  });
+}
+function newPlotSeries(data) {
+  const dataset = datasetsOf(data).physical ? "physical" : Object.keys(datasetsOf(data))[0];
+  const fields = datasetsOf(data)[dataset]?.fields || {};
+  const field = fields.U ? "U" : Object.keys(fields)[0];
+  return {name: "", x: defaultAxis(data, {dataset, field: "Z"}), y: defaultAxis(data, {dataset, field})};
+}
+function addPlot() {
+  const workspace = plotWorkspace();
+  if (!workspace || !state.data) return;
+  const plot = {id: workspace.nextId++, series: [newPlotSeries(state.data)], legend: false, mode: "lines", nodes: null};
+  workspace.plots.push(plot); renderPlotBuilderCards();
+  plot.nodes.card.scrollIntoView({block: "start", behavior: "smooth"});
+}
+function renderPlotBuilderCards() {
+  const container = $("custom-plots");
+  for (const node of container.querySelectorAll(".custom-plot-canvas")) if (window.Plotly && node.data) Plotly.purge(node);
+  container.replaceChildren();
+  for (const plot of plotWorkspace()?.plots || []) {
+    const card = element("section", "custom-plot-card"); card.id = `plot-card-${plot.id}`;
+    const heading = element("div", "panel-heading");
+    const title = element("h3", "", `Plot ${plot.id}`); title.id = `plot-title-${plot.id}`; card.setAttribute("aria-labelledby", title.id);
+    const actions = element("div", "plot-actions");
+    const legend = element("button", "button secondary compact", plot.legend ? "Remove legend" : "Add legend");
+    legend.type = "button"; legend.setAttribute("aria-pressed", String(plot.legend));
+    legend.addEventListener("click", () => {plot.legend = !plot.legend; legend.textContent = plot.legend ? "Remove legend" : "Add legend"; legend.setAttribute("aria-pressed", String(plot.legend)); renderCustomPlot(plot);});
+    const save = element("button", "button secondary compact", "Save PNG"); save.type = "button";
+    const remove = element("button", "text-button", "Remove plot"); remove.type = "button";
+    remove.addEventListener("click", () => {const workspace = plotWorkspace(); workspace.plots = workspace.plots.filter((item) => item !== plot); renderPlotBuilderCards();});
+    actions.append(legend, save, remove); heading.append(title, actions); card.append(heading);
+    const editor = element("details", "plot-builder-editor"); editor.open = true;
+    editor.append(element("summary", "", "Edit plot"));
+    const series = element("div", "plot-series-list"); editor.append(series);
+    const footer = element("div", "plot-editor-footer");
+    const addSeries = element("button", "button secondary compact", "Add series"); addSeries.type = "button";
+    addSeries.addEventListener("click", () => {plot.series.push(copy(plot.series.at(-1))); renderSeriesControls(plot); renderCustomPlot(plot);});
+    footer.append(addSeries);
+    labelledSelect(footer, `plot-${plot.id}-mode`, "Style", [{value: "lines", label: "Lines"}, {value: "markers", label: "Points"}, {value: "lines+markers", label: "Lines + points"}], plot.mode, (event) => {plot.mode = event.target.value; renderCustomPlot(plot);});
+    editor.append(footer); card.append(editor);
+    const error = element("p", "notice error"); error.hidden = true; error.setAttribute("role", "alert");
+    const context = element("p", "plot-context"); context.hidden = true;
+    const canvas = element("div", "custom-plot-canvas"); canvas.id = `custom-plot-${plot.id}`; canvas.setAttribute("role", "img"); canvas.setAttribute("aria-label", `Custom numerical plot ${plot.id}`);
+    card.append(error, context, canvas); container.append(card);
+    plot.nodes = {card, series, error, context, canvas, save};
+    save.addEventListener("click", () => savePlotImage(canvas, `plot-${plot.id}`));
+    editor.addEventListener("toggle", () => {if (canvas.data) Plotly.Plots.resize(canvas);});
+    renderSeriesControls(plot); renderCustomPlot(plot);
+  }
 }
 
 function downloadInputs() {
@@ -667,12 +978,14 @@ function bindEvents() {
   $("load-inputs").addEventListener("click", () => $("input-file").click()); $("input-file").addEventListener("change", importInputs);
   $("dataset-select").addEventListener("change", () => {state.dataset = $("dataset-select").value; refreshPlotControls();});
   $("quantity-select").addEventListener("change", renderPlot); $("time-select").addEventListener("change", renderPlot);
-  $("download-chart").addEventListener("click", () => {if (window.Plotly && state.data) Plotly.downloadImage($("profile-plot"), {format: "png", filename: `OpenSTREAM-${state.selectedRun.framework}-profile`, width: 1400, height: 850, scale: 1.5});});
-  window.addEventListener("resize", () => {if (state.data && !$("results-view").hidden && window.Plotly) Plotly.Plots.resize($("profile-plot"));});
+  $("download-chart").addEventListener("click", () => savePlotImage($("profile-plot"), "profile"));
+  $("profile-legend").addEventListener("click", () => {const workspace = plotWorkspace(); if (workspace) {workspace.primaryLegend = !workspace.primaryLegend; renderPlot();}});
+  $("add-plot").addEventListener("click", addPlot);
+  window.addEventListener("resize", () => {if (state.data && !$("results-view").hidden) resizePlots();});
 }
 
 // These pure adapters are exported only to the dependency-free Node checks.
-if (typeof module !== "undefined" && module.exports) module.exports = {inputCaseName, runCaseName, physicalDisplay, primaryQuantityFields, referenceIndexForTime, assertInputDocumentVersion, makeTraces};
+if (typeof module !== "undefined" && module.exports) module.exports = {inputCaseName, runCaseName, physicalDisplay, primaryQuantityFields, referenceIndexForTime, assertInputDocumentVersion, makeTraces, insideLegend, rectangularShape, componentIndices, defaultAxis, normalizeAxis, outputVector, pairOutputVectors, buildCustomFigure, plotLayout, plotConfig, newPlotSeries};
 if (typeof document !== "undefined") {
   bindEvents();
   let collapsed = false;

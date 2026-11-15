@@ -285,4 +285,11 @@ def create_app(manager, config=None, *, limiter=None):
         response.headers.set("Content-Disposition", "attachment", filename=PurePosixPath(filename).name)
         return response
 
+    @app.get("/api/runs/<run_id>/export/<kind>.csv")
+    def export_csv(run_id, kind):
+        from ..gui_exports import csv_response
+        check_run_id(run_id)
+        spool, framework = manager.csv_export(run_id, kind)
+        return csv_response(spool, framework, kind)
+
     return app

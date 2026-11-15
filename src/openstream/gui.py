@@ -9,6 +9,7 @@ import re
 import subprocess
 import sys
 import threading
+import time
 from urllib.parse import urlsplit
 import uuid
 
@@ -18,6 +19,23 @@ from .gui_worker import write_json
 
 
 TERMINAL = {'completed', 'cancelled', 'failed'}
+
+
+def read_status_json(path):
+    """Read atomically replaced worker status, tolerating brief sharing locks.
+
+    Windows can reject an open while another process replaces the destination.
+    Retry only PermissionError, for at most 180 ms of waiting, and preserve the
+    final exception. Missing files, malformed JSON and other I/O errors remain
+    immediately visible; no stale status or successful-run fallback is used.
+    """
+    for attempt in range(10):
+        try:
+            return json.loads(path.read_text(encoding='utf-8'))
+        except PermissionError:
+            if attempt == 9:
+                raise
+            time.sleep(.02)
 
 
 class RunManager:
@@ -30,7 +48,7 @@ class RunManager:
         self.lock = threading.RLock()
         # A newly started server never assumes an old partial job completed.
         for p in self.root.glob('*/status.json'):
-            state = json.loads(p.read_text(encoding='utf-8'))
+            state = read_status_json(p)
             if state.get('status') not in TERMINAL and not worker_alive(p.parent):
                 state.update(status='failed', phase='Interrupted', error='The application stopped before this run completed.')
                 write_json(p, state)
@@ -45,7 +63,7 @@ class RunManager:
         from .gui_lock import worker_alive
         with self.lock:
             path = self.directory(run_id)/'status.json'
-            state = json.loads(path.read_text(encoding='utf-8'))
+            state = read_status_json(path)
             process = self.processes.get(run_id)
             if process and process.poll() is not None and state['status'] not in TERMINAL:
                 state.update(status='failed', phase='Failed', error=f'Worker exited with code {process.returncode}; inspect worker.log.')
@@ -135,11 +153,15 @@ def plot_data(directory, framework, is_reference):
     # Additional mixture pressure/quality/heat-flux plots for multifield cases.
     if (output/'mixture'/'results.npz').exists():
         mm = json.loads((output/'mixture'/'metadata.json').read_text(encoding='utf-8'))
-        with np.load(output/'mixture'/'results.npz', allow_pickle=False) as arrays:
-            datasets['precursor'] = {'z': arrays['Z'].tolist(), 'time': arrays['TIME'].tolist(),
-                'time_label': 'Mixture precursor physical time [s]', 'fields': {
-                    k: {'values': json_array(arrays[k]), 'unit': mm['units'].get(k, ''), 'units': mm['units'].get(k, '')}
-                    for k in arrays.files if k not in ('Z', 'TIME')}}
+        for name, filename, label in [('precursor', 'results.npz', 'Mixture precursor physical time [s]'),
+                                       ('precursor_initialization', 'initialization.npz', 'Mixture precursor initialization pseudo-time [s]')]:
+            if not (output/'mixture'/filename).exists():
+                continue
+            with np.load(output/'mixture'/filename, allow_pickle=False) as arrays:
+                datasets[name] = {'z': arrays['Z'].tolist(), 'time': arrays['TIME'].tolist(),
+                    'time_label': label, 'fields': {
+                        k: {'values': json_array(arrays[k]), 'unit': mm['units'].get(k, ''), 'units': mm['units'].get(k, '')}
+                        for k in arrays.files if k not in ('Z', 'TIME')}}
     return {'datasets': datasets, 'metadata': metadata}
 
 
@@ -227,5 +249,15 @@ def create_app(output_root=None):
         allowed = {f['name'] for f in state['files']} | {'worker.log', 'submitted_inputs.json'}
         if filename not in allowed: abort(404)
         return send_from_directory(directory, filename, as_attachment=True)
+
+    @app.get('/api/runs/<run_id>/export/<kind>.csv')
+    def export_csv(run_id, kind):
+        from .gui_exports import DATASETS, csv_response, local_reader, prepare_csv
+        state = manager.status(run_id)
+        if state['status'] != 'completed': abort(409, 'Results are not ready')
+        directory = manager.directory(run_id)
+        available = {name for _, _, name, _ in DATASETS if (directory/name).is_file()}
+        spool = prepare_csv(kind, state['framework'], lambda name: local_reader(directory, name), available)
+        return csv_response(spool, state['framework'], kind)
 
     return app

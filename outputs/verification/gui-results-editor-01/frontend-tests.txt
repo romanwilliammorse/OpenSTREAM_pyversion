@@ -1,0 +1,32 @@
+✔ tests\cloud_frontend.test.cjs (101.5362ms)
+✔ historical annular area flags display as informational without rewriting evidence (1.8945ms)
+✔ annular display preserves unrelated failures and never invents a physical pass (0.1737ms)
+✔ case labels use the original name tag without case normalization (0.1978ms)
+✔ case labels preserve Unicode and literal text, with explicit missing-name fallbacks (0.1468ms)
+✔ enthalpy and velocity groups exclude derivatives and diagnostic copies (0.851ms)
+✔ reference overlays choose the matching time rather than the native array index (0.376ms)
+✔ missing reference states are omitted without clamping to a different state (0.1654ms)
+✔ individual derivative profiles keep their derivative units (0.2218ms)
+✔ input import rejects unknown explicit schema versions (0.585ms)
+✔ cross-dataset quality versus film velocity uses exact components and does not mutate output (0.807ms)
+✔ time histories preserve the selected node and component rather than flattening cells (0.2477ms)
+✔ vector-length mismatches reject without truncation or interpolation (0.1761ms)
+✔ equal-length but different coordinates or dimensions are explicitly paired by index (0.3636ms)
+✔ different states and initialization pseudo-time remain disclosed (0.1855ms)
+✔ null diagnostics remain gaps and cannot be presented as zero or joined (0.4405ms)
+✔ multi-series axes require matching recorded units without implicit unit conversion (0.2969ms)
+✔ unknown units are labeled unavailable rather than invented or declared dimensionless (0.175ms)
+✔ malformed arrays and out-of-range selection fail explicitly (0.3554ms)
+✔ arbitrary trailing component dimensions remain explicit (0.232ms)
+✔ new figures and axis defaults have independent selections (0.4553ms)
+✔ legend is inside the upper-left plot area and cloud upload is disabled (0.2514ms)
+✔ Run validates and submits the same captured model and case despite subsequent editor changes (4.1272ms)
+✔ a stale history model load cannot overwrite a newer selection or unlock Run early (2.4818ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 126.2287

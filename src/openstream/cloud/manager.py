@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from collections import OrderedDict
+from contextlib import contextmanager
 from copy import deepcopy
 from datetime import datetime, timezone
 import hashlib
@@ -434,7 +435,53 @@ class CloudRunManager:
         value = json.loads(body.decode("utf-8"), parse_constant=invalid_constant)
         if not isinstance(value, dict) or not isinstance(value.get("datasets"), dict):
             raise CloudStoreError("Plot data have an invalid schema.")
+        # Historical immutable plot JSON predates this dataset. Read the saved
+        # numeric artifact on demand; do not rewrite old results or re-run them.
+        key = "output/mixture/initialization.npz"
+        if "precursor_initialization" not in value["datasets"] and key in terminal["artifacts"]:
+            from ..gui import json_array
+            from ..gui_exports import numeric_archive, _json
+            metadata = _json(lambda name: self._export_reader(manifest, terminal, name), "output/mixture/metadata.json")
+            with self._export_reader(manifest, terminal, key) as source, numeric_archive(source) as arrays:
+                value["datasets"]["precursor_initialization"] = {
+                    "z": arrays["Z"].tolist(), "time": arrays["TIME"].tolist(),
+                    "time_label": "Mixture precursor initialization pseudo-time [s]",
+                    "fields": {name: {"values": json_array(arrays[name]),
+                                      "unit": metadata["units"].get(name, ""),
+                                      "units": metadata["units"].get(name, "")}
+                               for name in arrays.files if name not in ("Z", "TIME")}}
         return value
+
+    @contextmanager
+    def _export_reader(self, manifest, terminal, filename):
+        """Hash-check an immutable artifact before CSV/legacy plot decoding."""
+        from ..gui_exports import MAX_ARRAY_BYTES
+        if filename not in terminal["artifacts"]:
+            raise KeyError("Unknown saved artifact")
+        receipt = self._receipt(manifest, filename, terminal["artifacts"][filename])
+        if receipt["size"] > MAX_ARRAY_BYTES:
+            raise ValueError("Saved artifact exceeds the export size limit; use the original download.")
+        with tempfile.SpooledTemporaryFile(max_size=8 * 1024 * 1024, mode="w+b") as spool:
+            digest, size = hashlib.sha256(), 0
+            for body in self.store.iter_bytes_by_url(receipt["url"]):
+                size += len(body)
+                if size > receipt["size"]:
+                    raise CloudStoreError("Artifact exceeds its recorded size.")
+                digest.update(body)
+                spool.write(body)
+            if size != receipt["size"] or digest.hexdigest() != receipt["sha256"]:
+                raise CloudStoreError("Artifact bytes differ from the recorded hash or size.")
+            spool.seek(0)
+            yield spool
+
+    def csv_export(self, run_id, kind):
+        from ..gui_exports import prepare_csv
+        manifest, terminal = self._result(run_id)
+        if terminal["status"]["status"] != "completed" or terminal["publication"].get("complete") is not True:
+            raise RuntimeError("Completed durable results are not available.")
+        spool = prepare_csv(kind, manifest["framework"],
+                            lambda name: self._export_reader(manifest, terminal, name), terminal["artifacts"])
+        return spool, manifest["framework"]
 
     def download(self, run_id, filename):
         _filename(filename)

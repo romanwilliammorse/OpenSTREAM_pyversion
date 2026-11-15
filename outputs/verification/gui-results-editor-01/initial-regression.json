@@ -1,0 +1,20 @@
+{
+  "command": ".venv-cloud/Scripts/python.exe -m pytest -q",
+  "passed": 810,
+  "failed": 2,
+  "warnings": 2,
+  "seconds": 197.34,
+  "failures": [
+    {
+      "test": "tests/test_gui.py::test_real_baseline_run[ThreeField]",
+      "error": "PermissionError: [Errno 13] Permission denied while RunManager.status read the worker status.json",
+      "resolution": "Bounded PermissionError-only retry in GUI status reader; no numerical change"
+    },
+    {
+      "test": "tests/test_sawai_oscillation_trace.py::test_current_checkpoint_source_bytes_match_registered_replay",
+      "error": "Current source differs in gui.py and adds gui_exports.py; 24 other module hashes identical",
+      "resolution": "Current-release test explicitly scopes these two presentation files separately; frozen historical manifest and replay guards untouched"
+    }
+  ],
+  "note": "Summary transcribed from actual pytest tool output. Final rerun log is retained separately. Existing FourField divide-by-zero/invalid-multiply warnings remain."
+}

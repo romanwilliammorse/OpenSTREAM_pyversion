@@ -91,3 +91,145 @@ test("input import rejects unknown explicit schema versions", () => {
     assert.throws(() => assertInputDocumentVersion({schema}), /Unsupported input schema/);
   }
 });
+const {
+  insideLegend, rectangularShape, componentIndices, defaultAxis, normalizeAxis,
+  outputVector, pairOutputVectors, buildCustomFigure, plotLayout, plotConfig, newPlotSeries,
+} = require("../src/openstream/gui_static/app.js");
+
+function vectorFixture() {
+  return {datasets: {
+    physical: {z: [0, 0.5, 1], time: [0, 2], time_label: "Physical time [s]", fields: {
+      "film.U": {unit: "m/s", values: [[[1, 10], [2, 20], [3, 30]], [[4, 40], [5, 50], [6, 60]]]},
+      P: {unit: "Pa", values: [[100, 90, 80], [110, 95, 85]]},
+      "ITR.DU": {unit: "m/s", values: [[null, 0.1, 0.2], [null, 0.3, 0.4]]},
+    }},
+    precursor: {z: [0, 0.5, 1], time: [0], time_label: "Mixture precursor physical time [s]", fields: {
+      "vapor.X": {unit: "1", values: [[0.2, 0.5, 0.8]]},
+      U: {unit: "m/s", values: [[8, 9, 10]]},
+    }},
+    precursor_initialization: {z: [0, 0.5, 1], time: [0, 1, 2], time_label: "Mixture precursor initialization pseudo-time [s]", fields: {
+      U: {unit: "m/s", values: [[0, 1, 2], [1, 2, 3], [3, 4, 5]]},
+    }},
+  }};
+}
+const axis = (dataset, field, fixed = 0, component = [], direction = "channel") => ({dataset, field, fixed, component, direction});
+
+test("cross-dataset quality versus film velocity uses exact components and does not mutate output", () => {
+  const data = vectorFixture(), frozen = JSON.stringify(data);
+  const pair = pairOutputVectors(data, axis("precursor", "vapor.X"), axis("physical", "film.U", 0, [1]));
+  assert.deepEqual(pair.x.values, [0.2, 0.5, 0.8]);
+  assert.deepEqual(pair.y.values, [10, 20, 30]);
+  assert.equal(pair.x.unit, "1"); assert.equal(pair.y.unit, "m/s");
+  assert.deepEqual(pair.notes, []);
+  pair.x.values[0] = 99;
+  assert.equal(JSON.stringify(data), frozen);
+});
+
+test("time histories preserve the selected node and component rather than flattening cells", () => {
+  const data = vectorFixture();
+  const vector = outputVector(data, axis("physical", "film.U", 1, [1], "time"));
+  assert.deepEqual(vector.values, [20, 50]);
+  assert.deepEqual(vector.coordinates, [0, 2]);
+  assert.equal(vector.fixedValue, 0.5);
+  const time = outputVector(data, axis("physical", "TIME"));
+  assert.deepEqual(time.values, [0, 2]);
+  assert.equal(time.unit, "s");
+});
+
+test("vector-length mismatches reject without truncation or interpolation", () => {
+  assert.throws(() => pairOutputVectors(vectorFixture(), axis("physical", "TIME"), axis("physical", "P")), /X has 2 values; Y has 3/);
+});
+
+test("equal-length but different coordinates or dimensions are explicitly paired by index", () => {
+  const data = vectorFixture();
+  data.datasets.precursor.z = [0, 0.6, 1.2];
+  const pair = pairOutputVectors(data, axis("precursor", "vapor.X"), axis("physical", "P"));
+  assert.deepEqual(pair.x.values, [0.2, 0.5, 0.8]);
+  assert.match(pair.notes.join(" "), /Paired by index/);
+  const mixed = pairOutputVectors(data, axis("precursor_initialization", "TIME"), axis("physical", "Z"));
+  assert.match(mixed.notes.join(" "), /different coordinates/);
+  assert.match(mixed.notes.join(" "), /pseudo-time/);
+});
+
+test("different states and initialization pseudo-time remain disclosed", () => {
+  const pair = pairOutputVectors(vectorFixture(), axis("precursor", "U"), axis("physical", "film.U", 1, [0]));
+  assert.match(pair.notes.join(" "), /different fixed states/);
+  const init = outputVector(vectorFixture(), axis("precursor_initialization", "TIME"));
+  assert.equal(init.label, "Initialization pseudo-time");
+  assert.equal(init.pseudo, true);
+});
+
+test("null diagnostics remain gaps and cannot be presented as zero or joined", () => {
+  const data = vectorFixture();
+  const series = {name: "Diagnostic", x: axis("physical", "Z"), y: axis("physical", "ITR.DU", 1)};
+  const figure = buildCustomFigure(data, {series: [series], mode: "lines"});
+  assert.deepEqual(figure.traces[0].y, [null, 0.3, 0.4]);
+  assert.equal(figure.traces[0].connectgaps, false);
+  assert.match(figure.notes.join(" "), /gaps/);
+  data.datasets.physical.fields["ITR.DU"].values[1] = [null, null, null];
+  assert.throws(() => buildCustomFigure(data, {series: [series]}), /no finite X\/Y pairs/);
+});
+
+test("multi-series axes require matching recorded units without implicit unit conversion", () => {
+  const data = vectorFixture();
+  const first = {name: "Film", x: axis("physical", "Z"), y: axis("physical", "film.U", 0, [0])};
+  const second = {name: "Precursor", x: axis("precursor", "Z"), y: axis("precursor", "U")};
+  const figure = buildCustomFigure(data, {series: [first, second]});
+  assert.equal(figure.traces.length, 2);
+  assert.equal(figure.yTitle, "Y (m/s)");
+  assert.equal(figure.xTitle, "Axial position, z (m)");
+  second.y = axis("physical", "P");
+  assert.throws(() => buildCustomFigure(data, {series: [first, second]}), /same recorded X units and Y units/);
+});
+
+test("unknown units are labeled unavailable rather than invented or declared dimensionless", () => {
+  const data = vectorFixture();
+  delete data.datasets.physical.fields.P.unit;
+  const figure = buildCustomFigure(data, {series: [{name: "", x: axis("physical", "Z"), y: axis("physical", "P")}]});
+  assert.equal(figure.yTitle, "P (unit unavailable)");
+});
+
+test("malformed arrays and out-of-range selection fail explicitly", () => {
+  const data = vectorFixture();
+  assert.throws(() => outputVector(data, axis("physical", "film.U", 0)), /one valid component/);
+  assert.throws(() => outputVector(data, axis("physical", "film.U", 0, [2])), /one valid component/);
+  assert.throws(() => outputVector(data, axis("physical", "P", 3)), /state or node is unavailable/);
+  data.datasets.physical.fields.P.values[1] = [1, 2];
+  assert.throws(() => outputVector(data, axis("physical", "P")), /inconsistent array dimensions/);
+  assert.throws(() => rectangularShape([[1], ["bad"]] ), /nonnumeric/);
+  assert.throws(() => rectangularShape([]), /empty dimension/);
+});
+
+test("arbitrary trailing component dimensions remain explicit", () => {
+  const data = {datasets: {physical: {z: [0, 1], time: [0], fields: {
+    tensor: {unit: "1", values: [[[[1, 2], [3, 4]], [[5, 6], [7, 8]]]]},
+  }}}};
+  assert.deepEqual(componentIndices([2, 2]), [[0, 0], [0, 1], [1, 0], [1, 1]]);
+  assert.deepEqual(outputVector(data, axis("physical", "tensor", 0, [1, 0])).values, [3, 7]);
+});
+
+test("new figures and axis defaults have independent selections", () => {
+  const data = vectorFixture(), first = newPlotSeries(data), second = newPlotSeries(data);
+  first.x.dataset = "precursor";
+  first.y.component.push(99);
+  assert.equal(second.x.dataset, "physical");
+  assert.deepEqual(second.y.component, [0]);
+  const configured = defaultAxis(data, {dataset: "precursor_initialization", field: "U"});
+  assert.equal(configured.fixed, 2);
+  assert.equal(normalizeAxis(data, {...configured, field: "TIME"}).direction, "time");
+  const history = defaultAxis(data, {dataset: "physical", field: "P", direction: "time"});
+  assert.equal(history.fixed, data.datasets.physical.z.length - 1);
+  assert.deepEqual(outputVector(data, history).values, data.datasets.physical.fields.P.values.map((row) => row.at(-1)));
+});
+
+test("legend is inside the upper-left plot area and cloud upload is disabled", () => {
+  const legend = insideLegend();
+  assert.ok(legend.x > 0 && legend.x < 1 && legend.y > 0 && legend.y < 1);
+  assert.equal(legend.xanchor, "left"); assert.equal(legend.yanchor, "top");
+  assert.equal(legend.xref, "paper"); assert.equal(legend.yref, "paper");
+  assert.equal(plotLayout("X", "Y", false, "a").showlegend, false);
+  assert.equal(plotLayout("X", "Y", true, "b").showlegend, true);
+  assert.equal(plotLayout("X", "Y", true, "b").title, undefined);
+  assert.equal(plotConfig("figure").showSendToCloud, false);
+  assert.ok(plotConfig("figure").modeBarButtonsToRemove.includes("sendDataToCloud"));
+});

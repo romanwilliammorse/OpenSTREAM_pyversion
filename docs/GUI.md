@@ -10,15 +10,43 @@ connection, external plotting service, or cloud execution is used.
    remains available when the sidebar is hidden.
 2. Leave the reference values unchanged for the first run. Click **Check**,
    then **Run**.
-3. In **Results**, choose **Specific enthalpy**, **Mass flow rate**, or **Velocity**.
+3. In **Results**, the first figure provides the original axial-profile presets.
    Solid lines show Python results; dotted lines show the recovered MATLAB
    profiles where available. Drag to zoom; double-click to reset the axes.
 4. Select **Initialization (pseudo-time)** to inspect the initialization states.
    These states are not a physical transient. Multifield runs also expose the
-   **Mixture precursor** dataset.
-5. Click **Download ZIP** for arrays, unit-labelled CSVs, metadata, inputs,
-   convergence history, verification report, and saved plots. **Save PNG**
-   exports the current interactive chart.
+   **Mixture precursor** and its saved initialization dataset.
+5. Choose **Add a plot** to make another independent figure. Select a dataset,
+   quantity, state/node and component for each axis. For example, select
+   mixture precursor `vapor.X` for X and physical-result `film.U` for Y,
+   choosing the film's wall component. **Add series** adds another compatible
+   curve to that figure. **Add legend** places its legend inside the upper-left
+   plot bounds. Each added figure has its own **Save PNG** and removal controls.
+6. Download **Inputs CSV**, **Boundary conditions CSV**, **Geometry CSV**, or
+   **Results CSV** independently. **Download ZIP** still provides the original
+   arrays, metadata, inputs, convergence history, verification report and plots.
+
+The vector editor supports both axial slices at a selected state and time
+histories at a selected node. Every selected axis must produce the same number
+of values as its paired axis. Unequal lengths are rejected; values are never
+silently interpolated, sorted or truncated. Equal-length vectors from different
+grids or states are paired by their saved index, with that distinction shown.
+Physical time and initialization pseudo-time remain separate. Nonfinite values
+remain gaps in the plots. Additional series on shared axes must have matching
+units; no automatic unit conversion is performed. Figure settings are retained
+when switching saved runs within the current page session.
+
+CSV downloads always use that completed run's saved inputs and arrays. Inputs
+CSV contains the model and numerical controls; boundary conditions and geometry
+have separate files. Typed JSON in `value_json` preserves strings, numbers,
+booleans and array elements. Shapes and zero-based indices identify the elements.
+Results CSV uses one row per saved numeric element across physical results,
+initialization and any mixture precursor datasets. Columns retain quantity,
+unit, dtype, array shape, full indices, time/node/component indices, time in
+seconds, axial position in metres and value. `NaN`, `Infinity` and `-Infinity`
+remain explicit. This long format includes diagnostic vectors and coordinate
+arrays; it does not discard values that fail a physical review. Exports are
+generated without rewriting original run files or rerunning a calculation.
 
 Use **Import** to load input JSON and **Export** to save the current inputs.
 The interface uses the OpenSTREAM website's logo, fonts and colors; detailed

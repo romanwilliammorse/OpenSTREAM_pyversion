@@ -519,7 +519,10 @@
       "src/openstream/cli.py",
       "src/openstream/output.py",
       "src/openstream/gui.py",
-      "src/openstream/gui_lock.py"
+      "src/openstream/gui_lock.py",
+      "src/openstream/gui_exports.py",
+      "src/openstream/cloud/app.py",
+      "src/openstream/cloud/manager.py"
     ],
     "implementation": "partial",
     "native_tests": "passed_scoped",
@@ -549,9 +552,13 @@
       "outputs/verification/hosted-git/history-durability.json",
       "outputs/verification/hosted-release/github-connected.png",
       "outputs/verification/hosted-git/20261115T230830Z-a26dcfdb/summary.json",
-      "outputs/verification/hosted-git/source-check.json"
+      "outputs/verification/hosted-git/source-check.json",
+      "tests/test_gui_exports.py",
+      "docs/GUI_RESULTS_EDITOR.md",
+      "outputs/verification/gui-results-editor-01/local/20261115T233351Z-de26ad5e/receipt.json",
+      "tests/test_gui_status.py"
     ],
-    "gap": "Native progress, metadata, locks and worker logs exist; MATLAB diary/class/session option parity is not complete. Stronger native convergence/physical rejection signals need an explicit mapping to upstream STATE rather than being called identical. Hosted authentication, immutable publication, failure retention and exact-session lifecycle have native tests and live all-four baseline/cancellation evidence. Two initial packaging failure campaigns remain retained. This does not complete MATLAB session/logging semantics. A subsequent Git-triggered production redeployment preserved five prior terminal states and four byte-identical result ZIPs; this covers one redeployment, not in-flight recovery or full source session semantics.",
+    "gap": "Native progress, metadata, locks and worker logs exist; MATLAB diary/class/session option parity is not complete. Stronger native convergence/physical rejection signals need an explicit mapping to upstream STATE rather than being called identical. Hosted authentication, immutable publication, failure retention and exact-session lifecycle have native tests and live all-four baseline/cancellation evidence. Two initial packaging failure campaigns remain retained. This does not complete MATLAB session/logging semantics. A subsequent Git-triggered production redeployment preserved five prior terminal states and four byte-identical result ZIPs; this covers one redeployment, not in-flight recovery or full source session semantics. Completed-run CSV endpoints now have native checks for authentication, incomplete-run rejection, source hash verification before decoding, and unchanged saved inputs/results/status and private-object bytes. Historical mixture-initialization plot data are exposed from immutable artifacts without rewriting or rerunning the original job. This interface evidence does not close MATLAB session/logging semantics. Bounded local status-read retries handle temporary Windows sharing denial without inventing stale/successful states; persistent access denial, missing files and malformed JSON remain errors, with targeted native fault-injection coverage.",
     "priority": "P2",
     "acceptance_criteria": [
       "Map every public session/logging option and solver state to the native behavior or documented replacement.",
@@ -582,7 +589,10 @@
     "python": [
       "src/openstream/output.py",
       "src/openstream/multifield_output.py",
-      "src/openstream/plotting.py"
+      "src/openstream/plotting.py",
+      "src/openstream/gui_exports.py",
+      "src/openstream/gui.py",
+      "src/openstream/cloud/manager.py"
     ],
     "implementation": "implemented",
     "native_tests": "passed_scoped",
@@ -594,9 +604,14 @@
       "tests/test_plotting.py",
       "tests/test_gui.py",
       "outputs/baseline-parity-02/summary.json",
-      "docs/ALL_BASELINES_VERIFICATION.md"
+      "docs/ALL_BASELINES_VERIFICATION.md",
+      "tests/test_gui_exports.py",
+      "tests/test_verify_results_editor.py",
+      "tools/verify_results_editor.py",
+      "docs/GUI_RESULTS_EDITOR.md",
+      "outputs/verification/gui-results-editor-01/local/20261115T233351Z-de26ad5e/receipt.json"
     ],
-    "gap": "Core selected archived outputs are compared, but full derived-output completeness, arbitrary callables and MATLAB object reload compatibility are not established. Exact .mat class serialization is not implemented.",
+    "gap": "Core selected archived outputs are compared, but full derived-output completeness, arbitrary callables and MATLAB object reload compatibility are not established. Exact .mat class serialization is not implemented. Separate read-only inputs, boundary-conditions, geometry and results CSV exports now have all-four steady baseline HTTP round-trip evidence: 358,223 stored result elements and 920 saved input elements agree exactly, including recorded units, shapes, component indices and physical/pseudo-time coordinates. All 101 nonfinite diagnostic entries remain explicit. Exports cover saved precursor initialization where available; this steady-baseline evidence does not establish arbitrary transient/multiwall completeness or additional MATLAB equivalence.",
     "priority": "P1",
     "acceptance_criteria": [
       "Every exported quantity has audited units, dimensions, coordinates and source provenance; retain nonfinite values and flag their validity.",
@@ -622,7 +637,10 @@
       "upstream/+Solvers/AbstractField.m:94"
     ],
     "python": [
-      "src/openstream/plotting.py"
+      "src/openstream/plotting.py",
+      "src/openstream/gui.py",
+      "src/openstream/gui_static/app.js",
+      "src/openstream/cloud/manager.py"
     ],
     "implementation": "implemented",
     "native_tests": "passed_scoped",
@@ -649,9 +667,16 @@
       "outputs/verification/hosted-release/browser-verification.json",
       "outputs/verification/hosted-git/history-durability.json",
       "outputs/verification/hosted-git/20261115T230830Z-a26dcfdb/summary.json",
-      "outputs/verification/hosted-git/source-check.json"
+      "outputs/verification/hosted-git/source-check.json",
+      "tests/gui_frontend_logic.test.cjs",
+      "tests/gui_navigation.test.cjs",
+      "tests/test_gui_exports.py",
+      "tests/test_verify_results_editor.py",
+      "tools/verify_results_editor.py",
+      "docs/GUI_RESULTS_EDITOR.md",
+      "outputs/verification/gui-results-editor-01/local/20261115T233351Z-de26ad5e/receipt.json"
     ],
-    "gap": "Seventeen plotting checks and rendered examples establish exact selected values/layout semantics, not visual identity with MATLAB or correctness of the underlying physics. Hosted all-four plot-data delivery, checksummed downloads and independent comparisons of downloaded archived profiles passed; FourField diagnostic nonfinite entries remain disclosed. This adds no MATLAB visual-equivalence or physical-validation claim. A fresh Mixture run on the Git-deployed application passed saved-array/plot-data delivery and the unchanged archived comparison; four older ZIPs were retrieved unchanged after redeployment.",
+    "gap": "Seventeen plotting checks and rendered examples establish exact selected values/layout semantics, not visual identity with MATLAB or correctness of the underlying physics. Hosted all-four plot-data delivery, checksummed downloads and independent comparisons of downloaded archived profiles passed; FourField diagnostic nonfinite entries remain disclosed. This adds no MATLAB visual-equivalence or physical-validation claim. A fresh Mixture run on the Git-deployed application passed saved-array/plot-data delivery and the unchanged archived comparison; four older ZIPs were retrieved unchanged after redeployment. The GUI now provides multiple independent figures, upper-left internal legends and explicit X/Y dataset/state/node/component selections, including precursor vapor.X versus final film.U. Native checks reject unequal X/Y lengths and mixed recorded units on the same multi-series axis, retain null gaps, label pseudo-time and disclose index pairing across different coordinates/states without interpolation or truncation. Local HTTP checks compare all 356,732 exposed saved field elements across the four baselines exactly, retaining 101 nonfinite gaps. This saved-array display evidence adds no governing-equation change, MATLAB visual-equivalence claim or experimental validation.",
     "priority": "P2",
     "acceptance_criteria": [
       "Confirm every plotted line/frame/cell corresponds to the selected saved values and actual time/node/wall coordinates.",

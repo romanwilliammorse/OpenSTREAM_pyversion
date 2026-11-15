@@ -13,3 +13,31 @@
 @media(max-width:620px){.workspace-toolbar{margin-top:-8px;margin-bottom:20px}.model-picker{margin:28px auto 45px}.model-picker h1{font-size:26px;margin-bottom:22px}.model-options{gap:12px}.model-option{font-size:18px;min-height:96px;padding:18px 14px;gap:10px}.model-selector{min-width:0}.workspace-heading .model-selector #framework{font-size:24px;min-width:180px}.sidebar-toggle{min-height:36px}.sidebar-collapsed main{min-height:100vh}}
 @media(max-width:360px){.model-options{grid-template-columns:1fr}.model-option{min-height:74px}.workspace-heading{flex-wrap:wrap}}
 .workspace-toolbar{justify-content:space-between}.toolbar-brand{display:none}.toolbar-brand img{display:block;width:105px;height:auto}.sidebar-collapsed .toolbar-brand{display:block}
+/* Figure controls change presentation only; saved vectors remain untouched. */
+.profile-figure>.panel-heading{margin-top:4px;margin-bottom:12px}
+.profile-figure h3,.custom-plot-card h3{margin:0;font-size:17px}
+.plot-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.custom-plot-card{border-top:1px solid var(--line);padding-top:20px;margin-top:22px;scroll-margin-top:18px}
+.plot-builder-editor{margin-bottom:15px}
+.plot-builder-editor>summary{color:var(--blue);font-size:12px;cursor:pointer;width:fit-content}
+.plot-series{border:1px solid var(--line);padding:12px 13px;margin-top:12px;background:#f7f8f8}
+.series-heading{display:flex;align-items:center;gap:14px;margin-bottom:13px}
+.series-number{font-size:11px;color:#777;white-space:nowrap}
+.series-name{font-size:10px;color:#777;display:flex;align-items:center;gap:8px;flex:1;max-width:400px}
+.series-name input{font-size:11px;padding:5px 7px;min-width:0;flex:1}
+.series-heading>.text-button{margin-left:auto;white-space:nowrap}
+.plot-axis{display:grid;grid-template-columns:16px minmax(0,1fr);gap:10px;align-items:center;margin-top:10px}
+.axis-name{font-size:12px;color:#555}
+.axis-controls{display:grid;grid-template-columns:minmax(160px,1.2fr) minmax(150px,1.3fr) minmax(105px,.8fr) minmax(135px,1fr) minmax(90px,.7fr);gap:10px;align-items:end}
+.axis-controls label,.plot-editor-footer label{display:flex;flex-direction:column;gap:4px;font-size:10px;color:#777;min-width:0}
+.axis-controls select{width:100%;min-width:0;font-size:11px;padding:5px 6px;min-height:31px}
+.plot-editor-footer{display:flex;align-items:flex-end;gap:16px;margin-top:12px}
+.plot-editor-footer select{font-size:11px;min-height:29px;padding:4px 7px}
+.custom-plot-canvas{height:430px;min-width:0;width:100%}
+.custom-plot-card .notice{margin-bottom:10px}
+#primary-downloads{column-gap:17px;row-gap:5px}
+.csv-download{white-space:nowrap}
+.downloads-panel{flex-wrap:wrap}
+@media(max-width:1250px){.axis-controls{grid-template-columns:repeat(3,minmax(0,1fr))}.axis-controls label:nth-child(1),.axis-controls label:nth-child(2){grid-column:span 1}}
+@media(max-width:850px){.axis-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.custom-plot-canvas{height:400px}.series-heading{flex-wrap:wrap;gap:8px}.series-name{max-width:none}.plot-actions{gap:7px}}
+@media(max-width:620px){.custom-plot-canvas{height:360px}.plot-series{padding:10px}.plot-axis{grid-template-columns:12px minmax(0,1fr);gap:7px}.axis-controls{gap:8px}.axis-controls select{font-size:11px}.series-name{flex-basis:70%}.custom-plot-card>.panel-heading{align-items:flex-start}.plot-actions{justify-content:flex-end}.plot-actions .text-button{font-size:11px}.profile-figure h3,.custom-plot-card h3{font-size:16px}}

@@ -1,0 +1,171 @@
+{
+  "schema": "openstream-results-editor-http-v1",
+  "origin": "http://127.0.0.1:8780",
+  "started_at": "2026-11-15T23:33:51.681286+00:00",
+  "passed": true,
+  "scope": "Every CSV scalar and exposed saved vector; no new solver execution, MATLAB equivalence or experimental validation claim.",
+  "cases": [
+    {
+      "framework": "Mixture",
+      "run_id": "47b8e605097f476db27a6869e551b037",
+      "csv": {
+        "inputs": {
+          "passed": true,
+          "bytes": 8539,
+          "sha256": "b08662634544023c1e8e13f57a773a48e0df64ec356f00ac084a418b668d0e90",
+          "elements": 216
+        },
+        "boundary-conditions": {
+          "passed": true,
+          "bytes": 339,
+          "sha256": "bc0b59ba71038083f195bda083a6247bebfa73dc26b8db1081c0d0469b0d7adb",
+          "elements": 9
+        },
+        "geometry": {
+          "passed": true,
+          "bytes": 250,
+          "sha256": "d1339d0524f49f5a9c7e77cf516000e7a0ad86da7ba78ea819396e38c12a85fe",
+          "elements": 5
+        },
+        "results": {
+          "passed": true,
+          "bytes": 7314265,
+          "sha256": "e20d34308fce88bd6c537371cd7296e6f2a74082d3c667d5b80858d4a40bf167",
+          "elements": 75761,
+          "nonfinite_diagnostics_preserved": 0
+        }
+      },
+      "plot_data": {
+        "passed": true,
+        "bytes": 1435018,
+        "sha256": "5a80daefe1c7c8460497875fda247c5fe0fe1d58f1564a7cc38f92c6b0c9fb76",
+        "datasets": 2,
+        "fields": 136,
+        "elements": 75548,
+        "nonfinite_gaps": 0
+      }
+    },
+    {
+      "framework": "TwoFluid",
+      "run_id": "31bdc0a96f194ec1a3dac210568e4b28",
+      "csv": {
+        "inputs": {
+          "passed": true,
+          "bytes": 8539,
+          "sha256": "b08662634544023c1e8e13f57a773a48e0df64ec356f00ac084a418b668d0e90",
+          "elements": 216
+        },
+        "boundary-conditions": {
+          "passed": true,
+          "bytes": 339,
+          "sha256": "bc0b59ba71038083f195bda083a6247bebfa73dc26b8db1081c0d0469b0d7adb",
+          "elements": 9
+        },
+        "geometry": {
+          "passed": true,
+          "bytes": 250,
+          "sha256": "d1339d0524f49f5a9c7e77cf516000e7a0ad86da7ba78ea819396e38c12a85fe",
+          "elements": 5
+        },
+        "results": {
+          "passed": true,
+          "bytes": 10317294,
+          "sha256": "29049bb44c427eb3cd79a6a42a852f615f79d5b6f8c73a304f73b052826079d9",
+          "elements": 98603,
+          "nonfinite_diagnostics_preserved": 0
+        }
+      },
+      "plot_data": {
+        "passed": true,
+        "bytes": 1814600,
+        "sha256": "f26df88f231f6e36e64135122cfd07fa6be73c288c948bd838c8f0346da0d2c7",
+        "datasets": 4,
+        "fields": 164,
+        "elements": 98172,
+        "nonfinite_gaps": 0
+      }
+    },
+    {
+      "framework": "ThreeField",
+      "run_id": "8b87b512f1594e08a6d59082e4de90a8",
+      "csv": {
+        "inputs": {
+          "passed": true,
+          "bytes": 8539,
+          "sha256": "b08662634544023c1e8e13f57a773a48e0df64ec356f00ac084a418b668d0e90",
+          "elements": 216
+        },
+        "boundary-conditions": {
+          "passed": true,
+          "bytes": 339,
+          "sha256": "bc0b59ba71038083f195bda083a6247bebfa73dc26b8db1081c0d0469b0d7adb",
+          "elements": 9
+        },
+        "geometry": {
+          "passed": true,
+          "bytes": 250,
+          "sha256": "d1339d0524f49f5a9c7e77cf516000e7a0ad86da7ba78ea819396e38c12a85fe",
+          "elements": 5
+        },
+        "results": {
+          "passed": true,
+          "bytes": 8792203,
+          "sha256": "e2e8c7831880c19e7e8b02d94b9fc60fdb0d42f959a07168e527a61043af4dc9",
+          "elements": 83747,
+          "nonfinite_diagnostics_preserved": 0
+        }
+      },
+      "plot_data": {
+        "passed": true,
+        "bytes": 1473595,
+        "sha256": "d860812d4367b67f5f8ef0ba46e49d2f7246612ae67cda90bfb508818aee51d1",
+        "datasets": 4,
+        "fields": 158,
+        "elements": 83325,
+        "nonfinite_gaps": 0
+      }
+    },
+    {
+      "framework": "FourField",
+      "run_id": "56c656bbe0bd4f6e908c190ab26d1f83",
+      "csv": {
+        "inputs": {
+          "passed": true,
+          "bytes": 8539,
+          "sha256": "b08662634544023c1e8e13f57a773a48e0df64ec356f00ac084a418b668d0e90",
+          "elements": 216
+        },
+        "boundary-conditions": {
+          "passed": true,
+          "bytes": 339,
+          "sha256": "bc0b59ba71038083f195bda083a6247bebfa73dc26b8db1081c0d0469b0d7adb",
+          "elements": 9
+        },
+        "geometry": {
+          "passed": true,
+          "bytes": 250,
+          "sha256": "d1339d0524f49f5a9c7e77cf516000e7a0ad86da7ba78ea819396e38c12a85fe",
+          "elements": 5
+        },
+        "results": {
+          "passed": true,
+          "bytes": 10521009,
+          "sha256": "befc9c93238bb5fac90c20936eb5a0500a679385d19ad98b4e9d4255a64db05f",
+          "elements": 100112,
+          "nonfinite_diagnostics_preserved": 101
+        }
+      },
+      "plot_data": {
+        "passed": true,
+        "bytes": 1949013,
+        "sha256": "41444b57a22b41a74345bd37e51a40bfa07989162619cdec2e36f3381029c81b",
+        "datasets": 4,
+        "fields": 183,
+        "elements": 99687,
+        "nonfinite_gaps": 101
+      }
+    }
+  ],
+  "driver_sha256": "2fd5d5510ec33d6dd53f6fa554ce8489dbc4b7db4220847fd3ce0f3226d8732b",
+  "finished_at": "2026-11-15T23:34:06.047467+00:00"
+}
