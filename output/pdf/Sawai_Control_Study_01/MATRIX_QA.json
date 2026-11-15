@@ -1,0 +1,199 @@
+{
+  "schema": "openstream-sawai-control-matrix-pdf-qa-v1",
+  "reviewed_utc": "2026-11-15T09:03:46.448929+00:00",
+  "reviewer": "Independent control-study acceptance and PDF-review agent",
+  "review_scope": "Read-only content and visual review of final acceptance-matrix PDF; no PDF or source mutation.",
+  "source_commit": "254af138f2c292eb4768fbebdf5de47b23e9bb1a",
+  "pdf_relative_path": "ACCEPTANCE_MATRIX.pdf",
+  "pdf_sha256": "e8c20e1c1549561487f5f3b11bab8c5007050f931c565499b136aca043c3503d",
+  "document_manifest_sha256_at_review_before_status_update": "e468825539d8216ab413af2e9b32e1a869c1a791da2337dedd4e361335789ece",
+  "source_markdown_sha256": "1aa5fc84cd7ca8d3b913ae0caf66240c75d36b29dce1475c6a6eae74f6ba7f7f",
+  "source_matches_recorded_commit_after_only_CRLF_normalization": true,
+  "pages": 56,
+  "all_pages_rendered_and_contact_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+  ],
+  "full_page_reviewed": [
+    1,
+    19,
+    20,
+    21,
+    23,
+    24,
+    26,
+    27,
+    28,
+    47,
+    48,
+    50,
+    51,
+    52,
+    56
+  ],
+  "changed_requirement_detail_pages": {
+    "CORE-023": [
+      19,
+      20
+    ],
+    "CORE-024": [
+      20,
+      21
+    ],
+    "CORE-029": [
+      23,
+      24
+    ],
+    "CORE-033": [
+      26
+    ],
+    "CORE-036": [
+      27,
+      28
+    ],
+    "EXP-008": [
+      47,
+      48
+    ],
+    "EXP-011": [
+      50,
+      51,
+      52
+    ]
+  },
+  "contact_render_dpi": 95,
+  "full_page_render_dpi": 150,
+  "renderer": "Poppler pdftoppm",
+  "rendered_review_directory": "tmp/pdfs/sawai-control-matrix-final",
+  "content_checks": {
+    "numeric_tokens_checked": 175,
+    "missing_numeric_tokens": [],
+    "source_text_fragments_checked": 3701,
+    "missing_text_fragments": [],
+    "unique_requirement_ids": 81,
+    "missing_requirement_detail_headings": [],
+    "characters_checked": 149911,
+    "character_bounds_outside_media_box": [],
+    "all_page_headers_and_numbers_match": true,
+    "retention_counts_match_manifest": true
+  },
+  "visual_findings": {
+    "clipped_or_overlapping_text_observed": false,
+    "missing_table_rows_observed": false,
+    "unreadable_glyphs_observed": false,
+    "headers_footers_and_numbering": "Consistent across all 56 contact-reviewed pages.",
+    "summary_tables": "Column alignment, alternating row shading and repeated table headers are legible; no clipped or overlapping rows observed.",
+    "changed_requirement_details": "Complete updated CORE-023/024/029/033/036 and EXP-008/011, including continuation pages, inspected at 150 dpi; retained numbers, units, limitations and evidence links are legible.",
+    "pagination_correction": "The first export stranded the final dependency line on page 57. In the corrected export, complete EXP-018 and its dependency line share page 56; inspected at 150 dpi.",
+    "acceptance_labels": "No stranded acceptance-evidence label observed; first criteria remain with their labels in the reviewed pages."
+  },
+  "font_review": {
+    "embedding": {
+      "/Helvetica": false,
+      "/AAAAAA+SegoeUI-Bold": true,
+      "/AAAAAA+SegoeUI": true,
+      "/AAAAAA+Consolas": true,
+      "/AAAAAA+SegoeUI-Italic": true
+    },
+    "used_fonts": [
+      "AAAAAA+Consolas",
+      "AAAAAA+SegoeUI",
+      "AAAAAA+SegoeUI-Bold",
+      "AAAAAA+SegoeUI-Italic",
+      "Helvetica"
+    ],
+    "note": "Custom Segoe UI and Consolas fonts embedded; standard Helvetica supplies bullets. Poppler emitted unrelated system font-map warnings, while inspected text and bullets are legible."
+  },
+  "artifact_checks": {
+    "final_pdf_unchanged_after_review": true,
+    "contact_sheet_sha256": {
+      "tmp/pdfs/sawai-control-matrix-final/contact-01-08.png": "1ca7ee064cfc0fb3a1274b4fe1bb59baa5c0f53890acd8242eb455db249d5ce3",
+      "tmp/pdfs/sawai-control-matrix-final/contact-09-16.png": "b2ec1aded0681a6128a8205c993170cc8efa40a5b590e00f4a32de02c9937a4c",
+      "tmp/pdfs/sawai-control-matrix-final/contact-17-24.png": "6a1d89de68926f5ffba547caf3ca8b6c5ae7ce21552700045414856e90c3d9d2",
+      "tmp/pdfs/sawai-control-matrix-final/contact-25-32.png": "24fd9a1ef27dda0b3f7e61894f93d8bb2e42b65ff1b91608d0e799b46c9f9561",
+      "tmp/pdfs/sawai-control-matrix-final/contact-33-40.png": "ff358a95d8e598a1ac600c69531a280e48f3357b986848de6e2dddcd74e45840",
+      "tmp/pdfs/sawai-control-matrix-final/contact-41-48.png": "0a3d7f68637d14f9bc641a20c5b72f34a0b5bed24ce0ca61535be047e42e2a43",
+      "tmp/pdfs/sawai-control-matrix-final/contact-49-56.png": "c46d8960ff8fe2d32ace2e4168e3f459d4f6519b300c4c4f3e4edfcc65fa3696"
+    },
+    "full_page_sha256": {
+      "tmp/pdfs/sawai-control-matrix-final/full-01.png": "df4171a8ff1eb3f196771a3cc01591f66dcc31819262e14767a26b03046dd4bb",
+      "tmp/pdfs/sawai-control-matrix-final/full-19.png": "3e1d4e2824e9c940dc18374df453c6ceb23004c52247db5e6a23ba698be2252e",
+      "tmp/pdfs/sawai-control-matrix-final/full-20.png": "e1257e80383e64d5301c66aacd14c4b1cf847383dbae991038b0914ec7895013",
+      "tmp/pdfs/sawai-control-matrix-final/full-21.png": "82d8454df51510e3696f66d79a22e6ee965ec73cb3657497047f07df8d34a8ee",
+      "tmp/pdfs/sawai-control-matrix-final/full-23.png": "e67e6d8115e5693d1408cde28920c6d5ab964493f532a8140fde0b4c1cdddb5b",
+      "tmp/pdfs/sawai-control-matrix-final/full-24.png": "f087ce5472342f077d0b9646b2d00f6fb21685bf81517ef8f79162fe3d534766",
+      "tmp/pdfs/sawai-control-matrix-final/full-26.png": "3474d682f32ddebb3eb87613c2493bc5e17552385cef4e85cf56454c4aa3db86",
+      "tmp/pdfs/sawai-control-matrix-final/full-27.png": "5f4b062a1b9c53b6d6d79db84754c25af4bb968348ec871f022a5e77b01e8ad5",
+      "tmp/pdfs/sawai-control-matrix-final/full-28.png": "0b7d35575516743e1a62cee90301b5336e685e9eae25ded2d025d4a65efc04bb",
+      "tmp/pdfs/sawai-control-matrix-final/full-47.png": "8788e5b4bdee99cd2672de965c5369dce35784abc36cb3030410e36fed793207",
+      "tmp/pdfs/sawai-control-matrix-final/full-48.png": "710eb934d70b0735ba7a8ae3e53b6ea1ffabe0e2349c803011fc3a732b029d57",
+      "tmp/pdfs/sawai-control-matrix-final/full-50.png": "2f4a0a6414f6592a9ab828e81c73895afb0771dfaab11d732c88a6d549c47e48",
+      "tmp/pdfs/sawai-control-matrix-final/full-51.png": "451ad5413cbb06fb59107022407f45bcc6d08eda1d6121c0e2364f40445ee2aa",
+      "tmp/pdfs/sawai-control-matrix-final/full-52.png": "35810e21da56e10144db53ac9ad94342a9c4b9c908bbf783f9c9a5d20c3ff5b2",
+      "tmp/pdfs/sawai-control-matrix-final/full-56.png": "00f7cf921f1e93ca12e27d2ebc79fd6a638b665dde41f82e2abb094bb657a2ce"
+    },
+    "retention_bounds_receipt_sha256": "635d7cd4d689b79ea86e96ff308a709766cf8f878331c01c646f9f33f0535d72",
+    "first_export_failed_receipt": "tmp/pdfs/sawai-control-matrix/MATRIX_QA_FIRST_EXPORT.json"
+  },
+  "limitations": [
+    "W3 belongs to plan.json and its separately linked priority-plan document. It is not included in the matrix source/PDF, so no matrix page is claimed as a W3 review.",
+    "Content retention uses PDF text extraction and whitespace-normalized source fragments; visual checks independently assess layout.",
+    "All 56 pages were visually reviewed in contact sheets; the listed 15 pages were additionally inspected at 150 dpi.",
+    "This verifies the PDF snapshot and presentation; it does not establish MATLAB equivalence, physical validity, printer behavior or every PDF viewer."
+  ],
+  "status": "passed_content_and_rendered_review"
+}

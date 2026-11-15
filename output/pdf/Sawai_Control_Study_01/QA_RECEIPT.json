@@ -1,0 +1,26 @@
+{
+  "schema": "openstream-sawai-control-pdf-release-qa-v1",
+  "source_commit": "254af138f2c292eb4768fbebdf5de47b23e9bb1a",
+  "documents": {
+    "ACCEPTANCE_MATRIX.pdf": {
+      "pages": 56,
+      "sha256": "e8c20e1c1549561487f5f3b11bab8c5007050f931c565499b136aca043c3503d"
+    },
+    "SAWAI_CONTROL_STUDY.pdf": {
+      "pages": 6,
+      "sha256": "7398aef2f969a79d3e95920a20aab8e3501acbc0bae3a696db4c909a433a2a7f"
+    }
+  },
+  "review_receipt_sha256": {
+    "REPORT_QA.json": "620f057646f59d8bacc389e34c8ae9b5195c19252f1ab18680d4829f23e8695e",
+    "MATRIX_QA.json": "105a5fe5cf86609984466045dcab30228678eedaf0173e285577b080d7b2f590"
+  },
+  "document_manifest_sha256_at_review_before_status_update": "e468825539d8216ab413af2e9b32e1a869c1a791da2337dedd4e361335789ece",
+  "final_document_manifest_sha256": "01bb8449b92d8e80fb438d7cf548b51a47670983e27462978a97188feed26df2",
+  "source_text_and_numbers_retained": true,
+  "figure_title_banners_added": false,
+  "scientific_source_unchanged_during_export": true,
+  "pagination": "Matrix paragraph spacing changed from 6 to 5.8 pt after identifying an orphan dependency line; no text, equation, numerical result or report rendering changed. First export preserved in tmp/pdfs/sawai-control-first-export.",
+  "status": "passed_content_and_rendered_review",
+  "limitations": "PDF content/presentation checks only. Scientific failures and limits remain; W3 is a separate linked priority plan, not part of the matrix PDF."
+}

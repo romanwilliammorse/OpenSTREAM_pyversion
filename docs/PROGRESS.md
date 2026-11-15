@@ -41,6 +41,22 @@ two-cycle is eliminated from final summaries alone. Do not overwrite current
 attempts or change governing equations. No matched MATLAB or experimental
 validation follows from this study; MATLAB access remains unavailable.
 
+Published scientific checkpoint: `254af138f2c292eb4768fbebdf5de47b23e9bb1a`.
+Fresh GitHub Windows CI run 43696940244 passed 572 Python tests (two retained
+warnings), all 11 frontend tests, pip dependency checks and wheel/sdist builds.
+The CI log/receipt is retained separately from the initial local GUI failures.
+The all-case independent Decimal audit also passes 1,600 interior equations,
+all eight point-ratio/bounds checks and all 16 saved-profile comparisons.
+
+The final PDFs in `output/pdf/Sawai_Control_Study_01/` contain the six-page
+study report and 56-page updated matrix. All report pages and matrix contact
+sheets were visually reviewed, with 15 matrix pages additionally inspected
+at 150 dpi. Source text/numbers and clean, title-free figures are preserved.
+An unpublished matrix draft with an orphan dependency line is retained in
+`tmp/pdfs/sawai-control-first-export/`; only paragraph spacing changed for the
+final export. `QA_RECEIPT.json` records final hashes and review scope. The W3
+priority plan remains in the separately linked plan, outside the matrix PDF.
+
 ## Sawai oscillation diagnosis — 2026-11-15
 
 Completed the requested source-unchanged diagnosis of Sawai entry 1 at

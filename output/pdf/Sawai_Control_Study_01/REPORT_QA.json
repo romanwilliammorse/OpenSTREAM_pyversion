@@ -1,0 +1,206 @@
+{
+  "schema": "openstream-sawai-control-report-rendered-qa-v1",
+  "reviewed_utc": "2026-11-15T09:02:14.094182+00:00",
+  "source_commit": "254af138f2c292eb4768fbebdf5de47b23e9bb1a",
+  "pdf": "SAWAI_CONTROL_STUDY.pdf",
+  "pdf_sha256": "7398aef2f969a79d3e95920a20aab8e3501acbc0bae3a696db4c909a433a2a7f",
+  "source": "docs/SAWAI_CONTROL_STUDY.md",
+  "source_sha256": "379dfadfe05595250ac81411af39a6e612d0c8116682095654e25be116e1ab8f",
+  "committed_source_equal_after_line_ending_normalization": true,
+  "render_command": "pdftoppm -r 95 -png output/pdf/Sawai_Control_Study_01/SAWAI_CONTROL_STUDY.pdf tmp/pdfs/sawai-control-report-final/page",
+  "render_dpi": 95,
+  "actual_pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "page_reviews": [
+    {
+      "page": 1,
+      "render_path": "tmp/pdfs/sawai-control-report-final/page-1.png",
+      "render_sha256": "64d2a05e84fdf65d0f2c949f47d3b1ee4f000f5b2bb405adb4f03be412c577a1",
+      "pixels": [
+        786,
+        1111
+      ],
+      "reviewed_individually_at_full_page_resolution": true,
+      "page_size_pt": [
+        595.2756,
+        841.8898
+      ],
+      "layout_defects": [],
+      "observation": "Title, introductory text and complete input table readable; consistent margins and no clipping.",
+      "visual_review_basis": "Original full-page individual inspection, transferred only after exact byte equality of decoded final page pixels."
+    },
+    {
+      "page": 2,
+      "render_path": "tmp/pdfs/sawai-control-report-final/page-2.png",
+      "render_sha256": "88d6e7458c1489181e74bc287fa6eda7943e43ebb98f62e7013b56d59a638b27",
+      "pixels": [
+        786,
+        1111
+      ],
+      "reviewed_individually_at_full_page_resolution": true,
+      "page_size_pt": [
+        595.2756,
+        841.8898
+      ],
+      "layout_defects": [],
+      "observation": "Equations, units and source-provenance text intact; heading and following outcome description kept together.",
+      "visual_review_basis": "Original full-page individual inspection, transferred only after exact byte equality of decoded final page pixels."
+    },
+    {
+      "page": 3,
+      "render_path": "tmp/pdfs/sawai-control-report-final/page-3.png",
+      "render_sha256": "b556d7456f8df0378443bbeb59894cbe24066baab0525ed371cf1e003efcb503",
+      "pixels": [
+        786,
+        1111
+      ],
+      "reviewed_individually_at_full_page_resolution": true,
+      "page_size_pt": [
+        595.2756,
+        841.8898
+      ],
+      "layout_defects": [],
+      "observation": "Eight outcome rows and signed-flow table fully readable; negative signs and numerical precision retained.",
+      "visual_review_basis": "Original full-page individual inspection, transferred only after exact byte equality of decoded final page pixels."
+    },
+    {
+      "page": 4,
+      "render_path": "tmp/pdfs/sawai-control-report-final/page-4.png",
+      "render_sha256": "4be15388e8a58b61b6c4a1c6df2c6e224cbf8095b6d1e472973426ee70cf83d0",
+      "pixels": [
+        786,
+        1111
+      ],
+      "reviewed_individually_at_full_page_resolution": true,
+      "page_size_pt": [
+        595.2756,
+        841.8898
+      ],
+      "layout_defects": [],
+      "observation": "Embedded figure has no title/banner; axes and complete legend fit. Verification text and original failed-test accounting remain visible.",
+      "visual_review_basis": "Original full-page individual inspection, transferred only after exact byte equality of decoded final page pixels."
+    },
+    {
+      "page": 5,
+      "render_path": "tmp/pdfs/sawai-control-report-final/page-5.png",
+      "render_sha256": "334853aa74007e88c336bc0c3a7e7f892d91dc5484230482971531f9263e83c7",
+      "pixels": [
+        786,
+        1111
+      ],
+      "reviewed_individually_at_full_page_resolution": true,
+      "page_size_pt": [
+        595.2756,
+        841.8898
+      ],
+      "layout_defects": [],
+      "observation": "Limits, next steps and reproduction commands readable; long commands wrap without clipping. PDF copy/paste execution was not tested.",
+      "visual_review_basis": "Original full-page individual inspection, transferred only after exact byte equality of decoded final page pixels."
+    },
+    {
+      "page": 6,
+      "render_path": "tmp/pdfs/sawai-control-report-final/page-6.png",
+      "render_sha256": "f7bb1fcd18052f9d8bc8568e976bb48314607f2be52d46f53694a4a6c13bf3cb",
+      "pixels": [
+        1571,
+        1111
+      ],
+      "reviewed_individually_at_full_page_resolution": true,
+      "page_size_pt": [
+        1190.551,
+        841.8898
+      ],
+      "layout_defects": [],
+      "observation": "A3 figure plate preserves full aspect ratio, axes, tick labels and legend; no top title/banner, caption only below the figure.",
+      "visual_review_basis": "Original full-page individual inspection, transferred only after exact byte equality of decoded final page pixels."
+    }
+  ],
+  "source_content_checks": {
+    "method": "Reconstruct renderer source fragments without authoring a PDF; compare whitespace-normalized fragments and numeric tokens against extracted original-page content.",
+    "numeric_tokens_checked": 77,
+    "missing_numeric_tokens": [],
+    "source_text_fragments_checked": 317,
+    "missing_text_fragments": [],
+    "counts_match_DOCUMENT_MANIFEST": true
+  },
+  "figure_assets": [
+    {
+      "source": "outputs/verification/sawai-control-study-01/analysis/control_study.png",
+      "sha256": "f0c882460e24964ef1635870860bef4b012907586c7fada316e751ac9e0f4c7d",
+      "committed_bytes_match": true
+    }
+  ],
+  "figure_title_absent_on_pages": [
+    4,
+    6
+  ],
+  "layout_defects": [],
+  "layout_review_status": "passed",
+  "pdf_modified": false,
+  "scientific_source_modified": false,
+  "scope": "Rendered report review only. Scientific calculations are covered by separate audit receipts; this review does not establish MATLAB or experimental validation.",
+  "final_render_identity": {
+    "previous_review_receipt": "tmp/pdfs/sawai-control-first-export/REPORT_QA.json",
+    "previous_review_receipt_sha256": "a3bd4fc83af153a8e0752b5e7cb56543acc2aee12fed08d3f91b5559139072fa",
+    "method": "Exact decoded pixel bytes, image mode and dimensions; independently checked Pillow difference bbox is empty.",
+    "all_six_pages_pixel_identical": true,
+    "page_checks": [
+      {
+        "page": 1,
+        "previous_render_sha256": "64d2a05e84fdf65d0f2c949f47d3b1ee4f000f5b2bb405adb4f03be412c577a1",
+        "final_render_sha256": "64d2a05e84fdf65d0f2c949f47d3b1ee4f000f5b2bb405adb4f03be412c577a1",
+        "image_mode_and_dimensions_match": true,
+        "pixel_bytes_identical": true,
+        "different_pixel_count": 0
+      },
+      {
+        "page": 2,
+        "previous_render_sha256": "88d6e7458c1489181e74bc287fa6eda7943e43ebb98f62e7013b56d59a638b27",
+        "final_render_sha256": "88d6e7458c1489181e74bc287fa6eda7943e43ebb98f62e7013b56d59a638b27",
+        "image_mode_and_dimensions_match": true,
+        "pixel_bytes_identical": true,
+        "different_pixel_count": 0
+      },
+      {
+        "page": 3,
+        "previous_render_sha256": "b556d7456f8df0378443bbeb59894cbe24066baab0525ed371cf1e003efcb503",
+        "final_render_sha256": "b556d7456f8df0378443bbeb59894cbe24066baab0525ed371cf1e003efcb503",
+        "image_mode_and_dimensions_match": true,
+        "pixel_bytes_identical": true,
+        "different_pixel_count": 0
+      },
+      {
+        "page": 4,
+        "previous_render_sha256": "4be15388e8a58b61b6c4a1c6df2c6e224cbf8095b6d1e472973426ee70cf83d0",
+        "final_render_sha256": "4be15388e8a58b61b6c4a1c6df2c6e224cbf8095b6d1e472973426ee70cf83d0",
+        "image_mode_and_dimensions_match": true,
+        "pixel_bytes_identical": true,
+        "different_pixel_count": 0
+      },
+      {
+        "page": 5,
+        "previous_render_sha256": "334853aa74007e88c336bc0c3a7e7f892d91dc5484230482971531f9263e83c7",
+        "final_render_sha256": "334853aa74007e88c336bc0c3a7e7f892d91dc5484230482971531f9263e83c7",
+        "image_mode_and_dimensions_match": true,
+        "pixel_bytes_identical": true,
+        "different_pixel_count": 0
+      },
+      {
+        "page": 6,
+        "previous_render_sha256": "f7bb1fcd18052f9d8bc8568e976bb48314607f2be52d46f53694a4a6c13bf3cb",
+        "final_render_sha256": "f7bb1fcd18052f9d8bc8568e976bb48314607f2be52d46f53694a4a6c13bf3cb",
+        "image_mode_and_dimensions_match": true,
+        "pixel_bytes_identical": true,
+        "different_pixel_count": 0
+      }
+    ]
+  },
+  "review_scope_note": "Final report only. The acceptance matrix was regenerated separately; no claim about a separate W3 plan is made here.",
+  "document_manifest_sha256_at_review_before_status_update": "e468825539d8216ab413af2e9b32e1a869c1a791da2337dedd4e361335789ece"
+}

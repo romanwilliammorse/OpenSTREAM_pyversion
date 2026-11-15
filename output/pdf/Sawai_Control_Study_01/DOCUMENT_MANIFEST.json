@@ -1,0 +1,521 @@
+{
+  "schema": "openstream-sawai-control-pdf-inventory-v1",
+  "source_commit": "254af138f2c292eb4768fbebdf5de47b23e9bb1a",
+  "scope": "Exactly the Sawai numerical-control study report and acceptance matrix; source text unchanged.",
+  "source_identity_policy": "Working source must equal the recorded commit after CRLF-to-LF normalization only; raw hashes also retained.",
+  "counts": {
+    "markdown": 2,
+    "total": 2
+  },
+  "documents": [
+    {
+      "source": "docs/SAWAI_CONTROL_STUDY.md",
+      "kind": "markdown",
+      "title": "Sawai entry 1: relaxation and iteration-control study",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "SAWAI_CONTROL_STUDY.pdf",
+      "source_sha256": "379dfadfe05595250ac81411af39a6e612d0c8116682095654e25be116e1ab8f",
+      "source_sha256_lf": "379dfadfe05595250ac81411af39a6e612d0c8116682095654e25be116e1ab8f",
+      "source_bytes": 14413,
+      "source_git_blob": "bf0b3aea4f2d2b8b423f57eacc6fd134b5aaddfb",
+      "committed_source_sha256": "379dfadfe05595250ac81411af39a6e612d0c8116682095654e25be116e1ab8f",
+      "figure_assets": [
+        {
+          "source": "outputs/verification/sawai-control-study-01/analysis/control_study.png",
+          "caption": "Native point ratios, fixed-mask mass-defect ratios, wave velocity and period",
+          "source_sha256": "f0c882460e24964ef1635870860bef4b012907586c7fada316e751ac9e0f4c7d",
+          "source_bytes": 220846,
+          "source_git_blob": "7bd39fa5e3e9990919a675bfb754c3f4ecee4972",
+          "pixels": [
+            1980,
+            1440
+          ],
+          "dpi": [
+            180.00979999999998,
+            180.00979999999998
+          ]
+        }
+      ],
+      "headings": [
+        {
+          "title": "Sawai entry 1: relaxation and iteration-control study",
+          "page": 1
+        },
+        {
+          "title": "Result and scope",
+          "page": 1
+        },
+        {
+          "title": "Frozen inputs and provenance",
+          "page": 1
+        },
+        {
+          "title": "Original convergence and supplementary mass diagnostic",
+          "page": 2
+        },
+        {
+          "title": "Eight retained outcomes",
+          "page": 2
+        },
+        {
+          "title": "Sensitivity and retained bounds",
+          "page": 3
+        },
+        {
+          "title": "Verification and limits",
+          "page": 4
+        },
+        {
+          "title": "Acceptance record and next work",
+          "page": 5
+        },
+        {
+          "title": "Reproduction and artifacts",
+          "page": 5
+        }
+      ],
+      "pages": 6,
+      "pdf_sha256": "7398aef2f969a79d3e95920a20aab8e3501acbc0bae3a696db4c909a433a2a7f",
+      "numeric_tokens_checked": 77,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 317,
+      "missing_text_fragments": [],
+      "pre_plate_pdf_sha256": "735d3853c64f3b12d999a3aa6176e1d5a3abc445e90bc1eecfd7b699c5baa737",
+      "original_pages": 5,
+      "added_figure_plate_pages": 1,
+      "figure_plates": [
+        {
+          "source": "outputs/verification/sawai-control-study-01/analysis/control_study.png",
+          "caption": "Native point ratios, fixed-mask mass-defect ratios, wave velocity and period",
+          "source_sha256": "f0c882460e24964ef1635870860bef4b012907586c7fada316e751ac9e0f4c7d",
+          "source_bytes": 220846,
+          "source_git_blob": "7bd39fa5e3e9990919a675bfb754c3f4ecee4972",
+          "pixels": [
+            1980,
+            1440
+          ],
+          "dpi": [
+            180.00979999999998,
+            180.00979999999998
+          ],
+          "pdf_page": 6,
+          "page_size_pt": [
+            1190.5511811023623,
+            841.8897637795277
+          ],
+          "rendered_size_pt": [
+            791.9568823475167,
+            575.9686417072849
+          ],
+          "native_size_limit_applied": true
+        }
+      ],
+      "original_page_text_and_content_streams_retained": true,
+      "original_page_geometry_retained": true,
+      "original_bookmarks_retained": true,
+      "original_named_destinations_retained": true
+    },
+    {
+      "source": "docs/ACCEPTANCE_MATRIX.md",
+      "kind": "markdown",
+      "title": "Acceptance matrix",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "ACCEPTANCE_MATRIX.pdf",
+      "source_sha256": "1aa5fc84cd7ca8d3b913ae0caf66240c75d36b29dce1475c6a6eae74f6ba7f7f",
+      "source_sha256_lf": "1aa5fc84cd7ca8d3b913ae0caf66240c75d36b29dce1475c6a6eae74f6ba7f7f",
+      "source_bytes": 153812,
+      "source_git_blob": "2b13c8795564ebe177ad47759e534ecb3d8c8a26",
+      "committed_source_sha256": "1aa5fc84cd7ca8d3b913ae0caf66240c75d36b29dce1475c6a6eae74f6ba7f7f",
+      "headings": [
+        {
+          "title": "Acceptance matrix",
+          "page": 1
+        },
+        {
+          "title": "Experimental Validation",
+          "page": 1
+        },
+        {
+          "title": "Interface Parity",
+          "page": 2
+        },
+        {
+          "title": "Literature Scope",
+          "page": 4
+        },
+        {
+          "title": "Matlab Equivalence",
+          "page": 4
+        },
+        {
+          "title": "Numerical Verification",
+          "page": 6
+        },
+        {
+          "title": "Reference Infrastructure",
+          "page": 7
+        },
+        {
+          "title": "Release",
+          "page": 8
+        },
+        {
+          "title": "Requirement details",
+          "page": 8
+        },
+        {
+          "title": "CORE-001: Mixture",
+          "page": 8
+        },
+        {
+          "title": "CORE-002: TwoFluid",
+          "page": 9
+        },
+        {
+          "title": "CORE-003: ThreeField",
+          "page": 9
+        },
+        {
+          "title": "CORE-004: FourField",
+          "page": 10
+        },
+        {
+          "title": "CORE-005: All frameworks",
+          "page": 10
+        },
+        {
+          "title": "CORE-006: All frameworks",
+          "page": 11
+        },
+        {
+          "title": "CORE-007: Mixture",
+          "page": 12
+        },
+        {
+          "title": "CORE-008: TwoFluid",
+          "page": 12
+        },
+        {
+          "title": "CORE-009: ThreeField",
+          "page": 13
+        },
+        {
+          "title": "CORE-010: FourField",
+          "page": 13
+        },
+        {
+          "title": "CORE-011: Mixture closures",
+          "page": 14
+        },
+        {
+          "title": "CORE-012: Mixture closures",
+          "page": 14
+        },
+        {
+          "title": "CORE-013: Mixture MRM",
+          "page": 14
+        },
+        {
+          "title": "CORE-014: Mixture relaxation",
+          "page": 15
+        },
+        {
+          "title": "CORE-015: Mixture momentum",
+          "page": 15
+        },
+        {
+          "title": "CORE-016: Mixture heat transfer",
+          "page": 16
+        },
+        {
+          "title": "CORE-017: Mixture transitions",
+          "page": 16
+        },
+        {
+          "title": "CORE-018: Annular onset",
+          "page": 17
+        },
+        {
+          "title": "CORE-019: TwoFluid momentum",
+          "page": 17
+        },
+        {
+          "title": "CORE-020: TwoFluid exchanges",
+          "page": 18
+        },
+        {
+          "title": "CORE-021: ThreeField exchange",
+          "page": 18
+        },
+        {
+          "title": "CORE-022: ThreeField momentum",
+          "page": 18
+        },
+        {
+          "title": "CORE-023: FourField structure",
+          "page": 19
+        },
+        {
+          "title": "CORE-024: FourField momentum",
+          "page": 20
+        },
+        {
+          "title": "CORE-025: Mixture physical checks",
+          "page": 21
+        },
+        {
+          "title": "CORE-026: TwoFluid physical checks",
+          "page": 21
+        },
+        {
+          "title": "CORE-027: ThreeField physical checks",
+          "page": 22
+        },
+        {
+          "title": "CORE-028: FourField physical checks",
+          "page": 22
+        },
+        {
+          "title": "CORE-029: Convergence contracts",
+          "page": 23
+        },
+        {
+          "title": "CORE-030: Mixture discretization",
+          "page": 24
+        },
+        {
+          "title": "CORE-031: TwoFluid discretization",
+          "page": 25
+        },
+        {
+          "title": "CORE-032: ThreeField discretization",
+          "page": 25
+        },
+        {
+          "title": "CORE-033: FourField discretization",
+          "page": 26
+        },
+        {
+          "title": "CORE-034: Multiwall numerical behavior",
+          "page": 27
+        },
+        {
+          "title": "CORE-035: Source-defective scientific options",
+          "page": 27
+        },
+        {
+          "title": "CORE-036: Numerical language semantics",
+          "page": 27
+        },
+        {
+          "title": "CORE-037: Operating domain",
+          "page": 28
+        },
+        {
+          "title": "API-001: Input readers",
+          "page": 29
+        },
+        {
+          "title": "API-002: Defaults and enums",
+          "page": 29
+        },
+        {
+          "title": "API-003: Input writers and default reporting",
+          "page": 30
+        },
+        {
+          "title": "API-004: Function-valued inputs",
+          "page": 30
+        },
+        {
+          "title": "API-005: Geometry and boundary dimensions",
+          "page": 31
+        },
+        {
+          "title": "API-006: Colon and interpolation semantics",
+          "page": 31
+        },
+        {
+          "title": "API-007: Copy, caches and array indexing",
+          "page": 32
+        },
+        {
+          "title": "API-008: Thermophysical properties",
+          "page": 32
+        },
+        {
+          "title": "API-009: Property optimization and helper scope",
+          "page": 33
+        },
+        {
+          "title": "API-010: Public diagnostics and subsets",
+          "page": 33
+        },
+        {
+          "title": "API-011: Live-field extraction and public interpolation API",
+          "page": 34
+        },
+        {
+          "title": "API-012: Session and runtime behavior",
+          "page": 34
+        },
+        {
+          "title": "API-013: Portable results and serialization",
+          "page": 35
+        },
+        {
+          "title": "API-014: Saved-array post-processing",
+          "page": 35
+        },
+        {
+          "title": "API-015: Complete plotting API",
+          "page": 36
+        },
+        {
+          "title": "API-016: Tutorial 01: quick start",
+          "page": 36
+        },
+        {
+          "title": "API-017: Tutorials 02-05: model capabilities",
+          "page": 37
+        },
+        {
+          "title": "API-018: Tutorial 06: input workflows",
+          "page": 37
+        },
+        {
+          "title": "API-019: Tutorials 07-08: convergence and sensitivity",
+          "page": 38
+        },
+        {
+          "title": "API-020: Tutorial 09: advanced visualization",
+          "page": 38
+        },
+        {
+          "title": "API-021: MATLAB reference export",
+          "page": 39
+        },
+        {
+          "title": "API-022: Archive recovery",
+          "page": 39
+        },
+        {
+          "title": "API-023: Comparison acceptance machinery",
+          "page": 40
+        },
+        {
+          "title": "API-024: GUI and command interfaces",
+          "page": 40
+        },
+        {
+          "title": "API-025: Reproducible installation and release",
+          "page": 41
+        },
+        {
+          "title": "API-026: Evidence provenance and status consistency",
+          "page": 41
+        },
+        {
+          "title": "EXP-001: Publication/version provenance",
+          "page": 42
+        },
+        {
+          "title": "EXP-002: NURETH demonstration",
+          "page": 42
+        },
+        {
+          "title": "EXP-003: ICMF annular transient",
+          "page": 43
+        },
+        {
+          "title": "EXP-004: TRACE benchmark",
+          "page": 44
+        },
+        {
+          "title": "EXP-005: Native database adapter",
+          "page": 44
+        },
+        {
+          "title": "EXP-006: Units and observable definitions",
+          "page": 45
+        },
+        {
+          "title": "EXP-007: Uncertainty and acceptance",
+          "page": 46
+        },
+        {
+          "title": "EXP-008: Evaluation report and case accounting",
+          "page": 47
+        },
+        {
+          "title": "EXP-009: Bartolomey pilot",
+          "page": 48
+        },
+        {
+          "title": "EXP-010: Wurtz publication reproduction",
+          "page": 49
+        },
+        {
+          "title": "EXP-011: Sawai publication reproduction",
+          "page": 50
+        },
+        {
+          "title": "EXP-012: Sawai unit/domain integrity",
+          "page": 52
+        },
+        {
+          "title": "EXP-013: Companion configuration compatibility",
+          "page": 53
+        },
+        {
+          "title": "EXP-014: Independent validation partition",
+          "page": 53
+        },
+        {
+          "title": "EXP-015: Adamsson film-flow validation",
+          "page": 54
+        },
+        {
+          "title": "EXP-016: Bennett thermal/dryout validation",
+          "page": 55
+        },
+        {
+          "title": "EXP-017: Groeneveld CHF/dryout validation",
+          "page": 55
+        },
+        {
+          "title": "EXP-018: Model applicability versus promised future features",
+          "page": 56
+        }
+      ],
+      "pages": 56,
+      "pdf_sha256": "e8c20e1c1549561487f5f3b11bab8c5007050f931c565499b136aca043c3503d",
+      "numeric_tokens_checked": 175,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 3701,
+      "missing_text_fragments": []
+    }
+  ],
+  "figure_plate_policy": "Append unchanged referenced PNGs on A3 landscape pages; preserve pixel aspect ratio without cropping; never exceed native DPI size when recorded (otherwise one point per pixel maximum).",
+  "created_utc": "2026-11-15T09:01:13.464130+00:00",
+  "python": "3.12.14",
+  "versions": {
+    "reportlab": "4.4.9",
+    "pypdf": "6.10.0",
+    "Pillow": "12.3.0",
+    "markdown-it-py": "4.0.0",
+    "mdurl": "0.1.2"
+  },
+  "exporter_source_sha256": {
+    "tools/export_sawai_control_pdf.py": "2748dc4170204fde6f45a0f2ab54cb44deb7e32aa9b334b9f8fd2e122359b074",
+    "tools/export_lecorre_pdf.py": "f962bb10946ca5bc3174adcda6ebf410a7bceadba31c6797900bbc37046f678e",
+    "tools/export_documentation_pdf.py": "8fad2fb54de8b35e8814289bfe6c2919d54bb98035441f2164f7762fb5a58668"
+  },
+  "verification": {
+    "source_hashes_matched_before_and_after": true,
+    "figure_assets_match_source_commit_and_unchanged_after_export": true,
+    "all_numeric_tokens_retained": true,
+    "all_source_text_fragments_retained": true,
+    "rendered_layout_review": "passed; all 6 report pages and all 56 matrix pages reviewed, with 15 matrix pages additionally inspected at 150 dpi; see REPORT_QA.json and MATRIX_QA.json"
+  }
+}

@@ -40,7 +40,7 @@ def main(argv=None):
             story=super().markdown_story(meta,width)
             for i,item in enumerate(story):
                 if meta["source"]==SOURCES[1][0] and hasattr(item,"style") and (item.style.name=="body" or item.style.name.startswith("list")):
-                    item.spaceAfter=6
+                    item.spaceAfter=5.8
                 if hasattr(item,"getPlainText") and item.getPlainText().strip()=="Acceptance evidence required:":
                     # Keep the matrix label with its first criterion, including
                     # intervening spacing. Scientific source text is unchanged.

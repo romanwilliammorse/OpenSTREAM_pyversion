@@ -1,0 +1,54 @@
+{
+  "schema": "openstream-sawai-control-pdf-inventory-v1",
+  "source_commit": "254af138f2c292eb4768fbebdf5de47b23e9bb1a",
+  "scope": "Exactly the Sawai numerical-control study report and acceptance matrix; source text unchanged.",
+  "source_identity_policy": "Working source must equal the recorded commit after CRLF-to-LF normalization only; raw hashes also retained.",
+  "counts": {
+    "markdown": 2,
+    "total": 2
+  },
+  "documents": [
+    {
+      "source": "docs/SAWAI_CONTROL_STUDY.md",
+      "kind": "markdown",
+      "title": "Sawai entry 1: relaxation and iteration-control study",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "SAWAI_CONTROL_STUDY.pdf",
+      "source_sha256": "379dfadfe05595250ac81411af39a6e612d0c8116682095654e25be116e1ab8f",
+      "source_sha256_lf": "379dfadfe05595250ac81411af39a6e612d0c8116682095654e25be116e1ab8f",
+      "source_bytes": 14413,
+      "source_git_blob": "bf0b3aea4f2d2b8b423f57eacc6fd134b5aaddfb",
+      "committed_source_sha256": "379dfadfe05595250ac81411af39a6e612d0c8116682095654e25be116e1ab8f",
+      "figure_assets": [
+        {
+          "source": "outputs/verification/sawai-control-study-01/analysis/control_study.png",
+          "caption": "Native point ratios, fixed-mask mass-defect ratios, wave velocity and period",
+          "source_sha256": "f0c882460e24964ef1635870860bef4b012907586c7fada316e751ac9e0f4c7d",
+          "source_bytes": 220846,
+          "source_git_blob": "7bd39fa5e3e9990919a675bfb754c3f4ecee4972",
+          "pixels": [
+            1980,
+            1440
+          ],
+          "dpi": [
+            180.00979999999998,
+            180.00979999999998
+          ]
+        }
+      ]
+    },
+    {
+      "source": "docs/ACCEPTANCE_MATRIX.md",
+      "kind": "markdown",
+      "title": "Acceptance matrix",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "ACCEPTANCE_MATRIX.pdf",
+      "source_sha256": "1aa5fc84cd7ca8d3b913ae0caf66240c75d36b29dce1475c6a6eae74f6ba7f7f",
+      "source_sha256_lf": "1aa5fc84cd7ca8d3b913ae0caf66240c75d36b29dce1475c6a6eae74f6ba7f7f",
+      "source_bytes": 153812,
+      "source_git_blob": "2b13c8795564ebe177ad47759e534ecb3d8c8a26",
+      "committed_source_sha256": "1aa5fc84cd7ca8d3b913ae0caf66240c75d36b29dce1475c6a6eae74f6ba7f7f"
+    }
+  ],
+  "figure_plate_policy": "Append unchanged referenced PNGs on A3 landscape pages; preserve pixel aspect ratio without cropping; never exceed native DPI size when recorded (otherwise one point per pixel maximum)."
+}

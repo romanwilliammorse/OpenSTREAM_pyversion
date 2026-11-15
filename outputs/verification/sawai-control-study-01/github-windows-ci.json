@@ -1,0 +1,27 @@
+{
+  "schema": "openstream-sawai-control-windows-ci-v1",
+  "source_commit": "254af138f2c292eb4768fbebdf5de47b23e9bb1a",
+  "run_id": 43696940244,
+  "job_id": 132759486546,
+  "url": "https://github.com/romanwilliammorse/OpenSTREAM_pyversion/actions/runs/43696940244",
+  "status": "completed",
+  "conclusion": "success",
+  "environment": "GitHub Actions windows-latest, Python 3.12, Node 22, recursive pinned source checkout",
+  "results": {
+    "python_tests_passed": 572,
+    "python_tests_failed": 0,
+    "retained_warnings": 2,
+    "python_test_seconds": 156.28,
+    "frontend_tests_passed": 11,
+    "pip_check": "No broken requirements found.",
+    "build": [
+      "openstream_python-0.2.1.tar.gz",
+      "openstream_python-0.2.1-py3-none-any.whl"
+    ]
+  },
+  "log": "github-windows-ci.log",
+  "log_normalization": "GitHub-decoded public job log; CRLF normalized to LF, terminal newline retained.",
+  "local_result_separate": "The initial local suite remains 570 passed / 2 GUI PermissionError failures, followed by a separate 2-passed targeted recheck. This CI run does not erase those observations.",
+  "limitation": "Software checks for the recorded commit, not full numerical equivalence or experimental validation.",
+  "log_sha256": "b6216558fe9a355e822958823412e235d5ee713d0fdcab6d3de3163fadd8ac50"
+}
