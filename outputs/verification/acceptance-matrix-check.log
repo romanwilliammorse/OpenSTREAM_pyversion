@@ -1,0 +1,54 @@
+{
+  "requirements": 81,
+  "tracks": {
+    "matlab_equivalence": 27,
+    "numerical_verification": 10,
+    "interface_parity": 19,
+    "reference_infrastructure": 5,
+    "release": 2,
+    "literature_scope": 6,
+    "experimental_validation": 12
+  },
+  "priorities": {
+    "P1": 41,
+    "P0": 31,
+    "P2": 9
+  },
+  "implementation": {
+    "implemented": 42,
+    "partial": 26,
+    "unsupported_source_defect": 1,
+    "missing": 12
+  },
+  "status_axes": {
+    "native_tests": {
+      "passed_scoped": 32,
+      "partial": 29,
+      "failed": 2,
+      "not_run": 18
+    },
+    "matlab": {
+      "passed_scoped": 13,
+      "failed": 1,
+      "not_run": 51,
+      "not_applicable": 12,
+      "partial": 4
+    },
+    "physical": {
+      "passed_scoped": 3,
+      "failed": 12,
+      "not_applicable": 32,
+      "partial": 19,
+      "not_run": 15
+    },
+    "experimental": {
+      "not_run": 46,
+      "not_applicable": 35
+    }
+  },
+  "enum_types": 41,
+  "enum_choices": 127,
+  "interpolation_choices": 16,
+  "public_method_entries_with_inheritance": 585
+}
+Acceptance ledger integrity and generated files: PASS

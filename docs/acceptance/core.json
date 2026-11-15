@@ -1,0 +1,1401 @@
+[
+  {
+    "id": "CORE-001",
+    "track": "matlab_equivalence",
+    "component": "Mixture",
+    "requirement": "Preserve original TUTORIAL1 steady primary-profile agreement",
+    "scope": "TUTORIAL1/DEFAULT/TUTORIAL1/tutorial1.inp; 100 cells and 101 nodes; 9 original W/U/H profiles. The common case is 6 MPa, 0.07 kg/s, 87.5 kW and 5.5 m.",
+    "upstream": [
+      "upstream/+Solvers/+Mixture/@MixtureSolver/MixtureSolver.m",
+      "upstream/+Solvers/+Mixture/@MixtureSolver/solve.m",
+      "upstream/inputs/models.inp",
+      "upstream/inputs/tutorial1.inp"
+    ],
+    "python": [
+      "src/openstream/solver.py",
+      "src/openstream/fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "passed_scoped",
+    "physical": "passed_scoped",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/ALL_BASELINES_VERIFICATION.md",
+      "outputs/baseline-parity-02/Mixture/comparison/comparison.json",
+      "outputs/baseline-parity-02/summary.json",
+      "tests/test_solver.py",
+      "outputs/verification/native-sensitivity-01/verification.json"
+    ],
+    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Compare every original core value at all matching nodes using unchanged rtol=1e-8, atol=0 and exact reference zeros.",
+      "Preserve original input/hash/unit/axis/convergence checks and separate the physical-consistency outcome from the archive comparison."
+    ],
+    "next_action": "Retain this immutable regression gate while extending reference cases.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-002",
+    "track": "matlab_equivalence",
+    "component": "TwoFluid",
+    "requirement": "Preserve original TUTORIAL1 steady primary-profile agreement",
+    "scope": "TUTORIAL1/DEFAULT/TUTORIAL1/tutorial1.inp; 100 cells and 101 nodes; 6 original W/U/H profiles. The common case is 6 MPa, 0.07 kg/s, 87.5 kW and 5.5 m.",
+    "upstream": [
+      "upstream/+Solvers/+TwoFluid/@TwoFluidSolver/TwoFluidSolver.m",
+      "upstream/+Solvers/+TwoFluid/@TwoFluidSolver/solve.m",
+      "upstream/inputs/models.inp",
+      "upstream/inputs/tutorial1.inp"
+    ],
+    "python": [
+      "src/openstream/twofluid.py",
+      "src/openstream/tf_fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "passed_scoped",
+    "physical": "failed",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/ALL_BASELINES_VERIFICATION.md",
+      "outputs/baseline-parity-02/TwoFluid/comparison/comparison.json",
+      "outputs/baseline-parity-02/summary.json"
+    ],
+    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Compare every original core value at all matching nodes using unchanged rtol=1e-8, atol=0 and exact reference zeros.",
+      "Preserve original input/hash/unit/axis/convergence checks and separate the physical-consistency outcome from the archive comparison."
+    ],
+    "next_action": "Retain this immutable regression gate while extending reference cases.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-003",
+    "track": "matlab_equivalence",
+    "component": "ThreeField",
+    "requirement": "Preserve original TUTORIAL1 steady primary-profile agreement",
+    "scope": "TUTORIAL1/DEFAULT/TUTORIAL1/tutorial1.inp; 100 cells and 101 nodes; 6 original W/U/H profiles. The common case is 6 MPa, 0.07 kg/s, 87.5 kW and 5.5 m.",
+    "upstream": [
+      "upstream/+Solvers/+ThreeField/@ThreeFieldSolver/ThreeFieldSolver.m",
+      "upstream/+Solvers/+ThreeField/@ThreeFieldSolver/solve.m",
+      "upstream/inputs/models.inp",
+      "upstream/inputs/tutorial1.inp"
+    ],
+    "python": [
+      "src/openstream/threefield.py",
+      "src/openstream/annular.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "passed_scoped",
+    "physical": "failed",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/ALL_BASELINES_VERIFICATION.md",
+      "outputs/baseline-parity-02/ThreeField/comparison/comparison.json",
+      "outputs/baseline-parity-02/summary.json"
+    ],
+    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Compare every original core value at all matching nodes using unchanged rtol=1e-8, atol=0 and exact reference zeros.",
+      "Preserve original input/hash/unit/axis/convergence checks and separate the physical-consistency outcome from the archive comparison."
+    ],
+    "next_action": "Retain this immutable regression gate while extending reference cases.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-004",
+    "track": "matlab_equivalence",
+    "component": "FourField",
+    "requirement": "Preserve original TUTORIAL1 steady primary-profile agreement",
+    "scope": "TUTORIAL1/DEFAULT/TUTORIAL1/tutorial1.inp; 100 cells and 101 nodes; 9 original W/U/H profiles. The common case is 6 MPa, 0.07 kg/s, 87.5 kW and 5.5 m.",
+    "upstream": [
+      "upstream/+Solvers/+FourField/@FourFieldSolver/FourFieldSolver.m",
+      "upstream/+Solvers/+FourField/@FourFieldSolver/solve.m",
+      "upstream/inputs/models.inp",
+      "upstream/inputs/tutorial1.inp"
+    ],
+    "python": [
+      "src/openstream/fourfield.py",
+      "src/openstream/ff_fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "passed_scoped",
+    "physical": "failed",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/ALL_BASELINES_VERIFICATION.md",
+      "outputs/baseline-parity-02/FourField/comparison/comparison.json",
+      "outputs/baseline-parity-02/summary.json"
+    ],
+    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Compare every original core value at all matching nodes using unchanged rtol=1e-8, atol=0 and exact reference zeros.",
+      "Preserve original input/hash/unit/axis/convergence checks and separate the physical-consistency outcome from the archive comparison."
+    ],
+    "next_action": "Retain this immutable regression gate while extending reference cases.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-005",
+    "track": "matlab_equivalence",
+    "component": "All frameworks",
+    "requirement": "Preserve pseudo-time initialization and precursor semantics",
+    "scope": "All 10/15/6/9 archived initialization states for Mixture/TwoFluid/ThreeField/FourField, including embedded mixture precursors; physical time is separate.",
+    "upstream": [
+      "upstream/+Solvers/AbstractSolver.m",
+      "upstream/+Solvers/+Mixture/@MixtureSolver/solve.m",
+      "upstream/+Solvers/+TwoFluid/@TwoFluidSolver/solve.m",
+      "upstream/+Solvers/+ThreeField/@ThreeFieldSolver/solve.m",
+      "upstream/+Solvers/+FourField/@FourFieldSolver/solve.m"
+    ],
+    "python": [
+      "src/openstream/solver.py",
+      "src/openstream/twofluid.py",
+      "src/openstream/threefield.py",
+      "src/openstream/fourfield.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "passed_scoped",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/ALL_BASELINES_VERIFICATION.md",
+      "outputs/baseline-parity-02/summary.json",
+      "docs/annular_reference_audit.md"
+    ],
+    "gap": "Agreement is limited to stored TUTORIAL1 histories; the archive does not preserve every point iteration.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Continue exact matching of archived state counts, axes and core profiles at rtol=1e-8, atol=0.",
+      "Verify boundary-node exclusion, shallow aggregate handles and final initialization-to-physical transfer on additional cases."
+    ],
+    "next_action": "Extend reference export to retain point iterates where needed and branch-specific initialization cases.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-006",
+    "track": "matlab_equivalence",
+    "component": "All frameworks",
+    "requirement": "Resolve supplementary diagnostic comparison failures",
+    "scope": "Strict relative-only physical-state failures: 14 Mixture, 6 TwoFluid, 2 ThreeField and 1 FourField; additional annular initialization iteration differences remain.",
+    "upstream": [
+      "upstream/+Solvers/+Mixture/Mixture.m",
+      "upstream/+Solvers/+TwoFluid/@TwoFluidSolver/solve.m",
+      "upstream/+Solvers/+ThreeField/@ThreeFieldSolver/solve.m",
+      "upstream/+Solvers/+FourField/@FourFieldSolver/solve.m"
+    ],
+    "python": [
+      "src/openstream/fields.py",
+      "src/openstream/twofluid.py",
+      "src/openstream/threefield.py",
+      "src/openstream/fourfield.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "failed",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/ALL_BASELINES_VERIFICATION.md",
+      "docs/mixture_followup.md",
+      "outputs/mixture-followup/diagnostic-audit.json",
+      "outputs/baseline-parity-02"
+    ],
+    "gap": "Eleven mixture failures are accounted for by stored-state differences; three point-increment differences lack archived intermediate iterates. Other failures must retain their recorded status.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Keep all existing strict comparisons and failures unchanged.",
+      "Reconstruct diagnostics independently with their units and expression order; identify translation errors separately from roundoff amplification and unknown producer metadata.",
+      "Any additional diagnostic tolerance requires a recorded numerical/physical justification fixed before rerunning; it must not replace the original failed metric."
+    ],
+    "next_action": "Capture missing point iterates/property versions and perform quantity-by-quantity attribution before deciding any separately justified diagnostic acceptance policy.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-007",
+    "track": "matlab_equivalence",
+    "component": "Mixture",
+    "requirement": "Verify original physical transient against MATLAB",
+    "scope": "TUTORIAL2A original 0-5 s power-reduction schedule, 100 cells, 0.1 s nominal step; initialization is a separate dataset.",
+    "upstream": [
+      "upstream/+Solvers/+Mixture/@MixtureSolver/solve.m",
+      "upstream/inputs/tutorial2_transient.inp"
+    ],
+    "python": [
+      "src/openstream/solver.py",
+      "src/openstream/fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "not_run",
+    "physical": "failed",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_transient.py",
+      "outputs/verification/native-sensitivity-01/verification.json",
+      "docs/VERIFICATION.md"
+    ],
+    "gap": "No MATLAB transient arrays. The material-enthalpy discretization has a measured conservative-energy product-rule defect; steady agreement does not resolve transient equivalence.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Match every stored physical time and space coordinate, W/P/H and derived phase states under predeclared dimensional tolerances.",
+      "Check each boundary schedule change, storage term and source-ordered update; report conservative and material-equation residuals separately."
+    ],
+    "next_action": "Recover or export a time-resolved MATLAB case with all boundary records, property versions and equation residuals.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-008",
+    "track": "matlab_equivalence",
+    "component": "TwoFluid",
+    "requirement": "Verify original physical transient against MATLAB",
+    "scope": "TUTORIAL3B with tutorial2_transient.inp; 51 states, 101 nodes.",
+    "upstream": [
+      "upstream/+Solvers/+TwoFluid/@TwoFluidSolver/solve.m",
+      "upstream/inputs/tutorial2_transient.inp"
+    ],
+    "python": [
+      "src/openstream/twofluid.py",
+      "src/openstream/tf_fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "not_run",
+    "physical": "failed",
+    "experimental": "not_run",
+    "evidence": [
+      "tools/verify_twofluid_transient.py",
+      "outputs/twofluid-transient-02/verification.json",
+      "docs/twofluid_notes.md"
+    ],
+    "gap": "No MATLAB transient reference. Native run converges but maximum occupied-area discrepancy is 43.3609%; this transient defect's source attribution is unresolved.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Compare phase W/U/H and mixture-precursor fields at every physical state with the same boundary schedule.",
+      "Preserve measured mass/enthalpy/momentum residuals and clamp applicability; matching MATLAB cannot waive physical failures."
+    ],
+    "next_action": "Obtain matching MATLAB transient arrays and independently compare inventories, sources and constrained momentum updates.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-009",
+    "track": "matlab_equivalence",
+    "component": "ThreeField",
+    "requirement": "Verify original physical transient against MATLAB",
+    "scope": "TUTORIAL4D original 51-state, 101-node transient; annular acceptance only where applicable.",
+    "upstream": [
+      "upstream/+Solvers/+ThreeField/@ThreeFieldSolver/solve.m",
+      "upstream/inputs/tutorial2_transient.inp"
+    ],
+    "python": [
+      "src/openstream/threefield.py",
+      "src/openstream/annular.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "not_run",
+    "physical": "failed",
+    "experimental": "not_run",
+    "evidence": [
+      "tools/verify_threefield_transient.py",
+      "outputs/threefield_transient_audited/verification.json",
+      "docs/threefield_transient.md"
+    ],
+    "gap": "No MATLAB transient reference. Maximum fully annular area discrepancy is 11.2004%; fixed-annular-domain mass residual is 0.00746082 kg/s.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Compare film/drop W/U/H, mixture precursor and source terms over every state.",
+      "Use a control volume annular at all included times for storage checks; do not mix pre-annular initialization fields into physical acceptance."
+    ],
+    "next_action": "Obtain matching MATLAB transient arrays and source-order traces at onset, momentum bounds and dryout.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-010",
+    "track": "matlab_equivalence",
+    "component": "FourField",
+    "requirement": "Verify original physical transient against MATLAB",
+    "scope": "TUTORIAL5E plus tutorial2_transient.inp (workflow named TUTORIAL5F); 51 states, 101 nodes, one wall.",
+    "upstream": [
+      "upstream/+Solvers/+FourField/@FourFieldSolver/solve.m",
+      "upstream/inputs/tutorial2_transient.inp"
+    ],
+    "python": [
+      "src/openstream/fourfield.py",
+      "src/openstream/ff_fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "not_run",
+    "physical": "failed",
+    "experimental": "not_run",
+    "evidence": [
+      "tools/verify_fourfield.py",
+      "outputs/fourfield-transient-audited/verification.json",
+      "docs/fourfield_notes.md"
+    ],
+    "gap": "No MATLAB transient reference. Fully annular area discrepancy reaches 15.5181%; fixed-annular mass residual is 0.00642295 kg/s.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Compare actual film.base, film.wave and drop W/U/H plus frequency, not the erroneous upstream basefilm traversal alone.",
+      "Preserve all physical failures, including storage residuals in the common annular domain."
+    ],
+    "next_action": "Export native and MATLAB base/wave/drop/frequency histories with source-order and constraint diagnostics.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-011",
+    "track": "matlab_equivalence",
+    "component": "Mixture closures",
+    "requirement": "Cover void and slip closures",
+    "scope": "VOID=HOMOGENEOUS/SLIP/BESTION/EPRI; slip corrections and phase reconstruction, with subcooled/two-phase/pure-phase boundaries.",
+    "upstream": [
+      "upstream/+Solvers/+Mixture/Mixture.m",
+      "upstream/+Solvers/+Mixture/Liquid.m",
+      "upstream/+Solvers/+Mixture/Vapor.m",
+      "upstream/+InputEnums/VOID.m"
+    ],
+    "python": [
+      "src/openstream/fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_fields.py",
+      "outputs/mixture_variant_checks.json",
+      "docs/field_notes.md"
+    ],
+    "gap": "Selected identities and tutorial executions exist; no independent MATLAB arrays across all alternatives and operating regimes.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Match independently exported void, phase velocity and energy/momentum correction fields for each legal closure.",
+      "Verify phase mass/energy partition and appropriate bounds without treating boundedness as correlation validation."
+    ],
+    "next_action": "Select minimal branch-isolating cases and compatible parameter sweeps before database comparisons.",
+    "selectors": [
+      "VOID"
+    ]
+  },
+  {
+    "id": "CORE-012",
+    "track": "matlab_equivalence",
+    "component": "Mixture closures",
+    "requirement": "Cover thermal nonequilibrium closures",
+    "scope": "THERMALNONEQ=EQUILIBRIUM/SAHAZUBER/EPRI/MRM, including boiling onset and zero-heat limits.",
+    "upstream": [
+      "upstream/+Solvers/+Mixture/Mixture.m",
+      "upstream/+Solvers/+Mixture/Liquid.m",
+      "upstream/+Solvers/+Mixture/Vapor.m",
+      "upstream/+InputEnums/THERMALNONEQ.m"
+    ],
+    "python": [
+      "src/openstream/fields.py",
+      "src/openstream/solver.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_fields.py",
+      "outputs/mixture_variant_checks.json",
+      "outputs/mixture-followup/mrm-transient-after.json"
+    ],
+    "gap": "EPRI has scoped smoke/bound checks; other tutorial executions do not establish reference equivalence. None is experimentally validated in this port.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Check every legal thermal model against independent MATLAB states and valid limiting conditions.",
+      "Retain explicit applicability domains and avoid substituting saturation equilibrium for unevaluated nonequilibrium physics."
+    ],
+    "next_action": "Compare thermal branch cases with exact wall-power partitions, void/quality definitions and enthalpy states.",
+    "selectors": [
+      "THERMALNONEQ"
+    ]
+  },
+  {
+    "id": "CORE-013",
+    "track": "matlab_equivalence",
+    "component": "Mixture MRM",
+    "requirement": "Verify both MRM integrators and exception semantics",
+    "scope": "MRMTIMEINT=EULER/EXPONENTIAL; NaN-only MRM Vapor.H fallback versus NaN-or-infinity non-MRM behavior; finite valid calculations and synthetic invalid-state tests distinguished.",
+    "upstream": [
+      "upstream/+Solvers/+Mixture/Vapor.m",
+      "upstream/+Solvers/+Mixture/@MixtureSolver/solve.m",
+      "upstream/+InputEnums/MRMTIMEINT.m"
+    ],
+    "python": [
+      "src/openstream/fields.py",
+      "src/openstream/solver.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_mixture_mrm_semantics.py",
+      "docs/mixture_followup.md",
+      "outputs/mrm_transient_checks.json",
+      "outputs/mrm_transient_tight_checks.json",
+      "outputs/mixture-followup/mrm-transient-after.json"
+    ],
+    "gap": "Both original transients executed, but no MATLAB reference. Loose point-increment criteria leave material residuals; tightened native checks cover only selected conditions.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Exercise both integrators at schedule transitions and verify residuals with units kg/(s m), W/m and Pa.",
+      "Preserve NaN/Inf branch semantics without interpreting deliberately invalid synthetic states as physical predictions."
+    ],
+    "next_action": "Generate MRM transient MATLAB references and repeat converged refinement with source integrators unchanged.",
+    "selectors": [
+      "MRMTIMEINT"
+    ]
+  },
+  {
+    "id": "CORE-014",
+    "track": "matlab_equivalence",
+    "component": "Mixture relaxation",
+    "requirement": "Cover relaxation and near-wall alternatives",
+    "scope": "THERMALRELAX=FOURIERX/TIMEX/VOID/HOMOGENEOUS/FOURIER; NEARWALLH and NEARWALLRELAX selections; obstruction overrides and coefficient units.",
+    "upstream": [
+      "upstream/+Solvers/+Mixture/Mixture.m",
+      "upstream/+Solvers/+Mixture/Liquid.m",
+      "upstream/+Solvers/+Mixture/Vapor.m",
+      "upstream/+InputEnums/THERMALRELAX.m",
+      "upstream/+InputEnums/NEARWALLH.m",
+      "upstream/+InputEnums/NEARWALLRELAX.m"
+    ],
+    "python": [
+      "src/openstream/fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_fields.py",
+      "docs/field_notes.md",
+      "docs/FEATURE_MAP.md"
+    ],
+    "gap": "All relaxation branches have selected finite/positive tests; near-wall alternatives are largely source-inspected. No branch-wide numerical reference or uncertainty evidence.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Check relaxation times in seconds and each mixed-unit coefficient explicitly.",
+      "Verify source NaN omission and near-wall source cancellation at boundaries; compare corresponding MATLAB outputs."
+    ],
+    "next_action": "Construct branch-specific fixtures including obstruction interpolation, condensation/evaporation, and pure-phase limits.",
+    "selectors": [
+      "THERMALRELAX",
+      "NEARWALLH",
+      "NEARWALLRELAX"
+    ]
+  },
+  {
+    "id": "CORE-015",
+    "track": "matlab_equivalence",
+    "component": "Mixture momentum",
+    "requirement": "Cover friction, local losses and momentum components",
+    "scope": "SPMTM=BLASIUS; TPFM=HOMOGENEOUS/SLIP/EPRI; TPKM=HOMOGENEOUS/SLIP/ROMIE; BTMTM choices; gravity, spatial/temporal acceleration and slip corrections.",
+    "upstream": [
+      "upstream/+Solvers/+Mixture/Mixture.m",
+      "upstream/+Solvers/+Mixture/Liquid.m",
+      "upstream/+Solvers/+Mixture/Vapor.m",
+      "upstream/+InputEnums/TPFM.m",
+      "upstream/+InputEnums/TPKM.m",
+      "upstream/+InputEnums/BTMTM.m"
+    ],
+    "python": [
+      "src/openstream/fields.py",
+      "src/openstream/solver.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_fields.py",
+      "tests/test_transient.py",
+      "outputs/mixture_variant_checks.json",
+      "docs/VERIFICATION.md"
+    ],
+    "gap": "Analytic homogeneous pressure-drop and selected local-loss cases exist; several alternatives only have source inspection.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Check sign, units and sum of pressure components in Pa at obstruction nodes, inclinations and time-dependent states.",
+      "Verify nearest-node ties, repeated obstructions and slip correction behavior without changing cached source order."
+    ],
+    "next_action": "Build independent component-by-component pressure and force fixtures and MATLAB comparison cases.",
+    "selectors": [
+      "SPMTM",
+      "TPFM",
+      "TPKM",
+      "BTMTM"
+    ]
+  },
+  {
+    "id": "CORE-016",
+    "track": "matlab_equivalence",
+    "component": "Mixture heat transfer",
+    "requirement": "Cover supported wall heat-transfer closures",
+    "scope": "SPHTM=DITTUSBOELTER/SIEDERTATE/GNIELINSKI; TPHTM=THOM; BTHTM=VAPOR/DOUGALL/BISHOP/MOECK/DELORME/CONDIEIV (DELORME one wall).",
+    "upstream": [
+      "upstream/+Solvers/+Mixture/Mixture.m",
+      "upstream/+Solvers/+Mixture/Liquid.m",
+      "upstream/+Solvers/+Mixture/Vapor.m",
+      "upstream/+InputEnums/SPHTM.m",
+      "upstream/+InputEnums/TPHTM.m",
+      "upstream/+InputEnums/BTHTM.m"
+    ],
+    "python": [
+      "src/openstream/fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_fields.py",
+      "docs/field_notes.md"
+    ],
+    "gap": "Selected finite/positive coefficient and wall-energy identities are not full model-domain tests or validation. No alternative-closure MATLAB references.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Verify W/(m2 K) coefficients, K temperatures and W/m2 flux with phase-specific property choices.",
+      "Test relevant regime boundaries and thermal partitions; compare field outputs before experimental fitting."
+    ],
+    "next_action": "Map each closure's published domain, create independently calculated fixture values and obtain MATLAB wall-temperature/flux arrays.",
+    "selectors": [
+      "SPHTM",
+      "TPHTM",
+      "BTHTM"
+    ]
+  },
+  {
+    "id": "CORE-017",
+    "track": "matlab_equivalence",
+    "component": "Mixture transitions",
+    "requirement": "Verify boiling-crisis, rewet and associated momentum switches",
+    "scope": "CBT, MFBT and BTMTM legal selections, including BIASI/BEZRUKOV/ELEVATION, NONE/CONSTANT rewet behavior and crossing histories.",
+    "upstream": [
+      "upstream/+Solvers/+Mixture/Mixture.m",
+      "upstream/+InputEnums/CBT.m",
+      "upstream/+InputEnums/MFBT.m",
+      "upstream/+InputEnums/BTMTM.m"
+    ],
+    "python": [
+      "src/openstream/fields.py",
+      "src/openstream/solver.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_fields.py",
+      "docs/FEATURE_MAP.md",
+      "docs/field_notes.md"
+    ],
+    "gap": "NONE and prescribed ELEVATION are exercised; remaining transition branches are largely source-inspected. Transient transition timing and hysteresis/reset behavior are unverified.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Record the criterion, first crossed cell/time and resulting model selection for each legal option.",
+      "Distinguish prescribed measured onset from a predicted onset when later validating against data."
+    ],
+    "next_action": "Create cases crossing each applicable transition and retrieve MATLAB event/field histories.",
+    "selectors": [
+      "CBT",
+      "MFBT",
+      "BTMTM"
+    ]
+  },
+  {
+    "id": "CORE-018",
+    "track": "matlab_equivalence",
+    "component": "Annular onset",
+    "requirement": "Verify onset criteria, cached sigmoid and initialization split",
+    "scope": "OAF=WALLIS/WALLIS_SIMP/LEVITAN; OAFENTRAINED=RATIO/EQUILIBRIUM; transition width and node-dependent caching.",
+    "upstream": [
+      "upstream/+Solvers/+Mixture/Mixture.m",
+      "upstream/+Solvers/+ThreeField/@ThreeFieldSolver/ThreeFieldSolver.m",
+      "upstream/+Solvers/+FourField/@FourFieldSolver/FourFieldSolver.m",
+      "upstream/+InputEnums/OAF.m",
+      "upstream/+InputEnums/OAFENTRAINED.m"
+    ],
+    "python": [
+      "src/openstream/fields.py",
+      "src/openstream/threefield.py",
+      "src/openstream/fourfield.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_fields.py",
+      "outputs/threefield_variant_checks.json",
+      "docs/threefield_transient.md",
+      "docs/fourfield_notes.md"
+    ],
+    "gap": "WALLIS/cached sigmoid and selected split cases tested; alternative onset and wall-enhancement interactions lack references. Mesh changes alter the source sigmoid's physical width.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Compare onset indices/elevations and cached transition arrays exactly under documented indexing semantics.",
+      "Separate pre-annular initialization from physical annular acceptance; do not interpret mesh-dependent smoothing as pure discretization error."
+    ],
+    "next_action": "Export onset location, cached transition function, split equations and closure convergence for alternative branches and meshes.",
+    "selectors": [
+      "OAF",
+      "OAFENTRAINED"
+    ]
+  },
+  {
+    "id": "CORE-019",
+    "track": "matlab_equivalence",
+    "component": "TwoFluid momentum",
+    "requirement": "Cover phase momentum and local relative-velocity alternatives",
+    "scope": "MOMENTLIQUID/GAS=MIXTURE/SLIP/FULL; LOCRELVEL=AREAMEAN/SCALED/DRIFT in implemented legal paths; one-wall FULL momentum.",
+    "upstream": [
+      "upstream/+Solvers/+TwoFluid/Liquid.m",
+      "upstream/+Solvers/+TwoFluid/Vapor.m",
+      "upstream/+Solvers/+TwoFluid/Mixture.m",
+      "upstream/+Solvers/+TwoFluid/REGIMES.m",
+      "upstream/+Solvers/+TwoFluid/@TwoFluidSolver/solve.m"
+    ],
+    "python": [
+      "src/openstream/twofluid.py",
+      "src/openstream/tf_fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_twofluid.py",
+      "outputs/twofluid_variant_checks.json",
+      "docs/twofluid_baseline_audit.md"
+    ],
+    "gap": "Selected original momentum tutorials and slip identities tested. Other option combinations, regime transitions and dimensional balance at clipped bounds lack MATLAB references.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Verify phase velocities, material acceleration and conservative force sums in their proper units.",
+      "Report reconstruction masks and clamp effects; normalized void summing to one cannot substitute for occupied-area closure."
+    ],
+    "next_action": "Construct legal pairwise momentum/relative-velocity cases with unclipped and constrained states.",
+    "selectors": [
+      "MOMENTLIQUID",
+      "MOMENTGAS",
+      "LOCRELVEL"
+    ]
+  },
+  {
+    "id": "CORE-020",
+    "track": "matlab_equivalence",
+    "component": "TwoFluid exchanges",
+    "requirement": "Cover interfacial area, drag and heat/mass exchange",
+    "scope": "INTLENGTH=CONSTANT; INTAREA=DISPGAS2DISPLIQ; BUBBLEDRAG/DROPDRAG legal alternatives; INTNU=CONSTANT/RANZMARSHALL/RELAXATION; INTTRANSH=BULK/SATURATED.",
+    "upstream": [
+      "upstream/+Solvers/+TwoFluid/Liquid.m",
+      "upstream/+Solvers/+TwoFluid/Vapor.m",
+      "upstream/+Solvers/+TwoFluid/Mixture.m",
+      "upstream/+Solvers/+TwoFluid/REGIMES.m",
+      "upstream/+InputEnums/INTNU.m",
+      "upstream/+InputEnums/INTTRANSH.m"
+    ],
+    "python": [
+      "src/openstream/tf_fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_twofluid.py",
+      "docs/twofluid_notes.md",
+      "docs/FEATURE_MAP.md"
+    ],
+    "gap": "Scoped cancellation tests cover six INTNU/INTTRANSH combinations. Drag/flow-regime domains and combinations lack comprehensive branch evidence and numerical references.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Verify pairwise mass cancellation and conservative energy/momentum identities, including H*dW and U*dW terms.",
+      "Test interfacial-area transition continuity, selected Reynolds regimes and signs using documented applicability."
+    ],
+    "next_action": "Add independent closure values and boundary/regime fixtures with matched MATLAB phase-source outputs.",
+    "selectors": [
+      "INTLENGTH",
+      "INTAREA",
+      "BUBBLEDRAG",
+      "DROPDRAG",
+      "INTNU",
+      "INTTRANSH"
+    ]
+  },
+  {
+    "id": "CORE-021",
+    "track": "matlab_equivalence",
+    "component": "ThreeField exchange",
+    "requirement": "Cover entrainment, deposition and obstruction enhancement",
+    "scope": "ENTRAINMENT=NONE/GOVAN/OKAWA2003/OKAWA2004/OKAWA2004MOD/OKAWAGEN; DEPOSITION=NONE/GOVAN/OKAWA; DEPENHANCEMENT=NONE/WINDECKER; THINFILMFRIC/VAPORFRIC choices.",
+    "upstream": [
+      "upstream/+Solvers/AbstractFilm.m",
+      "upstream/+Solvers/+ThreeField/Film.m",
+      "upstream/+Solvers/+ThreeField/Drop.m",
+      "upstream/+InputEnums/ENTRAINMENT.m",
+      "upstream/+InputEnums/DEPOSITION.m",
+      "upstream/+InputEnums/DEPENHANCEMENT.m"
+    ],
+    "python": [
+      "src/openstream/annular.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_threefield.py",
+      "outputs/threefield_variant_checks.json",
+      "docs/threefield_review.md",
+      "docs/FEATURE_MAP.md"
+    ],
+    "gap": "Tutorials exercise defaults, Govan and disabled exchange. Other branches/combinations are source-inspected or scoped unit checks. Okawa vector and pointwise iteration stopping differ upstream.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Check mass-source units and sign, evaporation latent-heat balance, wall/perimeter scaling and obstruction coordinates.",
+      "Use the solver's pointwise closure path for equation residuals; do not silently substitute the vector diagnostic path."
+    ],
+    "next_action": "Compare pointwise solver closure outputs, nested iteration status and separate vector diagnostics for every legal branch.",
+    "selectors": [
+      "ENTRAINMENT",
+      "DEPOSITION",
+      "DEPENHANCEMENT",
+      "THINFILMFRIC",
+      "VAPORFRIC"
+    ]
+  },
+  {
+    "id": "CORE-022",
+    "track": "matlab_equivalence",
+    "component": "ThreeField momentum",
+    "requirement": "Cover film/drop momentum alternatives and nested secant behavior",
+    "scope": "MOMENTFILM=ALGEBRAIC/EQUILIBRIUM/EQUILIBRIUMS/FULL; MOMENTDROP=ALGEBRAIC/SLIP/EQUILIBRIUM/EQUILIBRIUMS/FULL; thin-film branch and dryout clipping.",
+    "upstream": [
+      "upstream/+Solvers/AbstractFilm.m",
+      "upstream/+Solvers/+ThreeField/Film.m",
+      "upstream/+Solvers/+ThreeField/Drop.m",
+      "upstream/+Solvers/+ThreeField/@ThreeFieldSolver/solve.m"
+    ],
+    "python": [
+      "src/openstream/threefield.py",
+      "src/openstream/annular.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_threefield.py",
+      "tests/test_threefield_transient_audit.py",
+      "outputs/threefield_variant_checks.json",
+      "docs/threefield_review.md",
+      "docs/threefield_transient.md"
+    ],
+    "gap": "Selected full/equilibrium tutorials executed, but no alternative-closure MATLAB references. Sequential sources and clipping leave nonzero raw residuals.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Check film force in N/m2 and drop force in N/m3 and resulting acceleration in m/s2.",
+      "Retain raw, applicable unclamped and reconstructed update residuals separately; verify inner and outer convergence independently."
+    ],
+    "next_action": "Export nested solve traces and compare each momentum branch on wet, thin-film, dryout and constrained-velocity states.",
+    "selectors": [
+      "MOMENTFILM",
+      "MOMENTDROP"
+    ]
+  },
+  {
+    "id": "CORE-023",
+    "track": "matlab_equivalence",
+    "component": "FourField structure",
+    "requirement": "Cover base/wave split, geometry and frequency closures",
+    "scope": "OAFFILMSPLIT=RATIO/EQUILIBRIUM; BASEEQTHICK=RISO/COEFS/YPLUS/MFVAL; WAVEFREQUENCY=EQUILIBRIUM/RELAXATION; EQSTROUHAL=RISO/SAWAI/MFVAL/CUSTOM/CSTFREQ.",
+    "upstream": [
+      "upstream/+Solvers/+FourField/Base.m",
+      "upstream/+Solvers/+FourField/Wave.m",
+      "upstream/+Solvers/+FourField/Film.m",
+      "upstream/+Solvers/+FourField/@FourFieldSolver/FourFieldSolver.m",
+      "upstream/+InputEnums/EQSTROUHAL.m"
+    ],
+    "python": [
+      "src/openstream/fourfield.py",
+      "src/openstream/ff_fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_fourfield.py",
+      "outputs/fourfield_tutorials/verification.json",
+      "docs/fourfield_notes.md",
+      "docs/annular_reference_audit.md"
+    ],
+    "gap": "Actual base/frequency pass TUTORIAL1 additional comparisons; alternative cases run natively but branch-wide MATLAB equivalence is not established.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Check W=base.W+wave.W, source residence-inventory weighted film U, dimensions of thickness/width/spacing and frequency in Hz.",
+      "Compare actual base fields and frequency for every selected closure; preserve the source dry-film NaN fallback."
+    ],
+    "next_action": "Create branch-isolating base thickness, wave geometry/frequency and zero-film references.",
+    "selectors": [
+      "OAFFILMSPLIT",
+      "BASEEQTHICK",
+      "WAVEFREQUENCY",
+      "EQSTROUHAL"
+    ]
+  },
+  {
+    "id": "CORE-024",
+    "track": "matlab_equivalence",
+    "component": "FourField momentum",
+    "requirement": "Cover base/wave momentum and shear coupling",
+    "scope": "MOMENTBASE=ALGEBRAIC/EQUILIBRIUM/EQUILIBRIUMS/FULL/FULLNOP; MOMENTWAVE=ALGEBRAIC/EQUILIBRIUM/FULL; WAVEBASEINT=VAPORSHEAR/VAPORSHEARDROPMASS.",
+    "upstream": [
+      "upstream/+Solvers/+FourField/Base.m",
+      "upstream/+Solvers/+FourField/Wave.m",
+      "upstream/+Solvers/+FourField/@FourFieldSolver/solve.m",
+      "upstream/+InputEnums/WAVEBASEINT.m"
+    ],
+    "python": [
+      "src/openstream/fourfield.py",
+      "src/openstream/ff_fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_fourfield.py",
+      "outputs/fourfield_tutorials/verification.json",
+      "docs/fourfield_notes.md",
+      "docs/fourfield_review.md"
+    ],
+    "gap": "Selected tutorials and cancellation tests exist; all branch combinations and source-order momentum residuals lack independent reference coverage. Exact zero-slip evaluates infinity times zero upstream.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Verify internal shear and mass exchange cancellation with N/m2 and kg/(s m2) conventions preserved.",
+      "Document zero-slip NaN behavior separately from any future analytic-limit correction; never silently replace the source operation order."
+    ],
+    "next_action": "Add source-equivalent boundary fixtures and reference traces for base/wave/drop source-order and constrained momentum branches.",
+    "selectors": [
+      "MOMENTBASE",
+      "MOMENTWAVE",
+      "WAVEBASEINT"
+    ]
+  },
+  {
+    "id": "CORE-025",
+    "track": "numerical_verification",
+    "component": "Mixture physical checks",
+    "requirement": "Retain independent steady mass, energy and momentum checks",
+    "scope": "Original TUTORIAL1 at 6 MPa; independent analytic adiabatic subcooled case; no claim of all closures or all fluids.",
+    "upstream": [
+      "upstream/+Solvers/+Mixture/@MixtureSolver/solve.m",
+      "upstream/+Solvers/+Mixture/Mixture.m"
+    ],
+    "python": [
+      "src/openstream/output.py",
+      "src/openstream/solver.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "not_applicable",
+    "physical": "passed_scoped",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_solver.py",
+      "tests/test_transient.py",
+      "outputs/verification/native-sensitivity-01/verification.json",
+      "docs/VERIFICATION.md"
+    ],
+    "gap": "Selected steady checks pass; this is neither experimental validation nor a universal balance guarantee.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Verify imposed discrete power 87500 W and steady enthalpy target 1139400+87500/0.07=2389400 J/kg for this case.",
+      "Check local and global mass/enthalpy/momentum residuals with correct units and boundary contributions, not just solver increments."
+    ],
+    "next_action": "Retain independent balance gates while adding closure- and condition-specific cases.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-026",
+    "track": "numerical_verification",
+    "component": "TwoFluid physical checks",
+    "requirement": "Resolve occupied-area and conservative-balance failure",
+    "scope": "Original TUTORIAL1 steady archive and native solution; physical domain is the full channel.",
+    "upstream": [
+      "upstream/+Solvers/+TwoFluid/Mixture.m",
+      "upstream/+Solvers/+TwoFluid/Liquid.m",
+      "upstream/+Solvers/+TwoFluid/Vapor.m",
+      "upstream/+Solvers/+TwoFluid/@TwoFluidSolver/solve.m"
+    ],
+    "python": [
+      "src/openstream/twofluid.py",
+      "src/openstream/tf_fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "passed_scoped",
+    "physical": "failed",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/ALL_BASELINES_VERIFICATION.md",
+      "docs/twofluid_baseline_audit.md",
+      "outputs/verification/twofluid-area-01",
+      "tests/test_twofluid.py"
+    ],
+    "gap": "Archived occupied-area discrepancy is 41.056107%, also reproduced natively. The archive also has nonzero mass/enthalpy-flux defects. This specific steady defect is shared with upstream. The one-way pressure treatment is an intentional formulation choice; this physical-identity failure alone does not prove a translation error or accidental source-code defect.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Maintain the compatibility result and its failed physical flag.",
+      "Demonstrate physically consistent occupied area, inventories and balances for accepted engineering-use configurations; document exclusions when a shared source defect remains."
+    ],
+    "next_action": "Trace absolute area from W/(rho U), pressure coupling and source discretization; propose any governing-model correction as a separately reviewed variant.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-027",
+    "track": "numerical_verification",
+    "component": "ThreeField physical checks",
+    "requirement": "Resolve annular occupied-area and dryout mass residuals",
+    "scope": "Original steady sample, fully annular nodes only; separately inspect wet, clipped and dry-film cells.",
+    "upstream": [
+      "upstream/+Solvers/+ThreeField/@ThreeFieldSolver/solve.m",
+      "upstream/+Solvers/+ThreeField/Film.m",
+      "upstream/+Solvers/+ThreeField/Drop.m"
+    ],
+    "python": [
+      "src/openstream/threefield.py",
+      "src/openstream/annular.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "passed_scoped",
+    "physical": "failed",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/ALL_BASELINES_VERIFICATION.md",
+      "docs/annular_reference_audit.md",
+      "docs/threefield_review.md",
+      "tests/test_threefield.py"
+    ],
+    "gap": "Archived fully annular area discrepancy is 7.485259%, also reproduced natively. POSFILM clipping leaves raw mass residuals; bookkeeping partitions do not prove equation balance.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Keep failed area acceptance and raw clipped/unclipped residuals visible.",
+      "Do not alter velocity/area algebra to enforce a pass; separately approve and verify any changed formulation."
+    ],
+    "next_action": "Attribute area mismatch and clipped-cell mass defects using independent inventories and a source-equivalent trace.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-028",
+    "track": "numerical_verification",
+    "component": "FourField physical checks",
+    "requirement": "Resolve annular occupied-area and compensating clip residuals",
+    "scope": "Original steady sample, fully annular nodes; base/wave/drop inventories with source film aggregation.",
+    "upstream": [
+      "upstream/+Solvers/+FourField/Film.m",
+      "upstream/+Solvers/+FourField/Base.m",
+      "upstream/+Solvers/+FourField/Wave.m",
+      "upstream/+Solvers/+FourField/@FourFieldSolver/solve.m"
+    ],
+    "python": [
+      "src/openstream/fourfield.py",
+      "src/openstream/ff_fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "passed_scoped",
+    "physical": "failed",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/ALL_BASELINES_VERIFICATION.md",
+      "docs/annular_reference_audit.md",
+      "docs/fourfield_notes.md",
+      "tests/test_fourfield.py"
+    ],
+    "gap": "Archived fully annular area discrepancy is 11.241052%, reproduced natively. Base and wave raw pseudo-time mass residuals reach about 4.31e-4 and 4.24e-4 kg/s near clipping.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Check actual sum of phase occupied areas, not normalized fractions or mass partitions alone.",
+      "Report both-fields-positive annular residuals separately from wet-but-compensated and dryout cells; preserve failed compatibility outcomes."
+    ],
+    "next_action": "Trace field inventories and base-compensation updates; define acceptable configuration limits before experimental claims.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-029",
+    "track": "numerical_verification",
+    "component": "Convergence contracts",
+    "requirement": "Separate increment stopping, nested solves and physical residuals",
+    "scope": "All frameworks; point, pseudo-time and physical-time semantics; FourField frequency criterion and source STATE versus enhanced native .converged.",
+    "upstream": [
+      "upstream/+Solvers/AbstractSolver.m",
+      "upstream/+Solvers/+Mixture/@MixtureSolver/solve.m",
+      "upstream/+Solvers/+TwoFluid/@TwoFluidSolver/solve.m",
+      "upstream/+Solvers/+ThreeField/@ThreeFieldSolver/solve.m",
+      "upstream/+Solvers/+FourField/@FourFieldSolver/solve.m"
+    ],
+    "python": [
+      "src/openstream/solver.py",
+      "src/openstream/twofluid.py",
+      "src/openstream/threefield.py",
+      "src/openstream/fourfield.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_solver.py",
+      "tests/test_fourfield.py",
+      "docs/fourfield_notes.md",
+      "docs/threefield_transient.md",
+      "outputs/twofluid_mesh_checks.json"
+    ],
+    "gap": "Some temporally steady iterates fail point convergence. Source FourField stopping omits SSCONVFW; native STATE preserves it while .converged additionally checks frequency/nested failures. Source initializes DFW but writes DF.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Preserve source iteration counts/stopping when testing equivalence; label enhanced acceptance separately.",
+      "Require all applicable nested and point criteria plus independently calculated residuals for a numerically accepted solution.",
+      "Never use unused DFW zeros as frequency evidence or convert failure to pass by loosening controls."
+    ],
+    "next_action": "Create acceptance tests for exhaustion, false temporal convergence, inner failure, actual DF and each source stop branch with MATLAB traces.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-030",
+    "track": "numerical_verification",
+    "component": "Mixture discretization",
+    "requirement": "Establish mesh and time-step numerical uncertainty",
+    "scope": "Existing 50/100/200-cell steady; 0.5/1/2 s pseudo-time; physical dt=0.2/0.1/0.05 s sensitivity.",
+    "upstream": [
+      "upstream/+Solvers/+Mixture/@MixtureSolver/solve.m",
+      "upstream/+Inputs/BoundaryConditions.m"
+    ],
+    "python": [
+      "src/openstream/solver.py",
+      "tools/verify_sensitivity.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "passed_scoped",
+    "matlab": "not_applicable",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "outputs/verification/native-sensitivity-01/verification.json",
+      "docs/VERIFICATION.md"
+    ],
+    "gap": "Existing studies show sensitivity, not a proven continuum result. Heated-length discretization changes with the mesh; transient conservative-energy defects decrease but remain nonzero.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Fix physically identical geometry, heating integrals and schedules across refinements; disclose mesh-dependent transition definitions.",
+      "Use at least three successful refinements where an observed-order/uncertainty claim is intended; report non-asymptotic behavior rather than fitting an unjustified order.",
+      "Make numerical uncertainty small enough to distinguish the intended experimental comparison."
+    ],
+    "next_action": "Run converged, consistent-geometry refinement and bound iterative versus spatial/temporal error at measurement coordinates.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-031",
+    "track": "numerical_verification",
+    "component": "TwoFluid discretization",
+    "requirement": "Complete successful mesh/time-step study",
+    "scope": "Existing tightened 50/100/200-cell steady study and original transient; one wall.",
+    "upstream": [
+      "upstream/+Solvers/+TwoFluid/@TwoFluidSolver/solve.m"
+    ],
+    "python": [
+      "src/openstream/twofluid.py",
+      "tools/verify_twofluid_transient.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "failed",
+    "matlab": "not_applicable",
+    "physical": "failed",
+    "experimental": "not_run",
+    "evidence": [
+      "outputs/twofluid_mesh_checks.json",
+      "outputs/twofluid-transient-02/verification.json",
+      "docs/twofluid_notes.md"
+    ],
+    "gap": "The 50-cell tightened run failed point convergence; 100/200-cell energy defects decrease but two successful grids do not establish an order. Transient time-step sensitivity is missing.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Exclude failed iterates from convergence-order estimates while retaining them in evidence.",
+      "Separate conservative product-rule error, iterative residuals, pressure/area coupling and physical-time error."
+    ],
+    "next_action": "Diagnose the coarse-grid failure and obtain a successful sequence before estimating discretization uncertainty.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-032",
+    "track": "numerical_verification",
+    "component": "ThreeField discretization",
+    "requirement": "Complete annular mesh/time-step study with point convergence",
+    "scope": "Existing 25-cell dt=0.25/0.125 s tightened attempts versus original 100-cell transient.",
+    "upstream": [
+      "upstream/+Solvers/+ThreeField/@ThreeFieldSolver/solve.m",
+      "upstream/+Solvers/+Mixture/Mixture.m"
+    ],
+    "python": [
+      "src/openstream/threefield.py",
+      "tools/verify_threefield_transient.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "failed",
+    "matlab": "not_applicable",
+    "physical": "failed",
+    "experimental": "not_run",
+    "evidence": [
+      "outputs/threefield_transient_tight_dt025/verification.json",
+      "outputs/threefield_transient_tight_dt0125/verification.json",
+      "outputs/threefield_transient_study/failed_time_step_comparison.json",
+      "docs/threefield_transient.md"
+    ],
+    "gap": "Both tightened runs failed point convergence; at 25 cells no node meets the strict unblended-annular mask. Differences between these failed iterates are not convergence evidence.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Retain failure records and do not claim asymptotic behavior from them.",
+      "Ensure an applicable common-annular region exists or report acceptance as not assessed; quantify transition-width changes with mesh."
+    ],
+    "next_action": "Isolate the reported node-9 film-velocity failure and choose a physically comparable annular refinement sequence.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-033",
+    "track": "numerical_verification",
+    "component": "FourField discretization",
+    "requirement": "Establish wave/base/drop mesh and time-step uncertainty",
+    "scope": "Physical transient and pseudo-time frequency relaxation, within one-wall fully annular applicability.",
+    "upstream": [
+      "upstream/+Solvers/+FourField/@FourFieldSolver/solve.m",
+      "upstream/+Solvers/+FourField/Base.m",
+      "upstream/+Solvers/+FourField/Wave.m"
+    ],
+    "python": [
+      "src/openstream/fourfield.py",
+      "tools/verify_fourfield.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "not_run",
+    "matlab": "not_applicable",
+    "physical": "not_run",
+    "experimental": "not_run",
+    "evidence": [
+      "outputs/fourfield-transient-audited/verification.json",
+      "docs/fourfield_notes.md"
+    ],
+    "gap": "No successful FourField mesh/time-step sensitivity sequence is recorded. Saturated enthalpy, wave bounds and frequency changes require separate checks.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Require point/nested convergence and common physical domains before comparing grids/times.",
+      "Report uncertainty in film/base flow, wave velocity/thickness/frequency and event timing, not only final-state mixture quantities."
+    ],
+    "next_action": "Run predeclared refinements after diagnosing the applicable balance and nested-convergence failures.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-034",
+    "track": "matlab_equivalence",
+    "component": "Multiwall numerical behavior",
+    "requirement": "Verify supported multiwall calculations and isolate dimension ambiguities",
+    "scope": "Native two-wall HEM mixture exists; general mixture/annular combinations unverified; DELORME, FourField and TwoFluid FULL momentum multiwall explicitly rejected.",
+    "upstream": [
+      "upstream/+Solvers/+Mixture/Mixture.m",
+      "upstream/+Solvers/+Mixture/Liquid.m",
+      "upstream/+Solvers/+Mixture/Vapor.m",
+      "upstream/+Solvers/+TwoFluid/@TwoFluidSolver/solve.m",
+      "upstream/+Solvers/+ThreeField/@ThreeFieldSolver/solve.m",
+      "upstream/+Solvers/+FourField/@FourFieldSolver/solve.m"
+    ],
+    "python": [
+      "src/openstream/fields.py",
+      "src/openstream/twofluid.py",
+      "src/openstream/threefield.py",
+      "src/openstream/fourfield.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_fields.py",
+      "tests/test_transient.py",
+      "tests/test_twofluid.py",
+      "docs/FEATURE_MAP.md",
+      "docs/fourfield_notes.md"
+    ],
+    "gap": "Two-wall HEM total balance does not establish per-wall nonequilibrium, source indexing, or transient equivalence. Several upstream force/index expressions are incompatible or ambiguous for multiple walls.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Check node-by-wall versus node-only shapes, wall-wise source sums, heating partition and column-major linear indexing.",
+      "Retain explicit errors for unresolved cases; document any proposed corrected source contract independently from compatibility implementation."
+    ],
+    "next_action": "Separate supported combinations from unresolved source expressions, then obtain wall-indexed independent references for valid cases.",
+    "selectors": []
+  },
+  {
+    "id": "CORE-035",
+    "track": "matlab_equivalence",
+    "component": "Source-defective scientific options",
+    "requirement": "Resolve unsupported model selections without substituting physics",
+    "scope": "SPHTM=DITTUSBOELTERGEN; annular DROPDRAG=DISTORDED; TwoFluid LOCRELVEL=SIMPLE; NEARWALLRATIO=0/1 singular diagnostics.",
+    "upstream": [
+      "upstream/+Solvers/+Mixture/Liquid.m",
+      "upstream/+Solvers/+Mixture/Vapor.m",
+      "upstream/+Solvers/+ThreeField/Drop.m",
+      "upstream/+Solvers/+TwoFluid/Liquid.m",
+      "upstream/+Solvers/+TwoFluid/Vapor.m",
+      "upstream/+InputEnums/SPHTM.m",
+      "upstream/+InputEnums/LOCRELVEL.m"
+    ],
+    "python": [
+      "src/openstream/fields.py",
+      "src/openstream/annular.py",
+      "src/openstream/twofluid.py"
+    ],
+    "implementation": "unsupported_source_defect",
+    "native_tests": "passed_scoped",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "tests/test_fields.py",
+      "tests/test_threefield.py",
+      "tests/test_twofluid.py",
+      "docs/FEATURE_MAP.md",
+      "docs/field_notes.md"
+    ],
+    "gap": "These paths are rejected rather than silently repaired: incompatible matrix multiplication, undefined source objects, an enum lacking a source equation, or singular endpoint diagnostics.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Explicitly identify the rejected field/value and source defect.",
+      "Only implement a corrected path after its equations, dimensions, numerical consequences and independent reference expectations are recorded."
+    ],
+    "next_action": "Document a source-backed intended contract or retain a named unsupported exception; review any correction as a separate model/API change.",
+    "selectors": [
+      "SPHTM",
+      "DROPDRAG",
+      "LOCRELVEL"
+    ]
+  },
+  {
+    "id": "CORE-036",
+    "track": "matlab_equivalence",
+    "component": "Numerical language semantics",
+    "requirement": "Complete MATLAB-to-Python edge-case equivalence",
+    "scope": "Node/wall indices and slices, column-major copy, cache update order, shared handles, NaN min/max and fallback order, colon endpoints and interpolation tie/extrapolation rules.",
+    "upstream": [
+      "upstream/+Solvers/AbstractField.m",
+      "upstream/+Solvers/+Mixture/Mixture.m",
+      "upstream/+Solvers/+Mixture/Vapor.m",
+      "upstream/+Solvers/+TwoFluid/Liquid.m",
+      "upstream/+Solvers/+TwoFluid/Vapor.m",
+      "upstream/+Solvers/+FourField/Base.m",
+      "upstream/+Solvers/+FourField/Wave.m",
+      "upstream/+Inputs/BoundaryConditions.m"
+    ],
+    "python": [
+      "src/openstream/numerics.py",
+      "src/openstream/fields.py",
+      "src/openstream/tf_fields.py",
+      "src/openstream/annular.py",
+      "src/openstream/ff_fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "tests/test_solver.py",
+      "tests/test_fields.py",
+      "tests/test_mixture_mrm_semantics.py",
+      "tests/test_twofluid.py",
+      "tests/test_fourfield.py",
+      "docs/mixture_translation_audit.md"
+    ],
+    "gap": "Selected tests and archived cases support specific semantics, but no complete cross-language boundary fixture set exists. Ambiguous interpolation cubic is explicitly unsupported.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Assert shapes and mutability/alias relationships as well as numerical values.",
+      "Distinguish elementwise and matrix operations and preserve source NaN policy; flag invalid physical states rather than coercing them to plausible results."
+    ],
+    "next_action": "Generate independent MATLAB fixtures for singleton/multiwall arrays, subsets/duplicates, exact ties, NaNs and boundaries without changing expression order.",
+    "selectors": [
+      "AXIALINTERP",
+      "TIMEINTERP"
+    ]
+  },
+  {
+    "id": "CORE-037",
+    "track": "numerical_verification",
+    "component": "Operating domain",
+    "requirement": "Enforce documented physical scope and closure-specific limits",
+    "scope": "One-dimensional straight constant-area channels; principally single-component co-current boiling; annular frameworks apply only within their appropriate regime and generally assume saturated liquid fields.",
+    "upstream": [
+      "upstream/docs/source/Usage/scope_and_limitations.rst",
+      "upstream/docs/source/Guides/theory/ThreeField_Model_Theory.rst",
+      "upstream/docs/source/Guides/theory/FourField_Model_Theory.rst",
+      "upstream/+Inputs/Model.m"
+    ],
+    "python": [
+      "src/openstream/inputs.py",
+      "src/openstream/fields.py",
+      "src/openstream/threefield.py",
+      "src/openstream/fourfield.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "partial",
+    "matlab": "not_applicable",
+    "physical": "partial",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/FEATURE_MAP.md",
+      "docs/threefield_transient.md",
+      "docs/fourfield_notes.md",
+      "tests/test_inputs.py",
+      "tests/test_threefield.py"
+    ],
+    "gap": "Parser validity and available CoolProp properties do not establish model applicability. A complete closure-by-closure fluid/pressure/Reynolds/regime domain ledger and boundary acceptance suite is missing.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Check fluid, geometry, pressure, mass flux, heating and regime compatibility before a physical-validation claim.",
+      "Reject invalid numeric inputs and distinguish unsupported conditions, indeterminate applicability and failed physical checks; do not present no-annular-domain results as an annular pass."
+    ],
+    "next_action": "Attach source/literature domains to each legal option and selected validation case; classify unknown domains explicitly.",
+    "selectors": []
+  }
+]

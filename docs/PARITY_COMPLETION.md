@@ -5,6 +5,11 @@ Audit date: 2026-11-14. Numerical target: OpenSTREAM
 `a7c40902ff66faf6ed668986398bb1b9faa16e13`. Experimental-data target:
 [OpenSTREAM-database, commit b48541e](https://github.com/OpenSTREAM-solvers/openstream-database/tree/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22).
 
+The [81-row acceptance matrix](ACCEPTANCE_MATRIX.md), [ordered work plan](ACCEPTANCE_PLAN.md),
+and [supplied-literature review](LITERATURE_ACCEPTANCE_REVIEW.md) now provide the
+requirement-level evidence and priorities for this roadmap. Paper/companion
+case differences must be resolved before claiming reproduction of those plots.
+
 The four original steady baseline cases agree with the archived MATLAB primary
 profiles, initialization histories, and mixture precursors. This establishes
 selected-case numerical agreement. It does not establish complete API/option

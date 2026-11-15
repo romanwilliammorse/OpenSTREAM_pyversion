@@ -1,0 +1,1070 @@
+[
+  {
+    "id": "API-001",
+    "track": "interface_parity",
+    "component": "Input readers",
+    "requirement": "Read original INP and JSON records with auditable effective inputs.",
+    "scope": "Named Model/Options/Geometry records and steady/transient boundary files; original legal inputs, not execution of arbitrary MATLAB text.",
+    "upstream": [
+      "upstream/+Inputs/Input.m:373",
+      "upstream/+Inputs/InputSet.m:20"
+    ],
+    "python": [
+      "src/openstream/inputs.py:42",
+      "src/openstream/inputs.py:535"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "tests/test_inputs.py",
+      "outputs/verification/github-windows-ci.json",
+      "docs/input_properties_notes.md"
+    ],
+    "gap": "Original records and selected malformed inputs are tested, but a MATLAB-exported input corpus is absent. Unknown keys and numeric suffixes are stricter errors than upstream warnings/prefix parsing.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Export effective input records for every preserved input set and compare values, types, dimensions, selected identifiers and solver-dependent resolution.",
+      "Record each intentional parser-contract difference; do not label stricter native errors as exact MATLAB behavior.",
+      "Reject malformed or unsupported data without silently selecting another model."
+    ],
+    "next_action": "Create immutable effective-input fixtures and a documented compatibility-difference list.",
+    "method_names": [
+      "readInputFile"
+    ],
+    "class_prefixes": [
+      "Inputs."
+    ]
+  },
+  {
+    "id": "API-002",
+    "track": "interface_parity",
+    "component": "Defaults and enums",
+    "requirement": "Cover every declared default and enum, including solver-dependent defaults.",
+    "scope": "102 model fields, 49 option fields, five geometry fields, seven boundary fields; the 41 source enum definitions are inventory, not demonstrated branch coverage.",
+    "upstream": [
+      "upstream/+Inputs/Model.m",
+      "upstream/+Inputs/Options.m",
+      "upstream/+Inputs/Geometry.m",
+      "upstream/+Inputs/Input.m:316",
+      "upstream/+Inputs/InputSet.m:112"
+    ],
+    "python": [
+      "src/openstream/inputs.py",
+      "src/openstream/gui_schema.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/upstream_inventory.json",
+      "tests/test_inputs.py",
+      "tests/test_gui_schema.py",
+      "outputs/verification/github-windows-ci.json"
+    ],
+    "gap": "Selected default values, complete GUI field enumeration and original input records are checked; no per-field independent MATLAB default/value golden export covers all declarations.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Each declared field and enum has a native mapping, applicability rule, test case and explicit unsupported reason where needed.",
+      "Verify raw SOLVER_DEPENDENT tokens separately from their resolved values for all four frameworks.",
+      "Input objects and defaults remain isolated under construction, copying and solver resolution.",
+      "Verify MRMTIMEINT EULER and EXPONENTIAL tokens, defaults and serialization; their numerical integration acceptance belongs to the solver/core rows."
+    ],
+    "next_action": "Generate a field-by-field exported-default fixture and join enum choices to closure acceptance rows.",
+    "method_names": [
+      "applySolverDependentProperties",
+      "applySolverDependentProps",
+      "validateInputEntry",
+      "listInputProperties"
+    ],
+    "class_prefixes": [
+      "Inputs."
+    ],
+    "enum_names": [
+      "MRMTIMEINT"
+    ]
+  },
+  {
+    "id": "API-003",
+    "track": "interface_parity",
+    "component": "Input writers and default reporting",
+    "requirement": "Provide equivalents for INP writing, INP-to-JSON conversion and used-default reports.",
+    "scope": "Upstream Input.writeInputFile, convert2JSON, defaultValueString/defaultValueUsedReport and field descriptions.",
+    "upstream": [
+      "upstream/+Inputs/Input.m:245",
+      "upstream/+Inputs/Input.m:520",
+      "upstream/+Inputs/Input.m:534",
+      "upstream/+Inputs/Input.m:627"
+    ],
+    "python": [
+      "src/openstream/inputs.py:406",
+      "src/openstream/gui_schema.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/METHOD_COVERAGE.json",
+      "docs/input_properties_notes.md",
+      "tests/test_gui_schema.py"
+    ],
+    "gap": "Native to_dict and GUI configuration export exist, but they are not the upstream generic INP writer or default-usage reporting API.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Implement documented native writer/converter/report functions or identify an explicitly approved native replacement for each upstream operation.",
+      "Round-trip scalar, vector, multiwall matrix, enum, boolean, sentinel and multiple-record inputs without dimensional/value loss.",
+      "Retain field descriptions, identifiers and default-versus-user-supplied provenance."
+    ],
+    "next_action": "Implement the generic input export/report layer and round-trip acceptance fixtures.",
+    "method_names": [
+      "writeInputFile",
+      "convert2JSON",
+      "defaultValueString",
+      "defaultValueUsedReport"
+    ],
+    "class_prefixes": [
+      "Inputs."
+    ]
+  },
+  {
+    "id": "API-004",
+    "track": "interface_parity",
+    "component": "Function-valued inputs",
+    "requirement": "Define a reproducible native contract for source function-valued input.",
+    "scope": "CBTMULT and any original function expressions; preserve the function's evaluated values without treating serialized MATLAB text as trusted instructions.",
+    "upstream": [
+      "upstream/+Inputs/Input.m:606",
+      "upstream/+Inputs/Model.m"
+    ],
+    "python": [
+      "src/openstream/inputs.py",
+      "src/openstream/gui_schema.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/API.md",
+      "docs/input_properties_notes.md",
+      "tests/test_gui_schema.py"
+    ],
+    "gap": "Python API callables and constant GUI multipliers work; arbitrary MATLAB expressions are rejected and callable behavior is not fully serializable. There is no cross-runtime function-evaluation reference corpus.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "List each supported original expression and define its native callable or safe structured-function representation.",
+      "Compare evaluated values at mesh, transition and boundary points against independent source values.",
+      "Store a reproducible function specification and evaluated mesh values; unsupported expressions must fail explicitly."
+    ],
+    "next_action": "Inventory actual function expressions in source inputs and database adapters before extending the parser.",
+    "method_names": [
+      "validateFunctionHandleInput"
+    ],
+    "class_prefixes": [
+      "Inputs."
+    ]
+  },
+  {
+    "id": "API-005",
+    "track": "interface_parity",
+    "component": "Geometry and boundary dimensions",
+    "requirement": "Preserve geometry, wall orientation, units and time-dependent boundary meaning.",
+    "scope": "ANGLE uses degrees from vertical in Geometry.m despite a radians comment in geom.inp; WPOWER rows are segments and columns are walls; NNODES means cells.",
+    "upstream": [
+      "upstream/+Inputs/Geometry.m",
+      "upstream/+Inputs/BoundaryConditions.m",
+      "upstream/inputs/geom.inp"
+    ],
+    "python": [
+      "src/openstream/inputs.py:441",
+      "src/openstream/inputs.py:458"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "tests/test_inputs.py",
+      "tests/test_gui_schema.py",
+      "docs/input_properties_notes.md",
+      "docs/API.md"
+    ],
+    "gap": "Column-major wall reshaping and selected boundary/geometry rules are checked, but nonzero-angle and broad multiwall source-export comparisons are absent.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Check hydraulic diameter, wall fractions, axial length and segment power integration with explicit units.",
+      "Compare asymmetric two-wall inputs and nonzero-angle cases to source values without transposing walls or converting degrees as radians.",
+      "Reject unordered times, incompatible segment/wall shapes and invalid boundary values before solving."
+    ],
+    "next_action": "Create asymmetric geometry/power and nonzero-angle reference cases before importing experimental configurations.",
+    "method_names": [
+      "HDIAM",
+      "ADIAM",
+      "NWALL",
+      "RWALL"
+    ],
+    "class_prefixes": [
+      "Inputs.Geometry"
+    ]
+  },
+  {
+    "id": "API-006",
+    "track": "interface_parity",
+    "component": "Colon and interpolation semantics",
+    "requirement": "Verify every supported interpolation method and public coordinate convention.",
+    "scope": "Positive-step MATLAB colon; LINEAR, NEAREST, NEXT, PREVIOUS, PCHIP, SPLINE and MAKIMA; singleton, endpoint, midpoint, extrapolation and multidimensional ordinate cases.",
+    "upstream": [
+      "upstream/+Inputs/Options.m",
+      "upstream/+Solvers/+Mixture/@MixtureSolver/MixtureSolver.m",
+      "upstream/+Solvers/+Mixture/@MixtureSolver/solve.m"
+    ],
+    "python": [
+      "src/openstream/numerics.py",
+      "src/openstream/solver.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "passed_scoped",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "tests/test_solver.py",
+      "docs/API.md",
+      "docs/METHOD_COVERAGE.json"
+    ],
+    "gap": "Selected colon/nearest/next semantics are tested. Higher-order method equivalence and public interpolation convenience wrappers are not established. Ambiguous CUBIC is explicitly unsupported.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Freeze independent MATLAB vectors for each supported method, node count, tie and extrapolation case with dimensions retained.",
+      "Verify axis-zero interpolation and MATLAB half-way tie behavior without accidental broadcasting.",
+      "Resolve CUBIC against the pinned MATLAB release or retain its explicit unsupported status; do not silently alias it."
+    ],
+    "next_action": "Add method-by-method reference fixtures and public-wrapper acceptance cases.",
+    "method_names": [
+      "axialInterpolate",
+      "timeInterpolate"
+    ],
+    "class_prefixes": [
+      "Solvers.Mixture."
+    ]
+  },
+  {
+    "id": "API-007",
+    "track": "interface_parity",
+    "component": "Copy, caches and array indexing",
+    "requirement": "Preserve source update order, indexing and shared-state relationships.",
+    "scope": "MATLAB one-based/linear indexing versus zero-based NumPy; column-major multiwall copies; state caches and handle references in all four frameworks.",
+    "upstream": [
+      "upstream/+Solvers/AbstractField.m:214",
+      "upstream/+Solvers/+Mixture/Mixture.m",
+      "upstream/+Solvers/+TwoFluid/Liquid.m",
+      "upstream/+Solvers/+TwoFluid/Vapor.m"
+    ],
+    "python": [
+      "src/openstream/fields.py",
+      "src/openstream/tf_fields.py",
+      "src/openstream/annular.py",
+      "src/openstream/ff_fields.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "partial",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "tests/test_fields.py",
+      "tests/test_diagnostic_api.py",
+      "tests/test_twofluid.py",
+      "docs/mixture_translation_audit.md",
+      "docs/twofluid_notes.md",
+      "outputs/baseline-parity-02/summary.json"
+    ],
+    "gap": "Four selected trajectories provide indirect coverage; explicit copy/setter/alias contracts and arbitrary subsets are not independently compared across the full API. Method audit retains two setter-contract review entries.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "For each source copy/update operation, specify which arrays are copied, shared, preserved or recomputed and in what order.",
+      "Use asymmetric multiwall and duplicate/subset fixtures to expose column/row and linear-index errors.",
+      "Compare actual object-graph relationships and before/after cache values for transient and initialization paths."
+    ],
+    "next_action": "Close the two setter-contract review entries and add targeted source-export state-transition fixtures.",
+    "method_names": [
+      "set.H",
+      "set.W",
+      "copyFlowProperties",
+      "memoizeFunction"
+    ],
+    "class_prefixes": [
+      "Solvers."
+    ]
+  },
+  {
+    "id": "API-008",
+    "track": "reference_infrastructure",
+    "component": "Thermophysical properties",
+    "requirement": "Preserve the native CoolProp backend, clamping and pressure contract.",
+    "scope": "BICUBIC&HEOS property calls with HEOS surface tension, SATURATED/PSYSTEM branches, pressure bounds, scalar/array shapes and boundary-pressure diagnostics.",
+    "upstream": [
+      "upstream/+Inputs/FluidProperties.m",
+      "upstream/+Inputs/BoundaryConditions.m",
+      "upstream/+CoolPropWrapper/CoolPropWrapper.m",
+      "upstream/+InputEnums/FLUIDPROPERTIES.m"
+    ],
+    "python": [
+      "src/openstream/properties.py",
+      "src/openstream/inputs.py:500"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "partial",
+    "physical": "passed_scoped",
+    "experimental": "not_applicable",
+    "evidence": [
+      "tests/test_properties.py",
+      "docs/input_properties_notes.md",
+      "outputs/baseline-parity-02/summary.json"
+    ],
+    "gap": "Native HEOS consistency and selected archived solver states are checked; property-by-property MATLAB equivalence across fluids, pressures, enthalpy bounds and CoolProp versions is unverified. The low-table-bound inversion discrepancy is retained.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Compare exported property tables at interior and limiting states for every supported property mode with pinned CoolProp version/backend.",
+      "Keep dimensional identities, pressure range, saturation ordering, clamping and scalar/array return contracts explicit.",
+      "Document the 6 MPa lower-table inversion discrepancy and do not replace source enthalpy clamping with a temperature correction."
+    ],
+    "next_action": "Create a property reference grid and boundary-condition pressure mismatch cases before broad experimental runs.",
+    "method_names": [
+      "T",
+      "H",
+      "RHOL",
+      "RHOV",
+      "MUL",
+      "MUV",
+      "KL",
+      "KV",
+      "CPL",
+      "CPV",
+      "ALPHAL",
+      "ALPHAV",
+      "PRANDTLL",
+      "PRANDTLV",
+      "TIN",
+      "TSAT",
+      "HF",
+      "HG",
+      "XIN",
+      "DTIN",
+      "DHIN"
+    ],
+    "class_prefixes": [
+      "Inputs.FluidProperties",
+      "Inputs.BoundaryConditions"
+    ],
+    "enum_names": [
+      "FLUIDPROPERTIES"
+    ]
+  },
+  {
+    "id": "API-009",
+    "track": "reference_infrastructure",
+    "component": "Property optimization and helper scope",
+    "requirement": "Resolve QKMAX optimization equivalence and external wrapper API boundaries.",
+    "scope": "SciPy bounded optimization of the source Kutateladze expression versus MATLAB fminbnd; optional property plot and general wrapper helpers.",
+    "upstream": [
+      "upstream/+Inputs/FluidProperties.m:50",
+      "upstream/+Inputs/FluidProperties.m:414",
+      "upstream/+CoolPropWrapper/CoolPropWrapper.m",
+      "upstream/+CoolPropWrapper/CoolPropWrapperHA.m",
+      "upstream/+CoolPropWrapper/+convertUnits/convert.m"
+    ],
+    "python": [
+      "src/openstream/properties.py:23"
+    ],
+    "implementation": "partial",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "tests/test_properties.py",
+      "docs/input_properties_notes.md",
+      "docs/METHOD_COVERAGE.md"
+    ],
+    "gap": "QKMAX exists and has native bounds/scale checks but its optimizer result is not MATLAB-verified. Property plotting, humid-air and general wrapper unit-conversion utilities are not fully ported; these external utilities are outside the 585-method inventory.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Compare maximizing pressure and heat-flux value with explicit Pa and W/m^2 tolerances justified against the source optimization settings.",
+      "State whether each general external-wrapper utility is part of the port acceptance scope; runtime independence does not require reimplementing unused MATLAB wrappers.",
+      "Provide direct native replacements for required property plotting/conversion operations and test unit conversions independently."
+    ],
+    "next_action": "Export QKMAX reference values and inventory required versus unused external-wrapper operations.",
+    "method_names": [
+      "plot"
+    ],
+    "class_prefixes": [
+      "Inputs.FluidProperties"
+    ]
+  },
+  {
+    "id": "API-010",
+    "track": "interface_parity",
+    "component": "Public diagnostics and subsets",
+    "requirement": "Audit public numerical method contracts beyond matching names.",
+    "scope": "All 585 non-constructor entries in the existing 25-class inventory; inherited repetitions are not unique implemented capabilities.",
+    "upstream": [
+      "upstream/+Solvers/AbstractField.m",
+      "upstream/+Solvers/AbstractPhase.m",
+      "upstream/+Inputs/BoundaryConditions.m"
+    ],
+    "python": [
+      "tools/audit_method_coverage.py",
+      "src/openstream/fields.py",
+      "src/openstream/tf_fields.py",
+      "src/openstream/annular.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "partial",
+    "matlab": "partial",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/METHOD_COVERAGE.json",
+      "docs/METHOD_COVERAGE.md",
+      "tests/test_diagnostic_api.py",
+      "outputs/baseline-parity-02/summary.json"
+    ],
+    "gap": "447 name candidates, 54 partial/internal alternatives, 77 infrastructure/presentation gaps, five explicit unsupported entries and two setter reviews are declaration classifications, not acceptance outcomes. Only selected diagnostics have behavior tests or archive comparisons.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Attach every inventory entry to a requirement and fixture, including arguments, index selections, dimensions, units and failure semantics.",
+      "Compare stored, derived and computed-on-demand quantities separately; preserve errors for source-defective diagnostics.",
+      "Do not use a same-name method or a declaration count as proof of equation or operating-domain parity."
+    ],
+    "next_action": "Join the method inventory to this acceptance ledger and prioritize public diagnostics needed by dataset adapters."
+  },
+  {
+    "id": "API-011",
+    "track": "interface_parity",
+    "component": "Live-field extraction and public interpolation API",
+    "requirement": "Complete generic transient/struct extraction and interpolation convenience methods.",
+    "scope": "Arbitrary public live-field quantities, nested subobjects and physical/pseudo-time state selection.",
+    "upstream": [
+      "upstream/+Solvers/AbstractField.m:47",
+      "upstream/+Solvers/AbstractField.m:186",
+      "upstream/+Solvers/+Mixture/@MixtureSolver/MixtureSolver.m"
+    ],
+    "python": [
+      "src/openstream/plotting.py",
+      "src/openstream/output.py",
+      "src/openstream/numerics.py",
+      "src/openstream/solver.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/METHOD_COVERAGE.json",
+      "docs/API.md",
+      "docs/PLOTTING.md",
+      "tests/test_plotting.py"
+    ],
+    "gap": "SavedResults handles only saved numeric quantities; it cannot reproduce arbitrary source method evaluation. Public interpolation wrappers and generic live-field struct/transient behavior remain missing or internal.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Extract selected quantities from live fields with explicit time/node/wall shapes and preserve nested path identity.",
+      "Match source values for methods as well as stored properties without confusing pseudo-time and physical time.",
+      "Unsupported unsaved closures must raise an explicit error rather than inventing or silently omitting a result."
+    ],
+    "next_action": "Implement a public quantity-query contract and verify it on saved and unsaved source methods.",
+    "method_names": [
+      "transient",
+      "struct"
+    ],
+    "class_prefixes": [
+      "Solvers."
+    ]
+  },
+  {
+    "id": "API-012",
+    "track": "interface_parity",
+    "component": "Session and runtime behavior",
+    "requirement": "Document and test native equivalents of Session, logging, solver state and output-directory rules.",
+    "scope": "Named sessions, directory creation, logging modes, warnings, no-overwrite behavior, cancellation and restart semantics.",
+    "upstream": [
+      "upstream/+Session/Session.m",
+      "upstream/+Session/Log.m",
+      "upstream/+Session/LogMode.m",
+      "upstream/+Solvers/AbstractSolver.m",
+      "upstream/+Solvers/SolverState.m"
+    ],
+    "python": [
+      "src/openstream/solver.py",
+      "src/openstream/cli.py",
+      "src/openstream/output.py",
+      "src/openstream/gui.py",
+      "src/openstream/gui_lock.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "passed_scoped",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "tests/test_cli.py",
+      "tests/test_gui.py",
+      "tests/test_gui_lock.py",
+      "docs/GUI_VERIFICATION.md",
+      "outputs/verification/github-windows-ci.json"
+    ],
+    "gap": "Native progress, metadata, locks and worker logs exist; MATLAB diary/class/session option parity is not complete. Stronger native convergence/physical rejection signals need an explicit mapping to upstream STATE rather than being called identical.",
+    "priority": "P2",
+    "acceptance_criteria": [
+      "Map every public session/logging option and solver state to the native behavior or documented replacement.",
+      "Verify failed, cancelled and resumed runs cannot masquerade as completed results or overwrite previous evidence.",
+      "Retain distinct numerical, reference and physical statuses in all interfaces."
+    ],
+    "next_action": "Write the session/state compatibility table and add remaining restart/logging acceptance cases.",
+    "method_names": [
+      "log",
+      "warning",
+      "solverName",
+      "CreateITR"
+    ],
+    "class_prefixes": [
+      "Solvers."
+    ]
+  },
+  {
+    "id": "API-013",
+    "track": "interface_parity",
+    "component": "Portable results and serialization",
+    "requirement": "Complete the numerical data contract for all solver outputs.",
+    "scope": "NPZ/CSV/JSON, coordinates, units, metadata, effective inputs, initialization histories and mixture precursors; MATLAB class-object serialization is a separate unsupported format.",
+    "upstream": [
+      "upstream/+Solvers/AbstractSolver.m:61",
+      "upstream/+Solvers/AbstractField.m:186"
+    ],
+    "python": [
+      "src/openstream/output.py",
+      "src/openstream/multifield_output.py",
+      "src/openstream/plotting.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "passed_scoped",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "tests/test_solver.py",
+      "tests/test_plotting.py",
+      "tests/test_gui.py",
+      "outputs/baseline-parity-02/summary.json",
+      "docs/ALL_BASELINES_VERIFICATION.md"
+    ],
+    "gap": "Core selected archived outputs are compared, but full derived-output completeness, arbitrary callables and MATLAB object reload compatibility are not established. Exact .mat class serialization is not implemented.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Every exported quantity has audited units, dimensions, coordinates and source provenance; retain nonfinite values and flag their validity.",
+      "Round-trip all four native schemas with allow_pickle=False and verify values without implicit squeezing or interpolation.",
+      "List every source output unavailable from the portable native format; do not describe NPZ loading as MATLAB object reconstruction."
+    ],
+    "next_action": "Add an output-field completeness ledger and full-schema round-trip fixtures for supported transient and multiwall cases.",
+    "method_names": [
+      "save"
+    ],
+    "class_prefixes": [
+      "Solvers."
+    ]
+  },
+  {
+    "id": "API-014",
+    "track": "interface_parity",
+    "component": "Saved-array post-processing",
+    "requirement": "Verify implemented plots as faithful displays of saved arrays.",
+    "scope": "Axial profiles, histories, time-elevation maps, GIF animations, units and physical/pseudo-time selections for all four schemas.",
+    "upstream": [
+      "upstream/+Solvers/SolverPlotter.m",
+      "upstream/+Solvers/AbstractField.m:94"
+    ],
+    "python": [
+      "src/openstream/plotting.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "tests/test_plotting.py",
+      "docs/PLOTTING.md",
+      "outputs/saved-result-plots-02/provenance.json",
+      "outputs/saved-result-plots-02/render_verification.json"
+    ],
+    "gap": "Seventeen plotting checks and rendered examples establish exact selected values/layout semantics, not visual identity with MATLAB or correctness of the underlying physics.",
+    "priority": "P2",
+    "acceptance_criteria": [
+      "Confirm every plotted line/frame/cell corresponds to the selected saved values and actual time/node/wall coordinates.",
+      "Retain units, failed-physical-status warnings and nonfinite gaps; reject incompatible selections.",
+      "Keep playback speed distinct from physical time and retain frame-count/timing evidence."
+    ],
+    "next_action": "Retain these tests and add any missing quantity/schema cases exposed by experimental comparison plots.",
+    "method_names": [
+      "plotz",
+      "plott",
+      "plotzt"
+    ],
+    "class_prefixes": [
+      "Solvers."
+    ]
+  },
+  {
+    "id": "API-015",
+    "track": "interface_parity",
+    "component": "Complete plotting API",
+    "requirement": "Close source plot options and live-calculation display gaps.",
+    "scope": "Annular masks, obstruction/onset overlays, grouped presets, dual axes, 3D/shading, video export and interactive playback options.",
+    "upstream": [
+      "upstream/+Solvers/SolverPlotter.m",
+      "upstream/+Solvers/AbstractField.m:94"
+    ],
+    "python": [
+      "src/openstream/plotting.py",
+      "src/openstream/gui_static/app.js"
+    ],
+    "implementation": "partial",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/PLOTTING.md",
+      "docs/METHOD_COVERAGE.md",
+      "tests/test_plotting.py",
+      "tests/gui_frontend_logic.test.cjs"
+    ],
+    "gap": "Unsupported source plotting keywords are rejected; saved-array plots and GUI charts provide only a subset of upstream presentation/workflow behavior.",
+    "priority": "P2",
+    "acceptance_criteria": [
+      "Inventory each public plot keyword and grouped quantity selection with an equivalent native operation or approved format replacement.",
+      "Verify masks and overlays against the numerical onset/obstruction coordinates rather than visual resemblance alone.",
+      "Test exported frame/data values, labels and orientation; do not let presentation defaults alter the numerical data."
+    ],
+    "next_action": "Prioritize masks/overlays and quantities needed by validation, then remaining presentation/export options.",
+    "method_names": [
+      "plotz",
+      "plott",
+      "plotzt"
+    ],
+    "class_prefixes": [
+      "Solvers."
+    ]
+  },
+  {
+    "id": "API-016",
+    "track": "interface_parity",
+    "component": "Tutorial 01: quick start",
+    "requirement": "Reproduce the complete quick-start workflow for all four frameworks.",
+    "scope": "Original input selection, solve, selected inspection, plotting and save/reload through native formats.",
+    "upstream": [
+      "upstream/tutorials/tutorial01_quick_start.mlx",
+      "upstream/docs/source/Guides/tutorials.rst",
+      "upstream/docs/source/Usage/runSampleScript.rst"
+    ],
+    "python": [
+      "examples/official_sample.py",
+      "tools/release_examples.py",
+      "src/openstream/cli.py",
+      "src/openstream/gui.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "passed_scoped",
+    "matlab": "passed_scoped",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "outputs/release-02/manifest.json",
+      "outputs/baseline-parity-02/summary.json",
+      "docs/ALL_BASELINES_VERIFICATION.md",
+      "docs/GUI_VERIFICATION.md"
+    ],
+    "gap": "All four selected steady solves/core comparisons exist, but a complete cell-by-cell native tutorial and every inspection/object-reload operation are not accepted. Known multifield physical failures remain separate.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Map each executable tutorial operation to a runnable native command/example.",
+      "Retain all four original input selections and their separate convergence, archived agreement and physical statuses.",
+      "Explain native serialization/plotting replacements without claiming MATLAB class-object parity."
+    ],
+    "next_action": "Create a runnable tutorial01 acceptance script with explicit per-operation expected outcomes."
+  },
+  {
+    "id": "API-017",
+    "track": "interface_parity",
+    "component": "Tutorials 02-05: model capabilities",
+    "requirement": "Cover every original model tutorial operation and case selection.",
+    "scope": "Mixture, TwoFluid, ThreeField and FourField tutorial cases, diagnostics, pseudo-time and physical transients; model physics gates belong to CORE rows.",
+    "upstream": [
+      "upstream/tutorials/tutorial02_mixture.mlx",
+      "upstream/tutorials/tutorial03_twofluid.mlx",
+      "upstream/tutorials/tutorial04_threefield.mlx",
+      "upstream/tutorials/tutorial05_fourfield.mlx"
+    ],
+    "python": [
+      "src/openstream/solver.py",
+      "src/openstream/twofluid.py",
+      "src/openstream/threefield.py",
+      "src/openstream/fourfield.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "partial",
+    "matlab": "partial",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/FEATURE_MAP.md",
+      "docs/threefield_review.md",
+      "docs/fourfield_notes.md",
+      "docs/twofluid_notes.md",
+      "outputs/verification/github-windows-ci.json"
+    ],
+    "gap": "Selected native tutorial inputs run, but complete cell/operation ledgers and independent comparisons for each tutorial variant/transient are absent. Four TUTORIAL1 agreements do not accept tutorials02-05.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Enumerate every tutorial case and public operation, including conditional branches and expected errors.",
+      "Provide native runnable equivalents and link each numerical claim to a CORE acceptance row and independent reference.",
+      "Report unsupported operations and source-defective options rather than silently changing tutorial physics."
+    ],
+    "next_action": "Extract the four Live Script workflows into a case/operation manifest and native acceptance examples."
+  },
+  {
+    "id": "API-018",
+    "track": "interface_parity",
+    "component": "Tutorial 06: input workflows",
+    "requirement": "Reproduce input inspection, equivalent INP/JSON loading and conversion workflows.",
+    "scope": "All tutorial06 operations, not just the ability to read an INP file.",
+    "upstream": [
+      "upstream/tutorials/tutorial06_inputfiles.mlx",
+      "upstream/+Inputs/Input.m"
+    ],
+    "python": [
+      "src/openstream/inputs.py",
+      "src/openstream/gui_schema.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "tests/test_inputs.py",
+      "tests/test_gui_schema.py",
+      "docs/input_properties_notes.md",
+      "docs/METHOD_COVERAGE.json"
+    ],
+    "gap": "Parsing and GUI export are tested, but generic writer/default-report/INP-to-JSON tutorial operation parity remains incomplete.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Match effective values and wall dimensions between original INP and equivalent JSON cases.",
+      "Execute every tutorial inspection/conversion operation and verify round-trip output.",
+      "Make default usage and unsupported expression differences visible."
+    ],
+    "next_action": "Implement API-003 and add the native tutorial06 end-to-end acceptance script."
+  },
+  {
+    "id": "API-019",
+    "track": "interface_parity",
+    "component": "Tutorials 07-08: convergence and sensitivity",
+    "requirement": "Reproduce diagnostic and discretization-study workflows.",
+    "scope": "Point, pseudo-time and physical-time distinctions; mesh/time-step comparisons; thresholds and failure reporting without asserting unsupported convergence order.",
+    "upstream": [
+      "upstream/tutorials/tutorial07_convergence.mlx",
+      "upstream/tutorials/tutorial08_meshandtimestep.mlx"
+    ],
+    "python": [
+      "tools/verify_sensitivity.py",
+      "tools/verify_mrm_transient.py",
+      "src/openstream/plotting.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "outputs/verification/native-sensitivity-01/verification.json",
+      "docs/VERIFICATION.md",
+      "docs/PARITY_STATUS.md",
+      "tests/test_solver.py"
+    ],
+    "gap": "Existing sensitivity studies and diagnostics are narrower than complete tutorial operations or all-framework asymptotic convergence evidence; some tightened cases fail.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Provide reproducible studies that preserve all input differences and distinguish iterative, temporal and spatial error.",
+      "Link every reported convergence claim to an executed sequence with raw values, units and failures retained.",
+      "Verify tutorial diagnostic extraction against source arrays; do not interpret smooth plots as validation."
+    ],
+    "next_action": "Build tutorial07/08 scripts around the existing sensitivity tools and close missing diagnostic APIs."
+  },
+  {
+    "id": "API-020",
+    "track": "interface_parity",
+    "component": "Tutorial 09: advanced visualization",
+    "requirement": "Reproduce the complete advanced post-processing workflow with explicit format replacements.",
+    "scope": "Animation, point histories, time-elevation surfaces, extracted tables/CSV and save/reload operations.",
+    "upstream": [
+      "upstream/tutorials/tutorial09_visualization.mlx",
+      "upstream/+Solvers/SolverPlotter.m"
+    ],
+    "python": [
+      "src/openstream/plotting.py",
+      "examples/plot_saved_results.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "passed_scoped",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/PLOTTING.md",
+      "tests/test_plotting.py",
+      "outputs/saved-result-plots-02/render_verification.json"
+    ],
+    "gap": "History, maps, GIF and portable reload exist, but a complete tutorial09 operation manifest and full surface/video/grouped plotting behavior are missing.",
+    "priority": "P2",
+    "acceptance_criteria": [
+      "Execute a native equivalent for each tutorial operation on the same saved transient data.",
+      "Compare extracted numerical tables, selection axes and frame values independently of chart styling.",
+      "Identify approved native output-format substitutions explicitly and keep unsupported options visible."
+    ],
+    "next_action": "Create the tutorial09 workflow ledger and implement remaining scientific display operations before cosmetic parity."
+  },
+  {
+    "id": "API-021",
+    "track": "reference_infrastructure",
+    "component": "MATLAB reference export",
+    "requirement": "Execute and verify the portable exporter against a known MATLAB environment.",
+    "scope": "Fresh and approved-object source modes for all four frameworks, arbitrary selected model/boundary cases, initialization and precursor arrays.",
+    "upstream": [
+      "upstream/+Solvers/AbstractSolver.m",
+      "upstream/+Inputs/InputSet.m"
+    ],
+    "python": [
+      "tools/export_matlab_reference.m",
+      "tools/compare_matlab_reference.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/REFERENCE_COMPARISON.md",
+      "tools/export_matlab_reference.m",
+      "tools/test_reference_comparator.py"
+    ],
+    "gap": "Exporter source was reviewed but never executed in MATLAB. Synthetic comparator fixtures do not verify successful class construction, CoolProp compatibility, export dimensions or version capture.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Run a fresh reference export in an available compatible MATLAB installation and retain its execution log, exact source/submodule/CoolProp/MATLAB versions and input hashes.",
+      "Require complete primary arrays, audited units/shapes, coordinates and convergence histories; optional method errors remain explicit.",
+      "Do not overwrite original archives; compare an independently produced export without interpolation or tolerance changes."
+    ],
+    "next_action": "Obtain known-runtime exports for the first transient/alternative-closure acceptance cases; MATLAB remains unnecessary for normal Python execution."
+  },
+  {
+    "id": "API-022",
+    "track": "reference_infrastructure",
+    "component": "Archive recovery",
+    "requirement": "Keep structural MAT5/MCOS recovery auditable and correctly scoped.",
+    "scope": "Four original TUTORIAL1 regression archives, named properties/object links/enums, raw shapes and formula-derived baseline quantities.",
+    "upstream": [
+      "upstream/tests",
+      "upstream/+Solvers/+Mixture/Mixture.m",
+      "upstream/+Solvers/+FourField/Film.m"
+    ],
+    "python": [
+      "tools/recover_mcos_reference.py",
+      "tools/recover_twofluid_reference.py",
+      "tools/recover_annular_reference.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "passed_scoped",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "tools/REFERENCE_READER.md",
+      "tools/test_recover_mcos_reference.py",
+      "tools/test_recovered_twofluid.py",
+      "tools/test_recover_annular_reference.py",
+      "outputs/baseline-parity-02/summary.json"
+    ],
+    "gap": "Recovery works for the four actual archives; original producing MATLAB/CoolProp/source versions remain unknown. Reconstructed baseline methods are not independent fresh MATLAB executions or a generic decoder for all future cases.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Preserve before/after archive hashes, object identity and original dimensions; record every stored versus reconstructed quantity.",
+      "Fail on unsupported models, decoder warnings and missing required data rather than guessing arrays.",
+      "Retain unknown producer metadata and prohibit extending baseline reconstruction formulas to other physics without audit."
+    ],
+    "next_action": "Use the existing immutable archives as scoped anchors; add independent known-runtime references rather than claiming recovery supplies all needed cases."
+  },
+  {
+    "id": "API-023",
+    "track": "reference_infrastructure",
+    "component": "Comparison acceptance machinery",
+    "requirement": "Maintain trustworthy comparisons for fresh exports and recovered archives.",
+    "scope": "Core W/U/H and required FourField base/frequency, histories/precursors, inputs, units, shapes and convergence; supplementary diagnostics separately identified.",
+    "upstream": [
+      "upstream/tests",
+      "upstream/+Solvers/+FourField/Film.m"
+    ],
+    "python": [
+      "tools/compare_matlab_reference.py",
+      "tools/verify_recovered_mixture.py",
+      "tools/verify_recovered_framework.py",
+      "src/openstream/gui_reference.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "passed_scoped",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "tools/test_reference_comparator.py",
+      "tools/test_recovered_framework.py",
+      "tests/test_gui_reference.py",
+      "docs/REFERENCE_COMPARISON.md",
+      "docs/ALL_BASELINES_VERIFICATION.md",
+      "outputs/baseline-parity-02/summary.json"
+    ],
+    "gap": "Four original core baselines pass; supplementary diagnostic differences remain. GUI comparisons have a narrower scope than the full archived audit. Original 1e-8/0 criteria must not be mistaken for a universal experimental or all-quantity accuracy tolerance.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Preserve original core rtol=1e-8 and atol=0, exact zeros and exact shape/unit checks; no interpolation, broadcasting or missing-field skips.",
+      "Audit new quantity-specific absolute/relative criteria before comparisons, with dimensional justification and provenance; never change criteria merely to obtain a pass.",
+      "Keep synthetic tooling-test passes, actual reference agreement and physical consistency as separate results."
+    ],
+    "next_action": "Extend immutable adversarial fixtures and explicit comparison scopes for each new reference case."
+  },
+  {
+    "id": "API-024",
+    "track": "interface_parity",
+    "component": "GUI and command interfaces",
+    "requirement": "Preserve a usable local front end without overstating scientific coverage.",
+    "scope": "Four steady presets, 163 inputs, units/reference/defaults, validated edits, saved results and plots; native solvers also have transient schedules.",
+    "upstream": [
+      "upstream/docs/source/Guides/tutorials.rst"
+    ],
+    "python": [
+      "src/openstream/gui.py",
+      "src/openstream/gui_schema.py",
+      "src/openstream/gui_reference.py",
+      "src/openstream/gui_static/app.js",
+      "src/openstream/cli.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "passed_scoped",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/GUI.md",
+      "docs/GUI_STYLE.md",
+      "docs/GUI_VERIFICATION.md",
+      "outputs/verification/github-windows-ci.json",
+      "tests/test_gui.py",
+      "tests/gui_frontend_logic.test.cjs"
+    ],
+    "gap": "GUI coverage is intentionally steady-only; arbitrary functions and transient scheduling are absent. Four preset comparisons do not establish every edited combination, keyboard/screen-reader accessibility or full solver API parity.",
+    "priority": "P2",
+    "acceptance_criteria": [
+      "Ensure supported inputs retain units, references/defaults and explicit unsupported/inactive explanations.",
+      "Keep errors, cancellation, custom-case identity and numerical/reference/physical statuses accurate across GUI and CLI.",
+      "If transient GUI support becomes a requirement, add schedule editing and physical/pseudo-time safeguards without changing solver equations."
+    ],
+    "next_action": "Keep native parity independent of UI completion; extend GUI scheduling only after transient numerical acceptance."
+  },
+  {
+    "id": "API-025",
+    "track": "release",
+    "component": "Reproducible installation and release",
+    "requirement": "Retain clean Windows installation, package contents and no-MATLAB runtime independence.",
+    "scope": "Pinned Python 3.12 dependencies, source/wheel installation, CLI/GUI launches, bundled inputs/reference/assets/licenses and runtime import boundaries.",
+    "upstream": [
+      "upstream/LICENSE",
+      "upstream/+CoolPropWrapper/LICENSE",
+      "upstream/docs/source/Usage/gettingStarted.rst"
+    ],
+    "python": [
+      "pyproject.toml",
+      "MANIFEST.in",
+      "requirements.lock",
+      "requirements-gui.lock",
+      ".github/workflows/tests.yml",
+      "tools/gui_wheel_smoke.py"
+    ],
+    "implementation": "implemented",
+    "native_tests": "passed_scoped",
+    "matlab": "not_applicable",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "outputs/verification/github-windows-ci.json",
+      "outputs/verification/gui-0.2.1-package.json",
+      "outputs/verification/gui-0.2.1-wheel-smoke.log",
+      "docs/PUBLICATION.md"
+    ],
+    "gap": "The clean Windows workflow passed213 Python tests and5 JavaScript tests with2 recorded FourField warnings. This confirms the tested installation/runtime scope, not all operating conditions or scientific parity. Test/evidence versions must remain traceable after changes.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Reproduce installation and actual solver execution from a clean recursive checkout and installed wheel without MATLAB, Engine or Octave.",
+      "Verify bundled arrays/assets/licenses, dependency consistency and source/reference fingerprints.",
+      "Require all applicable tests and disclosed warnings/physical failures in release evidence; do not sum overlapping historical test suites."
+    ],
+    "next_action": "Keep CI and installed-wheel smoke checks as release gates for every future numerical change."
+  },
+  {
+    "id": "API-026",
+    "track": "release",
+    "component": "Evidence provenance and status consistency",
+    "requirement": "Keep the acceptance ledger and historical evidence internally consistent.",
+    "scope": "Source/submodule/data commits, artifact hashes, units, input identity, independent test scopes and stale documentation wording.",
+    "upstream": [
+      "upstream/docs/source/Guides/testing.rst",
+      "upstream/docs/source/Usage/versioning.rst"
+    ],
+    "python": [
+      "tools/capture_provenance.py",
+      "tools/audit_method_coverage.py",
+      "tools/audit_publication.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "partial",
+    "matlab": "not_applicable",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "provenance",
+      "docs/FEATURE_MAP.md",
+      "docs/PARITY_STATUS.md",
+      "docs/METHOD_COVERAGE.json",
+      "docs/REFERENCE_COMPARISON.md",
+      "docs/PROGRESS.md"
+    ],
+    "gap": "Historical checkpoints and independent evidence scopes need continuing reconciliation as the acceptance ledger expands; method counts and test counts are not a complete acceptance denominator. Source/archive producer metadata remain unknown where explicitly recorded.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Each requirement row has stable ID, pinned source anchor, executable case, units/domain, independent evidence and separate implementation/equivalence/physical/experimental status.",
+      "Mark earlier checkpoints as historical and distinguish unexecuted fresh exports from completed archive recovery/comparisons.",
+      "Verify source/evidence paths and hashes; missing evidence cannot become a pass because an implementation is present."
+    ],
+    "next_action": "Maintain the machine-readable ledger, pinned provenance and accurate historical/current status wording together as each new case is accepted."
+  }
+]

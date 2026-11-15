@@ -25,6 +25,9 @@ Optional desktop shortcut: `.\tools\install_gui_shortcut.ps1`.
 The GUI runs at `http://127.0.0.1:8765` and uses local assets throughout.
 See [GUI usage](docs/GUI.md), [repository contents](docs/REPOSITORY_CONTENTS.md),
 and the [remaining parity and validation work](docs/PARITY_COMPLETION.md).
+The [acceptance matrix](docs/ACCEPTANCE_MATRIX.md) and
+[prioritized work plan](docs/ACCEPTANCE_PLAN.md) track the missing and unverified
+requirements separately from demonstrated results.
 
 Physical validation will use the experimental datasets in
 [OpenSTREAM-database](https://github.com/OpenSTREAM-solvers/openstream-database).

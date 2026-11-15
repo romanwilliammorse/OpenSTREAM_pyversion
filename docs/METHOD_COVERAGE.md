@@ -12,6 +12,9 @@ and Python ASTs, resolves the repository-local inheritance chains, and writes
 Each record includes source location, declaring class, native candidate,
 signature, explicit unsupported statements and relevant review notes. The
 report hashes the inspected source files and feature map.
+Current fingerprints normalize CRLF to LF so Git's Windows newline conversion
+does not invalidate an unchanged declaration inventory; no other text
+normalization is applied. Original archive/PDF hashes remain exact binary hashes.
 
 This is **not a completeness score or correctness test**. A method with the
 same name can contain untested or unsupported branches, have different argument

@@ -1,6 +1,6 @@
 # Portable MATLAB reference comparison
 
-This tooling compares exported numerical arrays. It neither runs MATLAB locally nor establishes experimental validity. No actual MATLAB export/comparison has been completed in this workspace. The automated results described below use temporary, explicitly synthetic fixtures only.
+This tooling compares exported numerical arrays. It neither runs MATLAB locally nor establishes experimental validity. No fresh MATLAB-runtime export has been executed in this workspace. The tests of this fresh-export comparator use temporary, explicitly synthetic fixtures. Separately, all four original archives were recovered natively and their scoped core comparisons passed; see [ALL_BASELINES_VERIFICATION.md](ALL_BASELINES_VERIFICATION.md). Archive recovery does not supply the unknown original producer versions or establish transient equivalence.
 
 ## Supported framework and array paths
 

@@ -1,6 +1,12 @@
 # Feature map
 
-Source anchors: OpenSTREAM `a614c7173822a93c1e64ac28d1541cbac028cbd8`, wrapper `a7c40902ff66faf6ed668986398bb1b9faa16e13`. Updated 2026-11-14, native version 0.2.0 (GUI addition; governing equations unchanged). `upstream_inventory.json` preserves all 41 enum definitions. **The full port is incomplete. All four TUTORIAL1 baselines pass their original W/U/H comparisons, initialization histories and mixture precursors against recovered MATLAB state. Broader numerical equivalence and experimental validation remain unestablished.** See ALL_BASELINES_VERIFICATION.md.
+Source anchors: OpenSTREAM `a614c7173822a93c1e64ac28d1541cbac028cbd8`, wrapper `a7c40902ff66faf6ed668986398bb1b9faa16e13`. Updated 2026-11-14, native version 0.2.1 (GUI styling; governing equations unchanged). `upstream_inventory.json` preserves all 41 enum definitions. **The full port is incomplete. All four TUTORIAL1 baselines pass their original W/U/H comparisons, initialization histories and mixture precursors against recovered MATLAB state. Broader numerical equivalence and experimental validation remain unestablished.** See ALL_BASELINES_VERIFICATION.md.
+
+The requirement-level [acceptance matrix](ACCEPTANCE_MATRIX.md) and
+[prioritized acceptance plan](ACCEPTANCE_PLAN.md) now link this feature summary
+to separate implementation, native-test, MATLAB, physical-check and experimental
+evidence, including the supplied 2025 literature. Declaration annexes enumerate
+options and public methods without treating presence as correctness.
 
 Implemented means native code exists. Tested identifies an actual check/run, not full branch coverage. Unsupported means explicit rejection or an unavailable API. Unverified means no executed reference comparison for that scope. Tests that expose a physical defect do not establish that physical criterion passed.
 

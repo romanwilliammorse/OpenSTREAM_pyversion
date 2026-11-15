@@ -1,0 +1,10 @@
+{
+  "schema": "openstream-acceptance-publication-scan-summary-v1",
+  "snapshot_date": "2026-11-14",
+  "scope": "Read-only workspace scan before publishing acceptance artifacts; unrelated new GUI runs are excluded from this task commit.",
+  "files_scanned": 1428,
+  "text_files_scanned": 979,
+  "credential_pattern_findings": [],
+  "files_at_least_50_MiB": [],
+  "limitations": "Pattern-only scan; binary scientific arrays and images are inventoried and hashed, not semantically scanned for credentials."
+}

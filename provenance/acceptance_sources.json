@@ -1,0 +1,38 @@
+{
+  "schema": "openstream-acceptance-sources-v1",
+  "snapshot_date": "2026-11-14",
+  "upstream_commit": "a614c7173822a93c1e64ac28d1541cbac028cbd8",
+  "coolprop_wrapper_commit": "a7c40902ff66faf6ed668986398bb1b9faa16e13",
+  "database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+  "native_source_commit": "9371346112e6e2d6de16a35291402b3495b0845e",
+  "native_version": "0.2.1",
+  "ci_tested_code_commit": "9b3d67e8e56f30381a7ae127792de42079148546",
+  "literature": [
+    {
+      "file_name": "Chan2025.pdf",
+      "pages": 2,
+      "title": "One-Dimensional, Advanced Annular Two-Phase Flow Simulations with the Open-Source Platform OpenSTREAM",
+      "sha256": "07fefb0c151ada26c8a8aa7a0beb20395248f31d84645ea9285d1a4226a12365",
+      "availability": "User-supplied local PDF; original file and raw extracted text are not redistributed."
+    },
+    {
+      "file_name": "LeCorre2025OpenSTREAM.pdf",
+      "pages": 14,
+      "title": "OpenSTREAM: An Open-Source Platform for Two-Phase Flow Modeling and Simulation",
+      "sha256": "f72e78c41036f84db849fb080187562777e6b6696b407b6bcce2b8ca9d11ada1",
+      "availability": "User-supplied local PDF; original file and raw extracted text are not redistributed."
+    },
+    {
+      "file_name": "LeCorre2025ICMF.pdf",
+      "pages": 2,
+      "title": "OpenSTREAM: A New Open-Source Platform for Two-Phase Flow Model Development",
+      "sha256": "3540ecc41159310f5ac8decc2cadcbd30d73d6594c0001508af2e4ea35221be3",
+      "availability": "User-supplied local PDF; original file and raw extracted text are not redistributed."
+    }
+  ],
+  "limits": [
+    "2025 publications do not automatically describe the pinned 2026 source.",
+    "The user identifies as R.W. Morse; the papers list Roman W. Morse as a coauthor.",
+    "Existing evidence is audited; no new experimental solver run or MATLAB execution is claimed."
+  ]
+}

@@ -22,7 +22,8 @@ remain separate, unfinished requirements.
 | Baseline-audit native/recovery/comparison suite | 212 / 212 passed | Earlier executed checkpoint: 129 native + 83 recovery/comparison tests; one optional-reader deprecation and two retained four-field warnings |
 | GUI 0.2.0 native/GUI suite | 213 / 213 passed | 129 native + 84 GUI tests, plus 5 passing JavaScript tests; recovery-tool internals were not rerun in this checkpoint |
 | Experimental validation against OpenSTREAM-database | Not performed | Six dataset families inspected; no measured-versus-predicted validation results yet |
-| Full feature/option/API parity | Not yet quantified | Explicit gaps remain; no complete requirement-level acceptance denominator exists |
+| Acceptance requirements ledger | 81 reviewed rows | Separate implementation/test/MATLAB/physical/experimental statuses; not a completion percentage |
+| Full feature/option/API parity | Not yet quantified | The ledger links 127 enum choices, 16 interpolation entries and 585 public method entries; combinations and operating-domain coverage remain incomplete |
 
 The primary scientific parity metric is **framework baselines with a passing
 executed comparison against MATLAB-produced core profiles / four framework
@@ -85,6 +86,12 @@ two evaluated only in the fully annular region. Those checked steady failures
 are shared with the source; this finding does not settle the transient cases.
 
 ## Next acceptance steps
+
+The [acceptance matrix](ACCEPTANCE_MATRIX.md) and [ordered plan](ACCEPTANCE_PLAN.md)
+are the current requirement-level tracker. The [literature review](LITERATURE_ACCEPTANCE_REVIEW.md)
+distinguishes the supplied 2025 demonstration and experimental cases from the
+pinned 2026 implementation, and records paper/companion parameter conflicts and
+calibration-associated measurements. No new experimental run is claimed.
 
 1. Implement a native adapter for the external
    [OpenSTREAM-database](https://github.com/OpenSTREAM-solvers/openstream-database/tree/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22),

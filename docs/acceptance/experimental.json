@@ -1,0 +1,585 @@
+[
+  {
+    "id": "EXP-001",
+    "track": "literature_scope",
+    "component": "Publication/version provenance",
+    "requirement": "Define distinct publication, companion and pinned-code targets",
+    "scope": "2025 ICMF abstracts, 2025 NURETH paper, 2026 pinned solver and database revisions",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/projects/NURETH21.mlx",
+      "upstream/docs/source/Applications/projects.rst"
+    ],
+    "python": [
+      "src/openstream/inputs.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "not_run",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/LITERATURE_ACCEPTANCE_REVIEW.md",
+      "local-paper:Chan2025.pdf#page=1",
+      "local-paper:LeCorre2025ICMF.pdf#page=2",
+      "local-paper:LeCorre2025OpenSTREAM.pdf#page=8"
+    ],
+    "gap": "Paper/source input identity is not established; current companion and archived TUTORIAL1 use different model configurations.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Every reproduction case has immutable paper/figure identifiers, exact source revisions and effective inputs.",
+      "Keep 5 m ICMF and 5.5 m NURETH cases distinct; preserve explicit perimeter/area and inlet enthalpy rather than replacing them with rounded paper values.",
+      "Document which current-code changes differ from the publication-time implementation."
+    ],
+    "next_action": "Create a case registry linking each figure to complete inputs and source/version evidence."
+  },
+  {
+    "id": "EXP-002",
+    "track": "literature_scope",
+    "component": "NURETH demonstration",
+    "requirement": "Reproduce NURETH Figures 3-4 with their selected physics",
+    "scope": "Water; 6 MPa; 0.07 kg/s; 87.5 kW; 3.5 m heated plus 2 m adiabatic; explicit companion closure selections",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/projects/NURETH21.mlx"
+    ],
+    "python": [
+      "src/openstream/solver.py",
+      "src/openstream/twofluid.py",
+      "src/openstream/threefield.py",
+      "src/openstream/fourfield.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "not_run",
+    "matlab": "not_run",
+    "physical": "not_run",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/LITERATURE_ACCEPTANCE_REVIEW.md",
+      "local-paper:LeCorre2025OpenSTREAM.pdf#page=8",
+      "local-paper:LeCorre2025OpenSTREAM.pdf#page=9"
+    ],
+    "gap": "Existing four steady baseline passes are not proof of publication-case equivalence; companion outputArray is empty and its four-field settings differ.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Archive exact generated inputs, closure selections and any sequential inheritance of options.",
+      "Obtain independent numerical reference arrays for all plotted quantities and compare on matched coordinates with predeclared justified criteria.",
+      "Check convergence and applicable balances; retain source-shared physical failures separately from equivalence results."
+    ],
+    "next_action": "Translate the companion case setup after EXP-001 and resolve configuration discrepancies before producing matched reference comparisons."
+  },
+  {
+    "id": "EXP-003",
+    "track": "literature_scope",
+    "component": "ICMF annular transient",
+    "requirement": "Reproduce the Chan demonstration as a separately identified transient",
+    "scope": "5 m channel; 1 Hz power between 0 and 87.5 kW; three/four-field drop no-slip selection stated in Chan paper",
+    "upstream": [
+      "local-paper:Chan2025.pdf#page=2"
+    ],
+    "python": [
+      "src/openstream/inputs.py",
+      "src/openstream/threefield.py",
+      "src/openstream/fourfield.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "not_run",
+    "matlab": "not_run",
+    "physical": "not_run",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/LITERATURE_ACCEPTANCE_REVIEW.md",
+      "local-paper:Chan2025.pdf#page=2"
+    ],
+    "gap": "Exact waveform phase/sampling, original numerical settings and plotted numerical arrays are not supplied by the two-page abstract.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Recover the original boundary schedule and numerical/model settings rather than inventing a sine-wave phase or substituting a current tutorial.",
+      "Separate physical time from initialization pseudo-time and retain moving annular-domain eligibility.",
+      "Compare transient wave flow, velocity and frequency against independent arrays; quantify timestep/mesh sensitivity."
+    ],
+    "next_action": "Locate the publication calculation files and reference data; retain the case as unverified until its inputs and outputs are traceable."
+  },
+  {
+    "id": "EXP-004",
+    "track": "literature_scope",
+    "component": "TRACE benchmark",
+    "requirement": "Reproduce the two-fluid code-to-code comparison without calling it experimental validation",
+    "scope": "NURETH Figure 5: 0.6 MJ/kg inlet enthalpy, 150 kW, prescribed subcooled-boiling settings and mixture slip ratio 2",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/projects/NURETH21.mlx",
+      "local-paper:LeCorre2025OpenSTREAM.pdf#page=10"
+    ],
+    "python": [
+      "src/openstream/twofluid.py",
+      "src/openstream/solver.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "not_run",
+    "matlab": "not_run",
+    "physical": "not_run",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/LITERATURE_ACCEPTANCE_REVIEW.md",
+      "local-paper:LeCorre2025OpenSTREAM.pdf#page=10"
+    ],
+    "gap": "The companion explicitly excludes Figure 5 because TRACE reference results are absent; exact TRACE settings and arrays remain unavailable.",
+    "priority": "P2",
+    "acceptance_criteria": [
+      "Identify TRACE version, complete input deck, numerical settings, selected closures and output units.",
+      "Compare matched phase quantities and domains without treating another code as experimental truth.",
+      "Record whether data were rerun, recovered or digitized; plot digitization cannot establish full-precision equivalence."
+    ],
+    "next_action": "Recover the TRACE reference case and arrays if available; keep the benchmark outside experimental-validation counts."
+  },
+  {
+    "id": "EXP-005",
+    "track": "experimental_validation",
+    "component": "Native database adapter",
+    "requirement": "Implement native reading, selection and case input generation",
+    "scope": "All six inspected experimental families; inherited Dataset behavior, explicit overrides and transient schedule semantics",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/@Dataset/Dataset.m",
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/@Dataset/makeInputFiles.m"
+    ],
+    "python": [
+      "src/openstream/inputs.py"
+    ],
+    "implementation": "missing",
+    "native_tests": "not_run",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/PARITY_COMPLETION.md",
+      "docs/LITERATURE_ACCEPTANCE_REVIEW.md"
+    ],
+    "gap": "No native database adapter or executed measured-versus-predicted workflow exists.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Retain raw XML values, missing entries, repeated fields, record identifiers, source hashes and citations.",
+      "Match geometry, pressure, inlet enthalpy, mass flow, power, axial heating and default/override precedence.",
+      "Verify mass flux times area equals mass flow and integrated prescribed heating equals power within documented input precision.",
+      "For transient partial records, match initial-state inheritance rather than silently inheriting a previous transient record."
+    ],
+    "next_action": "Implement the reader/input adapter with unit-aware fixture and generated-input comparisons before any validation pass claim."
+  },
+  {
+    "id": "EXP-006",
+    "track": "experimental_validation",
+    "component": "Units and observable definitions",
+    "requirement": "Match the actual measured quantity and coordinate system",
+    "scope": "Film/base/wave quantities, void fraction, quality, heat transfer and dryout measurements",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Wurtz1978/README.md",
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Sawai1989/README.md"
+    ],
+    "python": [
+      "src/openstream/ff_fields.py",
+      "src/openstream/plotting.py"
+    ],
+    "implementation": "missing",
+    "native_tests": "not_run",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/PARITY_COMPLETION.md",
+      "docs/LITERATURE_ACCEPTANCE_REVIEW.md"
+    ],
+    "gap": "No shared observation adapter tracks direct/derived status, measurement coordinates and source-specific units.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Carry SI dimensions while preserving raw units; explicitly distinguish wave number density (m^-1), frequency (Hz), period (s), and velocity (m/s).",
+      "Use period=1/f and frequency=U_wave*N only with verified source definitions; track derived quantities and correlated uncertainties.",
+      "Record axial origin and use within-domain interpolation with stated numerical error; no silent clamping or extrapolation.",
+      "Missing measurements remain missing and relative errors are not computed with physically meaningless near-zero denominators."
+    ],
+    "next_action": "Create per-observable transformations and tests before aggregating dataset errors."
+  },
+  {
+    "id": "EXP-007",
+    "track": "experimental_validation",
+    "component": "Uncertainty and acceptance",
+    "requirement": "Establish evidence-based validation criteria",
+    "scope": "Measurement, digitization/transcription, input and numerical uncertainty for each compared quantity",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Wurtz1978/README.md",
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Sawai1989/README.md"
+    ],
+    "python": [],
+    "implementation": "missing",
+    "native_tests": "not_run",
+    "matlab": "not_applicable",
+    "physical": "not_run",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/PARITY_COMPLETION.md",
+      "docs/LITERATURE_ACCEPTANCE_REVIEW.md"
+    ],
+    "gap": "The overview papers and database do not supply a complete quantitative uncertainty budget or predeclared acceptance bands.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Recover original experimental uncertainty and distinguish it from digitization/transcription and numerical uncertainty.",
+      "Document uncertainty propagation and correlations; label unavailable uncertainty as unknown.",
+      "Allow descriptive comparisons with unknown uncertainty but prohibit an uncertainty-based pass claim.",
+      "Predeclare criteria before fitting; do not adopt plotting guides or baseline 1e-8 tolerances as experimental accuracy thresholds."
+    ],
+    "next_action": "Build quantity-specific uncertainty/acceptance records from original reports and numerical-sensitivity results."
+  },
+  {
+    "id": "EXP-008",
+    "track": "experimental_validation",
+    "component": "Evaluation report and case accounting",
+    "requirement": "Produce reproducible per-case and aggregate validation evidence",
+    "scope": "All attempted cases, including nonconvergence, physical inconsistency and excluded measurements",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/@Dataset/Dataset.m"
+    ],
+    "python": [
+      "src/openstream/output.py",
+      "src/openstream/multifield_output.py"
+    ],
+    "implementation": "missing",
+    "native_tests": "not_run",
+    "matlab": "not_applicable",
+    "physical": "not_run",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/PARITY_COMPLETION.md",
+      "docs/LITERATURE_ACCEPTANCE_REVIEW.md"
+    ],
+    "gap": "Current result output supports solver diagnostics but not a complete experimental comparison ledger.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Publish paired measured/calculated tables with dimensional signed errors, bias, MAE and RMSE for defined populations.",
+      "Report every attempted case and exclusion reason; do not hide nonconverged or physically inconsistent cases in aggregate scores.",
+      "Archive inputs, code/property/data versions, settings, sensitivity and comparison scripts.",
+      "Limit conclusions to measured quantities and tested fluid/geometry/regime/model configurations."
+    ],
+    "next_action": "Implement a validation report generator around the native solver outputs after adapter/observable checks."
+  },
+  {
+    "id": "EXP-009",
+    "track": "experimental_validation",
+    "component": "Bartolomey pilot",
+    "requirement": "Execute the first measured-versus-calculated mixture cases",
+    "scope": "Selected subcooled-boiling void-fraction records with explicit quality/elevation observation definitions",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Bartolomey/README.md"
+    ],
+    "python": [
+      "src/openstream/solver.py",
+      "src/openstream/fields.py"
+    ],
+    "implementation": "missing",
+    "native_tests": "not_run",
+    "matlab": "not_run",
+    "physical": "not_run",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/PARITY_COMPLETION.md"
+    ],
+    "gap": "Database inspection only; no native experimental case run. This pilot is not a reproduction of the three newly supplied papers.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Select traceable representative records with matched geometry, heating, inlet state and measured void definition.",
+      "Freeze the selected mixture thermal/void closures before evaluation.",
+      "Demonstrate converged iterative/mesh settings and applicable balances; publish all paired measurements and errors.",
+      "State whether uncertainty permits acceptance or only descriptive comparison."
+    ],
+    "next_action": "Use a small Bartolomey case set as the first end-to-end adapter and reporting milestone."
+  },
+  {
+    "id": "EXP-010",
+    "track": "experimental_validation",
+    "component": "Wurtz publication reproduction",
+    "requirement": "Reproduce the selected NURETH Figure 6 comparisons",
+    "scope": "Pinned companion TS 20 cases: base-film thickness, wave velocity and wave number density",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/projects/NURETH21.mlx",
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Wurtz1978/README.md",
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Wurtz1978/@Wurtz1978/plotResults.m"
+    ],
+    "python": [
+      "src/openstream/fourfield.py",
+      "src/openstream/ff_fields.py"
+    ],
+    "implementation": "missing",
+    "native_tests": "not_run",
+    "matlab": "not_run",
+    "physical": "not_run",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/LITERATURE_ACCEPTANCE_REVIEW.md",
+      "local-paper:LeCorre2025OpenSTREAM.pdf#page=11",
+      "docs/PARITY_COMPLETION.md"
+    ],
+    "gap": "Python comparison not executed; companion uses measurement-informed reduced entrainment coefficient and unresolved CONST spelling.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Pin exact TS 20 case IDs and the selected closure/OKAWACOEFS configuration.",
+      "Compare mm only as a display conversion from stored metres; match m/s velocity and m^-1 number density separately.",
+      "Establish adequate adiabatic development and numerical/physical eligibility at the observation location.",
+      "Label this as publication/calibration-associated reproduction; do not infer coverage of all 3-9 MPa or annular-geometry measurements from the selected 7 MPa plot groups."
+    ],
+    "next_action": "Resolve EXP-013, run the companion selection, and publish explicit comparison/uncertainty results."
+  },
+  {
+    "id": "EXP-011",
+    "track": "experimental_validation",
+    "component": "Sawai publication reproduction",
+    "requirement": "Reproduce the selected NURETH Figure 7 comparisons",
+    "scope": "Companion indices 1,2,5,6; 2.95 MPa; 4 mm tube; heated/adiabatic developing-wave measurements",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/projects/NURETH21.mlx",
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Sawai1989/README.md",
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Sawai1989/@Sawai1989/plotResults.m"
+    ],
+    "python": [
+      "src/openstream/fourfield.py",
+      "src/openstream/ff_fields.py"
+    ],
+    "implementation": "missing",
+    "native_tests": "not_run",
+    "matlab": "not_run",
+    "physical": "not_run",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/LITERATURE_ACCEPTANCE_REVIEW.md",
+      "local-paper:LeCorre2025OpenSTREAM.pdf#page=11",
+      "local-paper:LeCorre2025OpenSTREAM.pdf#page=12",
+      "docs/PARITY_COMPLETION.md"
+    ],
+    "gap": "No native measurement comparison; paper uses relaxation time 0.2 s while companion sets 0.1 s; units/domain issues and calibration reuse need explicit handling.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Resolve and label paper versus companion relaxation settings without tuning them after viewing errors.",
+      "Compare wave velocity and period at correctly transformed measurement locations, retaining equilibrium-period curves as predictions rather than measurements.",
+      "Check downstream-domain eligibility, annular masks, iterative convergence and spatial/temporal sensitivity where applicable.",
+      "Report the source-associated calibration status and all rejected/out-of-domain points."
+    ],
+    "next_action": "Resolve EXP-012 and EXP-013, then execute the four selected comparisons."
+  },
+  {
+    "id": "EXP-012",
+    "track": "experimental_validation",
+    "component": "Sawai unit/domain integrity",
+    "requirement": "Resolve unit exceptions and out-of-domain measurement coordinates",
+    "scope": "Eight XML cases; WaveTimePeriod in ms; stored length 1.648 m with final elevations 1.6923-1.7002 m",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Sawai1989/+src/Sawai1989.xml",
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Sawai1989/README.md"
+    ],
+    "python": [],
+    "implementation": "missing",
+    "native_tests": "not_run",
+    "matlab": "not_applicable",
+    "physical": "not_run",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/PARITY_COMPLETION.md",
+      "docs/LITERATURE_ACCEPTANCE_REVIEW.md",
+      "local-paper:LeCorre2025OpenSTREAM.pdf#page=11",
+      "local-paper:LeCorre2025OpenSTREAM.pdf#page=12"
+    ],
+    "gap": "Coordinate discrepancy is unresolved; README and actual plotting units contradict one source-code comment.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Convert milliseconds to seconds exactly once and preserve raw period values and units.",
+      "Reconcile the source measurement/geometry coordinate definitions against the original Sawai article and documented digitization.",
+      "Do not clamp, extrapolate, extend channel length or silently discard points to make comparisons look valid.",
+      "Until resolved, report affected points as ineligible for within-domain error metrics with explicit reasons."
+    ],
+    "next_action": "Audit the original Sawai coordinates and retain a source-correction record separate from model changes."
+  },
+  {
+    "id": "EXP-013",
+    "track": "literature_scope",
+    "component": "Companion configuration compatibility",
+    "requirement": "Resolve paper-to-companion and companion-to-solver inconsistencies",
+    "scope": "NURETH21.mlx at pinned database commit versus supplied paper and pinned enum definitions",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/projects/NURETH21.mlx",
+      "upstream/+InputEnums/VAPORFRIC.m"
+    ],
+    "python": [
+      "src/openstream/inputs.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "not_run",
+    "matlab": "not_run",
+    "physical": "not_applicable",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/LITERATURE_ACCEPTANCE_REVIEW.md"
+    ],
+    "gap": "RELAXTW differs(0.2 s paper vs 0.1 s script); CONST is not a declared pinned VAPORFRIC member; demo and TUTORIAL1 four-field settings differ.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Preserve immutable original sources and document each discrepancy with exact anchors.",
+      "Resolve historical target/version intent before claiming publication reproduction.",
+      "Any CONST-to-CONSTANT compatibility mapping is explicit, narrow and tested; arbitrary unknown enums remain rejected.",
+      "No governing equation, empirical coefficient or tolerance is changed merely to improve agreement."
+    ],
+    "next_action": "Create separate named paper/companion configurations and a reviewed compatibility-decision record."
+  },
+  {
+    "id": "EXP-014",
+    "track": "experimental_validation",
+    "component": "Independent validation partition",
+    "requirement": "Separate model development, calibration-associated reproduction and independent evaluation",
+    "scope": "Wurtz entrainment adjustment, Sawai relaxation selection and future dataset/correlation overlap",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/projects/NURETH21.mlx"
+    ],
+    "python": [],
+    "implementation": "missing",
+    "native_tests": "not_run",
+    "matlab": "not_applicable",
+    "physical": "not_run",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/LITERATURE_ACCEPTANCE_REVIEW.md",
+      "local-paper:LeCorre2025OpenSTREAM.pdf#page=12"
+    ],
+    "gap": "Current literature comparisons reuse data linked to closure/model development; no independent evaluation partition is documented for the port.",
+    "priority": "P1",
+    "acceptance_criteria": [
+      "Record which experimental sources and cases influenced every tuned coefficient or selected closure.",
+      "Freeze coefficients before evaluating held-out cases; split by experimental groups/source where appropriate rather than only random points.",
+      "Report calibration-associated reproduction separately from independent validation.",
+      "If no independent cases are available, state that limitation and avoid an independence claim."
+    ],
+    "next_action": "Build a calibration/evaluation provenance register and select independent groups before extending validation claims."
+  },
+  {
+    "id": "EXP-015",
+    "track": "experimental_validation",
+    "component": "Adamsson film-flow validation",
+    "requirement": "Compare predicted liquid-film flow against measured heated-tube film flow",
+    "scope": "Selected 7 MPa heated steam-water cases with multiple axial power profiles",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Adamsson2006/README.md"
+    ],
+    "python": [
+      "src/openstream/threefield.py",
+      "src/openstream/fourfield.py"
+    ],
+    "implementation": "missing",
+    "native_tests": "not_run",
+    "matlab": "not_run",
+    "physical": "not_run",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/PARITY_COMPLETION.md"
+    ],
+    "gap": "No native measurement comparisons; annular-domain physical failures and input-generation fidelity must be assessed per case.",
+    "priority": "P2",
+    "acceptance_criteria": [
+      "Preserve measured geometry, power profile and measurement location.",
+      "Compare measured film flow directly; mark any inferred droplet flow as derived.",
+      "Resolve applicable convergence/area/balance eligibility and report uncertainty and closure choices.",
+      "Avoid claiming transferability beyond the tested conditions."
+    ],
+    "next_action": "Extend the checked adapter/reporting pipeline after the initial mixture and publication-specific wave comparisons."
+  },
+  {
+    "id": "EXP-016",
+    "track": "experimental_validation",
+    "component": "Bennett thermal/dryout validation",
+    "requirement": "Validate thermal predictions and onset/dryout observables separately",
+    "scope": "Appropriate nonequilibrium mixture/two-fluid thermal cases and eligible annular dryout cases",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Bennett1967/README.md"
+    ],
+    "python": [
+      "src/openstream/solver.py",
+      "src/openstream/twofluid.py",
+      "src/openstream/threefield.py"
+    ],
+    "implementation": "missing",
+    "native_tests": "not_run",
+    "matlab": "not_run",
+    "physical": "not_run",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/PARITY_COMPLETION.md",
+      "docs/LITERATURE_ACCEPTANCE_REVIEW.md"
+    ],
+    "gap": "No native experiment comparison; measured-onset inputs can confound claimed onset prediction; annular thermal-equilibrium models exclude post-dryout heat transfer.",
+    "priority": "P2",
+    "acceptance_criteria": [
+      "Keep wall-temperature comparison separate from onset prediction and label measured quantities imposed as inputs.",
+      "Treat missing onset location as missing, not zero.",
+      "Use a framework/closure applicable to the thermal regime and qualify its limits.",
+      "Report numerical and experimental uncertainties, failure cases and derived inlet-subcooling transformations."
+    ],
+    "next_action": "Port selected database workflows with explicit observable roles and regime eligibility."
+  },
+  {
+    "id": "EXP-017",
+    "track": "experimental_validation",
+    "component": "Groeneveld CHF/dryout validation",
+    "requirement": "Validate critical-power search and CHF comparisons as distinct algorithms and observables",
+    "scope": "Selected compatible records; calibration overlap of CHF correlations assessed",
+    "upstream": [
+      "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Groeneveld2019/README.md"
+    ],
+    "python": [
+      "src/openstream/solver.py",
+      "src/openstream/threefield.py",
+      "src/openstream/fourfield.py"
+    ],
+    "implementation": "missing",
+    "native_tests": "not_run",
+    "matlab": "not_run",
+    "physical": "not_run",
+    "experimental": "not_run",
+    "evidence": [
+      "docs/PARITY_COMPLETION.md"
+    ],
+    "gap": "Outer critical-power/dryout search lacks native validation workflow and independent-data qualification.",
+    "priority": "P2",
+    "acceptance_criteria": [
+      "Verify dimensional input derivations and independently test critical-power bracketing, convergence and nonconvergence handling.",
+      "Separate axial-solver errors from outer-search errors.",
+      "Document whether selected measured records supported the assessed CHF correlation's development.",
+      "Preserve model-domain exclusions, measurement uncertainty and all attempted cases."
+    ],
+    "next_action": "Port and verify the outer search only after compatible axial cases and database input generation are accepted."
+  },
+  {
+    "id": "EXP-018",
+    "track": "literature_scope",
+    "component": "Model applicability versus promised future features",
+    "requirement": "Enforce the supplied papers' domain limits without expanding parity into future model development",
+    "scope": "Single-component straight constant-area flow; annular thermal equilibrium through film dryout; pinned source overrides general overview prose",
+    "upstream": [
+      "upstream/docs/source/Usage/scope_and_limitations.rst",
+      "local-paper:LeCorre2025OpenSTREAM.pdf#page=3",
+      "local-paper:LeCorre2025OpenSTREAM.pdf#page=13"
+    ],
+    "python": [
+      "src/openstream/inputs.py",
+      "src/openstream/threefield.py",
+      "src/openstream/fourfield.py"
+    ],
+    "implementation": "partial",
+    "native_tests": "partial",
+    "matlab": "not_run",
+    "physical": "not_run",
+    "experimental": "not_applicable",
+    "evidence": [
+      "docs/LITERATURE_ACCEPTANCE_REVIEW.md",
+      "docs/FEATURE_MAP.md"
+    ],
+    "gap": "Documented limits lack a complete case-level domain/eligibility matrix; paper broad stability/consistency statements cannot waive observed numerical or physical failures.",
+    "priority": "P0",
+    "acceptance_criteria": [
+      "Tag each acceptance case with fluid, geometry, thermal regime, closure domain and supported boundary conditions.",
+      "Treat experimental agreement only as evidence within the tested domain.",
+      "Do not count proposed multicomponent, variable-area or thermally nonequilibrium annular extensions as missing translations unless supported by pinned upstream.",
+      "Keep nonlinear convergence and mesh/timestep accuracy tests despite the paper's backward-Euler stability discussion."
+    ],
+    "next_action": "Add case-level applicability gates and preserve explicit errors for unsupported paths."
+  }
+]

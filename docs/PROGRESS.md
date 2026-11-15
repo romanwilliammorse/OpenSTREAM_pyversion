@@ -4,6 +4,26 @@ The user's requested full native port is **not yet complete**. Continue implemen
 
 ## Current checkpoint — 0.2.1, 2026-11-14
 
+Acceptance audit completed using the preserved implementation, evidence and the
+three user-supplied 2025 papers (the user identifies as R.W. Morse). See
+`ACCEPTANCE_MATRIX.md/json/csv`, `ACCEPTANCE_PLAN.md`, and
+`LITERATURE_ACCEPTANCE_REVIEW.md`. There are 81 reviewed requirements, with
+separate evidence axes and linked declaration annexes for 127 enum choices,
+16 interpolation entries and 585 inherited/public method entries. These counts
+are not additive and are not a full-parity percentage. The regenerated method
+inventory now fingerprints the current 0.2.1 source. No solver equations,
+reference arrays, numerical tolerances or new experimental results changed.
+
+Next implementation: native Bartolomey XML/input/measurement adapter and frozen
+pilot-case manifest. Parallel gates: new transient MATLAB references; the
+NURETH companion's rejected `CONST` value and 0.1 s relaxation setting versus
+the paper's 0.2 s; Sawai coordinates/units; uncertainty and calibration partition.
+The inspected companion MLX contains no numerical output-array entries.
+Paper Wurtz/Sawai comparisons are literature evidence, not executed Python
+validation. Preserve their distinct settings and identify independent cases.
+Rebuild/check with `tools/build_acceptance_matrix.py` and `--check`; source
+ledgers are under `docs/acceptance/` and PDF hashes under `provenance/`.
+
 The local GUI now follows the OpenSTREAM documentation's logo, fonts and colors,
 with shorter visible labels and expandable help. Actions are **Check**, **Run**,
 **Cancel**, **Import**, **Export** and **Save PNG**. All 163 inputs and separate

@@ -84,7 +84,8 @@ for method in ("XTR_SUB", "XTR_SAT", "XTR_ITM", "XTR_ANN"):
 
 
 def sha(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    # Text-only declaration provenance must survive Git's Windows newline conversion.
+    return hashlib.sha256(path.read_bytes().replace(b'\r\n', b'\n')).hexdigest()
 
 
 def matlab_classes(root):
@@ -212,6 +213,7 @@ def build_report(root):
     source_files = {x["file"]:x["sha256"] for x in upstream.values()}
     source_files.update({r["source"]["file"]:sha(root/r["source"]["file"]) for r in records})
     return {"schema":"openstream-method-audit-v1",
+        "fingerprint_policy":"SHA256 of source-text bytes with CRLF normalized to LF; no other normalization.",
         "scope":"Public methods in pinned solver/field classes and Inputs classes listed in class_mapping, including inherited methods.",
         "limitations":["Static declaration/name audit only; no execution, equation validation, branch coverage, or numerical-equivalence proof.",
                        "MATLAB parser relies on this repository's four-space class-section/eight-space method formatting; nested functions and private/protected methods are excluded.",
