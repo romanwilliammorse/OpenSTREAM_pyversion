@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-11-15T23:08:52.892634+00:00",
+  "deployment": "dpl_DidsAEJiQiqA8rMpiUJkWf7PoPMh",
+  "passed": true,
+  "runs": [
+    {
+      "id": "47b8e605097f476db27a6869e551b037",
+      "framework": "Mixture",
+      "status": "completed",
+      "zip_sha256": "d4863db5818d9442d543dfbfc28bb6a7053a66b7f924e8bbf27628fc8283f2d2",
+      "zip_size": 656472,
+      "original_bytes_preserved": true
+    },
+    {
+      "id": "31bdc0a96f194ec1a3dac210568e4b28",
+      "framework": "TwoFluid",
+      "status": "completed",
+      "zip_sha256": "8ee1ffa1263d920e752736d50348128e811785bfadc4e7a18194997c2424015c",
+      "zip_size": 895179,
+      "original_bytes_preserved": true
+    },
+    {
+      "id": "8b87b512f1594e08a6d59082e4de90a8",
+      "framework": "ThreeField",
+      "status": "completed",
+      "zip_sha256": "7cadbdaf6672321ec0dbbc6cc1100b558fc4e4e346929301293cd8c55d96d754",
+      "zip_size": 817324,
+      "original_bytes_preserved": true
+    },
+    {
+      "id": "56c656bbe0bd4f6e908c190ab26d1f83",
+      "framework": "FourField",
+      "status": "completed",
+      "zip_sha256": "d911c801b3665e8b79af6294430cf0713e2ffbd2d1cde17b8b1716bd1a44126a",
+      "zip_size": 988951,
+      "original_bytes_preserved": true
+    },
+    {
+      "id": "327cc37e04614aea8c071c7d9d112aa4",
+      "framework": "FourField",
+      "status": "cancelled"
+    }
+  ]
+}

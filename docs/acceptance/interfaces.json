@@ -544,9 +544,14 @@
       "tests/test_cloud_worker.py",
       "outputs/verification/hosted-http/20261115T175320Z-37b93b7b/interruption.json",
       "outputs/verification/hosted-http/20261115T175731Z-a0e1560b/summary.json",
-      "outputs/verification/hosted-release/local-pytest.txt"
+      "outputs/verification/hosted-release/local-pytest.txt",
+      "outputs/verification/hosted-git/deployment.json",
+      "outputs/verification/hosted-git/history-durability.json",
+      "outputs/verification/hosted-release/github-connected.png",
+      "outputs/verification/hosted-git/20261115T230830Z-a26dcfdb/summary.json",
+      "outputs/verification/hosted-git/source-check.json"
     ],
-    "gap": "Native progress, metadata, locks and worker logs exist; MATLAB diary/class/session option parity is not complete. Stronger native convergence/physical rejection signals need an explicit mapping to upstream STATE rather than being called identical. Hosted authentication, immutable publication, failure retention and exact-session lifecycle have native tests and live all-four baseline/cancellation evidence. Two initial packaging failure campaigns remain retained. This does not complete MATLAB session/logging semantics.",
+    "gap": "Native progress, metadata, locks and worker logs exist; MATLAB diary/class/session option parity is not complete. Stronger native convergence/physical rejection signals need an explicit mapping to upstream STATE rather than being called identical. Hosted authentication, immutable publication, failure retention and exact-session lifecycle have native tests and live all-four baseline/cancellation evidence. Two initial packaging failure campaigns remain retained. This does not complete MATLAB session/logging semantics. A subsequent Git-triggered production redeployment preserved five prior terminal states and four byte-identical result ZIPs; this covers one redeployment, not in-flight recovery or full source session semantics.",
     "priority": "P2",
     "acceptance_criteria": [
       "Map every public session/logging option and solver state to the native behavior or documented replacement.",
@@ -641,9 +646,12 @@
       "outputs/verification/hosted-http/20261115T175731Z-a0e1560b/summary.json",
       "outputs/verification/hosted-release/local-pytest.txt",
       "outputs/verification/hosted-release/hosted-fourfield.png",
-      "outputs/verification/hosted-release/browser-verification.json"
+      "outputs/verification/hosted-release/browser-verification.json",
+      "outputs/verification/hosted-git/history-durability.json",
+      "outputs/verification/hosted-git/20261115T230830Z-a26dcfdb/summary.json",
+      "outputs/verification/hosted-git/source-check.json"
     ],
-    "gap": "Seventeen plotting checks and rendered examples establish exact selected values/layout semantics, not visual identity with MATLAB or correctness of the underlying physics. Hosted all-four plot-data delivery, checksummed downloads and independent comparisons of downloaded archived profiles passed; FourField diagnostic nonfinite entries remain disclosed. This adds no MATLAB visual-equivalence or physical-validation claim.",
+    "gap": "Seventeen plotting checks and rendered examples establish exact selected values/layout semantics, not visual identity with MATLAB or correctness of the underlying physics. Hosted all-four plot-data delivery, checksummed downloads and independent comparisons of downloaded archived profiles passed; FourField diagnostic nonfinite entries remain disclosed. This adds no MATLAB visual-equivalence or physical-validation claim. A fresh Mixture run on the Git-deployed application passed saved-array/plot-data delivery and the unchanged archived comparison; four older ZIPs were retrieved unchanged after redeployment.",
     "priority": "P2",
     "acceptance_criteria": [
       "Confirm every plotted line/frame/cell corresponds to the selected saved values and actual time/node/wall coordinates.",
@@ -739,9 +747,13 @@
       "tests/test_verify_hosted_gui.py",
       "outputs/verification/hosted-http/20261115T175320Z-37b93b7b/interruption.json",
       "outputs/verification/hosted-http/20261115T175731Z-a0e1560b/summary.json",
-      "outputs/verification/hosted-release/local-pytest.txt"
+      "outputs/verification/hosted-release/local-pytest.txt",
+      "outputs/verification/hosted-git/deployment.json",
+      "outputs/verification/hosted-git/history-durability.json",
+      "outputs/verification/hosted-git/20261115T230830Z-a26dcfdb/summary.json",
+      "outputs/verification/hosted-git/source-check.json"
     ],
-    "gap": "All four selected steady solves/core comparisons exist, but a complete cell-by-cell native tutorial and every inspection/object-reload operation are not accepted. Known multifield physical failures remain separate. All four hosted baseline workflows and native cancellation passed after packaging-only fixes, with archived GUI profile comparisons at unchanged tolerances. Original failed attempts, TwoFluid physical-review failure and annular informational statuses remain separate; complete source tutorial operation parity is still open.",
+    "gap": "All four selected steady solves/core comparisons exist, but a complete cell-by-cell native tutorial and every inspection/object-reload operation are not accepted. Known multifield physical failures remain separate. All four hosted baseline workflows and native cancellation passed after packaging-only fixes, with archived GUI profile comparisons at unchanged tolerances. Original failed attempts, TwoFluid physical-review failure and annular informational statuses remain separate; complete source tutorial operation parity is still open. The connected Git deployment route and a fresh Mixture quick-start workflow passed; the other three prior baseline ZIPs survived redeployment, but those solves were not rerun in the Git follow-up.",
     "priority": "P1",
     "acceptance_criteria": [
       "Map each executable tutorial operation to a runnable native command/example.",

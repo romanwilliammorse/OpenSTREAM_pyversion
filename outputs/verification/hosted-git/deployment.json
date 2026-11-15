@@ -1,0 +1,351 @@
+{
+  "schema": "openstream-git-deployment-v1",
+  "deployment": {
+    "id": "dpl_DidsAEJiQiqA8rMpiUJkWf7PoPMh",
+    "name": "openstream-py",
+    "url": "openstream-nk5nv36ky-rwmorse-8427.vercel.app",
+    "type": "LAMBDAS",
+    "state": "READY",
+    "createdAt": 1794784052625,
+    "creator": {
+      "uid": "RbKAUGfZIjVoiWqvJf4WMEsD",
+      "username": "rwmorse-8427"
+    },
+    "project": {
+      "id": "prj_tWK9pFywBrkziKMK9VXOK9Co6IEE",
+      "name": "openstream-py",
+      "framework": "flask"
+    },
+    "meta": {
+      "githubCommitRef": "main",
+      "githubCommitSha": "d1f9a952f10425ff48e10b6be223d98a716f8349",
+      "githubCommitMessage": "Record Vercel GitHub connection for automatic deployment",
+      "githubRepo": "OpenSTREAM_pyversion",
+      "githubOrg": "romanwilliammorse"
+    },
+    "alias": [
+      "openstream-py.vercel.app",
+      "openstream-py-rwmorse-8427.vercel.app",
+      "openstream-py-git-main-rwmorse-8427.vercel.app"
+    ],
+    "target": "production",
+    "regions": [
+      "iad1"
+    ],
+    "buildingAt": 1794784053930,
+    "ready": 1794784091325,
+    "readyState": "READY",
+    "source": "git",
+    "aliasError": null
+  },
+  "build_events": [
+    {
+      "created": 1794784091412,
+      "date": 1794784091412,
+      "type": "stdout",
+      "text": "Creating build cache...",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784091408,
+      "date": 1794784091408,
+      "type": "stdout",
+      "text": "Deployment completed",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784078342,
+      "date": 1794784078342,
+      "type": "stdout",
+      "text": "Deploying outputs...",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784078306,
+      "date": 1794784078306,
+      "type": "stderr",
+      "text": "Build Completed in /vercel/output [11s]",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784069601,
+      "date": 1794784069601,
+      "type": "stdout",
+      "text": "Compiling Python bytecode...",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784069531,
+      "date": 1794784069531,
+      "type": "stdout",
+      "text": "Bundle size (329.04 MB) exceeds the standard size; optimizing dependencies.",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784068142,
+      "date": 1794784068142,
+      "type": "stdout",
+      "text": "Installing required dependencies from requirements.txt...",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784067834,
+      "date": 1794784067834,
+      "type": "stdout",
+      "text": "Using uv 0.13.5 (x86_64-unknown-linux-gnu)",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784067790,
+      "date": 1794784067790,
+      "type": "stdout",
+      "text": "Using Python 3.12 from .python-version",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784067270,
+      "date": 1794784067270,
+      "type": "stderr",
+      "text": "Vercel CLI 65.14.0",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784067259,
+      "date": 1794784067259,
+      "type": "stdout",
+      "text": "Running \"vercel build\"",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784065740,
+      "date": 1794784065740,
+      "type": "stdout",
+      "text": "Restored build cache from previous deployment (4c32d5nAxmgZRSeFVVNBAqEKWQDY)",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784065660,
+      "date": 1794784065660,
+      "type": "stdout",
+      "text": "  /.git/hooks/pre-commit.sample",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784065660,
+      "date": 1794784065660,
+      "type": "stdout",
+      "text": "  /.git/hooks/pre-applypatch.sample",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784065660,
+      "date": 1794784065660,
+      "type": "stdout",
+      "text": "  /.git/hooks/post-update.sample",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784065660,
+      "date": 1794784065660,
+      "type": "stdout",
+      "text": "  /.git/hooks/fsmonitor-watchman.sample",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784065660,
+      "date": 1794784065660,
+      "type": "stdout",
+      "text": "  /.git/hooks/commit-msg.sample",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784065660,
+      "date": 1794784065660,
+      "type": "stdout",
+      "text": "  /.git/hooks/applypatch-msg.sample",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784065660,
+      "date": 1794784065660,
+      "type": "stdout",
+      "text": "  /.git/HEAD",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784065660,
+      "date": 1794784065660,
+      "type": "stdout",
+      "text": "  /.git/FETCH_HEAD",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784065660,
+      "date": 1794784065660,
+      "type": "stdout",
+      "text": "  /.git/description",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784065660,
+      "date": 1794784065660,
+      "type": "stdout",
+      "text": "  /.git/config",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784065660,
+      "date": 1794784065660,
+      "type": "stdout",
+      "text": "Removed 5002 ignored files defined in .vercelignore",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784065324,
+      "date": 1794784065324,
+      "type": "stdout",
+      "text": "Found .vercelignore",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784065144,
+      "date": 1794784065144,
+      "type": "stdout",
+      "text": "Cloning completed: 11.386s",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784053758,
+      "date": 1794784053758,
+      "type": "stdout",
+      "text": "Cloning github.com/romanwilliammorse/OpenSTREAM_pyversion (Branch: main, Commit: d1f9a95)",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784053639,
+      "date": 1794784053639,
+      "type": "stdout",
+      "text": "Build machine configuration: 2 cores, 8 GB",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1794784053639,
+      "date": 1794784053639,
+      "type": "stdout",
+      "text": "Running build in Washington, D.C., USA (East) – iad1",
+      "info": {
+        "type": "build",
+        "name": "bld_6l6vilwtn",
+        "entrypoint": "."
+      }
+    }
+  ]
+}

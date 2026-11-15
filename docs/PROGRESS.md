@@ -12,8 +12,14 @@ Secrets are deployment environment variables, never repository files. Following
 the user's OAuth approval and completed GitHub verification, the existing Vercel
 project is now connected to `romanwilliammorse/OpenSTREAM_pyversion`. The
 connection screenshot is `outputs/verification/hosted-release/github-connected.png`.
-The first push-triggered Git build and post-deployment checks are in progress;
-the prior tested production deployment remains the reference until they pass.
+Push `d1f9a952f10425ff48e10b6be223d98a716f8349` automatically produced READY
+production deployment `dpl_DidsAEJiQiqA8rMpiUJkWf7PoPMh`, serving the same domain.
+Build logs confirm Python 3.12, requirements.txt and .vercelignore exclusions.
+The fresh hosted Mixture run `e87d7872a48c4de3bdbd48e6baa36efb` passed native
+convergence, unchanged archive comparisons, plot-data delivery, downloads and
+authentication checks. All five previous terminal states and four baseline
+ZIP files survived redeployment with identical hashes. Evidence is retained in
+`outputs/verification/hosted-git/`; source/closure/default changes remain absent.
 
 The separate `openstream.cloud` adapter retains the native GUI/solver worker,
 uses isolated Linux Sandbox jobs and durable private result manifests, and

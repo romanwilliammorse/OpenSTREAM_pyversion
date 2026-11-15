@@ -89,9 +89,10 @@ GitHub API HTTP 429 and the provider's `git_info_fail` prevented the repository
 deployment route. The fallback uses an explicit allowlist of exact committed
 source bytes, per-file SHA-1/SHA-256 and sizes, and retained licenses. Secrets,
 untracked outputs, caches and the local `pyproject.toml` are excluded. No file
-upload is accepted as proof that the application works. The GitHub deployment
-connection remains unconnected pending account authorization; automatic
-redeployment from GitHub is not established by this manual source-file release.
+upload is accepted as proof that the application works. At this initial manual
+release, the GitHub deployment connection was still awaiting account
+authorization. The later Git integration and automatic deployment are recorded
+separately below; they do not replace the initial deployment evidence.
 
 The deployed builder rejected a requirements include referring to the `.lock`
 file. Root `requirements.txt` was flattened to the identical pinned dependency
@@ -166,6 +167,45 @@ subsequent anonymous API access returned HTTP 401. Per-case verification files
 retain download sizes and SHA-256 values. Authentication payloads and tokens
 were not recorded.
 
+## Git integration and post-redeployment checks
+
+After the user completed GitHub authorization, the existing Vercel project was
+connected to `romanwilliammorse/OpenSTREAM_pyversion`; the
+[retained settings screenshot](../outputs/verification/hosted-release/github-connected.png)
+shows that repository as connected. A push of commit
+`d1f9a952f10425ff48e10b6be223d98a716f8349` to `main` automatically created
+production deployment `dpl_DidsAEJiQiqA8rMpiUJkWf7PoPMh`. The
+[provider receipt](../outputs/verification/hosted-git/deployment.json) records
+`source=git`, `READY`, the matching commit, and the
+`openstream-py.vercel.app` production alias. This establishes the observed
+push-to-production route, without assuming future builds will always succeed.
+
+The [durability receipt](../outputs/verification/hosted-git/history-durability.json)
+checks the four earlier completed baseline runs and the earlier cancelled run
+after that redeployment. All five retain their terminal states. The four
+downloaded result ZIPs retain their original sizes and SHA-256 values; those
+receipt hashes and sizes were also independently checked against the retained
+original files (3,357,926 bytes total). This is scoped persistence evidence
+across one actual application redeployment. It does not test recovery of an
+in-flight calculation, every historical file, or a storage disaster.
+
+A [fresh Mixture HTTP verification](../outputs/verification/hosted-git/20261115T230830Z-a26dcfdb/summary.json)
+then completed on the Git-deployed application. Run
+`e87d7872a48c4de3bdbd48e6baa36efb` reached `completed`, native convergence and
+passed scoped physical checks. The independent comparison of its downloaded
+outputs passed at `rtol=1e-8`, `atol=0`, with largest relative difference
+`2.868669390003958e-13`. Its plot data, authenticated downloads, login/CSRF
+checks and logout checks also passed; the driver finished at 23:09:16 UTC.
+The [source-check receipt](../outputs/verification/hosted-git/source-check.json)
+confirms that all 25 worker-reported module hashes match the deployed Git
+commit, the runtime source paths are unchanged from `ae7da5b`, and the worker
+Python/package versions match the earlier release. No governing equation,
+closure model or numerical tolerance changed for this Git integration.
+This follow-up reran Mixture only. The earlier four-framework campaign remains
+the evidence for the other three calculations; their preserved ZIPs establish
+retrieval after redeployment, not fresh solves. The 798-test full local suite
+was not rerun for this integration-only follow-up.
+
 ## Acceptance impact and remaining work
 
 Only interface evidence rows API-012, API-014 and API-016 are extended.
@@ -182,9 +222,8 @@ statuses, and a mass-flow chart labeled in kg/s. This confirms one desktop
 view; it does not establish every plot/control or mobile layout. The
 [browser-verification receipt](../outputs/verification/hosted-release/browser-verification.json)
 records the screenshot hash, observed controls, reviewer/operator distinction
-and the limits of this viewport. A fresh
-deployment-restart durability exercise and automatic GitHub deployment remain
-outside this evidence. Native convergence, archived
+and the limits of this viewport. The later Git deployment and scoped
+post-redeployment durability checks are recorded above. Native convergence, archived
 agreement and physical-review statuses remain independent. Infrastructure
 deadlines, failed setup and failed publication remain explicit failures.
 Full MATLAB parity and experimental validation still require the outstanding

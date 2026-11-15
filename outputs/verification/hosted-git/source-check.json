@@ -1,0 +1,169 @@
+{
+  "schema": "openstream-git-source-check-v1",
+  "passed": true,
+  "deployment_commit": "d1f9a952f10425ff48e10b6be223d98a716f8349",
+  "run_id": "e87d7872a48c4de3bdbd48e6baa36efb",
+  "runtime_paths_changed_since_four_baseline_release": [],
+  "native_source_checks": [
+    {
+      "file": "src/openstream/__init__.py",
+      "expected": "3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b",
+      "observed": "3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/__main__.py",
+      "expected": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "observed": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/annular.py",
+      "expected": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+      "observed": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/cli.py",
+      "expected": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+      "observed": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/database.py",
+      "expected": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
+      "observed": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/experimental_comparison.py",
+      "expected": "03c12bcfe1e8de115092d0ea1a19e21ec177c5983c575b63183a67453b3fd1f4",
+      "observed": "03c12bcfe1e8de115092d0ea1a19e21ec177c5983c575b63183a67453b3fd1f4",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/ff_fields.py",
+      "expected": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+      "observed": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/fields.py",
+      "expected": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+      "observed": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/fourfield.py",
+      "expected": "5dafef4ee0d26f71e9e9083a61304b6d06f36e5a852f6981f0092269064692c8",
+      "observed": "5dafef4ee0d26f71e9e9083a61304b6d06f36e5a852f6981f0092269064692c8",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/gui.py",
+      "expected": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
+      "observed": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/gui_launcher.py",
+      "expected": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+      "observed": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/gui_lock.py",
+      "expected": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+      "observed": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/gui_reference.py",
+      "expected": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+      "observed": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/gui_schema.py",
+      "expected": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+      "observed": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/gui_worker.py",
+      "expected": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
+      "observed": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/inputs.py",
+      "expected": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+      "observed": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/multifield_output.py",
+      "expected": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+      "observed": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/numerics.py",
+      "expected": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+      "observed": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/output.py",
+      "expected": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+      "observed": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/plotting.py",
+      "expected": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+      "observed": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/properties.py",
+      "expected": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+      "observed": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/solver.py",
+      "expected": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+      "observed": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/tf_fields.py",
+      "expected": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+      "observed": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/threefield.py",
+      "expected": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+      "observed": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+      "passed": true
+    },
+    {
+      "file": "src/openstream/twofluid.py",
+      "expected": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c",
+      "observed": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c",
+      "passed": true
+    }
+  ],
+  "versions": {
+    "openstream-python": "0.2.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "CoolProp": "8.0.0",
+    "matplotlib": "3.11.2"
+  },
+  "python": "3.12.16",
+  "platform": "Linux-6.18.56-x86_64-with-glibc2.43",
+  "archived_max_relative_error": 2.868669390003958e-13
+}
