@@ -190,13 +190,13 @@ class CloudRunManager:
             return value
         return None
 
-    def _failure_record(self, manifest):
+    def _failure_record(self, manifest, *, force=False):
         run_id = manifest["id"]
         cached = self._cached(self._failures, run_id)
         if cached is not None:
             return cached
         previous = self._cached(self._failure_probes, run_id)
-        if previous is not None and time.monotonic() - previous < self.terminal_probe_seconds:
+        if not force and previous is not None and time.monotonic() - previous < self.terminal_probe_seconds:
             return None
         rows = self.store.list(f"jobs/{run_id}/publication-failures/")
         self._cache(self._failure_probes, run_id, time.monotonic())
@@ -328,7 +328,16 @@ class CloudRunManager:
                         raise
                     running = False  # Session stopped during the file read.
         except Exception:
-            # A provider/network outage is not evidence that the solver stopped.
+            # A finished worker may stop between the metadata and file reads.
+            # Durable, validated evidence remains authoritative even when the
+            # Sandbox API is unavailable. Bypass negative probe caches here.
+            try:
+                terminal = self._terminal(manifest, force=True) or self._failure_record(manifest, force=True)
+            except Exception:
+                terminal = None  # Never serve unverified or unavailable evidence.
+            if terminal is not None:
+                return self._public(terminal['status'], artifacts=terminal['artifacts'])
+            # An outage alone does not prove that the solver stopped or failed.
             raise RuntimeError("Cloud worker status is temporarily unavailable; job state has not been changed.") from None
         for state in (local, cloud):
             if state is not None and (not isinstance(state, dict) or state.get("id") != run_id

@@ -6,6 +6,7 @@ import importlib.util
 import io
 import json
 from pathlib import Path
+import tomllib
 from types import SimpleNamespace
 import zipfile
 
@@ -19,9 +20,10 @@ DIRECTORY = "/vercel/sandbox/jobs/" + RUN_ID
 RUNTIME = {"sandbox_name": "openstream-" + RUN_ID, "session_id": "session-1"}
 
 
-def api_error(status):
+def api_error(status, code=None):
     from vercel.sandbox.sync import SandboxApiError
-    return SandboxApiError(SimpleNamespace(status_code=status), "private provider detail")
+    return SandboxApiError(SimpleNamespace(status_code=status), "private provider detail",
+                           data={"error": {"code": code}} if code else None)
 
 
 class Files:
@@ -95,7 +97,19 @@ def test_source_bundle_preserves_exact_numerical_bytes_and_excludes_assets():
         assert len(names) == len(set(names))
         assert any(name.endswith(".npz") for name in names)
         assert "openstream/__init__.py" in names
+        assert archive.read("LICENSE") == (gateway.ROOT / "LICENSE").read_bytes()
+        metadata_bytes = gateway.PACKAGE.joinpath("cloud/worker-project.toml").read_bytes()
+        assert archive.read("pyproject.toml") == metadata_bytes
+        metadata = tomllib.loads(metadata_bytes.decode())
+        project = tomllib.loads((gateway.ROOT / "pyproject.toml").read_text())["project"]
+        assert metadata["project"]["name"] == project["name"]
+        assert metadata["project"]["dependencies"] == project["dependencies"]
+        assert metadata["project"]["requires-python"] == project["requires-python"]
+        assert metadata["project"]["dynamic"] == ["version"]
+        assert metadata["tool"]["setuptools"]["dynamic"]["version"]["attr"] == "openstream.__version__"
         for name in names:
+            if name in {"pyproject.toml", "LICENSE"}:
+                continue
             relative = Path(name).relative_to("openstream")
             assert not {"__pycache__", "gui_static", "static"}.intersection(relative.parts)
             assert relative.suffix in {".py", ".npz", ".json", ".inp"}
@@ -179,7 +193,7 @@ def test_get_is_passive_and_404_means_absence(monkeypatch):
         handle.request_cancel(DIRECTORY)
 
 
-@pytest.mark.parametrize("status", [401, 410, 429, 503])
+@pytest.mark.parametrize("status", [401, 429, 503])
 def test_get_other_provider_failure_is_sanitized_not_absence(monkeypatch, status):
     import vercel.sandbox.sync as sdk
     calls = []
@@ -191,6 +205,29 @@ def test_get_other_provider_failure_is_sanitized_not_absence(monkeypatch, status
         gateway.SandboxGateway().get(RUNTIME)
     assert "private provider detail" not in str(caught.value)
     assert caught.value.__suppress_context__ is True and len(calls) == 1
+
+
+@pytest.mark.parametrize("status,code", [(410, None), (410, "sandbox_stopped"), (409, "sandbox_stopped")])
+def test_get_explicit_stopped_lifecycle_is_passive(monkeypatch, status, code):
+    import vercel.sandbox.sync as sdk
+    calls = []
+    def stopped(**kwargs):
+        calls.append(kwargs)
+        raise api_error(status, code)
+    monkeypatch.setattr(sdk, "get_sandbox", stopped)
+    handle = gateway.SandboxGateway().get(RUNTIME)
+    assert not handle.is_running() and handle.session is None
+    handle.stop()
+    assert calls == [{"name": RUNTIME["sandbox_name"]}]
+
+
+def test_get_closed_stream_410_does_not_establish_stopped(monkeypatch):
+    import vercel.sandbox.sync as sdk
+    def closed(**kwargs):
+        raise api_error(410, "sandbox_stream_closed")
+    monkeypatch.setattr(sdk, "get_sandbox", closed)
+    with pytest.raises(RuntimeError, match="temporarily unavailable"):
+        gateway.SandboxGateway().get(RUNTIME)
 
 
 def test_exact_session_files_launch_cancel_and_stop(monkeypatch):

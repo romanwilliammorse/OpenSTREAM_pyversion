@@ -34,6 +34,10 @@ try:
         archive.extractall(root/'source')
     os.environ['PYTHONPATH']=str(root/'source')
     executable=str(root/'venv/bin/python')
+    with (directory/'bootstrap.log').open('a') as log:
+        subprocess.run(['uv','pip','install','--python',executable,'--no-deps',
+                        '--no-build-isolation','--editable',str(root/'source')],
+                       stdout=log,stderr=subprocess.STDOUT,check=True)
     os.execv(executable,[executable,'-m','openstream.cloud.worker',str(directory),directory.name])
 except Exception:
     state=json.loads((directory/'status.json').read_text())
@@ -47,6 +51,8 @@ def source_bundle():
     """Ship the deployed package, including references, without mutable outputs."""
     stream = io.BytesIO()
     with zipfile.ZipFile(stream, 'w', zipfile.ZIP_DEFLATED) as archive:
+        archive.writestr('pyproject.toml', Path(__file__).with_name('worker-project.toml').read_bytes())
+        archive.writestr('LICENSE', (ROOT/'LICENSE').read_bytes())
         for path in sorted(PACKAGE.rglob('*')):
             relative = path.relative_to(PACKAGE)
             if not path.is_file() or '__pycache__' in relative.parts:
@@ -166,10 +172,14 @@ class SandboxGateway:
         try:
             sandbox = get_sandbox(name=runtime['sandbox_name'])  # Passive metadata lookup.
         except SandboxApiError as error:
-            if error.status_code != 404:
+            # Mirror SDK 0.10.0 lifecycle classification without its recovery:
+            # a closed command stream does not establish a stopped sandbox.
+            stopped = (error.code != 'sandbox_stream_closed'
+                       and (error.status_code == 410 or error.code == 'sandbox_stopped'))
+            if error.status_code != 404 and not stopped:
                 raise RuntimeError('Cloud worker status is temporarily unavailable') from None
-            # Only a positive provider 404 establishes absence. Never resume a
-            # removed worker, or mislabel a network failure as a stopped job.
+            # Only explicit absence/lifecycle evidence establishes inactivity.
+            # Never resume a worker or mistake an outage for a stopped job.
             from types import SimpleNamespace
             sandbox = SimpleNamespace(status='stopped', current_session_id=None)
         return SandboxHandle(sandbox, runtime)

@@ -26,7 +26,7 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 openstream = ["data/*.inp", "data/*.json", "data/gui_baselines/**/*", "gui_static/*"]
-"openstream.cloud" = ["static/*"]
+"openstream.cloud" = ["static/*", "worker-project.toml"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -212,6 +212,71 @@ def test_provider_outage_does_not_become_false_numerical_failure(setup):
     assert gateway.handles[state["id"]].running
 
 
+@pytest.mark.parametrize("failure_point", ["get", "status_files"])
+@pytest.mark.parametrize("terminal_status", ["completed", "failed", "cancelled", "publication-failure"])
+def test_provider_outage_recovers_verified_durable_result_without_restarting(
+        setup, monkeypatch, failure_point, terminal_status):
+    manager, store, gateway, provider = setup
+    run_id = manager.start(baseline())["id"]
+    manifest = manager._manifest(run_id)
+    # Existing negative inventory observations must not hide a new terminal.
+    assert manager._terminal(manifest) is None
+    assert manager._failure_record(manifest) is None
+    if terminal_status == "publication-failure":
+        manager._record_failure(manifest, manifest["public_initial_state"],
+            phase="Publication failed", message="Retained test failure")
+        manager._failures.clear()
+        expected = "failed"
+    else:
+        publish(setup, run_id, terminal_status)
+        expected = terminal_status
+    if failure_point == "get":
+        gateway.failure = "get"
+    else:
+        def unavailable(directory):
+            raise RuntimeError("test lifecycle race")
+        monkeypatch.setattr(gateway.handles[run_id], "status_files", unavailable)
+    provider.calls.clear()
+    recovered = manager.status(run_id)
+    assert recovered["status"] == expected
+    assert ".private.blob." not in json.dumps(recovered)
+    assert all(row["url"].startswith("/files/") for row in recovered["files"])
+    assert gateway.creates == 1 and gateway.handles[run_id].launches == 1
+    assert gateway.handles[run_id].stops == 0
+    assert not any(call[0] == "put" for call in provider.calls)
+    # A genuinely cold request must recover the same result, too.
+    cold = CloudRunManager(store, gateway, source=manager.source, environment=manager.environment)
+    assert cold.status(run_id)["status"] == expected
+
+
+def test_provider_outage_does_not_serve_invalid_terminal(setup):
+    manager, store, gateway, provider = setup
+    run_id = manager.start(baseline())["id"]
+    terminal = publish(setup, run_id)
+    terminal["runtime"] = {"different": "session"}
+    row = store.list(f"jobs/{run_id}/terminal/")[0]
+    provider.objects[store.prefix + row["key"]] = json.dumps(terminal).encode()
+    gateway.failure = "get"
+    with pytest.raises(RuntimeError, match="temporarily unavailable"):
+        manager.status(run_id)
+    assert not store.list(f"jobs/{run_id}/publication-failures/")
+    assert gateway.handles[run_id].stops == 0
+
+
+def test_combined_provider_and_inventory_outage_preserves_job_state(setup, monkeypatch):
+    manager, store, gateway, provider = setup
+    run_id = manager.start(baseline())["id"]
+    gateway.failure = "get"
+    def unavailable(prefix=""):
+        raise CloudStoreError("test inventory unavailable")
+    monkeypatch.setattr(store, "list", unavailable)
+    provider.calls.clear()
+    with pytest.raises(RuntimeError, match="temporarily unavailable"):
+        manager.status(run_id)
+    assert gateway.handles[run_id].running and gateway.handles[run_id].stops == 0
+    assert not any(call[0] == "put" for call in provider.calls)
+
+
 def test_cancel_is_request_only_until_worker_acknowledgement(setup):
     manager, _, gateway, _ = setup
     state = manager.start(baseline())

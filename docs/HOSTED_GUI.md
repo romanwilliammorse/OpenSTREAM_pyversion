@@ -20,7 +20,9 @@ Each calculation runs once in an isolated Vercel Sandbox with no public ports,
 two vCPUs and a 40-minute wall-clock allowance including setup and publication.
 Python 3.12.16 and `requirements-cloud.lock` are installed in that worker.
 The exact deployed source bundle is transferred; top-level Python module hashes
-are verified before and after execution. `openstream.gui_worker` performs the
+are verified before and after execution. A small worker packaging manifest
+installs that source as an editable `openstream-python` distribution, preserving
+the version metadata required by the native output writer. `openstream.gui_worker` performs the
 calculation unchanged. No solver, closure, equation, tolerance or application
 default is changed by the hosting adapter.
 
