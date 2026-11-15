@@ -1,0 +1,206 @@
+{
+  "scope": "GUI packaging repair only; numerical input files, arrays and reports unchanged",
+  "initial_failure": "InputSet.to_dict encodes CBTMULT as <Python callable>; GUI requires scalar. Frozen pilot uses upstream constant one.",
+  "corrected_runs": [
+    {
+      "run_id": "entry-01-hem-n100-base",
+      "original_sha256": "3c452bc13095280ca3a8bbd427e69250b5922703060c8e14db5b4dcfd2c9f577",
+      "corrected_sha256": "29f728e06b86a3f1241b99b3dd98826e30e93481639b24dc1da29e772f2f6f6b"
+    },
+    {
+      "run_id": "entry-01-hem-n200-base",
+      "original_sha256": "6d5c5ffbf4cc829ecbc109da620e2a08b76127aeb49f788643f93d1f171fa750",
+      "corrected_sha256": "d8be671d1d310cab518361abf7ce1e109fb799ac9c7ec27fc203dc8506928376"
+    },
+    {
+      "run_id": "entry-01-hem-n200-pseudo",
+      "original_sha256": "8b0f6704e85f5b2a2e6519579bdb26c62082ab43da43dcf8012fb7d9f29118d3",
+      "corrected_sha256": "835c7b9d01defee206a25d95c509eab24b38763625347fe5adf99b8488b1235a"
+    },
+    {
+      "run_id": "entry-01-hem-n200-tight",
+      "original_sha256": "79d55e5d5d5a3a6943400b8f66e54cdbcf5325315f7eed7a8dda438489cb3d6c",
+      "corrected_sha256": "06b7f2fd4ab47795af6314b50148cacb4ace41c4e05eb8023fa38fcc42f203de"
+    },
+    {
+      "run_id": "entry-01-hem-n400-base",
+      "original_sha256": "ec16a03e6d69a3ae7cc2f79efdc6d87fd94b6c073ddcf7f86450d34cff133ef6",
+      "corrected_sha256": "d0eaa7f2419602d331e83e28949d2f7ec3540aa2a78e8933b4f08cac28f0ca8b"
+    },
+    {
+      "run_id": "entry-01-saha_zuber_bestion-n100-base",
+      "original_sha256": "c5db5fa7a38ffc9313064af99e8a3a0f1da9bc820b3417c1a351938bb0a31231",
+      "corrected_sha256": "34b2d49f3b822176f69d10ab914c186f756feaffbb69ab721d3f4b514185ed2f"
+    },
+    {
+      "run_id": "entry-01-saha_zuber_bestion-n200-base",
+      "original_sha256": "aa51cccc662754d861b52df18f4716b1b0dc2534b8ce806b0a47f6d6eb5eee72",
+      "corrected_sha256": "3bcecde6787a7d70c93767d6d2508e21f8ed29a0e606d3038294c7d15ffe3e8a"
+    },
+    {
+      "run_id": "entry-01-saha_zuber_bestion-n200-pseudo",
+      "original_sha256": "acb6318aca98268986fb29d0910aef782362de47149ba847b2c059901dc7994d",
+      "corrected_sha256": "ec86e03ef6683bf3f24711e9fb7cd2456e093965f6eb0bad1e170d500328b749"
+    },
+    {
+      "run_id": "entry-01-saha_zuber_bestion-n200-tight",
+      "original_sha256": "9df849d65689b54c79a2586953ada39742a8ed5373706134b552eda987c6db71",
+      "corrected_sha256": "f5b61c7aaf8e06ba244f05975124de773de6fb385718b05e13be2ec141d5265b"
+    },
+    {
+      "run_id": "entry-01-saha_zuber_bestion-n400-base",
+      "original_sha256": "0ba6dfbdbc8599f182f90b3e8861f775f1981d081f6e4d26ec132d7cef995e15",
+      "corrected_sha256": "f681dbb96e53a58313f0df086347d792b789e1ff2f53afd4bdb0a697bb309cff"
+    },
+    {
+      "run_id": "entry-22-hem-n100-base",
+      "original_sha256": "4a87249210bcfa091505ba791d3b34eed49c9fd42d2fb35c951b501fdd6063f6",
+      "corrected_sha256": "7304e58f8a40507aab8e3c59d7f85ace86f10e3c431020bca197fc731eacb064"
+    },
+    {
+      "run_id": "entry-22-hem-n200-base",
+      "original_sha256": "3c46eb6f5f1b61273fd35e0f8175f7f1ca717fc1809b488e287d78037107e446",
+      "corrected_sha256": "0e6179e10af052096443c22d8b4fbc34fbe5f8d36345f84b24c8a46b75425630"
+    },
+    {
+      "run_id": "entry-22-hem-n200-pseudo",
+      "original_sha256": "c65f13fdf756aa5dcd1ee31b93c9132cce2e5b918b6f2a6cf4eee2bb7fd2cc15",
+      "corrected_sha256": "e8bed251373463092c616e492694de0d0aec8a4115a558985128683e58d4cbaf"
+    },
+    {
+      "run_id": "entry-22-hem-n200-tight",
+      "original_sha256": "1884b81614ecff7a53fa80c6b33dd5fa43325d4f4b0967c695b47c1c728b8600",
+      "corrected_sha256": "a3664284f37eb234d4b7d7654c28b5de3d0da89bfead57f412c2cdb70d3a45cb"
+    },
+    {
+      "run_id": "entry-22-hem-n400-base",
+      "original_sha256": "c1b632ace803f839669c693613e18274878d3c2a57d50c5fa5f0c0aa3f7c5de8",
+      "corrected_sha256": "5ed5ac4c6bb5cff14c79fde9a8bb73122a6c5346d4f2017cac937d1f35f7987d"
+    },
+    {
+      "run_id": "entry-22-saha_zuber_bestion-n100-base",
+      "original_sha256": "4d27d824343d8d2d5b35df77cf1cfa3c51b52500d0426a17669e28bac10b258f",
+      "corrected_sha256": "01cce7f33f78ccc707b5f7e6edcb18e4802b12528678081d6ca59c1e4918048c"
+    },
+    {
+      "run_id": "entry-22-saha_zuber_bestion-n200-base",
+      "original_sha256": "66e2da8264ac2ddfa62d9152920a998bf118a7b1cb5bb7d76aa92a254a383e6e",
+      "corrected_sha256": "c10415b41c755bb2240f6897f01c9cdb742641c35057ea308e821a46da0789b8"
+    },
+    {
+      "run_id": "entry-22-saha_zuber_bestion-n200-pseudo",
+      "original_sha256": "5a377ce6bae576112ac7236ed3398d9b9fec9d190958df33bf7f179c4f7e8528",
+      "corrected_sha256": "a964f17808fd276632409ff7538afdc16886a649b27f63bdaea553329aa81e2e"
+    },
+    {
+      "run_id": "entry-22-saha_zuber_bestion-n200-tight",
+      "original_sha256": "97fbe9ab011c478cd38b09eb0f0a615e731b50434ba3e4670b2f0c97dc670a82",
+      "corrected_sha256": "cf8b2e3b905e292321150f9d0d7a1a893db46f8422e14ac8d6e122650766754b"
+    },
+    {
+      "run_id": "entry-22-saha_zuber_bestion-n400-base",
+      "original_sha256": "8cba390c7ae94d1c73340c1fe91b0a65c663c99f888ab3ae64e4603e25cf8422",
+      "corrected_sha256": "223e00e6b85c189e0ff4210a6c106e2d73673a4d7e15a8d8ab8be78cf7169a53"
+    },
+    {
+      "run_id": "entry-29-hem-n100-base",
+      "original_sha256": "9a4e84976935901bd4ae8d8c0fce61263b62081dd7aa95094e114629ccb3d1d3",
+      "corrected_sha256": "710f3b2e0ae7d2038218910cf7c2a2645098dfde4d56ad412617d43aa16961ad"
+    },
+    {
+      "run_id": "entry-29-hem-n200-base",
+      "original_sha256": "ac4941e6c94a428c395ba29c30703119ce570a7f3472ce0447727bc5b7b2411e",
+      "corrected_sha256": "cf72a47936f495c3240a9d544ea1ea46d73294f3c5ebd1093c14db69f3128789"
+    },
+    {
+      "run_id": "entry-29-hem-n200-pseudo",
+      "original_sha256": "bcf4df7f766d2568a91f65f20f807267b39ec167446fd106efbe13bad37fa084",
+      "corrected_sha256": "331bbcb378df89ffdae4f3ac8265280d46cc24120ad9447cf0e687e514a16b36"
+    },
+    {
+      "run_id": "entry-29-hem-n200-tight",
+      "original_sha256": "2ed8a61480b66b340eab50b8d21ea5288ba20062aae72d2bb0cf76ad9dd8a26d",
+      "corrected_sha256": "b4e4d6c1091e5ae55ece40fb1e8b61c1afa975a7bc60226cabc3642dca17741f"
+    },
+    {
+      "run_id": "entry-29-hem-n400-base",
+      "original_sha256": "12f4796ef400f1fcd129b4e6c6e3da801504729e635edb66d9ad2a3dc06183a7",
+      "corrected_sha256": "f23c329260d51abde45acf6d23cd8e49093f91911d1ef8cdcd4b9fcee4409f72"
+    },
+    {
+      "run_id": "entry-29-saha_zuber_bestion-n100-base",
+      "original_sha256": "f7e13ed4facf12fafe6b7be5d49a62bd2ee9d993cd800d39a819f1e188936d62",
+      "corrected_sha256": "75698b00c522943c9ffc772df03fbe70932766615fdd2fc02df949e9d488e605"
+    },
+    {
+      "run_id": "entry-29-saha_zuber_bestion-n200-base",
+      "original_sha256": "cdf49793fceea6a5d885fcd866e08daeac048b338cd8cb8d2d6667368b5daee9",
+      "corrected_sha256": "11e710ec5da28931a811edd44774f8e395ff6d095ebe9db762540496364f375e"
+    },
+    {
+      "run_id": "entry-29-saha_zuber_bestion-n200-pseudo",
+      "original_sha256": "d8236eb753400f215283a520172b4a71337c487422a3db7657d7d38b10d8816b",
+      "corrected_sha256": "f33cce353775eeacff1be24f7bc33124a4b0d0501f738e1c6281e02146ff5e7d"
+    },
+    {
+      "run_id": "entry-29-saha_zuber_bestion-n200-tight",
+      "original_sha256": "4a16ce704324b883cae54f9f74e1f437b63965d8b369435b9bf53616093c0814",
+      "corrected_sha256": "d56959e7b31c4e91f487b1be1471db070047a33717b1e20b2bdb52ad2cc40c78"
+    },
+    {
+      "run_id": "entry-29-saha_zuber_bestion-n400-base",
+      "original_sha256": "fae68080edfbec62bbba7bc4db93936d17120fab8de15348ae3334749ca31b70",
+      "corrected_sha256": "b4a67381b103c00e523a31e68f9f17885dc82db6fafe649f871c6a7b1665e26c"
+    },
+    {
+      "run_id": "entry-31-hem-n100-base",
+      "original_sha256": "10edecc1baae93a68b028fd71eafa2d04b47821096708195a3c3e9c79a931aaf",
+      "corrected_sha256": "fecd5b26f3aaf01199f1b954ee8a417e370e26f4d17cc216d4acfcb497eecde7"
+    },
+    {
+      "run_id": "entry-31-hem-n200-base",
+      "original_sha256": "6c55702f6ed2a6534a2f02077933b7f90e88f90fe67e42bd89e5d4d034a4e33b",
+      "corrected_sha256": "3b7a8dcd1e73f35500382de7ff4554c3a9d32cb9f3e61148f30da380b5286d7c"
+    },
+    {
+      "run_id": "entry-31-hem-n200-pseudo",
+      "original_sha256": "7c52ed0c7615d6bcb5d75cca0cfb280c46e8b0f294433dfd859c80a56a30797c",
+      "corrected_sha256": "a15e9ec57b31de020fef01d6db99eb15bba1f059013d2c5ca4e8970d8943a9b4"
+    },
+    {
+      "run_id": "entry-31-hem-n200-tight",
+      "original_sha256": "b8495c49b4cc4fa4f4a285332f90c9d240469bfd65505777846e77f995aaf9f6",
+      "corrected_sha256": "36e4b091c1b320a242b02391e106ff653f0485d335b00efa90382a9782a02feb"
+    },
+    {
+      "run_id": "entry-31-hem-n400-base",
+      "original_sha256": "8960434e5b727d09f240e1fc8a04161e676ed526292fd1bee9258b63caff7102",
+      "corrected_sha256": "ee8b21ef78e90b51234258992a4d36d88b5dabe029fc6d7c9c749ab3049fb0b0"
+    },
+    {
+      "run_id": "entry-31-saha_zuber_bestion-n100-base",
+      "original_sha256": "eb1f0a5113c87a47851523d2f60cffb5090acaee50d650c571ede35d4c1889cb",
+      "corrected_sha256": "caf083a5a09e2d875621ea9ba08a45c70e9714868e1861ebcdb9cc9a77efeb7b"
+    },
+    {
+      "run_id": "entry-31-saha_zuber_bestion-n200-base",
+      "original_sha256": "7a1937ebb6a65a7a8eadda9ac488787579a89f251b1581cc81a10317b5f762f8",
+      "corrected_sha256": "2dea056a9ae8378eb0b39cafd19f77a5dc773d9bed82c0a419beb3d91e8d67f8"
+    },
+    {
+      "run_id": "entry-31-saha_zuber_bestion-n200-pseudo",
+      "original_sha256": "7846f1cb066cf3b7e70f9ae74a3869af06eb82c89f52338c295214568d59793c",
+      "corrected_sha256": "3ab3e92683e11c0b0d686977fd8815f5ed83bfb7d94264c972a86f3ea318db14"
+    },
+    {
+      "run_id": "entry-31-saha_zuber_bestion-n200-tight",
+      "original_sha256": "1994a2a96de53df8ac852d97be8c7d9939173bf6962d158d243fcdcafcceb456",
+      "corrected_sha256": "e212d62e468ec037073355221139d4429e92add20e7ddc401faeede30a1511d7"
+    },
+    {
+      "run_id": "entry-31-saha_zuber_bestion-n400-base",
+      "original_sha256": "1e5738df37b38a687d535dd1c1ea5204b15888a7390d56188ec9fcdb6a74d8dd",
+      "corrected_sha256": "d6a1f399a304ce2e62e21b82164c441325af0124371520903885a96c2a454009"
+    }
+  ]
+}

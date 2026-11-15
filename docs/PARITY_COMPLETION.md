@@ -100,9 +100,13 @@ The repository states that it has no automated test suite.
 | [Bennett1967](https://github.com/OpenSTREAM-solvers/openstream-database/tree/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/%2BBennett1967) | Post-CHF wall temperature and onset/dryout; separate thermal-nonequilibrium and annular-dryout assessments. | OCR/transcription from AERE-R-5373; temperatures K, inlet subcooling J/kg. Missing onset elevation is not zero. Supplying measured onset as an input can assess downstream wall temperature, but cannot independently validate prediction of that onset. |
 | [Groeneveld2019](https://github.com/OpenSTREAM-solvers/openstream-database/tree/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/%2BGroeneveld2019) | CHF/critical power and selected film-dryout predictions against NUREG/KM-0011. | Audit derived mass flow, power and inlet enthalpy; port and verify the outer dryout power search separately from the axial solver. Identify calibration/training overlap: data supporting a CHF correlation are not automatically an independent validation set for that correlation. |
 
-Dataset-specific uncertainty statements above are from the repository readmes;
-the original publications have not been independently re-audited in this port.
-Their quantitative uncertainties must be recovered before an uncertainty-based
+The subsequent [Bartolomey pilot](BARTOLOMEY_PILOT.md) implements native input
+mapping for all 34 records and executes four selected records with two fixed
+closures and sensitivity checks. Its three failed mesh criteria remain open.
+NUREG/IA-0025 section 3.1 was independently inspected: the reported absolute
+void-error bound is below 0.04, but the combined uncertainty budget is incomplete.
+Other dataset-specific uncertainty statements above remain based on repository
+readmes; their original publications still need independent review before an uncertainty-based
 acceptance claim. The inspected database dependency checker requires upstream
 OpenSTREAM `~=2026.0`; native-adapter compatibility must be tested by behavior,
 not inferred from the Python package's unrelated version number.

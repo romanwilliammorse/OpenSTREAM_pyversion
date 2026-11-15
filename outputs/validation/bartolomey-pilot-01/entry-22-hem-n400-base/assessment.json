@@ -1,0 +1,271 @@
+{
+  "run_id": "entry-22-hem-n400-base",
+  "entry_id": 22,
+  "test_id": 26,
+  "test_name": "Sabotinov 1976",
+  "model": "hem",
+  "cells": 400,
+  "variant": "base",
+  "execution": "completed",
+  "converged": true,
+  "elapsed_seconds": 17.172777300002053,
+  "comparison": {
+    "coordinate": "Quality",
+    "coordinate_unit": "1",
+    "void_fraction_unit": "1",
+    "error_definition": "predicted minus measured",
+    "comparison_kind": "descriptive",
+    "interpolation": "within-domain linear",
+    "index_base": 0,
+    "points": [
+      {
+        "index": 0,
+        "coordinate": -0.020027,
+        "measured": 0.17361,
+        "predicted": 0.0,
+        "error": -0.17361,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 1,
+        "coordinate": 0.00052117,
+        "measured": 0.24774,
+        "predicted": 0.010757367848908558,
+        "error": -0.23698263215109144,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 2,
+        "coordinate": 0.022224,
+        "measured": 0.3291,
+        "predicted": 0.323032235689944,
+        "error": -0.006067764310056012,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 3,
+        "coordinate": 0.042969,
+        "measured": 0.46648,
+        "predicted": 0.48524509740494237,
+        "error": 0.018765097404942366,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 4,
+        "coordinate": 0.063351,
+        "measured": 0.51952,
+        "predicted": 0.5867821339623865,
+        "error": 0.06726213396238656,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 5,
+        "coordinate": 0.085243,
+        "measured": 0.57136,
+        "predicted": 0.6617610310225003,
+        "error": 0.0904010310225003,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 6,
+        "coordinate": 0.095268,
+        "measured": 0.60029,
+        "predicted": 0.6885547418466921,
+        "error": 0.08826474184669209,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 7,
+        "coordinate": 0.10716,
+        "measured": 0.61838,
+        "predicted": 0.7159021528843145,
+        "error": 0.09752215288431443,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 8,
+        "coordinate": 0.11664,
+        "measured": 0.63888,
+        "predicted": 0.7349084839617744,
+        "error": 0.09602848396177444,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 9,
+        "coordinate": 0.12827,
+        "measured": 0.65275,
+        "predicted": 0.7554643251213415,
+        "error": 0.10271432512134149,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 10,
+        "coordinate": 0.13807,
+        "measured": 0.66903,
+        "predicted": 0.7708127320032064,
+        "error": 0.10178273200320642,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 11,
+        "coordinate": 0.1485,
+        "measured": 0.6823,
+        "predicted": 0.7854819727795684,
+        "error": 0.10318197277956842,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 12,
+        "coordinate": 0.1583,
+        "measured": 0.69858,
+        "predicted": 0.7979269589595785,
+        "error": 0.09934695895957857,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 13,
+        "coordinate": 0.16966,
+        "measured": 0.70764,
+        "predicted": 0.8109631601311916,
+        "error": 0.10332316013119158,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 14,
+        "coordinate": 0.17953,
+        "measured": 0.71428,
+        "predicted": 0.8212414779297544,
+        "error": 0.10696147792975441,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 15,
+        "coordinate": 0.18996,
+        "measured": 0.72634,
+        "predicted": 0.8311847226126083,
+        "error": 0.10484472261260835,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 16,
+        "coordinate": 0.20073,
+        "measured": 0.73298,
+        "predicted": 0.8405839870837181,
+        "error": 0.1076039870837181,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 17,
+        "coordinate": 0.22159,
+        "measured": 0.75771,
+        "predicted": 0.8566687937805698,
+        "error": 0.09895879378056982,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 18,
+        "coordinate": 0.24245,
+        "measured": 0.78305,
+        "predicted": 0.8704591124058488,
+        "error": 0.08740911240584881,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 19,
+        "coordinate": 0.2641,
+        "measured": 0.77826,
+        "predicted": 0.8828347698716934,
+        "error": 0.10457476987169345,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      }
+    ],
+    "summary": {
+      "n_total": 20,
+      "n_compared": 20,
+      "n_excluded": 0,
+      "bias": 0.05811426286502711,
+      "mae": 0.09978030251114185,
+      "rmse": 0.10963398941427033
+    }
+  },
+  "physical": {
+    "passed": true,
+    "checks": {
+      "solver_converged": true,
+      "finite_primary": true,
+      "positive_pressure_density": true,
+      "positive_forward_flow": true,
+      "void_fraction_bounds": true,
+      "vapor_quality_bounds": true,
+      "mass": true,
+      "phase_mass_split": true,
+      "enthalpy": true,
+      "momentum_source_residual": true,
+      "phase_occupied_area": true,
+      "inlet_mass": true,
+      "inlet_enthalpy": true,
+      "inlet_pressure": true,
+      "prescribed_heating": true
+    },
+    "balances": {
+      "prescribed_power_W": 23873.4338,
+      "discrete_wall_power_W": 23873.433800000006,
+      "steady_enthalpy_gain_W": 23873.433762279165,
+      "steady_energy_relative_error": 1.5800341904171369e-09,
+      "steady_mass_max_deviation_kg_s": 7.337036533883179e-11,
+      "discrete_mass_max_residual_kg_s": 1.7323122103452003e-15,
+      "discrete_energy_max_residual_W_per_m": 4.953108145855367e-09,
+      "discrete_momentum_max_residual_Pa": 1.3813728827472005e-08,
+      "pressure_drop_Pa": 7395.86954751052,
+      "outlet_enthalpy_J_kg": 1693777.4883441299,
+      "outlet_void_fraction": 0.8943947498734871,
+      "outlet_vapor_quality": 0.28743330699469805,
+      "minimum_pressure_Pa": 6798604.1304524895,
+      "minimum_density_kg_m3": 110.14546842603232
+    },
+    "phase_area_max_relative_error": 2.220446049250313e-16,
+    "phase_mass_split_max_error_kg_s": 6.938893903907228e-18,
+    "scope": "Steady mass/enthalpy, source discrete momentum, bounds and reconstructed phase area. System-pressure property approximation retained."
+  },
+  "warnings": []
+}

@@ -7,12 +7,12 @@
     "A declared enum or matching method name is not a branch test or numerical reference comparison.",
     "Dependencies apply to acceptance of the relevant subcase. They do not prevent exploratory execution, investigation, or independent work on other cases.",
     "Preserve governing equations and original core tolerances. Diagnose translation errors separately from intentional approximations, source defects and calibration choices.",
-    "No new numerical calculation, MATLAB execution or experimental validation is claimed by this acceptance-matrix audit.",
+    "The initial 2026-11-14 acceptance audit performed no new numerical calculation or MATLAB execution. Subsequent Bartolomey evidence is tracked explicitly: 40 native pilot runs and descriptive experimental comparisons are complete, three mesh screens failed, and no uncertainty-qualified experimental acceptance or fresh MATLAB equivalence is claimed.",
     "Original PDFs and raw extracted text remain local; source hashes and analytical citations identify them without redistributing the files."
   ],
   "prioritized_work": [
     {"id":"W0", "priority":"P0", "work":"Freeze case identity, source/version mappings, measured definitions and applicable domains", "requirements":["EXP-001","EXP-006","EXP-012","EXP-013","EXP-018","API-008","API-026","CORE-037"]},
-    {"id":"W1", "priority":"P0/P1", "work":"Build native database adapters and freeze the first Bartolomey pilot manifest", "requirements":["EXP-005","EXP-007","EXP-009","EXP-014","API-001","API-005"]},
+    {"id":"W1", "priority":"P0/P1", "work":"Extend the partial native database adapter after the frozen Bartolomey pilot; resolve failed mesh screens and incomplete uncertainty/independence gates before qualified validation", "requirements":["EXP-005","EXP-007","EXP-009","EXP-014","API-001","API-005"]},
     {"id":"W2", "priority":"P0/P1", "work":"Extend independent MATLAB references to transients and required closure branches", "requirements":["API-021","API-022","API-023","CORE-006","CORE-007","CORE-008","CORE-009","CORE-010","CORE-013","CORE-036"]},
     {"id":"W3", "priority":"P0/P1", "work":"Attribute physical/diagnostic failures and establish numerical uncertainty", "requirements":["CORE-018","CORE-025","CORE-026","CORE-027","CORE-028","CORE-029","CORE-030","CORE-031","CORE-032","CORE-033"]},
     {"id":"W4", "priority":"P1/P2", "work":"Reproduce named literature cases and assess independent experimental cases", "requirements":["EXP-002","EXP-003","EXP-004","EXP-008","EXP-010","EXP-011","EXP-014","EXP-015","EXP-016","EXP-017"]},

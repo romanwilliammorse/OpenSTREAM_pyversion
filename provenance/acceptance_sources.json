@@ -33,6 +33,23 @@
   "limits": [
     "2025 publications do not automatically describe the pinned 2026 source.",
     "The user identifies as R.W. Morse; the papers list Roman W. Morse as a coauthor.",
-    "Existing evidence is audited; no new experimental solver run or MATLAB execution is claimed."
-  ]
+    "Initial audit reused existing evidence. Subsequent Bartolomey pilot executes native experimental comparisons; MATLAB execution and uncertainty-qualified experimental acceptance remain unverified."
+  ],
+  "initial_audit_native_source_commit": "9371346112e6e2d6de16a35291402b3495b0845e",
+  "initial_audit_ci_tested_code_commit": "9b3d67e8e56f30381a7ae127792de42079148546",
+  "bartolomey_pilot": {
+    "campaign_path": "outputs/validation/bartolomey-pilot-01",
+    "preregistration_commit": "4e76cc1b3d5751d4b2f02f7ff74c35124d31174c",
+    "manifest_sha256_lf": "c193f988b5313329bbeac7408a46f02a618fff6daaa583337b296721abab4b55",
+    "xml_sha256_lf": "93a16eced68d20b7d0b367abe5965d60311f18354c56c8991e3485bba8fca945",
+    "report_sha256": "0255beb01919c9a679c5e72729bf9276bb368231e1f4a6009d2ff71b5b21cb4e",
+    "scope": "Four metadata-selected records; two fixed Mixture closure presets; no fitted coefficients.",
+    "converged_runs": 40,
+    "prescribed_physical_checks_passed_runs": 40,
+    "sensitivity_checks_passed": 29,
+    "sensitivity_checks_total": 32,
+    "experimental_status": "descriptive_only; combined uncertainty and independence not established",
+    "matlab_status": "not_run",
+    "executed_source_note": "Report records executed module hashes. Snapshots retain runner before GUI serialization repair and comparator before invalid-quantity/unit rejection guard. Both later changes leave valid numerical pilot inputs and outputs unchanged."
+  }
 }

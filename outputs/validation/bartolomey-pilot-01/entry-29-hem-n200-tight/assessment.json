@@ -1,0 +1,271 @@
+{
+  "run_id": "entry-29-hem-n200-tight",
+  "entry_id": 29,
+  "test_id": 31,
+  "test_name": "Bartolomey 1980",
+  "model": "hem",
+  "cells": 200,
+  "variant": "tight",
+  "execution": "completed",
+  "converged": true,
+  "elapsed_seconds": 6.342262700025458,
+  "comparison": {
+    "coordinate": "Elevation",
+    "coordinate_unit": "m",
+    "void_fraction_unit": "1",
+    "error_definition": "predicted minus measured",
+    "comparison_kind": "descriptive",
+    "interpolation": "within-domain linear",
+    "index_base": 0,
+    "points": [
+      {
+        "index": 0,
+        "coordinate": 0.1898,
+        "measured": 0.015429,
+        "predicted": 0.0,
+        "error": -0.015429,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 1,
+        "coordinate": 0.25264,
+        "measured": 0.0062932,
+        "predicted": 0.0,
+        "error": -0.0062932,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 2,
+        "coordinate": 0.36497,
+        "measured": 0.0062082,
+        "predicted": 0.0,
+        "error": -0.0062082,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 3,
+        "coordinate": 0.43787,
+        "measured": 0.021507,
+        "predicted": 0.0,
+        "error": -0.021507,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 4,
+        "coordinate": 0.55921,
+        "measured": 0.055973,
+        "predicted": 0.0,
+        "error": -0.055973,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 5,
+        "coordinate": 0.65184,
+        "measured": 0.046951,
+        "predicted": 0.0,
+        "error": -0.046951,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 6,
+        "coordinate": 0.72785,
+        "measured": 0.054501,
+        "predicted": 0.0,
+        "error": -0.054501,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 7,
+        "coordinate": 0.77661,
+        "measured": 0.037505,
+        "predicted": 0.0,
+        "error": -0.037505,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 8,
+        "coordinate": 0.81778,
+        "measured": 0.071309,
+        "predicted": 0.0,
+        "error": -0.071309,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 9,
+        "coordinate": 0.85949,
+        "measured": 0.089077,
+        "predicted": 0.0,
+        "error": -0.089077,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 10,
+        "coordinate": 0.90454,
+        "measured": 0.10771,
+        "predicted": 0.0,
+        "error": -0.10771,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 11,
+        "coordinate": 0.96576,
+        "measured": 0.092112,
+        "predicted": 0.0,
+        "error": -0.092112,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 12,
+        "coordinate": 1.0225,
+        "measured": 0.09729,
+        "predicted": 0.0,
+        "error": -0.09729,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 13,
+        "coordinate": 1.0738,
+        "measured": 0.088905,
+        "predicted": 0.0,
+        "error": -0.088905,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 14,
+        "coordinate": 1.083,
+        "measured": 0.055649,
+        "predicted": 0.0,
+        "error": -0.055649,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 15,
+        "coordinate": 1.1172,
+        "measured": 0.046614,
+        "predicted": 0.0,
+        "error": -0.046614,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 16,
+        "coordinate": 1.1556,
+        "measured": 0.040702,
+        "predicted": 0.0,
+        "error": -0.040702,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 17,
+        "coordinate": 1.1928,
+        "measured": 0.068802,
+        "predicted": 0.0,
+        "error": -0.068802,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 18,
+        "coordinate": 1.2307,
+        "measured": 0.046745,
+        "predicted": 0.0,
+        "error": -0.046745,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 19,
+        "coordinate": 1.2925,
+        "measured": 0.046973,
+        "predicted": 0.0,
+        "error": -0.046973,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      }
+    ],
+    "summary": {
+      "n_total": 20,
+      "n_compared": 20,
+      "n_excluded": 0,
+      "bias": -0.05481277,
+      "mae": 0.05481277,
+      "rmse": 0.06205638705946391
+    }
+  },
+  "physical": {
+    "passed": true,
+    "checks": {
+      "solver_converged": true,
+      "finite_primary": true,
+      "positive_pressure_density": true,
+      "positive_forward_flow": true,
+      "void_fraction_bounds": true,
+      "vapor_quality_bounds": true,
+      "mass": true,
+      "phase_mass_split": true,
+      "enthalpy": true,
+      "momentum_source_residual": true,
+      "phase_occupied_area": true,
+      "inlet_mass": true,
+      "inlet_enthalpy": true,
+      "inlet_pressure": true,
+      "prescribed_heating": true
+    },
+    "balances": {
+      "prescribed_power_W": 45352.0315,
+      "discrete_wall_power_W": 45352.0315,
+      "steady_enthalpy_gain_W": 45352.03149077926,
+      "steady_energy_relative_error": 2.0331468002625826e-10,
+      "steady_mass_max_deviation_kg_s": 8.326672684688674e-16,
+      "discrete_mass_max_residual_kg_s": 1.3877787807814457e-17,
+      "discrete_energy_max_residual_W_per_m": 4.954927135258913e-09,
+      "discrete_momentum_max_residual_Pa": 2.7824853532365523e-10,
+      "pressure_drop_Pa": 11672.521750442684,
+      "outlet_enthalpy_J_kg": 1160038.6831233967,
+      "outlet_void_fraction": 0.0,
+      "outlet_vapor_quality": 0.0,
+      "minimum_pressure_Pa": 6878327.478249557,
+      "minimum_density_kg_m3": 741.6922761090357
+    },
+    "phase_area_max_relative_error": 2.220446049250313e-16,
+    "phase_mass_split_max_error_kg_s": 0.0,
+    "scope": "Steady mass/enthalpy, source discrete momentum, bounds and reconstructed phase area. System-pressure property approximation retained."
+  },
+  "warnings": []
+}

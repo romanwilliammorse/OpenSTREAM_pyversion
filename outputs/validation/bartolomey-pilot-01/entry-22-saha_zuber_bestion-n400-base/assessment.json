@@ -1,0 +1,271 @@
+{
+  "run_id": "entry-22-saha_zuber_bestion-n400-base",
+  "entry_id": 22,
+  "test_id": 26,
+  "test_name": "Sabotinov 1976",
+  "model": "saha_zuber_bestion",
+  "cells": 400,
+  "variant": "base",
+  "execution": "completed",
+  "converged": true,
+  "elapsed_seconds": 18.952231900009792,
+  "comparison": {
+    "coordinate": "Quality",
+    "coordinate_unit": "1",
+    "void_fraction_unit": "1",
+    "error_definition": "predicted minus measured",
+    "comparison_kind": "descriptive",
+    "interpolation": "within-domain linear",
+    "index_base": 0,
+    "points": [
+      {
+        "index": 0,
+        "coordinate": -0.020027,
+        "measured": 0.17361,
+        "predicted": 0.13450107562243202,
+        "error": -0.039108924377567966,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 1,
+        "coordinate": 0.00052117,
+        "measured": 0.24774,
+        "predicted": 0.2420721112490759,
+        "error": -0.005667888750924083,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 2,
+        "coordinate": 0.022224,
+        "measured": 0.3291,
+        "predicted": 0.3491131327045397,
+        "error": 0.020013132704539693,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 3,
+        "coordinate": 0.042969,
+        "measured": 0.46648,
+        "predicted": 0.43718791106613264,
+        "error": -0.029292088933867366,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 4,
+        "coordinate": 0.063351,
+        "measured": 0.51952,
+        "predicted": 0.5093924813008864,
+        "error": -0.010127518699113547,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 5,
+        "coordinate": 0.085243,
+        "measured": 0.57136,
+        "predicted": 0.573072042561471,
+        "error": 0.001712042561471061,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 6,
+        "coordinate": 0.095268,
+        "measured": 0.60029,
+        "predicted": 0.5981603894760664,
+        "error": -0.002129610523933567,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 7,
+        "coordinate": 0.10716,
+        "measured": 0.61838,
+        "predicted": 0.6250774996255243,
+        "error": 0.006697499625524239,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 8,
+        "coordinate": 0.11664,
+        "measured": 0.63888,
+        "predicted": 0.6445684712544297,
+        "error": 0.005688471254429728,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 9,
+        "coordinate": 0.12827,
+        "measured": 0.65275,
+        "predicted": 0.6663707067245769,
+        "error": 0.013620706724576825,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 10,
+        "coordinate": 0.13807,
+        "measured": 0.66903,
+        "predicted": 0.6831347786710644,
+        "error": 0.01410477867106441,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 11,
+        "coordinate": 0.1485,
+        "measured": 0.6823,
+        "predicted": 0.6995397149329571,
+        "error": 0.017239714932957062,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 12,
+        "coordinate": 0.1583,
+        "measured": 0.69858,
+        "predicted": 0.7137454471172147,
+        "error": 0.015165447117214681,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 13,
+        "coordinate": 0.16966,
+        "measured": 0.70764,
+        "predicted": 0.7289044742360982,
+        "error": 0.02126447423609812,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 14,
+        "coordinate": 0.17953,
+        "measured": 0.71428,
+        "predicted": 0.7410533667692779,
+        "error": 0.026773366769277884,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 15,
+        "coordinate": 0.18996,
+        "measured": 0.72634,
+        "predicted": 0.7529676496197515,
+        "error": 0.026627649619751503,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 16,
+        "coordinate": 0.20073,
+        "measured": 0.73298,
+        "predicted": 0.7643731168391528,
+        "error": 0.0313931168391528,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 17,
+        "coordinate": 0.22159,
+        "measured": 0.75771,
+        "predicted": 0.7842047110938835,
+        "error": 0.02649471109388346,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 18,
+        "coordinate": 0.24245,
+        "measured": 0.78305,
+        "predicted": 0.8015123630305726,
+        "error": 0.01846236303057258,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 19,
+        "coordinate": 0.2641,
+        "measured": 0.77826,
+        "predicted": 0.8172757290641817,
+        "error": 0.039015729064181714,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      }
+    ],
+    "summary": {
+      "n_total": 20,
+      "n_compared": 20,
+      "n_excluded": 0,
+      "bias": 0.009897358647964462,
+      "mae": 0.018529961776505115,
+      "rmse": 0.02161909603445105
+    }
+  },
+  "physical": {
+    "passed": true,
+    "checks": {
+      "solver_converged": true,
+      "finite_primary": true,
+      "positive_pressure_density": true,
+      "positive_forward_flow": true,
+      "void_fraction_bounds": true,
+      "vapor_quality_bounds": true,
+      "mass": true,
+      "phase_mass_split": true,
+      "enthalpy": true,
+      "momentum_source_residual": true,
+      "phase_occupied_area": true,
+      "inlet_mass": true,
+      "inlet_enthalpy": true,
+      "inlet_pressure": true,
+      "prescribed_heating": true
+    },
+    "balances": {
+      "prescribed_power_W": 23873.4338,
+      "discrete_wall_power_W": 23873.433800000006,
+      "steady_enthalpy_gain_W": 23873.43379396664,
+      "steady_energy_relative_error": 2.5272300521990145e-10,
+      "steady_mass_max_deviation_kg_s": 1.1192588522668245e-11,
+      "discrete_mass_max_residual_kg_s": 3.631721225832996e-14,
+      "discrete_energy_max_residual_W_per_m": 5.260508260107599e-06,
+      "discrete_momentum_max_residual_Pa": 3.1406283085289033e-07,
+      "pressure_drop_Pa": 7373.1745862988755,
+      "outlet_enthalpy_J_kg": 1693777.4890475457,
+      "outlet_void_fraction": 0.8321914876445436,
+      "outlet_vapor_quality": 0.2875878852506953,
+      "minimum_pressure_Pa": 6798626.825413701,
+      "minimum_density_kg_m3": 154.17318364129991
+    },
+    "phase_area_max_relative_error": 2.220446049250313e-16,
+    "phase_mass_split_max_error_kg_s": 6.938893903907228e-18,
+    "scope": "Steady mass/enthalpy, source discrete momentum, bounds and reconstructed phase area. System-pressure property approximation retained."
+  },
+  "warnings": []
+}

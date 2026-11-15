@@ -42,6 +42,13 @@ Boundary diagnostics `bc.TSAT(fluid)`, `bc.HF(fluid)`, `bc.HG(fluid)`, `bc.TIN(f
 
 ## Limits
 
+The optional scientific-data API in `openstream.database` provides
+`load_bartolomey(path)`, one-based source-row selection and `record.to_input_set()`.
+The separate `openstream.experimental_comparison.compare_void_profile()` pairs
+void measurements in their actual quality/elevation coordinates. See
+[BARTOLOMEY.md](BARTOLOMEY.md) for a complete runnable example, override semantics,
+the pinned dataset and descriptive-comparison limits.
+
 Use straight constant-area channels, single-component fluids and the flow assumptions of the selected upstream framework. The forward sweep requires positive inlet mass flow. Two-phase properties require pressure strictly between triple and critical pressures. Property availability does not validate empirical closures for a fluid. Multidimensional networks, reverse flow and arbitrary operating regimes are outside this port's verified domain. Film/drop/base/wave frameworks apply to the documented annular formulations.
 
 Both residuals and bounds must be examined. A returned upstream convergence state is not proof of conservation, numerical equivalence, physical applicability or experimental validation. See `VERIFICATION.md` for the actual checks and retained failures.

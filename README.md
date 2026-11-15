@@ -29,10 +29,13 @@ The [acceptance matrix](docs/ACCEPTANCE_MATRIX.md) and
 [prioritized work plan](docs/ACCEPTANCE_PLAN.md) track the missing and unverified
 requirements separately from demonstrated results.
 
-Physical validation will use the experimental datasets in
+Physical-validation work uses the experimental datasets in
 [OpenSTREAM-database](https://github.com/OpenSTREAM-solvers/openstream-database).
 Archived MATLAB agreement and experimental validation are separate acceptance
-tracks. Database validation has not yet been executed by this Python port.
+tracks. The [native Bartolomey adapter and frozen pilot](docs/BARTOLOMEY.md)
+provide the first measured-versus-predicted workflow; uncertainty-qualified
+experimental validation remains incomplete. The database is pinned and preserved
+as a separate Git submodule.
 
 ## Existing local installation
 

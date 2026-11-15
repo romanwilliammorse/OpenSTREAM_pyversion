@@ -12,6 +12,7 @@ Implemented means native code exists. Tested identifies an actual check/run, not
 
 | Upstream component | Python equivalent | Implementation | Actual test evidence | Equivalence |
 |---|---|---|---|---|
+| OpenSTREAM-database Dataset/Bartolomey | database.py, experimental_comparison.py, run_bartolomey_pilot.py | Native 34-record XML reader, source input mapping, selection/provenance, coordinate-matched comparisons; other families/transients unsupported | 85 adapter/comparator/pilot-policy tests; frozen measured-versus-predicted campaign in BARTOLOMEY_PILOT.md | Source-mapping checks; MATLAB execution not performed; descriptive comparison is not uncertainty-qualified validation |
 | Input/Model/Options/Geometry/BoundaryConditions/InputSet and InputEnums | inputs.py | Declared defaults/enums, INP/JSON, validation, provenance | Input/default/unit/dimension/invalid-value/copy tests; original cases | Unverified |
 | FluidProperties and CoolPropWrapper | properties.py | Native BICUBIC&HEOS, HEOS tension, SATURATED/PSYSTEM, original bounds | Saturation/property/shape/immutability tests; HEOS comparison; boundary discrepancy recorded | Unverified |
 | Session and solver state | solver.py, output.py, multifield_output.py | Native progress/state, unit-labelled NPZ/CSV/JSON, new-directory enforcement | Serialization/units/no-overwrite tests, copied source-input hashes | MATLAB class-object/diary parity unsupported |

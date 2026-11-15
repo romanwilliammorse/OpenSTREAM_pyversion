@@ -1,0 +1,151 @@
+{
+  "run_id": "entry-31-saha_zuber_bestion-n100-base",
+  "entry_id": 31,
+  "test_id": 33,
+  "test_name": "Labuntsov 1984",
+  "model": "saha_zuber_bestion",
+  "cells": 100,
+  "variant": "base",
+  "execution": "completed",
+  "converged": true,
+  "elapsed_seconds": 3.8885415000258945,
+  "comparison": {
+    "coordinate": "Elevation",
+    "coordinate_unit": "m",
+    "void_fraction_unit": "1",
+    "error_definition": "predicted minus measured",
+    "comparison_kind": "descriptive",
+    "interpolation": "within-domain linear",
+    "index_base": 0,
+    "points": [
+      {
+        "index": 0,
+        "coordinate": 0.61388,
+        "measured": 0.01417,
+        "predicted": 0.0,
+        "error": -0.01417,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 1,
+        "coordinate": 0.78709,
+        "measured": 0.054645,
+        "predicted": 0.0005911728139656525,
+        "error": -0.054053827186034346,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 2,
+        "coordinate": 0.98677,
+        "measured": 0.094833,
+        "predicted": 0.0665573930018228,
+        "error": -0.028275606998177202,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 3,
+        "coordinate": 1.0938,
+        "measured": 0.11565,
+        "predicted": 0.1304050273499481,
+        "error": 0.014755027349948102,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 4,
+        "coordinate": 1.1074,
+        "measured": 0.073455,
+        "predicted": 0.13912492752646843,
+        "error": 0.06566992752646843,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 5,
+        "coordinate": 1.4233,
+        "measured": 0.16206,
+        "predicted": 0.0,
+        "error": -0.16206,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 6,
+        "coordinate": 1.7361,
+        "measured": 0.06165,
+        "predicted": 0.0,
+        "error": -0.06165,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      },
+      {
+        "index": 7,
+        "coordinate": 2.234,
+        "measured": 0.08105,
+        "predicted": 0.0,
+        "error": -0.08105,
+        "status": "compared",
+        "reason": null,
+        "flags": []
+      }
+    ],
+    "summary": {
+      "n_total": 8,
+      "n_compared": 8,
+      "n_excluded": 0,
+      "bias": -0.04010430991347438,
+      "mae": 0.06021054863257851,
+      "rmse": 0.07507132766409753
+    }
+  },
+  "physical": {
+    "passed": true,
+    "checks": {
+      "solver_converged": true,
+      "finite_primary": true,
+      "positive_pressure_density": true,
+      "positive_forward_flow": true,
+      "void_fraction_bounds": true,
+      "vapor_quality_bounds": true,
+      "mass": true,
+      "phase_mass_split": true,
+      "enthalpy": true,
+      "momentum_source_residual": true,
+      "phase_occupied_area": true,
+      "inlet_mass": true,
+      "inlet_enthalpy": true,
+      "inlet_pressure": true,
+      "prescribed_heating": true
+    },
+    "balances": {
+      "prescribed_power_W": 56335.6678,
+      "discrete_wall_power_W": 56335.6678,
+      "steady_enthalpy_gain_W": 56335.66777994755,
+      "steady_energy_relative_error": 3.559459336558739e-10,
+      "steady_mass_max_deviation_kg_s": 2.3994140008198883e-12,
+      "discrete_mass_max_residual_kg_s": 6.0285110237146e-14,
+      "discrete_energy_max_residual_W_per_m": 4.578527874479841e-09,
+      "discrete_momentum_max_residual_Pa": 3.3958178846660303e-07,
+      "pressure_drop_Pa": 36398.62504617311,
+      "outlet_enthalpy_J_kg": 1267486.7489155405,
+      "outlet_void_fraction": 0.0,
+      "outlet_vapor_quality": 0.0,
+      "minimum_pressure_Pa": 6963601.374953827,
+      "minimum_density_kg_m3": 582.9571406122975
+    },
+    "phase_area_max_relative_error": 2.220446049250313e-16,
+    "phase_mass_split_max_error_kg_s": 5.551115123125783e-17,
+    "scope": "Steady mass/enthalpy, source discrete momentum, bounds and reconstructed phase area. System-pressure property approximation retained."
+  },
+  "warnings": []
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "completed_runs_checked": 40,
+  "paired_measurements_checked": 590,
+  "failed_execution_runs_not_audited": [],
+  "checks": [
+    "CSV signed errors and units",
+    "independent NumPy bias/MAE/RMSE",
+    "saved axial endpoints",
+    "integrated saved heat flux equals prescribed power",
+    "saved steady transported-enthalpy balance"
+  ],
+  "source_report_sha256": "0255beb01919c9a679c5e72729bf9276bb368231e1f4a6009d2ff71b5b21cb4e",
+  "scope": "Artifact arithmetic and dimensional consistency, not experimental validation or MATLAB equivalence."
+}

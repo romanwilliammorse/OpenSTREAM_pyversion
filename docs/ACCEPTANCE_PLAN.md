@@ -19,7 +19,7 @@ The five evidence axes are independent: **implementation**, **native tests**, **
 
 The four TUTORIAL1 archived steady primary-profile comparisons, initialization histories and precursor checks passed at their recorded scope. The unchanged original core tolerance is `rtol=1e-8`, `atol=0`; exact reference zeros remain exact. Supplementary diagnostic failures are retained. Archive-producing source/property/runtime metadata remain incomplete; no fresh MATLAB runtime export has been executed.
 
-The clean Windows CI checkpoint passed 213 Python and five JavaScript tests, with two retained four-field warnings. This is functional-test evidence, not closure-domain coverage or experimental accuracy. The original steady occupied-area discrepancies are reproduced in the MATLAB archives. Native transient area/balance failures and incomplete or failed refinement studies also remain recorded. Intentional one-way pressure coupling is a model approximation; neither agreement with it nor a physical-check failure by itself identifies a translation error.
+The GUI Windows CI checkpoint passed 213 Python and nine JavaScript tests, with two retained four-field warnings. This is functional-test evidence, not closure-domain coverage or experimental accuracy. The subsequent [Bartolomey pilot](BARTOLOMEY_PILOT.md) adds 85 adapter/comparator/policy tests and 40 experimental-condition runs: all converge and pass scoped physical gates, while three of 32 sensitivity criteria fail. The original steady occupied-area discrepancies are reproduced in the MATLAB archives. Native transient area/balance failures and incomplete or failed refinement studies also remain recorded. Intentional one-way pressure coupling is a model approximation; neither agreement with it nor a physical-check failure by itself identifies a translation error.
 
 ## Ordered work
 
@@ -40,6 +40,13 @@ These issues block the affected reproduction claims, not all independent work. R
 ### 2. Implement the native database adapter and first mixture campaign (P0/P1)
 
 Implement an XML reader and dataset-specific input/measurement adapters, starting with the 34 Bartolomey records. Verify quantities, units, geometry, axial origin, heating and boundary-condition conversions against the source adapter. Use immutable dataset hashes and explicit exclusion reasons. First select a small set with complete inputs and usable coordinates; freeze the selection and acceptance policy before viewing prediction errors.
+
+Current scope completed: all 34 Bartolomey records map to native inputs, and
+the four-record pilot was frozen in commit `4e76cc1` before prediction errors.
+Its 40 runs and descriptive measurement comparisons are saved. Numerical
+acceptance remains open because three mesh criteria failed; quantified combined
+uncertainty and independent validation also remain open. Other dataset families
+and database transient input semantics still need adapters.
 
 Run those mixture cases with selected supported closures, compare at the measured coordinates, and publish raw and normalized inputs, solver outputs, convergence/balance checks, mesh/time sensitivity where relevant, signed errors and unit-labelled plots. Separate elevation-based measurements from quality-based measurements; document interpolation and coordinate uncertainty. Missing uncertainty permits a descriptive error comparison but blocks an uncertainty-qualified validation pass.
 
@@ -77,4 +84,4 @@ Run the acceptance campaign from a clean Windows checkout with immutable referen
 
 The generator verifies required fields/statuses, unique IDs, local evidence paths, acyclic dependency links, every enum type/choice against its preserved source, declaration fingerprints and complete inventory links. Source/ledger text hashes normalize CRLF to LF for reproducibility across Git checkouts; PDF fingerprints remain exact binary hashes. It writes the human and machine-readable matrix and the two annexes. It does not execute MATLAB, new numerical cases or experimental validation, and it cannot certify the scientific truth of a prose acceptance claim.
 
-The next implementation task is the native Bartolomey data/input/measurement adapter and frozen pilot-case manifest. Paper-specific source discrepancies and the transient-reference campaign can be resolved in parallel.
+Next: resolve Bartolomey's failed mesh/interpolation screens with a separately frozen refinement study, quantify measurement/digitization/input uncertainty, and establish source MRM reproduction and independent MATLAB references. Preserve the first pilot and its failed criteria. Paper-specific source discrepancies, other dataset adapters and the transient-reference campaign remain parallel work.

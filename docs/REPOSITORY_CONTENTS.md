@@ -21,6 +21,7 @@ the archived results.
 | `outputs/` | Saved numerical outputs, plots, verification reports, logs and retained failed/development runs |
 | `provenance/` | Source, environment and dependency fingerprints |
 | `upstream/` | Original OpenSTREAM source as a pinned Git submodule, including its CoolPropWrapper submodule |
+| `database/` | OpenSTREAM-database pinned at b48541e; includes the preserved experimental XML and MATLAB adapters |
 
 The original OpenSTREAM commit is
 `a614c7173822a93c1e64ac28d1541cbac028cbd8`; CoolPropWrapper is pinned at
@@ -38,6 +39,11 @@ its normal-operation inputs and selected portable reference arrays, so MATLAB
 source is not required to run the package.
 
 ## Which results are authoritative
+
+- `outputs/validation/bartolomey-pilot-01/` contains the frozen first experimental
+  comparison campaign: 40 native runs, 59 unique measurements, all raw inputs,
+  errors and physical checks, plus three retained mesh-sensitivity failures.
+  These are descriptive comparisons, not uncertainty-qualified validation.
 
 - `outputs/baseline-parity-02/` is the completed four-framework archived baseline
   audit, including native results, recovered arrays, comparisons, initialization

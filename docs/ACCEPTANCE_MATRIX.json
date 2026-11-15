@@ -37,8 +37,25 @@
     "limits": [
       "2025 publications do not automatically describe the pinned 2026 source.",
       "The user identifies as R.W. Morse; the papers list Roman W. Morse as a coauthor.",
-      "Existing evidence is audited; no new experimental solver run or MATLAB execution is claimed."
-    ]
+      "Initial audit reused existing evidence. Subsequent Bartolomey pilot executes native experimental comparisons; MATLAB execution and uncertainty-qualified experimental acceptance remain unverified."
+    ],
+    "initial_audit_native_source_commit": "9371346112e6e2d6de16a35291402b3495b0845e",
+    "initial_audit_ci_tested_code_commit": "9b3d67e8e56f30381a7ae127792de42079148546",
+    "bartolomey_pilot": {
+      "campaign_path": "outputs/validation/bartolomey-pilot-01",
+      "preregistration_commit": "4e76cc1b3d5751d4b2f02f7ff74c35124d31174c",
+      "manifest_sha256_lf": "c193f988b5313329bbeac7408a46f02a618fff6daaa583337b296721abab4b55",
+      "xml_sha256_lf": "93a16eced68d20b7d0b367abe5965d60311f18354c56c8991e3485bba8fca945",
+      "report_sha256": "0255beb01919c9a679c5e72729bf9276bb368231e1f4a6009d2ff71b5b21cb4e",
+      "scope": "Four metadata-selected records; two fixed Mixture closure presets; no fitted coefficients.",
+      "converged_runs": 40,
+      "prescribed_physical_checks_passed_runs": 40,
+      "sensitivity_checks_passed": 29,
+      "sensitivity_checks_total": 32,
+      "experimental_status": "descriptive_only; combined uncertainty and independence not established",
+      "matlab_status": "not_run",
+      "executed_source_note": "Report records executed module hashes. Snapshots retain runner before GUI serialization repair and comparator before invalid-quantity/unit rejection guard. Both later changes leave valid numerical pilot inputs and outputs unchanged."
+    }
   },
   "scope_and_status_rules": [
     "Full parity targets the pinned documented implementation; promises of future physics in the 2025 papers are not already implemented requirements.",
@@ -48,7 +65,7 @@
     "A declared enum or matching method name is not a branch test or numerical reference comparison.",
     "Dependencies apply to acceptance of the relevant subcase. They do not prevent exploratory execution, investigation, or independent work on other cases.",
     "Preserve governing equations and original core tolerances. Diagnose translation errors separately from intentional approximations, source defects and calibration choices.",
-    "No new numerical calculation, MATLAB execution or experimental validation is claimed by this acceptance-matrix audit.",
+    "The initial 2026-11-14 acceptance audit performed no new numerical calculation or MATLAB execution. Subsequent Bartolomey evidence is tracked explicitly: 40 native pilot runs and descriptive experimental comparisons are complete, three mesh screens failed, and no uncertainty-qualified experimental acceptance or fresh MATLAB equivalence is claimed.",
     "Original PDFs and raw extracted text remain local; source hashes and analytical citations identify them without redistributing the files."
   ],
   "prioritized_work": [
@@ -70,7 +87,7 @@
     {
       "id": "W1",
       "priority": "P0/P1",
-      "work": "Build native database adapters and freeze the first Bartolomey pilot manifest",
+      "work": "Extend the partial native database adapter after the frozen Bartolomey pilot; resolve failed mesh screens and incomplete uncertainty/independence gates before qualified validation",
       "requirements": [
         "EXP-005",
         "EXP-007",
@@ -186,17 +203,17 @@
       "P2": 9
     },
     "implementation": {
-      "implemented": 42,
-      "partial": 26,
+      "implemented": 43,
+      "partial": 31,
       "unsupported_source_defect": 1,
-      "missing": 12
+      "missing": 6
     },
     "status_axes": {
       "native_tests": {
         "passed_scoped": 32,
-        "partial": 29,
-        "failed": 2,
-        "not_run": 18
+        "partial": 34,
+        "failed": 3,
+        "not_run": 12
       },
       "matlab": {
         "passed_scoped": 13,
@@ -206,15 +223,16 @@
         "partial": 4
       },
       "physical": {
-        "passed_scoped": 3,
+        "passed_scoped": 5,
         "failed": 12,
         "not_applicable": 32,
         "partial": 19,
-        "not_run": 15
+        "not_run": 13
       },
       "experimental": {
-        "not_run": 46,
-        "not_applicable": 35
+        "not_run": 40,
+        "not_applicable": 35,
+        "partial": 6
       }
     },
     "enum_types": 41,
@@ -224,12 +242,12 @@
   },
   "source_ledger_sha256": {
     "docs/acceptance/core.json": "890aeb72f6d0e6400a9dfc1701b33280f368aca090889c90fdb323542844b5e2",
-    "docs/acceptance/interfaces.json": "a8aabd81c7d027076f9470f3a8481980d893c3bf37e164825d4a7294c0526406",
-    "docs/acceptance/experimental.json": "0dff47787432bff33d6caa3a5e9a5f85446fae06c85da3b90682082822dfdd5e",
-    "docs/acceptance/plan.json": "df7e67b2bcbe3c1ed38ea51df7cd0129d3b268e27ed16a0b86fd2eb2a38848b4",
+    "docs/acceptance/interfaces.json": "d8f4b4f52ff3c9e201181e3161b6a500cc1b0a1af4247e7f543309f878f2a753",
+    "docs/acceptance/experimental.json": "33be97d0e231be8a89481a7ee394559d9d054cbcd03aa39916194407eaad735a",
+    "docs/acceptance/plan.json": "2e345a7027f1f0df002c0197251c3702238cecd83d80d7e1a65ec9629595d0ad",
     "docs/upstream_inventory.json": "c9034bacef4e464ffba4256341b02267ef6c42518a6465af21933c66fdce0b3b",
-    "docs/METHOD_COVERAGE.json": "d018a518a2f4dce933af9be78117523e74ac104192c1648c6e089ceb0cfa7ed8",
-    "provenance/acceptance_sources.json": "1e3cdd89c4fff5163bda5d06cc8142ddb5d44badbacb710c80c9f853df059698",
+    "docs/METHOD_COVERAGE.json": "0b356e757d99ee3bb32f4cf1730c98d7daf03034ae19a8ebfdbaf316804af0ed",
+    "provenance/acceptance_sources.json": "ef21b1839c820cbc594b663ae385b745c804fe6710cfeb10108bc3e45dd3deff",
     "tools/build_acceptance_matrix.py": "a25c0c7a0299a0bc15ac6b758a0d9734e4477b85f167448fffa6605a32edbf92"
   },
   "requirements": [
@@ -1764,9 +1782,13 @@
       "evidence": [
         "tests/test_inputs.py",
         "outputs/verification/github-windows-ci.json",
-        "docs/input_properties_notes.md"
+        "docs/input_properties_notes.md",
+        "tests/test_bartolomey_adapter.py",
+        "outputs/validation/bartolomey-pilot-01/case_registry.json",
+        "docs/BARTOLOMEY_SOURCE_REVIEW.md",
+        "docs/BARTOLOMEY_PILOT.md"
       ],
-      "gap": "Original records and selected malformed inputs are tested, but a MATLAB-exported input corpus is absent. Unknown keys and numeric suffixes are stricter errors than upstream warnings/prefix parsing.",
+      "gap": "Original records and selected malformed inputs are tested, but a MATLAB-exported input corpus is absent. Unknown keys and numeric suffixes are stricter errors than upstream warnings/prefix parsing. Bartolomey source-record/default/override generation now has native fixtures and a complete 34-record registry; this does not supply an independent MATLAB-exported input corpus.",
       "priority": "P1",
       "acceptance_criteria": [
         "Export effective input records for every preserved input set and compare values, types, dimensions, selected identifiers and solver-dependent resolution.",
@@ -1942,9 +1964,14 @@
         "tests/test_inputs.py",
         "tests/test_gui_schema.py",
         "docs/input_properties_notes.md",
-        "docs/API.md"
+        "docs/API.md",
+        "tests/test_bartolomey_adapter.py",
+        "outputs/validation/bartolomey-pilot-01/case_registry.json",
+        "outputs/validation/bartolomey-pilot-01/report.json",
+        "docs/BARTOLOMEY_SOURCE_REVIEW.md",
+        "docs/BARTOLOMEY_PILOT.md"
       ],
-      "gap": "Column-major wall reshaping and selected boundary/geometry rules are checked, but nonzero-angle and broad multiwall source-export comparisons are absent.",
+      "gap": "Column-major wall reshaping and selected boundary/geometry rules are checked, but nonzero-angle and broad multiwall source-export comparisons are absent. Bartolomey tests and 40 pilot runs add straight-tube SI dimension, distributed heating and boundary checks; redundant rounded source values are audited without replacing stored mandatory inputs. General asymmetric/multiwall and nonzero-angle MATLAB comparisons remain open.",
       "priority": "P0",
       "acceptance_criteria": [
         "Check hydraulic diameter, wall fractions, axial length and segment power integration with explicit units.",
@@ -3025,18 +3052,23 @@
         "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/@Dataset/makeInputFiles.m"
       ],
       "python": [
-        "src/openstream/inputs.py"
+        "src/openstream/inputs.py",
+        "src/openstream/database.py"
       ],
-      "implementation": "missing",
-      "native_tests": "not_run",
+      "implementation": "partial",
+      "native_tests": "partial",
       "matlab": "not_run",
       "physical": "not_applicable",
-      "experimental": "not_run",
+      "experimental": "partial",
       "evidence": [
         "docs/PARITY_COMPLETION.md",
-        "docs/LITERATURE_ACCEPTANCE_REVIEW.md"
+        "docs/LITERATURE_ACCEPTANCE_REVIEW.md",
+        "tests/test_bartolomey_adapter.py",
+        "outputs/validation/bartolomey-pilot-01/case_registry.json",
+        "docs/BARTOLOMEY_SOURCE_REVIEW.md",
+        "docs/BARTOLOMEY_PILOT.md"
       ],
-      "gap": "No native database adapter or executed measured-versus-predicted workflow exists.",
+      "gap": "Native Bartolomey loading, one-based record selection, explicit overrides and steady input generation are implemented and tested across all 34 XML records. Raw repeated/empty values, source hashes and case identities are retained; the pilot executed four selected records. The other five dataset families, inherited general Dataset API and transient partial-record inheritance remain unimplemented. Source-implementation inspection and native fixtures are not an executed MATLAB generated-input comparison.",
       "priority": "P0",
       "acceptance_criteria": [
         "Retain raw XML values, missing entries, repeated fields, record identifiers, source hashes and citations.",
@@ -3044,7 +3076,7 @@
         "Verify mass flux times area equals mass flow and integrated prescribed heating equals power within documented input precision.",
         "For transient partial records, match initial-state inheritance rather than silently inheriting a previous transient record."
       ],
-      "next_action": "Implement the reader/input adapter with unit-aware fixture and generated-input comparisons before any validation pass claim.",
+      "next_action": "Extend the checked adapter contract to the remaining families and transient inheritance; obtain independent MATLAB effective-input exports before claiming cross-runtime input-generation equivalence.",
       "depends_on": [
         "API-001",
         "API-005",
@@ -3064,18 +3096,26 @@
       ],
       "python": [
         "src/openstream/ff_fields.py",
-        "src/openstream/plotting.py"
+        "src/openstream/plotting.py",
+        "src/openstream/database.py",
+        "src/openstream/experimental_comparison.py"
       ],
-      "implementation": "missing",
-      "native_tests": "not_run",
+      "implementation": "partial",
+      "native_tests": "partial",
       "matlab": "not_run",
       "physical": "not_applicable",
-      "experimental": "not_run",
+      "experimental": "partial",
       "evidence": [
         "docs/PARITY_COMPLETION.md",
-        "docs/LITERATURE_ACCEPTANCE_REVIEW.md"
+        "docs/LITERATURE_ACCEPTANCE_REVIEW.md",
+        "tests/test_bartolomey_adapter.py",
+        "tests/test_experimental_comparison.py",
+        "outputs/validation/bartolomey-pilot-01/report.json",
+        "outputs/validation/bartolomey-pilot-01/summary/summary.json",
+        "docs/BARTOLOMEY_SOURCE_REVIEW.md",
+        "docs/BARTOLOMEY_PILOT.md"
       ],
-      "gap": "No shared observation adapter tracks direct/derived status, measurement coordinates and source-specific units.",
+      "gap": "Bartolomey equilibrium-quality [1] and inlet-elevation [m] observations now retain their source definitions and match predictions by strict within-domain linear interpolation. Missing and out-of-domain values have explicit exclusions; negative digitized void values remain flagged, not clipped. The 59 selected measurements were all compared for both frozen models (118 finest-grid pairs; zero exclusions). Film/wave, thermal and dryout definitions and uncertainty propagation remain outside this implementation.",
       "priority": "P0",
       "acceptance_criteria": [
         "Carry SI dimensions while preserving raw units; explicitly distinguish wave number density (m^-1), frequency (Hz), period (s), and velocity (m/s).",
@@ -3083,7 +3123,7 @@
         "Record axial origin and use within-domain interpolation with stated numerical error; no silent clamping or extrapolation.",
         "Missing measurements remain missing and relative errors are not computed with physically meaningless near-zero denominators."
       ],
-      "next_action": "Create per-observable transformations and tests before aggregating dataset errors.",
+      "next_action": "Extend observation contracts to the remaining datasets, recover coordinate/digitization uncertainty, and retain direct versus derived observables separately.",
       "depends_on": []
     },
     {
@@ -3094,19 +3134,28 @@
       "scope": "Measurement, digitization/transcription, input and numerical uncertainty for each compared quantity",
       "upstream": [
         "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Wurtz1978/README.md",
-        "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Sawai1989/README.md"
+        "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Sawai1989/README.md",
+        "https://www.govinfo.gov/content/pkg/GOVPUB-Y3_N88-PURL-gpo73247/pdf/GOVPUB-Y3_N88-PURL-gpo73247.pdf#page=22"
       ],
-      "python": [],
-      "implementation": "missing",
-      "native_tests": "not_run",
+      "python": [
+        "tools/run_bartolomey_pilot.py",
+        "src/openstream/experimental_comparison.py"
+      ],
+      "implementation": "partial",
+      "native_tests": "partial",
       "matlab": "not_applicable",
       "physical": "not_run",
-      "experimental": "not_run",
+      "experimental": "partial",
       "evidence": [
         "docs/PARITY_COMPLETION.md",
-        "docs/LITERATURE_ACCEPTANCE_REVIEW.md"
+        "docs/LITERATURE_ACCEPTANCE_REVIEW.md",
+        "examples/bartolomey_pilot.json",
+        "tests/test_bartolomey_pilot_policy.py",
+        "docs/BARTOLOMEY_SOURCE_REVIEW.md",
+        "outputs/validation/bartolomey-pilot-01/summary/summary.json",
+        "docs/BARTOLOMEY_PILOT.md"
       ],
-      "gap": "The overview papers and database do not supply a complete quantitative uncertainty budget or predeclared acceptance bands.",
+      "gap": "NUREG/IA-0025 section 3.1, printed p.9 reports an absolute void-fraction error below 0.04 for its tests, without a stated confidence level or distribution; example input-error bounds apply to its 1982 reference. The pilot freezes descriptive-only comparisons and numerical sensitivity screens before predictions. Digitization/coordinate uncertainty, group-specific input propagation, correlations and a combined uncertainty budget remain unresolved. The 0.04 bound is not a total experimental acceptance tolerance; three mesh screens failed and no asymptotic numerical uncertainty was estimated.",
       "priority": "P0",
       "acceptance_criteria": [
         "Recover original experimental uncertainty and distinguish it from digitization/transcription and numerical uncertainty.",
@@ -3114,7 +3163,7 @@
         "Allow descriptive comparisons with unknown uncertainty but prohibit an uncertainty-based pass claim.",
         "Predeclare criteria before fitting; do not adopt plotting guides or baseline 1e-8 tolerances as experimental accuracy thresholds."
       ],
-      "next_action": "Build quantity-specific uncertainty/acceptance records from original reports and numerical-sensitivity results.",
+      "next_action": "Recover case-group-specific uncertainty and digitization evidence, propagate applicable input/property uncertainty, and resolve failed mesh screens before defining any uncertainty-qualified validation acceptance.",
       "depends_on": []
     },
     {
@@ -3128,18 +3177,28 @@
       ],
       "python": [
         "src/openstream/output.py",
-        "src/openstream/multifield_output.py"
+        "src/openstream/multifield_output.py",
+        "tools/run_bartolomey_pilot.py",
+        "tools/summarize_bartolomey_pilot.py",
+        "src/openstream/experimental_comparison.py"
       ],
-      "implementation": "missing",
-      "native_tests": "not_run",
+      "implementation": "partial",
+      "native_tests": "partial",
       "matlab": "not_applicable",
-      "physical": "not_run",
-      "experimental": "not_run",
+      "physical": "passed_scoped",
+      "experimental": "partial",
       "evidence": [
         "docs/PARITY_COMPLETION.md",
-        "docs/LITERATURE_ACCEPTANCE_REVIEW.md"
+        "docs/LITERATURE_ACCEPTANCE_REVIEW.md",
+        "outputs/validation/bartolomey-pilot-01/report.json",
+        "outputs/validation/bartolomey-pilot-01/summary/summary.json",
+        "outputs/validation/bartolomey-pilot-01/summary/all_runs.csv",
+        "tests/test_experimental_comparison.py",
+        "tests/test_bartolomey_pilot_policy.py",
+        "docs/BARTOLOMEY_PILOT.md",
+        "outputs/validation/bartolomey-pilot-01/independent_output_audit.json"
       ],
-      "gap": "Current result output supports solver diagnostics but not a complete experimental comparison ledger.",
+      "gap": "The Bartolomey campaign now accounts for all 40 attempted case/model/numerical variants, with inputs, hashes, units, convergence, explicit source-equation physical checks, paired errors, per-run CSVs and grouped descriptive statistics. All 40 executed and passed the stated physical gates; sensitivity failures remain visible (29/32 screens passed). Broader dataset reporting, statistical uncertainty and uncertainty-qualified experimental acceptance remain incomplete; the reported 118 finest-grid pairs reuse 59 source measurements across two models.",
       "priority": "P1",
       "acceptance_criteria": [
         "Publish paired measured/calculated tables with dimensional signed errors, bias, MAE and RMSE for defined populations.",
@@ -3147,7 +3206,7 @@
         "Archive inputs, code/property/data versions, settings, sensitivity and comparison scripts.",
         "Limit conclusions to measured quantities and tested fluid/geometry/regime/model configurations."
       ],
-      "next_action": "Implement a validation report generator around the native solver outputs after adapter/observable checks.",
+      "next_action": "Retain the complete Bartolomey accounting as other datasets are added; investigate and report failed sensitivity screens without filtering cases or treating repeated predictions as independent measurements.",
       "depends_on": [
         "EXP-005",
         "EXP-006",
@@ -3160,23 +3219,38 @@
       "track": "experimental_validation",
       "component": "Bartolomey pilot",
       "requirement": "Execute the first measured-versus-calculated mixture cases",
-      "scope": "Selected subcooled-boiling void-fraction records with explicit quality/elevation observation definitions",
+      "scope": "Frozen XML entries 1,22,29,31: four subcooled-boiling groups, Quality and Elevation observations; HEM and source TUTORIAL2D Saha-Zuber/Bestion configurations; 100/200/400 cells with tighter-iteration and pseudo-time-step checks at 200 cells.",
       "upstream": [
         "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/+Bartolomey/README.md"
       ],
       "python": [
         "src/openstream/solver.py",
-        "src/openstream/fields.py"
+        "src/openstream/fields.py",
+        "src/openstream/database.py",
+        "src/openstream/experimental_comparison.py",
+        "tools/run_bartolomey_pilot.py",
+        "tools/summarize_bartolomey_pilot.py"
       ],
-      "implementation": "missing",
-      "native_tests": "not_run",
+      "implementation": "implemented",
+      "native_tests": "failed",
       "matlab": "not_run",
-      "physical": "not_run",
-      "experimental": "not_run",
+      "physical": "passed_scoped",
+      "experimental": "partial",
       "evidence": [
-        "docs/PARITY_COMPLETION.md"
+        "docs/PARITY_COMPLETION.md",
+        "examples/bartolomey_pilot.json",
+        "outputs/validation/bartolomey-pilot-01/case_registry.json",
+        "outputs/validation/bartolomey-pilot-01/report.json",
+        "outputs/validation/bartolomey-pilot-01/summary/summary.json",
+        "tests/test_bartolomey_adapter.py",
+        "tests/test_experimental_comparison.py",
+        "tests/test_bartolomey_pilot_policy.py",
+        "docs/BARTOLOMEY_SOURCE_REVIEW.md",
+        "docs/BARTOLOMEY_PILOT.md",
+        "outputs/validation/bartolomey-pilot-01/independent_output_audit.json",
+        "outputs/validation/bartolomey-pilot-01/mesh_diagnosis.json"
       ],
-      "gap": "Database inspection only; no native experimental case run. This pilot is not a reproduction of the three newly supplied papers.",
+      "gap": "Pilot infrastructure and descriptive comparisons executed: 40/40 runs converged and passed the predeclared steady mass/enthalpy, source discrete momentum, bounds, phase-area and boundary/heating gates. All 59 source measurements were compared under each model. Native numerical acceptance remains incomplete: entry 22 HEM changes by 0.0034520131 (100-to-200 cells) and 0.0043236369 (200-to-400); entry 29 Saha-Zuber/Bestion changes by 0.0050731955 (200-to-400), exceeding the unchanged 0.002 void-fraction mesh screen. All 16 tighter-iteration/pseudo-step screens passed. Experimental results are descriptive only; complete uncertainty, historical calibration independence, asymptotic convergence and independent MATLAB references are unestablished. This pilot is not a reproduction of the supplied 2025 papers. Saved-array diagnosis attributes row22 HEM failures to quality-zero interpolation brackets and row29 Saha-Zuber/Bestion failure mainly to mesh-dependent heated extent/power normalization; original failed criteria remain unchanged.",
       "priority": "P1",
       "acceptance_criteria": [
         "Select traceable representative records with matched geometry, heating, inlet state and measured void definition.",
@@ -3184,7 +3258,7 @@
         "Demonstrate converged iterative/mesh settings and applicable balances; publish all paired measurements and errors.",
         "State whether uncertainty permits acceptance or only descriptive comparison."
       ],
-      "next_action": "Use a small Bartolomey case set as the first end-to-end adapter and reporting milestone.",
+      "next_action": "Diagnose the three failed mesh screens, particularly saturation/heating-transition resolution, using separately identified follow-on cases. Retain this frozen campaign and thresholds. Establish numerical uncertainty and the remaining experimental/input uncertainty before advancing validation claims.",
       "depends_on": [
         "EXP-005",
         "EXP-006",
@@ -3358,21 +3432,28 @@
       "track": "experimental_validation",
       "component": "Independent validation partition",
       "requirement": "Separate model development, calibration-associated reproduction and independent evaluation",
-      "scope": "Wurtz entrainment adjustment, Sawai relaxation selection and future dataset/correlation overlap",
+      "scope": "Wurtz entrainment adjustment, Sawai relaxation selection, calibrated NUTHOS15 MRM cases and Bartolomey pilot/correlation-development overlap",
       "upstream": [
         "https://github.com/OpenSTREAM-solvers/openstream-database/blob/b48541e6438a92b4c0ddc83cf0ceda3f71a59b22/projects/NURETH21.mlx"
       ],
-      "python": [],
-      "implementation": "missing",
-      "native_tests": "not_run",
+      "python": [
+        "tools/run_bartolomey_pilot.py"
+      ],
+      "implementation": "partial",
+      "native_tests": "partial",
       "matlab": "not_applicable",
       "physical": "not_run",
-      "experimental": "not_run",
+      "experimental": "partial",
       "evidence": [
         "docs/LITERATURE_ACCEPTANCE_REVIEW.md",
-        "local-paper:LeCorre2025OpenSTREAM.pdf#page=12"
+        "local-paper:LeCorre2025OpenSTREAM.pdf#page=12",
+        "examples/bartolomey_pilot.json",
+        "docs/BARTOLOMEY_SOURCE_REVIEW.md",
+        "outputs/validation/bartolomey-pilot-01/report.json",
+        "tests/test_bartolomey_pilot_policy.py",
+        "docs/BARTOLOMEY_PILOT.md"
       ],
-      "gap": "Current literature comparisons reuse data linked to closure/model development; no independent evaluation partition is documented for the port.",
+      "gap": "The Bartolomey manifest was frozen in commit 4e76cc1 before prediction inspection, using the first XML entry in each experimental group and two unchanged source configurations; no coefficients were fitted to pilot measurements. Calibrated NUTHOS15 MRM entries 20 and 33 (TestIDs 22 and 35) are explicitly distinguished and not selected. Historical overlap of pilot groups with closure development remains unknown, so the campaign is not claimed as independent holdout validation. Complete calibration/evaluation registers for all datasets remain absent.",
       "priority": "P1",
       "acceptance_criteria": [
         "Record which experimental sources and cases influenced every tuned coefficient or selected closure.",
@@ -3380,7 +3461,7 @@
         "Report calibration-associated reproduction separately from independent validation.",
         "If no independent cases are available, state that limitation and avoid an independence claim."
       ],
-      "next_action": "Build a calibration/evaluation provenance register and select independent groups before extending validation claims.",
+      "next_action": "Trace selected closure-development datasets and build group-level calibration/evaluation provenance; only label an evaluation independent when overlap has been assessed, not merely because settings were frozen.",
       "depends_on": [
         "EXP-001",
         "EXP-007"

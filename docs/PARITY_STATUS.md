@@ -21,7 +21,10 @@ remain separate, unfinished requirements.
 | Fresh-export comparator machinery tests | 34 / 34 passed | Historical synthetic fixtures |
 | Baseline-audit native/recovery/comparison suite | 212 / 212 passed | Earlier executed checkpoint: 129 native + 83 recovery/comparison tests; one optional-reader deprecation and two retained four-field warnings |
 | GUI 0.2.0 native/GUI suite | 213 / 213 passed | 129 native + 84 GUI tests, plus 5 passing JavaScript tests; recovery-tool internals were not rerun in this checkpoint |
-| Experimental validation against OpenSTREAM-database | Not performed | Six dataset families inspected; no measured-versus-predicted validation results yet |
+| Bartolomey native data adapter | 34 / 34 records | 85 adapter/comparator/pilot-policy tests passed; source mapping checked, MATLAB execution not run |
+| Bartolomey pilot execution / physical gates | 40 / 40 passed | Four records, two fixed closures, meshes and tighter controls; scoped steady checks only |
+| Bartolomey numerical sensitivity | 29 / 32 passed | Three frozen mesh criteria failed and remain open |
+| Experimental comparison against OpenSTREAM-database | Descriptive pilot executed | 59 unique measurements; uncertainty-qualified validation and independent holdout status not established; see BARTOLOMEY_PILOT.md |
 | Acceptance requirements ledger | 81 reviewed rows | Separate implementation/test/MATLAB/physical/experimental statuses; not a completion percentage |
 | Full feature/option/API parity | Not yet quantified | The ledger links 127 enum choices, 16 interpolation entries and 585 public method entries; combinations and operating-domain coverage remain incomplete |
 

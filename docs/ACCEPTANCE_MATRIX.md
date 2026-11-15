@@ -14,15 +14,15 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 | ID / priority | Requirement | Implementation | Native checks | MATLAB | Physical | Experimental |
 |---|---|---|---|---|---|---|
-| EXP-005 / P0 | Implement native reading, selection and case input generation | missing | not_run | not_run | not_applicable | not_run |
-| EXP-006 / P0 | Match the actual measured quantity and coordinate system | missing | not_run | not_run | not_applicable | not_run |
-| EXP-007 / P0 | Establish evidence-based validation criteria | missing | not_run | not_applicable | not_run | not_run |
-| EXP-008 / P1 | Produce reproducible per-case and aggregate validation evidence | missing | not_run | not_applicable | not_run | not_run |
-| EXP-009 / P1 | Execute the first measured-versus-calculated mixture cases | missing | not_run | not_run | not_run | not_run |
+| EXP-005 / P0 | Implement native reading, selection and case input generation | partial | partial | not_run | not_applicable | partial |
+| EXP-006 / P0 | Match the actual measured quantity and coordinate system | partial | partial | not_run | not_applicable | partial |
+| EXP-007 / P0 | Establish evidence-based validation criteria | partial | partial | not_applicable | not_run | partial |
+| EXP-008 / P1 | Produce reproducible per-case and aggregate validation evidence | partial | partial | not_applicable | passed_scoped | partial |
+| EXP-009 / P1 | Execute the first measured-versus-calculated mixture cases | implemented | failed | not_run | passed_scoped | partial |
 | EXP-010 / P1 | Reproduce the selected NURETH Figure 6 comparisons | missing | not_run | not_run | not_run | not_run |
 | EXP-011 / P1 | Reproduce the selected NURETH Figure 7 comparisons | missing | not_run | not_run | not_run | not_run |
 | EXP-012 / P0 | Resolve unit exceptions and out-of-domain measurement coordinates | missing | not_run | not_applicable | not_run | not_run |
-| EXP-014 / P1 | Separate model development, calibration-associated reproduction and independent evaluation | missing | not_run | not_applicable | not_run | not_run |
+| EXP-014 / P1 | Separate model development, calibration-associated reproduction and independent evaluation | partial | partial | not_applicable | not_run | partial |
 | EXP-015 / P2 | Compare predicted liquid-film flow against measured heated-tube film flow | missing | not_run | not_run | not_run | not_run |
 | EXP-016 / P2 | Validate thermal predictions and onset/dryout observables separately | missing | not_run | not_run | not_run | not_run |
 | EXP-017 / P2 | Validate critical-power search and CHF comparisons as distinct algorithms and observables | missing | not_run | not_run | not_run | not_run |
@@ -764,7 +764,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Named Model/Options/Geometry records and steady/transient boundary files; original legal inputs, not execution of arbitrary MATLAB text.
 
-**Missing or unverified:** Original records and selected malformed inputs are tested, but a MATLAB-exported input corpus is absent. Unknown keys and numeric suffixes are stricter errors than upstream warnings/prefix parsing.
+**Missing or unverified:** Original records and selected malformed inputs are tested, but a MATLAB-exported input corpus is absent. Unknown keys and numeric suffixes are stricter errors than upstream warnings/prefix parsing. Bartolomey source-record/default/override generation now has native fixtures and a complete 34-record registry; this does not supply an independent MATLAB-exported input corpus.
 
 **Acceptance evidence required:**
 
@@ -774,7 +774,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Create immutable effective-input fixtures and a documented compatibility-difference list.
 
-**Evidence:** `tests/test_inputs.py`; `outputs/verification/github-windows-ci.json`; `docs/input_properties_notes.md`
+**Evidence:** `tests/test_inputs.py`; `outputs/verification/github-windows-ci.json`; `docs/input_properties_notes.md`; `tests/test_bartolomey_adapter.py`; `outputs/validation/bartolomey-pilot-01/case_registry.json`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `docs/BARTOLOMEY_PILOT.md`
 
 **Dependencies:** No additional matrix-row prerequisite.
 
@@ -837,7 +837,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** ANGLE uses degrees from vertical in Geometry.m despite a radians comment in geom.inp; WPOWER rows are segments and columns are walls; NNODES means cells.
 
-**Missing or unverified:** Column-major wall reshaping and selected boundary/geometry rules are checked, but nonzero-angle and broad multiwall source-export comparisons are absent.
+**Missing or unverified:** Column-major wall reshaping and selected boundary/geometry rules are checked, but nonzero-angle and broad multiwall source-export comparisons are absent. Bartolomey tests and 40 pilot runs add straight-tube SI dimension, distributed heating and boundary checks; redundant rounded source values are audited without replacing stored mandatory inputs. General asymmetric/multiwall and nonzero-angle MATLAB comparisons remain open.
 
 **Acceptance evidence required:**
 
@@ -847,7 +847,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Create asymmetric geometry/power and nonzero-angle reference cases before importing experimental configurations.
 
-**Evidence:** `tests/test_inputs.py`; `tests/test_gui_schema.py`; `docs/input_properties_notes.md`; `docs/API.md`
+**Evidence:** `tests/test_inputs.py`; `tests/test_gui_schema.py`; `docs/input_properties_notes.md`; `docs/API.md`; `tests/test_bartolomey_adapter.py`; `outputs/validation/bartolomey-pilot-01/case_registry.json`; `outputs/validation/bartolomey-pilot-01/report.json`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `docs/BARTOLOMEY_PILOT.md`
 
 **Dependencies:** No additional matrix-row prerequisite.
 
@@ -1305,7 +1305,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** All six inspected experimental families; inherited Dataset behavior, explicit overrides and transient schedule semantics
 
-**Missing or unverified:** No native database adapter or executed measured-versus-predicted workflow exists.
+**Missing or unverified:** Native Bartolomey loading, one-based record selection, explicit overrides and steady input generation are implemented and tested across all 34 XML records. Raw repeated/empty values, source hashes and case identities are retained; the pilot executed four selected records. The other five dataset families, inherited general Dataset API and transient partial-record inheritance remain unimplemented. Source-implementation inspection and native fixtures are not an executed MATLAB generated-input comparison.
 
 **Acceptance evidence required:**
 
@@ -1314,9 +1314,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Verify mass flux times area equals mass flow and integrated prescribed heating equals power within documented input precision.
 - For transient partial records, match initial-state inheritance rather than silently inheriting a previous transient record.
 
-**Next action:** Implement the reader/input adapter with unit-aware fixture and generated-input comparisons before any validation pass claim.
+**Next action:** Extend the checked adapter contract to the remaining families and transient inheritance; obtain independent MATLAB effective-input exports before claiming cross-runtime input-generation equivalence.
 
-**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`
+**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `tests/test_bartolomey_adapter.py`; `outputs/validation/bartolomey-pilot-01/case_registry.json`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `docs/BARTOLOMEY_PILOT.md`
 
 **Dependencies:** API-001, API-005, EXP-006, EXP-018
 
@@ -1324,7 +1324,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Film/base/wave quantities, void fraction, quality, heat transfer and dryout measurements
 
-**Missing or unverified:** No shared observation adapter tracks direct/derived status, measurement coordinates and source-specific units.
+**Missing or unverified:** Bartolomey equilibrium-quality [1] and inlet-elevation [m] observations now retain their source definitions and match predictions by strict within-domain linear interpolation. Missing and out-of-domain values have explicit exclusions; negative digitized void values remain flagged, not clipped. The 59 selected measurements were all compared for both frozen models (118 finest-grid pairs; zero exclusions). Film/wave, thermal and dryout definitions and uncertainty propagation remain outside this implementation.
 
 **Acceptance evidence required:**
 
@@ -1333,9 +1333,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Record axial origin and use within-domain interpolation with stated numerical error; no silent clamping or extrapolation.
 - Missing measurements remain missing and relative errors are not computed with physically meaningless near-zero denominators.
 
-**Next action:** Create per-observable transformations and tests before aggregating dataset errors.
+**Next action:** Extend observation contracts to the remaining datasets, recover coordinate/digitization uncertainty, and retain direct versus derived observables separately.
 
-**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`
+**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `tests/test_bartolomey_adapter.py`; `tests/test_experimental_comparison.py`; `outputs/validation/bartolomey-pilot-01/report.json`; `outputs/validation/bartolomey-pilot-01/summary/summary.json`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `docs/BARTOLOMEY_PILOT.md`
 
 **Dependencies:** No additional matrix-row prerequisite.
 
@@ -1343,7 +1343,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Measurement, digitization/transcription, input and numerical uncertainty for each compared quantity
 
-**Missing or unverified:** The overview papers and database do not supply a complete quantitative uncertainty budget or predeclared acceptance bands.
+**Missing or unverified:** NUREG/IA-0025 section 3.1, printed p.9 reports an absolute void-fraction error below 0.04 for its tests, without a stated confidence level or distribution; example input-error bounds apply to its 1982 reference. The pilot freezes descriptive-only comparisons and numerical sensitivity screens before predictions. Digitization/coordinate uncertainty, group-specific input propagation, correlations and a combined uncertainty budget remain unresolved. The 0.04 bound is not a total experimental acceptance tolerance; three mesh screens failed and no asymptotic numerical uncertainty was estimated.
 
 **Acceptance evidence required:**
 
@@ -1352,9 +1352,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Allow descriptive comparisons with unknown uncertainty but prohibit an uncertainty-based pass claim.
 - Predeclare criteria before fitting; do not adopt plotting guides or baseline 1e-8 tolerances as experimental accuracy thresholds.
 
-**Next action:** Build quantity-specific uncertainty/acceptance records from original reports and numerical-sensitivity results.
+**Next action:** Recover case-group-specific uncertainty and digitization evidence, propagate applicable input/property uncertainty, and resolve failed mesh screens before defining any uncertainty-qualified validation acceptance.
 
-**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`
+**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `examples/bartolomey_pilot.json`; `tests/test_bartolomey_pilot_policy.py`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `outputs/validation/bartolomey-pilot-01/summary/summary.json`; `docs/BARTOLOMEY_PILOT.md`
 
 **Dependencies:** No additional matrix-row prerequisite.
 
@@ -1362,7 +1362,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** All attempted cases, including nonconvergence, physical inconsistency and excluded measurements
 
-**Missing or unverified:** Current result output supports solver diagnostics but not a complete experimental comparison ledger.
+**Missing or unverified:** The Bartolomey campaign now accounts for all 40 attempted case/model/numerical variants, with inputs, hashes, units, convergence, explicit source-equation physical checks, paired errors, per-run CSVs and grouped descriptive statistics. All 40 executed and passed the stated physical gates; sensitivity failures remain visible (29/32 screens passed). Broader dataset reporting, statistical uncertainty and uncertainty-qualified experimental acceptance remain incomplete; the reported 118 finest-grid pairs reuse 59 source measurements across two models.
 
 **Acceptance evidence required:**
 
@@ -1371,17 +1371,17 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Archive inputs, code/property/data versions, settings, sensitivity and comparison scripts.
 - Limit conclusions to measured quantities and tested fluid/geometry/regime/model configurations.
 
-**Next action:** Implement a validation report generator around the native solver outputs after adapter/observable checks.
+**Next action:** Retain the complete Bartolomey accounting as other datasets are added; investigate and report failed sensitivity screens without filtering cases or treating repeated predictions as independent measurements.
 
-**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`
+**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `outputs/validation/bartolomey-pilot-01/report.json`; `outputs/validation/bartolomey-pilot-01/summary/summary.json`; `outputs/validation/bartolomey-pilot-01/summary/all_runs.csv`; `tests/test_experimental_comparison.py`; `tests/test_bartolomey_pilot_policy.py`; `docs/BARTOLOMEY_PILOT.md`; `outputs/validation/bartolomey-pilot-01/independent_output_audit.json`
 
 **Dependencies:** EXP-005, EXP-006, EXP-007, EXP-014
 
 ### EXP-009: Bartolomey pilot
 
-**Scope:** Selected subcooled-boiling void-fraction records with explicit quality/elevation observation definitions
+**Scope:** Frozen XML entries 1,22,29,31: four subcooled-boiling groups, Quality and Elevation observations; HEM and source TUTORIAL2D Saha-Zuber/Bestion configurations; 100/200/400 cells with tighter-iteration and pseudo-time-step checks at 200 cells.
 
-**Missing or unverified:** Database inspection only; no native experimental case run. This pilot is not a reproduction of the three newly supplied papers.
+**Missing or unverified:** Pilot infrastructure and descriptive comparisons executed: 40/40 runs converged and passed the predeclared steady mass/enthalpy, source discrete momentum, bounds, phase-area and boundary/heating gates. All 59 source measurements were compared under each model. Native numerical acceptance remains incomplete: entry 22 HEM changes by 0.0034520131 (100-to-200 cells) and 0.0043236369 (200-to-400); entry 29 Saha-Zuber/Bestion changes by 0.0050731955 (200-to-400), exceeding the unchanged 0.002 void-fraction mesh screen. All 16 tighter-iteration/pseudo-step screens passed. Experimental results are descriptive only; complete uncertainty, historical calibration independence, asymptotic convergence and independent MATLAB references are unestablished. This pilot is not a reproduction of the supplied 2025 papers. Saved-array diagnosis attributes row22 HEM failures to quality-zero interpolation brackets and row29 Saha-Zuber/Bestion failure mainly to mesh-dependent heated extent/power normalization; original failed criteria remain unchanged.
 
 **Acceptance evidence required:**
 
@@ -1390,9 +1390,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Demonstrate converged iterative/mesh settings and applicable balances; publish all paired measurements and errors.
 - State whether uncertainty permits acceptance or only descriptive comparison.
 
-**Next action:** Use a small Bartolomey case set as the first end-to-end adapter and reporting milestone.
+**Next action:** Diagnose the three failed mesh screens, particularly saturation/heating-transition resolution, using separately identified follow-on cases. Retain this frozen campaign and thresholds. Establish numerical uncertainty and the remaining experimental/input uncertainty before advancing validation claims.
 
-**Evidence:** `docs/PARITY_COMPLETION.md`
+**Evidence:** `docs/PARITY_COMPLETION.md`; `examples/bartolomey_pilot.json`; `outputs/validation/bartolomey-pilot-01/case_registry.json`; `outputs/validation/bartolomey-pilot-01/report.json`; `outputs/validation/bartolomey-pilot-01/summary/summary.json`; `tests/test_bartolomey_adapter.py`; `tests/test_experimental_comparison.py`; `tests/test_bartolomey_pilot_policy.py`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `docs/BARTOLOMEY_PILOT.md`; `outputs/validation/bartolomey-pilot-01/independent_output_audit.json`; `outputs/validation/bartolomey-pilot-01/mesh_diagnosis.json`
 
 **Dependencies:** EXP-005, EXP-006, EXP-007, CORE-025, CORE-030
 
@@ -1474,9 +1474,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 ### EXP-014: Independent validation partition
 
-**Scope:** Wurtz entrainment adjustment, Sawai relaxation selection and future dataset/correlation overlap
+**Scope:** Wurtz entrainment adjustment, Sawai relaxation selection, calibrated NUTHOS15 MRM cases and Bartolomey pilot/correlation-development overlap
 
-**Missing or unverified:** Current literature comparisons reuse data linked to closure/model development; no independent evaluation partition is documented for the port.
+**Missing or unverified:** The Bartolomey manifest was frozen in commit 4e76cc1 before prediction inspection, using the first XML entry in each experimental group and two unchanged source configurations; no coefficients were fitted to pilot measurements. Calibrated NUTHOS15 MRM entries 20 and 33 (TestIDs 22 and 35) are explicitly distinguished and not selected. Historical overlap of pilot groups with closure development remains unknown, so the campaign is not claimed as independent holdout validation. Complete calibration/evaluation registers for all datasets remain absent.
 
 **Acceptance evidence required:**
 
@@ -1485,9 +1485,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Report calibration-associated reproduction separately from independent validation.
 - If no independent cases are available, state that limitation and avoid an independence claim.
 
-**Next action:** Build a calibration/evaluation provenance register and select independent groups before extending validation claims.
+**Next action:** Trace selected closure-development datasets and build group-level calibration/evaluation provenance; only label an evaluation independent when overlap has been assessed, not merely because settings were frozen.
 
-**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=12`
+**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=12`; `examples/bartolomey_pilot.json`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `outputs/validation/bartolomey-pilot-01/report.json`; `tests/test_bartolomey_pilot_policy.py`; `docs/BARTOLOMEY_PILOT.md`
 
 **Dependencies:** EXP-001, EXP-007
 

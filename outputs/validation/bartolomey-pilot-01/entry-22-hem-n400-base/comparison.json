@@ -1,0 +1,219 @@
+{
+  "coordinate": "Quality",
+  "coordinate_unit": "1",
+  "void_fraction_unit": "1",
+  "error_definition": "predicted minus measured",
+  "comparison_kind": "descriptive",
+  "interpolation": "within-domain linear",
+  "index_base": 0,
+  "points": [
+    {
+      "index": 0,
+      "coordinate": -0.020027,
+      "measured": 0.17361,
+      "predicted": 0.0,
+      "error": -0.17361,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 1,
+      "coordinate": 0.00052117,
+      "measured": 0.24774,
+      "predicted": 0.010757367848908558,
+      "error": -0.23698263215109144,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 2,
+      "coordinate": 0.022224,
+      "measured": 0.3291,
+      "predicted": 0.323032235689944,
+      "error": -0.006067764310056012,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 3,
+      "coordinate": 0.042969,
+      "measured": 0.46648,
+      "predicted": 0.48524509740494237,
+      "error": 0.018765097404942366,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 4,
+      "coordinate": 0.063351,
+      "measured": 0.51952,
+      "predicted": 0.5867821339623865,
+      "error": 0.06726213396238656,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 5,
+      "coordinate": 0.085243,
+      "measured": 0.57136,
+      "predicted": 0.6617610310225003,
+      "error": 0.0904010310225003,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 6,
+      "coordinate": 0.095268,
+      "measured": 0.60029,
+      "predicted": 0.6885547418466921,
+      "error": 0.08826474184669209,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 7,
+      "coordinate": 0.10716,
+      "measured": 0.61838,
+      "predicted": 0.7159021528843145,
+      "error": 0.09752215288431443,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 8,
+      "coordinate": 0.11664,
+      "measured": 0.63888,
+      "predicted": 0.7349084839617744,
+      "error": 0.09602848396177444,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 9,
+      "coordinate": 0.12827,
+      "measured": 0.65275,
+      "predicted": 0.7554643251213415,
+      "error": 0.10271432512134149,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 10,
+      "coordinate": 0.13807,
+      "measured": 0.66903,
+      "predicted": 0.7708127320032064,
+      "error": 0.10178273200320642,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 11,
+      "coordinate": 0.1485,
+      "measured": 0.6823,
+      "predicted": 0.7854819727795684,
+      "error": 0.10318197277956842,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 12,
+      "coordinate": 0.1583,
+      "measured": 0.69858,
+      "predicted": 0.7979269589595785,
+      "error": 0.09934695895957857,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 13,
+      "coordinate": 0.16966,
+      "measured": 0.70764,
+      "predicted": 0.8109631601311916,
+      "error": 0.10332316013119158,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 14,
+      "coordinate": 0.17953,
+      "measured": 0.71428,
+      "predicted": 0.8212414779297544,
+      "error": 0.10696147792975441,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 15,
+      "coordinate": 0.18996,
+      "measured": 0.72634,
+      "predicted": 0.8311847226126083,
+      "error": 0.10484472261260835,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 16,
+      "coordinate": 0.20073,
+      "measured": 0.73298,
+      "predicted": 0.8405839870837181,
+      "error": 0.1076039870837181,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 17,
+      "coordinate": 0.22159,
+      "measured": 0.75771,
+      "predicted": 0.8566687937805698,
+      "error": 0.09895879378056982,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 18,
+      "coordinate": 0.24245,
+      "measured": 0.78305,
+      "predicted": 0.8704591124058488,
+      "error": 0.08740911240584881,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 19,
+      "coordinate": 0.2641,
+      "measured": 0.77826,
+      "predicted": 0.8828347698716934,
+      "error": 0.10457476987169345,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    }
+  ],
+  "summary": {
+    "n_total": 20,
+    "n_compared": 20,
+    "n_excluded": 0,
+    "bias": 0.05811426286502711,
+    "mae": 0.09978030251114185,
+    "rmse": 0.10963398941427033
+  }
+}

@@ -1,5 +1,14 @@
 # Licenses and reused components
 
+The native Bartolomey adapter translates OpenSTREAM-database's MIT-licensed
+Dataset input mapping at `b48541e6438a92b4c0ddc83cf0ceda3f71a59b22`.
+The unchanged repository is preserved in the `database` submodule; its notice
+is additionally retained in `licenses/OpenSTREAM_database_LICENSE` and bundled.
+The numerical points were digitized by that project from NUREG/IA-0025 figures;
+the source report and experimental attribution remain authoritative. See
+BARTOLOMEY_SOURCE_REVIEW.md for the reuse search and data provenance. No code
+from unrelated adapters or machine-learning models was copied.
+
 Optional GUI dependencies are Flask 3.1.3 (BSD-3-Clause), Plotly 7.1.0 (MIT),
 and Waitress 3.0.2 (ZPL-2.1), plus their pinned dependencies in
 requirements-gui.lock. Exact direct-component license texts are retained in

@@ -1,0 +1,99 @@
+{
+  "coordinate": "Elevation",
+  "coordinate_unit": "m",
+  "void_fraction_unit": "1",
+  "error_definition": "predicted minus measured",
+  "comparison_kind": "descriptive",
+  "interpolation": "within-domain linear",
+  "index_base": 0,
+  "points": [
+    {
+      "index": 0,
+      "coordinate": 0.61388,
+      "measured": 0.01417,
+      "predicted": 0.0,
+      "error": -0.01417,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 1,
+      "coordinate": 0.78709,
+      "measured": 0.054645,
+      "predicted": 0.0005265327831766353,
+      "error": -0.05411846721682336,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 2,
+      "coordinate": 0.98677,
+      "measured": 0.094833,
+      "predicted": 0.06654589239811652,
+      "error": -0.02828710760188348,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 3,
+      "coordinate": 1.0938,
+      "measured": 0.11565,
+      "predicted": 0.1303842233242134,
+      "error": 0.014734223324213397,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 4,
+      "coordinate": 1.1074,
+      "measured": 0.073455,
+      "predicted": 0.13911274231140783,
+      "error": 0.06565774231140782,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 5,
+      "coordinate": 1.4233,
+      "measured": 0.16206,
+      "predicted": 0.0,
+      "error": -0.16206,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 6,
+      "coordinate": 1.7361,
+      "measured": 0.06165,
+      "predicted": 0.0,
+      "error": -0.06165,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    },
+    {
+      "index": 7,
+      "coordinate": 2.234,
+      "measured": 0.08105,
+      "predicted": 0.0,
+      "error": -0.08105,
+      "status": "compared",
+      "reason": null,
+      "flags": []
+    }
+  ],
+  "summary": {
+    "n_total": 8,
+    "n_compared": 8,
+    "n_excluded": 0,
+    "bias": -0.0401179511478857,
+    "mae": 0.06021594255679101,
+    "rmse": 0.0750758474084525
+  }
+}

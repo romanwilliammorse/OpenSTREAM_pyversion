@@ -4,6 +4,17 @@ The user's requested full native port is **not yet complete**. Continue implemen
 
 ## Current checkpoint — 0.2.1, 2026-11-14
 
+Bartolomey adapter and frozen pilot implemented and executed. The database is
+now a pinned submodule. Native loading/input mapping covers all 34 records;
+85 new adapter/comparator/pilot-policy tests pass. Pilot entries 1/22/29/31,
+HEM and Saha–Zuber/Bestion, 100/200/400 cells and two control sensitivities
+produced 40 completed, converged runs passing the stated physical gates.
+All 59 unique measurements were paired in both models; 29/32 sensitivity
+checks passed, with three mesh failures retained. See BARTOLOMEY_PILOT.md and
+outputs/validation/bartolomey-pilot-01. No fitting, MATLAB execution or
+uncertainty-qualified experimental pass is claimed. The acceptance matrix
+now includes this later evidence; the initial audit paragraph below is historical.
+
 After completing and publishing the acceptance audit, implemented the requested
 GUI usability changes: original name-tag spelling in run titles/history/footer,
 an initial four-model chooser, prominent workspace model selection, and a
@@ -21,10 +32,13 @@ separate evidence axes and linked declaration annexes for 127 enum choices,
 16 interpolation entries and 585 inherited/public method entries. These counts
 are not additive and are not a full-parity percentage. The regenerated method
 inventory now fingerprints the current 0.2.1 source. No solver equations,
-reference arrays, numerical tolerances or new experimental results changed.
+reference arrays, numerical tolerances or new experimental results changed
+in that initial audit.
 
-Next implementation: native Bartolomey XML/input/measurement adapter and frozen
-pilot-case manifest. Parallel gates: new transient MATLAB references; the
+Next: resolve the retained Bartolomey mesh/interpolation failures in a separately
+frozen follow-up, quantify digitization/input uncertainty, and reproduce the
+calibration-associated MRM settings separately. Broader database families remain
+unported. Parallel gates: new transient MATLAB references; the
 NURETH companion's rejected `CONST` value and 0.1 s relaxation setting versus
 the paper's 0.2 s; Sawai coordinates/units; uncertainty and calibration partition.
 The inspected companion MLX contains no numerical output-array entries.

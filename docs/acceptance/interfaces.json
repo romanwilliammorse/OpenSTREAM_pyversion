@@ -21,9 +21,13 @@
     "evidence": [
       "tests/test_inputs.py",
       "outputs/verification/github-windows-ci.json",
-      "docs/input_properties_notes.md"
+      "docs/input_properties_notes.md",
+      "tests/test_bartolomey_adapter.py",
+      "outputs/validation/bartolomey-pilot-01/case_registry.json",
+      "docs/BARTOLOMEY_SOURCE_REVIEW.md",
+      "docs/BARTOLOMEY_PILOT.md"
     ],
-    "gap": "Original records and selected malformed inputs are tested, but a MATLAB-exported input corpus is absent. Unknown keys and numeric suffixes are stricter errors than upstream warnings/prefix parsing.",
+    "gap": "Original records and selected malformed inputs are tested, but a MATLAB-exported input corpus is absent. Unknown keys and numeric suffixes are stricter errors than upstream warnings/prefix parsing. Bartolomey source-record/default/override generation now has native fixtures and a complete 34-record registry; this does not supply an independent MATLAB-exported input corpus.",
     "priority": "P1",
     "acceptance_criteria": [
       "Export effective input records for every preserved input set and compare values, types, dimensions, selected identifiers and solver-dependent resolution.",
@@ -195,9 +199,14 @@
       "tests/test_inputs.py",
       "tests/test_gui_schema.py",
       "docs/input_properties_notes.md",
-      "docs/API.md"
+      "docs/API.md",
+      "tests/test_bartolomey_adapter.py",
+      "outputs/validation/bartolomey-pilot-01/case_registry.json",
+      "outputs/validation/bartolomey-pilot-01/report.json",
+      "docs/BARTOLOMEY_SOURCE_REVIEW.md",
+      "docs/BARTOLOMEY_PILOT.md"
     ],
-    "gap": "Column-major wall reshaping and selected boundary/geometry rules are checked, but nonzero-angle and broad multiwall source-export comparisons are absent.",
+    "gap": "Column-major wall reshaping and selected boundary/geometry rules are checked, but nonzero-angle and broad multiwall source-export comparisons are absent. Bartolomey tests and 40 pilot runs add straight-tube SI dimension, distributed heating and boundary checks; redundant rounded source values are audited without replacing stored mandatory inputs. General asymmetric/multiwall and nonzero-angle MATLAB comparisons remain open.",
     "priority": "P0",
     "acceptance_criteria": [
       "Check hydraulic diameter, wall fractions, axial length and segment power integration with explicit units.",
