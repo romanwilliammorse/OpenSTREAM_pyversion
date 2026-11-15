@@ -1,0 +1,10 @@
+{
+  "wheel_sha256": "1431954476c1ee7e1eb4647cd74e209409c93b6619fa284b4703be4904c25007",
+  "all_native_modules_match_source": true,
+  "module_count": 17,
+  "license_files": [
+    "openstream_python-0.1.0.dist-info/licenses/LICENSE",
+    "openstream_python-0.1.0.dist-info/licenses/docs/THIRD_PARTY.md",
+    "openstream_python-0.1.0.dist-info/licenses/licenses/CoolPropWrapper_LICENSE"
+  ]
+}

@@ -1,0 +1,823 @@
+{
+  "id": "26ede43de58643d7ab8052d201f7d94b",
+  "framework": "FourField",
+  "status": "completed",
+  "phase": "Completed",
+  "created_at": "2026-11-15T00:04:04.054650+00:00",
+  "progress": [
+    {
+      "phase": "initialization",
+      "time_s": 1.0,
+      "point_converged": true,
+      "max_iterations": 6,
+      "time_dW_kg_s": 0.2037700777076566,
+      "time_dP_Pa": 642899.3201571647,
+      "time_dH_J_kg": 695941.5584840125,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 6.721030681999807e-08,
+      "point_dP_Pa": 0.09969304781407118,
+      "point_dH_J_kg": 0.06733244191855192,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 2.0,
+      "point_converged": true,
+      "max_iterations": 5,
+      "time_dW_kg_s": 0.19347140495515536,
+      "time_dP_Pa": 473253.6242906945,
+      "time_dH_J_kg": 461381.9084677971,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 1.0925341853429416e-07,
+      "point_dP_Pa": 0.09928233083337545,
+      "point_dH_J_kg": 0.020149533404037356,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 3.0,
+      "point_converged": true,
+      "max_iterations": 4,
+      "time_dW_kg_s": 0.009188801813519956,
+      "time_dP_Pa": 11735.726564452052,
+      "time_dH_J_kg": 106242.71409007348,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 1.3141807087002633e-08,
+      "point_dP_Pa": 0.09878094028681517,
+      "point_dH_J_kg": 0.0030030561611056328,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 4.0,
+      "point_converged": true,
+      "max_iterations": 3,
+      "time_dW_kg_s": 0.0009777397550650574,
+      "time_dP_Pa": 1250.4378940146416,
+      "time_dH_J_kg": 16403.016713690013,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 6.286328199656133e-08,
+      "point_dP_Pa": 0.03837671224027872,
+      "point_dH_J_kg": 0.01408441737294197,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 5.0,
+      "point_converged": true,
+      "max_iterations": 3,
+      "time_dW_kg_s": 0.00011758703018602268,
+      "time_dP_Pa": 145.12801650259644,
+      "time_dH_J_kg": 2087.2687418600544,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 2.5972526324080647e-08,
+      "point_dP_Pa": 0.08429548237472773,
+      "point_dH_J_kg": 0.028592251474037766,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 6.0,
+      "point_converged": true,
+      "max_iterations": 3,
+      "time_dW_kg_s": 1.3094324281329173e-05,
+      "time_dP_Pa": 15.219901426695287,
+      "time_dH_J_kg": 234.1283517680131,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 5.654947708710889e-08,
+      "point_dP_Pa": 0.09800112899392843,
+      "point_dH_J_kg": 0.09929798869416118,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 7.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dW_kg_s": 1.3188051576629167e-06,
+      "time_dP_Pa": 1.4369400311261415,
+      "time_dH_J_kg": 23.58867635484785,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 3.2700509314254056e-08,
+      "point_dP_Pa": 0.027247940190136433,
+      "point_dH_J_kg": 0.09093839535489678,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 8.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dW_kg_s": 1.202897006030712e-07,
+      "time_dP_Pa": 0.12310620956122875,
+      "time_dH_J_kg": 2.1507741985842586,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 1.3100487819550644e-08,
+      "point_dP_Pa": 0.0024630604311823845,
+      "point_dH_J_kg": 0.0918365940451622,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 9.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dW_kg_s": 9.944415846341315e-09,
+      "time_dP_Pa": 0.011389153078198433,
+      "time_dH_J_kg": 0.17784100491553545,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 5.508473524540314e-09,
+      "point_dP_Pa": 0.00605646800249815,
+      "point_dH_J_kg": 0.09913064446300268,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 1.0,
+      "point_converged": false,
+      "max_iterations": 100,
+      "time_dWLb_kg_s_m": 0.27192099965639616,
+      "time_dUb_m_s": 1.4729572275888465,
+      "time_dWLw_kg_s_m": 0.25711436199873255,
+      "time_dUw_m_s": 7.701975312337133,
+      "time_dFw_Hz": 92.9556180778637,
+      "time_dUd_m_s": 2.346659951569098,
+      "wave_frequency_temporally_converged": false
+    },
+    {
+      "phase": "initialization",
+      "time_s": 2.0,
+      "point_converged": true,
+      "max_iterations": 13,
+      "time_dWLb_kg_s_m": 0.28611266643734057,
+      "time_dUb_m_s": 0.19649277083475036,
+      "time_dWLw_kg_s_m": 0.42645370511338554,
+      "time_dUw_m_s": 0.488523306285765,
+      "time_dFw_Hz": 4.218739732225146,
+      "time_dUd_m_s": 0.1302057251866131,
+      "wave_frequency_temporally_converged": false
+    },
+    {
+      "phase": "initialization",
+      "time_s": 3.0,
+      "point_converged": true,
+      "max_iterations": 9,
+      "time_dWLb_kg_s_m": 0.11944749919003128,
+      "time_dUb_m_s": 0.03413420144094825,
+      "time_dWLw_kg_s_m": 0.11944749919003128,
+      "time_dUw_m_s": 0.03219602533789967,
+      "time_dFw_Hz": 0.6522430468191587,
+      "time_dUd_m_s": 0.032613178329803816,
+      "wave_frequency_temporally_converged": false
+    },
+    {
+      "phase": "initialization",
+      "time_s": 4.0,
+      "point_converged": true,
+      "max_iterations": 9,
+      "time_dWLb_kg_s_m": 0.03498583028067537,
+      "time_dUb_m_s": 0.023137937570241185,
+      "time_dWLw_kg_s_m": 0.03260282229615907,
+      "time_dUw_m_s": 0.019284924903343104,
+      "time_dFw_Hz": 0.08393452756534003,
+      "time_dUd_m_s": 0.0073812067686347405,
+      "wave_frequency_temporally_converged": true
+    },
+    {
+      "phase": "initialization",
+      "time_s": 5.0,
+      "point_converged": true,
+      "max_iterations": 7,
+      "time_dWLb_kg_s_m": 0.01179930501461779,
+      "time_dUb_m_s": 0.00897754109320914,
+      "time_dWLw_kg_s_m": 0.01136617230737258,
+      "time_dUw_m_s": 0.014921758971085719,
+      "time_dFw_Hz": 0.06945033854962901,
+      "time_dUd_m_s": 0.0068805836875220905,
+      "wave_frequency_temporally_converged": true
+    },
+    {
+      "phase": "initialization",
+      "time_s": 6.0,
+      "point_converged": true,
+      "max_iterations": 5,
+      "time_dWLb_kg_s_m": 0.0029488922087500535,
+      "time_dUb_m_s": 0.002416318589588684,
+      "time_dWLw_kg_s_m": 0.0029328096092180456,
+      "time_dUw_m_s": 0.006174971204431223,
+      "time_dFw_Hz": 0.06436536924567804,
+      "time_dUd_m_s": 0.0064098062104172016,
+      "wave_frequency_temporally_converged": true
+    },
+    {
+      "phase": "initialization",
+      "time_s": 7.0,
+      "point_converged": true,
+      "max_iterations": 4,
+      "time_dWLb_kg_s_m": 0.00042498879061037,
+      "time_dUb_m_s": 0.0009924771570499757,
+      "time_dWLw_kg_s_m": 0.0003827371664788526,
+      "time_dUw_m_s": 0.0034448565575999623,
+      "time_dFw_Hz": 0.062316095613709876,
+      "time_dUd_m_s": 0.0059676448653149805,
+      "wave_frequency_temporally_converged": true
+    },
+    {
+      "phase": "initialization",
+      "time_s": 8.0,
+      "point_converged": true,
+      "max_iterations": 4,
+      "time_dWLb_kg_s_m": 7.548099343873682e-05,
+      "time_dUb_m_s": 0.00019865878529978787,
+      "time_dWLw_kg_s_m": 5.1184740350929125e-05,
+      "time_dUw_m_s": 0.0032314329943670117,
+      "time_dFw_Hz": 0.06036543035438058,
+      "time_dUd_m_s": 0.00555284127835165,
+      "wave_frequency_temporally_converged": true
+    }
+  ],
+  "files": [
+    {
+      "name": "submitted_inputs.json",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/submitted_inputs.json"
+    },
+    {
+      "name": "results.zip",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/results.zip"
+    },
+    {
+      "name": "output/axial.png",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/axial.png"
+    },
+    {
+      "name": "output/convergence.csv",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/convergence.csv"
+    },
+    {
+      "name": "output/gui_verification.json",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/gui_verification.json"
+    },
+    {
+      "name": "output/initialization.npz",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/initialization.npz"
+    },
+    {
+      "name": "output/metadata.json",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/metadata.json"
+    },
+    {
+      "name": "output/mixture/axial.png",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/mixture/axial.png"
+    },
+    {
+      "name": "output/mixture/convergence.csv",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/mixture/convergence.csv"
+    },
+    {
+      "name": "output/mixture/initialization.npz",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/mixture/initialization.npz"
+    },
+    {
+      "name": "output/mixture/inputs/00-submitted_inputs.json",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/mixture/inputs/00-submitted_inputs.json"
+    },
+    {
+      "name": "output/mixture/metadata.json",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/mixture/metadata.json"
+    },
+    {
+      "name": "output/mixture/profiles.csv",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/mixture/profiles.csv"
+    },
+    {
+      "name": "output/mixture/results.npz",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/mixture/results.npz"
+    },
+    {
+      "name": "output/mixture/wall_profiles.csv",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/mixture/wall_profiles.csv"
+    },
+    {
+      "name": "output/profiles.csv",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/profiles.csv"
+    },
+    {
+      "name": "output/results.npz",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/results.npz"
+    },
+    {
+      "name": "output/wave_frequency.png",
+      "url": "/files/26ede43de58643d7ab8052d201f7d94b/output/wave_frequency.png"
+    }
+  ],
+  "converged": true,
+  "error": null,
+  "is_reference": true,
+  "changes": [],
+  "change_count": 0,
+  "reference": {
+    "status": "passed",
+    "message": "Archived steady and initialization profiles agree at rtol 1e-8, atol 0.",
+    "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+    "rtol": 1e-08,
+    "atol": 0.0,
+    "coordinate_atol": 1e-12,
+    "records": [
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "max_absolute_error": 1.044220265811191e-12,
+        "max_relative_error": 2.467035624109594e-11,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "film.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "max_absolute_error": 2.059719061975329e-09,
+        "max_relative_error": 1.3565369914080661e-09,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "film.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "max_absolute_error": 3.026798367500305e-09,
+        "max_relative_error": 2.493402740916268e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "film.H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 1.0443035325380379e-12,
+        "max_relative_error": 5.466247492208305e-11,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "drop.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 2.0316193172220665e-11,
+        "max_relative_error": 2.5229403151878547e-12,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "drop.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 3.026798367500305e-09,
+        "max_relative_error": 2.493402740916268e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "drop.H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "max_absolute_error": 7.645169219916426e-13,
+        "max_relative_error": 2.81370480643049e-11,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "film.wave.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "max_absolute_error": 3.856055919015944e-09,
+        "max_relative_error": 2.5396096926761515e-09,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "film.wave.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "max_absolute_error": 3.026798367500305e-09,
+        "max_relative_error": 2.493402740916268e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "film.wave.H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "max_absolute_error": 7.662689927023791e-13,
+        "max_relative_error": 3.412995994026596e-11,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "film.base.W",
+        "group": "expanded"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "max_absolute_error": 2.3926638448301674e-11,
+        "max_relative_error": 6.239469963959803e-12,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "film.base.U",
+        "group": "expanded"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "max_absolute_error": 3.026798367500305e-09,
+        "max_relative_error": 2.493402740916268e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "film.base.H",
+        "group": "expanded"
+      },
+      {
+        "passed": true,
+        "unit": "Hz",
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "max_absolute_error": 8.642899729238707e-10,
+        "max_relative_error": 4.1078183179604524e-11,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "film.wave.FREQUENCY",
+        "group": "expanded"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "max_absolute_error": 1.4517970159388938e-12,
+        "max_relative_error": 8.07244616727207e-11,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "film.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "max_absolute_error": 2.059719061975329e-09,
+        "max_relative_error": 1.3565369914080661e-09,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "film.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "max_absolute_error": 3.026798367500305e-09,
+        "max_relative_error": 2.493402740916268e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "film.H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          9,
+          101
+        ],
+        "max_absolute_error": 1.4517970159388938e-12,
+        "max_relative_error": 7.588835185077288e-11,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "drop.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          9,
+          101
+        ],
+        "max_absolute_error": 2.141398169897002e-11,
+        "max_relative_error": 2.7373429109045336e-12,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "drop.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          9,
+          101
+        ],
+        "max_absolute_error": 3.026798367500305e-09,
+        "max_relative_error": 2.493402740916268e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "drop.H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "max_absolute_error": 1.8059269357717511e-12,
+        "max_relative_error": 7.35293493046752e-11,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "film.wave.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "max_absolute_error": 3.856055919015944e-09,
+        "max_relative_error": 2.5396096926761515e-09,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "film.wave.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "max_absolute_error": 3.026798367500305e-09,
+        "max_relative_error": 2.493402740916268e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "film.wave.H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "max_absolute_error": 9.2926361050516e-13,
+        "max_relative_error": 8.07244616727207e-11,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "film.base.W",
+        "group": "expanded"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "max_absolute_error": 3.9690917219559196e-11,
+        "max_relative_error": 1.2943426578808877e-11,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "film.base.U",
+        "group": "expanded"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "max_absolute_error": 3.026798367500305e-09,
+        "max_relative_error": 2.493402740916268e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "film.base.H",
+        "group": "expanded"
+      },
+      {
+        "passed": true,
+        "unit": "Hz",
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "max_absolute_error": 1.3201635340465145e-09,
+        "max_relative_error": 6.263789258788219e-11,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "film.wave.FREQUENCY",
+        "group": "expanded"
+      }
+    ],
+    "max_relative_error": 2.5396096926761515e-09,
+    "experimental_validation": "not performed",
+    "limitations": [
+      "The archive producer's MATLAB, CoolProp and source versions are unknown.",
+      "Agreement does not establish physical consistency or full OpenSTREAM parity.",
+      "Supplementary iteration/diagnostic disagreements remain documented separately."
+    ],
+    "archive": {
+      "file": "tutorial1_FourFieldSolver.mat",
+      "sha256": "fd28edab74cad654721572c4644461dc20fef27ed4a3d617458b9717e13eacf1",
+      "bytes": 632002,
+      "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:24 2026"
+    },
+    "producer_metadata": {
+      "matlab_version": null,
+      "coolprop_version": null,
+      "source_commit": null
+    }
+  },
+  "physical": {
+    "status": "failed",
+    "diagnostics": {
+      "physical_consistency": false,
+      "area_closure_relative_tolerance": 1e-06,
+      "max_area_closure_relative": 0.4413082218380726,
+      "max_unblended_annular_area_closure_relative": 0.11241051742329389,
+      "outlet_area_closure_relative": 0.010737048682143202,
+      "common_annular_upstream_face_z_m": 1.595,
+      "common_annular_downstream_face_z_m": 5.5,
+      "common_annular_cell_count": 71,
+      "max_common_annular_cell_mass_residual_kg_s": 1.94576021961268e-11,
+      "max_abs_common_annular_mass_residual_kg_s": 7.240892191395787e-10,
+      "inventory_by_time": [
+        {
+          "time_s": 0.0,
+          "max_area_closure_relative": 0.4413082218380726,
+          "outlet_area_closure_relative": 0.010737048682143202,
+          "max_unblended_annular_area_closure_relative": 0.11241051742329389,
+          "unblended_annular_node_count": 72,
+          "nonfinite_inventory_or_area_node_count": 0,
+          "nonfinite_unblended_annular_node_count": 0,
+          "max_all_phase_cell_mass_residual_kg_s": 1.94576021961268e-11,
+          "global_all_phase_mass_residual_kg_s": 7.9017474508003e-10,
+          "max_common_annular_cell_mass_residual_kg_s": 1.94576021961268e-11,
+          "common_annular_mass_residual_kg_s": 7.240892191395787e-10,
+          "common_annular_mass_inventory_kg": 0.015819340343491632,
+          "integrated_phase_mass_inventory_kg": 0.047911647938455405
+        }
+      ],
+      "inventory_interpretation": "W/U is kg/m; occupied area = sum(Wfilm/Ufilm)/rhoF + Wdrop/(Udrop*rhoF) + Wvapor/(Uvapor*rhoV). The 1e-6 tolerance tests an algebraic geometry identity, not measurement uncertainty. Physical-consistency rejection applies only where AFFNC >= 1-1e-12 (numerically unblended annular flow); absence of such nodes leaves status unknown. Common-annular mass diagnostics use a fixed downstream control volume whose upstream face and all cells satisfy this mask at every time; its residual is outflow minus inflow plus backward-Euler storage, with no storage for the initial steady state. Pre-annular values are source initialization quantities and all-region area/mass diagnostics there are descriptive, not physical-domain acceptance checks. Zero/zero inventory is indeterminate and fails if in the applicable region. Any four-field film-thickness caps do not independently enforce this inventory identity. Numerical convergence and algebraic flow partition do not establish mass-storage conservation. Whether a discrepancy is shared with upstream is established by a separate reference comparison; see the baseline verification report.",
+      "nonfinite_state_count": 0,
+      "base_plus_wave_minus_film_max_kg_s": 0.0,
+      "film_plus_drop_minus_liquid_max_kg_s": 3.469446951953614e-18,
+      "all_fields_minus_mixture_max_kg_s": 1.3877787807814457e-17,
+      "base_min_kg_s": 0.0,
+      "wave_min_kg_s": 0.0,
+      "drop_min_kg_s": 0.01172757330528559,
+      "base_min_m_s": 1.5183655694787734,
+      "wave_min_m_s": 0.759182785082333,
+      "drop_min_m_s": 1.518365570164666,
+      "frequency_min_Hz": 21.040121691372597,
+      "frequency_temporally_converged": true,
+      "onset_equilibrium_converged": true,
+      "nested_closure_failures": [],
+      "balance_note": "Raw final pseudo-time mass residuals; POSFILM clipping and sequential source updates are retained.",
+      "base_mass_residual_max_kg_s": 0.0004305856934339351,
+      "base_wet_annular_mass_residual_max_kg_s": 0.0004305856934339351,
+      "base_unclamped_annular_mass_residual_max_kg_s": 2.4493390997778084e-06,
+      "base_zero_mass_node_count": 1,
+      "wave_mass_residual_max_kg_s": 0.000424136966741464,
+      "wave_wet_annular_mass_residual_max_kg_s": 2.35783168200021e-06,
+      "wave_unclamped_annular_mass_residual_max_kg_s": 2.35783168200021e-06,
+      "wave_zero_mass_node_count": 7
+    },
+    "message": "Physical consistency checks failed. Inspect diagnostics; numerical agreement does not establish physical validity."
+  },
+  "finished_at": "2026-11-15T00:04:51.312368+00:00"
+}

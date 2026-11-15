@@ -1,0 +1,100 @@
+{
+  "native_source_sha256": {
+    "__init__.py": "c204ec07f5df840cfb8e2645eb3d76cacaaf90799ef04cd6690b6e935b430e8f",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "annular.py": "1702712df74bb74ed0859e4e886ec959bd3fe196627368e8d5555591fc8476f5",
+    "cli.py": "2536adc1d274fb50f4ceeb1ab85cf21e8ece82877141eae6a1d38cbaecdbdffc",
+    "ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+    "fields.py": "68d964a9061c7b97fe1dc40d342e5fc13b6837755ce601e6475c54f8f3ce89ec",
+    "fourfield.py": "59e4109403d979480875c5c5e7058d29351c6a746edde23a510a7b91fb76fa26",
+    "inputs.py": "a0d7faa6e8509cfe7e1317149237f4da51aafdfdf432ad65ebf75c60a93ed88b",
+    "multifield_output.py": "cba4df972f23bcdfe749619727270bfaa8454948f5f3b710ff529ed82a762209",
+    "numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+    "output.py": "6c6f2dd27f787a71b9dfef2af61c4c9b4b55b22f06c329e57cdc7b53f9962374",
+    "properties.py": "858c58d17567ea8ddde370c4f0266e9ff701faecaec8acc56896e3d02148a37c",
+    "solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+    "tf_fields.py": "4392731e116c0a23a6823a05e031ed2dd54d1d83b803f05f1781b79db8fc3c73",
+    "threefield.py": "74e654255f95531d88ec7b9756f4d61812eb4d1c139d3add6c49cc2fc71ddb67",
+    "twofluid.py": "cf80622479f56566c2fe5d7c123a04eb36f6158d1069eaae51ebc692087da1a9"
+  },
+  "cases": {
+    "MixtureSolver": {
+      "state": "INITIALSTEPCONVERGED",
+      "numerically_converged": true,
+      "output": "outputs\\release-01\\MixtureSolver",
+      "diagnostics": null
+    },
+    "TwoFluidSolver": {
+      "state": "INITIALSTEPCONVERGED",
+      "numerically_converged": true,
+      "output": "outputs\\release-01\\TwoFluidSolver",
+      "diagnostics": {
+        "physical_consistency": false,
+        "area_closure_relative_tolerance": 1e-06,
+        "max_area_closure_relative": 0.4105610706900207,
+        "outlet_area_closure_relative": 0.03467311857853006,
+        "mass_balance_residual_kg_s": -3.0761341615614946e-07,
+        "energy_balance_residual_W": 30.049663123339997,
+        "max_source_energy_identity_residual_W_m": 7.275957614183426e-12,
+        "by_time": [
+          {
+            "time_s": 0.0,
+            "mass_balance_residual_kg_s": -3.0761341615614946e-07,
+            "energy_balance_residual_W": 30.049663123339997,
+            "max_area_closure_relative": 0.4105610706900207,
+            "outlet_area_closure_relative": 0.03467311857853006,
+            "max_source_energy_identity_residual_W_m": 7.275957614183426e-12,
+            "steady_discrete_product_term_W": 30.886881821306385
+          }
+        ],
+        "limitation": "Numerical convergence does not establish physical area closure. Suspected source/formulation limitation or translation error; MATLAB agreement unverified."
+      }
+    },
+    "ThreeFieldSolver": {
+      "state": "INITIALSTEPCONVERGED",
+      "numerically_converged": true,
+      "output": "outputs\\release-01\\ThreeFieldSolver",
+      "diagnostics": {
+        "physical_consistency": null,
+        "interpretation": "Checks below do not establish full physical validation; POSFILM changes the unconstrained mass equation at dryout",
+        "max_liquid_partition_error_kg_s": 3.469446951953614e-18,
+        "max_film_mass_residual_kg_s": 0.0002535411383029291,
+        "max_positive_film_mass_residual_kg_s": 2.192487437724768e-06,
+        "clipped_node_wall_count": 1,
+        "min_film_flow_kg_s": 0.0,
+        "min_drop_flow_kg_s": 0.01173091510509183,
+        "max_onset_equilibrium_residual_kg_s_m": 4.3494199819150633e-05
+      }
+    },
+    "FourFieldSolver": {
+      "state": "INITIALSTEPCONVERGED",
+      "numerically_converged": true,
+      "output": "outputs\\release-01\\FourFieldSolver",
+      "diagnostics": {
+        "nonfinite_state_count": 0,
+        "base_plus_wave_minus_film_max_kg_s": 0.0,
+        "film_plus_drop_minus_liquid_max_kg_s": 3.469446951953614e-18,
+        "all_fields_minus_mixture_max_kg_s": 1.3877787807814457e-17,
+        "base_min_kg_s": 0.0,
+        "wave_min_kg_s": 0.0,
+        "drop_min_kg_s": 0.01172757330528559,
+        "base_min_m_s": 1.5183655694787734,
+        "wave_min_m_s": 0.759182785082333,
+        "drop_min_m_s": 1.518365570164666,
+        "frequency_min_Hz": 21.040121691372597,
+        "frequency_temporally_converged": true,
+        "onset_equilibrium_converged": true,
+        "nested_closure_failures": [],
+        "balance_note": "Raw final pseudo-time mass residuals; POSFILM clipping and sequential source updates are retained.",
+        "base_mass_residual_max_kg_s": 0.0004305856934339351,
+        "base_wet_annular_mass_residual_max_kg_s": 0.0004305856934339351,
+        "base_unclamped_annular_mass_residual_max_kg_s": 2.4493390997778084e-06,
+        "base_zero_mass_node_count": 1,
+        "wave_mass_residual_max_kg_s": 0.000424136966741464,
+        "wave_wet_annular_mass_residual_max_kg_s": 2.35783168200021e-06,
+        "wave_unclamped_annular_mass_residual_max_kg_s": 2.35783168200021e-06,
+        "wave_zero_mass_node_count": 7
+      }
+    }
+  }
+}

@@ -1,0 +1,729 @@
+{
+  "numerical_convergence": false,
+  "solver_state": "SOLVEDNOTCONVERGED",
+  "precursor_convergence": true,
+  "physical_validation": "unverified",
+  "matlab_equivalence": "unverified",
+  "finite_primary_states_and_sources": true,
+  "minimum_film_flow_kg_s": 0.00020479026137945657,
+  "minimum_drop_flow_kg_s": 0.009036784129668261,
+  "minimum_velocity_m_s": 1.4510325807261681,
+  "max_liquid_mass_partition_error_kg_s": 3.469446951953614e-18,
+  "max_annular_inlet_change_from_initialized_boundary": 0.0,
+  "max_mixture_inlet_mass_error_kg_s": 0.0,
+  "max_mixture_inlet_enthalpy_error_J_kg": 0.0,
+  "max_mixture_inlet_pressure_error_Pa": 0.0,
+  "max_film_evaporation_energy_identity_W_m2": 1.1641532182693481e-10,
+  "max_annular_enthalpy_departure_from_saturated_liquid_J_kg": 0.0,
+  "annular_energy_equation": "Not solved upstream; film/drop H is prescribed HF. Evaporation identity and precursor enthalpy equation are checked, not independent annular energy conservation.",
+  "max_film_mass_residual_kg_s": 0.0004696484650966856,
+  "max_positive_film_mass_residual_kg_s": 0.0004696484650966856,
+  "max_zero_film_mass_residual_kg_s": null,
+  "minimum_zero_film_mass_residual_kg_s": null,
+  "zero_film_node_wall_time_count": 0,
+  "max_film_mass_fixed_point_update_kg_s_m": 0.0064106959418206485,
+  "max_full_film_momentum_fixed_point_update_m_s": 0.7775563415302802,
+  "max_drop_momentum_fixed_point_update_m_s": 0.007242775938770762,
+  "max_unconstrained_annular_film_momentum_residual_m_s2": null,
+  "max_annular_drop_momentum_residual_m_s2": null,
+  "max_annular_thin_film_force_residual_N_m2": null,
+  "unblended_full_unclamped_film_node_wall_time_count": 0,
+  "thin_film_node_time_count": 96,
+  "max_occupied_area_relative_error": 0.08332536447624216,
+  "max_annular_occupied_area_relative_error": null,
+  "max_all_phase_cell_mass_residual_kg_s": 0.0011238866811032172,
+  "max_all_phase_global_mass_residual_kg_s": 0.010183958804851593,
+  "maximum_precursor_residuals": {
+    "mixture.mass_kg_s": 2.498788896910297e-09,
+    "mixture.energy_W_m": 4.7431887651328e-05,
+    "mixture.momentum_Pa": 0.00015511442574934656
+  },
+  "outlet_initial_final": {
+    "film_flow_kg_s": [
+      0.0058876468170007,
+      0.01841672134596705
+    ],
+    "film_thickness_m": [
+      [
+        4.3383533745523834e-05
+      ],
+      [
+        0.00017790682984814384
+      ]
+    ],
+    "drop_velocity_m_s": [
+      25.686228253356223,
+      13.06282115295231
+    ]
+  },
+  "controls": {
+    "ERRORW": 1e-08,
+    "ERRORH": 0.001,
+    "ERRORP": 0.001,
+    "ERRORWF": 1e-07,
+    "ERRORUF": 0.0001,
+    "ERRORUD": 0.0001,
+    "UFEQUILTOL": 0.001,
+    "RELAXWF": 0.5,
+    "RELAXUF": 0.2,
+    "RELAXUD": 0.2,
+    "MAXITER": 250
+  },
+  "arrays_layout": "Residuals at TIME[1:],Z[1:]; film arrays retain wall dimension; occupied area excludes inlet.",
+  "per_time": [
+    {
+      "time_s": 0.125,
+      "max_positive_film_mass_residual_kg_s": 0.0003425587858211783,
+      "max_all_phase_mass_residual_kg_s": 0.0009262715563645284,
+      "global_all_phase_mass_residual_kg_s": -0.000563519624057994
+    },
+    {
+      "time_s": 0.25,
+      "max_positive_film_mass_residual_kg_s": 0.0003742043526099338,
+      "max_all_phase_mass_residual_kg_s": 0.00022855594080094601,
+      "global_all_phase_mass_residual_kg_s": 0.003019381837563441
+    },
+    {
+      "time_s": 0.375,
+      "max_positive_film_mass_residual_kg_s": 6.921853510939019e-09,
+      "max_all_phase_mass_residual_kg_s": 0.0005535028333169059,
+      "global_all_phase_mass_residual_kg_s": 0.004724921016662966
+    },
+    {
+      "time_s": 0.5,
+      "max_positive_film_mass_residual_kg_s": 0.0004696484650966856,
+      "max_all_phase_mass_residual_kg_s": 0.0004259133714067928,
+      "global_all_phase_mass_residual_kg_s": 0.006103658067788009
+    },
+    {
+      "time_s": 0.625,
+      "max_positive_film_mass_residual_kg_s": 0.0002989567727907222,
+      "max_all_phase_mass_residual_kg_s": 0.0007737291900435841,
+      "global_all_phase_mass_residual_kg_s": 0.006916870080901126
+    },
+    {
+      "time_s": 0.75,
+      "max_positive_film_mass_residual_kg_s": 1.2010311933093737e-06,
+      "max_all_phase_mass_residual_kg_s": 0.0007520143822935333,
+      "global_all_phase_mass_residual_kg_s": 0.007992242408819206
+    },
+    {
+      "time_s": 0.875,
+      "max_positive_film_mass_residual_kg_s": 2.173738365241688e-05,
+      "max_all_phase_mass_residual_kg_s": 0.001072666433719684,
+      "global_all_phase_mass_residual_kg_s": 0.00218486292986714
+    },
+    {
+      "time_s": 1.0,
+      "max_positive_film_mass_residual_kg_s": 0.0004409001778639065,
+      "max_all_phase_mass_residual_kg_s": 0.0009050163440281877,
+      "global_all_phase_mass_residual_kg_s": 0.010183958804851593
+    },
+    {
+      "time_s": 1.125,
+      "max_positive_film_mass_residual_kg_s": 1.0305946820510074e-06,
+      "max_all_phase_mass_residual_kg_s": 0.0005385684249489503,
+      "global_all_phase_mass_residual_kg_s": 0.007197733595185476
+    },
+    {
+      "time_s": 1.25,
+      "max_positive_film_mass_residual_kg_s": 6.180239510802411e-09,
+      "max_all_phase_mass_residual_kg_s": 0.0010881700489255703,
+      "global_all_phase_mass_residual_kg_s": -0.001852860506358651
+    },
+    {
+      "time_s": 1.375,
+      "max_positive_film_mass_residual_kg_s": 5.854335134074587e-09,
+      "max_all_phase_mass_residual_kg_s": 0.00029463656754794693,
+      "global_all_phase_mass_residual_kg_s": 0.0035829071291831453
+    },
+    {
+      "time_s": 1.5,
+      "max_positive_film_mass_residual_kg_s": 5.226987811194272e-09,
+      "max_all_phase_mass_residual_kg_s": 0.00020691074392191445,
+      "global_all_phase_mass_residual_kg_s": 0.00304337055112437
+    },
+    {
+      "time_s": 1.625,
+      "max_positive_film_mass_residual_kg_s": 4.9111380894916856e-09,
+      "max_all_phase_mass_residual_kg_s": 0.0001469893868247428,
+      "global_all_phase_mass_residual_kg_s": 0.0023471114907810597
+    },
+    {
+      "time_s": 1.75,
+      "max_positive_film_mass_residual_kg_s": 5.124369996476613e-09,
+      "max_all_phase_mass_residual_kg_s": 0.00010958246497763907,
+      "global_all_phase_mass_residual_kg_s": 0.0018315767112231595
+    },
+    {
+      "time_s": 1.875,
+      "max_positive_film_mass_residual_kg_s": 4.289857924516191e-09,
+      "max_all_phase_mass_residual_kg_s": 0.0011238866811032172,
+      "global_all_phase_mass_residual_kg_s": -0.006106339355900929
+    },
+    {
+      "time_s": 2.0,
+      "max_positive_film_mass_residual_kg_s": 7.193339073143868e-08,
+      "max_all_phase_mass_residual_kg_s": 8.899258227202167e-05,
+      "global_all_phase_mass_residual_kg_s": 0.00043161856957135014
+    },
+    {
+      "time_s": 2.125,
+      "max_positive_film_mass_residual_kg_s": 4.3704029884818456e-08,
+      "max_all_phase_mass_residual_kg_s": 4.7655974339966555e-05,
+      "global_all_phase_mass_residual_kg_s": 0.0004155240576372765
+    },
+    {
+      "time_s": 2.25,
+      "max_positive_film_mass_residual_kg_s": 2.8262419443929494e-08,
+      "max_all_phase_mass_residual_kg_s": 3.448682344746711e-05,
+      "global_all_phase_mass_residual_kg_s": 0.00024639058287610885
+    },
+    {
+      "time_s": 2.375,
+      "max_positive_film_mass_residual_kg_s": 1.8940246555702346e-08,
+      "max_all_phase_mass_residual_kg_s": 2.452411600713841e-05,
+      "global_all_phase_mass_residual_kg_s": 0.00014529335058121982
+    },
+    {
+      "time_s": 2.5,
+      "max_positive_film_mass_residual_kg_s": 1.2962663999648277e-08,
+      "max_all_phase_mass_residual_kg_s": 1.6907160594650106e-05,
+      "global_all_phase_mass_residual_kg_s": 8.962613128212932e-05
+    },
+    {
+      "time_s": 2.625,
+      "max_positive_film_mass_residual_kg_s": 5.981142346840867e-08,
+      "max_all_phase_mass_residual_kg_s": 1.138531304030383e-05,
+      "global_all_phase_mass_residual_kg_s": 5.9660812873946914e-05
+    },
+    {
+      "time_s": 2.75,
+      "max_positive_film_mass_residual_kg_s": 4.081387425247662e-08,
+      "max_all_phase_mass_residual_kg_s": 7.530754427801098e-06,
+      "global_all_phase_mass_residual_kg_s": 4.367903914911083e-05
+    },
+    {
+      "time_s": 2.875,
+      "max_positive_film_mass_residual_kg_s": 3.545449358847096e-08,
+      "max_all_phase_mass_residual_kg_s": 4.952367164884064e-06,
+      "global_all_phase_mass_residual_kg_s": 3.466497457655177e-05
+    },
+    {
+      "time_s": 3.0,
+      "max_positive_film_mass_residual_kg_s": 2.3892417792370328e-08,
+      "max_all_phase_mass_residual_kg_s": 3.258599738478611e-06,
+      "global_all_phase_mass_residual_kg_s": 2.882892570124418e-05
+    },
+    {
+      "time_s": 3.125,
+      "max_positive_film_mass_residual_kg_s": 1.9757840747947628e-08,
+      "max_all_phase_mass_residual_kg_s": 2.144151604100559e-06,
+      "global_all_phase_mass_residual_kg_s": 2.4265816900690405e-05
+    },
+    {
+      "time_s": 3.25,
+      "max_positive_film_mass_residual_kg_s": 1.1577523189765953e-07,
+      "max_all_phase_mass_residual_kg_s": 1.3790356538935506e-06,
+      "global_all_phase_mass_residual_kg_s": 2.0200033391754852e-05
+    },
+    {
+      "time_s": 3.375,
+      "max_positive_film_mass_residual_kg_s": 7.505742287193344e-08,
+      "max_all_phase_mass_residual_kg_s": 1.1594465818595688e-06,
+      "global_all_phase_mass_residual_kg_s": 1.6528711208547846e-05
+    },
+    {
+      "time_s": 3.5,
+      "max_positive_film_mass_residual_kg_s": 4.919802964314517e-08,
+      "max_all_phase_mass_residual_kg_s": 9.914001647010063e-07,
+      "global_all_phase_mass_residual_kg_s": 1.3208572827107382e-05
+    },
+    {
+      "time_s": 3.625,
+      "max_positive_film_mass_residual_kg_s": 3.214494686175297e-08,
+      "max_all_phase_mass_residual_kg_s": 8.007713996324716e-07,
+      "global_all_phase_mass_residual_kg_s": 1.0298693911242191e-05
+    },
+    {
+      "time_s": 3.75,
+      "max_positive_film_mass_residual_kg_s": 2.0922103461068313e-08,
+      "max_all_phase_mass_residual_kg_s": 6.191802428096028e-07,
+      "global_all_phase_mass_residual_kg_s": 7.835089502205156e-06
+    },
+    {
+      "time_s": 3.875,
+      "max_positive_film_mass_residual_kg_s": 1.3563043298509708e-08,
+      "max_all_phase_mass_residual_kg_s": 4.6556932853741853e-07,
+      "global_all_phase_mass_residual_kg_s": 5.827035154546273e-06
+    },
+    {
+      "time_s": 4.0,
+      "max_positive_film_mass_residual_kg_s": 8.768541170161236e-09,
+      "max_all_phase_mass_residual_kg_s": 3.4093294118964226e-07,
+      "global_all_phase_mass_residual_kg_s": 4.252020497588493e-06
+    },
+    {
+      "time_s": 4.125,
+      "max_positive_film_mass_residual_kg_s": 5.6529260386589284e-09,
+      "max_all_phase_mass_residual_kg_s": 2.445242106485779e-07,
+      "global_all_phase_mass_residual_kg_s": 3.0487815002318284e-06
+    },
+    {
+      "time_s": 4.25,
+      "max_positive_film_mass_residual_kg_s": 3.6411595633143584e-09,
+      "max_all_phase_mass_residual_kg_s": 1.7163913996393056e-07,
+      "global_all_phase_mass_residual_kg_s": 2.156558411793019e-06
+    },
+    {
+      "time_s": 4.375,
+      "max_positive_film_mass_residual_kg_s": 4.2852199766060806e-09,
+      "max_all_phase_mass_residual_kg_s": 1.1884464828471053e-07,
+      "global_all_phase_mass_residual_kg_s": 1.501101215825307e-06
+    },
+    {
+      "time_s": 4.5,
+      "max_positive_film_mass_residual_kg_s": 5.387907103327275e-09,
+      "max_all_phase_mass_residual_kg_s": 8.120789079468781e-08,
+      "global_all_phase_mass_residual_kg_s": 1.0367723845874923e-06
+    },
+    {
+      "time_s": 4.625,
+      "max_positive_film_mass_residual_kg_s": 4.7175803176779745e-09,
+      "max_all_phase_mass_residual_kg_s": 5.4490062329215495e-08,
+      "global_all_phase_mass_residual_kg_s": 6.869492110303521e-07
+    },
+    {
+      "time_s": 4.75,
+      "max_positive_film_mass_residual_kg_s": 4.386077977376612e-09,
+      "max_all_phase_mass_residual_kg_s": 3.654456964541364e-08,
+      "global_all_phase_mass_residual_kg_s": 4.683826445472938e-07
+    },
+    {
+      "time_s": 4.875,
+      "max_positive_film_mass_residual_kg_s": 5.525268094832073e-09,
+      "max_all_phase_mass_residual_kg_s": 2.3938504648823857e-08,
+      "global_all_phase_mass_residual_kg_s": 3.1608728486287597e-07
+    },
+    {
+      "time_s": 5.0,
+      "max_positive_film_mass_residual_kg_s": 4.190195920707879e-09,
+      "max_all_phase_mass_residual_kg_s": 1.592747256112803e-08,
+      "global_all_phase_mass_residual_kg_s": 2.1094459950521395e-07
+    }
+  ],
+  "timestamp_utc": "2026-11-14T22:10:46.796658+00:00",
+  "seconds": 25.790936500008684,
+  "cells": 25,
+  "time_step_s": 0.125,
+  "states": 41,
+  "variant": "sensitivity variant",
+  "warnings": [
+    "Temporal convergence reached without point convergence"
+  ],
+  "native_source_sha256": {
+    "__init__.py": "c204ec07f5df840cfb8e2645eb3d76cacaaf90799ef04cd6690b6e935b430e8f",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "annular.py": "1702712df74bb74ed0859e4e886ec959bd3fe196627368e8d5555591fc8476f5",
+    "cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+    "ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+    "fields.py": "68d964a9061c7b97fe1dc40d342e5fc13b6837755ce601e6475c54f8f3ce89ec",
+    "fourfield.py": "59e4109403d979480875c5c5e7058d29351c6a746edde23a510a7b91fb76fa26",
+    "inputs.py": "a0d7faa6e8509cfe7e1317149237f4da51aafdfdf432ad65ebf75c60a93ed88b",
+    "multifield_output.py": "20d4f5e6fd1531ed1b1c0c84e25ab87932b5b9f1a15cf7280a22e0b1e5906aa5",
+    "numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+    "output.py": "c8326a4a6e8b5ddf1b6f618d0eaa655530452014c5b3fee2c2873c53c9299ee2",
+    "plotting.py": "b425b785f9fe125f546e0e4c72a7d30249ddcc6a818f2a37243f024fd0fa274b",
+    "properties.py": "858c58d17567ea8ddde370c4f0266e9ff701faecaec8acc56896e3d02148a37c",
+    "solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+    "tf_fields.py": "4392731e116c0a23a6823a05e031ed2dd54d1d83b803f05f1781b79db8fc3c73",
+    "threefield.py": "74e654255f95531d88ec7b9756f4d61812eb4d1c139d3add6c49cc2fc71ddb67",
+    "twofluid.py": "cf80622479f56566c2fe5d7c123a04eb36f6158d1069eaae51ebc692087da1a9"
+  },
+  "verification_script_sha256": "84900002fea81610569f91169c55c0dcbf0a62e9781a406bd82a2c075b972545",
+  "tutorial_sha256": "0502e27c08e859fc9b4d5aeb4a6cb90c6dc0fe0547433df2d7dd2d3103dbd73a",
+  "upstream_commit": "a614c7173822a93c1e64ac28d1541cbac028cbd8",
+  "residual_units": {
+    "mixture.mass_kg_s": "mass_kg_s",
+    "mixture.energy_W_m": "energy_W_m",
+    "mixture.momentum_Pa": "momentum_Pa",
+    "film.mass_kg_s": "mass_kg_s",
+    "film.mass_update_kg_s_m": "mass_update_kg_s_m",
+    "film.momentum_m_s2": "momentum_m_s2",
+    "film.full_momentum_update_m_s": "full_momentum_update_m_s",
+    "film.force_N_m2": "force_N_m2",
+    "film.full_branch": "full_branch",
+    "film.unclamped": "unclamped",
+    "drop.momentum_m_s2": "momentum_m_s2",
+    "drop.momentum_update_m_s": "momentum_update_m_s",
+    "annular_fraction": "annular_fraction",
+    "positive_film": "positive_film",
+    "all_phase_mass_kg_s": "all_phase_mass_kg_s",
+    "occupied_area_relative_error": "occupied_area_relative_error",
+    "film.MTOT_kg_m2_s": "MTOT_kg_m2_s",
+    "film.FTOT_N_m2": "FTOT_N_m2",
+    "drop.FTOT_N_m3": "FTOT_N_m3"
+  },
+  "inputs": {
+    "model": {
+      "ID": "TUTORIAL4D",
+      "NNODES": 25,
+      "FLUID": "WATER",
+      "PROPERTIES": "SATURATED",
+      "KLOC": [
+        0.0
+      ],
+      "WBOILINGXSUB": -0.2,
+      "WBOILINGN": 2.0,
+      "WBOILINGXSAT": 0.0,
+      "OAF": "WALLIS",
+      "OAFTRANSITION": [
+        0.1,
+        0.0
+      ],
+      "CBT": "NONE",
+      "CBTMULT": "<Python callable>",
+      "CBTKEFFECT": [
+        0.0,
+        0.0
+      ],
+      "CBTELEVATION": 1.0,
+      "MFBT": "NONE",
+      "DTMFB": 100.0,
+      "SPMTM": "BLASIUS",
+      "FRICTION": [
+        0.2,
+        -0.2,
+        0.0
+      ],
+      "TPFM": "HOMOGENEOUS",
+      "KLOSS": [
+        0.0
+      ],
+      "TPKM": "HOMOGENEOUS",
+      "BTMTM": "TPFM",
+      "SPHTM": "DITTUSBOELTER",
+      "DITTUSBOELTERCOEF": [
+        0.023,
+        0.8,
+        0.4
+      ],
+      "TPHTM": "THOM",
+      "BTHTM": "VAPOR",
+      "MOECKCOEF": [
+        0.00109,
+        0.989,
+        1.41,
+        -1.15
+      ],
+      "VOID": "HOMOGENEOUS",
+      "SLIP": 1.0,
+      "THERMALNONEQ": "EQUILIBRIUM",
+      "THERMALRELAX": "TIMEX",
+      "RELAXX": [
+        -0.5,
+        -0.25,
+        -0.1,
+        0.0,
+        1.0
+      ],
+      "RELAXCONDFO": [
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001
+      ],
+      "RELAXEVAPFO": [
+        5e-05,
+        5e-05,
+        5e-05,
+        5e-05,
+        5e-05
+      ],
+      "RELAXCONDT": [
+        1.0,
+        0.5,
+        0.3,
+        0.1,
+        0.1
+      ],
+      "RELAXEVAPT": [
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3
+      ],
+      "RELAXCONDCOEF": [
+        0.0001,
+        0.3333333333333333,
+        0.05,
+        0.0
+      ],
+      "RELAXEVAPCOEF": [
+        0.0001,
+        0.3333333333333333,
+        1e-05,
+        0.0
+      ],
+      "RELAXCONDFOCOEF": [
+        5e-05,
+        500000.0,
+        0.0,
+        0.0
+      ],
+      "RELAXEVAPFOCOEF": [
+        0.0001,
+        500000.0,
+        2.0,
+        2.0,
+        0.01,
+        1.0
+      ],
+      "KTRELAX": [
+        "NaN"
+      ],
+      "NEARWALLRATIO": 0.5,
+      "NEARWALLEQOAF": false,
+      "NEARWALLH": "RATIO",
+      "NEARWALLHRATIO": 1.0,
+      "NEARWALLRELAX": "QUALITY",
+      "NEARWALLRELAXX": [
+        -0.5,
+        -0.25,
+        -0.1,
+        0.0,
+        1.0
+      ],
+      "NEARWALLRELAXT": [
+        1.0,
+        0.5,
+        0.3,
+        0.1,
+        0.1
+      ],
+      "NEARWALLRELAXCOEF": [
+        0.0001,
+        0.3333333333333333,
+        0.05
+      ],
+      "INTLENGTH": "CONSTANT",
+      "INTAREA": "DISPGAS2DISPLIQ",
+      "INTLENGTHVCST": 0.002,
+      "INTLENGTHLCST": 0.002,
+      "LOCRELVEL": "AREAMEAN",
+      "RELVELCST": 1.0,
+      "MOMENTLIQUID": "MIXTURE",
+      "MOMENTGAS": "MIXTURE",
+      "DROPDRAG": "VISCOUS",
+      "DROPDRAGCOEF": 0.45,
+      "BUBBLEDRAG": "STOKES",
+      "BUBBLEDRAGCOEF": 0.45,
+      "INTNU": "RELAXATION",
+      "INTNUVCST": 2.0,
+      "INTNULCST": 2.0,
+      "RANZMARSHALLVCST": [
+        2.0,
+        0.6,
+        0.5,
+        0.3333333333333333
+      ],
+      "RANZMARSHALLLCST": [
+        2.0,
+        0.6,
+        0.5,
+        0.3333333333333333
+      ],
+      "INTTRANSH": "BULK",
+      "POSFILM": true,
+      "OAFENTRAINED": "EQUILIBRIUM",
+      "OAFDROPRATIO": 0.7,
+      "DEPOSITION": "OKAWA",
+      "DEPENHANCEMENT": "NONE",
+      "KBLOCKRATIO": [
+        0.0
+      ],
+      "KTUNING": [
+        0.0
+      ],
+      "ENTRAINMENT": "OKAWA2003",
+      "OKAWACOEFS": [
+        320.0,
+        0.111,
+        0.000479,
+        1.0
+      ],
+      "MOMENTFILM": "FULL",
+      "VAPORFRIC": "SOLVER_DEPENDENT",
+      "VAPORFRICCST": 0.005,
+      "THINFILMFRIC": "TURBULENT",
+      "THINFILMTHICK": 0.0001,
+      "MOMENTDROP": "FULL",
+      "DROPSLIP": 1.0,
+      "DROPDIAM": 0.001,
+      "OAFFILMSPLIT": "EQUILIBRIUM",
+      "OAFBASERATIO": 0.5,
+      "BASEEQTHICK": "RISO",
+      "BASEEQTHICKCOEF": [
+        5.37e-05,
+        -0.64,
+        1.21
+      ],
+      "BASEYPLUS": 15.0,
+      "RELAXTB": 0.2,
+      "WAVEMIXCOEF": [
+        2.0
+      ],
+      "WAVEFREQUENCY": "RELAXATION",
+      "EQSTROUHAL": "RISO",
+      "EQSTROUHALCOEF": [
+        0.00011236,
+        0.5,
+        0.0
+      ],
+      "RELAXTW": 0.2,
+      "CSTWAVEFREQ": 100.0,
+      "MOMENTBASE": "FULLNOP",
+      "MOMENTWAVE": "FULL",
+      "WAVEBASEINT": "VAPORSHEAR",
+      "SHAPEFACTORCOEF": [
+        132500.0,
+        2.0,
+        1.0,
+        0.0
+      ],
+      "WAVEDRAGCOEF": [
+        0.02,
+        135000.0,
+        0.437
+      ],
+      "THINWAVETHICK": 1e-05
+    },
+    "options": {
+      "ID": "DEFAULT",
+      "AXIALINTERP": "NEXT",
+      "TIMEINTERP": "LINEAR",
+      "TSTEP": 0.125,
+      "MAXITER": 250,
+      "SSTSTEP": 1.0,
+      "SSMAXITER": 30,
+      "MRMTIMEINT": "EXPONENTIAL",
+      "ERRORW": 1e-08,
+      "ERRORP": 0.001,
+      "ERRORH": 0.001,
+      "SSCONVW": 1e-08,
+      "SSCONVP": 0.001,
+      "SSCONVH": 0.001,
+      "RELAXWM": 1.0,
+      "RELAXPM": 1.0,
+      "RELAXHM": 1.0,
+      "RELAXWV": 0.7,
+      "RELAXHV": 0.7,
+      "ERRORU": 0.0001,
+      "SSCONVU": 0.001,
+      "RELAXWL": 1.0,
+      "RELAXUL": 0.5,
+      "RELAXUV": 0.5,
+      "RELAXHL": 1.0,
+      "OAFEQUILMAXITER": 100,
+      "OAFEQUILTOL": 0.0001,
+      "UDEQUILMAXITER": 100,
+      "UDEQUILTOL": 0.001,
+      "UFEQUILMAXITER": 100,
+      "UFEQUILTOL": 0.001,
+      "ENTNUMMAXITER": 100,
+      "ENTNUMTOL": 0.01,
+      "ERRORWF": 1e-07,
+      "ERRORUF": 0.0001,
+      "ERRORUD": 0.0001,
+      "SSCONVWF": 1e-07,
+      "SSCONVUF": 0.0001,
+      "SSCONVUD": 0.0001,
+      "RELAXWF": 0.5,
+      "RELAXUF": 0.2,
+      "RELAXUD": 0.2,
+      "ERRORFW": 0.1,
+      "SSCONVFW": 0.1,
+      "RELAXWB": 0.5,
+      "RELAXUB": 0.2,
+      "RELAXWW": 0.5,
+      "RELAXUW": 0.2,
+      "RELAXFW": 0.5
+    },
+    "geometry": {
+      "ID": "TUTORIAL1",
+      "LENGTH": 5.5,
+      "AREA": 6.0821e-05,
+      "PERIM": [
+        0.0276
+      ],
+      "ANGLE": 0.0
+    },
+    "bc": [
+      {
+        "TIME": 0.0,
+        "PRESSURE": 6000000.0,
+        "HIN": 1139400.0,
+        "MFLOW": 0.07,
+        "POWER": 87500.0,
+        "WMESH": [
+          3.5,
+          2.0
+        ],
+        "WPOWER": [
+          [
+            1.0
+          ],
+          [
+            0.0
+          ]
+        ]
+      },
+      {
+        "TIME": 1.0,
+        "PRESSURE": 6000000.0,
+        "HIN": 1139400.0,
+        "MFLOW": 0.07,
+        "POWER": 43750.0,
+        "WMESH": [
+          3.5,
+          2.0
+        ],
+        "WPOWER": [
+          [
+            1.0
+          ],
+          [
+            0.0
+          ]
+        ]
+      },
+      {
+        "TIME": 5.0,
+        "PRESSURE": 6000000.0,
+        "HIN": 1139400.0,
+        "MFLOW": 0.07,
+        "POWER": 43750.0,
+        "WMESH": [
+          3.5,
+          2.0
+        ],
+        "WPOWER": [
+          [
+            1.0
+          ],
+          [
+            0.0
+          ]
+        ]
+      }
+    ],
+    "source_files": [
+      "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\upstream\\inputs\\models.inp",
+      "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\upstream\\inputs\\options.inp",
+      "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\upstream\\inputs\\geom.inp",
+      "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\upstream\\inputs\\tutorial2_transient.inp"
+    ]
+  }
+}

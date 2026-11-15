@@ -1,0 +1,116 @@
+{
+  "scope": "All nine pseudo-time advances, 100 non-inlet nodes; preserved original reference",
+  "source_expressions": "Mixture/solve.m MDER, Mixture.m DPACCZ/DPACCT/DPACCS and cumsum",
+  "diagnostic_reconstructions": {
+    "DP.Acc_z": {
+      "unit": "Pa",
+      "max_stored_difference": 4.7907633415889e-10,
+      "max_reference_reconstruction_residual": 0.0,
+      "max_native_reconstruction_residual": 0.0,
+      "max_difference_unexplained_by_saved_state_reconstruction": 0.0,
+      "nonmatching_reference_zeros": 0
+    },
+    "DP.Acc_t": {
+      "unit": "Pa",
+      "max_stored_difference": 2.511768570911954e-12,
+      "max_reference_reconstruction_residual": 0.0,
+      "max_native_reconstruction_residual": 0.0,
+      "max_difference_unexplained_by_saved_state_reconstruction": 0.0,
+      "nonmatching_reference_zeros": 0
+    },
+    "DP.Acc_s": {
+      "unit": "Pa",
+      "max_stored_difference": 1.3576727814017935e-13,
+      "max_reference_reconstruction_residual": 0.0,
+      "max_native_reconstruction_residual": 1.262177448353619e-29,
+      "max_difference_unexplained_by_saved_state_reconstruction": 1.262177448353619e-29,
+      "nonmatching_reference_zeros": 147
+    },
+    "MDER.U_z": {
+      "unit": "m/s^2",
+      "max_stored_difference": 1.2374812285997905e-10,
+      "max_reference_reconstruction_residual": 0.0,
+      "max_native_reconstruction_residual": 0.0,
+      "max_difference_unexplained_by_saved_state_reconstruction": 0.0,
+      "nonmatching_reference_zeros": 0
+    },
+    "MDER.U_t": {
+      "unit": "m/s^2",
+      "max_stored_difference": 1.3571366253017914e-12,
+      "max_reference_reconstruction_residual": 0.0,
+      "max_native_reconstruction_residual": 0.0,
+      "max_difference_unexplained_by_saved_state_reconstruction": 0.0,
+      "nonmatching_reference_zeros": 0
+    },
+    "MDER.U": {
+      "unit": "m/s^2",
+      "max_stored_difference": 1.2511236491263844e-10,
+      "max_reference_reconstruction_residual": 0.0,
+      "max_native_reconstruction_residual": 0.0,
+      "max_difference_unexplained_by_saved_state_reconstruction": 0.0,
+      "nonmatching_reference_zeros": 0
+    },
+    "MDER.H_z": {
+      "unit": "J/kg/s",
+      "max_stored_difference": 6.463378667831421e-07,
+      "max_reference_reconstruction_residual": 0.0,
+      "max_native_reconstruction_residual": 0.0,
+      "max_difference_unexplained_by_saved_state_reconstruction": 0.0,
+      "nonmatching_reference_zeros": 0
+    },
+    "MDER.H_t": {
+      "unit": "J/kg/s",
+      "max_stored_difference": 7.450580596923828e-09,
+      "max_reference_reconstruction_residual": 0.0,
+      "max_native_reconstruction_residual": 0.0,
+      "max_difference_unexplained_by_saved_state_reconstruction": 0.0,
+      "nonmatching_reference_zeros": 0
+    },
+    "MDER.H": {
+      "unit": "J/kg/s",
+      "max_stored_difference": 6.50063157081604e-07,
+      "max_reference_reconstruction_residual": 0.0,
+      "max_native_reconstruction_residual": 0.0,
+      "max_difference_unexplained_by_saved_state_reconstruction": 0.0,
+      "nonmatching_reference_zeros": 0
+    },
+    "DPSUM.Acc_s": {
+      "unit": "Pa",
+      "max_stored_difference": 3.426719042257463e-13,
+      "max_reference_reconstruction_residual": 0.0,
+      "max_native_reconstruction_residual": 8.835242138475332e-29,
+      "max_difference_unexplained_by_saved_state_reconstruction": 8.835242138475332e-29,
+      "nonmatching_reference_zeros": 2
+    },
+    "DPSUM.Acc_t": {
+      "unit": "Pa",
+      "max_stored_difference": 1.1641532182693481e-10,
+      "max_reference_reconstruction_residual": 0.0,
+      "max_native_reconstruction_residual": 0.0,
+      "max_difference_unexplained_by_saved_state_reconstruction": 0.0,
+      "nonmatching_reference_zeros": 0
+    }
+  },
+  "iteration_increment_scale": {
+    "ITR.DW": {
+      "unit": "kg/s",
+      "max_absolute_difference": 1.1102230246251565e-16,
+      "max_difference_in_ulps_of_stored_state": 8.0,
+      "note": "Iteration-old state is not archived; this quantifies scale, not exact causal reconstruction."
+    },
+    "ITR.DP": {
+      "unit": "Pa",
+      "max_absolute_difference": 1.862645149230957e-09,
+      "max_difference_in_ulps_of_stored_state": 2.0,
+      "note": "Iteration-old state is not archived; this quantifies scale, not exact causal reconstruction."
+    },
+    "ITR.DH": {
+      "unit": "J/kg",
+      "max_absolute_difference": 2.0954757928848267e-09,
+      "max_difference_in_ulps_of_stored_state": 9.0,
+      "note": "Iteration-old state is not archived; this quantifies scale, not exact causal reconstruction."
+    }
+  },
+  "acceptance": "No acceptance tolerances changed. The 14 strict supplementary failures remain failures.",
+  "limits": "The archived producing CoolProp version and operation-level execution trace are unknown. This does not prove bitwise equivalence."
+}

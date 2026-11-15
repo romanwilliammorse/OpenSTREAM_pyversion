@@ -1,0 +1,80 @@
+C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\ff_fields.py:178: RuntimeWarning: divide by zero encountered in divide
+  return (c[1]/self.REV(i))**2+c[2]
+C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\ff_fields.py:140: RuntimeWarning: invalid value encountered in multiply
+  force = .5*self.SHAPEFACTOR(i)*self.DRAGCOEF(i)*self.fluid.RHOG*difference**2
+{
+  "state": "INITIALSTEPCONVERGED",
+  "converged": true,
+  "output": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\baseline-parity-02\\FourField\\native",
+  "precursor_or_mixture_balances": {
+    "prescribed_power_W": 87500.0,
+    "discrete_wall_power_W": 87500.0,
+    "steady_enthalpy_gain_W": 87499.99900064335,
+    "steady_energy_relative_error": 1.1421218847057649e-08,
+    "steady_mass_max_deviation_kg_s": 7.9017474508003e-10,
+    "discrete_mass_max_residual_kg_s": 5.151044694950979e-13,
+    "discrete_energy_max_residual_W_per_m": 7.421476766467094e-10,
+    "discrete_momentum_max_residual_Pa": 0.0001302116511396889,
+    "pressure_drop_Pa": 156497.61205468047,
+    "outlet_enthalpy_J_kg": 2389399.9857234764,
+    "outlet_void_fraction": 0.986515412665508,
+    "outlet_vapor_quality": 0.7483937838378013,
+    "minimum_pressure_Pa": 5843502.3879453195,
+    "minimum_density_kg_m3": 40.6241630910792
+  }
+}
+{
+  "physical_diagnostics": {
+    "physical_consistency": false,
+    "area_closure_relative_tolerance": 1e-06,
+    "max_area_closure_relative": 0.4413082218380726,
+    "max_unblended_annular_area_closure_relative": 0.11241051742329389,
+    "outlet_area_closure_relative": 0.010737048682143202,
+    "common_annular_upstream_face_z_m": 1.595,
+    "common_annular_downstream_face_z_m": 5.5,
+    "common_annular_cell_count": 71,
+    "max_common_annular_cell_mass_residual_kg_s": 1.94576021961268e-11,
+    "max_abs_common_annular_mass_residual_kg_s": 7.240892191395787e-10,
+    "inventory_by_time": [
+      {
+        "time_s": 0.0,
+        "max_area_closure_relative": 0.4413082218380726,
+        "outlet_area_closure_relative": 0.010737048682143202,
+        "max_unblended_annular_area_closure_relative": 0.11241051742329389,
+        "unblended_annular_node_count": 72,
+        "nonfinite_inventory_or_area_node_count": 0,
+        "nonfinite_unblended_annular_node_count": 0,
+        "max_all_phase_cell_mass_residual_kg_s": 1.94576021961268e-11,
+        "global_all_phase_mass_residual_kg_s": 7.9017474508003e-10,
+        "max_common_annular_cell_mass_residual_kg_s": 1.94576021961268e-11,
+        "common_annular_mass_residual_kg_s": 7.240892191395787e-10,
+        "common_annular_mass_inventory_kg": 0.015819340343491632,
+        "integrated_phase_mass_inventory_kg": 0.047911647938455405
+      }
+    ],
+    "inventory_interpretation": "W/U is kg/m; occupied area = sum(Wfilm/Ufilm)/rhoF + Wdrop/(Udrop*rhoF) + Wvapor/(Uvapor*rhoV). The 1e-6 tolerance tests an algebraic geometry identity, not measurement uncertainty. Physical-consistency rejection applies only where AFFNC >= 1-1e-12 (numerically unblended annular flow); absence of such nodes leaves status unknown. Common-annular mass diagnostics use a fixed downstream control volume whose upstream face and all cells satisfy this mask at every time; its residual is outflow minus inflow plus backward-Euler storage, with no storage for the initial steady state. Pre-annular values are source initialization quantities and all-region area/mass diagnostics there are descriptive, not physical-domain acceptance checks. Zero/zero inventory is indeterminate and fails if in the applicable region. Any four-field film-thickness caps do not independently enforce this inventory identity. Numerical convergence and algebraic flow partition do not establish mass-storage conservation. Whether a discrepancy is shared with upstream is established by a separate reference comparison; see the baseline verification report.",
+    "nonfinite_state_count": 0,
+    "base_plus_wave_minus_film_max_kg_s": 0.0,
+    "film_plus_drop_minus_liquid_max_kg_s": 3.469446951953614e-18,
+    "all_fields_minus_mixture_max_kg_s": 1.3877787807814457e-17,
+    "base_min_kg_s": 0.0,
+    "wave_min_kg_s": 0.0,
+    "drop_min_kg_s": 0.01172757330528559,
+    "base_min_m_s": 1.5183655694787734,
+    "wave_min_m_s": 0.759182785082333,
+    "drop_min_m_s": 1.518365570164666,
+    "frequency_min_Hz": 21.040121691372597,
+    "frequency_temporally_converged": true,
+    "onset_equilibrium_converged": true,
+    "nested_closure_failures": [],
+    "balance_note": "Raw final pseudo-time mass residuals; POSFILM clipping and sequential source updates are retained.",
+    "base_mass_residual_max_kg_s": 0.0004305856934339351,
+    "base_wet_annular_mass_residual_max_kg_s": 0.0004305856934339351,
+    "base_unclamped_annular_mass_residual_max_kg_s": 2.4493390997778084e-06,
+    "base_zero_mass_node_count": 1,
+    "wave_mass_residual_max_kg_s": 0.000424136966741464,
+    "wave_wet_annular_mass_residual_max_kg_s": 2.35783168200021e-06,
+    "wave_unclamped_annular_mass_residual_max_kg_s": 2.35783168200021e-06,
+    "wave_zero_mass_node_count": 7
+  }
+}

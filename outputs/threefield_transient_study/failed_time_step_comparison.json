@@ -1,0 +1,34 @@
+{
+  "interpretation": "Both runs failed point convergence; these differences characterize failed iterates, not numerical time convergence.",
+  "cases": [
+    "outputs\\threefield_transient_tight_dt025",
+    "outputs\\threefield_transient_tight_dt0125"
+  ],
+  "source_reports_sha256": [
+    "832b26823631c7a739fea71eea78bf1ab662ae2cbb2c6ae4be5887a278acabca",
+    "3a20e10a262d4307d84aef04690a6b1fe48eff889f458771f17fc5d6e724e79e"
+  ],
+  "differences": {
+    "film.W": {
+      "max_all_nodes_and_common_times": 0.0050360094967416905,
+      "max_outlet_common_times": 0.0007557421821582991,
+      "final_outlet": 6.582542764164978e-07
+    },
+    "film.U": {
+      "max_all_nodes_and_common_times": 1.1497515221559906,
+      "max_outlet_common_times": 1.1497515221559906,
+      "final_outlet": 0.00020073960601774132
+    },
+    "drop.W": {
+      "max_all_nodes_and_common_times": 0.0050360094967416905,
+      "max_outlet_common_times": 0.0011440038517215641,
+      "final_outlet": 1.1482077152021042e-06
+    },
+    "drop.U": {
+      "max_all_nodes_and_common_times": 0.20426600237405346,
+      "max_outlet_common_times": 0.20426600237405346,
+      "final_outlet": 8.821273071113467e-05
+    }
+  },
+  "fully_annular_area_check": "No nodes at25cells meet AFFNC>=1-1e-12, owing to source mesh-dependent node-space sigmoid; physical acceptance unknown."
+}

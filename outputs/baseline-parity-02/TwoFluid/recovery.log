@@ -1,0 +1,127 @@
+{
+  "output": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\baseline-parity-02\\TwoFluid\\reference",
+  "state": "INITIALSTEPCONVERGED",
+  "convergence": {
+    "source_formula": "strict max < original option threshold",
+    "final_point": {
+      "liquid.DW": {
+        "max": 2.671166024481586e-09,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "liquid.DU": {
+        "max": 8.255870592321912e-05,
+        "threshold": 0.0001,
+        "passed": true
+      },
+      "liquid.DH": {
+        "max": 0.0989827667362988,
+        "threshold": 0.1,
+        "passed": true
+      },
+      "vapor.DW": {
+        "max": 1.6493877957879377e-08,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "vapor.DU": {
+        "max": 8.175793832521094e-05,
+        "threshold": 0.0001,
+        "passed": true
+      },
+      "vapor.DH": {
+        "max": 0.0,
+        "threshold": 0.1,
+        "passed": true
+      }
+    },
+    "final_temporal": {
+      "liquid.W": {
+        "max": 1.1178591167310126e-08,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "liquid.U": {
+        "max": 0.0002476066281325018,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "liquid.H": {
+        "max": 0.7512369658797979,
+        "threshold": 1.0,
+        "passed": true
+      },
+      "vapor.W": {
+        "max": 7.341076675021485e-08,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "vapor.U": {
+        "max": 0.0002476028580886691,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "vapor.H": {
+        "max": 0.0,
+        "threshold": 1.0,
+        "passed": true
+      }
+    },
+    "point_passed": true,
+    "temporal_passed": true,
+    "max_point_iterations_by_state": {
+      "liquid": [
+        0,
+        37,
+        28,
+        19,
+        10,
+        8,
+        4,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "vapor": [
+        0,
+        37,
+        28,
+        19,
+        10,
+        8,
+        4,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    }
+  },
+  "physical_checks": {
+    "units": {
+      "occupied_area": "m^2",
+      "mass_flow": "kg/s",
+      "energy_flux": "W"
+    },
+    "prescribed_area_m2": 6.0821e-05,
+    "max_occupied_area_relative_error": 0.410561070690042,
+    "worst_node_index_zero_based": 4,
+    "worst_z_m": 0.22,
+    "worst_occupied_area_m2": 8.579173488043905e-05,
+    "outlet_area_relative_error": 0.03467311857852651,
+    "outlet_mass_defect_kg_s": -3.0761341615614946e-07,
+    "outlet_energy_defect_W": 30.049663123339997,
+    "minimum_phase_velocity_m_s": 1.5183655701646686,
+    "minimum_phase_flow_kg_s": 0.0,
+    "interpretation": "Area inconsistency is present in original stored MATLAB baseline, not introduced by the Python translation. No experimental validation."
+  }
+}

@@ -1,0 +1,676 @@
+{
+  "reference": {
+    "status": "passed",
+    "message": "Archived steady and initialization profiles agree at rtol 1e-8, atol 0.",
+    "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+    "rtol": 1e-08,
+    "atol": 0.0,
+    "coordinate_atol": 1e-12,
+    "records": [
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 1.3877787807814457e-16,
+        "max_relative_error": 1.9825410966388497e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 5.258016244624741e-13,
+        "max_relative_error": 4.1305726817332015e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 9.313225746154785e-10,
+        "max_relative_error": 3.8977257022559736e-16,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 1.5265566588595902e-16,
+        "max_relative_error": 3.151815762815273e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "liquid.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 8.419931418757187e-13,
+        "max_relative_error": 4.157837187883256e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "liquid.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 3.4924596548080444e-09,
+        "max_relative_error": 2.877003162595694e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "liquid.H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 1.3877787807814457e-16,
+        "max_relative_error": 6.222142509110722e-13,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "vapor.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 4.618527782440651e-13,
+        "max_relative_error": 4.144204934808229e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "vapor.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 7.171183824539185e-08,
+        "max_relative_error": 2.575310950350679e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "vapor.H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          10,
+          101
+        ],
+        "max_absolute_error": 1.3877787807814457e-15,
+        "max_relative_error": 7.600533060010559e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          10,
+          101
+        ],
+        "max_absolute_error": 1.3642420526593924e-12,
+        "max_relative_error": 4.8258206156767395e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          10,
+          101
+        ],
+        "max_absolute_error": 4.6566128730773926e-09,
+        "max_relative_error": 1.948864198943338e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          10,
+          101
+        ],
+        "max_absolute_error": 6.938893903907228e-16,
+        "max_relative_error": 1.2483487025475483e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "liquid.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          10,
+          101
+        ],
+        "max_absolute_error": 1.3997691894473974e-12,
+        "max_relative_error": 4.825820615676739e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "liquid.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          10,
+          101
+        ],
+        "max_absolute_error": 4.423782229423523e-09,
+        "max_relative_error": 3.644204005954546e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "liquid.H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          10,
+          101
+        ],
+        "max_absolute_error": 7.91033905045424e-16,
+        "max_relative_error": 7.18944164081065e-13,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "vapor.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          10,
+          101
+        ],
+        "max_absolute_error": 1.3145040611561853e-12,
+        "max_relative_error": 4.825820615676739e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "vapor.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          10,
+          101
+        ],
+        "max_absolute_error": 7.916241884231567e-08,
+        "max_relative_error": 2.842875724413169e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "vapor.H",
+        "group": "core"
+      }
+    ],
+    "max_relative_error": 7.18944164081065e-13,
+    "experimental_validation": "not performed",
+    "limitations": [
+      "The archive producer's MATLAB, CoolProp and source versions are unknown.",
+      "Agreement does not establish physical consistency or full OpenSTREAM parity.",
+      "Supplementary iteration/diagnostic disagreements remain documented separately."
+    ],
+    "archive": {
+      "file": "tutorial1_MixtureSolver.mat",
+      "sha256": "43311c4c2ec3440cc3366f94df1216b425d4270268887b7fb7bf921c0fb9ccb0",
+      "bytes": 281077,
+      "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026"
+    },
+    "producer_metadata": {
+      "matlab_version": null,
+      "coolprop_version": null,
+      "source_commit": null,
+      "note": "Archive header gives platform/date; serialized anonymous-function path includes R2024b but is not independent runtime-version proof."
+    }
+  },
+  "physical": {
+    "status": "passed",
+    "diagnostics": {
+      "prescribed_power_W": 87500.0,
+      "discrete_wall_power_W": 87500.0,
+      "steady_enthalpy_gain_W": 87499.99900064335,
+      "steady_energy_relative_error": 1.1421218847057649e-08,
+      "steady_mass_max_deviation_kg_s": 7.9017474508003e-10,
+      "discrete_mass_max_residual_kg_s": 5.151044694950979e-13,
+      "discrete_energy_max_residual_W_per_m": 7.421476766467094e-10,
+      "discrete_momentum_max_residual_Pa": 0.0001302116511396889,
+      "pressure_drop_Pa": 156497.61205468047,
+      "outlet_enthalpy_J_kg": 2389399.9857234764,
+      "outlet_void_fraction": 0.986515412665508,
+      "outlet_vapor_quality": 0.7483937838378013,
+      "minimum_pressure_Pa": 5843502.3879453195,
+      "minimum_density_kg_m3": 40.6241630910792,
+      "checks": {
+        "finite_primary_arrays": true,
+        "positive_pressure_density": true,
+        "void_fraction_bounds": true,
+        "mass_balance": true,
+        "enthalpy_balance": true,
+        "discrete_momentum_balance": true
+      },
+      "physical_consistency": true,
+      "acceptance": {
+        "mass": "max(1e-10 kg/s, 1e-6 * inlet mass flow)",
+        "enthalpy": "relative error <= 1e-6 (denominator max(abs(Q),1 W))",
+        "momentum": "max(1e-6 Pa, input ERRORP)",
+        "void_fraction": "[-1e-12, 1+1e-12]"
+      },
+      "scope": "Steady integral enthalpy/mass balance, discrete momentum and basic bounds; not experimental validation."
+    },
+    "message": "Implemented consistency checks passed; experimental validation not performed."
+  },
+  "converged": true,
+  "baseline": {
+    "is_reference": true,
+    "changes": [],
+    "change_count": 0
+  },
+  "experimental_validation": "not performed",
+  "framework": "Mixture",
+  "submitted_inputs": {
+    "case_id": "Mixture-TUTORIAL1-steady",
+    "framework": "Mixture",
+    "inputs": {
+      "bc": [
+        {
+          "HIN": 1139400.0,
+          "MFLOW": 0.07,
+          "POWER": 87500.0,
+          "PRESSURE": 6000000.0,
+          "TIME": 0.0,
+          "WMESH": [
+            3.5,
+            2.0
+          ],
+          "WPOWER": [
+            [
+              1.0
+            ],
+            [
+              0.0
+            ]
+          ]
+        }
+      ],
+      "geometry": {
+        "ANGLE": 0.0,
+        "AREA": 6.0821e-05,
+        "ID": "TUTORIAL1",
+        "LENGTH": 5.5,
+        "PERIM": [
+          0.0276
+        ]
+      },
+      "model": {
+        "BASEEQTHICK": "RISO",
+        "BASEEQTHICKCOEF": [
+          5.37e-05,
+          -0.64,
+          1.21
+        ],
+        "BASEYPLUS": 15.0,
+        "BTHTM": "VAPOR",
+        "BTMTM": "TPFM",
+        "BUBBLEDRAG": "STOKES",
+        "BUBBLEDRAGCOEF": 0.45,
+        "CBT": "NONE",
+        "CBTELEVATION": 1.0,
+        "CBTKEFFECT": [
+          0.0,
+          0.0
+        ],
+        "CBTMULT": 1.0,
+        "CSTWAVEFREQ": 100.0,
+        "DEPENHANCEMENT": "NONE",
+        "DEPOSITION": "OKAWA",
+        "DITTUSBOELTERCOEF": [
+          0.023,
+          0.8,
+          0.4
+        ],
+        "DROPDIAM": 0.001,
+        "DROPDRAG": "VISCOUS",
+        "DROPDRAGCOEF": 0.45,
+        "DROPSLIP": 1.0,
+        "DTMFB": 100.0,
+        "ENTRAINMENT": "OKAWA2003",
+        "EQSTROUHAL": "RISO",
+        "EQSTROUHALCOEF": [
+          0.00011236,
+          0.5,
+          0.0
+        ],
+        "FLUID": "WATER",
+        "FRICTION": [
+          0.2,
+          -0.2,
+          0.0
+        ],
+        "ID": "TUTORIAL1",
+        "INTAREA": "DISPGAS2DISPLIQ",
+        "INTLENGTH": "CONSTANT",
+        "INTLENGTHLCST": 0.002,
+        "INTLENGTHVCST": 0.002,
+        "INTNU": "RELAXATION",
+        "INTNULCST": 2.0,
+        "INTNUVCST": 2.0,
+        "INTTRANSH": "BULK",
+        "KBLOCKRATIO": [
+          0.0
+        ],
+        "KLOC": [
+          0.0
+        ],
+        "KLOSS": [
+          0.0
+        ],
+        "KTRELAX": [
+          "NaN"
+        ],
+        "KTUNING": [
+          0.0
+        ],
+        "LOCRELVEL": "AREAMEAN",
+        "MFBT": "NONE",
+        "MOECKCOEF": [
+          0.00109,
+          0.989,
+          1.41,
+          -1.15
+        ],
+        "MOMENTBASE": "FULLNOP",
+        "MOMENTDROP": "FULL",
+        "MOMENTFILM": "FULL",
+        "MOMENTGAS": "FULL",
+        "MOMENTLIQUID": "FULL",
+        "MOMENTWAVE": "FULL",
+        "NEARWALLEQOAF": false,
+        "NEARWALLH": "RATIO",
+        "NEARWALLHRATIO": 1.0,
+        "NEARWALLRATIO": 0.5,
+        "NEARWALLRELAX": "QUALITY",
+        "NEARWALLRELAXCOEF": [
+          0.0001,
+          0.3333333333333333,
+          0.05
+        ],
+        "NEARWALLRELAXT": [
+          1.0,
+          0.5,
+          0.3,
+          0.1,
+          0.1
+        ],
+        "NEARWALLRELAXX": [
+          -0.5,
+          -0.25,
+          -0.1,
+          0.0,
+          1.0
+        ],
+        "NNODES": 100,
+        "OAF": "WALLIS",
+        "OAFBASERATIO": 0.5,
+        "OAFDROPRATIO": 0.7,
+        "OAFENTRAINED": "EQUILIBRIUM",
+        "OAFFILMSPLIT": "EQUILIBRIUM",
+        "OAFTRANSITION": [
+          0.1,
+          0.0
+        ],
+        "OKAWACOEFS": [
+          320.0,
+          0.111,
+          0.000479,
+          1.0
+        ],
+        "POSFILM": true,
+        "PROPERTIES": "SATURATED",
+        "RANZMARSHALLLCST": [
+          2.0,
+          0.6,
+          0.5,
+          0.3333333333333333
+        ],
+        "RANZMARSHALLVCST": [
+          2.0,
+          0.6,
+          0.5,
+          0.3333333333333333
+        ],
+        "RELAXCONDCOEF": [
+          0.0001,
+          0.3333333333333333,
+          0.05,
+          0.0
+        ],
+        "RELAXCONDFO": [
+          0.0001,
+          0.0001,
+          0.0001,
+          0.0001,
+          0.0001
+        ],
+        "RELAXCONDFOCOEF": [
+          5e-05,
+          500000.0,
+          0.0,
+          0.0
+        ],
+        "RELAXCONDT": [
+          0.5,
+          0.5
+        ],
+        "RELAXEVAPCOEF": [
+          0.0001,
+          0.3333333333333333,
+          1e-05,
+          0.0
+        ],
+        "RELAXEVAPFO": [
+          5e-05,
+          5e-05,
+          5e-05,
+          5e-05,
+          5e-05
+        ],
+        "RELAXEVAPFOCOEF": [
+          0.0001,
+          500000.0,
+          2.0,
+          2.0,
+          0.01,
+          1.0
+        ],
+        "RELAXEVAPT": [
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ],
+        "RELAXTB": 0.2,
+        "RELAXTW": 0.2,
+        "RELAXX": [
+          -0.5,
+          1.0
+        ],
+        "RELVELCST": 1.0,
+        "SHAPEFACTORCOEF": [
+          132500.0,
+          2.0,
+          1.0,
+          0.0
+        ],
+        "SLIP": 1.0,
+        "SPHTM": "DITTUSBOELTER",
+        "SPMTM": "BLASIUS",
+        "THERMALNONEQ": "EQUILIBRIUM",
+        "THERMALRELAX": "TIMEX",
+        "THINFILMFRIC": "TURBULENT",
+        "THINFILMTHICK": 0.0001,
+        "THINWAVETHICK": 1e-05,
+        "TPFM": "HOMOGENEOUS",
+        "TPHTM": "THOM",
+        "TPKM": "HOMOGENEOUS",
+        "VAPORFRIC": "SOLVER_DEPENDENT",
+        "VAPORFRICCST": 0.005,
+        "VOID": "HOMOGENEOUS",
+        "WAVEBASEINT": "VAPORSHEAR",
+        "WAVEDRAGCOEF": [
+          0.02,
+          135000.0,
+          0.437
+        ],
+        "WAVEFREQUENCY": "RELAXATION",
+        "WAVEMIXCOEF": [
+          2.0
+        ],
+        "WBOILINGN": 2.0,
+        "WBOILINGXSAT": 0.0,
+        "WBOILINGXSUB": -0.2
+      },
+      "options": {
+        "AXIALINTERP": "NEXT",
+        "ENTNUMMAXITER": 100,
+        "ENTNUMTOL": 0.01,
+        "ERRORFW": 0.1,
+        "ERRORH": 0.1,
+        "ERRORP": 0.1,
+        "ERRORU": 0.0001,
+        "ERRORUD": 0.01,
+        "ERRORUF": 0.01,
+        "ERRORW": 0.001,
+        "ERRORWF": 0.0001,
+        "ID": "DEFAULT",
+        "MAXITER": 100,
+        "MRMTIMEINT": "EXPONENTIAL",
+        "OAFEQUILMAXITER": 100,
+        "OAFEQUILTOL": 0.0001,
+        "RELAXFW": 0.5,
+        "RELAXHL": 1.0,
+        "RELAXHM": 1.0,
+        "RELAXHV": 0.7,
+        "RELAXPM": 1.0,
+        "RELAXUB": 0.2,
+        "RELAXUD": 0.2,
+        "RELAXUF": 0.2,
+        "RELAXUL": 0.5,
+        "RELAXUV": 0.5,
+        "RELAXUW": 0.2,
+        "RELAXWB": 0.5,
+        "RELAXWF": 0.5,
+        "RELAXWL": 1.0,
+        "RELAXWM": 1.0,
+        "RELAXWV": 0.7,
+        "RELAXWW": 0.5,
+        "SSCONVFW": 0.1,
+        "SSCONVH": 1.0,
+        "SSCONVP": 1.0,
+        "SSCONVU": 0.001,
+        "SSCONVUD": 0.01,
+        "SSCONVUF": 0.01,
+        "SSCONVW": 0.001,
+        "SSCONVWF": 0.0001,
+        "SSMAXITER": 30,
+        "SSTSTEP": 1.0,
+        "TIMEINTERP": "LINEAR",
+        "TSTEP": 0.1,
+        "UDEQUILMAXITER": 100,
+        "UDEQUILTOL": 0.001,
+        "UFEQUILMAXITER": 100,
+        "UFEQUILTOL": 0.001
+      }
+    },
+    "source_files": [
+      "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\.venv\\gui-wheel-smoke\\Lib\\site-packages\\openstream\\data\\models.inp",
+      "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\.venv\\gui-wheel-smoke\\Lib\\site-packages\\openstream\\data\\options.inp",
+      "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\.venv\\gui-wheel-smoke\\Lib\\site-packages\\openstream\\data\\geom.inp",
+      "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\.venv\\gui-wheel-smoke\\Lib\\site-packages\\openstream\\data\\tutorial1.inp"
+    ],
+    "verification": {
+      "archive_agreement": true,
+      "atol": 0.0,
+      "experimental_validation": false,
+      "note": "Archived-baseline agreement does not establish physical consistency or validity of edited cases.",
+      "report": "outputs/baseline-parity-02/Mixture/comparison/comparison.json",
+      "rtol": 1e-08,
+      "scope": "Original steady TUTORIAL1 archive, initialization histories and mixture precursor"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "model": "TUTORIAL3A",
+    "converged": true,
+    "state": "INITIALSTEPCONVERGED",
+    "seconds": 3.3393715999554843,
+    "steps": 13,
+    "outlet_WL_kg_s": 0.017600786827471012,
+    "outlet_WV_kg_s": 0.05239914732294897,
+    "outlet_UL_m_s": 28.330879595799004,
+    "outlet_UV_m_s": 28.330879595799104,
+    "outlet_HL_J_kg": 1214845.7707137852,
+    "outlet_HV_J_kg": 2784589.4972654125,
+    "mass_defect_kg_s": -6.584958002486818e-08,
+    "energy_defect_W": 34.3567397348088
+  },
+  {
+    "model": "TUTORIAL3B",
+    "converged": true,
+    "state": "INITIALSTEPCONVERGED",
+    "seconds": 6.78021080000326,
+    "steps": 14,
+    "outlet_WL_kg_s": 0.01733767113262437,
+    "outlet_WV_kg_s": 0.05266202125395948,
+    "outlet_UL_m_s": 26.692244187432316,
+    "outlet_UV_m_s": 27.528622941038613,
+    "outlet_HL_J_kg": 1190813.8190330842,
+    "outlet_HV_J_kg": 2784589.497265408,
+    "mass_defect_kg_s": -3.0761341615614946e-07,
+    "energy_defect_W": 30.049663123339997
+  },
+  {
+    "model": "TUTORIAL1",
+    "converged": true,
+    "state": "INITIALSTEPCONVERGED",
+    "seconds": 6.833843700005673,
+    "steps": 14,
+    "outlet_WL_kg_s": 0.01733767113262437,
+    "outlet_WV_kg_s": 0.05266202125395948,
+    "outlet_UL_m_s": 26.692244187432316,
+    "outlet_UV_m_s": 27.528622941038613,
+    "outlet_HL_J_kg": 1190813.8190330842,
+    "outlet_HV_J_kg": 2784589.497265408,
+    "mass_defect_kg_s": -3.0761341615614946e-07,
+    "energy_defect_W": 30.049663123339997
+  }
+]

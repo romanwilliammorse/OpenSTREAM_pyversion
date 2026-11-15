@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2980b9">
+  <title>OpenSTREAM</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/plotly.min.js" defer></script>
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to workspace</a>
+  <div class="app-layout">
+    <aside class="sidebar" aria-label="Case setup and saved runs">
+      <a class="brand" href="/" aria-label="OpenSTREAM home"><img src="/assets/logo-transparent.png" alt="OpenSTREAM"></a>
+      <div class="side-section">
+        <label class="control-label" for="framework">Model</label>
+        <select id="framework">
+          <option value="Mixture">Mixture</option><option value="TwoFluid">Two-fluid</option><option value="ThreeField">Three-field</option><option value="FourField">Four-field</option>
+        </select>
+        <div class="template-card"><span>Preset</span><strong>TUTORIAL1</strong><span>Steady baseline</span></div>
+        <details class="baseline-scope"><summary>Baseline scope</summary><p>The four steady TUTORIAL1 cases agree with archived MATLAB profiles. This is not experimental validation; edited cases are unverified.</p></details>
+        <div class="file-actions"><button id="reset-case" class="text-button" type="button" aria-label="Reset reference inputs">Reset</button><button id="load-inputs" class="text-button" type="button" aria-label="Import input JSON">Import</button><button id="save-inputs" class="text-button" type="button" aria-label="Export input JSON">Export</button></div>
+        <input id="input-file" type="file" accept=".json,application/json" hidden>
+      </div>
+      <div class="side-section history-section">
+        <div class="section-title"><h2>Saved runs</h2><button id="refresh-history" class="text-button" type="button" aria-label="Refresh saved runs">Refresh</button></div>
+        <div id="history" class="history-list"><p class="muted small">No saved runs.</p></div>
+      </div>
+      <span id="app-version" class="sidebar-version"></span>
+    </aside>
+    <main id="workspace" tabindex="-1">
+      <div class="workspace-heading"><h1 id="case-title">Mixture</h1><span id="case-badge" class="badge reference">Reference inputs</span></div>
+      <div id="notification" class="notice" role="status" aria-live="polite" hidden></div>
+      <nav class="view-tabs" aria-label="Workspace views"><button id="inputs-tab" class="view-tab active" type="button" aria-current="page">Inputs <span id="input-count" class="tab-count">—</span></button><button id="results-tab" class="view-tab" type="button">Results</button></nav>
+      <section id="inputs-view" aria-labelledby="inputs-tab">
+        <div class="search-row"><label class="search-control"><span class="sr-only">Search inputs</span><input id="input-search" type="search" placeholder="Search inputs" autocomplete="off"></label><label class="changed-filter"><input id="changed-only" type="checkbox"> Edited only</label><span id="visible-count" class="muted small"></span></div>
+        <nav id="group-links" class="group-links" aria-label="Input sections"></nav>
+        <div id="validation" class="validation-panel" aria-live="polite" hidden></div>
+        <form id="input-editor" novalidate><div class="loading-state">Loading…</div></form>
+        <div id="no-fields" class="empty-filter" hidden>No matching inputs.</div>
+      </section>
+      <section id="results-view" aria-labelledby="results-tab" hidden>
+        <div id="results-empty" class="empty-state"><h2>No results selected</h2><p>Run a case or open a saved run.</p><button id="empty-inputs" class="button secondary" type="button">Inputs</button></div>
+        <div id="run-content" hidden>
+          <div class="run-heading"><div><h2 id="run-title">Simulation</h2><p id="run-meta" class="muted small"></p></div><span id="run-status" class="badge">Ready</span></div>
+          <div id="run-progress" class="progress-panel" hidden><div class="progress-top"><strong id="progress-label">Starting</strong><span id="progress-detail" class="small muted"></span></div><progress id="progress-bar" aria-label="Solver progress"></progress><p id="progress-message" class="small muted"></p></div>
+          <div class="status-grid"><details id="numerical-card" class="result-status"><summary><span class="status-label">Convergence</span><strong id="numerical-status">Pending</strong></summary><p id="numerical-detail">Reported by the solver.</p></details><details id="reference-card" class="result-status"><summary><span class="status-label">MATLAB archive</span><strong id="reference-status">Not assessed</strong></summary><p id="reference-detail">Applies only to the unchanged steady baseline.</p></details><details id="physical-card" class="result-status"><summary><span class="status-label">Physical consistency</span><strong id="physical-status">Not assessed</strong></summary><p id="physical-detail">Independent of numerical convergence.</p></details></div>
+          <div id="run-error" class="notice error" role="alert" hidden></div>
+          <div id="plots-panel" class="panel" hidden><div class="panel-heading"><h2>Axial profiles</h2><button id="download-chart" class="button secondary compact" type="button" aria-label="Save plot as PNG">Save PNG</button></div><div class="plot-controls"><label for="dataset-select">Dataset<select id="dataset-select"><option value="physical">Physical result</option><option value="initialization">Initialization</option></select></label><label for="quantity-select">Quantity<select id="quantity-select"></select></label><label id="time-control" for="time-select">State<select id="time-select"></select></label></div><p id="plot-context" class="plot-context"></p><div id="profile-plot" role="img" aria-label="Axial profiles from numerical output"></div></div>
+          <div id="downloads-panel" class="downloads-panel" hidden><div id="primary-downloads" class="download-links"></div><details id="other-downloads"><summary>Other files</summary><div id="download-links" class="download-links"></div></details></div>
+          <details id="diagnostics-panel" class="panel"><summary>Run details</summary><div id="diagnostic-details"></div><h3>Solver events</h3><pre id="event-log" class="event-log" aria-label="Solver event log">No events yet.</pre></details>
+        </div>
+      </section>
+      <footer class="run-dock"><div class="run-dock-info"><span id="dock-case">TUTORIAL1 · Mixture</span><span id="change-summary" class="small muted">Reference inputs</span></div><div class="run-actions"><button id="validate-inputs" class="button secondary" type="button" aria-label="Check inputs">Check</button><button id="cancel-run" class="button danger" type="button" hidden>Cancel</button><button id="run-case" class="button primary" type="button" aria-label="Run simulation">Run</button></div></footer>
+    </main>
+  </div>
+</body>
+</html>

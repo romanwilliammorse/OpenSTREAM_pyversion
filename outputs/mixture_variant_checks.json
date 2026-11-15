@@ -1,0 +1,79 @@
+[
+  {
+    "model": "TUTORIAL2A",
+    "state": "INITIALSTEPCONVERGED",
+    "converged": true,
+    "steps": 9,
+    "seconds": 2.6489518000162207,
+    "outlet_H_J_kg": 2389399.9857234764,
+    "outlet_X": 0.7483937838378013,
+    "outlet_VF": 0.986515412665508,
+    "pressure_drop_Pa": 156497.61205468047
+  },
+  {
+    "model": "TUTORIAL2B",
+    "state": "INITIALSTEPCONVERGED",
+    "converged": true,
+    "steps": 10,
+    "seconds": 2.742871299968101,
+    "outlet_H_J_kg": 2389399.994003969,
+    "outlet_X": 0.7483937891097615,
+    "outlet_VF": 0.9733896555793364,
+    "pressure_drop_Pa": 154609.2752140956
+  },
+  {
+    "model": "TUTORIAL2C",
+    "state": "INITIALSTEPCONVERGED",
+    "converged": true,
+    "steps": 9,
+    "seconds": 2.5737875000340864,
+    "outlet_H_J_kg": 2389399.9878652445,
+    "outlet_X": 0.7483937852014058,
+    "outlet_VF": 0.9772523045613039,
+    "pressure_drop_Pa": 153987.1516517708
+  },
+  {
+    "model": "TUTORIAL2D",
+    "state": "INITIALSTEPCONVERGED",
+    "converged": true,
+    "steps": 9,
+    "seconds": 2.660229499975685,
+    "outlet_H_J_kg": 2389399.9931538706,
+    "outlet_X": 0.7483937885685276,
+    "outlet_VF": 0.9772523047975324,
+    "pressure_drop_Pa": 153861.17190437298
+  },
+  {
+    "model": "TUTORIAL2E",
+    "state": "INITIALSTEPCONVERGED",
+    "converged": true,
+    "steps": 9,
+    "seconds": 5.7712119000498205,
+    "outlet_H_J_kg": 2389399.9026424643,
+    "outlet_X": 0.7485222661184965,
+    "outlet_VF": 0.9772627864362811,
+    "pressure_drop_Pa": 154033.34569069836
+  },
+  {
+    "model": "TUTORIAL2F",
+    "state": "INITIALSTEPCONVERGED",
+    "converged": true,
+    "steps": 9,
+    "seconds": 2.4902447999920696,
+    "outlet_H_J_kg": 2389399.993153012,
+    "outlet_X": 0.7483937885679808,
+    "outlet_VF": 0.977252304797494,
+    "pressure_drop_Pa": 199061.13211507723
+  },
+  {
+    "model": "TUTORIAL2G",
+    "state": "INITIALSTEPCONVERGED",
+    "converged": true,
+    "steps": 9,
+    "seconds": 2.9975977000431158,
+    "outlet_H_J_kg": 2389399.993153861,
+    "outlet_X": 0.7483937885685212,
+    "outlet_VF": 0.9772523047975321,
+    "pressure_drop_Pa": 184205.0845143702
+  }
+]

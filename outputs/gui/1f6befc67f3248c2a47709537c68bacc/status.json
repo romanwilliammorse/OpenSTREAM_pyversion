@@ -1,0 +1,23 @@
+{
+  "id": "1f6befc67f3248c2a47709537c68bacc",
+  "framework": "FourField",
+  "status": "cancelled",
+  "phase": "Cancelled",
+  "created_at": "2026-11-15T00:08:35.146016+00:00",
+  "progress": [],
+  "files": [],
+  "converged": null,
+  "error": null,
+  "is_reference": true,
+  "changes": [],
+  "change_count": 0,
+  "reference": {
+    "status": "not_compared",
+    "message": "Comparison runs after the calculation."
+  },
+  "physical": {
+    "status": "not_checked",
+    "message": "Consistency checks run after the calculation."
+  },
+  "finished_at": "2026-11-15T00:08:35.703506+00:00"
+}

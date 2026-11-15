@@ -1,0 +1,1015 @@
+{
+  "schema": "openstream-python-v1",
+  "framework": "TwoFluidSolver",
+  "state": "SOLVEDCONVERGED",
+  "converged": true,
+  "elapsed_seconds": 26.281754000054207,
+  "units": {
+    "Z": "m",
+    "TIME": "s",
+    "liquid.W": "kg/s",
+    "liquid.U": "m/s",
+    "liquid.H": "J/kg",
+    "liquid.ITR.DH": "J/kg",
+    "liquid.ITR.DU": "m/s",
+    "liquid.ITR.DW": "kg/s",
+    "liquid.ITR.N": "1",
+    "vapor.W": "kg/s",
+    "vapor.U": "m/s",
+    "vapor.H": "J/kg",
+    "vapor.ITR.DH": "J/kg",
+    "vapor.ITR.DU": "m/s",
+    "vapor.ITR.DW": "kg/s",
+    "vapor.ITR.N": "1"
+  },
+  "native_source_sha256": {
+    "__init__.py": "c204ec07f5df840cfb8e2645eb3d76cacaaf90799ef04cd6690b6e935b430e8f",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "annular.py": "1702712df74bb74ed0859e4e886ec959bd3fe196627368e8d5555591fc8476f5",
+    "cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+    "ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+    "fields.py": "68d964a9061c7b97fe1dc40d342e5fc13b6837755ce601e6475c54f8f3ce89ec",
+    "fourfield.py": "59e4109403d979480875c5c5e7058d29351c6a746edde23a510a7b91fb76fa26",
+    "inputs.py": "a0d7faa6e8509cfe7e1317149237f4da51aafdfdf432ad65ebf75c60a93ed88b",
+    "multifield_output.py": "20d4f5e6fd1531ed1b1c0c84e25ab87932b5b9f1a15cf7280a22e0b1e5906aa5",
+    "numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+    "output.py": "c8326a4a6e8b5ddf1b6f618d0eaa655530452014c5b3fee2c2873c53c9299ee2",
+    "plotting.py": "37edfd755d41c54396387d853d0bea6887a23da1a30e3c31c6e62983e6a6d146",
+    "properties.py": "858c58d17567ea8ddde370c4f0266e9ff701faecaec8acc56896e3d02148a37c",
+    "solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+    "tf_fields.py": "4392731e116c0a23a6823a05e031ed2dd54d1d83b803f05f1781b79db8fc3c73",
+    "threefield.py": "74e654255f95531d88ec7b9756f4d61812eb4d1c139d3add6c49cc2fc71ddb67",
+    "twofluid.py": "cf80622479f56566c2fe5d7c123a04eb36f6158d1069eaae51ebc692087da1a9"
+  },
+  "iteration_note": "Absent iteration fields are NaN; FourField DF is actual frequency residual, DFW is an unused upstream initialized field. Physical-time iteration arrays can remain zero because source copies omit them; inspect initialization.npz.",
+  "initialization_onset": [],
+  "inputs": {
+    "model": {
+      "ID": "TUTORIAL3B",
+      "NNODES": 100,
+      "FLUID": "WATER",
+      "PROPERTIES": "SATURATED",
+      "KLOC": [
+        0.0
+      ],
+      "WBOILINGXSUB": -0.2,
+      "WBOILINGN": 2.0,
+      "WBOILINGXSAT": 0.0,
+      "OAF": "WALLIS",
+      "OAFTRANSITION": [
+        0.1,
+        0.0
+      ],
+      "CBT": "NONE",
+      "CBTMULT": "<Python callable>",
+      "CBTKEFFECT": [
+        0.0,
+        0.0
+      ],
+      "CBTELEVATION": 1.0,
+      "MFBT": "NONE",
+      "DTMFB": 100.0,
+      "SPMTM": "BLASIUS",
+      "FRICTION": [
+        0.2,
+        -0.2,
+        0.0
+      ],
+      "TPFM": "HOMOGENEOUS",
+      "KLOSS": [
+        0.0
+      ],
+      "TPKM": "HOMOGENEOUS",
+      "BTMTM": "TPFM",
+      "SPHTM": "DITTUSBOELTER",
+      "DITTUSBOELTERCOEF": [
+        0.023,
+        0.8,
+        0.4
+      ],
+      "TPHTM": "THOM",
+      "BTHTM": "VAPOR",
+      "MOECKCOEF": [
+        0.00109,
+        0.989,
+        1.41,
+        -1.15
+      ],
+      "VOID": "HOMOGENEOUS",
+      "SLIP": 1.0,
+      "THERMALNONEQ": "EQUILIBRIUM",
+      "THERMALRELAX": "TIMEX",
+      "RELAXX": [
+        -0.5,
+        1.0
+      ],
+      "RELAXCONDFO": [
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001
+      ],
+      "RELAXEVAPFO": [
+        5e-05,
+        5e-05,
+        5e-05,
+        5e-05,
+        5e-05
+      ],
+      "RELAXCONDT": [
+        0.5,
+        0.5
+      ],
+      "RELAXEVAPT": [
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3
+      ],
+      "RELAXCONDCOEF": [
+        0.0001,
+        0.3333333333333333,
+        0.05,
+        0.0
+      ],
+      "RELAXEVAPCOEF": [
+        0.0001,
+        0.3333333333333333,
+        1e-05,
+        0.0
+      ],
+      "RELAXCONDFOCOEF": [
+        5e-05,
+        500000.0,
+        0.0,
+        0.0
+      ],
+      "RELAXEVAPFOCOEF": [
+        0.0001,
+        500000.0,
+        2.0,
+        2.0,
+        0.01,
+        1.0
+      ],
+      "KTRELAX": [
+        "NaN"
+      ],
+      "NEARWALLRATIO": 0.5,
+      "NEARWALLEQOAF": false,
+      "NEARWALLH": "RATIO",
+      "NEARWALLHRATIO": 1.0,
+      "NEARWALLRELAX": "QUALITY",
+      "NEARWALLRELAXX": [
+        -0.5,
+        -0.25,
+        -0.1,
+        0.0,
+        1.0
+      ],
+      "NEARWALLRELAXT": [
+        1.0,
+        0.5,
+        0.3,
+        0.1,
+        0.1
+      ],
+      "NEARWALLRELAXCOEF": [
+        0.0001,
+        0.3333333333333333,
+        0.05
+      ],
+      "INTLENGTH": "CONSTANT",
+      "INTAREA": "DISPGAS2DISPLIQ",
+      "INTLENGTHVCST": 0.002,
+      "INTLENGTHLCST": 0.002,
+      "LOCRELVEL": "AREAMEAN",
+      "RELVELCST": 1.0,
+      "MOMENTLIQUID": "FULL",
+      "MOMENTGAS": "FULL",
+      "DROPDRAG": "VISCOUS",
+      "DROPDRAGCOEF": 0.45,
+      "BUBBLEDRAG": "STOKES",
+      "BUBBLEDRAGCOEF": 0.45,
+      "INTNU": "RELAXATION",
+      "INTNUVCST": 2.0,
+      "INTNULCST": 2.0,
+      "RANZMARSHALLVCST": [
+        2.0,
+        0.6,
+        0.5,
+        0.3333333333333333
+      ],
+      "RANZMARSHALLLCST": [
+        2.0,
+        0.6,
+        0.5,
+        0.3333333333333333
+      ],
+      "INTTRANSH": "BULK",
+      "POSFILM": true,
+      "OAFENTRAINED": "EQUILIBRIUM",
+      "OAFDROPRATIO": 0.7,
+      "DEPOSITION": "OKAWA",
+      "DEPENHANCEMENT": "NONE",
+      "KBLOCKRATIO": [
+        0.0
+      ],
+      "KTUNING": [
+        0.0
+      ],
+      "ENTRAINMENT": "OKAWA2003",
+      "OKAWACOEFS": [
+        320.0,
+        0.111,
+        0.000479,
+        1.0
+      ],
+      "MOMENTFILM": "ALGEBRAIC",
+      "VAPORFRIC": "WALLIS",
+      "VAPORFRICCST": 0.005,
+      "THINFILMFRIC": "TURBULENT",
+      "THINFILMTHICK": 0.0001,
+      "MOMENTDROP": "SLIP",
+      "DROPSLIP": 1.0,
+      "DROPDIAM": 0.001,
+      "OAFFILMSPLIT": "EQUILIBRIUM",
+      "OAFBASERATIO": 0.5,
+      "BASEEQTHICK": "RISO",
+      "BASEEQTHICKCOEF": [
+        5.37e-05,
+        -0.64,
+        1.21
+      ],
+      "BASEYPLUS": 15.0,
+      "RELAXTB": 0.2,
+      "WAVEMIXCOEF": [
+        2.0
+      ],
+      "WAVEFREQUENCY": "RELAXATION",
+      "EQSTROUHAL": "RISO",
+      "EQSTROUHALCOEF": [
+        0.00011236,
+        0.5,
+        0.0
+      ],
+      "RELAXTW": 0.2,
+      "CSTWAVEFREQ": 100.0,
+      "MOMENTBASE": "FULLNOP",
+      "MOMENTWAVE": "FULL",
+      "WAVEBASEINT": "VAPORSHEAR",
+      "SHAPEFACTORCOEF": [
+        132500.0,
+        2.0,
+        1.0,
+        0.0
+      ],
+      "WAVEDRAGCOEF": [
+        0.02,
+        135000.0,
+        0.437
+      ],
+      "THINWAVETHICK": 1e-05
+    },
+    "options": {
+      "ID": "DEFAULT",
+      "AXIALINTERP": "NEXT",
+      "TIMEINTERP": "LINEAR",
+      "TSTEP": 0.1,
+      "MAXITER": 100,
+      "SSTSTEP": 1.0,
+      "SSMAXITER": 30,
+      "MRMTIMEINT": "EXPONENTIAL",
+      "ERRORW": 0.001,
+      "ERRORP": 0.1,
+      "ERRORH": 0.1,
+      "SSCONVW": 0.001,
+      "SSCONVP": 1.0,
+      "SSCONVH": 1.0,
+      "RELAXWM": 1.0,
+      "RELAXPM": 1.0,
+      "RELAXHM": 1.0,
+      "RELAXWV": 0.7,
+      "RELAXHV": 0.7,
+      "ERRORU": 0.0001,
+      "SSCONVU": 0.001,
+      "RELAXWL": 1.0,
+      "RELAXUL": 0.5,
+      "RELAXUV": 0.5,
+      "RELAXHL": 1.0,
+      "OAFEQUILMAXITER": 100,
+      "OAFEQUILTOL": 0.0001,
+      "UDEQUILMAXITER": 100,
+      "UDEQUILTOL": 0.001,
+      "UFEQUILMAXITER": 100,
+      "UFEQUILTOL": 0.001,
+      "ENTNUMMAXITER": 100,
+      "ENTNUMTOL": 0.01,
+      "ERRORWF": 0.0001,
+      "ERRORUF": 0.01,
+      "ERRORUD": 0.01,
+      "SSCONVWF": 0.0001,
+      "SSCONVUF": 0.01,
+      "SSCONVUD": 0.01,
+      "RELAXWF": 0.5,
+      "RELAXUF": 0.2,
+      "RELAXUD": 0.2,
+      "ERRORFW": 0.1,
+      "SSCONVFW": 0.1,
+      "RELAXWB": 0.5,
+      "RELAXUB": 0.2,
+      "RELAXWW": 0.5,
+      "RELAXUW": 0.2,
+      "RELAXFW": 0.5
+    },
+    "geometry": {
+      "ID": "TUTORIAL1",
+      "LENGTH": 5.5,
+      "AREA": 6.0821e-05,
+      "PERIM": [
+        0.0276
+      ],
+      "ANGLE": 0.0
+    },
+    "bc": [
+      {
+        "TIME": 0.0,
+        "PRESSURE": 6000000.0,
+        "HIN": 1139400.0,
+        "MFLOW": 0.07,
+        "POWER": 87500.0,
+        "WMESH": [
+          3.5,
+          2.0
+        ],
+        "WPOWER": [
+          [
+            1.0
+          ],
+          [
+            0.0
+          ]
+        ]
+      },
+      {
+        "TIME": 1.0,
+        "PRESSURE": 6000000.0,
+        "HIN": 1139400.0,
+        "MFLOW": 0.07,
+        "POWER": 43750.0,
+        "WMESH": [
+          3.5,
+          2.0
+        ],
+        "WPOWER": [
+          [
+            1.0
+          ],
+          [
+            0.0
+          ]
+        ]
+      },
+      {
+        "TIME": 5.0,
+        "PRESSURE": 6000000.0,
+        "HIN": 1139400.0,
+        "MFLOW": 0.07,
+        "POWER": 43750.0,
+        "WMESH": [
+          3.5,
+          2.0
+        ],
+        "WPOWER": [
+          [
+            1.0
+          ],
+          [
+            0.0
+          ]
+        ]
+      }
+    ],
+    "source_files": [
+      "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\upstream\\inputs\\models.inp",
+      "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\upstream\\inputs\\options.inp",
+      "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\upstream\\inputs\\geom.inp",
+      "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\upstream\\inputs\\tutorial2_transient.inp"
+    ]
+  },
+  "verification": "MATLAB agreement and experimental validation unverified",
+  "physical_diagnostics": {
+    "physical_consistency": false,
+    "area_closure_relative_tolerance": 1e-06,
+    "max_area_closure_relative": 0.4336086826222998,
+    "outlet_area_closure_relative": 0.07221299261710401,
+    "mass_balance_residual_kg_s": -6.851852072599411e-07,
+    "energy_balance_residual_W": 15.459456178847176,
+    "max_source_energy_identity_residual_W_m": 7.275957614183426e-12,
+    "by_time": [
+      {
+        "time_s": 0.0,
+        "mass_balance_residual_kg_s": -3.0761341615614946e-07,
+        "energy_balance_residual_W": 30.049663123339997,
+        "max_area_closure_relative": 0.4105610706900207,
+        "outlet_area_closure_relative": 0.03467311857853006,
+        "max_source_energy_identity_residual_W_m": 7.275957614183426e-12,
+        "steady_discrete_product_term_W": 30.886881821306385
+      },
+      {
+        "time_s": 0.1,
+        "mass_balance_residual_kg_s": 3.8569775564628594e-06,
+        "energy_balance_residual_W": 38.37376383994706,
+        "max_area_closure_relative": 0.4188483033378285,
+        "outlet_area_closure_relative": 0.03615542173617592,
+        "max_source_energy_identity_residual_W_m": 7.275957614183426e-12,
+        "steady_discrete_product_term_W": 32.2488402130429
+      },
+      {
+        "time_s": 0.2,
+        "mass_balance_residual_kg_s": 4.1002339974897245e-06,
+        "energy_balance_residual_W": 39.23550835820788,
+        "max_area_closure_relative": 0.4336086826222998,
+        "outlet_area_closure_relative": 0.03735729456922843,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 33.1642120506111
+      },
+      {
+        "time_s": 0.30000000000000004,
+        "mass_balance_residual_kg_s": 3.411109337606716e-06,
+        "energy_balance_residual_W": 35.846037359689944,
+        "max_area_closure_relative": 0.39469860955341707,
+        "outlet_area_closure_relative": 0.03812661047178434,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 32.093649663247945
+      },
+      {
+        "time_s": 0.4,
+        "mass_balance_residual_kg_s": 4.701307407066133e-06,
+        "energy_balance_residual_W": 33.754528081117314,
+        "max_area_closure_relative": 0.3554828759623587,
+        "outlet_area_closure_relative": 0.03895477283384796,
+        "max_source_energy_identity_residual_W_m": 7.275957614183426e-12,
+        "steady_discrete_product_term_W": 32.31609281981417
+      },
+      {
+        "time_s": 0.5,
+        "mass_balance_residual_kg_s": 5.621340855854751e-06,
+        "energy_balance_residual_W": 33.460246831862605,
+        "max_area_closure_relative": 0.36754370794979696,
+        "outlet_area_closure_relative": 0.0396532216874983,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 32.681611636149576
+      },
+      {
+        "time_s": 0.6000000000000001,
+        "mass_balance_residual_kg_s": 6.303387013271294e-06,
+        "energy_balance_residual_W": 31.375596515594225,
+        "max_area_closure_relative": 0.3911133817927679,
+        "outlet_area_closure_relative": 0.039869724979399335,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 33.529244712419256
+      },
+      {
+        "time_s": 0.7000000000000001,
+        "mass_balance_residual_kg_s": 5.509050812365496e-06,
+        "energy_balance_residual_W": 25.849974743796338,
+        "max_area_closure_relative": 0.3481035110053843,
+        "outlet_area_closure_relative": 0.03924416682310006,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 33.027189046163386
+      },
+      {
+        "time_s": 0.8,
+        "mass_balance_residual_kg_s": 6.6335215962616545e-06,
+        "energy_balance_residual_W": 26.36380402612849,
+        "max_area_closure_relative": 0.34079997795493777,
+        "outlet_area_closure_relative": 0.03847267571646129,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 33.92769660689537
+      },
+      {
+        "time_s": 0.9,
+        "mass_balance_residual_kg_s": 8.47373377130256e-06,
+        "energy_balance_residual_W": 28.311199909076095,
+        "max_area_closure_relative": 0.35162357963061375,
+        "outlet_area_closure_relative": 0.03752811679200896,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 35.055525762529015
+      },
+      {
+        "time_s": 1.0,
+        "mass_balance_residual_kg_s": 8.106735284601346e-06,
+        "energy_balance_residual_W": 25.709651529963594,
+        "max_area_closure_relative": 0.31216793855376124,
+        "outlet_area_closure_relative": 0.03591223927964493,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 34.6018807242901
+      },
+      {
+        "time_s": 1.1,
+        "mass_balance_residual_kg_s": 9.434264128357212e-06,
+        "energy_balance_residual_W": 18.289960628797417,
+        "max_area_closure_relative": 0.3355407570367257,
+        "outlet_area_closure_relative": 0.024867603680158945,
+        "max_source_energy_identity_residual_W_m": 1.8189894035458565e-12,
+        "steady_discrete_product_term_W": 34.09092475331702
+      },
+      {
+        "time_s": 1.2000000000000002,
+        "mass_balance_residual_kg_s": 6.921568769399644e-06,
+        "energy_balance_residual_W": 23.619140552829776,
+        "max_area_closure_relative": 0.3218336656638978,
+        "outlet_area_closure_relative": 0.01353333541350632,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 31.84778469515494
+      },
+      {
+        "time_s": 1.3,
+        "mass_balance_residual_kg_s": 6.927512470753655e-06,
+        "energy_balance_residual_W": 29.355401258027996,
+        "max_area_closure_relative": 0.31073489109745234,
+        "outlet_area_closure_relative": 0.004503651520051166,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 29.9386607393352
+      },
+      {
+        "time_s": 1.4000000000000001,
+        "mass_balance_residual_kg_s": 7.096980005519282e-06,
+        "energy_balance_residual_W": 33.01827582799888,
+        "max_area_closure_relative": 0.3065967766906228,
+        "outlet_area_closure_relative": -0.0022214241471603113,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 28.13645184009976
+      },
+      {
+        "time_s": 1.5,
+        "mass_balance_residual_kg_s": 5.5347950767975496e-06,
+        "energy_balance_residual_W": 33.32197551141144,
+        "max_area_closure_relative": 0.3051574486883646,
+        "outlet_area_closure_relative": -0.006571646276683274,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 26.31330721495383
+      },
+      {
+        "time_s": 1.6,
+        "mass_balance_residual_kg_s": 3.141941174034449e-06,
+        "energy_balance_residual_W": 31.720091613999102,
+        "max_area_closure_relative": 0.3047014615368058,
+        "outlet_area_closure_relative": -0.007921276353299644,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 24.53560610124285
+      },
+      {
+        "time_s": 1.7000000000000002,
+        "mass_balance_residual_kg_s": 1.4797714680044732e-06,
+        "energy_balance_residual_W": 32.695617869117996,
+        "max_area_closure_relative": 0.30526187790149084,
+        "outlet_area_closure_relative": -0.005799640049580335,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 22.7244128367043
+      },
+      {
+        "time_s": 1.8,
+        "mass_balance_residual_kg_s": -7.607093303538259e-07,
+        "energy_balance_residual_W": 28.25499116141873,
+        "max_area_closure_relative": 0.3057544289537597,
+        "outlet_area_closure_relative": -2.6700394295198215e-05,
+        "max_source_energy_identity_residual_W_m": 1.8189894035458565e-12,
+        "steady_discrete_product_term_W": 21.035218521611473
+      },
+      {
+        "time_s": 1.9000000000000001,
+        "mass_balance_residual_kg_s": -1.0110217766971796e-06,
+        "energy_balance_residual_W": 27.640464852491277,
+        "max_area_closure_relative": 0.3059843272451914,
+        "outlet_area_closure_relative": 0.009128672773943025,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 19.555118290075132
+      },
+      {
+        "time_s": 2.0,
+        "mass_balance_residual_kg_s": -1.4318591913609416e-06,
+        "energy_balance_residual_W": 25.302987203889643,
+        "max_area_closure_relative": 0.3060956825334775,
+        "outlet_area_closure_relative": 0.02074817087708536,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 18.30035249352324
+      },
+      {
+        "time_s": 2.1,
+        "mass_balance_residual_kg_s": -2.6291937246713734e-06,
+        "energy_balance_residual_W": 21.020142762659816,
+        "max_area_closure_relative": 0.3061444108198772,
+        "outlet_area_closure_relative": 0.03347574531739639,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 17.319996303298375
+      },
+      {
+        "time_s": 2.2,
+        "mass_balance_residual_kg_s": -3.223547190097601e-06,
+        "energy_balance_residual_W": 17.06892551836063,
+        "max_area_closure_relative": 0.30616880421017423,
+        "outlet_area_closure_relative": 0.04592920403615852,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.641289678539746
+      },
+      {
+        "time_s": 2.3000000000000003,
+        "mass_balance_residual_kg_s": -4.169565011536303e-06,
+        "energy_balance_residual_W": 12.904403735570668,
+        "max_area_closure_relative": 0.30618115781941424,
+        "outlet_area_closure_relative": 0.056925718352174526,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.243935128330353
+      },
+      {
+        "time_s": 2.4000000000000004,
+        "mass_balance_residual_kg_s": -4.493608893662432e-06,
+        "energy_balance_residual_W": 10.621092219895218,
+        "max_area_closure_relative": 0.30618688425849805,
+        "outlet_area_closure_relative": 0.06564580257184449,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.064345200821872
+      },
+      {
+        "time_s": 2.5,
+        "mass_balance_residual_kg_s": -5.16843985579659e-06,
+        "energy_balance_residual_W": 8.286438613919017,
+        "max_area_closure_relative": 0.3061896742946699,
+        "outlet_area_closure_relative": 0.07171401120429399,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.023588062622647
+      },
+      {
+        "time_s": 2.6,
+        "mass_balance_residual_kg_s": -6.0115714392857224e-06,
+        "energy_balance_residual_W": 5.431677447959373,
+        "max_area_closure_relative": 0.30619135618794346,
+        "outlet_area_closure_relative": 0.07524485392227542,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.05211936885074
+      },
+      {
+        "time_s": 2.7,
+        "mass_balance_residual_kg_s": -5.610252610541611e-06,
+        "energy_balance_residual_W": 6.476886955475493,
+        "max_area_closure_relative": 0.30619252729273794,
+        "outlet_area_closure_relative": 0.07683649115363478,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.103617407127743
+      },
+      {
+        "time_s": 2.8000000000000003,
+        "mass_balance_residual_kg_s": -3.72067535006336e-06,
+        "energy_balance_residual_W": 11.040407901055005,
+        "max_area_closure_relative": 0.30619341422924107,
+        "outlet_area_closure_relative": 0.07708922768917414,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.153678302666385
+      },
+      {
+        "time_s": 2.9000000000000004,
+        "mass_balance_residual_kg_s": -3.142762259516769e-06,
+        "energy_balance_residual_W": 12.014571621686628,
+        "max_area_closure_relative": 0.30619411095804616,
+        "outlet_area_closure_relative": 0.07643930680230837,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.193576652732588
+      },
+      {
+        "time_s": 3.0,
+        "mass_balance_residual_kg_s": -3.0957606635950968e-06,
+        "energy_balance_residual_W": 12.381611104479816,
+        "max_area_closure_relative": 0.30619466365162107,
+        "outlet_area_closure_relative": 0.07550455356311114,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.22241951701949
+      },
+      {
+        "time_s": 3.1,
+        "mass_balance_residual_kg_s": -2.7183965595213013e-06,
+        "energy_balance_residual_W": 13.116394184427918,
+        "max_area_closure_relative": 0.30619510087054946,
+        "outlet_area_closure_relative": 0.07458788667956928,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.24177127136362
+      },
+      {
+        "time_s": 3.2,
+        "mass_balance_residual_kg_s": -2.2859452686025376e-06,
+        "energy_balance_residual_W": 14.014030779573659,
+        "max_area_closure_relative": 0.30619544402485777,
+        "outlet_area_closure_relative": 0.07383867237139174,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.254423166339382
+      },
+      {
+        "time_s": 3.3000000000000003,
+        "mass_balance_residual_kg_s": -1.7812836963279876e-06,
+        "energy_balance_residual_W": 15.055150844833406,
+        "max_area_closure_relative": 0.30619571080449504,
+        "outlet_area_closure_relative": 0.07330631781745289,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.262402247144017
+      },
+      {
+        "time_s": 3.4000000000000004,
+        "mass_balance_residual_kg_s": -1.0702026647505634e-06,
+        "energy_balance_residual_W": 16.639401850072318,
+        "max_area_closure_relative": 0.306195916225682,
+        "outlet_area_closure_relative": 0.07296238223817819,
+        "max_source_energy_identity_residual_W_m": 1.8189894035458565e-12,
+        "steady_discrete_product_term_W": 16.267281549732658
+      },
+      {
+        "time_s": 3.5,
+        "mass_balance_residual_kg_s": -4.07039105508902e-07,
+        "energy_balance_residual_W": 18.241820909635862,
+        "max_area_closure_relative": 0.3061960729678592,
+        "outlet_area_closure_relative": 0.07274467038852617,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.270094279961626
+      },
+      {
+        "time_s": 3.6,
+        "mass_balance_residual_kg_s": 6.270148676521797e-08,
+        "energy_balance_residual_W": 19.269110196888505,
+        "max_area_closure_relative": 0.3061961915657543,
+        "outlet_area_closure_relative": 0.0726298221686894,
+        "max_source_energy_identity_residual_W_m": 1.8189894035458565e-12,
+        "steady_discrete_product_term_W": 16.2717052747423
+      },
+      {
+        "time_s": 3.7,
+        "mass_balance_residual_kg_s": 7.363630247394987e-08,
+        "energy_balance_residual_W": 19.14817962838424,
+        "max_area_closure_relative": 0.3061962806145109,
+        "outlet_area_closure_relative": 0.07257357335338388,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.272658679363122
+      },
+      {
+        "time_s": 3.8000000000000003,
+        "mass_balance_residual_kg_s": -1.9093885036414227e-07,
+        "energy_balance_residual_W": 18.202757069448126,
+        "max_area_closure_relative": 0.30619634700789145,
+        "outlet_area_closure_relative": 0.07252411937183623,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.273234114365135
+      },
+      {
+        "time_s": 3.9000000000000004,
+        "mass_balance_residual_kg_s": -4.074785659627029e-07,
+        "energy_balance_residual_W": 17.46659453182656,
+        "max_area_closure_relative": 0.30619639619169825,
+        "outlet_area_closure_relative": 0.07247987021331292,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.273595533013907
+      },
+      {
+        "time_s": 4.0,
+        "mass_balance_residual_kg_s": -6.558012706504776e-07,
+        "energy_balance_residual_W": 16.572252274672792,
+        "max_area_closure_relative": 0.3061964324111732,
+        "outlet_area_closure_relative": 0.0724402561651376,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.273673769758176
+      },
+      {
+        "time_s": 4.1000000000000005,
+        "mass_balance_residual_kg_s": -7.905480815626083e-07,
+        "energy_balance_residual_W": 16.043102602016006,
+        "max_area_closure_relative": 0.30619645893757585,
+        "outlet_area_closure_relative": 0.07240478327555344,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.273642192895778
+      },
+      {
+        "time_s": 4.2,
+        "mass_balance_residual_kg_s": -6.719171702204684e-07,
+        "energy_balance_residual_W": 16.2780341685866,
+        "max_area_closure_relative": 0.30619647826614793,
+        "outlet_area_closure_relative": 0.07237253766842322,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.27369504567888
+      },
+      {
+        "time_s": 4.3,
+        "mass_balance_residual_kg_s": -6.67155561462102e-07,
+        "energy_balance_residual_W": 16.172659148898674,
+        "max_area_closure_relative": 0.3061964922831435,
+        "outlet_area_closure_relative": 0.07234268872144667,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.273712384236497
+      },
+      {
+        "time_s": 4.4,
+        "mass_balance_residual_kg_s": -8.857301609454141e-07,
+        "energy_balance_residual_W": 15.402213588909945,
+        "max_area_closure_relative": 0.30619650240302443,
+        "outlet_area_closure_relative": 0.07231504639667752,
+        "max_source_energy_identity_residual_W_m": 1.8189894035458565e-12,
+        "steady_discrete_product_term_W": 16.273650936892068
+      },
+      {
+        "time_s": 4.5,
+        "mass_balance_residual_kg_s": -4.6083145976293547e-07,
+        "energy_balance_residual_W": 16.563074899822823,
+        "max_area_closure_relative": 0.30619650967879086,
+        "outlet_area_closure_relative": 0.0722920874334183,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.273662441571062
+      },
+      {
+        "time_s": 4.6000000000000005,
+        "mass_balance_residual_kg_s": -8.284232394244394e-07,
+        "energy_balance_residual_W": 15.359289412015642,
+        "max_area_closure_relative": 0.3061965148891863,
+        "outlet_area_closure_relative": 0.07227170622595369,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.273609152180917
+      },
+      {
+        "time_s": 4.7,
+        "mass_balance_residual_kg_s": -4.277942738080432e-07,
+        "energy_balance_residual_W": 16.483970588626107,
+        "max_area_closure_relative": 0.3061965186066524,
+        "outlet_area_closure_relative": 0.07226346943455475,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.273607667003645
+      },
+      {
+        "time_s": 4.800000000000001,
+        "mass_balance_residual_kg_s": -7.645419679598026e-07,
+        "energy_balance_residual_W": 15.381994899151323,
+        "max_area_closure_relative": 0.30619652124964025,
+        "outlet_area_closure_relative": 0.07224267522152505,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.273549784087216
+      },
+      {
+        "time_s": 4.9,
+        "mass_balance_residual_kg_s": -4.3538879952673127e-07,
+        "energy_balance_residual_W": 16.299228763011342,
+        "max_area_closure_relative": 0.3061965231224557,
+        "outlet_area_closure_relative": 0.0722341021589934,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.273551146929687
+      },
+      {
+        "time_s": 5.0,
+        "mass_balance_residual_kg_s": -6.851852072599411e-07,
+        "energy_balance_residual_W": 15.459456178847176,
+        "max_area_closure_relative": 0.30619652444533596,
+        "outlet_area_closure_relative": 0.07221299261710401,
+        "max_source_energy_identity_residual_W_m": 3.637978807091713e-12,
+        "steady_discrete_product_term_W": 16.273503898440193
+      }
+    ],
+    "limitation": "Numerical convergence does not establish physical area closure. Suspected source/formulation limitation or translation error; MATLAB agreement unverified."
+  },
+  "upstream_commit": "a614c7173822a93c1e64ac28d1541cbac028cbd8",
+  "wrapper_commit": "a7c40902ff66faf6ed668986398bb1b9faa16e13",
+  "versions": {
+    "openstream-python": "0.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "CoolProp": "8.0.0",
+    "matplotlib": "3.11.2"
+  },
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "constants": {
+    "model.G": 9.81
+  },
+  "function_samples": {
+    "model.CBTMULT": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "source_files": [
+    {
+      "source": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\upstream\\inputs\\models.inp",
+      "copy": "mixture/inputs\\00-models.inp",
+      "sha256": "ba62c56eac4ac38d6883bdbc1124d2dafc3413da87bb15818e31195fab6533f6"
+    },
+    {
+      "source": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\upstream\\inputs\\options.inp",
+      "copy": "mixture/inputs\\01-options.inp",
+      "sha256": "5f96474c90bde7c29bfc2231edcf5037ac8ab68367bb48349484a9427b659cda"
+    },
+    {
+      "source": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\upstream\\inputs\\geom.inp",
+      "copy": "mixture/inputs\\02-geom.inp",
+      "sha256": "e1dd995677161d71466cfc7a0b28438df73c1b7f49c3de10aaca8e4903799866"
+    },
+    {
+      "source": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\upstream\\inputs\\tutorial2_transient.inp",
+      "copy": "mixture/inputs\\03-tutorial2_transient.inp",
+      "sha256": "40af88cc624f0e9c493477fdc6a514dff7c2fddd19e00206c5f4e36a05c1e6bb"
+    }
+  ]
+}

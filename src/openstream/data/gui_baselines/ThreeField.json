@@ -1,0 +1,60 @@
+{
+  "schema": "openstream-gui-reference-v1",
+  "framework": "ThreeField",
+  "case_id": "TUTORIAL1-TUTORIAL1-DEFAULT/tutorial1",
+  "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+  "archive": {
+    "file": "tutorial1_ThreeFieldSolver.mat",
+    "sha256": "eabaef27d5b94dce4506783675d90563def40db1a491b8a16b982b9de070e884",
+    "bytes": 481108,
+    "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026"
+  },
+  "producer_metadata": {
+    "matlab_version": null,
+    "coolprop_version": null,
+    "source_commit": null
+  },
+  "recovery_schema": "openstream-recovered-mcos-annular-v1",
+  "decoder": {
+    "package": "mat-io",
+    "version": "1.0.2",
+    "warnings": []
+  },
+  "recovered_created_utc": "2026-11-14T23:36:14.068108+00:00",
+  "source_export_manifest_sha256": "996dcb23b63259b57ad6d2ebcba8f5c89940cba92c7e7f92287eb553ef22cb47",
+  "reconstructed_methods": {},
+  "recovery_limitations": [
+    "No fresh MATLAB execution",
+    "Unknown producer source/CoolProp version",
+    "No experimental validation",
+    "Recovery does not itself compare native results"
+  ],
+  "source_exports": {
+    "results.npz": {
+      "sha256": "6a88a32b92c7d058f33726123536c34189d6e8336f12c30d694fa917d155ef21",
+      "path": "outputs\\baseline-parity-02\\ThreeField\\reference\\results.npz",
+      "operation": "Exact value and dimension preserving subset; no resampling or rounding."
+    },
+    "initialization.npz": {
+      "sha256": "7870137acc9017d5ecf3ed967e6376b7f3f81e331c3f937f65fde9c9b575d14c",
+      "path": "outputs\\baseline-parity-02\\ThreeField\\reference\\initialization.npz",
+      "operation": "Exact value and dimension preserving subset; no resampling or rounding."
+    }
+  },
+  "files": {
+    "ThreeField.physical.npz": "b22fc586f3990251fefb815f592a2b2eff49363d14cfcad99cab794e063dc3ac",
+    "ThreeField.initialization.npz": "d2edb79a6e6f00cdce3dec09d09c9bb0c49e504b76e32db076b01cdc39678da0"
+  },
+  "units": {
+    "Z": "m",
+    "TIME": "s",
+    "film.W": "kg/s",
+    "film.U": "m/s",
+    "film.H": "J/kg",
+    "drop.W": "kg/s",
+    "drop.U": "m/s",
+    "drop.H": "J/kg"
+  },
+  "array_layout": "time,node,wall for films including single wall; time,node for droplets and ITR.N; raw MATLAB dimensions retained separately",
+  "license": "MIT; upstream OpenSTREAM license retained at package root"
+}

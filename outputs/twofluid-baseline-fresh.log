@@ -1,0 +1,44 @@
+{
+  "state": "INITIALSTEPCONVERGED",
+  "converged": true,
+  "output": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\baseline-parity-01\\TwoFluidSolver",
+  "precursor_or_mixture_balances": {
+    "prescribed_power_W": 87500.0,
+    "discrete_wall_power_W": 87500.0,
+    "steady_enthalpy_gain_W": 87499.99900064335,
+    "steady_energy_relative_error": 1.1421218847057649e-08,
+    "steady_mass_max_deviation_kg_s": 7.9017474508003e-10,
+    "discrete_mass_max_residual_kg_s": 5.151044694950979e-13,
+    "discrete_energy_max_residual_W_per_m": 7.421476766467094e-10,
+    "discrete_momentum_max_residual_Pa": 0.0001302116511396889,
+    "pressure_drop_Pa": 156497.61205468047,
+    "outlet_enthalpy_J_kg": 2389399.9857234764,
+    "outlet_void_fraction": 0.986515412665508,
+    "outlet_vapor_quality": 0.7483937838378013,
+    "minimum_pressure_Pa": 5843502.3879453195,
+    "minimum_density_kg_m3": 40.6241630910792
+  }
+}
+{
+  "physical_diagnostics": {
+    "physical_consistency": false,
+    "area_closure_relative_tolerance": 1e-06,
+    "max_area_closure_relative": 0.4105610706900207,
+    "outlet_area_closure_relative": 0.03467311857853006,
+    "mass_balance_residual_kg_s": -3.0761341615614946e-07,
+    "energy_balance_residual_W": 30.049663123339997,
+    "max_source_energy_identity_residual_W_m": 7.275957614183426e-12,
+    "by_time": [
+      {
+        "time_s": 0.0,
+        "mass_balance_residual_kg_s": -3.0761341615614946e-07,
+        "energy_balance_residual_W": 30.049663123339997,
+        "max_area_closure_relative": 0.4105610706900207,
+        "outlet_area_closure_relative": 0.03467311857853006,
+        "max_source_energy_identity_residual_W_m": 7.275957614183426e-12,
+        "steady_discrete_product_term_W": 30.886881821306385
+      }
+    ],
+    "limitation": "Numerical convergence does not establish physical area closure. Suspected source/formulation limitation or translation error; MATLAB agreement unverified."
+  }
+}

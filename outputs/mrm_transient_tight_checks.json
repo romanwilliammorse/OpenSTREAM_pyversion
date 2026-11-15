@@ -1,0 +1,30 @@
+[
+  {
+    "integration": "EULER",
+    "converged": true,
+    "states": 21,
+    "seconds": 8.592365399992559,
+    "max_mass_residual_kg_s_m": 2.1182143289388833e-08,
+    "max_energy_residual_W_m": 0.000307390449961531,
+    "max_momentum_residual_Pa": 0.00024728969940126155,
+    "nodes": 25,
+    "dt_s": 0.25,
+    "ERRORW_kg_s": 1e-08,
+    "ERRORH_J_kg": 0.001,
+    "ERRORP_Pa": 0.001
+  },
+  {
+    "integration": "EXPONENTIAL",
+    "converged": true,
+    "states": 21,
+    "seconds": 7.502505399985239,
+    "max_mass_residual_kg_s_m": 9.848904513660112e-08,
+    "max_energy_residual_W_m": 0.0008830007154756458,
+    "max_momentum_residual_Pa": 0.0009825661478205766,
+    "nodes": 25,
+    "dt_s": 0.25,
+    "ERRORW_kg_s": 1e-08,
+    "ERRORH_J_kg": 0.001,
+    "ERRORP_Pa": 0.001
+  }
+]

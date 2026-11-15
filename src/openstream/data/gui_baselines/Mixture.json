@@ -1,0 +1,84 @@
+{
+  "schema": "openstream-gui-reference-v1",
+  "framework": "Mixture",
+  "case_id": "TUTORIAL1-TUTORIAL1-DEFAULT/tutorial1",
+  "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+  "archive": {
+    "file": "tutorial1_MixtureSolver.mat",
+    "sha256": "43311c4c2ec3440cc3366f94df1216b425d4270268887b7fb7bf921c0fb9ccb0",
+    "bytes": 281077,
+    "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026"
+  },
+  "producer_metadata": {
+    "matlab_version": null,
+    "coolprop_version": null,
+    "source_commit": null,
+    "note": "Archive header gives platform/date; serialized anonymous-function path includes R2024b but is not independent runtime-version proof."
+  },
+  "recovery_schema": "openstream-recovered-mcos-mixture-v1",
+  "decoder": {
+    "package": "mat-io",
+    "version": "1.0.2",
+    "repository": "https://github.com/foreverallama/matio",
+    "inspected_commit": "18d538d5657e4e32e25d90c53a80c05a522540ac",
+    "license": "BSD-3-Clause",
+    "release_tag_commit": "f9be7123707c134292fbfb67fcacac14516f5f83",
+    "enum_workaround": "Read structural name/index table without mutation; preserve original enum metadata",
+    "warnings": [],
+    "python": "3.12.14",
+    "dependencies": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.1",
+      "h5py": "3.16.0"
+    }
+  },
+  "recovered_created_utc": "2026-11-14T23:35:49.285404+00:00",
+  "source_export_manifest_sha256": "ffcbd35c82529f8e1bfa18a9f8456fc6598768efc035bb583f0b469ccd911186",
+  "reconstructed_methods": {
+    "U": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "liquid.W": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "liquid.U": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "liquid.H": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "vapor.W": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "vapor.U": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "vapor.H": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution"
+  },
+  "recovery_limitations": [
+    "Not a fresh MATLAB execution",
+    "Unknown original CoolProp version and exact producer commit",
+    "Method outputs reconstructed from archived values and source formulas are distinguished from directly stored arrays",
+    "No experimental validation implied"
+  ],
+  "source_exports": {
+    "results.npz": {
+      "sha256": "42d8eef4b7e2c3bbed40173cd7d459a2ffa83e3b7dfe8d1fa5079c92286a7a74",
+      "path": "outputs\\baseline-parity-02\\Mixture\\reference\\results.npz",
+      "operation": "Exact value and dimension preserving subset; no resampling or rounding."
+    },
+    "initialization.npz": {
+      "sha256": "758adaa8e3db0813e5a53e2f01f16ed3a08f3129fe7c9fd27e5f968bd8e2f65b",
+      "path": "outputs\\baseline-parity-02\\Mixture\\reference\\initialization.npz",
+      "operation": "Exact value and dimension preserving subset; no resampling or rounding."
+    }
+  },
+  "files": {
+    "Mixture.physical.npz": "b52d0e7b036f2fbbffdbfb50611d0fdf060b730578a61e360a1a6ba687d5867c",
+    "Mixture.initialization.npz": "d54e6ac1b990f1897b11289f8206865d2a937ea6796d075825c77864a8c09f00"
+  },
+  "units": {
+    "Z": "m",
+    "TIME": "s",
+    "W": "kg/s",
+    "U": "m/s",
+    "H": "J/kg",
+    "liquid.W": "kg/s",
+    "liquid.U": "m/s",
+    "liquid.H": "J/kg",
+    "vapor.W": "kg/s",
+    "vapor.U": "m/s",
+    "vapor.H": "J/kg"
+  },
+  "array_layout": "Named exports: time,node[,wall]. Raw arrays retain original MATLAB dimensions; object graph indices are 1-based.",
+  "license": "MIT; upstream OpenSTREAM license retained at package root"
+}

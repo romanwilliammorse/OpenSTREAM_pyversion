@@ -1,0 +1,8 @@
+...........                                                              [100%]
+============================== warnings summary ===============================
+.venv\reference-reader\matio\utils\converters\mattables.py:28
+  C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\.venv\reference-reader\matio\utils\converters\mattables.py:28: Pandas4Warning: The 'future.infer_string' option is deprecated and will be removed in pandas 4.0. Inferring str dtype for string data has been the default since pandas 3.0, and it will no longer be possible to disable it.
+    pd.options.future.infer_string = True
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+11 passed, 1 warning in 1.74s

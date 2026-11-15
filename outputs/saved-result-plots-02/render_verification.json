@@ -1,0 +1,50 @@
+{
+  "plotting_tests": "16 passed",
+  "visual_inspection": "Five PNG figures and representative GIF frames inspected; labels and layout readable",
+  "native_schemas_rendered": [
+    "Mixture",
+    "TwoFluid",
+    "ThreeField",
+    "FourField"
+  ],
+  "animations": {
+    "fourfield_frequency_initialization.gif": {
+      "decoded_frames": 9,
+      "duration_ms": [
+        250
+      ],
+      "size": [
+        946,
+        561
+      ]
+    },
+    "mixture_enthalpy.gif": {
+      "decoded_frames": 26,
+      "duration_ms": [
+        120
+      ],
+      "size": [
+        946,
+        561
+      ]
+    }
+  },
+  "static_figures": {
+    "fourfield_frequency_axial.png": {
+      "identical_to_visually_inspected_first_render": true
+    },
+    "fourfield_frequency_initialization.png": {
+      "identical_to_visually_inspected_first_render": true
+    },
+    "fourfield_wave_mass_space_time.png": {
+      "identical_to_visually_inspected_first_render": true
+    },
+    "mixture_enthalpy_history.png": {
+      "identical_to_visually_inspected_first_render": true
+    },
+    "mixture_enthalpy_space_time.png": {
+      "identical_to_visually_inspected_first_render": true
+    }
+  },
+  "numerical_validation_claim": "None; this verifies saved-data rendering, not solver physics"
+}

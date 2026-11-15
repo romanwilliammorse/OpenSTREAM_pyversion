@@ -1,0 +1,70 @@
+{
+  "schema": "openstream-gui-reference-v1",
+  "framework": "TwoFluid",
+  "case_id": "TUTORIAL1-TUTORIAL1-DEFAULT/tutorial1",
+  "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+  "archive": {
+    "file": "tutorial1_TwoFluidSolver.mat",
+    "sha256": "40f0c9a8f080d6ffe3887947dc5794eb756b5fa0e2ce650ff37a88003e69798d",
+    "bytes": 418905,
+    "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026"
+  },
+  "producer_metadata": {
+    "matlab_version": null,
+    "coolprop_version": null,
+    "source_commit": null
+  },
+  "recovery_schema": "openstream-recovered-twofluid-v1",
+  "decoder": {
+    "package": "mat-io",
+    "version": "1.0.2",
+    "release_commit": "f9be7123707c134292fbfb67fcacac14516f5f83",
+    "license": "BSD-3-Clause",
+    "python": "3.12.14",
+    "warnings": [],
+    "enum_workaround": "See tools/REFERENCE_READER.md; restored after read",
+    "dependencies": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.1",
+      "h5py": "3.16.0"
+    }
+  },
+  "recovered_created_utc": "2026-11-14T23:35:59.635467+00:00",
+  "source_export_manifest_sha256": "5af9f3be88d43478761279482d9319d7b3331bddff2145ab088a7bfb452cc8f8",
+  "reconstructed_methods": {},
+  "recovery_limitations": [
+    "No fresh MATLAB run",
+    "Unknown original producing runtime/source version",
+    "No experimental validation",
+    "Original physical area inconsistency retained"
+  ],
+  "source_exports": {
+    "results.npz": {
+      "sha256": "28bfe2af5ddb366c6c3b44453fc253bc9b2fb10d80007bd862c4f5fb34206d77",
+      "path": "outputs\\baseline-parity-02\\TwoFluid\\reference\\results.npz",
+      "operation": "Exact value and dimension preserving subset; no resampling or rounding."
+    },
+    "initialization.npz": {
+      "sha256": "c9782139f33f11d229b865c2ec379587893204a9cd5f604811b36cf95267ec07",
+      "path": "outputs\\baseline-parity-02\\TwoFluid\\reference\\initialization.npz",
+      "operation": "Exact value and dimension preserving subset; no resampling or rounding."
+    }
+  },
+  "files": {
+    "TwoFluid.physical.npz": "54680a94937fc02642cba8315949800dd8c00c3c7095c514f16109b3a8bb2749",
+    "TwoFluid.initialization.npz": "f9e357dc68ec0638f7690121c06d224d2c09126b7f9b2ccb01b238c95c5c23d8"
+  },
+  "units": {
+    "Z": "m",
+    "TIME": "s",
+    "liquid.W": "kg/s",
+    "liquid.U": "m/s",
+    "liquid.H": "J/kg",
+    "vapor.W": "kg/s",
+    "vapor.U": "m/s",
+    "vapor.H": "J/kg"
+  },
+  "array_layout": "Named arrays: (time,node); raw arrays retain MATLAB dimensions.",
+  "license": "MIT; upstream OpenSTREAM license retained at package root"
+}

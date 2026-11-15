@@ -1,0 +1,1827 @@
+{
+  "schema": "openstream-python-v1",
+  "framework": "FourField",
+  "state": "INITIALSTEPCONVERGED",
+  "converged": true,
+  "elapsed_seconds": 38.96804790000897,
+  "units": {
+    "Z": "m",
+    "TIME": "s",
+    "film.W": "kg/s",
+    "film.U": "m/s",
+    "film.H": "J/kg",
+    "film.base.W": "kg/s",
+    "film.base.U": "m/s",
+    "film.base.H": "J/kg",
+    "film.base.ITR.DFW": "Hz",
+    "film.base.ITR.DU": "m/s",
+    "film.base.ITR.DWL": "kg/s/m",
+    "film.base.ITR.N": "1",
+    "film.wave.W": "kg/s",
+    "film.wave.U": "m/s",
+    "film.wave.H": "J/kg",
+    "film.wave.FREQUENCY": "Hz",
+    "film.wave.ITR.DFW": "Hz",
+    "film.wave.ITR.DU": "m/s",
+    "film.wave.ITR.DWL": "kg/s/m",
+    "film.wave.ITR.N": "1",
+    "drop.W": "kg/s",
+    "drop.U": "m/s",
+    "drop.H": "J/kg",
+    "drop.ITR.DU": "m/s",
+    "drop.ITR.N": "1",
+    "film.wave.ITR.DF": "Hz"
+  },
+  "native_source_sha256": {
+    "__init__.py": "c15b523e4d042d655314c386db0d056cf61d4387bc15f56347b44b50c27dcd8c",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "annular.py": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+    "cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+    "ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+    "fields.py": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+    "fourfield.py": "6a73a107f776882bce97c187806e6563048f7a55a5b908b627afdf923cfef9a0",
+    "gui.py": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
+    "gui_launcher.py": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+    "gui_lock.py": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+    "gui_reference.py": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+    "gui_schema.py": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+    "gui_worker.py": "192221ff67f7fc9cbb87138d2a74f1dd063f5d1fd2d063a214a14a8069c45311",
+    "inputs.py": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+    "multifield_output.py": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+    "numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+    "output.py": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+    "plotting.py": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+    "properties.py": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+    "solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+    "tf_fields.py": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+    "threefield.py": "d34c7863cd4303945e2bc9edd840f5d74a0dac4e14af651021d763a269c61c71",
+    "twofluid.py": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c"
+  },
+  "iteration_note": "Absent iteration fields are NaN; FourField DF is actual frequency residual, DFW is an unused upstream initialized field. Physical-time iteration arrays can remain zero because source copies omit them; inspect initialization.npz.",
+  "initialization_onset": [
+    {
+      "node": 13,
+      "iterations": 3,
+      "residual_kg_s_m": 4.3494199819150633e-05,
+      "original_tolerance_kg_s_m": 0.0001,
+      "effective_tolerance_kg_s_m": 0.0001,
+      "converged": true
+    }
+  ],
+  "inputs": {
+    "model": {
+      "ID": "TUTORIAL1",
+      "NNODES": 100,
+      "FLUID": "WATER",
+      "PROPERTIES": "SATURATED",
+      "KLOC": [
+        0.0
+      ],
+      "WBOILINGXSUB": -0.2,
+      "WBOILINGN": 2.0,
+      "WBOILINGXSAT": 0.0,
+      "OAF": "WALLIS",
+      "OAFTRANSITION": [
+        0.1,
+        0.0
+      ],
+      "CBT": "NONE",
+      "CBTMULT": "<Python callable>",
+      "CBTKEFFECT": [
+        0.0,
+        0.0
+      ],
+      "CBTELEVATION": 1.0,
+      "MFBT": "NONE",
+      "DTMFB": 100.0,
+      "SPMTM": "BLASIUS",
+      "FRICTION": [
+        0.2,
+        -0.2,
+        0.0
+      ],
+      "TPFM": "HOMOGENEOUS",
+      "KLOSS": [
+        0.0
+      ],
+      "TPKM": "HOMOGENEOUS",
+      "BTMTM": "TPFM",
+      "SPHTM": "DITTUSBOELTER",
+      "DITTUSBOELTERCOEF": [
+        0.023,
+        0.8,
+        0.4
+      ],
+      "TPHTM": "THOM",
+      "BTHTM": "VAPOR",
+      "MOECKCOEF": [
+        0.00109,
+        0.989,
+        1.41,
+        -1.15
+      ],
+      "VOID": "HOMOGENEOUS",
+      "SLIP": 1.0,
+      "THERMALNONEQ": "EQUILIBRIUM",
+      "THERMALRELAX": "TIMEX",
+      "RELAXX": [
+        -0.5,
+        1.0
+      ],
+      "RELAXCONDFO": [
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001
+      ],
+      "RELAXEVAPFO": [
+        5e-05,
+        5e-05,
+        5e-05,
+        5e-05,
+        5e-05
+      ],
+      "RELAXCONDT": [
+        0.5,
+        0.5
+      ],
+      "RELAXEVAPT": [
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3
+      ],
+      "RELAXCONDCOEF": [
+        0.0001,
+        0.3333333333333333,
+        0.05,
+        0.0
+      ],
+      "RELAXEVAPCOEF": [
+        0.0001,
+        0.3333333333333333,
+        1e-05,
+        0.0
+      ],
+      "RELAXCONDFOCOEF": [
+        5e-05,
+        500000.0,
+        0.0,
+        0.0
+      ],
+      "RELAXEVAPFOCOEF": [
+        0.0001,
+        500000.0,
+        2.0,
+        2.0,
+        0.01,
+        1.0
+      ],
+      "KTRELAX": [
+        "NaN"
+      ],
+      "NEARWALLRATIO": 0.5,
+      "NEARWALLEQOAF": false,
+      "NEARWALLH": "RATIO",
+      "NEARWALLHRATIO": 1.0,
+      "NEARWALLRELAX": "QUALITY",
+      "NEARWALLRELAXX": [
+        -0.5,
+        -0.25,
+        -0.1,
+        0.0,
+        1.0
+      ],
+      "NEARWALLRELAXT": [
+        1.0,
+        0.5,
+        0.3,
+        0.1,
+        0.1
+      ],
+      "NEARWALLRELAXCOEF": [
+        0.0001,
+        0.3333333333333333,
+        0.05
+      ],
+      "INTLENGTH": "CONSTANT",
+      "INTAREA": "DISPGAS2DISPLIQ",
+      "INTLENGTHVCST": 0.002,
+      "INTLENGTHLCST": 0.002,
+      "LOCRELVEL": "AREAMEAN",
+      "RELVELCST": 1.0,
+      "MOMENTLIQUID": "FULL",
+      "MOMENTGAS": "FULL",
+      "DROPDRAG": "VISCOUS",
+      "DROPDRAGCOEF": 0.45,
+      "BUBBLEDRAG": "STOKES",
+      "BUBBLEDRAGCOEF": 0.45,
+      "INTNU": "RELAXATION",
+      "INTNUVCST": 2.0,
+      "INTNULCST": 2.0,
+      "RANZMARSHALLVCST": [
+        2.0,
+        0.6,
+        0.5,
+        0.3333333333333333
+      ],
+      "RANZMARSHALLLCST": [
+        2.0,
+        0.6,
+        0.5,
+        0.3333333333333333
+      ],
+      "INTTRANSH": "BULK",
+      "POSFILM": true,
+      "OAFENTRAINED": "EQUILIBRIUM",
+      "OAFDROPRATIO": 0.7,
+      "DEPOSITION": "OKAWA",
+      "DEPENHANCEMENT": "NONE",
+      "KBLOCKRATIO": [
+        0.0
+      ],
+      "KTUNING": [
+        0.0
+      ],
+      "ENTRAINMENT": "OKAWA2003",
+      "OKAWACOEFS": [
+        320.0,
+        0.111,
+        0.000479,
+        1.0
+      ],
+      "MOMENTFILM": "FULL",
+      "VAPORFRIC": "CONSTANT",
+      "VAPORFRICCST": 0.005,
+      "THINFILMFRIC": "TURBULENT",
+      "THINFILMTHICK": 0.0001,
+      "MOMENTDROP": "FULL",
+      "DROPSLIP": 1.0,
+      "DROPDIAM": 0.001,
+      "OAFFILMSPLIT": "EQUILIBRIUM",
+      "OAFBASERATIO": 0.5,
+      "BASEEQTHICK": "RISO",
+      "BASEEQTHICKCOEF": [
+        5.37e-05,
+        -0.64,
+        1.21
+      ],
+      "BASEYPLUS": 15.0,
+      "RELAXTB": 0.2,
+      "WAVEMIXCOEF": [
+        2.0
+      ],
+      "WAVEFREQUENCY": "RELAXATION",
+      "EQSTROUHAL": "RISO",
+      "EQSTROUHALCOEF": [
+        0.00011236,
+        0.5,
+        0.0
+      ],
+      "RELAXTW": 0.2,
+      "CSTWAVEFREQ": 100.0,
+      "MOMENTBASE": "FULLNOP",
+      "MOMENTWAVE": "FULL",
+      "WAVEBASEINT": "VAPORSHEAR",
+      "SHAPEFACTORCOEF": [
+        132500.0,
+        2.0,
+        1.0,
+        0.0
+      ],
+      "WAVEDRAGCOEF": [
+        0.02,
+        135000.0,
+        0.437
+      ],
+      "THINWAVETHICK": 1e-05
+    },
+    "options": {
+      "ID": "DEFAULT",
+      "AXIALINTERP": "NEXT",
+      "TIMEINTERP": "LINEAR",
+      "TSTEP": 0.1,
+      "MAXITER": 100,
+      "SSTSTEP": 1.0,
+      "SSMAXITER": 30,
+      "MRMTIMEINT": "EXPONENTIAL",
+      "ERRORW": 0.001,
+      "ERRORP": 0.1,
+      "ERRORH": 0.1,
+      "SSCONVW": 0.001,
+      "SSCONVP": 1.0,
+      "SSCONVH": 1.0,
+      "RELAXWM": 1.0,
+      "RELAXPM": 1.0,
+      "RELAXHM": 1.0,
+      "RELAXWV": 0.7,
+      "RELAXHV": 0.7,
+      "ERRORU": 0.0001,
+      "SSCONVU": 0.001,
+      "RELAXWL": 1.0,
+      "RELAXUL": 0.5,
+      "RELAXUV": 0.5,
+      "RELAXHL": 1.0,
+      "OAFEQUILMAXITER": 100,
+      "OAFEQUILTOL": 0.0001,
+      "UDEQUILMAXITER": 100,
+      "UDEQUILTOL": 0.001,
+      "UFEQUILMAXITER": 100,
+      "UFEQUILTOL": 0.001,
+      "ENTNUMMAXITER": 100,
+      "ENTNUMTOL": 0.01,
+      "ERRORWF": 0.0001,
+      "ERRORUF": 0.01,
+      "ERRORUD": 0.01,
+      "SSCONVWF": 0.0001,
+      "SSCONVUF": 0.01,
+      "SSCONVUD": 0.01,
+      "RELAXWF": 0.5,
+      "RELAXUF": 0.2,
+      "RELAXUD": 0.2,
+      "ERRORFW": 0.1,
+      "SSCONVFW": 0.1,
+      "RELAXWB": 0.5,
+      "RELAXUB": 0.2,
+      "RELAXWW": 0.5,
+      "RELAXUW": 0.2,
+      "RELAXFW": 0.5
+    },
+    "geometry": {
+      "ID": "TUTORIAL1",
+      "LENGTH": 5.5,
+      "AREA": 6.0821e-05,
+      "PERIM": [
+        0.0276
+      ],
+      "ANGLE": 0.0
+    },
+    "bc": [
+      {
+        "TIME": 0.0,
+        "PRESSURE": 6000000.0,
+        "HIN": 1139400.0,
+        "MFLOW": 0.07,
+        "POWER": 87500.0,
+        "WMESH": [
+          3.5,
+          2.0
+        ],
+        "WPOWER": [
+          [
+            1.0
+          ],
+          [
+            0.0
+          ]
+        ]
+      }
+    ],
+    "source_files": [
+      "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\gui\\26ede43de58643d7ab8052d201f7d94b\\submitted_inputs.json"
+    ]
+  },
+  "verification": {
+    "archived_baseline": {
+      "status": "passed",
+      "message": "Archived steady and initialization profiles agree at rtol 1e-8, atol 0.",
+      "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+      "rtol": 1e-08,
+      "atol": 0.0,
+      "coordinate_atol": 1e-12,
+      "records": [
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 1.044220265811191e-12,
+          "max_relative_error": 2.467035624109594e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.W",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 2.059719061975329e-09,
+          "max_relative_error": 1.3565369914080661e-09,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.U",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.H",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            1,
+            101
+          ],
+          "max_absolute_error": 1.0443035325380379e-12,
+          "max_relative_error": 5.466247492208305e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "drop.W",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            1,
+            101
+          ],
+          "max_absolute_error": 2.0316193172220665e-11,
+          "max_relative_error": 2.5229403151878547e-12,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "drop.U",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            1,
+            101
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "drop.H",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 7.645169219916426e-13,
+          "max_relative_error": 2.81370480643049e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.wave.W",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.856055919015944e-09,
+          "max_relative_error": 2.5396096926761515e-09,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.wave.U",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.wave.H",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 7.662689927023791e-13,
+          "max_relative_error": 3.412995994026596e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.base.W",
+          "group": "expanded"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 2.3926638448301674e-11,
+          "max_relative_error": 6.239469963959803e-12,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.base.U",
+          "group": "expanded"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.base.H",
+          "group": "expanded"
+        },
+        {
+          "passed": true,
+          "unit": "Hz",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 8.642899729238707e-10,
+          "max_relative_error": 4.1078183179604524e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.wave.FREQUENCY",
+          "group": "expanded"
+        },
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 1.4517970159388938e-12,
+          "max_relative_error": 8.07244616727207e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.W",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 2.059719061975329e-09,
+          "max_relative_error": 1.3565369914080661e-09,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.U",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.H",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            9,
+            101
+          ],
+          "max_absolute_error": 1.4517970159388938e-12,
+          "max_relative_error": 7.588835185077288e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "drop.W",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            9,
+            101
+          ],
+          "max_absolute_error": 2.141398169897002e-11,
+          "max_relative_error": 2.7373429109045336e-12,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "drop.U",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            9,
+            101
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "drop.H",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 1.8059269357717511e-12,
+          "max_relative_error": 7.35293493046752e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.wave.W",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.856055919015944e-09,
+          "max_relative_error": 2.5396096926761515e-09,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.wave.U",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.wave.H",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 9.2926361050516e-13,
+          "max_relative_error": 8.07244616727207e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.base.W",
+          "group": "expanded"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.9690917219559196e-11,
+          "max_relative_error": 1.2943426578808877e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.base.U",
+          "group": "expanded"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.base.H",
+          "group": "expanded"
+        },
+        {
+          "passed": true,
+          "unit": "Hz",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 1.3201635340465145e-09,
+          "max_relative_error": 6.263789258788219e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.wave.FREQUENCY",
+          "group": "expanded"
+        }
+      ],
+      "max_relative_error": 2.5396096926761515e-09,
+      "experimental_validation": "not performed",
+      "limitations": [
+        "The archive producer's MATLAB, CoolProp and source versions are unknown.",
+        "Agreement does not establish physical consistency or full OpenSTREAM parity.",
+        "Supplementary iteration/diagnostic disagreements remain documented separately."
+      ],
+      "archive": {
+        "file": "tutorial1_FourFieldSolver.mat",
+        "sha256": "fd28edab74cad654721572c4644461dc20fef27ed4a3d617458b9717e13eacf1",
+        "bytes": 632002,
+        "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:24 2026"
+      },
+      "producer_metadata": {
+        "matlab_version": null,
+        "coolprop_version": null,
+        "source_commit": null
+      }
+    },
+    "experimental_validation": "not performed"
+  },
+  "physical_diagnostics": {
+    "physical_consistency": false,
+    "area_closure_relative_tolerance": 1e-06,
+    "max_area_closure_relative": 0.4413082218380726,
+    "max_unblended_annular_area_closure_relative": 0.11241051742329389,
+    "outlet_area_closure_relative": 0.010737048682143202,
+    "common_annular_upstream_face_z_m": 1.595,
+    "common_annular_downstream_face_z_m": 5.5,
+    "common_annular_cell_count": 71,
+    "max_common_annular_cell_mass_residual_kg_s": 1.94576021961268e-11,
+    "max_abs_common_annular_mass_residual_kg_s": 7.240892191395787e-10,
+    "inventory_by_time": [
+      {
+        "time_s": 0.0,
+        "max_area_closure_relative": 0.4413082218380726,
+        "outlet_area_closure_relative": 0.010737048682143202,
+        "max_unblended_annular_area_closure_relative": 0.11241051742329389,
+        "unblended_annular_node_count": 72,
+        "nonfinite_inventory_or_area_node_count": 0,
+        "nonfinite_unblended_annular_node_count": 0,
+        "max_all_phase_cell_mass_residual_kg_s": 1.94576021961268e-11,
+        "global_all_phase_mass_residual_kg_s": 7.9017474508003e-10,
+        "max_common_annular_cell_mass_residual_kg_s": 1.94576021961268e-11,
+        "common_annular_mass_residual_kg_s": 7.240892191395787e-10,
+        "common_annular_mass_inventory_kg": 0.015819340343491632,
+        "integrated_phase_mass_inventory_kg": 0.047911647938455405
+      }
+    ],
+    "inventory_interpretation": "W/U is kg/m; occupied area = sum(Wfilm/Ufilm)/rhoF + Wdrop/(Udrop*rhoF) + Wvapor/(Uvapor*rhoV). The 1e-6 tolerance tests an algebraic geometry identity, not measurement uncertainty. Physical-consistency rejection applies only where AFFNC >= 1-1e-12 (numerically unblended annular flow); absence of such nodes leaves status unknown. Common-annular mass diagnostics use a fixed downstream control volume whose upstream face and all cells satisfy this mask at every time; its residual is outflow minus inflow plus backward-Euler storage, with no storage for the initial steady state. Pre-annular values are source initialization quantities and all-region area/mass diagnostics there are descriptive, not physical-domain acceptance checks. Zero/zero inventory is indeterminate and fails if in the applicable region. Any four-field film-thickness caps do not independently enforce this inventory identity. Numerical convergence and algebraic flow partition do not establish mass-storage conservation. Whether a discrepancy is shared with upstream is established by a separate reference comparison; see the baseline verification report.",
+    "nonfinite_state_count": 0,
+    "base_plus_wave_minus_film_max_kg_s": 0.0,
+    "film_plus_drop_minus_liquid_max_kg_s": 3.469446951953614e-18,
+    "all_fields_minus_mixture_max_kg_s": 1.3877787807814457e-17,
+    "base_min_kg_s": 0.0,
+    "wave_min_kg_s": 0.0,
+    "drop_min_kg_s": 0.01172757330528559,
+    "base_min_m_s": 1.5183655694787734,
+    "wave_min_m_s": 0.759182785082333,
+    "drop_min_m_s": 1.518365570164666,
+    "frequency_min_Hz": 21.040121691372597,
+    "frequency_temporally_converged": true,
+    "onset_equilibrium_converged": true,
+    "nested_closure_failures": [],
+    "balance_note": "Raw final pseudo-time mass residuals; POSFILM clipping and sequential source updates are retained.",
+    "base_mass_residual_max_kg_s": 0.0004305856934339351,
+    "base_wet_annular_mass_residual_max_kg_s": 0.0004305856934339351,
+    "base_unclamped_annular_mass_residual_max_kg_s": 2.4493390997778084e-06,
+    "base_zero_mass_node_count": 1,
+    "wave_mass_residual_max_kg_s": 0.000424136966741464,
+    "wave_wet_annular_mass_residual_max_kg_s": 2.35783168200021e-06,
+    "wave_unclamped_annular_mass_residual_max_kg_s": 2.35783168200021e-06,
+    "wave_zero_mass_node_count": 7
+  },
+  "wave_frequency_converged": true,
+  "upstream_commit": "a614c7173822a93c1e64ac28d1541cbac028cbd8",
+  "wrapper_commit": "a7c40902ff66faf6ed668986398bb1b9faa16e13",
+  "versions": {
+    "openstream-python": "0.2.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "CoolProp": "8.0.0",
+    "matplotlib": "3.11.2"
+  },
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "constants": {
+    "model.G": 9.81
+  },
+  "function_samples": {
+    "model.CBTMULT": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "source_files": [
+    {
+      "source": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\gui\\26ede43de58643d7ab8052d201f7d94b\\submitted_inputs.json",
+      "copy": "mixture/inputs\\00-submitted_inputs.json",
+      "sha256": "2bdc28f8b9233303b2836dc5fc44d6ff799a29a9c33761755a4de37818ecd033"
+    }
+  ],
+  "gui_verification": {
+    "reference": {
+      "status": "passed",
+      "message": "Archived steady and initialization profiles agree at rtol 1e-8, atol 0.",
+      "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+      "rtol": 1e-08,
+      "atol": 0.0,
+      "coordinate_atol": 1e-12,
+      "records": [
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 1.044220265811191e-12,
+          "max_relative_error": 2.467035624109594e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.W",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 2.059719061975329e-09,
+          "max_relative_error": 1.3565369914080661e-09,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.U",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.H",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            1,
+            101
+          ],
+          "max_absolute_error": 1.0443035325380379e-12,
+          "max_relative_error": 5.466247492208305e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "drop.W",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            1,
+            101
+          ],
+          "max_absolute_error": 2.0316193172220665e-11,
+          "max_relative_error": 2.5229403151878547e-12,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "drop.U",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            1,
+            101
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "drop.H",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 7.645169219916426e-13,
+          "max_relative_error": 2.81370480643049e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.wave.W",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.856055919015944e-09,
+          "max_relative_error": 2.5396096926761515e-09,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.wave.U",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.wave.H",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 7.662689927023791e-13,
+          "max_relative_error": 3.412995994026596e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.base.W",
+          "group": "expanded"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 2.3926638448301674e-11,
+          "max_relative_error": 6.239469963959803e-12,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.base.U",
+          "group": "expanded"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.base.H",
+          "group": "expanded"
+        },
+        {
+          "passed": true,
+          "unit": "Hz",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "max_absolute_error": 8.642899729238707e-10,
+          "max_relative_error": 4.1078183179604524e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "physical",
+          "key": "film.wave.FREQUENCY",
+          "group": "expanded"
+        },
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 1.4517970159388938e-12,
+          "max_relative_error": 8.07244616727207e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.W",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 2.059719061975329e-09,
+          "max_relative_error": 1.3565369914080661e-09,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.U",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.H",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            9,
+            101
+          ],
+          "max_absolute_error": 1.4517970159388938e-12,
+          "max_relative_error": 7.588835185077288e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "drop.W",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            9,
+            101
+          ],
+          "max_absolute_error": 2.141398169897002e-11,
+          "max_relative_error": 2.7373429109045336e-12,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "drop.U",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            9,
+            101
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "drop.H",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 1.8059269357717511e-12,
+          "max_relative_error": 7.35293493046752e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.wave.W",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.856055919015944e-09,
+          "max_relative_error": 2.5396096926761515e-09,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.wave.U",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.wave.H",
+          "group": "core"
+        },
+        {
+          "passed": true,
+          "unit": "kg/s",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 9.2926361050516e-13,
+          "max_relative_error": 8.07244616727207e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.base.W",
+          "group": "expanded"
+        },
+        {
+          "passed": true,
+          "unit": "m/s",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.9690917219559196e-11,
+          "max_relative_error": 1.2943426578808877e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.base.U",
+          "group": "expanded"
+        },
+        {
+          "passed": true,
+          "unit": "J/kg",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error": 2.493402740916268e-15,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.base.H",
+          "group": "expanded"
+        },
+        {
+          "passed": true,
+          "unit": "Hz",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "max_absolute_error": 1.3201635340465145e-09,
+          "max_relative_error": 6.263789258788219e-11,
+          "nonmatching_reference_zeros": 0,
+          "failed_values": 0,
+          "dataset": "initialization",
+          "key": "film.wave.FREQUENCY",
+          "group": "expanded"
+        }
+      ],
+      "max_relative_error": 2.5396096926761515e-09,
+      "experimental_validation": "not performed",
+      "limitations": [
+        "The archive producer's MATLAB, CoolProp and source versions are unknown.",
+        "Agreement does not establish physical consistency or full OpenSTREAM parity.",
+        "Supplementary iteration/diagnostic disagreements remain documented separately."
+      ],
+      "archive": {
+        "file": "tutorial1_FourFieldSolver.mat",
+        "sha256": "fd28edab74cad654721572c4644461dc20fef27ed4a3d617458b9717e13eacf1",
+        "bytes": 632002,
+        "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:24 2026"
+      },
+      "producer_metadata": {
+        "matlab_version": null,
+        "coolprop_version": null,
+        "source_commit": null
+      }
+    },
+    "physical": {
+      "status": "failed",
+      "diagnostics": {
+        "physical_consistency": false,
+        "area_closure_relative_tolerance": 1e-06,
+        "max_area_closure_relative": 0.4413082218380726,
+        "max_unblended_annular_area_closure_relative": 0.11241051742329389,
+        "outlet_area_closure_relative": 0.010737048682143202,
+        "common_annular_upstream_face_z_m": 1.595,
+        "common_annular_downstream_face_z_m": 5.5,
+        "common_annular_cell_count": 71,
+        "max_common_annular_cell_mass_residual_kg_s": 1.94576021961268e-11,
+        "max_abs_common_annular_mass_residual_kg_s": 7.240892191395787e-10,
+        "inventory_by_time": [
+          {
+            "time_s": 0.0,
+            "max_area_closure_relative": 0.4413082218380726,
+            "outlet_area_closure_relative": 0.010737048682143202,
+            "max_unblended_annular_area_closure_relative": 0.11241051742329389,
+            "unblended_annular_node_count": 72,
+            "nonfinite_inventory_or_area_node_count": 0,
+            "nonfinite_unblended_annular_node_count": 0,
+            "max_all_phase_cell_mass_residual_kg_s": 1.94576021961268e-11,
+            "global_all_phase_mass_residual_kg_s": 7.9017474508003e-10,
+            "max_common_annular_cell_mass_residual_kg_s": 1.94576021961268e-11,
+            "common_annular_mass_residual_kg_s": 7.240892191395787e-10,
+            "common_annular_mass_inventory_kg": 0.015819340343491632,
+            "integrated_phase_mass_inventory_kg": 0.047911647938455405
+          }
+        ],
+        "inventory_interpretation": "W/U is kg/m; occupied area = sum(Wfilm/Ufilm)/rhoF + Wdrop/(Udrop*rhoF) + Wvapor/(Uvapor*rhoV). The 1e-6 tolerance tests an algebraic geometry identity, not measurement uncertainty. Physical-consistency rejection applies only where AFFNC >= 1-1e-12 (numerically unblended annular flow); absence of such nodes leaves status unknown. Common-annular mass diagnostics use a fixed downstream control volume whose upstream face and all cells satisfy this mask at every time; its residual is outflow minus inflow plus backward-Euler storage, with no storage for the initial steady state. Pre-annular values are source initialization quantities and all-region area/mass diagnostics there are descriptive, not physical-domain acceptance checks. Zero/zero inventory is indeterminate and fails if in the applicable region. Any four-field film-thickness caps do not independently enforce this inventory identity. Numerical convergence and algebraic flow partition do not establish mass-storage conservation. Whether a discrepancy is shared with upstream is established by a separate reference comparison; see the baseline verification report.",
+        "nonfinite_state_count": 0,
+        "base_plus_wave_minus_film_max_kg_s": 0.0,
+        "film_plus_drop_minus_liquid_max_kg_s": 3.469446951953614e-18,
+        "all_fields_minus_mixture_max_kg_s": 1.3877787807814457e-17,
+        "base_min_kg_s": 0.0,
+        "wave_min_kg_s": 0.0,
+        "drop_min_kg_s": 0.01172757330528559,
+        "base_min_m_s": 1.5183655694787734,
+        "wave_min_m_s": 0.759182785082333,
+        "drop_min_m_s": 1.518365570164666,
+        "frequency_min_Hz": 21.040121691372597,
+        "frequency_temporally_converged": true,
+        "onset_equilibrium_converged": true,
+        "nested_closure_failures": [],
+        "balance_note": "Raw final pseudo-time mass residuals; POSFILM clipping and sequential source updates are retained.",
+        "base_mass_residual_max_kg_s": 0.0004305856934339351,
+        "base_wet_annular_mass_residual_max_kg_s": 0.0004305856934339351,
+        "base_unclamped_annular_mass_residual_max_kg_s": 2.4493390997778084e-06,
+        "base_zero_mass_node_count": 1,
+        "wave_mass_residual_max_kg_s": 0.000424136966741464,
+        "wave_wet_annular_mass_residual_max_kg_s": 2.35783168200021e-06,
+        "wave_unclamped_annular_mass_residual_max_kg_s": 2.35783168200021e-06,
+        "wave_zero_mass_node_count": 7
+      },
+      "message": "Physical consistency checks failed. Inspect diagnostics; numerical agreement does not establish physical validity."
+    },
+    "converged": true,
+    "baseline": {
+      "is_reference": true,
+      "changes": [],
+      "change_count": 0
+    },
+    "experimental_validation": "not performed",
+    "framework": "FourField",
+    "submitted_inputs": {
+      "framework": "FourField",
+      "inputs": {
+        "bc": [
+          {
+            "HIN": 1139400,
+            "MFLOW": 0.07,
+            "POWER": 87500,
+            "PRESSURE": 6000000,
+            "TIME": 0,
+            "WMESH": [
+              3.5,
+              2
+            ],
+            "WPOWER": [
+              [
+                1
+              ],
+              [
+                0
+              ]
+            ]
+          }
+        ],
+        "geometry": {
+          "ANGLE": 0,
+          "AREA": 6.0821e-05,
+          "ID": "TUTORIAL1",
+          "LENGTH": 5.5,
+          "PERIM": [
+            0.0276
+          ]
+        },
+        "model": {
+          "BASEEQTHICK": "RISO",
+          "BASEEQTHICKCOEF": [
+            5.37e-05,
+            -0.64,
+            1.21
+          ],
+          "BASEYPLUS": 15,
+          "BTHTM": "VAPOR",
+          "BTMTM": "TPFM",
+          "BUBBLEDRAG": "STOKES",
+          "BUBBLEDRAGCOEF": 0.45,
+          "CBT": "NONE",
+          "CBTELEVATION": 1,
+          "CBTKEFFECT": [
+            0,
+            0
+          ],
+          "CBTMULT": 1,
+          "CSTWAVEFREQ": 100,
+          "DEPENHANCEMENT": "NONE",
+          "DEPOSITION": "OKAWA",
+          "DITTUSBOELTERCOEF": [
+            0.023,
+            0.8,
+            0.4
+          ],
+          "DROPDIAM": 0.001,
+          "DROPDRAG": "VISCOUS",
+          "DROPDRAGCOEF": 0.45,
+          "DROPSLIP": 1,
+          "DTMFB": 100,
+          "ENTRAINMENT": "OKAWA2003",
+          "EQSTROUHAL": "RISO",
+          "EQSTROUHALCOEF": [
+            0.00011236,
+            0.5,
+            0
+          ],
+          "FLUID": "WATER",
+          "FRICTION": [
+            0.2,
+            -0.2,
+            0
+          ],
+          "ID": "TUTORIAL1",
+          "INTAREA": "DISPGAS2DISPLIQ",
+          "INTLENGTH": "CONSTANT",
+          "INTLENGTHLCST": 0.002,
+          "INTLENGTHVCST": 0.002,
+          "INTNU": "RELAXATION",
+          "INTNULCST": 2,
+          "INTNUVCST": 2,
+          "INTTRANSH": "BULK",
+          "KBLOCKRATIO": [
+            0
+          ],
+          "KLOC": [
+            0
+          ],
+          "KLOSS": [
+            0
+          ],
+          "KTRELAX": [
+            "NaN"
+          ],
+          "KTUNING": [
+            0
+          ],
+          "LOCRELVEL": "AREAMEAN",
+          "MFBT": "NONE",
+          "MOECKCOEF": [
+            0.00109,
+            0.989,
+            1.41,
+            -1.15
+          ],
+          "MOMENTBASE": "FULLNOP",
+          "MOMENTDROP": "FULL",
+          "MOMENTFILM": "FULL",
+          "MOMENTGAS": "FULL",
+          "MOMENTLIQUID": "FULL",
+          "MOMENTWAVE": "FULL",
+          "NEARWALLEQOAF": false,
+          "NEARWALLH": "RATIO",
+          "NEARWALLHRATIO": 1,
+          "NEARWALLRATIO": 0.5,
+          "NEARWALLRELAX": "QUALITY",
+          "NEARWALLRELAXCOEF": [
+            0.0001,
+            0.3333333333333333,
+            0.05
+          ],
+          "NEARWALLRELAXT": [
+            1,
+            0.5,
+            0.3,
+            0.1,
+            0.1
+          ],
+          "NEARWALLRELAXX": [
+            -0.5,
+            -0.25,
+            -0.1,
+            0,
+            1
+          ],
+          "NNODES": 100,
+          "OAF": "WALLIS",
+          "OAFBASERATIO": 0.5,
+          "OAFDROPRATIO": 0.7,
+          "OAFENTRAINED": "EQUILIBRIUM",
+          "OAFFILMSPLIT": "EQUILIBRIUM",
+          "OAFTRANSITION": [
+            0.1,
+            0
+          ],
+          "OKAWACOEFS": [
+            320,
+            0.111,
+            0.000479,
+            1
+          ],
+          "POSFILM": true,
+          "PROPERTIES": "SATURATED",
+          "RANZMARSHALLLCST": [
+            2,
+            0.6,
+            0.5,
+            0.3333333333333333
+          ],
+          "RANZMARSHALLVCST": [
+            2,
+            0.6,
+            0.5,
+            0.3333333333333333
+          ],
+          "RELAXCONDCOEF": [
+            0.0001,
+            0.3333333333333333,
+            0.05,
+            0
+          ],
+          "RELAXCONDFO": [
+            0.0001,
+            0.0001,
+            0.0001,
+            0.0001,
+            0.0001
+          ],
+          "RELAXCONDFOCOEF": [
+            5e-05,
+            500000,
+            0,
+            0
+          ],
+          "RELAXCONDT": [
+            0.5,
+            0.5
+          ],
+          "RELAXEVAPCOEF": [
+            0.0001,
+            0.3333333333333333,
+            1e-05,
+            0
+          ],
+          "RELAXEVAPFO": [
+            5e-05,
+            5e-05,
+            5e-05,
+            5e-05,
+            5e-05
+          ],
+          "RELAXEVAPFOCOEF": [
+            0.0001,
+            500000,
+            2,
+            2,
+            0.01,
+            1
+          ],
+          "RELAXEVAPT": [
+            0.3,
+            0.3,
+            0.3,
+            0.3,
+            0.3
+          ],
+          "RELAXTB": 0.2,
+          "RELAXTW": 0.2,
+          "RELAXX": [
+            -0.5,
+            1
+          ],
+          "RELVELCST": 1,
+          "SHAPEFACTORCOEF": [
+            132500,
+            2,
+            1,
+            0
+          ],
+          "SLIP": 1,
+          "SPHTM": "DITTUSBOELTER",
+          "SPMTM": "BLASIUS",
+          "THERMALNONEQ": "EQUILIBRIUM",
+          "THERMALRELAX": "TIMEX",
+          "THINFILMFRIC": "TURBULENT",
+          "THINFILMTHICK": 0.0001,
+          "THINWAVETHICK": 1e-05,
+          "TPFM": "HOMOGENEOUS",
+          "TPHTM": "THOM",
+          "TPKM": "HOMOGENEOUS",
+          "VAPORFRIC": "SOLVER_DEPENDENT",
+          "VAPORFRICCST": 0.005,
+          "VOID": "HOMOGENEOUS",
+          "WAVEBASEINT": "VAPORSHEAR",
+          "WAVEDRAGCOEF": [
+            0.02,
+            135000,
+            0.437
+          ],
+          "WAVEFREQUENCY": "RELAXATION",
+          "WAVEMIXCOEF": [
+            2
+          ],
+          "WBOILINGN": 2,
+          "WBOILINGXSAT": 0,
+          "WBOILINGXSUB": -0.2
+        },
+        "options": {
+          "AXIALINTERP": "NEXT",
+          "ENTNUMMAXITER": 100,
+          "ENTNUMTOL": 0.01,
+          "ERRORFW": 0.1,
+          "ERRORH": 0.1,
+          "ERRORP": 0.1,
+          "ERRORU": 0.0001,
+          "ERRORUD": 0.01,
+          "ERRORUF": 0.01,
+          "ERRORW": 0.001,
+          "ERRORWF": 0.0001,
+          "ID": "DEFAULT",
+          "MAXITER": 100,
+          "MRMTIMEINT": "EXPONENTIAL",
+          "OAFEQUILMAXITER": 100,
+          "OAFEQUILTOL": 0.0001,
+          "RELAXFW": 0.5,
+          "RELAXHL": 1,
+          "RELAXHM": 1,
+          "RELAXHV": 0.7,
+          "RELAXPM": 1,
+          "RELAXUB": 0.2,
+          "RELAXUD": 0.2,
+          "RELAXUF": 0.2,
+          "RELAXUL": 0.5,
+          "RELAXUV": 0.5,
+          "RELAXUW": 0.2,
+          "RELAXWB": 0.5,
+          "RELAXWF": 0.5,
+          "RELAXWL": 1,
+          "RELAXWM": 1,
+          "RELAXWV": 0.7,
+          "RELAXWW": 0.5,
+          "SSCONVFW": 0.1,
+          "SSCONVH": 1,
+          "SSCONVP": 1,
+          "SSCONVU": 0.001,
+          "SSCONVUD": 0.01,
+          "SSCONVUF": 0.01,
+          "SSCONVW": 0.001,
+          "SSCONVWF": 0.0001,
+          "SSMAXITER": 30,
+          "SSTSTEP": 1,
+          "TIMEINTERP": "LINEAR",
+          "TSTEP": 0.1,
+          "UDEQUILMAXITER": 100,
+          "UDEQUILTOL": 0.001,
+          "UFEQUILMAXITER": 100,
+          "UFEQUILTOL": 0.001
+        }
+      }
+    }
+  }
+}

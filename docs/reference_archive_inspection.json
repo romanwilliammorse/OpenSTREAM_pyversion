@@ -1,0 +1,77 @@
+{
+  "scipy_version": "1.18.1",
+  "records": [
+    {
+      "file": "upstream\\tests\\integration\\references\\TUTORIAL1-TUTORIAL1-DEFAULT\\tutorial1_FourFieldSolver.mat",
+      "sha256": "fd28edab74cad654721572c4644461dc20fef27ed4a3d617458b9717e13eacf1",
+      "bytes": 632002,
+      "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:24 2026",
+      "whosmat": {
+        "error": "TypeError",
+        "message": "'NoneType' object is not iterable"
+      },
+      "loadmat": {
+        "solver": {
+          "class": "MatlabOpaque",
+          "dtype": "[('_TypeSystem', 'O'), ('_Class', 'O'), ('_ObjectMetadata', 'O')]",
+          "shape": "(1,)",
+          "summary": "[('MCOS', 'Solvers.FourField.FourFieldSolver', array([[3707764736],\n        [         2],\n        [         1],\n        [         1],\n        [         1],\n        [        65]], dtype=uint32))                              ]"
+        }
+      }
+    },
+    {
+      "file": "upstream\\tests\\integration\\references\\TUTORIAL1-TUTORIAL1-DEFAULT\\tutorial1_MixtureSolver.mat",
+      "sha256": "43311c4c2ec3440cc3366f94df1216b425d4270268887b7fb7bf921c0fb9ccb0",
+      "bytes": 281077,
+      "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026",
+      "whosmat": {
+        "error": "TypeError",
+        "message": "'NoneType' object is not iterable"
+      },
+      "loadmat": {
+        "solver": {
+          "class": "MatlabOpaque",
+          "dtype": "[('_TypeSystem', 'O'), ('_Class', 'O'), ('_ObjectMetadata', 'O')]",
+          "shape": "(1,)",
+          "summary": "[('MCOS', 'Solvers.Mixture.MixtureSolver', array([[3707764736],\n        [         2],\n        [         1],\n        [         1],\n        [         1],\n        [        60]], dtype=uint32))                          ]"
+        }
+      }
+    },
+    {
+      "file": "upstream\\tests\\integration\\references\\TUTORIAL1-TUTORIAL1-DEFAULT\\tutorial1_ThreeFieldSolver.mat",
+      "sha256": "eabaef27d5b94dce4506783675d90563def40db1a491b8a16b982b9de070e884",
+      "bytes": 481108,
+      "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026",
+      "whosmat": {
+        "error": "TypeError",
+        "message": "'NoneType' object is not iterable"
+      },
+      "loadmat": {
+        "solver": {
+          "class": "MatlabOpaque",
+          "dtype": "[('_TypeSystem', 'O'), ('_Class', 'O'), ('_ObjectMetadata', 'O')]",
+          "shape": "(1,)",
+          "summary": "[('MCOS', 'Solvers.ThreeField.ThreeFieldSolver', array([[3707764736],\n        [         2],\n        [         1],\n        [         1],\n        [         1],\n        [        63]], dtype=uint32))                                ]"
+        }
+      }
+    },
+    {
+      "file": "upstream\\tests\\integration\\references\\TUTORIAL1-TUTORIAL1-DEFAULT\\tutorial1_TwoFluidSolver.mat",
+      "sha256": "40f0c9a8f080d6ffe3887947dc5794eb756b5fa0e2ce650ff37a88003e69798d",
+      "bytes": 418905,
+      "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026",
+      "whosmat": {
+        "error": "TypeError",
+        "message": "'NoneType' object is not iterable"
+      },
+      "loadmat": {
+        "solver": {
+          "class": "MatlabOpaque",
+          "dtype": "[('_TypeSystem', 'O'), ('_Class', 'O'), ('_ObjectMetadata', 'O')]",
+          "shape": "(1,)",
+          "summary": "[('MCOS', 'Solvers.TwoFluid.TwoFluidSolver', array([[3707764736],\n        [         2],\n        [         1],\n        [         1],\n        [         1],\n        [        64]], dtype=uint32))                            ]"
+        }
+      }
+    }
+  ]
+}

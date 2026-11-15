@@ -1,0 +1,114 @@
+{
+  "schema": "openstream-gui-package-verification-v1",
+  "version": "0.2.1",
+  "created_utc": "2026-11-15T00:42:29.476521+00:00",
+  "artifacts": {
+    "dist/gui-0.2.1-final/openstream_python-0.2.1-py3-none-any.whl": {
+      "bytes": 886863,
+      "sha256": "1d36522791dc70879d529ddb8ba3e7633967cc11a387ed9d5de814ba9340c854"
+    },
+    "dist/gui-0.2.1-final/openstream_python-0.2.1.tar.gz": {
+      "bytes": 1123256,
+      "sha256": "99454f935e83d1b399df79af8619282dda6289fbc1e138bd47ff473c25d1434e"
+    }
+  },
+  "source_package_files_byte_verified": 50,
+  "assets": {
+    "app.js": "198f02e495d87643e600f0a4c59f1aa471492585be075f0ddd6a20f6837a9084",
+    "index.html": "ee51e0b03b3fc6039313a42a1cd553215dc15edd9130fe78eadfa497160b4d5d",
+    "lato-bold.woff2": "ae88fc0d7a961832f809527d30bd3983a6866d42f66a56ade23f543681594db6",
+    "lato-normal.woff2": "983b0caf336e8542214fc17019a4fc5e0360864b92806ca14d55c1fc1c2c5a0f",
+    "logo-transparent.png": "2a579f4c894d9275e88369321862f9610a868af297d85c5bc74bc31c8f0bc8be",
+    "Roboto-Slab-Bold.woff2": "1a0c024dd1a267c52d5575469ffe8570d1e84164de7d393cf3414bafd17d7a0c",
+    "Roboto-Slab-Regular.woff2": "874e42222856d7af03b3f438d21d923a4280d47fe67c48510e2174a1579795ef",
+    "style.css": "3530a9258b005a191f28f531ac942964a01ab35c8dbda19da7786457c826b1b7"
+  },
+  "baseline_files": [
+    "openstream/data/gui_baselines/FourField.initialization.npz",
+    "openstream/data/gui_baselines/FourField.json",
+    "openstream/data/gui_baselines/FourField.physical.npz",
+    "openstream/data/gui_baselines/Mixture.initialization.npz",
+    "openstream/data/gui_baselines/Mixture.json",
+    "openstream/data/gui_baselines/Mixture.physical.npz",
+    "openstream/data/gui_baselines/ThreeField.initialization.npz",
+    "openstream/data/gui_baselines/ThreeField.json",
+    "openstream/data/gui_baselines/ThreeField.physical.npz",
+    "openstream/data/gui_baselines/TwoFluid.initialization.npz",
+    "openstream/data/gui_baselines/TwoFluid.json",
+    "openstream/data/gui_baselines/TwoFluid.physical.npz"
+  ],
+  "license_files_byte_verified": {
+    "licenses/CoolPropWrapper_LICENSE": "377231ec8fc5491d4674c9aa9cee0c6e54113d5454bee8ef822c27d6537e59e4",
+    "licenses/mat_io_LICENSE": "6b3299afbff051a2333c3f0b620c5c4ea14af71beb358ca849943197c11a5883",
+    "licenses/gui/Apache-License-2.0.txt": "b02b0053cf3723c514ec39101433d1e77fb1bcd2741e3bf8fe36891f7cbd0eab",
+    "licenses/gui/Flask-LICENSE.txt": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea",
+    "licenses/gui/OFL-License.txt": "b7bb528365934a3baeab162576d8f56c239bea5ac7cf200756d716049c6caa63",
+    "licenses/gui/plotly-LICENSE.txt": "ba712274f8336a5f0828c8e2bf639ab8a632c623800a35f96c8b0a67b5f2ab40",
+    "licenses/gui/sphinx-rtd-theme-LICENSE.txt": "4864896421b8a49112eefa899a6b4366329bd6fe669f38efefb29f81487cef1e",
+    "licenses/gui/waitress-LICENSE.txt": "3e671db11df687516cc1db5b3d65e4aa383eaca3c20cea3faf53a0f7335d0a3c",
+    "LICENSE": "d4ff6e801aab8580406a94e38cd3e873c0e38e6991e9aed60d84d804e10dc2fe",
+    "docs/THIRD_PARTY.md": "ab8bea1d067817a1dc93fd38339e64948618519a01bcfcfd59ce08ed4a4e27ae"
+  },
+  "logo_matches_preserved_upstream": true,
+  "isolated_environment": "CPython 3.12 .venv/gui-wheel-smoke, include-system-site-packages=false",
+  "pip_check": "passed",
+  "wheel_smoke_log": "outputs/verification/gui-0.2.1-wheel-smoke.log",
+  "wheel_smoke": {
+    "job_id": "baef4665da494c6c8579d2d06bf42af8",
+    "status": "completed",
+    "converged": true,
+    "reference": "passed",
+    "physical": "passed"
+  },
+  "scope": "Build/archive contents plus an installed-wheel real mixture calculation and API/schema/assets smoke; not experimental validation.",
+  "installed_http_asset_checks": [
+    {
+      "asset": "app.js",
+      "http_status": 200,
+      "mime_type": "text/javascript",
+      "bytes": 40973
+    },
+    {
+      "asset": "index.html",
+      "http_status": 200,
+      "mime_type": "text/html",
+      "bytes": 7020
+    },
+    {
+      "asset": "lato-bold.woff2",
+      "http_status": 200,
+      "mime_type": "application/octet-stream",
+      "bytes": 184912
+    },
+    {
+      "asset": "lato-normal.woff2",
+      "http_status": 200,
+      "mime_type": "application/octet-stream",
+      "bytes": 182708
+    },
+    {
+      "asset": "logo-transparent.png",
+      "http_status": 200,
+      "mime_type": "image/png",
+      "bytes": 56867
+    },
+    {
+      "asset": "Roboto-Slab-Bold.woff2",
+      "http_status": 200,
+      "mime_type": "application/octet-stream",
+      "bytes": 67312
+    },
+    {
+      "asset": "Roboto-Slab-Regular.woff2",
+      "http_status": 200,
+      "mime_type": "application/octet-stream",
+      "bytes": 66444
+    },
+    {
+      "asset": "style.css",
+      "http_status": 200,
+      "mime_type": "text/css",
+      "bytes": 19552
+    }
+  ]
+}

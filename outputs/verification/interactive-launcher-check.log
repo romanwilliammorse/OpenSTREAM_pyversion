@@ -1,0 +1,22 @@
+Running tests. Please wait for the >>> prompt to return...
+..............................................                           [100%]
+46 passed in 9.15s
+
+Test exit code: 0; log: C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\outputs\interactive\20261114-164315-tests-252f9b\tests.log
+Running native mixture solver...
+Numerically converged: True; stored physical states: 1
+Final outlet enthalpy: 2389399.985723 J/kg
+Pressure drop: 156497.612055 Pa
+Steady energy relative error: 1.14212e-08
+MATLAB agreement and experimental validation remain unverified.
+Saved: C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\outputs\interactive\20261114-164319-sample-cc0d31\axial.png
+SAMPLE_RUN C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\outputs\interactive\20261114-164319-sample-cc0d31
+Using saved physical data: C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\outputs\verification\native-sensitivity-01\transient-0.1
+Saved: C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\outputs\interactive\20261114-164320-plot-578b59\H-history.png
+HISTORY C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\outputs\interactive\20261114-164320-plot-578b59\H-history.png
+Using saved physical data: C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\outputs\verification\native-sensitivity-01\transient-0.1
+Saved: C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\outputs\interactive\20261114-164320-plot-622cc7\H-map.png
+MAP C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\outputs\interactive\20261114-164320-plot-622cc7\H-map.png
+Using saved physical data: C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\outputs\verification\native-sensitivity-01\transient-0.1
+Saved: C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\outputs\interactive\20261114-164320-animation-35a871\H.gif
+ANIMATION C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\outputs\interactive\20261114-164320-animation-35a871\H.gif

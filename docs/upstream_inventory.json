@@ -1,0 +1,231 @@
+{
+  "source_counts": {
+    "+Inputs": {
+      "files": 7,
+      "lines": 2180
+    },
+    "+InputEnums": {
+      "files": 41,
+      "lines": 790
+    },
+    "+Session": {
+      "files": 4,
+      "lines": 466
+    },
+    "+Solvers": {
+      "files": 27,
+      "lines": 16227
+    }
+  },
+  "enumerations": {
+    "BASEEQTHICK": [
+      "RISO",
+      "COEFS",
+      "YPLUS",
+      "MFVAL"
+    ],
+    "BTHTM": [
+      "VAPOR",
+      "DOUGALL",
+      "BISHOP",
+      "MOECK",
+      "DELORME",
+      "CONDIEIV"
+    ],
+    "BTMTM": [
+      "TPFM",
+      "VAPOR"
+    ],
+    "BUBBLEDRAG": [
+      "CONSTANT",
+      "STOKES",
+      "VISCOUS",
+      "DISTORDED"
+    ],
+    "CBT": [
+      "NONE",
+      "BIASI",
+      "BEZRUKOV",
+      "ELEVATION"
+    ],
+    "DEPENHANCEMENT": [
+      "NONE",
+      "WINDECKER"
+    ],
+    "DEPOSITION": [
+      "NONE",
+      "GOVAN",
+      "OKAWA"
+    ],
+    "DROPDRAG": [
+      "CONSTANT",
+      "STOKES",
+      "VISCOUS",
+      "DISTORDED"
+    ],
+    "ENTRAINMENT": [
+      "NONE",
+      "GOVAN",
+      "OKAWA2003",
+      "OKAWA2004",
+      "OKAWA2004MOD",
+      "OKAWAGEN"
+    ],
+    "EQSTROUHAL": [
+      "RISO",
+      "SAWAI",
+      "MFVAL",
+      "CUSTOM",
+      "CSTFREQ"
+    ],
+    "FLUIDPROPERTIES": [
+      "SATURATED",
+      "PSYSTEM"
+    ],
+    "INTAREA": [
+      "DISPGAS2DISPLIQ"
+    ],
+    "INTLENGTH": [
+      "CONSTANT"
+    ],
+    "INTNU": [
+      "CONSTANT",
+      "RANZMARSHALL",
+      "RELAXATION"
+    ],
+    "INTTRANSH": [
+      "BULK",
+      "SATURATED"
+    ],
+    "LOCRELVEL": [
+      "AREAMEAN",
+      "SCALED",
+      "DRIFT",
+      "SIMPLE"
+    ],
+    "MFBT": [
+      "NONE",
+      "CONSTANT"
+    ],
+    "MOMENTBASE": [
+      "ALGEBRAIC",
+      "EQUILIBRIUM",
+      "EQUILIBRIUMS",
+      "FULL",
+      "FULLNOP"
+    ],
+    "MOMENTDROP": [
+      "ALGEBRAIC",
+      "SLIP",
+      "EQUILIBRIUM",
+      "EQUILIBRIUMS",
+      "FULL"
+    ],
+    "MOMENTFILM": [
+      "ALGEBRAIC",
+      "EQUILIBRIUM",
+      "EQUILIBRIUMS",
+      "FULL"
+    ],
+    "MOMENTGAS": [
+      "MIXTURE",
+      "SLIP",
+      "FULL"
+    ],
+    "MOMENTLIQUID": [
+      "MIXTURE",
+      "SLIP",
+      "FULL"
+    ],
+    "MOMENTWAVE": [
+      "ALGEBRAIC",
+      "EQUILIBRIUM",
+      "FULL"
+    ],
+    "MRMTIMEINT": [
+      "EULER",
+      "EXPONENTIAL"
+    ],
+    "NEARWALLH": [
+      "RATIO",
+      "FILM"
+    ],
+    "NEARWALLRELAX": [
+      "QUALITY",
+      "VOID",
+      "FILM"
+    ],
+    "OAF": [
+      "WALLIS",
+      "WALLIS_SIMP",
+      "LEVITAN"
+    ],
+    "OAFENTRAINED": [
+      "RATIO",
+      "EQUILIBRIUM"
+    ],
+    "OAFFILMSPLIT": [
+      "RATIO",
+      "EQUILIBRIUM"
+    ],
+    "SPHTM": [
+      "DITTUSBOELTER",
+      "DITTUSBOELTERGEN",
+      "SIEDERTATE",
+      "GNIELINSKI"
+    ],
+    "SPMTM": [
+      "BLASIUS"
+    ],
+    "THERMALNONEQ": [
+      "EQUILIBRIUM",
+      "SAHAZUBER",
+      "EPRI",
+      "MRM"
+    ],
+    "THERMALRELAX": [
+      "FOURIERX",
+      "TIMEX",
+      "VOID",
+      "HOMOGENEOUS",
+      "FOURIER"
+    ],
+    "THINFILMFRIC": [
+      "LAMINAR",
+      "TURBULENT"
+    ],
+    "TPFM": [
+      "HOMOGENEOUS",
+      "SLIP",
+      "EPRI"
+    ],
+    "TPHTM": [
+      "THOM"
+    ],
+    "TPKM": [
+      "HOMOGENEOUS",
+      "SLIP",
+      "ROMIE"
+    ],
+    "VAPORFRIC": [
+      "CONSTANT",
+      "WALLIS",
+      "WALLISTHICK",
+      "SOLVER_DEPENDENT"
+    ],
+    "VOID": [
+      "HOMOGENEOUS",
+      "SLIP",
+      "BESTION",
+      "EPRI"
+    ],
+    "WAVEBASEINT": [
+      "VAPORSHEAR",
+      "VAPORSHEARDROPMASS"
+    ],
+    "WAVEFREQUENCY": [
+      "EQUILIBRIUM",
+      "RELAXATION"
+    ]
+  }
+}

@@ -1,0 +1,559 @@
+{
+  "archive_sha256": "40f0c9a8f080d6ffe3887947dc5794eb756b5fa0e2ce650ff37a88003e69798d",
+  "rtol": 1e-08,
+  "atol": 0,
+  "scope": "Six phase W/U/H profiles directly stored in original MATLAB archive; no method reconstruction",
+  "effective_inputs": {
+    "passed": true,
+    "compared_inputs": 162,
+    "disclosed_differences": [
+      {
+        "path": "model.KLOC",
+        "archived": [
+          0.0,
+          0.0
+        ],
+        "native": [
+          0.0
+        ],
+        "explanation": "Archived duplicate zero default; pinned source single zero. Local loss is zero; annular parameters inactive."
+      },
+      {
+        "path": "model.KLOSS",
+        "archived": [
+          0.0,
+          0.0
+        ],
+        "native": [
+          0.0
+        ],
+        "explanation": "Archived duplicate zero default; pinned source single zero. Local loss is zero; annular parameters inactive."
+      },
+      {
+        "path": "model.KBLOCKRATIO",
+        "archived": [
+          0.0,
+          0.0
+        ],
+        "native": [
+          0.0
+        ],
+        "explanation": "Archived duplicate zero default; pinned source single zero. Local loss is zero; annular parameters inactive."
+      },
+      {
+        "path": "model.KTUNING",
+        "archived": [
+          0.0,
+          0.0
+        ],
+        "native": [
+          0.0
+        ],
+        "explanation": "Archived duplicate zero default; pinned source single zero. Local loss is zero; annular parameters inactive."
+      },
+      {
+        "path": "options.AXIALINTERP",
+        "archived": [
+          "next"
+        ],
+        "native": [
+          "NEXT"
+        ],
+        "explanation": "Case-only interpolation spelling; identical selected method."
+      },
+      {
+        "path": "options.TIMEINTERP",
+        "archived": [
+          "linear"
+        ],
+        "native": [
+          "LINEAR"
+        ],
+        "explanation": "Case-only interpolation spelling; identical selected method."
+      }
+    ],
+    "CBTMULT": "Serialized @(z)1 recognized without execution; native sampled values equal one; CBT=NONE.",
+    "orientation": "MATLAB input row/column vectors converted explicitly, preserving element order. Field axes are never squeezed."
+  },
+  "physical": {
+    "all_passed": true,
+    "profiles": {
+      "liquid.W": {
+        "passed": true,
+        "max_absolute_error": 1.249000902703301e-16,
+        "max_relative_error_nonzero": 2.6055683547198504e-15,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          1,
+          101
+        ]
+      },
+      "liquid.U": {
+        "passed": true,
+        "max_absolute_error": 3.872457909892546e-13,
+        "max_relative_error_nonzero": 2.2890765215091135e-14,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          1,
+          101
+        ]
+      },
+      "liquid.H": {
+        "passed": true,
+        "max_absolute_error": 3.958120942115784e-09,
+        "max_relative_error_nonzero": 3.3309649660241674e-15,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          1,
+          101
+        ]
+      },
+      "vapor.W": {
+        "passed": true,
+        "max_absolute_error": 7.45931094670027e-17,
+        "max_relative_error_nonzero": 5.752390237678239e-14,
+        "reference_zero_count": 1,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          1,
+          101
+        ]
+      },
+      "vapor.U": {
+        "passed": true,
+        "max_absolute_error": 5.364597654988756e-13,
+        "max_relative_error_nonzero": 4.14420493481828e-14,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          1,
+          101
+        ]
+      },
+      "vapor.H": {
+        "passed": true,
+        "max_absolute_error": 9.313225746154785e-10,
+        "max_relative_error_nonzero": 3.3445596757801435e-16,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          1,
+          101
+        ]
+      }
+    }
+  },
+  "initialization": {
+    "all_passed": true,
+    "profiles": {
+      "liquid.W": {
+        "passed": true,
+        "max_absolute_error": 1.942890293094024e-16,
+        "max_relative_error_nonzero": 5.002782586890433e-15,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          15,
+          101
+        ]
+      },
+      "liquid.U": {
+        "passed": true,
+        "max_absolute_error": 8.419931418757187e-13,
+        "max_relative_error_nonzero": 4.157837187883256e-14,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          15,
+          101
+        ]
+      },
+      "liquid.H": {
+        "passed": true,
+        "max_absolute_error": 3.958120942115784e-09,
+        "max_relative_error_nonzero": 3.3309649660241674e-15,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          15,
+          101
+        ]
+      },
+      "vapor.W": {
+        "passed": true,
+        "max_absolute_error": 1.3877787807814457e-16,
+        "max_relative_error_nonzero": 6.222142509110722e-13,
+        "reference_zero_count": 18,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          15,
+          101
+        ]
+      },
+      "vapor.U": {
+        "passed": true,
+        "max_absolute_error": 5.790923296444817e-13,
+        "max_relative_error_nonzero": 4.144289250588881e-14,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          15,
+          101
+        ]
+      },
+      "vapor.H": {
+        "passed": true,
+        "max_absolute_error": 9.313225746154785e-10,
+        "max_relative_error_nonzero": 3.3445596757801435e-16,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          15,
+          101
+        ]
+      }
+    }
+  },
+  "archived_physical_checks": {
+    "units": {
+      "occupied_area": "m^2",
+      "mass_flow": "kg/s",
+      "energy_flux": "W"
+    },
+    "prescribed_area_m2": 6.0821e-05,
+    "max_occupied_area_relative_error": 0.410561070690042,
+    "worst_node_index_zero_based": 4,
+    "worst_z_m": 0.22,
+    "worst_occupied_area_m2": 8.579173488043905e-05,
+    "outlet_area_relative_error": 0.03467311857852651,
+    "outlet_mass_defect_kg_s": -3.0761341615614946e-07,
+    "outlet_energy_defect_W": 30.049663123339997,
+    "minimum_phase_velocity_m_s": 1.5183655701646686,
+    "minimum_phase_flow_kg_s": 0.0,
+    "interpretation": "Area inconsistency is present in original stored MATLAB baseline, not introduced by the Python translation. No experimental validation."
+  },
+  "reference_convergence": {
+    "source_formula": "strict max < original option threshold",
+    "final_point": {
+      "liquid.DW": {
+        "max": 2.671166024481586e-09,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "liquid.DU": {
+        "max": 8.255870592321912e-05,
+        "threshold": 0.0001,
+        "passed": true
+      },
+      "liquid.DH": {
+        "max": 0.0989827667362988,
+        "threshold": 0.1,
+        "passed": true
+      },
+      "vapor.DW": {
+        "max": 1.6493877957879377e-08,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "vapor.DU": {
+        "max": 8.175793832521094e-05,
+        "threshold": 0.0001,
+        "passed": true
+      },
+      "vapor.DH": {
+        "max": 0.0,
+        "threshold": 0.1,
+        "passed": true
+      }
+    },
+    "final_temporal": {
+      "liquid.W": {
+        "max": 1.1178591167310126e-08,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "liquid.U": {
+        "max": 0.0002476066281325018,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "liquid.H": {
+        "max": 0.7512369658797979,
+        "threshold": 1.0,
+        "passed": true
+      },
+      "vapor.W": {
+        "max": 7.341076675021485e-08,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "vapor.U": {
+        "max": 0.0002476028580886691,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "vapor.H": {
+        "max": 0.0,
+        "threshold": 1.0,
+        "passed": true
+      }
+    },
+    "point_passed": true,
+    "temporal_passed": true,
+    "max_point_iterations_by_state": {
+      "liquid": [
+        0,
+        37,
+        28,
+        19,
+        10,
+        8,
+        4,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "vapor": [
+        0,
+        37,
+        28,
+        19,
+        10,
+        8,
+        4,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    }
+  },
+  "object_link_checks": {
+    "physical_phase_parent_links": true,
+    "precursor_links": true,
+    "initial_phase_shared_group_links": 30,
+    "all_initial_groups_reference_physical_time_zero": true
+  },
+  "experimental_validation": "not performed",
+  "precursor_physical": {
+    "all_passed": true,
+    "profiles": {
+      "W": {
+        "passed": true,
+        "max_absolute_error": 1.3877787807814457e-16,
+        "max_relative_error_nonzero": 1.9825410966388497e-15,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          1,
+          101
+        ]
+      },
+      "U": {
+        "passed": true,
+        "max_absolute_error": 5.258016244624741e-13,
+        "max_relative_error_nonzero": 4.1305726817332015e-14,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          1,
+          101
+        ]
+      },
+      "H": {
+        "passed": true,
+        "max_absolute_error": 9.313225746154785e-10,
+        "max_relative_error_nonzero": 3.8977257022559736e-16,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          1,
+          101
+        ]
+      },
+      "liquid.W": {
+        "passed": true,
+        "max_absolute_error": 1.5265566588595902e-16,
+        "max_relative_error_nonzero": 3.151815762815273e-15,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          1,
+          101
+        ]
+      },
+      "liquid.U": {
+        "passed": true,
+        "max_absolute_error": 8.419931418757187e-13,
+        "max_relative_error_nonzero": 4.157837187883256e-14,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          1,
+          101
+        ]
+      },
+      "liquid.H": {
+        "passed": true,
+        "max_absolute_error": 3.4924596548080444e-09,
+        "max_relative_error_nonzero": 2.877003162595694e-15,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          1,
+          101
+        ]
+      },
+      "vapor.W": {
+        "passed": true,
+        "max_absolute_error": 1.3877787807814457e-16,
+        "max_relative_error_nonzero": 6.222142509110722e-13,
+        "reference_zero_count": 4,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          1,
+          101
+        ]
+      },
+      "vapor.U": {
+        "passed": true,
+        "max_absolute_error": 4.618527782440651e-13,
+        "max_relative_error_nonzero": 4.144204934808229e-14,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          1,
+          101
+        ]
+      },
+      "vapor.H": {
+        "passed": true,
+        "max_absolute_error": 7.171183824539185e-08,
+        "max_relative_error_nonzero": 2.575310950350679e-14,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          1,
+          101
+        ]
+      }
+    }
+  },
+  "precursor_initialization": {
+    "all_passed": true,
+    "profiles": {
+      "W": {
+        "passed": true,
+        "max_absolute_error": 1.3877787807814457e-15,
+        "max_relative_error_nonzero": 7.600533060010559e-15,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          10,
+          101
+        ]
+      },
+      "U": {
+        "passed": true,
+        "max_absolute_error": 1.3642420526593924e-12,
+        "max_relative_error_nonzero": 4.8258206156767395e-14,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          10,
+          101
+        ]
+      },
+      "H": {
+        "passed": true,
+        "max_absolute_error": 4.6566128730773926e-09,
+        "max_relative_error_nonzero": 1.948864198943338e-15,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          10,
+          101
+        ]
+      },
+      "liquid.W": {
+        "passed": true,
+        "max_absolute_error": 6.938893903907228e-16,
+        "max_relative_error_nonzero": 1.2483487025475483e-14,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          10,
+          101
+        ]
+      },
+      "liquid.U": {
+        "passed": true,
+        "max_absolute_error": 1.3997691894473974e-12,
+        "max_relative_error_nonzero": 4.825820615676739e-14,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          10,
+          101
+        ]
+      },
+      "liquid.H": {
+        "passed": true,
+        "max_absolute_error": 4.423782229423523e-09,
+        "max_relative_error_nonzero": 3.644204005954546e-15,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          10,
+          101
+        ]
+      },
+      "vapor.W": {
+        "passed": true,
+        "max_absolute_error": 7.91033905045424e-16,
+        "max_relative_error_nonzero": 7.18944164081065e-13,
+        "reference_zero_count": 138,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          10,
+          101
+        ]
+      },
+      "vapor.U": {
+        "passed": true,
+        "max_absolute_error": 1.3145040611561853e-12,
+        "max_relative_error_nonzero": 4.825820615676739e-14,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          10,
+          101
+        ]
+      },
+      "vapor.H": {
+        "passed": true,
+        "max_absolute_error": 7.916241884231567e-08,
+        "max_relative_error_nonzero": 2.842875724413169e-14,
+        "reference_zero_count": 0,
+        "nonmatching_reference_zeros": 0,
+        "shape": [
+          10,
+          101
+        ]
+      }
+    }
+  },
+  "all_core_comparisons_passed": true
+}

@@ -1,0 +1,93 @@
+# Verification report — native Windows port
+
+Date: 2026-11-14. **All four TUTORIAL1 core baselines now pass comparison with their original MATLAB-produced archives. Full-port completeness, general numerical equivalence and experimental validation remain unestablished.** This report distinguishes actual execution from source inspection and unresolved evidence. A numerically converged result can fail physical consistency.
+
+Current authority: ALL_BASELINES_VERIFICATION.md and outputs/baseline-parity-02. The complete recovery/native/comparison workflow ran in dependency order under version 0.1.1. All 30 original physical W/U/H profiles, all initialization histories and mixture precursors pass 1e-8/0; actual four-field base/frequency pass additional checks. Archived area defects are confirmed: TwoFluid 41.0561%, ThreeField 7.48526%, FourField 11.24105% in the applicable steady domains. These findings do not establish transient agreement. One MRM NaN/Inf fallback was corrected to match source, without changing equations; baseline arrays are unchanged. Supplementary diagnostics remain recorded failures. The earlier checkpoints below are retained historical evidence.
+
+Earlier mixture checkpoint: see MIXTURE_BASELINE_VERIFICATION.md. The archive was decoded without MATLAB, all nine W/U/H profiles pass at unchanged 1e-8/0 tolerance, and all ten initialization states pass these core comparisons. Fourteen supplementary diagnostic profiles fail the same strict relative-only policy at small absolute differences; they remain recorded failures. 81 focused tests passed with one optional-reader pandas deprecation warning. Numerical source and original references were unchanged at that checkpoint. Prior release-suite/sensitivity evidence below remains valid and distinct from the latest all-framework checks.
+
+Latest combined verification: **212 passed, 3 warnings**, 88.84 s, in outputs/baseline-parity-01/complete-tests.log/xml. This includes 129 native tests and 83 recovery/comparison tests. Warnings are one optional-reader pandas deprecation and two retained four-field zero-slip drag warnings. The fresh-export comparator separately passed 34 synthetic tests in 14.111 s. All-four reproduction logs and plots are under outputs/baseline-parity-02.
+
+## Environment and source
+
+Unchanged OpenSTREAM: `a614c7173822a93c1e64ac28d1541cbac028cbd8`; unchanged CoolPropWrapper: `a7c40902ff66faf6ed668986398bb1b9faa16e13`. `provenance/` records source status, environment and hashes. Original licenses remain intact. Source/reuse searches and actual MATLAB archive inspection are in `UPSTREAM_AUDIT.md`.
+
+Execution used local Windows CPython 3.12.14, NumPy 2.5.4, SciPy 1.18.1, CoolProp 8.0.0 and Matplotlib 3.11.2. The isolated environment works; `pip check` passed. All dependencies are pinned. Normal operation invokes no MATLAB, MATLAB Engine or Octave. Tests cover inputs, units, dimensions, properties, copying/cache semantics, closures, original cases, boundaries, conservation and output. Final pytest/JUnit evidence is under `outputs/verification/`; a passing count does not mean every physical criterion passed—some tests deliberately expose failures.
+
+Final suite: **127 passed, 2 warnings**, 82.54 s. The two retained warnings are zero-slip four-field drag divide-by-zero/invalid multiplication described below, not a warning-free pass. **34 separate synthetic comparator tests passed** in 13.702 s. Source distribution and wheel built successfully; the wheel was installed into a separate directory and reproduced the sample from its bundled input files, without importing MATLAB/Octave bindings. Its 17 Python modules match the source byte-for-byte, and both original license notices are included. Evidence: final-tests-02.log/xml, comparator-tests-02.log, build-final.log and wheel-smoke-final.json under outputs/verification; final distributions in dist/release-final. `outputs/release-02/manifest.json` identifies fresh runs of all four frameworks; all numerically converged, while TwoFluid/ThreeField/FourField physical checks fail. The release runner deliberately returned 3. Earlier logs/outputs remain preserved and are superseded by this evidence.
+
+## Official mixture milestone
+
+The executed original selection is TUTORIAL1 model, DEFAULT options, TUTORIAL1 geometry and tutorial1.inp: 6 MPa, 0.07 kg/s, inlet 1.1394 MJ/kg, 87.5 kW, 5.5 m, 100 cells. Source interpolation and discrete heat normalization are preserved. Saved outputs: `outputs/sample-final` and the release evidence directory.
+
+| Check | Actual value | Meaning |
+|---|---:|---|
+| Pseudo-time convergence | 9 advances of 1 s | Final point criteria also met; this is not physical time |
+| Discrete wall power | 87,500 W | Equals prescribed power |
+| Outlet enthalpy | 2,389,399.985723 J/kg | Independent target: `1,139,400 + 87,500/0.07 = 2,389,400 J/kg` |
+| Steady enthalpy-gain relative defect | 1.14212e-8 | Passes original energy-balance criterion |
+| Maximum steady mass deviation | 7.90175e-10 kg/s | Relative to 0.07 kg/s inlet |
+| Maximum discrete mass residual | 5.15104e-13 kg/s | Source finite-volume equation |
+| Maximum advective enthalpy residual | 7.42148e-10 W/m | Source specific-enthalpy equation |
+| Maximum discrete momentum residual | 1.30212e-4 Pa | Below source 0.1 Pa point tolerance |
+| Calculated pressure drop | 156,497.612055 Pa | Native prediction, not an external benchmark |
+| Outlet quality / void | 0.748393784 / 0.986515413 | Bounded between zero and one |
+| Minimum pressure / density | 5,843,502.388 Pa / 40.62416 kg/m³ | Positive; property pressure remains prescribed 6 MPa |
+
+Inlet conditions, phase mass partition, final initialization transfer and independent state arrays were checked. The six-panel plot was rendered and visually inspected against the documented sample's quantities/layout/scales. This establishes readable native plotting, not pixel-identical MATLAB styling or quantitative regression from an image.
+
+## Sensitivity and boundary evidence
+
+`tools/verify_sensitivity.py` generated 11 complete cases in `outputs/verification/native-sensitivity-01`, with arrays, metadata, inputs and plots. All numerically converged.
+
+- 50/100/200 cells: pressure drops 157,793.565 / 156,497.612 / 155,853.017 Pa. Successive relative changes 0.828% and 0.414%. Discrete heated lengths are 3.41/3.465/3.4925 m because the 3.5 m boundary is not aligned; prescribed total power is retained. These are sensitivity results, not a proved continuum solution.
+- Pseudo-time steps 0.5/1/2 s: outlet enthalpy spread below 0.058 J/kg and pressure-drop spread below 0.0036 Pa.
+- Full original 0–5 s physical transient, steps 0.2/0.1/0.05 s: maximum common-time outlet-enthalpy history differences 20,230 and 12,893 J/kg on refinement. Final states alone conceal this sensitivity.
+- Two equivalent walls reproduce single-wall total HEM fields. General multiwall model parity is not established.
+- Adiabatic constant-property flow matches independently calculated gravity plus Darcy pressure drop, 51,666.35637 Pa, while preserving mass and enthalpy.
+
+**Transient energy limitation:** conservative stored enthalpy plus boundary enthalpy flux differs from wall power. Peak defects are 1,266.74 / 843.79 / 595.87 W, or 2.895% / 1.929% / 1.362% of instantaneous power. The independently derived finite-difference product-rule discrepancy explains the defect to below 5.1e-11 W. Small advective-equation residuals do not imply exact conservative total-energy balance. No equation was changed to hide this.
+
+A sigmoid-exp overflow warning occurred at 200 cells; resulting states remained finite. The original BICUBIC backend also has a −0.00228029 K temperature/enthalpy inversion discrepancy near its lower boundary at 6 MPa. Both are recorded, not described as warning-free exact checks.
+
+## Extended frameworks: successes and failures
+
+Original mixture TUTORIAL2A–G converged. Both MRM EULER and EXPONENTIAL completed the full 100-cell, 51-state original transient. Original loose point-increment controls leave measurable residuals; tightened 25-cell checks reduce maxima to 2.12e-8/9.85e-8 kg/(s m), 3.07e-4/8.83e-4 W/m and 2.47e-4/9.83e-4 Pa for mass/enthalpy/momentum. These are native checks, not MATLAB comparisons. Evidence and reproducible commands: `field_notes.md`, `outputs/mrm_transient_checks.json`, `outputs/mrm_transient_tight_checks.json`, `tools/verify_mrm_transient.py`.
+
+Two-fluid TUTORIAL1/3A/3B numerically converged. Instantaneous mass and conservative interfacial momentum exchanges cancel; the conservative source-energy identity closes to about 7.28e-12 W/m. **TUTORIAL1/3B fails physical occupied-area consistency: maximum relative discrepancy 41.056%, outlet 3.467%.** Saved results are investigative numerical outputs, not physically consistent predictions. Metadata says `physical_consistency: false`; CLI exit status is 3. Whether this behavior reproduces MATLAB remains unverified.
+
+Two-fluid global energy defects are about +30–34 W at original controls. With tighter controls, 100/200-cell defects +30.8878/+15.2088 W agree with `−Σ(ΔW_l ΔH_l + ΔW_v ΔH_v)` to within 3.6e-5 W. The tighter 50-cell run **failed point convergence**, despite temporal convergence. It remains in `outputs/twofluid_mesh_checks.json`. Shallow source handle links and source cutoffs are retained; post-solve initialization diagnostics can observe changed aggregate handles. See `twofluid_notes.md` and independent reviews.
+
+The original Tutorial 3 transient (TUTORIAL3B plus tutorial2_transient.inp, 100 cells, 0–5 s at 0.1 s) also completed all 50 advances with point convergence and finite primary arrays. **Physical area closure fails by up to 43.3609%**, with final outlet discrepancy 7.22130%. Peak global mass/enthalpy-balance defects are 9.43426e-6 kg/s and 39.2355 W. Maximum liquid/vapor material-momentum residuals at final-state reconstructed trials inside the velocity bounds are 1.38679e-4/7.21507e-5 N/m; unrestricted vapor residual reaches 0.234920 N/m at constrained points. These measured residuals are not inferred from increment convergence. `tools/verify_twofluid_transient.py` and `outputs/twofluid-transient-02/verification.json` retain every time's balances and mask definition; execution returned status 3. The previous -01 run is retained with its less precise velocity-interior classification. The updated mask accounts for under-relaxation near a repeatedly clipped bound.
+
+An independent saved-array area audit (`tools/diagnose_twofluid_area.py`) proves that the source normalized void formula equals occupied-vapor area divided by total occupied area, to 2.22e-16 in the sample. This explains why normalized fractions summing to unity can conceal the absolute-area failure; it does not establish whether MATLAB reproduces it. `outputs/verification/twofluid-area-01` contains the arithmetic and inspected plot.
+
+Three-field original sample and TUTORIAL4A–F converged with finite primary arrays and algebraic film+drop+vapor partition. Positive-film residuals pass the unchanged 5.52e-6 kg/s criterion. At sample dryout, POSFILM clipping leaves an unconstrained residual 2.5354e-4 kg/s. TUTORIAL4F has 53 clipped node/wall pairs and maximum unrestricted residual 8.84267e-4 kg/s. Do not claim exact full-field equation balance. Per-node Okawa evaluation is required for solver residual checks; vector diagnostics have a different global iterative stopping criterion, as upstream. See `threefield_review.md`.
+
+The exact Tutorial 4 transient (TUTORIAL4D and the original power-reduction schedule) numerically converged for all 51 stored states, but **fully annular occupied area differs by up to 11.2004%**. Over a fixed 58-cell domain from 2.31 to 5.5 m that remains fully annular at all times, the maximum integrated outflow-minus-inflow-plus-storage residual is **0.00746082 kg/s**, 10.6583% of the 0.07 kg/s inlet. Thus the failure persists inside the framework's physical domain; upstream initialization fields are not used for this acceptance check. Two tighter 25-cell runs (0.25 and 0.125 s) failed point convergence and do not establish time convergence. Evidence, applicable momentum/energy checks and numerical-array identity after diagnostic additions are in `threefield_transient.md` and `outputs/threefield_transient_audited`.
+
+Four-field original sample converged in 8 pseudo-time advances, including the extra native frequency-change check. Partition error is about 1.39e-17 kg/s; primary masses are nonnegative. Original TUTORIAL5A–E converged in 8/7/7/8/8 advances. The original transient workflow (model TUTORIAL5E, tutorial2_transient.inp) completed all 50 physical advances at 0.1 s, saving 51 times and 101 nodes. All physical steps point-converged (at most 16 iterations); independent all-time checks found finite primary arrays, nonnegative mass flows, minimum velocity 0.75918 m/s and minimum frequency 13.3624 Hz. Evidence: `outputs/fourfield_tutorial5f/verification.json`. Raw base/wave equation residuals near dryout remain approximately 0.00043–0.00047 kg/s due to source positivity clipping. `fourfield_notes.md`, `fourfield_review.md` and saved diagnostics distinguish unconstrained nodes. The source omits frequency change from its steady predicate; native code retains STATE but checks frequency separately. Four-field mesh/time-step sensitivity is not established by this one transient run.
+
+The final four-field transient audit in `outputs/fourfield-transient-audited/TUTORIAL5F` found **15.5181% maximum fully annular occupied-area discrepancy**, with 5.86381% at the final outlet. In the fixed 58-cell control volume from 2.31 to 5.5 m, maximum integrated mass-storage-plus-outflow-minus-inflow residual is **0.00642295 kg/s** (9.17564% of inlet flow); maximum individual-cell residual is 2.02620e-4 kg/s. Numerical state/point convergence, finite values and algebraic mass-flow partition all still pass. Diagnostic additions leave every saved numerical array identical to the prior original transient, including NaNs; the identity check is saved separately. Thus changing the status exposes a measured failure without changing the governing equations. This is not yet evidence that the failure occurs in MATLAB.
+
+## Language and reference verification
+
+Audits checked indexing, dimensions, elementwise/matrix operations, column-major copying, intentional shallow object links, cached setter order, interpolation, and dimensional tolerances. MATLAB binary min/max omit NaNs by default; corresponding fmin/fmax and nested operation order preserve that behavior, including zero-film/zero-slip cases. See [MathWorks min](https://www.mathworks.com/help/matlab/ref/double.min.html) and [max](https://www.mathworks.com/help/matlab/ref/double.max.html). Separate finite-state checks prevent source masking from being mistaken for physical validation.
+
+An input-comment unit defect is retained in the original files but clarified in the API: Geometry.ANGLE is degrees, as Geometry.m and the trigonometry require, despite geom.inp's `[rad]` label. The sample angle is zero. The first WAVEDRAGCOEF coefficient must carry metres for its Reynolds number to be dimensionless, despite the source's blanket dimensionless label; its numerical value/equation was preserved.
+
+All four approved MAT files contain MCOS solver objects. The mixture object graph has now been structurally decoded with the isolated native reader; no arrays were selected by value similarity or generated by a solver as substitute references. No MATLAB executable was found in checked PATH/standard locations, and MATLAB Online access is not assumed. `export_matlab_reference.m` supports all frameworks but **has not been executed in MATLAB**.
+
+The fresh-export comparator covers all four frameworks, physical and pseudo-time W/U/H arrays, recursive precursor results, actual film.base and wave frequency. Original W/U/H tolerances remain relative 1e-8, absolute zero. Additional histories/base/frequency checks use the same strict policy provisionally and are explicitly labelled as supplementary, not source-derived validation tolerances. It checks provenance, effective inputs, units, dimensions, coordinates and actual final initialization convergence; unused DFW does not substitute for actual DF. Its 34 synthetic tests remain distinct from the successful actual mixture archive comparison, which uses verify_recovered_mixture.py and explicitly reports unknown producer metadata. Physical-consistency failures remain visible separately. See REFERENCE_COMPARISON.md and MIXTURE_BASELINE_VERIFICATION.md. No original reference or regression tolerance was overwritten or relaxed.
+
+## Post-processing and diagnostic API
+
+SavedResults reads immutable saved arrays without solving. Axial profiles, time histories, space–time maps and GIF animations were tested across all four schemas. Five PNGs and representative animation frames were visually inspected; every GIF frame was decoded (26 physical-time frames and 9 pseudo-time frames). Requested 8 fps playback becomes 120 ms per GIF frame because GIF uses centisecond durations; physical timestamps remain exact. Evidence: outputs/saved-result-plots-02 and PLOTTING.md. This verifies rendering and selection semantics, not the underlying physical predictions.
+
+The source API inventory also exposed a pressure-handling defect in native boundary diagnostics. HF/HG/TSAT/TIN now explicitly query the boundary pressure even when supplied a property object at another pressure, matching BoundaryConditions.m. A direct native CoolProp test uses a 3 MPa boundary with a 6 MPa object and verifies immutable system-state constants. These diagnostic methods are not used by the solver, so this fix does not change previously saved calculations. A numerical scalar-property time-series API is also tested.
+
+## Remaining requirements
+
+Full closure/diagnostic/plot/tutorial parity is incomplete; unsupported paths are in FEATURE_MAP.md and the method inventory. Selected steady area failures are now confirmed in upstream archives; transient area and phase-inventory failures still need reference investigation. Successful annular time-step convergence, broader multiwall and closure-domain coverage remain absent. Fresh MATLAB export execution, transient/alternative-closure comparisons and experimental validation remain undone. All four original steady archive comparisons are complete. PROGRESS.md records current evidence and resume steps; no approval pause is active.
+
+The deliverable is a working native package with reproducible evidence and explicit failures, not a fully verified replacement for every upstream research workflow.

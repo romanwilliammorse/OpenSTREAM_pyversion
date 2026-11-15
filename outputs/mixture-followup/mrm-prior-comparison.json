@@ -1,0 +1,30 @@
+[
+  {
+    "integration": "EULER",
+    "matches_prior_metrics": true,
+    "compared_keys": {
+      "integration": "integration",
+      "converged": "converged",
+      "state": "state",
+      "nodes": "nodes",
+      "times": "states",
+      "mixture_mass_residual_kg_s_m": "max_mass_residual_kg_s_m",
+      "mixture_energy_residual_W_m": "max_energy_residual_W_m"
+    },
+    "differences": {}
+  },
+  {
+    "integration": "EXPONENTIAL",
+    "matches_prior_metrics": true,
+    "compared_keys": {
+      "integration": "integration",
+      "converged": "converged",
+      "state": "state",
+      "nodes": "nodes",
+      "times": "states",
+      "mixture_mass_residual_kg_s_m": "max_mass_residual_kg_s_m",
+      "mixture_energy_residual_W_m": "max_energy_residual_W_m"
+    },
+    "differences": {}
+  }
+]

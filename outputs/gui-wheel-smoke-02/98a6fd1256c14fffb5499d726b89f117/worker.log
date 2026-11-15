@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\.venv\gui-wheel-smoke\Lib\site-packages\openstream\gui_worker.py", line 97, in _run_job_locked
+    solver.save(output)
+  File "C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\.venv\gui-wheel-smoke\Lib\site-packages\openstream\solver.py", line 262, in save
+    return save_result(self, directory)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\.venv\gui-wheel-smoke\Lib\site-packages\openstream\output.py", line 178, in save_result
+    fig = plot_axial(solver, directory/"axial.png")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\.venv\gui-wheel-smoke\Lib\site-packages\openstream\output.py", line 92, in plot_axial
+    import matplotlib
+  File "C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\.venv\gui-wheel-smoke\Lib\site-packages\matplotlib\__init__.py", line 157, in <module>
+    from packaging.version import parse as parse_version
+ModuleNotFoundError: No module named 'packaging'

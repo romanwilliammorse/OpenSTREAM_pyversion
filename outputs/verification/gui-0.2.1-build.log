@@ -1,0 +1,456 @@
+* Getting build dependencies for sdist...
+running egg_info
+writing src\openstream_python.egg-info\PKG-INFO
+writing dependency_links to src\openstream_python.egg-info\dependency_links.txt
+writing entry points to src\openstream_python.egg-info\entry_points.txt
+writing requirements to src\openstream_python.egg-info\requires.txt
+writing top-level names to src\openstream_python.egg-info\top_level.txt
+reading manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+adding license file 'licenses/CoolPropWrapper_LICENSE'
+adding license file 'licenses/mat_io_LICENSE'
+adding license file 'licenses/gui/Apache-License-2.0.txt'
+adding license file 'licenses/gui/Flask-LICENSE.txt'
+adding license file 'licenses/gui/OFL-License.txt'
+adding license file 'licenses/gui/plotly-LICENSE.txt'
+adding license file 'licenses/gui/sphinx-rtd-theme-LICENSE.txt'
+adding license file 'licenses/gui/waitress-LICENSE.txt'
+adding license file 'docs/THIRD_PARTY.md'
+writing manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing src\openstream_python.egg-info\PKG-INFO
+writing dependency_links to src\openstream_python.egg-info\dependency_links.txt
+writing entry points to src\openstream_python.egg-info\entry_points.txt
+writing requirements to src\openstream_python.egg-info\requires.txt
+writing top-level names to src\openstream_python.egg-info\top_level.txt
+reading manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+adding license file 'licenses/CoolPropWrapper_LICENSE'
+adding license file 'licenses/mat_io_LICENSE'
+adding license file 'licenses/gui/Apache-License-2.0.txt'
+adding license file 'licenses/gui/Flask-LICENSE.txt'
+adding license file 'licenses/gui/OFL-License.txt'
+adding license file 'licenses/gui/plotly-LICENSE.txt'
+adding license file 'licenses/gui/sphinx-rtd-theme-LICENSE.txt'
+adding license file 'licenses/gui/waitress-LICENSE.txt'
+adding license file 'docs/THIRD_PARTY.md'
+writing manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+running check
+creating openstream_python-0.2.1
+creating openstream_python-0.2.1\docs
+creating openstream_python-0.2.1\examples
+creating openstream_python-0.2.1\licenses
+creating openstream_python-0.2.1\licenses\gui
+creating openstream_python-0.2.1\provenance
+creating openstream_python-0.2.1\src\openstream
+creating openstream_python-0.2.1\src\openstream\data
+creating openstream_python-0.2.1\src\openstream\data\gui_baselines
+creating openstream_python-0.2.1\src\openstream\gui_static
+creating openstream_python-0.2.1\src\openstream_python.egg-info
+creating openstream_python-0.2.1\tests
+creating openstream_python-0.2.1\tools
+copying files to openstream_python-0.2.1...
+copying CHANGELOG.md -> openstream_python-0.2.1
+copying LICENSE -> openstream_python-0.2.1
+copying MANIFEST.in -> openstream_python-0.2.1
+copying OpenSTREAM-GUI.cmd -> openstream_python-0.2.1
+copying OpenSTREAM.cmd -> openstream_python-0.2.1
+copying README.md -> openstream_python-0.2.1
+copying pyproject.toml -> openstream_python-0.2.1
+copying requirements-gui.lock -> openstream_python-0.2.1
+copying requirements.lock -> openstream_python-0.2.1
+copying docs\ALL_BASELINES_VERIFICATION.md -> openstream_python-0.2.1\docs
+copying docs\API.md -> openstream_python-0.2.1\docs
+copying docs\FEATURE_MAP.md -> openstream_python-0.2.1\docs
+copying docs\GETTING_STARTED.md -> openstream_python-0.2.1\docs
+copying docs\GUI.md -> openstream_python-0.2.1\docs
+copying docs\GUI_COMPONENT_REVIEW.md -> openstream_python-0.2.1\docs
+copying docs\GUI_STYLE.md -> openstream_python-0.2.1\docs
+copying docs\GUI_VERIFICATION.md -> openstream_python-0.2.1\docs
+copying docs\METHOD_COVERAGE.json -> openstream_python-0.2.1\docs
+copying docs\METHOD_COVERAGE.md -> openstream_python-0.2.1\docs
+copying docs\MIXTURE_BASELINE_VERIFICATION.md -> openstream_python-0.2.1\docs
+copying docs\PARITY_COMPLETION.md -> openstream_python-0.2.1\docs
+copying docs\PARITY_STATUS.md -> openstream_python-0.2.1\docs
+copying docs\PLOTTING.md -> openstream_python-0.2.1\docs
+copying docs\PROGRESS.md -> openstream_python-0.2.1\docs
+copying docs\REFERENCE_COMPARISON.md -> openstream_python-0.2.1\docs
+copying docs\REPOSITORY_CONTENTS.md -> openstream_python-0.2.1\docs
+copying docs\SOLVER_REVIEW.md -> openstream_python-0.2.1\docs
+copying docs\THIRD_PARTY.md -> openstream_python-0.2.1\docs
+copying docs\UPSTREAM_AUDIT.md -> openstream_python-0.2.1\docs
+copying docs\VERIFICATION.md -> openstream_python-0.2.1\docs
+copying docs\annular_reference_audit.md -> openstream_python-0.2.1\docs
+copying docs\field_notes.md -> openstream_python-0.2.1\docs
+copying docs\fourfield_notes.md -> openstream_python-0.2.1\docs
+copying docs\fourfield_review.md -> openstream_python-0.2.1\docs
+copying docs\framework_comparator_review.md -> openstream_python-0.2.1\docs
+copying docs\input_properties_notes.md -> openstream_python-0.2.1\docs
+copying docs\mixture_documentation_review.md -> openstream_python-0.2.1\docs
+copying docs\mixture_followup.md -> openstream_python-0.2.1\docs
+copying docs\mixture_translation_audit.md -> openstream_python-0.2.1\docs
+copying docs\reference_archive_inspection.json -> openstream_python-0.2.1\docs
+copying docs\threefield_review.md -> openstream_python-0.2.1\docs
+copying docs\threefield_transient.md -> openstream_python-0.2.1\docs
+copying docs\twofluid_baseline_audit.md -> openstream_python-0.2.1\docs
+copying docs\twofluid_notes.md -> openstream_python-0.2.1\docs
+copying docs\upstream_inventory.json -> openstream_python-0.2.1\docs
+copying examples\official_sample.py -> openstream_python-0.2.1\examples
+copying examples\plot_saved_results.py -> openstream_python-0.2.1\examples
+copying licenses\CoolPropWrapper_LICENSE -> openstream_python-0.2.1\licenses
+copying licenses\mat_io_LICENSE -> openstream_python-0.2.1\licenses
+copying licenses/gui\Apache-License-2.0.txt -> openstream_python-0.2.1\licenses/gui
+copying licenses/gui\Flask-LICENSE.txt -> openstream_python-0.2.1\licenses/gui
+copying licenses/gui\OFL-License.txt -> openstream_python-0.2.1\licenses/gui
+copying licenses/gui\plotly-LICENSE.txt -> openstream_python-0.2.1\licenses/gui
+copying licenses/gui\sphinx-rtd-theme-LICENSE.txt -> openstream_python-0.2.1\licenses/gui
+copying licenses/gui\waitress-LICENSE.txt -> openstream_python-0.2.1\licenses/gui
+copying provenance\baseline-parity-02.json -> openstream_python-0.2.1\provenance
+copying provenance\environment.json -> openstream_python-0.2.1\provenance
+copying provenance\sha256.json -> openstream_python-0.2.1\provenance
+copying provenance\upstream.json -> openstream_python-0.2.1\provenance
+copying src\openstream\__init__.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\__main__.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\annular.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\cli.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\ff_fields.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\fields.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\fourfield.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\gui.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\gui_launcher.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\gui_lock.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\gui_reference.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\gui_schema.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\gui_worker.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\inputs.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\multifield_output.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\numerics.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\output.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\plotting.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\properties.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\solver.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\tf_fields.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\threefield.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\twofluid.py -> openstream_python-0.2.1\src\openstream
+copying src\openstream\data\geom.inp -> openstream_python-0.2.1\src\openstream\data
+copying src\openstream\data\gui_fields.json -> openstream_python-0.2.1\src\openstream\data
+copying src\openstream\data\models.inp -> openstream_python-0.2.1\src\openstream\data
+copying src\openstream\data\options.inp -> openstream_python-0.2.1\src\openstream\data
+copying src\openstream\data\tutorial1.inp -> openstream_python-0.2.1\src\openstream\data
+copying src\openstream\data\tutorial2_transient.inp -> openstream_python-0.2.1\src\openstream\data
+copying src\openstream\data\upstream.json -> openstream_python-0.2.1\src\openstream\data
+copying src\openstream\data\gui_baselines\FourField.initialization.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\FourField.json -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\FourField.physical.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\Mixture.initialization.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\Mixture.json -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\Mixture.physical.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\ThreeField.initialization.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\ThreeField.json -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\ThreeField.physical.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\TwoFluid.initialization.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\TwoFluid.json -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\TwoFluid.physical.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+copying src\openstream\gui_static\Roboto-Slab-Bold.woff2 -> openstream_python-0.2.1\src\openstream\gui_static
+copying src\openstream\gui_static\Roboto-Slab-Regular.woff2 -> openstream_python-0.2.1\src\openstream\gui_static
+copying src\openstream\gui_static\app.js -> openstream_python-0.2.1\src\openstream\gui_static
+copying src\openstream\gui_static\index.html -> openstream_python-0.2.1\src\openstream\gui_static
+copying src\openstream\gui_static\lato-bold.woff2 -> openstream_python-0.2.1\src\openstream\gui_static
+copying src\openstream\gui_static\lato-normal.woff2 -> openstream_python-0.2.1\src\openstream\gui_static
+copying src\openstream\gui_static\logo-transparent.png -> openstream_python-0.2.1\src\openstream\gui_static
+copying src\openstream\gui_static\style.css -> openstream_python-0.2.1\src\openstream\gui_static
+copying src\openstream_python.egg-info\PKG-INFO -> openstream_python-0.2.1\src\openstream_python.egg-info
+copying src\openstream_python.egg-info\SOURCES.txt -> openstream_python-0.2.1\src\openstream_python.egg-info
+copying src\openstream_python.egg-info\dependency_links.txt -> openstream_python-0.2.1\src\openstream_python.egg-info
+copying src\openstream_python.egg-info\entry_points.txt -> openstream_python-0.2.1\src\openstream_python.egg-info
+copying src\openstream_python.egg-info\requires.txt -> openstream_python-0.2.1\src\openstream_python.egg-info
+copying src\openstream_python.egg-info\top_level.txt -> openstream_python-0.2.1\src\openstream_python.egg-info
+copying tests\gui_frontend_logic.test.cjs -> openstream_python-0.2.1\tests
+copying tests\test_cli.py -> openstream_python-0.2.1\tests
+copying tests\test_diagnostic_api.py -> openstream_python-0.2.1\tests
+copying tests\test_fields.py -> openstream_python-0.2.1\tests
+copying tests\test_fourfield.py -> openstream_python-0.2.1\tests
+copying tests\test_gui.py -> openstream_python-0.2.1\tests
+copying tests\test_gui_lock.py -> openstream_python-0.2.1\tests
+copying tests\test_gui_reference.py -> openstream_python-0.2.1\tests
+copying tests\test_gui_schema.py -> openstream_python-0.2.1\tests
+copying tests\test_inputs.py -> openstream_python-0.2.1\tests
+copying tests\test_mixture_mrm_semantics.py -> openstream_python-0.2.1\tests
+copying tests\test_plotting.py -> openstream_python-0.2.1\tests
+copying tests\test_properties.py -> openstream_python-0.2.1\tests
+copying tests\test_solver.py -> openstream_python-0.2.1\tests
+copying tests\test_threefield.py -> openstream_python-0.2.1\tests
+copying tests\test_threefield_transient_audit.py -> openstream_python-0.2.1\tests
+copying tests\test_transient.py -> openstream_python-0.2.1\tests
+copying tests\test_twofluid.py -> openstream_python-0.2.1\tests
+copying tools\REFERENCE_READER.md -> openstream_python-0.2.1\tools
+copying tools\audit_method_coverage.py -> openstream_python-0.2.1\tools
+copying tools\audit_mixture_diagnostics.py -> openstream_python-0.2.1\tools
+copying tools\audit_publication.py -> openstream_python-0.2.1\tools
+copying tools\audit_recovered_annular.py -> openstream_python-0.2.1\tools
+copying tools\audit_recovered_mixture.py -> openstream_python-0.2.1\tools
+copying tools\audit_recovered_twofluid.py -> openstream_python-0.2.1\tools
+copying tools\capture_provenance.py -> openstream_python-0.2.1\tools
+copying tools\compare_matlab_reference.py -> openstream_python-0.2.1\tools
+copying tools\diagnose_twofluid_area.py -> openstream_python-0.2.1\tools
+copying tools\export_matlab_reference.m -> openstream_python-0.2.1\tools
+copying tools\gui_wheel_smoke.py -> openstream_python-0.2.1\tools
+copying tools\install_gui_shortcut.ps1 -> openstream_python-0.2.1\tools
+copying tools\interactive_console.py -> openstream_python-0.2.1\tools
+copying tools\recover_annular_reference.py -> openstream_python-0.2.1\tools
+copying tools\recover_mcos_reference.py -> openstream_python-0.2.1\tools
+copying tools\recover_twofluid_reference.py -> openstream_python-0.2.1\tools
+copying tools\release_examples.py -> openstream_python-0.2.1\tools
+copying tools\requirements-reference.lock -> openstream_python-0.2.1\tools
+copying tools\smoke_wheel.py -> openstream_python-0.2.1\tools
+copying tools\test_recover_annular_reference.py -> openstream_python-0.2.1\tools
+copying tools\test_recover_mcos_reference.py -> openstream_python-0.2.1\tools
+copying tools\test_recovered_framework.py -> openstream_python-0.2.1\tools
+copying tools\test_recovered_mixture_comparison.py -> openstream_python-0.2.1\tools
+copying tools\test_recovered_twofluid.py -> openstream_python-0.2.1\tools
+copying tools\test_reference_comparator.py -> openstream_python-0.2.1\tools
+copying tools\verify_all_baselines.py -> openstream_python-0.2.1\tools
+copying tools\verify_fourfield.py -> openstream_python-0.2.1\tools
+copying tools\verify_mrm_transient.py -> openstream_python-0.2.1\tools
+copying tools\verify_recovered_framework.py -> openstream_python-0.2.1\tools
+copying tools\verify_recovered_mixture.py -> openstream_python-0.2.1\tools
+copying tools\verify_sensitivity.py -> openstream_python-0.2.1\tools
+copying tools\verify_threefield_transient.py -> openstream_python-0.2.1\tools
+copying tools\verify_twofluid_transient.py -> openstream_python-0.2.1\tools
+Writing openstream_python-0.2.1\setup.cfg
+Creating tar archive
+removing 'openstream_python-0.2.1' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing src\openstream_python.egg-info\PKG-INFO
+writing dependency_links to src\openstream_python.egg-info\dependency_links.txt
+writing entry points to src\openstream_python.egg-info\entry_points.txt
+writing requirements to src\openstream_python.egg-info\requires.txt
+writing top-level names to src\openstream_python.egg-info\top_level.txt
+reading manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'tools\vendor'
+adding license file 'LICENSE'
+adding license file 'licenses/CoolPropWrapper_LICENSE'
+adding license file 'licenses/mat_io_LICENSE'
+adding license file 'licenses/gui/Apache-License-2.0.txt'
+adding license file 'licenses/gui/Flask-LICENSE.txt'
+adding license file 'licenses/gui/OFL-License.txt'
+adding license file 'licenses/gui/plotly-LICENSE.txt'
+adding license file 'licenses/gui/sphinx-rtd-theme-LICENSE.txt'
+adding license file 'licenses/gui/waitress-LICENSE.txt'
+adding license file 'docs/THIRD_PARTY.md'
+writing manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build\lib\openstream
+copying src\openstream\annular.py -> build\lib\openstream
+copying src\openstream\cli.py -> build\lib\openstream
+copying src\openstream\ff_fields.py -> build\lib\openstream
+copying src\openstream\fields.py -> build\lib\openstream
+copying src\openstream\fourfield.py -> build\lib\openstream
+copying src\openstream\gui.py -> build\lib\openstream
+copying src\openstream\gui_launcher.py -> build\lib\openstream
+copying src\openstream\gui_lock.py -> build\lib\openstream
+copying src\openstream\gui_reference.py -> build\lib\openstream
+copying src\openstream\gui_schema.py -> build\lib\openstream
+copying src\openstream\gui_worker.py -> build\lib\openstream
+copying src\openstream\inputs.py -> build\lib\openstream
+copying src\openstream\multifield_output.py -> build\lib\openstream
+copying src\openstream\numerics.py -> build\lib\openstream
+copying src\openstream\output.py -> build\lib\openstream
+copying src\openstream\plotting.py -> build\lib\openstream
+copying src\openstream\properties.py -> build\lib\openstream
+copying src\openstream\solver.py -> build\lib\openstream
+copying src\openstream\tf_fields.py -> build\lib\openstream
+copying src\openstream\threefield.py -> build\lib\openstream
+copying src\openstream\twofluid.py -> build\lib\openstream
+copying src\openstream\__init__.py -> build\lib\openstream
+copying src\openstream\__main__.py -> build\lib\openstream
+running egg_info
+writing src\openstream_python.egg-info\PKG-INFO
+writing dependency_links to src\openstream_python.egg-info\dependency_links.txt
+writing entry points to src\openstream_python.egg-info\entry_points.txt
+writing requirements to src\openstream_python.egg-info\requires.txt
+writing top-level names to src\openstream_python.egg-info\top_level.txt
+reading manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'tools\vendor'
+adding license file 'LICENSE'
+adding license file 'licenses/CoolPropWrapper_LICENSE'
+adding license file 'licenses/mat_io_LICENSE'
+adding license file 'licenses/gui/Apache-License-2.0.txt'
+adding license file 'licenses/gui/Flask-LICENSE.txt'
+adding license file 'licenses/gui/OFL-License.txt'
+adding license file 'licenses/gui/plotly-LICENSE.txt'
+adding license file 'licenses/gui/sphinx-rtd-theme-LICENSE.txt'
+adding license file 'licenses/gui/waitress-LICENSE.txt'
+adding license file 'docs/THIRD_PARTY.md'
+writing manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+creating build\lib\openstream\data
+copying src\openstream\data\geom.inp -> build\lib\openstream\data
+copying src\openstream\data\models.inp -> build\lib\openstream\data
+copying src\openstream\data\options.inp -> build\lib\openstream\data
+copying src\openstream\data\tutorial1.inp -> build\lib\openstream\data
+copying src\openstream\data\tutorial2_transient.inp -> build\lib\openstream\data
+copying src\openstream\data\gui_fields.json -> build\lib\openstream\data
+copying src\openstream\data\upstream.json -> build\lib\openstream\data
+creating build\lib\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\FourField.initialization.npz -> build\lib\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\FourField.json -> build\lib\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\FourField.physical.npz -> build\lib\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\Mixture.initialization.npz -> build\lib\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\Mixture.json -> build\lib\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\Mixture.physical.npz -> build\lib\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\ThreeField.initialization.npz -> build\lib\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\ThreeField.json -> build\lib\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\ThreeField.physical.npz -> build\lib\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\TwoFluid.initialization.npz -> build\lib\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\TwoFluid.json -> build\lib\openstream\data\gui_baselines
+copying src\openstream\data\gui_baselines\TwoFluid.physical.npz -> build\lib\openstream\data\gui_baselines
+creating build\lib\openstream\gui_static
+copying src\openstream\gui_static\app.js -> build\lib\openstream\gui_static
+copying src\openstream\gui_static\index.html -> build\lib\openstream\gui_static
+copying src\openstream\gui_static\lato-bold.woff2 -> build\lib\openstream\gui_static
+copying src\openstream\gui_static\lato-normal.woff2 -> build\lib\openstream\gui_static
+copying src\openstream\gui_static\logo-transparent.png -> build\lib\openstream\gui_static
+copying src\openstream\gui_static\Roboto-Slab-Bold.woff2 -> build\lib\openstream\gui_static
+copying src\openstream\gui_static\Roboto-Slab-Regular.woff2 -> build\lib\openstream\gui_static
+copying src\openstream\gui_static\style.css -> build\lib\openstream\gui_static
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\openstream
+copying build\lib\openstream\annular.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\cli.py -> build\bdist.win-amd64\wheel\.\openstream
+creating build\bdist.win-amd64\wheel\openstream\data
+copying build\lib\openstream\data\geom.inp -> build\bdist.win-amd64\wheel\.\openstream\data
+creating build\bdist.win-amd64\wheel\openstream\data\gui_baselines
+copying build\lib\openstream\data\gui_baselines\FourField.initialization.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+copying build\lib\openstream\data\gui_baselines\FourField.json -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+copying build\lib\openstream\data\gui_baselines\FourField.physical.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+copying build\lib\openstream\data\gui_baselines\Mixture.initialization.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+copying build\lib\openstream\data\gui_baselines\Mixture.json -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+copying build\lib\openstream\data\gui_baselines\Mixture.physical.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+copying build\lib\openstream\data\gui_baselines\ThreeField.initialization.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+copying build\lib\openstream\data\gui_baselines\ThreeField.json -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+copying build\lib\openstream\data\gui_baselines\ThreeField.physical.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+copying build\lib\openstream\data\gui_baselines\TwoFluid.initialization.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+copying build\lib\openstream\data\gui_baselines\TwoFluid.json -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+copying build\lib\openstream\data\gui_baselines\TwoFluid.physical.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+copying build\lib\openstream\data\gui_fields.json -> build\bdist.win-amd64\wheel\.\openstream\data
+copying build\lib\openstream\data\models.inp -> build\bdist.win-amd64\wheel\.\openstream\data
+copying build\lib\openstream\data\options.inp -> build\bdist.win-amd64\wheel\.\openstream\data
+copying build\lib\openstream\data\tutorial1.inp -> build\bdist.win-amd64\wheel\.\openstream\data
+copying build\lib\openstream\data\tutorial2_transient.inp -> build\bdist.win-amd64\wheel\.\openstream\data
+copying build\lib\openstream\data\upstream.json -> build\bdist.win-amd64\wheel\.\openstream\data
+copying build\lib\openstream\ff_fields.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\fields.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\fourfield.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\gui.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\gui_launcher.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\gui_lock.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\gui_reference.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\gui_schema.py -> build\bdist.win-amd64\wheel\.\openstream
+creating build\bdist.win-amd64\wheel\openstream\gui_static
+copying build\lib\openstream\gui_static\app.js -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+copying build\lib\openstream\gui_static\index.html -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+copying build\lib\openstream\gui_static\lato-bold.woff2 -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+copying build\lib\openstream\gui_static\lato-normal.woff2 -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+copying build\lib\openstream\gui_static\logo-transparent.png -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+copying build\lib\openstream\gui_static\Roboto-Slab-Bold.woff2 -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+copying build\lib\openstream\gui_static\Roboto-Slab-Regular.woff2 -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+copying build\lib\openstream\gui_static\style.css -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+copying build\lib\openstream\gui_worker.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\inputs.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\multifield_output.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\numerics.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\output.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\plotting.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\properties.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\solver.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\tf_fields.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\threefield.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\twofluid.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\__init__.py -> build\bdist.win-amd64\wheel\.\openstream
+copying build\lib\openstream\__main__.py -> build\bdist.win-amd64\wheel\.\openstream
+running install_egg_info
+Copying src\openstream_python.egg-info to build\bdist.win-amd64\wheel\.\openstream_python-0.2.1-py3.12.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\openstream_python-0.2.1.dist-info\WHEEL
+creating 'C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\dist\\gui-0.2.1-final\\.tmp-l6tv0sjk\\openstream_python-0.2.1-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
+adding 'openstream/__init__.py'
+adding 'openstream/__main__.py'
+adding 'openstream/annular.py'
+adding 'openstream/cli.py'
+adding 'openstream/ff_fields.py'
+adding 'openstream/fields.py'
+adding 'openstream/fourfield.py'
+adding 'openstream/gui.py'
+adding 'openstream/gui_launcher.py'
+adding 'openstream/gui_lock.py'
+adding 'openstream/gui_reference.py'
+adding 'openstream/gui_schema.py'
+adding 'openstream/gui_worker.py'
+adding 'openstream/inputs.py'
+adding 'openstream/multifield_output.py'
+adding 'openstream/numerics.py'
+adding 'openstream/output.py'
+adding 'openstream/plotting.py'
+adding 'openstream/properties.py'
+adding 'openstream/solver.py'
+adding 'openstream/tf_fields.py'
+adding 'openstream/threefield.py'
+adding 'openstream/twofluid.py'
+adding 'openstream/data/geom.inp'
+adding 'openstream/data/gui_fields.json'
+adding 'openstream/data/models.inp'
+adding 'openstream/data/options.inp'
+adding 'openstream/data/tutorial1.inp'
+adding 'openstream/data/tutorial2_transient.inp'
+adding 'openstream/data/upstream.json'
+adding 'openstream/data/gui_baselines/FourField.initialization.npz'
+adding 'openstream/data/gui_baselines/FourField.json'
+adding 'openstream/data/gui_baselines/FourField.physical.npz'
+adding 'openstream/data/gui_baselines/Mixture.initialization.npz'
+adding 'openstream/data/gui_baselines/Mixture.json'
+adding 'openstream/data/gui_baselines/Mixture.physical.npz'
+adding 'openstream/data/gui_baselines/ThreeField.initialization.npz'
+adding 'openstream/data/gui_baselines/ThreeField.json'
+adding 'openstream/data/gui_baselines/ThreeField.physical.npz'
+adding 'openstream/data/gui_baselines/TwoFluid.initialization.npz'
+adding 'openstream/data/gui_baselines/TwoFluid.json'
+adding 'openstream/data/gui_baselines/TwoFluid.physical.npz'
+adding 'openstream/gui_static/Roboto-Slab-Bold.woff2'
+adding 'openstream/gui_static/Roboto-Slab-Regular.woff2'
+adding 'openstream/gui_static/app.js'
+adding 'openstream/gui_static/index.html'
+adding 'openstream/gui_static/lato-bold.woff2'
+adding 'openstream/gui_static/lato-normal.woff2'
+adding 'openstream/gui_static/logo-transparent.png'
+adding 'openstream/gui_static/style.css'
+adding 'openstream_python-0.2.1.dist-info/licenses/LICENSE'
+adding 'openstream_python-0.2.1.dist-info/licenses/docs/THIRD_PARTY.md'
+adding 'openstream_python-0.2.1.dist-info/licenses/licenses/CoolPropWrapper_LICENSE'
+adding 'openstream_python-0.2.1.dist-info/licenses/licenses/mat_io_LICENSE'
+adding 'openstream_python-0.2.1.dist-info/licenses/licenses/gui/Apache-License-2.0.txt'
+adding 'openstream_python-0.2.1.dist-info/licenses/licenses/gui/Flask-LICENSE.txt'
+adding 'openstream_python-0.2.1.dist-info/licenses/licenses/gui/OFL-License.txt'
+adding 'openstream_python-0.2.1.dist-info/licenses/licenses/gui/plotly-LICENSE.txt'
+adding 'openstream_python-0.2.1.dist-info/licenses/licenses/gui/sphinx-rtd-theme-LICENSE.txt'
+adding 'openstream_python-0.2.1.dist-info/licenses/licenses/gui/waitress-LICENSE.txt'
+adding 'openstream_python-0.2.1.dist-info/METADATA'
+adding 'openstream_python-0.2.1.dist-info/WHEEL'
+adding 'openstream_python-0.2.1.dist-info/entry_points.txt'
+adding 'openstream_python-0.2.1.dist-info/top_level.txt'
+adding 'openstream_python-0.2.1.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+Successfully built openstream_python-0.2.1.tar.gz and openstream_python-0.2.1-py3-none-any.whl

@@ -1,0 +1,9 @@
+C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\docs\METHOD_COVERAGE.json
+{
+  "constructor_outside_numerical_method_count": 47,
+  "partial_or_internal_alternative": 54,
+  "infrastructure_or_presentation_gap": 77,
+  "native_name_candidate_not_correctness_proof": 447,
+  "property_assignment_contract_needs_review": 2,
+  "native_explicit_unsupported_method": 5
+}

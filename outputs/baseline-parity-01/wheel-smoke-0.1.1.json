@@ -1,0 +1,12 @@
+{
+  "imported_from": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\.venv\\wheel-parity-0.1.1\\openstream\\__init__.py",
+  "state": "INITIALSTEPCONVERGED",
+  "converged": true,
+  "outlet_enthalpy_J_kg": 2389399.9857234764,
+  "bundled_input_paths": [
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\.venv\\wheel-parity-0.1.1\\openstream\\data\\models.inp",
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\.venv\\wheel-parity-0.1.1\\openstream\\data\\options.inp",
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\.venv\\wheel-parity-0.1.1\\openstream\\data\\geom.inp",
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\.venv\\wheel-parity-0.1.1\\openstream\\data\\tutorial1.inp"
+  ]
+}

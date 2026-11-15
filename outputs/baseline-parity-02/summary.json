@@ -1,0 +1,53 @@
+{
+  "schema": "openstream-baseline-suite-v1",
+  "baseline_cases_passed": 4,
+  "baseline_cases_total": 4,
+  "records": [
+    {
+      "framework": "Mixture",
+      "core_baseline_passed": true,
+      "initialization_core_passed": true,
+      "expanded_profiles_passed": null,
+      "core_profiles": 9,
+      "max_physical_relative_error": 6.222142509110722e-13,
+      "native_cli_exit_code": 0,
+      "physical_consistency": null,
+      "comparison_report": "Mixture\\comparison\\comparison.json"
+    },
+    {
+      "framework": "TwoFluid",
+      "core_baseline_passed": true,
+      "initialization_core_passed": true,
+      "expanded_profiles_passed": true,
+      "core_profiles": 6,
+      "max_physical_relative_error": 5.752390237678239e-14,
+      "native_cli_exit_code": 3,
+      "physical_consistency": false,
+      "comparison_report": "TwoFluid\\comparison\\comparison.json"
+    },
+    {
+      "framework": "ThreeField",
+      "core_baseline_passed": true,
+      "initialization_core_passed": true,
+      "expanded_profiles_passed": true,
+      "core_profiles": 6,
+      "max_physical_relative_error": 1.2250004625517637e-13,
+      "native_cli_exit_code": 3,
+      "physical_consistency": false,
+      "comparison_report": "ThreeField\\comparison\\comparison.json"
+    },
+    {
+      "framework": "FourField",
+      "core_baseline_passed": true,
+      "initialization_core_passed": true,
+      "expanded_profiles_passed": true,
+      "core_profiles": 9,
+      "max_physical_relative_error": 2.5396096926761515e-09,
+      "native_cli_exit_code": 3,
+      "physical_consistency": false,
+      "comparison_report": "FourField\\comparison\\comparison.json"
+    }
+  ],
+  "scope": "Original steady TUTORIAL1 archives, initializations and mixture precursors; no fresh MATLAB execution",
+  "limitation": "Passing archived baselines does not imply full option/API parity or experimental validation. Physical failures and supplementary diagnostic disagreements remain in each report."
+}

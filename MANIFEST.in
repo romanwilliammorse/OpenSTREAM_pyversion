@@ -1,0 +1,14 @@
+include README.md CHANGELOG.md requirements.lock requirements-gui.lock LICENSE OpenSTREAM.cmd OpenSTREAM-GUI.cmd
+recursive-include licenses *
+recursive-include docs *.md *.json
+recursive-include examples *.py
+recursive-include tools *.py *.m
+include tools/install_gui_shortcut.ps1
+include tools/requirements-reference.lock tools/REFERENCE_READER.md
+prune tools/vendor
+recursive-include tests *.py
+recursive-include tests *.cjs
+recursive-include provenance *.json
+recursive-include src/openstream/data *.inp *.json
+recursive-include src/openstream/data/gui_baselines *
+recursive-include src/openstream/gui_static *

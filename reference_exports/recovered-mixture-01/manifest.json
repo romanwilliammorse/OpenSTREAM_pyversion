@@ -1,0 +1,91 @@
+{
+  "schema": "openstream-recovered-mcos-mixture-v1",
+  "complete": true,
+  "created_utc": "2026-11-14T23:06:44.949045+00:00",
+  "source_kind": "original_approved_archive_decoded_without_matlab",
+  "archive": {
+    "file": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\upstream\\tests\\integration\\references\\TUTORIAL1-TUTORIAL1-DEFAULT\\tutorial1_MixtureSolver.mat",
+    "sha256": "43311c4c2ec3440cc3366f94df1216b425d4270268887b7fb7bf921c0fb9ccb0",
+    "bytes": 281077,
+    "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026"
+  },
+  "decoder": {
+    "package": "mat-io",
+    "version": "1.0.2",
+    "repository": "https://github.com/foreverallama/matio",
+    "inspected_commit": "18d538d5657e4e32e25d90c53a80c05a522540ac",
+    "license": "BSD-3-Clause",
+    "enum_workaround": "Read structural name/index table without mutation; preserve original enum metadata",
+    "warnings": [],
+    "python": "3.12.14",
+    "dependencies": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.1",
+      "h5py": "3.16.0"
+    }
+  },
+  "producer_metadata": {
+    "matlab_version": null,
+    "coolprop_version": null,
+    "source_commit": null,
+    "note": "Archive header gives platform/date; serialized anonymous-function path includes R2024b but is not independent runtime-version proof."
+  },
+  "framework": "Mixture",
+  "state": "INITIALSTEPCONVERGED",
+  "array_layout": "Named exports: time,node[,wall]. Raw arrays retain original MATLAB dimensions; object graph indices are 1-based.",
+  "physical_states": 1,
+  "initialization_states": 10,
+  "reconstructed_methods": {
+    "U": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "liquid.W": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "liquid.U": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "liquid.H": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "vapor.W": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "vapor.U": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "vapor.H": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution"
+  },
+  "stored_quantity_mapping": {
+    "W": "W",
+    "P": "P",
+    "H": "H",
+    "RHO": "rho",
+    "X": "x",
+    "XEQ": "xeq",
+    "VF": "vf",
+    "UP": "up",
+    "HFLUX": "HFLUX"
+  },
+  "units": {
+    "Z": "m",
+    "TIME": "s",
+    "W": "kg/s",
+    "P": "Pa",
+    "H": "J/kg",
+    "U": "m/s",
+    "UP": "m/s",
+    "RHO": "kg/m^3",
+    "X": "1",
+    "XEQ": "1",
+    "VF": "1",
+    "HFLUX": "W/m^2",
+    "liquid.W": "kg/s",
+    "liquid.U": "m/s",
+    "liquid.H": "J/kg",
+    "vapor.W": "kg/s",
+    "vapor.U": "m/s",
+    "vapor.H": "J/kg"
+  },
+  "limitations": [
+    "Not a fresh MATLAB execution",
+    "Unknown original CoolProp version and exact producer commit",
+    "Method outputs reconstructed from archived values and source formulas are distinguished from directly stored arrays",
+    "No experimental validation implied"
+  ],
+  "files": {
+    "results.npz": "e22fd8350b2e3596ea755536dc0d27805b811843b5924e32abe009bfa34abcb8",
+    "initialization.npz": "18f17f7d4cfc3f1fa8d5c549680bb10eb299fc359df3855a6c14560cd32a77ae",
+    "raw_arrays.npz": "23f2dd8a85c17c9265ead065dae9bab4c540752106cf5a2284b71b656faf01f1",
+    "object_graph.json": "1711bbf9ce115d9acd8079d0c1fef0f5fe332301b58121e82214a0a8155f60c4"
+  }
+}

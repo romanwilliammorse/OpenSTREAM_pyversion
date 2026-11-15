@@ -1,0 +1,22 @@
+{
+  "MixtureSolver": {
+    "numerically_converged": true,
+    "physical_consistency": null,
+    "max_relative_area_discrepancy_in_applicable_domain": null
+  },
+  "TwoFluidSolver": {
+    "numerically_converged": true,
+    "physical_consistency": false,
+    "max_relative_area_discrepancy_in_applicable_domain": 0.4105610706900207
+  },
+  "ThreeFieldSolver": {
+    "numerically_converged": true,
+    "physical_consistency": false,
+    "max_relative_area_discrepancy_in_applicable_domain": 0.07485259436858827
+  },
+  "FourFieldSolver": {
+    "numerically_converged": true,
+    "physical_consistency": false,
+    "max_relative_area_discrepancy_in_applicable_domain": 0.11241051742329389
+  }
+}

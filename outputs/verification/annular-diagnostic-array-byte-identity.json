@@ -1,0 +1,38 @@
+{
+  "threefield": {
+    "results.npz": {
+      "arrays": 13,
+      "identical_dtype_shape_and_bytes": true
+    },
+    "initialization.npz": {
+      "arrays": 13,
+      "identical_dtype_shape_and_bytes": true
+    },
+    "mixture/results.npz": {
+      "arrays": 70,
+      "identical_dtype_shape_and_bytes": true
+    },
+    "mixture/initialization.npz": {
+      "arrays": 70,
+      "identical_dtype_shape_and_bytes": true
+    }
+  },
+  "fourfield": {
+    "results.npz": {
+      "arrays": 26,
+      "identical_dtype_shape_and_bytes": true
+    },
+    "initialization.npz": {
+      "arrays": 26,
+      "identical_dtype_shape_and_bytes": true
+    },
+    "mixture/results.npz": {
+      "arrays": 70,
+      "identical_dtype_shape_and_bytes": true
+    },
+    "mixture/initialization.npz": {
+      "arrays": 70,
+      "identical_dtype_shape_and_bytes": true
+    }
+  }
+}

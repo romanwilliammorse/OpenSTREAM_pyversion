@@ -1,0 +1,21 @@
+{
+  "purpose": "Native saved-data rendering; no solver execution or numerical-equivalence claim",
+  "physical_time_source": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\verification\\native-sensitivity-01\\transient-0.1",
+  "fourfield_source": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\fourfield_official",
+  "source_sha256": {
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\verification\\native-sensitivity-01\\transient-0.1\\results.npz": "83abf2222cd4775f3029fe660f976b2ea3d48f8261d72ab9dc8a7daa89a77ea2",
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\verification\\native-sensitivity-01\\transient-0.1\\metadata.json": "9dccbd56649db4aa5f882052d792a70ec21cb301caf512ead473650e03246bf9",
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\fourfield_official\\results.npz": "420da282e72715a2d1bd72c1d506f07356e69a480b625a7edbcc217a5730e1ec",
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\fourfield_official\\initialization.npz": "a303a4a1601c6fa491925c67e667d99bf99a377cb9eead0f63720e95cea6a9ca",
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\fourfield_official\\metadata.json": "3a3d4893a05068f2747ae3750df8588c2b5a49831b04a2acedede519ef8b2d60"
+  },
+  "generated": [
+    "fourfield_frequency_axial.png",
+    "fourfield_frequency_initialization.gif",
+    "fourfield_frequency_initialization.png",
+    "fourfield_wave_mass_space_time.png",
+    "mixture_enthalpy.gif",
+    "mixture_enthalpy_history.png",
+    "mixture_enthalpy_space_time.png"
+  ]
+}

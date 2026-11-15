@@ -1,0 +1,10 @@
+C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\ff_fields.py:178: RuntimeWarning: divide by zero encountered in divide
+  return (c[1]/self.REV(i))**2+c[2]
+C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\ff_fields.py:140: RuntimeWarning: invalid value encountered in multiply
+  force = .5*self.SHAPEFACTOR(i)*self.DRAGCOEF(i)*self.fluid.RHOG*difference**2
+{
+  "physical_consistency": false,
+  "max_area_closure_relative": 0.4413082218380726,
+  "max_unblended_annular_area_closure_relative": 0.11241051742329389,
+  "outlet_area_closure_relative": 0.010737048682143202
+}

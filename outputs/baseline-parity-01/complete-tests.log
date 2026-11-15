@@ -1,0 +1,18 @@
+........................................................................ [ 33%]
+........................................................................ [ 67%]
+....................................................................     [100%]
+============================== warnings summary ===============================
+.venv\reference-reader\matio\utils\converters\mattables.py:28
+  C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\.venv\reference-reader\matio\utils\converters\mattables.py:28: Pandas4Warning: The 'future.infer_string' option is deprecated and will be removed in pandas 4.0. Inferring str dtype for string data has been the default since pandas 3.0, and it will no longer be possible to disable it.
+    pd.options.future.infer_string = True
+
+tests/test_fourfield.py::test_original_inputs_converge_with_bounded_primary_fields
+  C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\ff_fields.py:178: RuntimeWarning: divide by zero encountered in divide
+    return (c[1]/self.REV(i))**2+c[2]
+
+tests/test_fourfield.py::test_original_inputs_converge_with_bounded_primary_fields
+  C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\ff_fields.py:140: RuntimeWarning: invalid value encountered in multiply
+    force = .5*self.SHAPEFACTOR(i)*self.DRAGCOEF(i)*self.fluid.RHOG*difference**2
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+212 passed, 3 warnings in 88.84s (0:01:28)

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools==84.2.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openstream-python"
+version = "0.2.1"
+description = "Native Python scientific port of OpenSTREAM (partial implementation; see feature map)"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+license-files = ["LICENSE", "licenses/*", "licenses/gui/*", "docs/THIRD_PARTY.md"]
+dependencies = ["numpy==2.5.4", "scipy==1.18.1", "CoolProp==8.0.0", "matplotlib==3.11.2"]
+
+[project.optional-dependencies]
+test = ["pytest==9.2.0", "build==1.6.1"]
+gui = ["Flask==3.1.3", "plotly==7.1.0", "waitress==3.0.2"]
+
+[project.scripts]
+openstream = "openstream.cli:main"
+openstream-gui = "openstream.gui_launcher:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+openstream = ["data/*.inp", "data/*.json", "data/gui_baselines/**/*", "gui_static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

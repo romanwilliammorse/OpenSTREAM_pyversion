@@ -1,0 +1,6 @@
+Running native mixture solver...
+Numerically converged: True; stored physical states: 51
+Final outlet enthalpy: 1764400.000001 J/kg
+MATLAB agreement and experimental validation remain unverified.
+Saved: C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\outputs\interactive\20261114-164428-transient-27136a\axial.png
+TRANSIENT_RUN C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\outputs\interactive\20261114-164428-transient-27136a

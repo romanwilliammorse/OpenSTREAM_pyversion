@@ -1,0 +1,1155 @@
+{
+  "upstream_commit": "a614c7173822a93c1e64ac28d1541cbac028cbd8",
+  "fields": {
+    "model": {
+      "ID": {
+        "description": "Identifier for the model configuration",
+        "unit": "\u2014",
+        "section": "General physical model",
+        "source": "+Inputs/Model.m",
+        "line": 11
+      },
+      "NNODES": {
+        "description": "Number of axial intervals; the solution contains NNODES + 1 axial nodes, including the inlet.",
+        "unit": "count",
+        "section": "General physical model",
+        "source": "+Inputs/Model.m",
+        "line": 13
+      },
+      "FLUID": {
+        "description": "CoolProp fluid identifier",
+        "unit": "\u2014",
+        "section": "General physical model",
+        "source": "+Inputs/Model.m",
+        "line": 14
+      },
+      "PROPERTIES": {
+        "description": "Assumption model for fluid properties selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "General physical model",
+        "source": "+Inputs/Model.m",
+        "line": 15
+      },
+      "KLOC": {
+        "description": "Elevation of local perturbations",
+        "unit": "m",
+        "section": "General physical model",
+        "source": "+Inputs/Model.m",
+        "line": 16
+      },
+      "WBOILINGXSUB": {
+        "description": "Equilibrium thermodynamic quality at onset of subcooled wall boiling",
+        "unit": "1",
+        "section": "Two-phase flow regime and wall heat transfer transitions",
+        "source": "+Inputs/Model.m",
+        "line": 20
+      },
+      "WBOILINGN": {
+        "description": "Wall boiling function exponent",
+        "unit": "1",
+        "section": "Two-phase flow regime and wall heat transfer transitions",
+        "source": "+Inputs/Model.m",
+        "line": 21
+      },
+      "WBOILINGXSAT": {
+        "description": "Equilibrium thermodynamic quality at onset of saturated wall boiling",
+        "unit": "1",
+        "section": "Two-phase flow regime and wall heat transfer transitions",
+        "source": "+Inputs/Model.m",
+        "line": 22
+      },
+      "OAF": {
+        "description": "Onset of annular flow model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Two-phase flow regime and wall heat transfer transitions",
+        "source": "+Inputs/Model.m",
+        "line": 23
+      },
+      "OAFTRANSITION": {
+        "description": "Annular flow transition function parameters (sigmoid width/location wrt OAF)",
+        "unit": "m",
+        "section": "Two-phase flow regime and wall heat transfer transitions",
+        "source": "+Inputs/Model.m",
+        "line": 24
+      },
+      "CBT": {
+        "description": "Critical Boiling Transition model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Two-phase flow regime and wall heat transfer transitions",
+        "source": "+Inputs/Model.m",
+        "line": 25
+      },
+      "CBTMULT": {
+        "description": "Constant critical heat-flux multiplier. The GUI accepts one finite scalar; general Python functions remain available through the Python API, not executable text in this editor.",
+        "unit": "1",
+        "section": "Two-phase flow regime and wall heat transfer transitions",
+        "source": "+Inputs/Model.m",
+        "line": 26
+      },
+      "CBTKEFFECT": {
+        "description": "Grid-effect coefficients [amplitude, exponent] in 1 + c[0] exp(c[1] distance / hydraulic diameter). Both are dimensionless in the implemented upstream equation.",
+        "unit": "1, 1",
+        "section": "Two-phase flow regime and wall heat transfer transitions",
+        "source": "+Inputs/Model.m",
+        "line": 27
+      },
+      "CBTELEVATION": {
+        "description": "Critical Boiling Transition Elevation",
+        "unit": "m",
+        "section": "Two-phase flow regime and wall heat transfer transitions",
+        "source": "+Inputs/Model.m",
+        "line": 28
+      },
+      "MFBT": {
+        "description": "Minimum Film Boiling Transition model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Two-phase flow regime and wall heat transfer transitions",
+        "source": "+Inputs/Model.m",
+        "line": 29
+      },
+      "DTMFB": {
+        "description": "Minimum film boiling temperature from saturation",
+        "unit": "K",
+        "section": "Two-phase flow regime and wall heat transfer transitions",
+        "source": "+Inputs/Model.m",
+        "line": 30
+      },
+      "SPMTM": {
+        "description": "Single-phase wall momentum transfer model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Wall (and local perturbations) momentum transfer",
+        "source": "+Inputs/Model.m",
+        "line": 34
+      },
+      "FRICTION": {
+        "description": "Wall friction coefficients",
+        "unit": "1",
+        "section": "Wall (and local perturbations) momentum transfer",
+        "source": "+Inputs/Model.m",
+        "line": 35
+      },
+      "TPFM": {
+        "description": "Two-phase friction multiplier model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Wall (and local perturbations) momentum transfer",
+        "source": "+Inputs/Model.m",
+        "line": 36
+      },
+      "KLOSS": {
+        "description": "Pressure loss coefficients of local perturbations",
+        "unit": "1",
+        "section": "Wall (and local perturbations) momentum transfer",
+        "source": "+Inputs/Model.m",
+        "line": 37
+      },
+      "TPKM": {
+        "description": "Two-phase local loss multiplier model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Wall (and local perturbations) momentum transfer",
+        "source": "+Inputs/Model.m",
+        "line": 38
+      },
+      "BTMTM": {
+        "description": "Boiling transition wall momentum transfer model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Wall (and local perturbations) momentum transfer",
+        "source": "+Inputs/Model.m",
+        "line": 39
+      },
+      "SPHTM": {
+        "description": "Single-phase wall heat transfer model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Wall heat transfer",
+        "source": "+Inputs/Model.m",
+        "line": 43
+      },
+      "DITTUSBOELTERCOEF": {
+        "description": "Coefficients for the upstream generalized Dittus-Boelter option (DITTUSBOELTERGEN), which is currently unsupported. The supported DITTUSBOELTER model uses its fixed upstream constants 0.023, 0.8 and 0.4; changing this vector does not alter that model.",
+        "unit": "1",
+        "section": "Wall heat transfer",
+        "source": "+Inputs/Model.m",
+        "line": 44
+      },
+      "TPHTM": {
+        "description": "Two-phase wall heat transfer model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Wall heat transfer",
+        "source": "+Inputs/Model.m",
+        "line": 45
+      },
+      "BTHTM": {
+        "description": "Boiling transition wall heat transfer model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Wall heat transfer",
+        "source": "+Inputs/Model.m",
+        "line": 46
+      },
+      "MOECKCOEF": {
+        "description": "Groeneveld-Moeck post-boiling transition model coefficients",
+        "unit": "1",
+        "section": "Wall heat transfer",
+        "source": "+Inputs/Model.m",
+        "line": 47
+      },
+      "VOID": {
+        "description": "Void fraction model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Mixture solver models",
+        "source": "+Inputs/Model.m",
+        "line": 51
+      },
+      "SLIP": {
+        "description": "Phase velocity ratio",
+        "unit": "1",
+        "section": "Mixture solver models",
+        "source": "+Inputs/Model.m",
+        "line": 52
+      },
+      "THERMALNONEQ": {
+        "description": "Thermal non-equilibrium model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Mixture solver models",
+        "source": "+Inputs/Model.m",
+        "line": 53
+      },
+      "THERMALRELAX": {
+        "description": "Thermal non-equilibrium time relaxation model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Mixture MRM solver models",
+        "source": "+Inputs/Model.m",
+        "line": 57
+      },
+      "RELAXX": {
+        "description": "Interfacial phase change relaxation time thermodynamic quality",
+        "unit": "1",
+        "section": "Mixture MRM solver models",
+        "source": "+Inputs/Model.m",
+        "line": 58
+      },
+      "RELAXCONDFO": {
+        "description": "Interfacial condensation Fourier number array  for THERMALRELAX FOURIERX model The upstream implementation uses the first len(RELAXX) entries; any remaining entries are retained but unused by this interpolation.",
+        "unit": "1",
+        "section": "Mixture MRM solver models",
+        "source": "+Inputs/Model.m",
+        "line": 59
+      },
+      "RELAXEVAPFO": {
+        "description": "Interfacial evaporation  Fourier number array  for THERMALRELAX FOURIERX model The upstream implementation uses the first len(RELAXX) entries; any remaining entries are retained but unused by this interpolation.",
+        "unit": "1",
+        "section": "Mixture MRM solver models",
+        "source": "+Inputs/Model.m",
+        "line": 60
+      },
+      "RELAXCONDT": {
+        "description": "Interfacial condensation relaxation time array  for THERMALRELAX TIMEX model The upstream implementation uses the first len(RELAXX) entries; any remaining entries are retained but unused by this interpolation.",
+        "unit": "s",
+        "section": "Mixture MRM solver models",
+        "source": "+Inputs/Model.m",
+        "line": 61
+      },
+      "RELAXEVAPT": {
+        "description": "Interfacial evaporation  relaxation time array  for THERMALRELAX TIMEX model The upstream implementation uses the first len(RELAXX) entries; any remaining entries are retained but unused by this interpolation.",
+        "unit": "s",
+        "section": "Mixture MRM solver models",
+        "source": "+Inputs/Model.m",
+        "line": 62
+      },
+      "RELAXCONDCOEF": {
+        "description": "Condensation relaxation coefficients [length scale, void exponent, void/quality bias, nonequilibrium-quality exponent]. Used by VOID/HOMOGENEOUS thermal relaxation closures; not every component is used by every closure.",
+        "unit": "m, 1, 1, 1",
+        "section": "Mixture MRM solver models",
+        "source": "+Inputs/Model.m",
+        "line": 63
+      },
+      "RELAXEVAPCOEF": {
+        "description": "Evaporation relaxation coefficients [length scale, void exponent, void bias, nonequilibrium-quality exponent]. Used by VOID/HOMOGENEOUS thermal relaxation closures; not every component is used by every closure.",
+        "unit": "m, 1, 1, 1",
+        "section": "Mixture MRM solver models",
+        "source": "+Inputs/Model.m",
+        "line": 64
+      },
+      "RELAXCONDFOCOEF": {
+        "description": "Condensation Fourier closure coefficients [prefactor, Reynolds-number scale, Reynolds-number exponent, reduced-pressure exponent].",
+        "unit": "1",
+        "section": "Mixture MRM solver models",
+        "source": "+Inputs/Model.m",
+        "line": 65
+      },
+      "RELAXEVAPFOCOEF": {
+        "description": "Evaporation Fourier closure coefficients [prefactor, Reynolds-number scale, Reynolds-number exponent, reduced-pressure exponent, diameter scale, diameter exponent].",
+        "unit": "1, 1, 1, 1, m, 1",
+        "section": "Mixture MRM solver models",
+        "source": "+Inputs/Model.m",
+        "line": 66
+      },
+      "KTRELAX": {
+        "description": "Local thermal-relaxation time override. Use the quoted JSON string \"NaN\" for the upstream automatic sentinel; positive values override the closure. One value or one per KLOC.",
+        "unit": "s",
+        "section": "Mixture MRM solver models",
+        "source": "+Inputs/Model.m",
+        "line": 67
+      },
+      "NEARWALLRATIO": {
+        "description": "Near-wall mass flow distribution ratio",
+        "unit": "1",
+        "section": "Mixture near-wall models",
+        "source": "+Inputs/Model.m",
+        "line": 71
+      },
+      "NEARWALLEQOAF": {
+        "description": "Near-wall equilibrium at onset of annular two-phase flow",
+        "unit": "\u2014",
+        "section": "Mixture near-wall models",
+        "source": "+Inputs/Model.m",
+        "line": 72
+      },
+      "NEARWALLH": {
+        "description": "Near-wall equilibrium enthalpy model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Mixture near-wall models",
+        "source": "+Inputs/Model.m",
+        "line": 73
+      },
+      "NEARWALLHRATIO": {
+        "description": "Near-wall equilibrium enthalpy ratio",
+        "unit": "1",
+        "section": "Mixture near-wall models",
+        "source": "+Inputs/Model.m",
+        "line": 74
+      },
+      "NEARWALLRELAX": {
+        "description": "Near-wall energy transfer time relaxation model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Mixture near-wall models",
+        "source": "+Inputs/Model.m",
+        "line": 75
+      },
+      "NEARWALLRELAXX": {
+        "description": "Near-wall exchange relaxation time thermodynamic quality",
+        "unit": "1",
+        "section": "Mixture near-wall models",
+        "source": "+Inputs/Model.m",
+        "line": 76
+      },
+      "NEARWALLRELAXT": {
+        "description": "Near-wall energy transfer relaxation time array The upstream implementation uses the first len(NEARWALLRELAXX) entries.",
+        "unit": "s",
+        "section": "Mixture near-wall models",
+        "source": "+Inputs/Model.m",
+        "line": 77
+      },
+      "NEARWALLRELAXCOEF": {
+        "description": "Near-wall VOID relaxation coefficients [length scale, void exponent, void bias].",
+        "unit": "m, 1, 1",
+        "section": "Mixture near-wall models",
+        "source": "+Inputs/Model.m",
+        "line": 78
+      },
+      "INTLENGTH": {
+        "description": "Interfacial length scale model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 82
+      },
+      "INTAREA": {
+        "description": "Interfacial area model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 83
+      },
+      "INTLENGTHVCST": {
+        "description": "Dispersed gas    constant interfacial length scale",
+        "unit": "m",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 84
+      },
+      "INTLENGTHLCST": {
+        "description": "Dispersed liquid constant interfacial length scale",
+        "unit": "m",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 85
+      },
+      "LOCRELVEL": {
+        "description": "Local relative phase velocity model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 86
+      },
+      "RELVELCST": {
+        "description": "Multiplication factor to the local relative velocity",
+        "unit": "1",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 87
+      },
+      "MOMENTLIQUID": {
+        "description": "Liquid momentum conservation model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 89
+      },
+      "MOMENTGAS": {
+        "description": "Gas momentum conservation model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 90
+      },
+      "DROPDRAG": {
+        "description": "Drop drag model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 91
+      },
+      "DROPDRAGCOEF": {
+        "description": "Drop constant drag coefficient",
+        "unit": "1",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 92
+      },
+      "BUBBLEDRAG": {
+        "description": "Bubble drag model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 93
+      },
+      "BUBBLEDRAGCOEF": {
+        "description": "Bubble constant drag coefficient",
+        "unit": "1",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 94
+      },
+      "INTNU": {
+        "description": "Interfacial heat transfer model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 96
+      },
+      "INTNUVCST": {
+        "description": "Dispersed gas    constant interfacial Nusselt number",
+        "unit": "1",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 97
+      },
+      "INTNULCST": {
+        "description": "Dispersed liquid constant interfacial Nusselt number",
+        "unit": "1",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 98
+      },
+      "RANZMARSHALLVCST": {
+        "description": "Dispersed gas    Ranz-Marshall coefficients",
+        "unit": "1",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 99
+      },
+      "RANZMARSHALLLCST": {
+        "description": "Dispersed liquid Ranz-Marshall coefficients",
+        "unit": "1",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 100
+      },
+      "INTTRANSH": {
+        "description": "Interfacial enthalpy transfer model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Two-fluid solver models",
+        "source": "+Inputs/Model.m",
+        "line": 101
+      },
+      "POSFILM": {
+        "description": "Positive film flow rate/thickness model",
+        "unit": "\u2014",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 105
+      },
+      "OAFENTRAINED": {
+        "description": "Entrained drop model at onset of annular flow selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 107
+      },
+      "OAFDROPRATIO": {
+        "description": "Drop/Liquid mass ratio at onset of annular flow",
+        "unit": "1",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 108
+      },
+      "DEPOSITION": {
+        "description": "Drop deposition model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 110
+      },
+      "DEPENHANCEMENT": {
+        "description": "Drop deposition enhancement model due to local perturbations selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 111
+      },
+      "KBLOCKRATIO": {
+        "description": "Blockage ratios of local perturbations",
+        "unit": "1",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 112
+      },
+      "KTUNING": {
+        "description": "Drop deposition enhancement tuning coefficients",
+        "unit": "1",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 113
+      },
+      "ENTRAINMENT": {
+        "description": "Film entrainment model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 114
+      },
+      "OKAWACOEFS": {
+        "description": "Okawa generalized entrainment coefficients [critical film Reynolds number, density-ratio exponent, entrainment-velocity prefactor, entrainment-number exponent]. Units follow flux = prefactor \u00d7 liquid density \u00d7 dimensionless factors.",
+        "unit": "1, 1, m/s, 1",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 115
+      },
+      "MOMENTFILM": {
+        "description": "Film momentum conservation model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 117
+      },
+      "VAPORFRIC": {
+        "description": "Vapor friction model. SOLVER_DEPENDENT resolves to CONSTANT inside FourField and WALLIS inside other frameworks and the mixture precursor. Keeping this sentinel preserves each solver's original automatic choice.",
+        "unit": "\u2014",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 118
+      },
+      "VAPORFRICCST": {
+        "description": "Vapor friction constant",
+        "unit": "1",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 119
+      },
+      "THINFILMFRIC": {
+        "description": "Thin film wall friction model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 120
+      },
+      "THINFILMTHICK": {
+        "description": "Minimum thin film thickness",
+        "unit": "m",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 121
+      },
+      "MOMENTDROP": {
+        "description": "Drop momentum conservation model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 123
+      },
+      "DROPSLIP": {
+        "description": "Drop/vapor velocity ratio",
+        "unit": "1",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 124
+      },
+      "DROPDIAM": {
+        "description": "Drop diameter",
+        "unit": "m",
+        "section": "Three-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 125
+      },
+      "OAFFILMSPLIT": {
+        "description": "Film mass flow split model at onset of annular flow selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 129
+      },
+      "OAFBASERATIO": {
+        "description": "Base/Film mass ratio at onset of annular flow",
+        "unit": "1",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 130
+      },
+      "BASEEQTHICK": {
+        "description": "Equilibrium base film thickness model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 132
+      },
+      "BASEEQTHICKCOEF": {
+        "description": "Equilibrium base film thickness coefficients",
+        "unit": "1",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 133
+      },
+      "BASEYPLUS": {
+        "description": "Equilibrium base film y+ value",
+        "unit": "1",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 134
+      },
+      "RELAXTB": {
+        "description": "Base film / wave mass exchange relaxation time",
+        "unit": "s",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 135
+      },
+      "WAVEMIXCOEF": {
+        "description": "Base film / wave turbulent mixing coefficient; retained as an upstream column-vector input. For one wall provide one value.",
+        "unit": "1",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 137
+      },
+      "WAVEFREQUENCY": {
+        "description": "Wave number density model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 138
+      },
+      "EQSTROUHAL": {
+        "description": "Equilibrium wave Strouhal number model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 139
+      },
+      "EQSTROUHALCOEF": {
+        "description": "Equilibrium wave Strouhal number coefficients",
+        "unit": "1",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 140
+      },
+      "RELAXTW": {
+        "description": "Wave number density relaxation time",
+        "unit": "s",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 141
+      },
+      "CSTWAVEFREQ": {
+        "description": "Imposed constant wave frequency",
+        "unit": "Hz",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 142
+      },
+      "MOMENTBASE": {
+        "description": "Base film momentum conservation model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 144
+      },
+      "MOMENTWAVE": {
+        "description": "Wave momentum conservation model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 145
+      },
+      "WAVEBASEINT": {
+        "description": "Wave / base film interfacial momentum transfer model selected from the upstream enum",
+        "unit": "\u2014",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 146
+      },
+      "SHAPEFACTORCOEF": {
+        "description": "Wave shape factor coefficients",
+        "unit": "1",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 147
+      },
+      "WAVEDRAGCOEF": {
+        "description": "Wave drag coefficients [Reynolds-number length scale, Reynolds-number scale, additive drag coefficient]. The first coefficient is a length in REV = rho_g (u_g - u_wave) c[0] / mu_g; the upstream property comment labels the entire vector dimensionless.",
+        "unit": "m, 1, 1",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 148
+      },
+      "THINWAVETHICK": {
+        "description": "Minimum thin wave thickness",
+        "unit": "m",
+        "section": "Four-field solver models",
+        "source": "+Inputs/Model.m",
+        "line": 149
+      }
+    },
+    "options": {
+      "ID": {
+        "description": "Identifier for the options configuration",
+        "unit": "\u2014",
+        "section": "General numerical controls",
+        "source": "+Inputs/Options.m",
+        "line": 11
+      },
+      "AXIALINTERP": {
+        "description": "Method for interpolating axial power distribution",
+        "unit": "\u2014",
+        "section": "General numerical controls",
+        "source": "+Inputs/Options.m",
+        "line": 12
+      },
+      "TIMEINTERP": {
+        "description": "Method for interpolating time-dependent boundary conditions",
+        "unit": "\u2014",
+        "section": "General numerical controls",
+        "source": "+Inputs/Options.m",
+        "line": 13
+      },
+      "TSTEP": {
+        "description": "Time step size for transient simulations",
+        "unit": "s",
+        "section": "General numerical controls",
+        "source": "+Inputs/Options.m",
+        "line": 14
+      },
+      "MAXITER": {
+        "description": "Maximum number of inner iterations per time step",
+        "unit": "count",
+        "section": "General numerical controls",
+        "source": "+Inputs/Options.m",
+        "line": 15
+      },
+      "SSTSTEP": {
+        "description": "Time step size for steady-state iterations",
+        "unit": "s",
+        "section": "General numerical controls",
+        "source": "+Inputs/Options.m",
+        "line": 16
+      },
+      "SSMAXITER": {
+        "description": "Maximum number of steady-state iterations",
+        "unit": "count",
+        "section": "General numerical controls",
+        "source": "+Inputs/Options.m",
+        "line": 17
+      },
+      "MRMTIMEINT": {
+        "description": "Time integration for vapor mass/energy conservation equations",
+        "unit": "\u2014",
+        "section": "Mixture solver options",
+        "source": "+Inputs/Options.m",
+        "line": 21
+      },
+      "ERRORW": {
+        "description": "Mass flow rate error target in inner iterations",
+        "unit": "kg/s",
+        "section": "Mixture solver options",
+        "source": "+Inputs/Options.m",
+        "line": 22
+      },
+      "ERRORP": {
+        "description": "Pressure error target in inner iterations",
+        "unit": "Pa",
+        "section": "Mixture solver options",
+        "source": "+Inputs/Options.m",
+        "line": 23
+      },
+      "ERRORH": {
+        "description": "Enthalpy error target in inner iterations",
+        "unit": "J/kg",
+        "section": "Mixture solver options",
+        "source": "+Inputs/Options.m",
+        "line": 24
+      },
+      "SSCONVW": {
+        "description": "Mass flow rate steady-state convergence criterion",
+        "unit": "kg/s",
+        "section": "Mixture solver options",
+        "source": "+Inputs/Options.m",
+        "line": 25
+      },
+      "SSCONVP": {
+        "description": "Pressure steady-state convergence criterion",
+        "unit": "Pa",
+        "section": "Mixture solver options",
+        "source": "+Inputs/Options.m",
+        "line": 26
+      },
+      "SSCONVH": {
+        "description": "Enthalpy steady-state convergence criterion",
+        "unit": "J/kg",
+        "section": "Mixture solver options",
+        "source": "+Inputs/Options.m",
+        "line": 27
+      },
+      "RELAXWM": {
+        "description": "Relaxation factor for the mixture mass conservation equation",
+        "unit": "1",
+        "section": "Mixture solver options",
+        "source": "+Inputs/Options.m",
+        "line": 28
+      },
+      "RELAXPM": {
+        "description": "Relaxation factor for the mixture momentum conservation equation",
+        "unit": "1",
+        "section": "Mixture solver options",
+        "source": "+Inputs/Options.m",
+        "line": 29
+      },
+      "RELAXHM": {
+        "description": "Relaxation factor for the mixture energy conservation equation",
+        "unit": "1",
+        "section": "Mixture solver options",
+        "source": "+Inputs/Options.m",
+        "line": 30
+      },
+      "RELAXWV": {
+        "description": "Relaxation factor for the vapor  mass conservation equation",
+        "unit": "1",
+        "section": "Mixture (MRM) solver options",
+        "source": "+Inputs/Options.m",
+        "line": 34
+      },
+      "RELAXHV": {
+        "description": "Relaxation factor for the vapor  energy conservation equation",
+        "unit": "1",
+        "section": "Mixture (MRM) solver options",
+        "source": "+Inputs/Options.m",
+        "line": 35
+      },
+      "ERRORU": {
+        "description": "Velocity error target in inner iterations",
+        "unit": "m/s",
+        "section": "Two-fluid solver options",
+        "source": "+Inputs/Options.m",
+        "line": 39
+      },
+      "SSCONVU": {
+        "description": "Velocity steady-state convergence criterion",
+        "unit": "m/s",
+        "section": "Two-fluid solver options",
+        "source": "+Inputs/Options.m",
+        "line": 40
+      },
+      "RELAXWL": {
+        "description": "Relaxation factor for the liquid mass conservation equation",
+        "unit": "1",
+        "section": "Two-fluid solver options",
+        "source": "+Inputs/Options.m",
+        "line": 41
+      },
+      "RELAXUL": {
+        "description": "Relaxation factor for the liquid momentum conservation equation",
+        "unit": "1",
+        "section": "Two-fluid solver options",
+        "source": "+Inputs/Options.m",
+        "line": 42
+      },
+      "RELAXUV": {
+        "description": "Relaxation factor for the vapor  momentum conservation equation",
+        "unit": "1",
+        "section": "Two-fluid solver options",
+        "source": "+Inputs/Options.m",
+        "line": 43
+      },
+      "RELAXHL": {
+        "description": "Relaxation factor for the liquid energy conservation equation",
+        "unit": "1",
+        "section": "Two-fluid solver options",
+        "source": "+Inputs/Options.m",
+        "line": 44
+      },
+      "OAFEQUILMAXITER": {
+        "description": "Maximum number of iterations to find equilibrium at onset of annular flow",
+        "unit": "count",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 48
+      },
+      "OAFEQUILTOL": {
+        "description": "Target film mass flow rate tolerance to find equilibrium at onset of annular flow",
+        "unit": "kg/s/m",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 49
+      },
+      "UDEQUILMAXITER": {
+        "description": "Maximum number of iterations to find droplet equilibrium velocity",
+        "unit": "count",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 50
+      },
+      "UDEQUILTOL": {
+        "description": "Target drop force tolerance to find droplet equilibrium velocity",
+        "unit": "N/m^3",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 51
+      },
+      "UFEQUILMAXITER": {
+        "description": "Maximum number of iterations to find film equilibrium velocity",
+        "unit": "count",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 52
+      },
+      "UFEQUILTOL": {
+        "description": "Target film force tolerance to find film equilibrium velocity",
+        "unit": "N/m^3",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 53
+      },
+      "ENTNUMMAXITER": {
+        "description": "Maximum number of iterations to find film entrainment number",
+        "unit": "count",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 54
+      },
+      "ENTNUMTOL": {
+        "description": "Target velocity slip tolerance to find film entrainment number",
+        "unit": "1",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 55
+      },
+      "ERRORWF": {
+        "description": "Film mass flow rate error target in inner iterations",
+        "unit": "kg/s/m",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 56
+      },
+      "ERRORUF": {
+        "description": "Film velocity error target in inner iterations",
+        "unit": "m/s",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 57
+      },
+      "ERRORUD": {
+        "description": "Drop velocity error target in inner iterations",
+        "unit": "m/s",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 58
+      },
+      "SSCONVWF": {
+        "description": "Film mass flow rate steady-state convergence criterion",
+        "unit": "kg/s/m",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 59
+      },
+      "SSCONVUF": {
+        "description": "Film velocity steady-state convergence criterion",
+        "unit": "m/s",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 60
+      },
+      "SSCONVUD": {
+        "description": "Drop velocity steady-state convergence criterion",
+        "unit": "m/s",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 61
+      },
+      "RELAXWF": {
+        "description": "Relaxation factor for the film mass conservation equation",
+        "unit": "1",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 62
+      },
+      "RELAXUF": {
+        "description": "Relaxation factor for the film momentum conservation equation",
+        "unit": "1",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 63
+      },
+      "RELAXUD": {
+        "description": "Relaxation factor for the drop momentum conservation equation",
+        "unit": "1",
+        "section": "Three-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 64
+      },
+      "ERRORFW": {
+        "description": "Wave frequency error target in inner iterations",
+        "unit": "Hz",
+        "section": "Four-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 68
+      },
+      "SSCONVFW": {
+        "description": "Wave frequency steady-state convergence criterion",
+        "unit": "Hz",
+        "section": "Four-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 69
+      },
+      "RELAXWB": {
+        "description": "Relaxation factor for the base mass conservation equation",
+        "unit": "1",
+        "section": "Four-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 70
+      },
+      "RELAXUB": {
+        "description": "Relaxation factor for the base momentum conservation equation",
+        "unit": "1",
+        "section": "Four-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 71
+      },
+      "RELAXWW": {
+        "description": "Relaxation factor for the wave mass conservation equation",
+        "unit": "1",
+        "section": "Four-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 72
+      },
+      "RELAXUW": {
+        "description": "Relaxation factor for the wave momentum conservation equation",
+        "unit": "1",
+        "section": "Four-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 73
+      },
+      "RELAXFW": {
+        "description": "Relaxation factor for the wave number conservation equation",
+        "unit": "1",
+        "section": "Four-field solver options",
+        "source": "+Inputs/Options.m",
+        "line": 74
+      }
+    },
+    "geometry": {
+      "ID": {
+        "description": "Channel identifier",
+        "unit": "\u2014",
+        "section": "Channel geometry",
+        "source": "+Inputs/Geometry.m",
+        "line": 10
+      },
+      "LENGTH": {
+        "description": "Axial length",
+        "unit": "m",
+        "section": "Channel geometry",
+        "source": "+Inputs/Geometry.m",
+        "line": 11
+      },
+      "AREA": {
+        "description": "Coolant area",
+        "unit": "m^2",
+        "section": "Channel geometry",
+        "source": "+Inputs/Geometry.m",
+        "line": 12
+      },
+      "PERIM": {
+        "description": "Perimeter(s) of the channel walls",
+        "unit": "m",
+        "section": "Channel geometry",
+        "source": "+Inputs/Geometry.m",
+        "line": 13
+      },
+      "ANGLE": {
+        "description": "Inclination from vertical, in degrees. Geometry.m and the governing cosine use degrees; the bundled geom.inp comment incorrectly says rad.",
+        "unit": "deg",
+        "section": "Channel geometry",
+        "source": "+Inputs/Geometry.m",
+        "line": 14
+      }
+    },
+    "bc": {
+      "TIME": {
+        "description": "Time assigned to this steady boundary record. The GUI runs one steady state; transient schedules are outside this first GUI scope.",
+        "unit": "s",
+        "section": "Steady boundary conditions",
+        "source": "+Inputs/BoundaryConditions.m",
+        "line": 17
+      },
+      "PRESSURE": {
+        "description": "System pressure",
+        "unit": "Pa",
+        "section": "Steady boundary conditions",
+        "source": "+Inputs/BoundaryConditions.m",
+        "line": 18
+      },
+      "HIN": {
+        "description": "Inlet enthalpy",
+        "unit": "J/kg",
+        "section": "Steady boundary conditions",
+        "source": "+Inputs/BoundaryConditions.m",
+        "line": 19
+      },
+      "MFLOW": {
+        "description": "Mass flow rate",
+        "unit": "kg/s",
+        "section": "Steady boundary conditions",
+        "source": "+Inputs/BoundaryConditions.m",
+        "line": 20
+      },
+      "POWER": {
+        "description": "Total power",
+        "unit": "W",
+        "section": "Steady boundary conditions",
+        "source": "+Inputs/BoundaryConditions.m",
+        "line": 21
+      },
+      "WMESH": {
+        "description": "Lengths of successive axial power segments; their sum must match geometry LENGTH within the upstream relative tolerance 0.001.",
+        "unit": "m",
+        "section": "Steady boundary conditions",
+        "source": "+Inputs/BoundaryConditions.m",
+        "line": 22
+      },
+      "WPOWER": {
+        "description": "Relative power matrix: rows are axial segments, columns are channel walls. The solver normalizes this distribution to POWER using wall perimeter and its axial grid. Original flat .inp vectors use MATLAB column-major ordering.",
+        "unit": "1",
+        "section": "Steady boundary conditions",
+        "source": "+Inputs/BoundaryConditions.m",
+        "line": 23
+      }
+    }
+  },
+  "license": "MIT; descriptions derived from OpenSTREAM, Copyright (c) 2024 OpenSTREAM contributors. See LICENSE."
+}

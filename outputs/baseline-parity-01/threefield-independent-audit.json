@@ -1,0 +1,146 @@
+{
+  "framework": "ThreeField",
+  "archive_sha256": "eabaef27d5b94dce4506783675d90563def40db1a491b8a16b982b9de070e884",
+  "native_directory": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\baseline-parity-01\\ThreeFieldSolver",
+  "scope": "Independent direct property extraction from MCOS and source dependent-getter formulas; no exported reference arrays or native field methods",
+  "rtol": 1e-08,
+  "atol": 0.0,
+  "phases": {
+    "physical": {
+      "all_pass": true,
+      "comparisons": {
+        "drop.W": {
+          "passed": true,
+          "max_absolute_error": 9.71445146547012e-17,
+          "max_relative_error_nonzero": 5.458461376949239e-15,
+          "zero_mismatches": 0,
+          "shape": [
+            1,
+            101
+          ]
+        },
+        "film.W": {
+          "passed": true,
+          "max_absolute_error": 2.0122792321330962e-16,
+          "max_relative_error_nonzero": 1.2250004625517637e-13,
+          "zero_mismatches": 0,
+          "shape": [
+            1,
+            101,
+            1
+          ]
+        },
+        "drop.U": {
+          "passed": true,
+          "max_absolute_error": 4.192202140984591e-13,
+          "max_relative_error_nonzero": 4.157837192150436e-14,
+          "zero_mismatches": 0,
+          "shape": [
+            1,
+            101
+          ]
+        },
+        "film.U": {
+          "passed": true,
+          "max_absolute_error": 1.1013412404281553e-13,
+          "max_relative_error_nonzero": 4.157837197971367e-14,
+          "zero_mismatches": 0,
+          "shape": [
+            1,
+            101,
+            1
+          ]
+        },
+        "drop.H": {
+          "passed": true,
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error_nonzero": 2.493402740916268e-15,
+          "zero_mismatches": 0,
+          "shape": [
+            1,
+            101
+          ]
+        },
+        "film.H": {
+          "passed": true,
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error_nonzero": 2.493402740916268e-15,
+          "zero_mismatches": 0,
+          "shape": [
+            1,
+            101,
+            1
+          ]
+        }
+      }
+    },
+    "initialization": {
+      "all_pass": true,
+      "comparisons": {
+        "drop.W": {
+          "passed": true,
+          "max_absolute_error": 1.2836953722228372e-16,
+          "max_relative_error_nonzero": 6.709663150267403e-15,
+          "zero_mismatches": 0,
+          "shape": [
+            6,
+            101
+          ]
+        },
+        "film.W": {
+          "passed": true,
+          "max_absolute_error": 2.0122792321330962e-16,
+          "max_relative_error_nonzero": 5.296228528369246e-13,
+          "zero_mismatches": 0,
+          "shape": [
+            6,
+            101,
+            1
+          ]
+        },
+        "drop.U": {
+          "passed": true,
+          "max_absolute_error": 4.618527782440651e-13,
+          "max_relative_error_nonzero": 4.157837192150436e-14,
+          "zero_mismatches": 0,
+          "shape": [
+            6,
+            101
+          ]
+        },
+        "film.U": {
+          "passed": true,
+          "max_absolute_error": 1.1013412404281553e-13,
+          "max_relative_error_nonzero": 4.157837201136602e-14,
+          "zero_mismatches": 0,
+          "shape": [
+            6,
+            101,
+            1
+          ]
+        },
+        "drop.H": {
+          "passed": true,
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error_nonzero": 2.493402740916268e-15,
+          "zero_mismatches": 0,
+          "shape": [
+            6,
+            101
+          ]
+        },
+        "film.H": {
+          "passed": true,
+          "max_absolute_error": 3.026798367500305e-09,
+          "max_relative_error_nonzero": 2.493402740916268e-15,
+          "zero_mismatches": 0,
+          "shape": [
+            6,
+            101,
+            1
+          ]
+        }
+      }
+    }
+  }
+}

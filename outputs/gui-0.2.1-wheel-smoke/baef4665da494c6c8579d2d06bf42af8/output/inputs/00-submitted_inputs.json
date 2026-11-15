@@ -1,0 +1,331 @@
+{
+  "case_id": "Mixture-TUTORIAL1-steady",
+  "framework": "Mixture",
+  "inputs": {
+    "bc": [
+      {
+        "HIN": 1139400.0,
+        "MFLOW": 0.07,
+        "POWER": 87500.0,
+        "PRESSURE": 6000000.0,
+        "TIME": 0.0,
+        "WMESH": [
+          3.5,
+          2.0
+        ],
+        "WPOWER": [
+          [
+            1.0
+          ],
+          [
+            0.0
+          ]
+        ]
+      }
+    ],
+    "geometry": {
+      "ANGLE": 0.0,
+      "AREA": 6.0821e-05,
+      "ID": "TUTORIAL1",
+      "LENGTH": 5.5,
+      "PERIM": [
+        0.0276
+      ]
+    },
+    "model": {
+      "BASEEQTHICK": "RISO",
+      "BASEEQTHICKCOEF": [
+        5.37e-05,
+        -0.64,
+        1.21
+      ],
+      "BASEYPLUS": 15.0,
+      "BTHTM": "VAPOR",
+      "BTMTM": "TPFM",
+      "BUBBLEDRAG": "STOKES",
+      "BUBBLEDRAGCOEF": 0.45,
+      "CBT": "NONE",
+      "CBTELEVATION": 1.0,
+      "CBTKEFFECT": [
+        0.0,
+        0.0
+      ],
+      "CBTMULT": 1.0,
+      "CSTWAVEFREQ": 100.0,
+      "DEPENHANCEMENT": "NONE",
+      "DEPOSITION": "OKAWA",
+      "DITTUSBOELTERCOEF": [
+        0.023,
+        0.8,
+        0.4
+      ],
+      "DROPDIAM": 0.001,
+      "DROPDRAG": "VISCOUS",
+      "DROPDRAGCOEF": 0.45,
+      "DROPSLIP": 1.0,
+      "DTMFB": 100.0,
+      "ENTRAINMENT": "OKAWA2003",
+      "EQSTROUHAL": "RISO",
+      "EQSTROUHALCOEF": [
+        0.00011236,
+        0.5,
+        0.0
+      ],
+      "FLUID": "WATER",
+      "FRICTION": [
+        0.2,
+        -0.2,
+        0.0
+      ],
+      "ID": "TUTORIAL1",
+      "INTAREA": "DISPGAS2DISPLIQ",
+      "INTLENGTH": "CONSTANT",
+      "INTLENGTHLCST": 0.002,
+      "INTLENGTHVCST": 0.002,
+      "INTNU": "RELAXATION",
+      "INTNULCST": 2.0,
+      "INTNUVCST": 2.0,
+      "INTTRANSH": "BULK",
+      "KBLOCKRATIO": [
+        0.0
+      ],
+      "KLOC": [
+        0.0
+      ],
+      "KLOSS": [
+        0.0
+      ],
+      "KTRELAX": [
+        "NaN"
+      ],
+      "KTUNING": [
+        0.0
+      ],
+      "LOCRELVEL": "AREAMEAN",
+      "MFBT": "NONE",
+      "MOECKCOEF": [
+        0.00109,
+        0.989,
+        1.41,
+        -1.15
+      ],
+      "MOMENTBASE": "FULLNOP",
+      "MOMENTDROP": "FULL",
+      "MOMENTFILM": "FULL",
+      "MOMENTGAS": "FULL",
+      "MOMENTLIQUID": "FULL",
+      "MOMENTWAVE": "FULL",
+      "NEARWALLEQOAF": false,
+      "NEARWALLH": "RATIO",
+      "NEARWALLHRATIO": 1.0,
+      "NEARWALLRATIO": 0.5,
+      "NEARWALLRELAX": "QUALITY",
+      "NEARWALLRELAXCOEF": [
+        0.0001,
+        0.3333333333333333,
+        0.05
+      ],
+      "NEARWALLRELAXT": [
+        1.0,
+        0.5,
+        0.3,
+        0.1,
+        0.1
+      ],
+      "NEARWALLRELAXX": [
+        -0.5,
+        -0.25,
+        -0.1,
+        0.0,
+        1.0
+      ],
+      "NNODES": 100,
+      "OAF": "WALLIS",
+      "OAFBASERATIO": 0.5,
+      "OAFDROPRATIO": 0.7,
+      "OAFENTRAINED": "EQUILIBRIUM",
+      "OAFFILMSPLIT": "EQUILIBRIUM",
+      "OAFTRANSITION": [
+        0.1,
+        0.0
+      ],
+      "OKAWACOEFS": [
+        320.0,
+        0.111,
+        0.000479,
+        1.0
+      ],
+      "POSFILM": true,
+      "PROPERTIES": "SATURATED",
+      "RANZMARSHALLLCST": [
+        2.0,
+        0.6,
+        0.5,
+        0.3333333333333333
+      ],
+      "RANZMARSHALLVCST": [
+        2.0,
+        0.6,
+        0.5,
+        0.3333333333333333
+      ],
+      "RELAXCONDCOEF": [
+        0.0001,
+        0.3333333333333333,
+        0.05,
+        0.0
+      ],
+      "RELAXCONDFO": [
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001
+      ],
+      "RELAXCONDFOCOEF": [
+        5e-05,
+        500000.0,
+        0.0,
+        0.0
+      ],
+      "RELAXCONDT": [
+        0.5,
+        0.5
+      ],
+      "RELAXEVAPCOEF": [
+        0.0001,
+        0.3333333333333333,
+        1e-05,
+        0.0
+      ],
+      "RELAXEVAPFO": [
+        5e-05,
+        5e-05,
+        5e-05,
+        5e-05,
+        5e-05
+      ],
+      "RELAXEVAPFOCOEF": [
+        0.0001,
+        500000.0,
+        2.0,
+        2.0,
+        0.01,
+        1.0
+      ],
+      "RELAXEVAPT": [
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3
+      ],
+      "RELAXTB": 0.2,
+      "RELAXTW": 0.2,
+      "RELAXX": [
+        -0.5,
+        1.0
+      ],
+      "RELVELCST": 1.0,
+      "SHAPEFACTORCOEF": [
+        132500.0,
+        2.0,
+        1.0,
+        0.0
+      ],
+      "SLIP": 1.0,
+      "SPHTM": "DITTUSBOELTER",
+      "SPMTM": "BLASIUS",
+      "THERMALNONEQ": "EQUILIBRIUM",
+      "THERMALRELAX": "TIMEX",
+      "THINFILMFRIC": "TURBULENT",
+      "THINFILMTHICK": 0.0001,
+      "THINWAVETHICK": 1e-05,
+      "TPFM": "HOMOGENEOUS",
+      "TPHTM": "THOM",
+      "TPKM": "HOMOGENEOUS",
+      "VAPORFRIC": "SOLVER_DEPENDENT",
+      "VAPORFRICCST": 0.005,
+      "VOID": "HOMOGENEOUS",
+      "WAVEBASEINT": "VAPORSHEAR",
+      "WAVEDRAGCOEF": [
+        0.02,
+        135000.0,
+        0.437
+      ],
+      "WAVEFREQUENCY": "RELAXATION",
+      "WAVEMIXCOEF": [
+        2.0
+      ],
+      "WBOILINGN": 2.0,
+      "WBOILINGXSAT": 0.0,
+      "WBOILINGXSUB": -0.2
+    },
+    "options": {
+      "AXIALINTERP": "NEXT",
+      "ENTNUMMAXITER": 100,
+      "ENTNUMTOL": 0.01,
+      "ERRORFW": 0.1,
+      "ERRORH": 0.1,
+      "ERRORP": 0.1,
+      "ERRORU": 0.0001,
+      "ERRORUD": 0.01,
+      "ERRORUF": 0.01,
+      "ERRORW": 0.001,
+      "ERRORWF": 0.0001,
+      "ID": "DEFAULT",
+      "MAXITER": 100,
+      "MRMTIMEINT": "EXPONENTIAL",
+      "OAFEQUILMAXITER": 100,
+      "OAFEQUILTOL": 0.0001,
+      "RELAXFW": 0.5,
+      "RELAXHL": 1.0,
+      "RELAXHM": 1.0,
+      "RELAXHV": 0.7,
+      "RELAXPM": 1.0,
+      "RELAXUB": 0.2,
+      "RELAXUD": 0.2,
+      "RELAXUF": 0.2,
+      "RELAXUL": 0.5,
+      "RELAXUV": 0.5,
+      "RELAXUW": 0.2,
+      "RELAXWB": 0.5,
+      "RELAXWF": 0.5,
+      "RELAXWL": 1.0,
+      "RELAXWM": 1.0,
+      "RELAXWV": 0.7,
+      "RELAXWW": 0.5,
+      "SSCONVFW": 0.1,
+      "SSCONVH": 1.0,
+      "SSCONVP": 1.0,
+      "SSCONVU": 0.001,
+      "SSCONVUD": 0.01,
+      "SSCONVUF": 0.01,
+      "SSCONVW": 0.001,
+      "SSCONVWF": 0.0001,
+      "SSMAXITER": 30,
+      "SSTSTEP": 1.0,
+      "TIMEINTERP": "LINEAR",
+      "TSTEP": 0.1,
+      "UDEQUILMAXITER": 100,
+      "UDEQUILTOL": 0.001,
+      "UFEQUILMAXITER": 100,
+      "UFEQUILTOL": 0.001
+    }
+  },
+  "source_files": [
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\.venv\\gui-wheel-smoke\\Lib\\site-packages\\openstream\\data\\models.inp",
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\.venv\\gui-wheel-smoke\\Lib\\site-packages\\openstream\\data\\options.inp",
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\.venv\\gui-wheel-smoke\\Lib\\site-packages\\openstream\\data\\geom.inp",
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\.venv\\gui-wheel-smoke\\Lib\\site-packages\\openstream\\data\\tutorial1.inp"
+  ],
+  "verification": {
+    "archive_agreement": true,
+    "atol": 0.0,
+    "experimental_validation": false,
+    "note": "Archived-baseline agreement does not establish physical consistency or validity of edited cases.",
+    "report": "outputs/baseline-parity-02/Mixture/comparison/comparison.json",
+    "rtol": 1e-08,
+    "scope": "Original steady TUTORIAL1 archive, initialization histories and mixture precursor"
+  }
+}

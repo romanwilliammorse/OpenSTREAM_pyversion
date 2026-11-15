@@ -1,0 +1,32 @@
+[
+  {
+    "integration": "EULER",
+    "converged": true,
+    "state": "INITIALSTEPCONVERGED",
+    "nodes": 100,
+    "times": 51,
+    "steps": 59,
+    "seconds": 43.151704699965194,
+    "min_quality": 0.0,
+    "max_quality": 0.7566493304961505,
+    "outlet_H_initial": 2389399.9113640506,
+    "outlet_H_final": 1764400.00011017,
+    "mixture_mass_residual_kg_s_m": 0.0023749130511016947,
+    "mixture_energy_residual_W_m": 27.303655336319935
+  },
+  {
+    "integration": "EXPONENTIAL",
+    "converged": true,
+    "state": "INITIALSTEPCONVERGED",
+    "nodes": 100,
+    "times": 51,
+    "steps": 59,
+    "seconds": 35.13182260002941,
+    "min_quality": 0.0,
+    "max_quality": 0.7598250375658869,
+    "outlet_H_initial": 2389399.903719947,
+    "outlet_H_final": 1764399.9998460708,
+    "mixture_mass_residual_kg_s_m": 0.002574187978879323,
+    "mixture_energy_residual_W_m": 29.59390713744142
+  }
+]

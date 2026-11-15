@@ -1,0 +1,9 @@
+# Verification-only reader. Install into a separate target; not solver runtime.
+# .venv\Scripts\python.exe -m pip install --target .venv\reference-reader -r tools\requirements-reference.lock
+mat-io==1.0.2
+numpy==2.5.4
+scipy==1.18.1
+pandas==3.1.1
+h5py==3.16.0
+python-dateutil==4.0.0
+tzdata==2026.6

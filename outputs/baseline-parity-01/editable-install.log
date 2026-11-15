@@ -1,0 +1,20 @@
+Obtaining file:///C:/Users/Roman/Documents/ChatGPT/OpenSTREAM
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: openstream-python
+  Building editable for openstream-python (pyproject.toml): started
+  Building editable for openstream-python (pyproject.toml): finished with status 'done'
+  Created wheel for openstream-python: filename=openstream_python-0.1.1-0.editable-py3-none-any.whl size=8015 sha256=91555315a117999d17aa7f9061da4a1d9ca514e644dd40ea1df62bdfdc3fabd2
+  Stored in directory: C:\Users\Roman\AppData\Local\Temp\pip-ephem-wheel-cache-gj4v2u1z\wheels\c4\82\71\cd3d67e1919bc7a5cb5282e866f49d44b2f4dc51ca0dd6357f
+Successfully built openstream-python
+Installing collected packages: openstream-python
+  Attempting uninstall: openstream-python
+    Found existing installation: openstream-python 0.1.0
+    Uninstalling openstream-python-0.1.0:
+      Successfully uninstalled openstream-python-0.1.0
+Successfully installed openstream-python-0.1.1
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\.venv\Scripts\python.exe -m pip install --upgrade pip

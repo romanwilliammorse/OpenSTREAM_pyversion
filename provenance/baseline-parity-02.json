@@ -1,0 +1,47 @@
+{
+  "package_version": "0.1.1",
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "CoolProp": "8.0.0",
+    "matplotlib": "3.11.2",
+    "pytest": "9.2.0"
+  },
+  "native_source_sha256": {
+    "__init__.py": "a20da92f9c24aede98db44f2a1c9d8166e1d2717d3364368f291d9587340e670",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "annular.py": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+    "cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+    "ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+    "fields.py": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+    "fourfield.py": "6a73a107f776882bce97c187806e6563048f7a55a5b908b627afdf923cfef9a0",
+    "inputs.py": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+    "multifield_output.py": "20d4f5e6fd1531ed1b1c0c84e25ab87932b5b9f1a15cf7280a22e0b1e5906aa5",
+    "numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+    "output.py": "5175fa4eb9e52ad1f90b4654dccce7066c3f2e585ac0532e58941e562c96655c",
+    "plotting.py": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+    "properties.py": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+    "solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+    "tf_fields.py": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+    "threefield.py": "d34c7863cd4303945e2bc9edd840f5d74a0dac4e14af651021d763a269c61c71",
+    "twofluid.py": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c"
+  },
+  "original_archives_unchanged": true,
+  "upstream_status": {
+    "upstream": "",
+    "upstream/+CoolPropWrapper": ""
+  },
+  "wheel_module_count_matching_source": 17,
+  "artifacts": {
+    "dist\\baseline-parity-0.1.1-final\\openstream_python-0.1.1-py3-none-any.whl": "90aeab0362283bef5d348dbf01a1dadc054c5c285aa4af6e6b99dd1bc61893e8",
+    "dist\\baseline-parity-0.1.1-final\\openstream_python-0.1.1.tar.gz": "d7037adc07d8e231db4bb3c41530663747e7472183d0d4a3211a168949daa0ed"
+  },
+  "baseline_summary": "outputs/baseline-parity-02/summary.json",
+  "combined_tests": {
+    "passed": 212,
+    "warnings": 3
+  },
+  "synthetic_export_comparator_tests": 34,
+  "wheel_smoke": "outputs/baseline-parity-01/wheel-smoke-0.1.1-final.json"
+}

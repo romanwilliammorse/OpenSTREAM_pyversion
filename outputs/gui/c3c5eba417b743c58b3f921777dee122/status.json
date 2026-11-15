@@ -1,0 +1,521 @@
+{
+  "id": "c3c5eba417b743c58b3f921777dee122",
+  "framework": "ThreeField",
+  "status": "completed",
+  "phase": "Completed",
+  "created_at": "2026-11-15T00:06:13.739889+00:00",
+  "progress": [
+    {
+      "phase": "initialization",
+      "time_s": 1.0,
+      "point_converged": true,
+      "max_iterations": 6,
+      "time_dW_kg_s": 0.2037700777076566,
+      "time_dP_Pa": 642899.3201571647,
+      "time_dH_J_kg": 695941.5584840125,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 6.721030681999807e-08,
+      "point_dP_Pa": 0.09969304781407118,
+      "point_dH_J_kg": 0.06733244191855192,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 2.0,
+      "point_converged": true,
+      "max_iterations": 5,
+      "time_dW_kg_s": 0.19347140495515536,
+      "time_dP_Pa": 473253.6242906945,
+      "time_dH_J_kg": 461381.9084677971,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 1.0925341853429416e-07,
+      "point_dP_Pa": 0.09928233083337545,
+      "point_dH_J_kg": 0.020149533404037356,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 3.0,
+      "point_converged": true,
+      "max_iterations": 4,
+      "time_dW_kg_s": 0.009188801813519956,
+      "time_dP_Pa": 11735.726564452052,
+      "time_dH_J_kg": 106242.71409007348,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 1.3141807087002633e-08,
+      "point_dP_Pa": 0.09878094028681517,
+      "point_dH_J_kg": 0.0030030561611056328,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 4.0,
+      "point_converged": true,
+      "max_iterations": 3,
+      "time_dW_kg_s": 0.0009777397550650574,
+      "time_dP_Pa": 1250.4378940146416,
+      "time_dH_J_kg": 16403.016713690013,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 6.286328199656133e-08,
+      "point_dP_Pa": 0.03837671224027872,
+      "point_dH_J_kg": 0.01408441737294197,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 5.0,
+      "point_converged": true,
+      "max_iterations": 3,
+      "time_dW_kg_s": 0.00011758703018602268,
+      "time_dP_Pa": 145.12801650259644,
+      "time_dH_J_kg": 2087.2687418600544,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 2.5972526324080647e-08,
+      "point_dP_Pa": 0.08429548237472773,
+      "point_dH_J_kg": 0.028592251474037766,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 6.0,
+      "point_converged": true,
+      "max_iterations": 3,
+      "time_dW_kg_s": 1.3094324281329173e-05,
+      "time_dP_Pa": 15.219901426695287,
+      "time_dH_J_kg": 234.1283517680131,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 5.654947708710889e-08,
+      "point_dP_Pa": 0.09800112899392843,
+      "point_dH_J_kg": 0.09929798869416118,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 7.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dW_kg_s": 1.3188051576629167e-06,
+      "time_dP_Pa": 1.4369400311261415,
+      "time_dH_J_kg": 23.58867635484785,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 3.2700509314254056e-08,
+      "point_dP_Pa": 0.027247940190136433,
+      "point_dH_J_kg": 0.09093839535489678,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 8.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dW_kg_s": 1.202897006030712e-07,
+      "time_dP_Pa": 0.12310620956122875,
+      "time_dH_J_kg": 2.1507741985842586,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 1.3100487819550644e-08,
+      "point_dP_Pa": 0.0024630604311823845,
+      "point_dH_J_kg": 0.0918365940451622,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 9.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dW_kg_s": 9.944415846341315e-09,
+      "time_dP_Pa": 0.011389153078198433,
+      "time_dH_J_kg": 0.17784100491553545,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 5.508473524540314e-09,
+      "point_dP_Pa": 0.00605646800249815,
+      "point_dH_J_kg": 0.09913064446300268,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 1.0,
+      "point_converged": true,
+      "max_iterations": 16,
+      "time_dWL_kg_s_m": 0.19718280562381138,
+      "time_dUF_m_s": 1.4551063182966946,
+      "time_dUD_m_s": 2.395948621551746
+    },
+    {
+      "phase": "initialization",
+      "time_s": 2.0,
+      "point_converged": true,
+      "max_iterations": 8,
+      "time_dWL_kg_s_m": 0.030209667054707734,
+      "time_dUF_m_s": 0.014149211798927475,
+      "time_dUD_m_s": 0.18431861594574883
+    },
+    {
+      "phase": "initialization",
+      "time_s": 3.0,
+      "point_converged": true,
+      "max_iterations": 5,
+      "time_dWL_kg_s_m": 0.0031151881356177857,
+      "time_dUF_m_s": 0.00038008966108371567,
+      "time_dUD_m_s": 0.04167378491520779
+    },
+    {
+      "phase": "initialization",
+      "time_s": 4.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dWL_kg_s_m": 0.00026597157594432375,
+      "time_dUF_m_s": 7.187609425240993e-05,
+      "time_dUD_m_s": 0.0072488977280968925
+    },
+    {
+      "phase": "initialization",
+      "time_s": 5.0,
+      "point_converged": true,
+      "max_iterations": 1,
+      "time_dWL_kg_s_m": 8.42530098246197e-05,
+      "time_dUF_m_s": 6.55440218189085e-05,
+      "time_dUD_m_s": 0.00681344532973327
+    }
+  ],
+  "files": [
+    {
+      "name": "submitted_inputs.json",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/submitted_inputs.json"
+    },
+    {
+      "name": "results.zip",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/results.zip"
+    },
+    {
+      "name": "output/axial.png",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/output/axial.png"
+    },
+    {
+      "name": "output/convergence.csv",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/output/convergence.csv"
+    },
+    {
+      "name": "output/gui_verification.json",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/output/gui_verification.json"
+    },
+    {
+      "name": "output/initialization.npz",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/output/initialization.npz"
+    },
+    {
+      "name": "output/metadata.json",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/output/metadata.json"
+    },
+    {
+      "name": "output/mixture/axial.png",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/output/mixture/axial.png"
+    },
+    {
+      "name": "output/mixture/convergence.csv",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/output/mixture/convergence.csv"
+    },
+    {
+      "name": "output/mixture/initialization.npz",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/output/mixture/initialization.npz"
+    },
+    {
+      "name": "output/mixture/inputs/00-submitted_inputs.json",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/output/mixture/inputs/00-submitted_inputs.json"
+    },
+    {
+      "name": "output/mixture/metadata.json",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/output/mixture/metadata.json"
+    },
+    {
+      "name": "output/mixture/profiles.csv",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/output/mixture/profiles.csv"
+    },
+    {
+      "name": "output/mixture/results.npz",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/output/mixture/results.npz"
+    },
+    {
+      "name": "output/mixture/wall_profiles.csv",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/output/mixture/wall_profiles.csv"
+    },
+    {
+      "name": "output/profiles.csv",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/output/profiles.csv"
+    },
+    {
+      "name": "output/results.npz",
+      "url": "/files/c3c5eba417b743c58b3f921777dee122/output/results.npz"
+    }
+  ],
+  "converged": true,
+  "error": null,
+  "is_reference": true,
+  "changes": [],
+  "change_count": 0,
+  "reference": {
+    "status": "passed",
+    "message": "Archived steady and initialization profiles agree at rtol 1e-8, atol 0.",
+    "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+    "rtol": 1e-08,
+    "atol": 0.0,
+    "coordinate_atol": 1e-12,
+    "records": [
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "max_absolute_error": 2.0122792321330962e-16,
+        "max_relative_error": 1.2250004625517637e-13,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "film.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "max_absolute_error": 1.1013412404281553e-13,
+        "max_relative_error": 4.157837197971367e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "film.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "max_absolute_error": 3.026798367500305e-09,
+        "max_relative_error": 2.493402740916268e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "film.H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 9.71445146547012e-17,
+        "max_relative_error": 5.458461376949239e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "drop.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 4.192202140984591e-13,
+        "max_relative_error": 4.157837192150436e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "drop.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 3.026798367500305e-09,
+        "max_relative_error": 2.493402740916268e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "drop.H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          6,
+          101,
+          1
+        ],
+        "max_absolute_error": 2.0122792321330962e-16,
+        "max_relative_error": 5.296228528369246e-13,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "film.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          6,
+          101,
+          1
+        ],
+        "max_absolute_error": 1.1013412404281553e-13,
+        "max_relative_error": 4.157837201136602e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "film.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          6,
+          101,
+          1
+        ],
+        "max_absolute_error": 3.026798367500305e-09,
+        "max_relative_error": 2.493402740916268e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "film.H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          6,
+          101
+        ],
+        "max_absolute_error": 1.2836953722228372e-16,
+        "max_relative_error": 6.709663150267403e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "drop.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          6,
+          101
+        ],
+        "max_absolute_error": 4.618527782440651e-13,
+        "max_relative_error": 4.157837192150436e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "drop.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          6,
+          101
+        ],
+        "max_absolute_error": 3.026798367500305e-09,
+        "max_relative_error": 2.493402740916268e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "drop.H",
+        "group": "core"
+      }
+    ],
+    "max_relative_error": 5.296228528369246e-13,
+    "experimental_validation": "not performed",
+    "limitations": [
+      "The archive producer's MATLAB, CoolProp and source versions are unknown.",
+      "Agreement does not establish physical consistency or full OpenSTREAM parity.",
+      "Supplementary iteration/diagnostic disagreements remain documented separately."
+    ],
+    "archive": {
+      "file": "tutorial1_ThreeFieldSolver.mat",
+      "sha256": "eabaef27d5b94dce4506783675d90563def40db1a491b8a16b982b9de070e884",
+      "bytes": 481108,
+      "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026"
+    },
+    "producer_metadata": {
+      "matlab_version": null,
+      "coolprop_version": null,
+      "source_commit": null
+    }
+  },
+  "physical": {
+    "status": "failed",
+    "diagnostics": {
+      "physical_consistency": false,
+      "area_closure_relative_tolerance": 1e-06,
+      "max_area_closure_relative": 0.12143454516497232,
+      "max_unblended_annular_area_closure_relative": 0.07485259436858827,
+      "outlet_area_closure_relative": 0.016066442992564545,
+      "common_annular_upstream_face_z_m": 1.595,
+      "common_annular_downstream_face_z_m": 5.5,
+      "common_annular_cell_count": 71,
+      "max_common_annular_cell_mass_residual_kg_s": 1.94576021961268e-11,
+      "max_abs_common_annular_mass_residual_kg_s": 7.240892191395787e-10,
+      "inventory_by_time": [
+        {
+          "time_s": 0.0,
+          "max_area_closure_relative": 0.12143454516497232,
+          "outlet_area_closure_relative": 0.016066442992564545,
+          "max_unblended_annular_area_closure_relative": 0.07485259436858827,
+          "unblended_annular_node_count": 72,
+          "nonfinite_inventory_or_area_node_count": 0,
+          "nonfinite_unblended_annular_node_count": 0,
+          "max_all_phase_cell_mass_residual_kg_s": 1.94576021961268e-11,
+          "global_all_phase_mass_residual_kg_s": 7.9017474508003e-10,
+          "max_common_annular_cell_mass_residual_kg_s": 1.94576021961268e-11,
+          "common_annular_mass_residual_kg_s": 7.240892191395787e-10,
+          "common_annular_mass_inventory_kg": 0.015147112887789402,
+          "integrated_phase_mass_inventory_kg": 0.04569711295516367
+        }
+      ],
+      "inventory_interpretation": "W/U is kg/m; occupied area = sum(Wfilm/Ufilm)/rhoF + Wdrop/(Udrop*rhoF) + Wvapor/(Uvapor*rhoV). The 1e-6 tolerance tests an algebraic geometry identity, not measurement uncertainty. Physical-consistency rejection applies only where AFFNC >= 1-1e-12 (numerically unblended annular flow); absence of such nodes leaves status unknown. Common-annular mass diagnostics use a fixed downstream control volume whose upstream face and all cells satisfy this mask at every time; its residual is outflow minus inflow plus backward-Euler storage, with no storage for the initial steady state. Pre-annular values are source initialization quantities and all-region area/mass diagnostics there are descriptive, not physical-domain acceptance checks. Zero/zero inventory is indeterminate and fails if in the applicable region. Any four-field film-thickness caps do not independently enforce this inventory identity. Numerical convergence and algebraic flow partition do not establish mass-storage conservation. Whether a discrepancy is shared with upstream is established by a separate reference comparison; see the baseline verification report.",
+      "interpretation": "Checks below do not establish full physical validation; POSFILM changes the unconstrained mass equation at dryout",
+      "max_liquid_partition_error_kg_s": 3.469446951953614e-18,
+      "max_film_mass_residual_kg_s": 0.0002535411383029291,
+      "max_positive_film_mass_residual_kg_s": 2.192487437724768e-06,
+      "clipped_node_wall_count": 1,
+      "min_film_flow_kg_s": 0.0,
+      "min_drop_flow_kg_s": 0.01173091510509183,
+      "max_onset_equilibrium_residual_kg_s_m": 4.3494199819150633e-05
+    },
+    "message": "Physical consistency checks failed. Inspect diagnostics; numerical agreement does not establish physical validity."
+  },
+  "finished_at": "2026-11-15T00:06:22.941881+00:00"
+}

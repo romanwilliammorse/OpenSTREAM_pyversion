@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/OpenSTREAM-solvers/openstream",
+  "commit": "a614c7173822a93c1e64ac28d1541cbac028cbd8",
+  "status_porcelain": "",
+  "submodules": "a7c40902ff66faf6ed668986398bb1b9faa16e13 +CoolPropWrapper (heads/main)",
+  "wrapper_commit": "a7c40902ff66faf6ed668986398bb1b9faa16e13",
+  "wrapper_status_porcelain": "",
+  "source_preserved": "upstream git submodule, including nested CoolPropWrapper"
+}

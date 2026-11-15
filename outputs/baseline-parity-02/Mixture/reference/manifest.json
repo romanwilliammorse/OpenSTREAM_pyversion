@@ -1,0 +1,627 @@
+{
+  "schema": "openstream-recovered-mcos-mixture-v1",
+  "complete": true,
+  "created_utc": "2026-11-14T23:35:49.285404+00:00",
+  "source_kind": "original_approved_archive_decoded_without_matlab",
+  "archive": {
+    "file": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\upstream\\tests\\integration\\references\\TUTORIAL1-TUTORIAL1-DEFAULT\\tutorial1_MixtureSolver.mat",
+    "sha256": "43311c4c2ec3440cc3366f94df1216b425d4270268887b7fb7bf921c0fb9ccb0",
+    "bytes": 281077,
+    "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026"
+  },
+  "decoder": {
+    "package": "mat-io",
+    "version": "1.0.2",
+    "repository": "https://github.com/foreverallama/matio",
+    "inspected_commit": "18d538d5657e4e32e25d90c53a80c05a522540ac",
+    "license": "BSD-3-Clause",
+    "release_tag_commit": "f9be7123707c134292fbfb67fcacac14516f5f83",
+    "enum_workaround": "Read structural name/index table without mutation; preserve original enum metadata",
+    "warnings": [],
+    "python": "3.12.14",
+    "dependencies": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.1",
+      "h5py": "3.16.0"
+    }
+  },
+  "producer_metadata": {
+    "matlab_version": null,
+    "coolprop_version": null,
+    "source_commit": null,
+    "note": "Archive header gives platform/date; serialized anonymous-function path includes R2024b but is not independent runtime-version proof."
+  },
+  "framework": "Mixture",
+  "state": "INITIALSTEPCONVERGED",
+  "effective_inputs": {
+    "model": {
+      "ID": "TUTORIAL1",
+      "NNODES": 100.0,
+      "FLUID": "WATER",
+      "PROPERTIES": "SATURATED",
+      "KLOC": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "WBOILINGXSUB": -0.2,
+      "WBOILINGN": 2.0,
+      "WBOILINGXSAT": 0.0,
+      "OAF": "WALLIS",
+      "OAFTRANSITION": [
+        [
+          0.1,
+          0.0
+        ]
+      ],
+      "CBT": "NONE",
+      "CBTMULT": {
+        "serialized_matlab_value": "ndarray",
+        "shape": [
+          2,
+          1
+        ],
+        "not_evaluated": true
+      },
+      "CBTKEFFECT": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "CBTELEVATION": 1.0,
+      "MFBT": "NONE",
+      "DTMFB": 100.0,
+      "SPMTM": "BLASIUS",
+      "FRICTION": [
+        [
+          0.2,
+          -0.2,
+          0.0
+        ]
+      ],
+      "TPFM": "HOMOGENEOUS",
+      "KLOSS": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "TPKM": "HOMOGENEOUS",
+      "BTMTM": "TPFM",
+      "SPHTM": "DITTUSBOELTER",
+      "DITTUSBOELTERCOEF": [
+        [
+          0.023,
+          0.8,
+          0.4
+        ]
+      ],
+      "TPHTM": "THOM",
+      "BTHTM": "VAPOR",
+      "MOECKCOEF": [
+        [
+          0.00109,
+          0.989,
+          1.41,
+          -1.15
+        ]
+      ],
+      "VOID": "HOMOGENEOUS",
+      "SLIP": 1.0,
+      "THERMALNONEQ": "EQUILIBRIUM",
+      "THERMALRELAX": "TIMEX",
+      "RELAXX": [
+        [
+          -0.5,
+          1.0
+        ]
+      ],
+      "RELAXCONDFO": [
+        [
+          0.0001,
+          0.0001,
+          0.0001,
+          0.0001,
+          0.0001
+        ]
+      ],
+      "RELAXEVAPFO": [
+        [
+          5e-05,
+          5e-05,
+          5e-05,
+          5e-05,
+          5e-05
+        ]
+      ],
+      "RELAXCONDT": [
+        [
+          0.5,
+          0.5
+        ]
+      ],
+      "RELAXEVAPT": [
+        [
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ]
+      ],
+      "RELAXCONDCOEF": [
+        [
+          0.0001,
+          0.3333333333333333,
+          0.05,
+          0.0
+        ]
+      ],
+      "RELAXEVAPCOEF": [
+        [
+          0.0001,
+          0.3333333333333333,
+          1e-05,
+          0.0
+        ]
+      ],
+      "RELAXCONDFOCOEF": [
+        [
+          5e-05,
+          500000.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "RELAXEVAPFOCOEF": [
+        [
+          0.0001,
+          500000.0,
+          2.0,
+          2.0,
+          0.01,
+          1.0
+        ]
+      ],
+      "KTRELAX": "NaN",
+      "NEARWALLRATIO": 0.5,
+      "NEARWALLEQOAF": false,
+      "NEARWALLH": "RATIO",
+      "NEARWALLHRATIO": 1.0,
+      "NEARWALLRELAX": "QUALITY",
+      "NEARWALLRELAXX": [
+        [
+          -0.5,
+          -0.25,
+          -0.1,
+          0.0,
+          1.0
+        ]
+      ],
+      "NEARWALLRELAXT": [
+        [
+          1.0,
+          0.5,
+          0.3,
+          0.1,
+          0.1
+        ]
+      ],
+      "NEARWALLRELAXCOEF": [
+        [
+          0.0001,
+          0.3333333333333333,
+          0.05
+        ]
+      ],
+      "INTLENGTH": "CONSTANT",
+      "INTAREA": "DISPGAS2DISPLIQ",
+      "INTLENGTHVCST": 0.002,
+      "INTLENGTHLCST": 0.002,
+      "LOCRELVEL": "AREAMEAN",
+      "RELVELCST": 1.0,
+      "MOMENTLIQUID": "FULL",
+      "MOMENTGAS": "FULL",
+      "DROPDRAG": "VISCOUS",
+      "DROPDRAGCOEF": 0.45,
+      "BUBBLEDRAG": "STOKES",
+      "BUBBLEDRAGCOEF": 0.45,
+      "INTNU": "RELAXATION",
+      "INTNUVCST": 2.0,
+      "INTNULCST": 2.0,
+      "RANZMARSHALLVCST": [
+        [
+          2.0,
+          0.6,
+          0.5,
+          0.3333333333333333
+        ]
+      ],
+      "RANZMARSHALLLCST": [
+        [
+          2.0,
+          0.6,
+          0.5,
+          0.3333333333333333
+        ]
+      ],
+      "INTTRANSH": "BULK",
+      "POSFILM": true,
+      "OAFENTRAINED": "EQUILIBRIUM",
+      "OAFDROPRATIO": 0.7,
+      "DEPOSITION": "OKAWA",
+      "DEPENHANCEMENT": "NONE",
+      "KBLOCKRATIO": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "KTUNING": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "ENTRAINMENT": "OKAWA2003",
+      "OKAWACOEFS": [
+        [
+          320.0,
+          0.111,
+          0.000479,
+          1.0
+        ]
+      ],
+      "MOMENTFILM": "FULL",
+      "VAPORFRIC": "WALLIS",
+      "VAPORFRICCST": 0.005,
+      "THINFILMFRIC": "TURBULENT",
+      "THINFILMTHICK": 0.0001,
+      "MOMENTDROP": "FULL",
+      "DROPSLIP": 1.0,
+      "DROPDIAM": 0.001,
+      "OAFFILMSPLIT": "EQUILIBRIUM",
+      "OAFBASERATIO": 0.5,
+      "BASEEQTHICK": "RISO",
+      "BASEEQTHICKCOEF": [
+        [
+          5.37e-05
+        ],
+        [
+          -0.64
+        ],
+        [
+          1.21
+        ]
+      ],
+      "BASEYPLUS": 15.0,
+      "RELAXTB": 0.2,
+      "WAVEMIXCOEF": 2.0,
+      "WAVEFREQUENCY": "RELAXATION",
+      "EQSTROUHAL": "RISO",
+      "EQSTROUHALCOEF": [
+        [
+          0.00011236
+        ],
+        [
+          0.5
+        ],
+        [
+          0.0
+        ]
+      ],
+      "RELAXTW": 0.2,
+      "CSTWAVEFREQ": 100.0,
+      "MOMENTBASE": "FULLNOP",
+      "MOMENTWAVE": "FULL",
+      "WAVEBASEINT": "VAPORSHEAR",
+      "SHAPEFACTORCOEF": [
+        [
+          132500.0
+        ],
+        [
+          2.0
+        ],
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "WAVEDRAGCOEF": [
+        [
+          0.02
+        ],
+        [
+          135000.0
+        ],
+        [
+          0.437
+        ]
+      ],
+      "THINWAVETHICK": 1e-05
+    },
+    "options": {
+      "ID": "DEFAULT",
+      "AXIALINTERP": "next",
+      "TIMEINTERP": "linear",
+      "TSTEP": 0.1,
+      "MAXITER": 100,
+      "SSTSTEP": 1.0,
+      "SSMAXITER": 30,
+      "MRMTIMEINT": "EXPONENTIAL",
+      "ERRORW": 0.001,
+      "ERRORP": 0.1,
+      "ERRORH": 0.1,
+      "SSCONVW": 0.001,
+      "SSCONVP": 1.0,
+      "SSCONVH": 1.0,
+      "RELAXWM": 1.0,
+      "RELAXPM": 1.0,
+      "RELAXHM": 1.0,
+      "RELAXWV": 0.7,
+      "RELAXHV": 0.7,
+      "ERRORU": 0.0001,
+      "SSCONVU": 0.001,
+      "RELAXWL": 1.0,
+      "RELAXUL": 0.5,
+      "RELAXUV": 0.5,
+      "RELAXHL": 1.0,
+      "OAFEQUILMAXITER": 100,
+      "OAFEQUILTOL": 0.0001,
+      "UDEQUILMAXITER": 100,
+      "UDEQUILTOL": 0.001,
+      "UFEQUILMAXITER": 100,
+      "UFEQUILTOL": 0.001,
+      "ENTNUMMAXITER": 100,
+      "ENTNUMTOL": 0.01,
+      "ERRORWF": 0.0001,
+      "ERRORUF": 0.01,
+      "ERRORUD": 0.01,
+      "SSCONVWF": 0.0001,
+      "SSCONVUF": 0.01,
+      "SSCONVUD": 0.01,
+      "RELAXWF": 0.5,
+      "RELAXUF": 0.2,
+      "RELAXUD": 0.2,
+      "ERRORFW": 0.1,
+      "SSCONVFW": 0.1,
+      "RELAXWB": 0.5,
+      "RELAXUB": 0.2,
+      "RELAXWW": 0.5,
+      "RELAXUW": 0.2,
+      "RELAXFW": 0.5
+    },
+    "geometry": {
+      "ID": "TUTORIAL1",
+      "LENGTH": 5.5,
+      "AREA": 6.0821e-05,
+      "PERIM": 0.0276,
+      "ANGLE": 0.0
+    },
+    "bc": {
+      "TIME": 0.0,
+      "PRESSURE": 6000000.0,
+      "HIN": 1139400.0,
+      "MFLOW": 0.07,
+      "POWER": 87500.0,
+      "WMESH": [
+        [
+          3.5,
+          2.0
+        ]
+      ],
+      "WPOWER": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ]
+    }
+  },
+  "fluid_constants": {
+    "FLUID": "WATER",
+    "PROPERTIES": "SATURATED",
+    "PRESSURE": 6000000.0,
+    "TSAT": 548.7349899923428,
+    "RHOF": 757.9981336355239,
+    "RHOG": 30.818445364018633,
+    "MUF": 9.531105175649382e-05,
+    "MUG": 1.8439878365062773e-05,
+    "HF": 1213922.7722144986,
+    "HG": 2784589.4972654083,
+    "HFG": 1570666.7250509097,
+    "SIGMA": 0.019837286476609435,
+    "KF": 0.5867902543591159,
+    "KG": 0.05906605053410767,
+    "CPF": 5211.628632519848,
+    "CPG": 4879.351369943661,
+    "ALPHAF": 1.4853927319734037e-07,
+    "ALPHAG": 3.92794241435533e-07,
+    "PRANDTLF": 0.8465133881138522,
+    "PRANDTLG": 1.5232886734183742,
+    "PCRIT": 22064000.0,
+    "PTRIPLE": 611.6548008968684,
+    "UC": 0.6212878914638054,
+    "QK": 30073755.162476473,
+    "TMIN": 274.16,
+    "HMIN": 10274.50562053138,
+    "TMAX": 1999.0,
+    "HMAX": 6582047.372226559,
+    "QKMAX": 30148141.829655178
+  },
+  "convergence": {
+    "source_formula": "strict max < original option threshold",
+    "final_point": {
+      "DW": {
+        "max": 5.508473510662526e-09,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "DP": {
+        "max": 0.006056467071175575,
+        "threshold": 0.1,
+        "passed": true
+      },
+      "DH": {
+        "max": 0.09913064446300268,
+        "threshold": 0.1,
+        "passed": true
+      },
+      "DWV": {
+        "max": 0.0,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "DHV": {
+        "max": 0.0,
+        "threshold": 0.1,
+        "passed": true
+      }
+    },
+    "final_temporal": {
+      "W": {
+        "max": 9.944415763074588e-09,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "P": {
+        "max": 0.011389151215553284,
+        "threshold": 1.0,
+        "passed": true
+      },
+      "H": {
+        "max": 0.1778410063125193,
+        "threshold": 1.0,
+        "passed": true
+      },
+      "MRM.WV": {
+        "max": 0.0,
+        "threshold": 0.001,
+        "passed": true
+      },
+      "MRM.HV": {
+        "max": 0.0,
+        "threshold": 1.0,
+        "passed": true
+      }
+    },
+    "point_passed": true,
+    "temporal_passed": true,
+    "max_point_iterations_by_state": [
+      0,
+      6,
+      5,
+      4,
+      3,
+      3,
+      3,
+      2,
+      2,
+      2
+    ]
+  },
+  "array_layout": "Named exports: time,node[,wall]. Raw arrays retain original MATLAB dimensions; object graph indices are 1-based.",
+  "physical_states": 1,
+  "initialization_states": 10,
+  "reconstructed_methods": {
+    "U": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "liquid.W": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "liquid.U": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "liquid.H": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "vapor.W": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "vapor.U": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution",
+    "vapor.H": "Algebraic method from pinned source using recovered state and recovered fluid constants, no solver/CoolProp execution"
+  },
+  "stored_quantity_mapping": {
+    "W": "W",
+    "P": "P",
+    "H": "H",
+    "RHO": "rho",
+    "X": "x",
+    "XEQ": "xeq",
+    "VF": "vf",
+    "UP": "up",
+    "HFLUX": "HFLUX"
+  },
+  "units": {
+    "Z": "m",
+    "TIME": "s",
+    "W": "kg/s",
+    "P": "Pa",
+    "H": "J/kg",
+    "U": "m/s",
+    "UP": "m/s",
+    "RHO": "kg/m^3",
+    "X": "1",
+    "XEQ": "1",
+    "VF": "1",
+    "HFLUX": "W/m^2",
+    "liquid.W": "kg/s",
+    "liquid.U": "m/s",
+    "liquid.H": "J/kg",
+    "vapor.W": "kg/s",
+    "vapor.U": "m/s",
+    "vapor.H": "J/kg",
+    "DP.Grav": "Pa",
+    "DP.Wall": "Pa",
+    "DP.Acc_z": "Pa",
+    "DP.Acc_t": "Pa",
+    "DP.Acc_s": "Pa",
+    "DP.K": "Pa",
+    "DP.Tot": "Pa",
+    "DPSUM.Grav": "Pa",
+    "DPSUM.Wall": "Pa",
+    "DPSUM.Acc_z": "Pa",
+    "DPSUM.Acc_t": "Pa",
+    "DPSUM.Acc_s": "Pa",
+    "DPSUM.K": "Pa",
+    "DPSUM.Tot": "Pa",
+    "MDER.U_z": "m/s^2",
+    "MDER.U_t": "m/s^2",
+    "MDER.U": "m/s^2",
+    "MDER.H_z": "J/kg/s",
+    "MDER.H_t": "J/kg/s",
+    "MDER.H": "J/kg/s",
+    "MRM.WV": "kg/s",
+    "MRM.X": "1",
+    "MRM.HV": "J/kg",
+    "MRM.TV": "K",
+    "MRM.TCOND": "s",
+    "MRM.TEVAP": "s",
+    "NEARWALL.W": "kg/s",
+    "NEARWALL.H": "J/kg",
+    "NEARWALL.HFLUX": "W/m^2",
+    "NEARWALL.XEQ": "1",
+    "NEARWALL.WBULK": "kg/s",
+    "NEARWALL.HBULK": "J/kg",
+    "NEARWALL.XBULK": "1",
+    "NEARWALL.TRELAX": "s",
+    "ITR.N": "1",
+    "ITR.DW": "kg/s",
+    "ITR.DP": "Pa",
+    "ITR.DPSUM": "Pa",
+    "ITR.DH": "J/kg",
+    "ITR.DWV": "kg/s",
+    "ITR.DHV": "J/kg"
+  },
+  "raw_units_note": "Object-graph arrays preserve every numeric member including serialization metadata. Use named-export units only where the mapping exists; other raw metadata units are unresolved or not physical.",
+  "limitations": [
+    "Not a fresh MATLAB execution",
+    "Unknown original CoolProp version and exact producer commit",
+    "Method outputs reconstructed from archived values and source formulas are distinguished from directly stored arrays",
+    "No experimental validation implied"
+  ],
+  "files": {
+    "results.npz": "42d8eef4b7e2c3bbed40173cd7d459a2ffa83e3b7dfe8d1fa5079c92286a7a74",
+    "initialization.npz": "758adaa8e3db0813e5a53e2f01f16ed3a08f3129fe7c9fd27e5f968bd8e2f65b",
+    "raw_arrays.npz": "23f2dd8a85c17c9265ead065dae9bab4c540752106cf5a2284b71b656faf01f1",
+    "object_graph.json": "1711bbf9ce115d9acd8079d0c1fef0f5fe332301b58121e82214a0a8155f60c4"
+  }
+}

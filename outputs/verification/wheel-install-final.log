@@ -1,0 +1,6 @@
+Processing c:\users\roman\documents\chatgpt\openstream\dist\release-final\openstream_python-0.1.0-py3-none-any.whl
+Installing collected packages: openstream-python
+Successfully installed openstream-python-0.1.0
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\.venv\Scripts\python.exe -m pip install --upgrade pip

@@ -1,0 +1,708 @@
+{
+  "upstream_commit": "a614c7173822a93c1e64ac28d1541cbac028cbd8",
+  "scope": "Native original TUTORIAL4A-F inputs, scientific balance audit; MATLAB equivalence unverified",
+  "source_hashes": {
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\src\\openstream\\annular.py": "0fd80e68d92d752ffd54a527bff77314fd8f5298104833d387ad32ff8f1a2c8d",
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\src\\openstream\\threefield.py": "523b9c13de0522c39577f859c22bd830384847c7f7b9c15993c5ca2f630c7cad"
+  },
+  "cases": {
+    "TUTORIAL4A": {
+      "state": "INITIALSTEPCONVERGED",
+      "converged": true,
+      "elapsed_s": 0.8129068000125699,
+      "onset": [
+        {
+          "node": 13,
+          "iterations": 3,
+          "residual_kg_s_m": 4.3494199819150633e-05,
+          "original_tolerance_kg_s_m": 0.0001,
+          "effective_tolerance_kg_s_m": 0.0001,
+          "converged": true
+        }
+      ],
+      "point_max_iterations": 11,
+      "history": [
+        {
+          "phase": "initialization",
+          "time_s": 1.0,
+          "point_converged": true,
+          "max_iterations": 11,
+          "time_dWL_kg_s_m": 0.19585417999256372,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        },
+        {
+          "phase": "initialization",
+          "time_s": 2.0,
+          "point_converged": true,
+          "max_iterations": 8,
+          "time_dWL_kg_s_m": 0.021075621781397713,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        },
+        {
+          "phase": "initialization",
+          "time_s": 3.0,
+          "point_converged": true,
+          "max_iterations": 5,
+          "time_dWL_kg_s_m": 0.002264787313108474,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        },
+        {
+          "phase": "initialization",
+          "time_s": 4.0,
+          "point_converged": true,
+          "max_iterations": 2,
+          "time_dWL_kg_s_m": 0.00023879180731714925,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        },
+        {
+          "phase": "initialization",
+          "time_s": 5.0,
+          "point_converged": true,
+          "max_iterations": 1,
+          "time_dWL_kg_s_m": 8.971513973432543e-05,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        }
+      ],
+      "warnings": [],
+      "clipped_film_node_wall_indices_zero_based": [
+        [
+          63,
+          0
+        ]
+      ],
+      "max_film_mass_residual_kg_s": 0.0002586931876993208,
+      "max_unclipped_film_mass_residual_kg_s": 2.3111245585120087e-06,
+      "minimum_clipped_film_mass_residual_kg_s": 0.0002586931876993208,
+      "film_to_liquid_partition_max_error_kg_s": 3.469446951953614e-18,
+      "total_mass_partition_max_error_kg_s": 1.3877787807814457e-17,
+      "film_W_min_kg_s": 0.0,
+      "drop_W_min_kg_s": 0.011731649482853171,
+      "film_U_min_m_s": 1.5183655700447067,
+      "drop_U_min_m_s": 1.518365570164666,
+      "film_outlet_W_kg_s": [
+        0.005880785847313618
+      ],
+      "drop_outlet_W_kg_s": 0.011731649482853171,
+      "film_outlet_U_m_s": [
+        5.941838174252774
+      ],
+      "drop_outlet_U_m_s": 28.330879595799104,
+      "inner_failure_count": 0,
+      "all_primary_arrays_finite": true,
+      "mass_residual_units": "kg/s; MTOT kg/(m^2 s); unclipped residual criterion ERRORWF*max(PERIM)*2 = 5.52e-6 kg/s"
+    },
+    "TUTORIAL4B": {
+      "state": "INITIALSTEPCONVERGED",
+      "converged": true,
+      "elapsed_s": 0.8160284000332467,
+      "onset": [],
+      "point_max_iterations": 11,
+      "history": [
+        {
+          "phase": "initialization",
+          "time_s": 1.0,
+          "point_converged": true,
+          "max_iterations": 11,
+          "time_dWL_kg_s_m": 0.21186577044284416,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        },
+        {
+          "phase": "initialization",
+          "time_s": 2.0,
+          "point_converged": true,
+          "max_iterations": 8,
+          "time_dWL_kg_s_m": 0.022593818769067242,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        },
+        {
+          "phase": "initialization",
+          "time_s": 3.0,
+          "point_converged": true,
+          "max_iterations": 5,
+          "time_dWL_kg_s_m": 0.0024585311038363006,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        },
+        {
+          "phase": "initialization",
+          "time_s": 4.0,
+          "point_converged": true,
+          "max_iterations": 2,
+          "time_dWL_kg_s_m": 0.00022809380946121893,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        },
+        {
+          "phase": "initialization",
+          "time_s": 5.0,
+          "point_converged": true,
+          "max_iterations": 1,
+          "time_dWL_kg_s_m": 8.693125657499579e-05,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        }
+      ],
+      "warnings": [],
+      "clipped_film_node_wall_indices_zero_based": [
+        [
+          63,
+          0
+        ]
+      ],
+      "max_film_mass_residual_kg_s": 0.00024114077938615464,
+      "max_unclipped_film_mass_residual_kg_s": 2.2387914975289776e-06,
+      "minimum_clipped_film_mass_residual_kg_s": 0.00024114077938615464,
+      "film_to_liquid_partition_max_error_kg_s": 3.469446951953614e-18,
+      "total_mass_partition_max_error_kg_s": 1.3877787807814457e-17,
+      "film_W_min_kg_s": 0.0,
+      "drop_W_min_kg_s": 0.011730697712477044,
+      "film_U_min_m_s": 1.5183655700447067,
+      "drop_U_min_m_s": 1.518365570164666,
+      "film_outlet_W_kg_s": [
+        0.005881737617689745
+      ],
+      "drop_outlet_W_kg_s": 0.011730697712477044,
+      "film_outlet_U_m_s": [
+        5.941838174252774
+      ],
+      "drop_outlet_U_m_s": 28.330879595799104,
+      "inner_failure_count": 0,
+      "all_primary_arrays_finite": true,
+      "mass_residual_units": "kg/s; MTOT kg/(m^2 s); unclipped residual criterion ERRORWF*max(PERIM)*2 = 5.52e-6 kg/s"
+    },
+    "TUTORIAL4C": {
+      "state": "INITIALSTEPCONVERGED",
+      "converged": true,
+      "elapsed_s": 3.916916200018022,
+      "onset": [
+        {
+          "node": 13,
+          "iterations": 3,
+          "residual_kg_s_m": 4.3494199819150633e-05,
+          "original_tolerance_kg_s_m": 0.0001,
+          "effective_tolerance_kg_s_m": 0.0001,
+          "converged": true
+        }
+      ],
+      "point_max_iterations": 10,
+      "history": [
+        {
+          "phase": "initialization",
+          "time_s": 1.0,
+          "point_converged": true,
+          "max_iterations": 10,
+          "time_dWL_kg_s_m": 0.19632713031248025,
+          "time_dUF_m_s": 0.6862122992833974,
+          "time_dUD_m_s": 2.4831601560930423
+        },
+        {
+          "phase": "initialization",
+          "time_s": 2.0,
+          "point_converged": true,
+          "max_iterations": 8,
+          "time_dWL_kg_s_m": 0.030338243724039204,
+          "time_dUF_m_s": 0.003442278049873515,
+          "time_dUD_m_s": 0.4333018709888492
+        },
+        {
+          "phase": "initialization",
+          "time_s": 3.0,
+          "point_converged": true,
+          "max_iterations": 5,
+          "time_dWL_kg_s_m": 0.002911643328799507,
+          "time_dUF_m_s": 0.002088764374562402,
+          "time_dUD_m_s": 0.2114932328589525
+        },
+        {
+          "phase": "initialization",
+          "time_s": 4.0,
+          "point_converged": true,
+          "max_iterations": 2,
+          "time_dWL_kg_s_m": 0.0002504688440658348,
+          "time_dUF_m_s": 4.265230620070781e-05,
+          "time_dUD_m_s": 0.005689408090667314
+        },
+        {
+          "phase": "initialization",
+          "time_s": 5.0,
+          "point_converged": true,
+          "max_iterations": 1,
+          "time_dWL_kg_s_m": 8.470168734753258e-05,
+          "time_dUF_m_s": 1.5245812216235777e-05,
+          "time_dUD_m_s": 0.0017333247112993888
+        }
+      ],
+      "warnings": [],
+      "clipped_film_node_wall_indices_zero_based": [
+        [
+          63,
+          0
+        ]
+      ],
+      "max_film_mass_residual_kg_s": 0.00025563708686633993,
+      "max_unclipped_film_mass_residual_kg_s": 2.1877875171173386e-06,
+      "minimum_clipped_film_mass_residual_kg_s": 0.00025563708686633993,
+      "film_to_liquid_partition_max_error_kg_s": 3.469446951953614e-18,
+      "total_mass_partition_max_error_kg_s": 1.3877787807814457e-17,
+      "film_W_min_kg_s": 0.0,
+      "drop_W_min_kg_s": 0.011730456325452061,
+      "film_U_min_m_s": 1.5183655511099319,
+      "drop_U_min_m_s": 1.518365570164666,
+      "film_outlet_W_kg_s": [
+        0.005881979004714728
+      ],
+      "drop_outlet_W_kg_s": 0.011730456325452061,
+      "film_outlet_U_m_s": [
+        6.4857127338212495
+      ],
+      "drop_outlet_U_m_s": 25.63918680223808,
+      "inner_failure_count": 0,
+      "all_primary_arrays_finite": true,
+      "mass_residual_units": "kg/s; MTOT kg/(m^2 s); unclipped residual criterion ERRORWF*max(PERIM)*2 = 5.52e-6 kg/s"
+    },
+    "TUTORIAL4D": {
+      "state": "INITIALSTEPCONVERGED",
+      "converged": true,
+      "elapsed_s": 1.9376822999911383,
+      "onset": [
+        {
+          "node": 13,
+          "iterations": 3,
+          "residual_kg_s_m": 4.3494199819150633e-05,
+          "original_tolerance_kg_s_m": 0.0001,
+          "effective_tolerance_kg_s_m": 0.0001,
+          "converged": true
+        }
+      ],
+      "point_max_iterations": 16,
+      "history": [
+        {
+          "phase": "initialization",
+          "time_s": 1.0,
+          "point_converged": true,
+          "max_iterations": 16,
+          "time_dWL_kg_s_m": 0.19718280562381138,
+          "time_dUF_m_s": 1.4551063182966946,
+          "time_dUD_m_s": 2.395948621551746
+        },
+        {
+          "phase": "initialization",
+          "time_s": 2.0,
+          "point_converged": true,
+          "max_iterations": 8,
+          "time_dWL_kg_s_m": 0.030209667054707734,
+          "time_dUF_m_s": 0.014149211798927475,
+          "time_dUD_m_s": 0.18431861594574883
+        },
+        {
+          "phase": "initialization",
+          "time_s": 3.0,
+          "point_converged": true,
+          "max_iterations": 5,
+          "time_dWL_kg_s_m": 0.0031151881356177857,
+          "time_dUF_m_s": 0.00038008966108371567,
+          "time_dUD_m_s": 0.04167378491520779
+        },
+        {
+          "phase": "initialization",
+          "time_s": 4.0,
+          "point_converged": true,
+          "max_iterations": 2,
+          "time_dWL_kg_s_m": 0.00026597157594432375,
+          "time_dUF_m_s": 7.187609425240993e-05,
+          "time_dUD_m_s": 0.0072488977280968925
+        },
+        {
+          "phase": "initialization",
+          "time_s": 5.0,
+          "point_converged": true,
+          "max_iterations": 1,
+          "time_dWL_kg_s_m": 8.42530098246197e-05,
+          "time_dUF_m_s": 6.55440218189085e-05,
+          "time_dUD_m_s": 0.00681344532973327
+        }
+      ],
+      "warnings": [],
+      "clipped_film_node_wall_indices_zero_based": [
+        [
+          63,
+          0
+        ]
+      ],
+      "max_film_mass_residual_kg_s": 0.0002535411383029291,
+      "max_unclipped_film_mass_residual_kg_s": 2.192487437724768e-06,
+      "minimum_clipped_film_mass_residual_kg_s": 0.0002535411383029291,
+      "film_to_liquid_partition_max_error_kg_s": 3.469446951953614e-18,
+      "total_mass_partition_max_error_kg_s": 1.3877787807814457e-17,
+      "film_W_min_kg_s": 0.0,
+      "drop_W_min_kg_s": 0.01173091510509183,
+      "film_U_min_m_s": 1.5183655698451435,
+      "drop_U_min_m_s": 1.518365570164666,
+      "film_outlet_W_kg_s": [
+        0.005881520225074958
+      ],
+      "drop_outlet_W_kg_s": 0.01173091510509183,
+      "film_outlet_U_m_s": [
+        6.486580901773406
+      ],
+      "drop_outlet_U_m_s": 25.74565107977587,
+      "inner_failure_count": 0,
+      "all_primary_arrays_finite": true,
+      "mass_residual_units": "kg/s; MTOT kg/(m^2 s); unclipped residual criterion ERRORWF*max(PERIM)*2 = 5.52e-6 kg/s"
+    },
+    "TUTORIAL4E": {
+      "state": "INITIALSTEPCONVERGED",
+      "converged": true,
+      "elapsed_s": 0.6744642999838106,
+      "onset": [
+        {
+          "node": 13,
+          "iterations": 10,
+          "residual_kg_s_m": 2.896107854983253e-06,
+          "original_tolerance_kg_s_m": 0.0001,
+          "effective_tolerance_kg_s_m": 0.0001,
+          "converged": true
+        }
+      ],
+      "point_max_iterations": 12,
+      "history": [
+        {
+          "phase": "initialization",
+          "time_s": 1.0,
+          "point_converged": true,
+          "max_iterations": 12,
+          "time_dWL_kg_s_m": 0.5719905804840384,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        },
+        {
+          "phase": "initialization",
+          "time_s": 2.0,
+          "point_converged": true,
+          "max_iterations": 9,
+          "time_dWL_kg_s_m": 0.05478827877068665,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        },
+        {
+          "phase": "initialization",
+          "time_s": 3.0,
+          "point_converged": true,
+          "max_iterations": 6,
+          "time_dWL_kg_s_m": 0.004884795230039124,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        },
+        {
+          "phase": "initialization",
+          "time_s": 4.0,
+          "point_converged": true,
+          "max_iterations": 2,
+          "time_dWL_kg_s_m": 0.0002835612823601785,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        },
+        {
+          "phase": "initialization",
+          "time_s": 5.0,
+          "point_converged": true,
+          "max_iterations": 1,
+          "time_dWL_kg_s_m": 8.623577573740882e-05,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        }
+      ],
+      "warnings": [],
+      "clipped_film_node_wall_indices_zero_based": [],
+      "max_film_mass_residual_kg_s": 4.348635310906035e-06,
+      "max_unclipped_film_mass_residual_kg_s": 4.348635310906035e-06,
+      "minimum_clipped_film_mass_residual_kg_s": null,
+      "film_to_liquid_partition_max_error_kg_s": 3.469446951953614e-18,
+      "total_mass_partition_max_error_kg_s": 1.3877787807814457e-17,
+      "film_W_min_kg_s": 0.0005909612953270615,
+      "drop_W_min_kg_s": 0.0023537341500660183,
+      "film_U_min_m_s": 1.5183655700447067,
+      "drop_U_min_m_s": 1.518365570164666,
+      "film_outlet_W_kg_s": [
+        0.0032106938515858207
+      ],
+      "drop_outlet_W_kg_s": 0.01440174147858097,
+      "film_outlet_U_m_s": [
+        5.941838174252774
+      ],
+      "drop_outlet_U_m_s": 28.330879595799104,
+      "inner_failure_count": 0,
+      "all_primary_arrays_finite": true,
+      "mass_residual_units": "kg/s; MTOT kg/(m^2 s); unclipped residual criterion ERRORWF*max(PERIM)*2 = 5.52e-6 kg/s"
+    },
+    "TUTORIAL4F": {
+      "state": "INITIALSTEPCONVERGED",
+      "converged": true,
+      "elapsed_s": 0.029549700033385307,
+      "onset": [
+        {
+          "node": 13,
+          "iterations": 1,
+          "residual_kg_s_m": 0.0,
+          "original_tolerance_kg_s_m": 0.0001,
+          "effective_tolerance_kg_s_m": 0.0001,
+          "converged": true
+        }
+      ],
+      "point_max_iterations": 1,
+      "history": [
+        {
+          "phase": "initialization",
+          "time_s": 1.0,
+          "point_converged": true,
+          "max_iterations": 1,
+          "time_dWL_kg_s_m": 2.220446049250313e-16,
+          "time_dUF_m_s": 0.0,
+          "time_dUD_m_s": 0.0
+        }
+      ],
+      "warnings": [],
+      "clipped_film_node_wall_indices_zero_based": [
+        [
+          48,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          50,
+          0
+        ],
+        [
+          51,
+          0
+        ],
+        [
+          52,
+          0
+        ],
+        [
+          53,
+          0
+        ],
+        [
+          54,
+          0
+        ],
+        [
+          55,
+          0
+        ],
+        [
+          56,
+          0
+        ],
+        [
+          57,
+          0
+        ],
+        [
+          58,
+          0
+        ],
+        [
+          59,
+          0
+        ],
+        [
+          60,
+          0
+        ],
+        [
+          61,
+          0
+        ],
+        [
+          62,
+          0
+        ],
+        [
+          63,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          65,
+          0
+        ],
+        [
+          66,
+          0
+        ],
+        [
+          67,
+          0
+        ],
+        [
+          68,
+          0
+        ],
+        [
+          69,
+          0
+        ],
+        [
+          70,
+          0
+        ],
+        [
+          71,
+          0
+        ],
+        [
+          72,
+          0
+        ],
+        [
+          73,
+          0
+        ],
+        [
+          74,
+          0
+        ],
+        [
+          75,
+          0
+        ],
+        [
+          76,
+          0
+        ],
+        [
+          77,
+          0
+        ],
+        [
+          78,
+          0
+        ],
+        [
+          79,
+          0
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          81,
+          0
+        ],
+        [
+          82,
+          0
+        ],
+        [
+          83,
+          0
+        ],
+        [
+          84,
+          0
+        ],
+        [
+          85,
+          0
+        ],
+        [
+          86,
+          0
+        ],
+        [
+          87,
+          0
+        ],
+        [
+          88,
+          0
+        ],
+        [
+          89,
+          0
+        ],
+        [
+          90,
+          0
+        ],
+        [
+          91,
+          0
+        ],
+        [
+          92,
+          0
+        ],
+        [
+          93,
+          0
+        ],
+        [
+          94,
+          0
+        ],
+        [
+          95,
+          0
+        ],
+        [
+          96,
+          0
+        ],
+        [
+          97,
+          0
+        ],
+        [
+          98,
+          0
+        ],
+        [
+          99,
+          0
+        ],
+        [
+          100,
+          0
+        ]
+      ],
+      "max_film_mass_residual_kg_s": 0.0008842670865417791,
+      "max_unclipped_film_mass_residual_kg_s": 4.445228907190568e-18,
+      "minimum_clipped_film_mass_residual_kg_s": 0.0,
+      "film_to_liquid_partition_max_error_kg_s": 0.0,
+      "total_mass_partition_max_error_kg_s": 1.3877787807814457e-17,
+      "film_W_min_kg_s": 0.0,
+      "drop_W_min_kg_s": 0.017612434814554857,
+      "film_U_min_m_s": 1.5183655700447067,
+      "drop_U_min_m_s": 1.518365570164666,
+      "film_outlet_W_kg_s": [
+        0.0
+      ],
+      "drop_outlet_W_kg_s": 0.01761243533016679,
+      "film_outlet_U_m_s": [
+        5.941838174252774
+      ],
+      "drop_outlet_U_m_s": 28.330879595799104,
+      "inner_failure_count": 0,
+      "all_primary_arrays_finite": true,
+      "mass_residual_units": "kg/s; MTOT kg/(m^2 s); unclipped residual criterion ERRORWF*max(PERIM)*2 = 5.52e-6 kg/s"
+    }
+  }
+}

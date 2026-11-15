@@ -1,0 +1,306 @@
+{
+  "archive_sha256": "43311c4c2ec3440cc3366f94df1216b425d4270268887b7fb7bf921c0fb9ccb0",
+  "scope": "Independent reconstruction from archived state using pinned-source formulas; no native field methods",
+  "rtol": 1e-08,
+  "atol": 0,
+  "all_nine_pass": true,
+  "object_identity_checks_passed": true,
+  "comparisons": {
+    "W": {
+      "passed": true,
+      "max_abs": 1.3877787807814457e-16,
+      "max_rel_nonzero": 1.9825410966388497e-15,
+      "reference_zeros": 0,
+      "zero_mismatches": 0
+    },
+    "H": {
+      "passed": true,
+      "max_abs": 9.313225746154785e-10,
+      "max_rel_nonzero": 3.8977257022559736e-16,
+      "reference_zeros": 0,
+      "zero_mismatches": 0
+    },
+    "U": {
+      "passed": true,
+      "max_abs": 5.258016244624741e-13,
+      "max_rel_nonzero": 4.1305726817332015e-14,
+      "reference_zeros": 0,
+      "zero_mismatches": 0
+    },
+    "liquid.W": {
+      "passed": true,
+      "max_abs": 1.5265566588595902e-16,
+      "max_rel_nonzero": 3.151815762815273e-15,
+      "reference_zeros": 0,
+      "zero_mismatches": 0
+    },
+    "liquid.H": {
+      "passed": true,
+      "max_abs": 3.4924596548080444e-09,
+      "max_rel_nonzero": 2.877003162595694e-15,
+      "reference_zeros": 0,
+      "zero_mismatches": 0
+    },
+    "liquid.U": {
+      "passed": true,
+      "max_abs": 8.419931418757187e-13,
+      "max_rel_nonzero": 4.157837187883256e-14,
+      "reference_zeros": 0,
+      "zero_mismatches": 0
+    },
+    "vapor.W": {
+      "passed": true,
+      "max_abs": 1.3877787807814457e-16,
+      "max_rel_nonzero": 6.222142509110722e-13,
+      "reference_zeros": 4,
+      "zero_mismatches": 0
+    },
+    "vapor.H": {
+      "passed": true,
+      "max_abs": 7.171183824539185e-08,
+      "max_rel_nonzero": 2.575310950350679e-14,
+      "reference_zeros": 0,
+      "zero_mismatches": 0
+    },
+    "vapor.U": {
+      "passed": true,
+      "max_abs": 4.618527782440651e-13,
+      "max_rel_nonzero": 4.144204934808229e-14,
+      "reference_zeros": 0,
+      "zero_mismatches": 0
+    }
+  },
+  "input_differences": [
+    {
+      "path": "model.KLOC",
+      "archived": [
+        0.0,
+        0.0
+      ],
+      "native": [
+        0.0
+      ]
+    },
+    {
+      "path": "model.KLOSS",
+      "archived": [
+        0.0,
+        0.0
+      ],
+      "native": [
+        0.0
+      ]
+    },
+    {
+      "path": "model.KBLOCKRATIO",
+      "archived": [
+        0.0,
+        0.0
+      ],
+      "native": [
+        0.0
+      ]
+    },
+    {
+      "path": "model.KTUNING",
+      "archived": [
+        0.0,
+        0.0
+      ],
+      "native": [
+        0.0
+      ]
+    },
+    {
+      "path": "options.AXIALINTERP",
+      "archived": [
+        "next"
+      ],
+      "native": [
+        "NEXT"
+      ]
+    },
+    {
+      "path": "options.TIMEINTERP",
+      "archived": [
+        "linear"
+      ],
+      "native": [
+        "LINEAR"
+      ]
+    }
+  ],
+  "input_orientation_policy": "MATLAB row/column vectors flattened explicitly; value/order preserved",
+  "skipped_input_field": "CBTMULT is a serialized MATLAB function handle, separately reviewed as @(z)1",
+  "property_comparison": {
+    "PRESSURE": {
+      "archived": 6000000.0,
+      "native": 6000000.0,
+      "absolute_difference": 0.0,
+      "relative_difference": 0.0
+    },
+    "TSAT": {
+      "archived": 548.7349899923428,
+      "native": 548.734989992342,
+      "absolute_difference": 7.958078640513122e-13,
+      "relative_difference": 1.4502590112987275e-15
+    },
+    "RHOF": {
+      "archived": 757.9981336355239,
+      "native": 757.9981336355253,
+      "absolute_difference": 1.3642420526593924e-12,
+      "relative_difference": 1.79979605769765e-15
+    },
+    "RHOG": {
+      "archived": 30.818445364018633,
+      "native": 30.818445364018114,
+      "absolute_difference": 5.186961971048731e-13,
+      "relative_difference": 1.6830706123497877e-14
+    },
+    "MUF": {
+      "archived": 9.531105175649382e-05,
+      "native": 9.531105175649432e-05,
+      "absolute_difference": 5.014435047745458e-19,
+      "relative_difference": 5.261126548636381e-15
+    },
+    "MUG": {
+      "archived": 1.8439878365062773e-05,
+      "native": 1.8439878365062773e-05,
+      "absolute_difference": 0.0,
+      "relative_difference": 0.0
+    },
+    "HF": {
+      "archived": 1213922.7722144986,
+      "native": 1213922.7722144956,
+      "absolute_difference": 3.026798367500305e-09,
+      "relative_difference": 2.493402740916268e-15
+    },
+    "HG": {
+      "archived": 2784589.4972654083,
+      "native": 2784589.497265409,
+      "absolute_difference": 9.313225746154785e-10,
+      "relative_difference": 3.344559675780143e-16
+    },
+    "HFG": {
+      "archived": 1570666.7250509097,
+      "native": 1570666.7250509136,
+      "absolute_difference": 3.958120942115784e-09,
+      "relative_difference": 2.520025973038609e-15
+    },
+    "SIGMA": {
+      "archived": 0.019837286476609435,
+      "native": 0.019837286476609706,
+      "absolute_difference": 2.706168622523819e-16,
+      "relative_difference": 1.364182861257118e-14
+    },
+    "KF": {
+      "archived": 0.5867902543591159,
+      "native": 0.5867902543591185,
+      "absolute_difference": 2.55351295663786e-15,
+      "relative_difference": 4.35166217855266e-15
+    },
+    "KG": {
+      "archived": 0.05906605053410767,
+      "native": 0.059066050534107364,
+      "absolute_difference": 3.0531133177191805e-16,
+      "relative_difference": 5.168981657163892e-15
+    },
+    "CPF": {
+      "archived": 5211.628632519848,
+      "native": 5211.628632519839,
+      "absolute_difference": 9.094947017729282e-12,
+      "relative_difference": 1.745125690840299e-15
+    },
+    "CPG": {
+      "archived": 4879.351369943661,
+      "native": 4879.351369943604,
+      "absolute_difference": 5.638867150992155e-11,
+      "relative_difference": 1.1556591693164462e-14
+    },
+    "ALPHAF": {
+      "archived": 1.4853927319734037e-07,
+      "native": 1.48539273197341e-07,
+      "absolute_difference": 6.352747104407253e-22,
+      "relative_difference": 4.2768131065023955e-15
+    },
+    "ALPHAG": {
+      "archived": 3.92794241435533e-07,
+      "native": 3.927942414355421e-07,
+      "absolute_difference": 9.105604182983729e-21,
+      "relative_difference": 2.318161322759152e-14
+    },
+    "PRANDTLF": {
+      "archived": 0.8465133881138522,
+      "native": 0.8465133881138515,
+      "absolute_difference": 7.771561172376096e-16,
+      "relative_difference": 9.18067130596977e-16
+    },
+    "PRANDTLG": {
+      "archived": 1.5232886734183742,
+      "native": 1.5232886734183644,
+      "absolute_difference": 9.769962616701378e-15,
+      "relative_difference": 6.413730231957182e-15
+    },
+    "PCRIT": {
+      "archived": 22064000.0,
+      "native": 22063999.999997754,
+      "absolute_difference": 2.246350049972534e-06,
+      "relative_difference": 1.0181064403428817e-13
+    },
+    "PTRIPLE": {
+      "archived": 611.6548008968684,
+      "native": 611.6548008968684,
+      "absolute_difference": 0.0,
+      "relative_difference": 0.0
+    },
+    "UC": {
+      "archived": 0.6212878914638054,
+      "native": 0.6212878914638131,
+      "absolute_difference": 7.771561172376096e-15,
+      "relative_difference": 1.2508792267085165e-14
+    },
+    "QK": {
+      "archived": 30073755.162476473,
+      "native": 30073755.162476417,
+      "absolute_difference": 5.587935447692871e-08,
+      "relative_difference": 1.8580770567238746e-15
+    },
+    "TMIN": {
+      "archived": 274.16,
+      "native": 274.16,
+      "absolute_difference": 0.0,
+      "relative_difference": 0.0
+    },
+    "HMIN": {
+      "archived": 10274.50562053138,
+      "native": 10274.505620424712,
+      "absolute_difference": 1.0666735761333257e-07,
+      "relative_difference": 1.0381750864993534e-11
+    },
+    "TMAX": {
+      "archived": 1999.0,
+      "native": 1999.0,
+      "absolute_difference": 0.0,
+      "relative_difference": 0.0
+    },
+    "HMAX": {
+      "archived": 6582047.372226559,
+      "native": 6582047.37222656,
+      "absolute_difference": 9.313225746154785e-10,
+      "relative_difference": 1.4149435911769091e-16
+    },
+    "QKMAX": {
+      "archived": 30148141.829655178,
+      "native": 30148141.82965512,
+      "absolute_difference": 5.960464477539063e-08,
+      "relative_difference": 1.9770586562904053e-15
+    }
+  },
+  "max_cached_absolute_difference": {
+    "RHO": 2.944489096989855e-11,
+    "X": 1.919037845299343e-15,
+    "XEQ": 2.0990154059319366e-15,
+    "VF": 4.2243986086987206e-14,
+    "UP": 5.329070518200751e-13
+  }
+}

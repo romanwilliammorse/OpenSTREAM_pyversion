@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+outputs/test-*/
+references/matlab-export/
+/tmp/
+/tools/vendor/
+/outputs/**/server.lock
+/outputs/**/worker.lock
+/outputs/**/cancel.request
+/outputs/gui-server.log
+/.env
+/.env.*

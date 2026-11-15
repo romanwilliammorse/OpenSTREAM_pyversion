@@ -1,0 +1,71 @@
+{
+  "schema": "openstream-gui-reference-v1",
+  "framework": "FourField",
+  "case_id": "TUTORIAL1-TUTORIAL1-DEFAULT/tutorial1",
+  "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+  "archive": {
+    "file": "tutorial1_FourFieldSolver.mat",
+    "sha256": "fd28edab74cad654721572c4644461dc20fef27ed4a3d617458b9717e13eacf1",
+    "bytes": 632002,
+    "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:24 2026"
+  },
+  "producer_metadata": {
+    "matlab_version": null,
+    "coolprop_version": null,
+    "source_commit": null
+  },
+  "recovery_schema": "openstream-recovered-mcos-annular-v1",
+  "decoder": {
+    "package": "mat-io",
+    "version": "1.0.2",
+    "warnings": []
+  },
+  "recovered_created_utc": "2026-11-14T23:36:26.992114+00:00",
+  "source_export_manifest_sha256": "e777916e9c38f1a38bdc883c2a22f043ae068e74a4cd677c1d724e21bf132f8c",
+  "reconstructed_methods": {
+    "film.W": "FourField.Film dependent getter evaluated using archived base/wave values, no native field method or solver execution",
+    "film.U": "FourField.Film dependent getter evaluated using archived base/wave values, no native field method or solver execution",
+    "film.H": "FourField.Film dependent getter evaluated using archived base/wave values, no native field method or solver execution"
+  },
+  "recovery_limitations": [
+    "No fresh MATLAB execution",
+    "Unknown producer source/CoolProp version",
+    "No experimental validation",
+    "Recovery does not itself compare native results"
+  ],
+  "source_exports": {
+    "results.npz": {
+      "sha256": "8dcbcee584221a31f17c96ee8bc04ba4044f66ea2f376795ec0036d2b0bd0803",
+      "path": "outputs\\baseline-parity-02\\FourField\\reference\\results.npz",
+      "operation": "Exact value and dimension preserving subset; no resampling or rounding."
+    },
+    "initialization.npz": {
+      "sha256": "c5df9a64d17bdc3c4e5634e2bbab29dd446f8e131d749b56e701eadf9f31cf14",
+      "path": "outputs\\baseline-parity-02\\FourField\\reference\\initialization.npz",
+      "operation": "Exact value and dimension preserving subset; no resampling or rounding."
+    }
+  },
+  "files": {
+    "FourField.physical.npz": "920d342b68d75e56800a3d9146fa2007bcd158269c2c47cece7efe86ae8b0f66",
+    "FourField.initialization.npz": "05487585540599880110e5faf43d132589877875b960367ee0dd89dfeab42353"
+  },
+  "units": {
+    "Z": "m",
+    "TIME": "s",
+    "film.W": "kg/s",
+    "film.U": "m/s",
+    "film.H": "J/kg",
+    "drop.W": "kg/s",
+    "drop.U": "m/s",
+    "drop.H": "J/kg",
+    "film.wave.W": "kg/s",
+    "film.wave.U": "m/s",
+    "film.wave.H": "J/kg",
+    "film.base.W": "kg/s",
+    "film.base.U": "m/s",
+    "film.base.H": "J/kg",
+    "film.wave.FREQUENCY": "Hz"
+  },
+  "array_layout": "time,node,wall for films including single wall; time,node for droplets and ITR.N; raw MATLAB dimensions retained separately",
+  "license": "MIT; upstream OpenSTREAM license retained at package root"
+}

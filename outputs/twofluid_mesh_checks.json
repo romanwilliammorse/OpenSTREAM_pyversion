@@ -1,0 +1,32 @@
+[
+  {
+    "nodes": 50,
+    "converged": false,
+    "steps": 24,
+    "mass_defect_kg_s": -4.117270222081526e-05,
+    "energy_defect_W": 35.15438234749308,
+    "energy_discrete_product_term_W": 63.637232429712014,
+    "remaining_energy_residual_W": -28.48285008221893,
+    "seconds": 18.36359880003147
+  },
+  {
+    "nodes": 100,
+    "converged": true,
+    "steps": 34,
+    "mass_defect_kg_s": -7.646203115108108e-12,
+    "energy_defect_W": 30.887771440538927,
+    "energy_discrete_product_term_W": 30.887792559714608,
+    "remaining_energy_residual_W": -2.1119175681150182e-05,
+    "seconds": 14.559776600042824
+  },
+  {
+    "nodes": 200,
+    "converged": true,
+    "steps": 59,
+    "mass_defect_kg_s": -1.2889078693234524e-11,
+    "energy_defect_W": 15.208833559052437,
+    "energy_discrete_product_term_W": 15.208869277474884,
+    "remaining_energy_residual_W": -3.5718422447317266e-05,
+    "seconds": 34.11225349997403
+  }
+]
