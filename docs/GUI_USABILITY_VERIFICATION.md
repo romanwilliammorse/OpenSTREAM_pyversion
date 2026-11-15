@@ -55,6 +55,13 @@ files. The full existing numerical suite is configured in Windows CI, along
 with both frontend test files; CI results are separate from the local checks.
 Narrow/mobile viewport rendering was not manually checked in this update.
 
+Windows CI subsequently passed for code commit `d2211b2`:
+[run 43663036407](https://github.com/romanwilliammorse/OpenSTREAM_pyversion/actions/runs/43663036407).
+It reports **213 Python tests passed**, **9 frontend tests passed**, and a
+successful source-distribution/wheel build. The two existing FourField runtime
+warnings (divide by zero in drag coefficient and invalid force multiplication)
+remain visible in the log; they were not suppressed or resolved by this update.
+
 ## Reproduce the automated checks
 
 From the repository root in PowerShell:
