@@ -298,3 +298,96 @@ def test_new_manager_restores_history_without_resuming_workers(setup):
     fresh = CloudRunManager(store, gateway, source=manager.source, environment=manager.environment)
     assert fresh.history()[0]["status"] == "completed"
     assert gateway.handles[run_id].launches == 1 and gateway.creates == 1
+
+
+@pytest.mark.parametrize("stage", ["prepare", "launch"])
+def test_cold_queued_probe_recovers_startup_failure_when_sandbox_stop_also_failed(setup, monkeypatch, stage):
+    manager, store, gateway, _ = setup
+    gateway.failure = stage
+    def stop_failure(self):
+        self.stops += 1
+        raise RuntimeError("provider stop failed")
+    monkeypatch.setattr(Handle, "stop", stop_failure)
+    state = manager.start(baseline()); run_id = state["id"]
+    assert state["status"] == "failed" and gateway.handles[run_id].running
+    fresh = CloudRunManager(store, gateway, source=manager.source, environment=manager.environment)
+    restored = fresh.status(run_id)
+    assert restored["status"] == "failed" and restored["phase"] == "Worker could not start"
+    assert gateway.handles[run_id].launches == (1 if stage == "launch" else 0)
+
+
+def test_cold_queued_negative_probe_is_performed_only_once(setup):
+    manager, store, gateway, provider = setup
+    state = manager.start(baseline()); run_id = state["id"]
+    fresh = CloudRunManager(store, gateway, source=manager.source, environment=manager.environment)
+    provider.calls.clear()
+    assert fresh.status(run_id)["status"] == "queued"
+    terminal_lists = [call for call in provider.calls if call[0] == "list" and "/terminal/" in call[1]]
+    assert len(terminal_lists) == 1
+    provider.calls.clear()
+    for _ in range(5):
+        assert fresh.status(run_id)["status"] == "queued"
+    assert provider.calls == []
+
+
+def bootstrap_failure(setup):
+    manager, _, gateway, _ = setup
+    state = manager.start(baseline()); run_id = state["id"]
+    handle = gateway.handles[run_id]
+    handle.cloud = {**handle.local, "status": "failed", "phase": "Worker setup failed", "error": "Environment could not start"}
+    handle.bootstrap_log = lambda job_dir: b"test dependency resolution failure\n"
+    return run_id, handle
+
+
+def test_bootstrap_log_and_failure_are_durable_before_stop(setup, monkeypatch):
+    manager, store, _, provider = setup
+    run_id, handle = bootstrap_failure(setup)
+    original = handle.stop
+    def ordered_stop():
+        assert any(key.endswith("/bootstrap.log") for key in provider.objects)
+        records = store.list(f"jobs/{run_id}/publication-failures/")
+        assert len(records) == 1
+        assert "bootstrap.log" in store.get_json_by_url(records[0]["url"])["artifacts"]
+        original()
+    monkeypatch.setattr(handle, "stop", ordered_stop)
+    failed = manager.status(run_id)
+    assert failed["status"] == "failed" and failed["phase"] == "Worker setup failed"
+    assert {row["name"] for row in failed["files"]} == {"bootstrap.log", "submitted_inputs.json"}
+    chunks, _ = manager.download(run_id, "bootstrap.log")
+    assert b"".join(chunks) == b"test dependency resolution failure\n"
+    assert handle.stops == 1 and not handle.running
+
+
+@pytest.mark.parametrize("failure", ["retrieve", "upload"])
+def test_missing_or_failed_bootstrap_log_upload_is_not_claimed_as_an_artifact(setup, monkeypatch, failure):
+    manager, store, _, _ = setup
+    run_id, handle = bootstrap_failure(setup)
+    if failure == "retrieve":
+        def missing(job_dir):
+            raise OSError("test log unavailable")
+        handle.bootstrap_log = missing
+    else:
+        original = store.put_bytes
+        def rejected(key, *args, **kwargs):
+            if key.endswith("/bootstrap.log"):
+                raise CloudStoreError("test upload unavailable")
+            return original(key, *args, **kwargs)
+        monkeypatch.setattr(store, "put_bytes", rejected)
+    failed = manager.status(run_id)
+    assert failed["status"] == "failed" and "could not be retrieved or published" in failed["error"]
+    assert [row["name"] for row in failed["files"]] == ["submitted_inputs.json"]
+    assert handle.stops == 1
+
+
+def test_bootstrap_failure_receipt_outage_does_not_destroy_ephemeral_evidence(setup, monkeypatch):
+    manager, store, _, _ = setup
+    run_id, handle = bootstrap_failure(setup)
+    original = store.put_json
+    def rejected(key, *args, **kwargs):
+        if "/publication-failures/" in key:
+            raise CloudStoreError("test failure receipt unavailable")
+        return original(key, *args, **kwargs)
+    monkeypatch.setattr(store, "put_json", rejected)
+    with pytest.raises(CloudStoreError, match="receipt unavailable"):
+        manager.status(run_id)
+    assert handle.stops == 0 and handle.running

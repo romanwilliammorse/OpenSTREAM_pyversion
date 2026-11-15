@@ -67,6 +67,7 @@ class CloudRunManager:
         self.terminal_probe_seconds = terminal_probe_seconds
         self._manifests, self._terminals = OrderedDict(), OrderedDict()
         self._probes, self._failures, self._failure_probes = OrderedDict(), OrderedDict(), OrderedDict()
+        self._queued_observed = OrderedDict()
         self._lock = threading.RLock()
 
     def _cache(self, cache, key, value):
@@ -214,7 +215,7 @@ class CloudRunManager:
         item = matches[0]
         return {"key": key, "url": item["url"], "size": item["size"], "sha256": manifest["submitted_inputs_sha256"]}
 
-    def _record_failure(self, manifest, state, *, phase, message, canonical=False, input_receipt=None):
+    def _record_failure(self, manifest, state, *, phase, message, canonical=False, input_receipt=None, extra_artifacts=None):
         run_id = manifest["id"]
         existing = self._cached(self._failures, run_id)
         if existing is not None and not canonical:
@@ -222,7 +223,7 @@ class CloudRunManager:
         state = {**state, "status": "failed", "phase": phase, "error": message, "finished_at": _now(), "files": []}
         receipt = input_receipt or self._input_receipt(manifest)
         value = {"schema": "openstream-cloud-terminal-v1", "id": run_id,
-                 "status": self._public(state), "artifacts": {"submitted_inputs.json": receipt},
+                 "status": self._public(state), "artifacts": {"submitted_inputs.json": receipt, **(extra_artifacts or {})},
                  "plot_data": None, "source": manifest["source"], "environment": manifest["environment"],
                  "runtime": manifest["runtime"], "published_at": _now(),
                  "publication": {"complete": False, "stage": phase, "child_exit_code": None, "error_type": "CloudExecutionFailure"}}
@@ -260,6 +261,7 @@ class CloudRunManager:
                 self.store.put_json(f"runs/{run_id}.json", manifest)
                 persisted = True
                 self._remember_manifest(run_id, manifest)
+                self._cache(self._queued_observed, run_id, True)
                 directory = self._directory(run_id)
                 handle.prepare({f"{directory}/submitted_inputs.json": input_bytes,
                                 f"{directory}/status.json": _bytes(state),
@@ -334,6 +336,16 @@ class CloudRunManager:
                     or state.get("status") not in TERMINAL | {"queued", "running"}):
                 raise CloudStoreError("Worker status identity differs from its run manifest.")
         live = local or cloud or initial
+        if running and live.get("status") == "queued" and not self._cached(self._queued_observed, run_id):
+            # A cache-cold instance may be observing a setup failure whose
+            # sandbox stop failed. Its immutable failure record must win over
+            # a stale queued file. One negative observation is remembered.
+            terminal = self._terminal(manifest)
+            if terminal is None:
+                terminal = self._failure_record(manifest)
+            self._cache(self._queued_observed, run_id, True)
+            if terminal is not None:
+                return self._public(terminal["status"], artifacts=terminal["artifacts"])
         needs_publication = live.get("status") in TERMINAL or (cloud or {}).get("status") in TERMINAL or (cloud or {}).get("phase") == "Publishing"
         if running and not needs_publication:
             return self._public(live)
@@ -348,6 +360,28 @@ class CloudRunManager:
                 return self._public(terminal["status"], artifacts=terminal["artifacts"])
         failure = self._failure_record(manifest)
         if failure:
+            return self._public(failure["status"], artifacts=failure["artifacts"])
+        if running and (cloud or {}).get("status") == "failed" and cloud.get("phase") == "Worker setup failed":
+            artifacts = {}
+            try:
+                body = handle.bootstrap_log(self._directory(run_id))
+                if not isinstance(body, bytes) or len(body) > 1024 * 1024:
+                    raise ValueError("Bootstrap log exceeds retrieval contract")
+                digest = hashlib.sha256(body).hexdigest()
+                receipt = self.store.put_bytes(f"jobs/{run_id}/artifacts/{digest}/bootstrap.log", body, "text/plain")
+                artifacts["bootstrap.log"] = self._receipt(manifest, "bootstrap.log", receipt)
+                message = "Pinned cloud environment could not start. Bootstrap log and submitted inputs are retained."
+            except Exception:
+                message = "Pinned cloud environment could not start. Bootstrap log could not be retrieved or published; submitted inputs are retained."
+            failure = self._record_failure(manifest, cloud, phase="Worker setup failed",
+                message=message, extra_artifacts=artifacts)
+            # Preserve the log and failure receipt before stopping its only VM.
+            # If publication fails, the exception leaves the worker allocated
+            # for evidence recovery until its declared infrastructure deadline.
+            try:
+                handle.stop()
+            except Exception:
+                pass  # Durable failure evidence remains; deadline bounds allocation.
             return self._public(failure["status"], artifacts=failure["artifacts"])
         if not running or (cloud or {}).get("status") == "failed":
             failure = self._record_failure(manifest, cloud or live,

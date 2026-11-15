@@ -74,10 +74,16 @@ def provenance():
 class SandboxHandle:
     def __init__(self, sandbox, runtime, *, fresh=False):
         self.sandbox, self.runtime, self.fresh = sandbox, runtime, fresh
+        # Sandbox-level filesystem/process helpers transparently resume on a
+        # lifecycle race in SDK 0.10.0. Bind the observed exact session instead.
+        self.session = getattr(sandbox, 'current_session', None)
+        if self.session is not None and self.session.id != runtime['session_id']:
+            self.session = None
 
     def is_running(self):
         return (str(self.sandbox.status) == 'running'
-                and self.sandbox.current_session_id == self.runtime['session_id'])
+                and self.sandbox.current_session_id == self.runtime['session_id']
+                and self.session is not None)
 
     def _active(self):
         if not self.is_running():
@@ -89,16 +95,16 @@ class SandboxHandle:
             path = PurePosixPath(name)
             if not str(path).startswith(REMOTE_ROOT+'/jobs/') or '..' in path.parts:
                 raise ValueError('Invalid cloud job path')
-            self.sandbox.fs.mkdir(str(path.parent), recursive=True)
-            self.sandbox.fs.write_bytes(str(path), body)
+            self.session.fs.mkdir(str(path.parent), recursive=True)
+            self.session.fs.write_bytes(str(path), body)
         if self.fresh:
-            self.sandbox.fs.write_bytes(REMOTE_ROOT+'/source.zip', source_bundle())
-            self.sandbox.fs.write_bytes(REMOTE_ROOT+'/requirements-cloud.lock', (ROOT/'requirements-cloud.lock').read_bytes())
-            self.sandbox.fs.write_text(REMOTE_ROOT+'/bootstrap.py', BOOTSTRAP)
+            self.session.fs.write_bytes(REMOTE_ROOT+'/source.zip', source_bundle())
+            self.session.fs.write_bytes(REMOTE_ROOT+'/requirements-cloud.lock', (ROOT/'requirements-cloud.lock').read_bytes())
+            self.session.fs.write_text(REMOTE_ROOT+'/bootstrap.py', BOOTSTRAP)
 
     def launch(self, job_dir):
         self._active()
-        return self.sandbox.create_process('python3', [REMOTE_ROOT+'/bootstrap.py', job_dir], cwd=REMOTE_ROOT)
+        return self.session.create_process('python3', [REMOTE_ROOT+'/bootstrap.py', job_dir], cwd=REMOTE_ROOT)
 
     def status_files(self, job_dir):
         self._active()
@@ -106,19 +112,26 @@ class SandboxHandle:
         states = []
         for name in ('status.json', 'cloud_status.json'):
             try:
-                states.append(json.loads(self.sandbox.fs.read_text(job_dir+'/'+name)))
+                states.append(json.loads(self.session.fs.read_text(job_dir+'/'+name)))
             except SandboxPathNotFoundError:
                 states.append(None)
         return tuple(states)
 
     def request_cancel(self, job_dir):
         self._active()
-        self.sandbox.fs.write_text(job_dir+'/cancel.request', '')
+        self.session.fs.write_text(job_dir+'/cancel.request', '')
+
+    def bootstrap_log(self, job_dir):
+        self._active()
+        body = self.session.fs.read_bytes(job_dir+'/bootstrap.log')
+        if len(body) > 1024 * 1024:
+            raise RuntimeError('Worker bootstrap log exceeds the capture limit')
+        return body
 
     def stop(self):
         # Never resume an old sandbox, or stop a later session with the same name.
         if self.is_running():
-            self.sandbox.stop()
+            self.session.stop()
 
 
 class SandboxGateway:
