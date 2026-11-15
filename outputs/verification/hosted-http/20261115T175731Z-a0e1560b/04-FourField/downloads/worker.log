@@ -1,0 +1,4 @@
+/vercel/sandbox/source/openstream/ff_fields.py:178: RuntimeWarning: divide by zero encountered in divide
+  return (c[1]/self.REV(i))**2+c[2]
+/vercel/sandbox/source/openstream/ff_fields.py:140: RuntimeWarning: invalid value encountered in multiply
+  force = .5*self.SHAPEFACTOR(i)*self.DRAGCOEF(i)*self.fluid.RHOG*difference**2

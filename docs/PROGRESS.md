@@ -2,22 +2,40 @@
 
 The user's requested full native port is **not yet complete**. Continue implementation and verification without replacing the preserved source or changing equations to obtain passing tests.
 
-## Password-protected hosted GUI — 2026-11-15 (in progress)
+## Password-protected hosted GUI — 2026-11-15 (deployed and tested)
 
 The user authorized publication at `https://openstream-py.vercel.app` and a
-shared password. The GitHub Login Connection is now configured. Vercel project
-`openstream-py` and its connected private Blob store are provisioned. Secrets
-are deployment environment variables, never repository files.
+shared password. Production deployment `dpl_4c32d5nAxmgZRSeFVVNBAqEKWQDY`
+serves exact committed source `ae7da5be960e1b4e20ad7a53e18c6b53b925d563`
+through Vercel's file-deployment API. The private Blob store is connected.
+Secrets are deployment environment variables, never repository files. Automatic
+GitHub deployment remains unconnected pending the account's OAuth authorization;
+the published application is usable independently of that optional connection.
 
 The separate `openstream.cloud` adapter retains the native GUI/solver worker,
 uses isolated Linux Sandbox jobs and durable private result manifests, and
 provides server-side login, CSRF, expiry and authenticated downloads. No existing
 top-level scientific module, governing equation, tolerance or default changed.
 `docs/HOSTED_GUI.md` documents architecture and reproducible setup. Focused tests
-include a real 100-cell Mixture child matching the nine physical and initialization
-profiles at rtol=1e-8, atol=0. Hosted deployment and all-four live baseline runs
-remain to be verified; local test doubles are not evidence of live compatibility.
-This infrastructure work does not advance scientific acceptance claims.
+include a real 100-cell Mixture child. All four live TUTORIAL1 baselines now
+converge and pass the 68 retained physical/initialization archive comparisons
+at rtol=1e-8, atol=0. Independent comparisons use the downloaded arrays.
+Cancellation, authentication, private downloads and logout passed. Local pytest:
+798 passed, two retained original warnings. GitHub Windows CI run 43743883420
+also passed. One desktop FourField chart and collapsed sidebar were visually
+checked. `docs/HOSTED_VERIFICATION.md` records exact evidence and limitations.
+
+Final live evidence: `outputs/verification/hosted-http/20261115T175731Z-a0e1560b/`.
+Earlier setup/export failures are retained in the two preceding HTTP sessions.
+Only the hosting wrapper was corrected: package metadata installation, actual
+provider collision handling, exact worker-session recovery and epoch input-file
+timestamps. All 25 top-level scientific module Git blobs remain identical to
+`e7ba765e9f3e75f482cea6f1fd9c3b38931680e9`. TwoFluid's existing physical-review
+failure and FourField's nonfinite initialization diagnostic entries remain
+reported. Acceptance rows API-012/014/016 gain evidence only; all criteria and
+scientific status axes are unchanged. Hosting is not full MATLAB parity or
+experimental validation. Resume scientific work from the control-study record
+below; keep all equations unchanged.
 
 ## Sawai relaxation and iteration controls — 2026-11-15
 

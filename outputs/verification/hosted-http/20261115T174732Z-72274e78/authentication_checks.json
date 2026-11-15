@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "anonymous /api/health",
+      "http_status": 401,
+      "passed": true
+    },
+    {
+      "check": "anonymous /api/schema",
+      "http_status": 401,
+      "passed": true
+    },
+    {
+      "check": "anonymous /api/runs",
+      "http_status": 401,
+      "passed": true
+    },
+    {
+      "check": "anonymous /assets/app.js",
+      "http_status": 401,
+      "passed": true
+    },
+    {
+      "check": "anonymous /cloud-assets/cloud.js",
+      "http_status": 401,
+      "passed": true
+    },
+    {
+      "check": "anonymous /files/00000000000000000000000000000000/results.zip",
+      "http_status": 401,
+      "passed": true
+    },
+    {
+      "check": "login without CSRF",
+      "http_status": 403,
+      "passed": true
+    },
+    {
+      "check": "wrong password",
+      "http_status": 401,
+      "passed": true
+    },
+    {
+      "check": "correct password",
+      "http_status": 200,
+      "passed": true
+    },
+    {
+      "check": "secure cookie attributes",
+      "passed": true,
+      "policies": [
+        {
+          "host_prefix": true,
+          "secure": true,
+          "httponly": true,
+          "samesite_lax": true,
+          "domain_absent": true
+        }
+      ]
+    },
+    {
+      "check": "authenticated POST without CSRF",
+      "http_status": 403,
+      "passed": true
+    },
+    {
+      "check": "cross-origin POST",
+      "http_status": 403,
+      "passed": true
+    },
+    {
+      "check": "authenticated API",
+      "http_status": 200,
+      "passed": true
+    }
+  ]
+}

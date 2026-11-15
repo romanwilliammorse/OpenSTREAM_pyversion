@@ -1,0 +1,543 @@
+{
+  "change_count": 0,
+  "changes": [],
+  "converged": true,
+  "created_at": "2026-11-15T17:57:38.359513+00:00",
+  "error": null,
+  "files": [
+    {
+      "name": "job_manifest.json",
+      "url": "/files/47b8e605097f476db27a6869e551b037/job_manifest.json"
+    },
+    {
+      "name": "output/axial.png",
+      "url": "/files/47b8e605097f476db27a6869e551b037/output/axial.png"
+    },
+    {
+      "name": "output/convergence.csv",
+      "url": "/files/47b8e605097f476db27a6869e551b037/output/convergence.csv"
+    },
+    {
+      "name": "output/gui_verification.json",
+      "url": "/files/47b8e605097f476db27a6869e551b037/output/gui_verification.json"
+    },
+    {
+      "name": "output/initialization.npz",
+      "url": "/files/47b8e605097f476db27a6869e551b037/output/initialization.npz"
+    },
+    {
+      "name": "output/inputs/00-submitted_inputs.json",
+      "url": "/files/47b8e605097f476db27a6869e551b037/output/inputs/00-submitted_inputs.json"
+    },
+    {
+      "name": "output/metadata.json",
+      "url": "/files/47b8e605097f476db27a6869e551b037/output/metadata.json"
+    },
+    {
+      "name": "output/profiles.csv",
+      "url": "/files/47b8e605097f476db27a6869e551b037/output/profiles.csv"
+    },
+    {
+      "name": "output/results.npz",
+      "url": "/files/47b8e605097f476db27a6869e551b037/output/results.npz"
+    },
+    {
+      "name": "output/wall_profiles.csv",
+      "url": "/files/47b8e605097f476db27a6869e551b037/output/wall_profiles.csv"
+    },
+    {
+      "name": "results.zip",
+      "url": "/files/47b8e605097f476db27a6869e551b037/results.zip"
+    },
+    {
+      "name": "status.json",
+      "url": "/files/47b8e605097f476db27a6869e551b037/status.json"
+    },
+    {
+      "name": "submitted_inputs.json",
+      "url": "/files/47b8e605097f476db27a6869e551b037/submitted_inputs.json"
+    },
+    {
+      "name": "worker.log",
+      "url": "/files/47b8e605097f476db27a6869e551b037/worker.log"
+    }
+  ],
+  "finished_at": "2026-11-15T17:58:05.448611+00:00",
+  "framework": "Mixture",
+  "id": "47b8e605097f476db27a6869e551b037",
+  "is_reference": true,
+  "phase": "Completed",
+  "physical": {
+    "diagnostics": {
+      "acceptance": {
+        "enthalpy": "relative error <= 1e-6 (denominator max(abs(Q),1 W))",
+        "mass": "max(1e-10 kg/s, 1e-6 * inlet mass flow)",
+        "momentum": "max(1e-6 Pa, input ERRORP)",
+        "void_fraction": "[-1e-12, 1+1e-12]"
+      },
+      "checks": {
+        "discrete_momentum_balance": true,
+        "enthalpy_balance": true,
+        "finite_primary_arrays": true,
+        "mass_balance": true,
+        "positive_pressure_density": true,
+        "void_fraction_bounds": true
+      },
+      "discrete_energy_max_residual_W_per_m": 7.421476766467094e-10,
+      "discrete_mass_max_residual_kg_s": 5.151065685105038e-13,
+      "discrete_momentum_max_residual_Pa": 0.00013021150903114176,
+      "discrete_wall_power_W": 87500.0,
+      "minimum_density_kg_m3": 40.624163091079616,
+      "minimum_pressure_Pa": 5843502.38794532,
+      "outlet_enthalpy_J_kg": 2389399.9857234764,
+      "outlet_vapor_quality": 0.7483937838378009,
+      "outlet_void_fraction": 0.9865154126655078,
+      "physical_consistency": true,
+      "prescribed_power_W": 87500.0,
+      "pressure_drop_Pa": 156497.61205467954,
+      "scope": "Steady integral enthalpy/mass balance, discrete momentum and basic bounds; not experimental validation.",
+      "steady_energy_relative_error": 1.1421218847057649e-08,
+      "steady_enthalpy_gain_W": 87499.99900064335,
+      "steady_mass_max_deviation_kg_s": 7.901748005911813e-10
+    },
+    "message": "Implemented consistency checks passed; experimental validation not performed.",
+    "status": "passed"
+  },
+  "progress": [
+    {
+      "framework": "Mixture",
+      "max_iterations": 6,
+      "phase": "initialization",
+      "point_converged": true,
+      "point_dH_J_kg": 0.06733244191855192,
+      "point_dP_Pa": 0.09969304781407118,
+      "point_dW_kg_s": 6.721030680612028e-08,
+      "time_dHV_J_kg": 0.0,
+      "time_dH_J_kg": 695941.5584840146,
+      "time_dP_Pa": 642899.3201571507,
+      "time_dWV_kg_s": 0.0,
+      "time_dW_kg_s": 0.20377007770765576,
+      "time_s": 1.0
+    },
+    {
+      "framework": "Mixture",
+      "max_iterations": 5,
+      "phase": "initialization",
+      "point_converged": true,
+      "point_dH_J_kg": 0.020149533171206713,
+      "point_dP_Pa": 0.09928233083337545,
+      "point_dW_kg_s": 1.0925341852041637e-07,
+      "time_dHV_J_kg": 0.0,
+      "time_dH_J_kg": 461381.90846779384,
+      "time_dP_Pa": 473253.6242906833,
+      "time_dWV_kg_s": 0.0,
+      "time_dW_kg_s": 0.19347140495515436,
+      "time_s": 2.0
+    },
+    {
+      "framework": "Mixture",
+      "max_iterations": 4,
+      "phase": "initialization",
+      "point_converged": true,
+      "point_dH_J_kg": 0.0030030556954443455,
+      "point_dP_Pa": 0.09878094028681517,
+      "point_dW_kg_s": 1.3141807073124845e-08,
+      "time_dHV_J_kg": 0.0,
+      "time_dH_J_kg": 106242.7140900786,
+      "time_dP_Pa": 11735.72656445112,
+      "time_dWV_kg_s": 0.0,
+      "time_dW_kg_s": 0.00918880181352029,
+      "time_s": 3.0
+    },
+    {
+      "framework": "Mixture",
+      "max_iterations": 3,
+      "phase": "initialization",
+      "point_converged": true,
+      "point_dH_J_kg": 0.01408441737294197,
+      "point_dP_Pa": 0.03837671224027872,
+      "point_dW_kg_s": 6.286328199656133e-08,
+      "time_dHV_J_kg": 0.0,
+      "time_dH_J_kg": 16403.016713687684,
+      "time_dP_Pa": 1250.4378940146416,
+      "time_dWV_kg_s": 0.0,
+      "time_dW_kg_s": 0.0009777397550650019,
+      "time_s": 4.0
+    },
+    {
+      "framework": "Mixture",
+      "max_iterations": 3,
+      "phase": "initialization",
+      "point_converged": true,
+      "point_dH_J_kg": 0.02859225170686841,
+      "point_dP_Pa": 0.08429548237472773,
+      "point_dW_kg_s": 2.5972526324080647e-08,
+      "time_dHV_J_kg": 0.0,
+      "time_dH_J_kg": 2087.268741858192,
+      "time_dP_Pa": 145.1280165007338,
+      "time_dWV_kg_s": 0.0,
+      "time_dW_kg_s": 0.00011758703018614758,
+      "time_s": 5.0
+    },
+    {
+      "framework": "Mixture",
+      "max_iterations": 3,
+      "phase": "initialization",
+      "point_converged": true,
+      "point_dH_J_kg": 0.09929798939265311,
+      "point_dP_Pa": 0.09800112899392843,
+      "point_dW_kg_s": 5.654947708710889e-08,
+      "time_dHV_J_kg": 0.0,
+      "time_dH_J_kg": 234.12835176847875,
+      "time_dP_Pa": 15.219901426695287,
+      "time_dWV_kg_s": 0.0,
+      "time_dW_kg_s": 1.3094324281023861e-05,
+      "time_s": 6.0
+    },
+    {
+      "framework": "Mixture",
+      "max_iterations": 2,
+      "phase": "initialization",
+      "point_converged": true,
+      "point_dH_J_kg": 0.09093839465640485,
+      "point_dP_Pa": 0.027247940190136433,
+      "point_dW_kg_s": 3.270050936976521e-08,
+      "time_dHV_J_kg": 0.0,
+      "time_dH_J_kg": 23.588676352985203,
+      "time_dP_Pa": 1.4369400320574641,
+      "time_dWV_kg_s": 0.0,
+      "time_dW_kg_s": 1.3188051578016946e-06,
+      "time_s": 7.0
+    },
+    {
+      "framework": "Mixture",
+      "max_iterations": 2,
+      "phase": "initialization",
+      "point_converged": true,
+      "point_dH_J_kg": 0.09183659474365413,
+      "point_dP_Pa": 0.0024630604311823845,
+      "point_dW_kg_s": 1.3100487833428431e-08,
+      "time_dHV_J_kg": 0.0,
+      "time_dH_J_kg": 2.15077419904992,
+      "time_dP_Pa": 0.12310621421784163,
+      "time_dWV_kg_s": 0.0,
+      "time_dW_kg_s": 1.2028970058919342e-07,
+      "time_s": 8.0
+    },
+    {
+      "framework": "Mixture",
+      "max_iterations": 2,
+      "phase": "initialization",
+      "point_converged": true,
+      "point_dH_J_kg": 0.09913064492866397,
+      "point_dP_Pa": 0.006056465208530426,
+      "point_dW_kg_s": 5.508473524540314e-09,
+      "time_dHV_J_kg": 0.0,
+      "time_dH_J_kg": 0.1778410063125193,
+      "time_dP_Pa": 0.01138914842158556,
+      "time_dWV_kg_s": 0.0,
+      "time_dW_kg_s": 9.944415763074588e-09,
+      "time_s": 9.0
+    }
+  ],
+  "reference": {
+    "archive": {
+      "bytes": 281077,
+      "file": "tutorial1_MixtureSolver.mat",
+      "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026",
+      "sha256": "43311c4c2ec3440cc3366f94df1216b425d4270268887b7fb7bf921c0fb9ccb0"
+    },
+    "atol": 0.0,
+    "coordinate_atol": 1e-12,
+    "experimental_validation": "not performed",
+    "limitations": [
+      "The archive producer's MATLAB, CoolProp and source versions are unknown.",
+      "Agreement does not establish physical consistency or full OpenSTREAM parity.",
+      "Supplementary iteration/diagnostic disagreements remain documented separately."
+    ],
+    "max_relative_error": 2.868669390003958e-13,
+    "message": "Archived steady and initialization profiles agree at rtol 1e-8, atol 0.",
+    "producer_metadata": {
+      "coolprop_version": null,
+      "matlab_version": null,
+      "note": "Archive header gives platform/date; serialized anonymous-function path includes R2024b but is not independent runtime-version proof.",
+      "source_commit": null
+    },
+    "records": [
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "W",
+        "max_absolute_error": 9.71445146547012e-17,
+        "max_relative_error": 1.3877787775953475e-15,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "U",
+        "max_absolute_error": 2.5934809855243657e-13,
+        "max_relative_error": 1.635870369003248e-14,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "H",
+        "max_absolute_error": 9.313225746154785e-10,
+        "max_relative_error": 4.0733218120261047e-16,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "liquid.W",
+        "max_absolute_error": 8.326672684688674e-17,
+        "max_relative_error": 1.9698848948049402e-15,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "liquid.U",
+        "max_absolute_error": 4.796163466380676e-13,
+        "max_relative_error": 1.6929101866260638e-14,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "liquid.H",
+        "max_absolute_error": 2.561137080192566e-09,
+        "max_relative_error": 2.1098023192368422e-15,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "vapor.W",
+        "max_absolute_error": 1.1796119636642288e-16,
+        "max_relative_error": 2.385112762374094e-13,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "vapor.U",
+        "max_absolute_error": 2.0250467969162855e-13,
+        "max_relative_error": 1.6495026220782754e-14,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "vapor.H",
+        "max_absolute_error": 2.0023435354232788e-08,
+        "max_relative_error": 7.190803302927345e-15,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "W",
+        "max_absolute_error": 5.551115123125783e-16,
+        "max_relative_error": 2.820961234346569e-15,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          10,
+          101
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "U",
+        "max_absolute_error": 7.034373084024992e-13,
+        "max_relative_error": 2.0039412913224238e-14,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          10,
+          101
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "H",
+        "max_absolute_error": 2.7939677238464355e-09,
+        "max_relative_error": 1.2174429348377522e-15,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          10,
+          101
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "liquid.W",
+        "max_absolute_error": 2.220446049250313e-16,
+        "max_relative_error": 5.118147224937993e-15,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          10,
+          101
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "liquid.U",
+        "max_absolute_error": 7.389644451905042e-13,
+        "max_relative_error": 1.9903090376399583e-14,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          10,
+          101
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "liquid.H",
+        "max_absolute_error": 2.561137080192566e-09,
+        "max_relative_error": 2.1098023192368422e-15,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          10,
+          101
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "vapor.W",
+        "max_absolute_error": 4.163336342344337e-16,
+        "max_relative_error": 2.868669390003958e-13,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          10,
+          101
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "vapor.U",
+        "max_absolute_error": 6.536993168992922e-13,
+        "max_relative_error": 1.9766767839574926e-14,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          10,
+          101
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "vapor.H",
+        "max_absolute_error": 1.7462298274040222e-07,
+        "max_relative_error": 6.271049392087911e-14,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          10,
+          101
+        ],
+        "unit": "J/kg"
+      }
+    ],
+    "rtol": 1e-08,
+    "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+    "status": "passed"
+  },
+  "status": "completed"
+}

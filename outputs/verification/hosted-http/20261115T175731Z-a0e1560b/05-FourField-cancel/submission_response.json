@@ -1,0 +1,25 @@
+{
+  "http_status": 202,
+  "state": {
+    "change_count": 0,
+    "changes": [],
+    "converged": null,
+    "created_at": "2026-11-15T18:00:38.555332+00:00",
+    "error": null,
+    "files": [],
+    "framework": "FourField",
+    "id": "327cc37e04614aea8c071c7d9d112aa4",
+    "is_reference": true,
+    "phase": "Starting",
+    "physical": {
+      "message": "Consistency checks run after the calculation.",
+      "status": "not_checked"
+    },
+    "progress": [],
+    "reference": {
+      "message": "Comparison runs after the calculation.",
+      "status": "not_compared"
+    },
+    "status": "queued"
+  }
+}

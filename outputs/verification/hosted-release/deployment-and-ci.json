@@ -1,0 +1,129 @@
+{
+  "schema": "openstream-hosted-deployment-receipt-v1",
+  "production_url": "https://openstream-py.vercel.app",
+  "deployment": {
+    "id": "dpl_4c32d5nAxmgZRSeFVVNBAqEKWQDY",
+    "name": "openstream-py",
+    "url": "openstream-931ybog0b-rwmorse-8427.vercel.app",
+    "type": "LAMBDAS",
+    "state": "READY",
+    "createdAt": 1794765391346,
+    "creator": {
+      "uid": "RbKAUGfZIjVoiWqvJf4WMEsD",
+      "username": "rwmorse-8427"
+    },
+    "project": {
+      "id": "prj_tWK9pFywBrkziKMK9VXOK9Co6IEE",
+      "name": "openstream-py",
+      "framework": "flask"
+    },
+    "meta": {
+      "githubCommitRef": "main",
+      "githubCommitSha": "ae7da5be960e1b4e20ad7a53e18c6b53b925d563",
+      "githubCommitMessage": "Unknown",
+      "githubRepo": "OpenSTREAM_pyversion",
+      "githubOrg": "romanwilliammorse"
+    },
+    "alias": [
+      "openstream-py.vercel.app",
+      "openstream-py-rwmorse-8427.vercel.app"
+    ],
+    "target": "production",
+    "regions": [
+      "iad1"
+    ],
+    "buildingAt": 1794765392192,
+    "ready": 1794765421640,
+    "readyState": "READY",
+    "aliasError": null
+  },
+  "ci": {
+    "run_id": 43743883420,
+    "html_url": "https://github.com/romanwilliammorse/OpenSTREAM_pyversion/actions/runs/43743883420",
+    "jobs": [
+      {
+        "id": 132902805367,
+        "name": "windows",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 43743883420,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v7.0.1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v7.1.0",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run actions/setup-node@v7.1.0",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Install pinned dependencies and package",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Numerical and GUI tests",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Frontend logic",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Build installable distributions",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-node@v7.1.0",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Post Run actions/setup-python@v7.1.0",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v7.0.1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      }
+    ]
+  },
+  "automatic_github_deployment": "not_connected"
+}

@@ -1,0 +1,25 @@
+{
+  "http_status": 202,
+  "state": {
+    "change_count": 0,
+    "changes": [],
+    "converged": null,
+    "created_at": "2026-11-15T17:58:10.387220+00:00",
+    "error": null,
+    "files": [],
+    "framework": "TwoFluid",
+    "id": "31bdc0a96f194ec1a3dac210568e4b28",
+    "is_reference": true,
+    "phase": "Starting",
+    "physical": {
+      "message": "Consistency checks run after the calculation.",
+      "status": "not_checked"
+    },
+    "progress": [],
+    "reference": {
+      "message": "Comparison runs after the calculation.",
+      "status": "not_compared"
+    },
+    "status": "queued"
+  }
+}

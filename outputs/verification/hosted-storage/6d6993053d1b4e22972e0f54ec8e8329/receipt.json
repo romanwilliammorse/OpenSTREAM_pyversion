@@ -1,0 +1,11 @@
+{
+  "observed_at": "2026-11-15T17:47:13.922772+00:00",
+  "namespace": "openstream/v1/diagnostics/limiter-6d6993053d1b4e22972e0f54ec8e8329/",
+  "parallel_claims": 8,
+  "admitted": 5,
+  "denied": 3,
+  "immutable_objects": 5,
+  "anonymous_blob_http": 403,
+  "authenticated_readbacks": 5,
+  "passed": true
+}

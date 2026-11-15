@@ -1,0 +1,309 @@
+{
+  "framework": "TwoFluid",
+  "started_at": "2026-11-15T17:58:10.533253+00:00",
+  "kind": "baseline",
+  "passed": true,
+  "run_id": "31bdc0a96f194ec1a3dac210568e4b28",
+  "terminal_observed": true,
+  "failures": [],
+  "downloads": [
+    {
+      "name": "output/gui_verification.json",
+      "sha256": "e11d989038bbb8630b75213fea77472e8c6840a33bca61fddcbe234d08f29811",
+      "size": 14817
+    },
+    {
+      "name": "output/metadata.json",
+      "sha256": "1ef51ad1094db63d941c9f7608e4cd91b7ce81ea66397ad8b2ba688646149bcc",
+      "size": 34551
+    },
+    {
+      "name": "output/mixture/metadata.json",
+      "sha256": "1daeb7860da66cc406bd38521baf6e12179d8fa64fb40d3fff4e55a2b8839d5e",
+      "size": 13074
+    },
+    {
+      "name": "results.zip",
+      "sha256": "8ee1ffa1263d920e752736d50348128e811785bfadc4e7a18194997c2424015c",
+      "size": 895179
+    },
+    {
+      "name": "submitted_inputs.json",
+      "sha256": "bd16c72886edbaec02ead31f495c13187ece0e0ea31f002ee34b0193a1b0e12a",
+      "size": 6831
+    },
+    {
+      "name": "worker.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    }
+  ],
+  "submission_attempted": true,
+  "status": "completed",
+  "converged": true,
+  "reference": {
+    "archive": {
+      "bytes": 418905,
+      "file": "tutorial1_TwoFluidSolver.mat",
+      "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026",
+      "sha256": "40f0c9a8f080d6ffe3887947dc5794eb756b5fa0e2ce650ff37a88003e69798d"
+    },
+    "atol": 0.0,
+    "coordinate_atol": 1e-12,
+    "experimental_validation": "not performed",
+    "limitations": [
+      "The archive producer's MATLAB, CoolProp and source versions are unknown.",
+      "Agreement does not establish physical consistency or full OpenSTREAM parity.",
+      "Supplementary iteration/diagnostic disagreements remain documented separately."
+    ],
+    "max_relative_error": 2.385112762374094e-13,
+    "message": "Archived steady and initialization profiles agree at rtol 1e-8, atol 0.",
+    "producer_metadata": {
+      "coolprop_version": null,
+      "matlab_version": null,
+      "source_commit": null
+    },
+    "records": [
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "liquid.W",
+        "max_absolute_error": 1.0408340855860843e-16,
+        "max_relative_error": 6.0091675896731515e-15,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "liquid.U",
+        "max_absolute_error": 1.2789769243681803e-13,
+        "max_relative_error": 9.457861076893942e-15,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "liquid.H",
+        "max_absolute_error": 2.3283064365386963e-09,
+        "max_relative_error": 1.9597567442505974e-15,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "vapor.W",
+        "max_absolute_error": 1.0408340855860843e-16,
+        "max_relative_error": 2.205803775350302e-14,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "vapor.U",
+        "max_absolute_error": 2.5579538487363607e-13,
+        "max_relative_error": 1.6540467064406292e-14,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "vapor.H",
+        "max_absolute_error": 4.6566128730773926e-09,
+        "max_relative_error": 1.6722798378900717e-15,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "liquid.W",
+        "max_absolute_error": 1.5959455978986625e-16,
+        "max_relative_error": 9.218460222865137e-15,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          15,
+          101
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "liquid.U",
+        "max_absolute_error": 4.796163466380676e-13,
+        "max_relative_error": 1.6929101866260638e-14,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          15,
+          101
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "liquid.H",
+        "max_absolute_error": 3.4924596548080444e-09,
+        "max_relative_error": 2.9357020882274382e-15,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          15,
+          101
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "vapor.W",
+        "max_absolute_error": 1.1796119636642288e-16,
+        "max_relative_error": 2.385112762374094e-13,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          15,
+          101
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "vapor.U",
+        "max_absolute_error": 2.7355895326763857e-13,
+        "max_relative_error": 1.6722570660270925e-14,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          15,
+          101
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "vapor.H",
+        "max_absolute_error": 4.6566128730773926e-09,
+        "max_relative_error": 1.6722798378900717e-15,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          15,
+          101
+        ],
+        "unit": "J/kg"
+      }
+    ],
+    "rtol": 1e-08,
+    "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+    "status": "passed"
+  },
+  "physical": {
+    "diagnostics": {
+      "area_closure_relative_tolerance": 1e-06,
+      "by_time": [
+        {
+          "energy_balance_residual_W": 30.049663123398204,
+          "mass_balance_residual_kg_s": -3.0761341617002724e-07,
+          "max_area_closure_relative": 0.41056107069003445,
+          "max_source_energy_identity_residual_W_m": 7.275957614183426e-12,
+          "outlet_area_closure_relative": 0.03467311857852917,
+          "steady_discrete_product_term_W": 30.886881821304677,
+          "time_s": 0.0
+        }
+      ],
+      "energy_balance_residual_W": 30.049663123398204,
+      "limitation": "Numerical convergence does not establish physical area closure. Agreement with an upstream reference is a separate case-specific check; see the baseline verification report.",
+      "mass_balance_residual_kg_s": -3.0761341617002724e-07,
+      "max_area_closure_relative": 0.41056107069003445,
+      "max_source_energy_identity_residual_W_m": 7.275957614183426e-12,
+      "outlet_area_closure_relative": 0.03467311857852917,
+      "physical_consistency": false
+    },
+    "message": "Physical consistency checks failed. Inspect diagnostics; numerical agreement does not establish physical validity.",
+    "status": "failed"
+  },
+  "array_checks": {
+    "shape_and_core_finite_passed": true,
+    "all_arrays_finite": true,
+    "scope": "All array shapes and numeric types; finite primary/archive profiles and coordinates. Nonfinite diagnostic entries are reported, not silently removed or made a new solver criterion."
+  },
+  "independent_archive_comparison": {
+    "status": "passed",
+    "message": "Archived steady and initialization profiles agree at rtol 1e-8, atol 0.",
+    "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+    "rtol": 1e-08,
+    "atol": 0.0,
+    "coordinate_atol": 1e-12,
+    "max_relative_error": 2.385112762374094e-13,
+    "experimental_validation": "not performed",
+    "limitations": [
+      "The archive producer's MATLAB, CoolProp and source versions are unknown.",
+      "Agreement does not establish physical consistency or full OpenSTREAM parity.",
+      "Supplementary iteration/diagnostic disagreements remain documented separately."
+    ],
+    "archive": {
+      "file": "tutorial1_TwoFluidSolver.mat",
+      "sha256": "40f0c9a8f080d6ffe3887947dc5794eb756b5fa0e2ce650ff37a88003e69798d",
+      "bytes": 418905,
+      "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026"
+    },
+    "producer_metadata": {
+      "matlab_version": null,
+      "coolprop_version": null,
+      "source_commit": null
+    }
+  },
+  "finished_at": "2026-11-15T17:58:52.857105+00:00"
+}

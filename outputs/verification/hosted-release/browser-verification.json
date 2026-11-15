@@ -1,0 +1,70 @@
+{
+  "schema": "openstream-hosted-browser-verification-v1",
+  "recorded_at": "2026-11-15T18:08:38.194292+00:00",
+  "status": "passed_scoped",
+  "origin": "https://openstream-py.vercel.app",
+  "source_git_commit": "ae7da5be960e1b4e20ad7a53e18c6b53b925d563",
+  "deployment_id": "dpl_4c32d5nAxmgZRSeFVVNBAqEKWQDY",
+  "scope": "One retained desktop viewport showing an existing completed FourField TUTORIAL1 result; screenshot review is separate from HTTP/numerical verification.",
+  "screenshot": {
+    "file": "outputs/verification/hosted-release/hosted-fourfield.png",
+    "sha256": "d015d49480bdfdf67dad448f4689be18fd36296e6dd9e8ccdd6ba9a5f0ed6aa5",
+    "size": 73996,
+    "dimensions_px": [
+      1905,
+      904
+    ]
+  },
+  "displayed_case": {
+    "framework": "FourField",
+    "label": "Four-field · TUTORIAL1",
+    "run_id_from_live_verification": "56c656bbe0bd4f6e908c190ab26d1f83",
+    "run_id_visible_in_screenshot": false
+  },
+  "observations": [
+    {
+      "observer": "coordinating browser operator",
+      "method": "live browser observation reported to reviewer",
+      "observation": "Model picker verified in the hosted application; the existing FourField results view and its plotted output were captured.",
+      "limit": "No claim that every dropdown choice or history action was exercised."
+    },
+    {
+      "observer": "independent screenshot reviewer",
+      "method": "view_image of the saved PNG",
+      "observation": "Four-field model selector, collapsed Saved runs control, OpenSTREAM logo, Log out control, Inputs/Results tabs and Reference inputs badge are visible."
+    },
+    {
+      "observer": "independent screenshot reviewer",
+      "method": "view_image of the saved PNG",
+      "observation": "The completed result displays Converged, Archived profiles agree and Informational diagnostics in separate panels."
+    },
+    {
+      "observer": "independent screenshot reviewer",
+      "method": "view_image of the saved PNG",
+      "observation": "Axial-profile controls show Physical result, Mass flow rate and Final · t = 0 s; the chart has a Mass flow rate (kg/s) vertical-axis label and plotted curves. Save PNG, Check and Run controls are visible."
+    },
+    {
+      "observer": "independent screenshot reviewer",
+      "method": "view_image of the saved PNG",
+      "observation": "The supplied desktop viewport has readable, separate model/status/chart controls; the page continues below the captured viewport."
+    }
+  ],
+  "limitations": [
+    "One desktop viewport only; mobile layouts, every plot selection and every control interaction were not verified by this screenshot.",
+    "The full lower chart, horizontal-axis label and legend are outside the captured viewport; no complete-figure layout assertion is made.",
+    "Visible buttons do not establish that their actions were exercised; HTTP authentication, cancellation and downloads are evidenced separately.",
+    "A screenshot is not numerical verification, experimental validation or proof of complete MATLAB parity."
+  ],
+  "related_evidence": [
+    "outputs/verification/hosted-http/20261115T175731Z-a0e1560b/summary.json",
+    "outputs/verification/hosted-release/local-pytest.txt",
+    "docs/HOSTED_VERIFICATION.md"
+  ],
+  "ci": {
+    "run_id": 43743883420,
+    "status": "success",
+    "url": "https://github.com/romanwilliammorse/OpenSTREAM_pyversion/actions/runs/43743883420",
+    "source": "coordinating operator verified provider result; separate CI receipt owns exact job details"
+  },
+  "secrets_or_private_blob_urls_recorded": false
+}

@@ -1,0 +1,56 @@
+{
+  "framework": "ThreeField",
+  "started_at": "2026-11-15T17:54:43.273302+00:00",
+  "kind": "baseline",
+  "passed": false,
+  "run_id": "3d93cb801b014d5face5506027219f44",
+  "terminal_observed": true,
+  "failures": [
+    "Hosted worker did not complete successfully.",
+    "Hosted archive comparison did not pass."
+  ],
+  "downloads": [
+    {
+      "name": "output/gui_verification.json",
+      "sha256": "191743727a0c478e57d4277cb0fb626cbfb531c254b5721b131658db5bcbc7a9",
+      "size": 17351
+    },
+    {
+      "name": "output/metadata.json",
+      "sha256": "e9efe489e39e20948a637782ecdfb62221f16dd90cf5553a4ef272ad3142f300",
+      "size": 39685
+    },
+    {
+      "name": "output/mixture/metadata.json",
+      "sha256": "4b9aa2366fc955268c28663e9225abab5550385aae5ba1f3048016466fa4d18e",
+      "size": 13067
+    },
+    {
+      "name": "results.zip",
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+      "size": 22
+    },
+    {
+      "name": "submitted_inputs.json",
+      "sha256": "345a3c9668521c7ef0617d58db6e7559865427ef54d05fef983d09e5b5ff2b77",
+      "size": 6837
+    },
+    {
+      "name": "worker.log",
+      "sha256": "4310a8fab86e7a6549fd264b5de1d0f52012e1b1961c36ad12fb2c7d0423a472",
+      "size": 886
+    }
+  ],
+  "submission_attempted": true,
+  "status": "failed",
+  "converged": true,
+  "reference": {
+    "message": "Comparison runs after the calculation.",
+    "status": "not_compared"
+  },
+  "physical": {
+    "message": "Consistency checks run after the calculation.",
+    "status": "not_checked"
+  },
+  "finished_at": "2026-11-15T17:55:19.971131+00:00"
+}

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/vercel/sandbox/source/openstream/gui_worker.py", line 141, in _run_job_locked
+    archive.write(directory/'submitted_inputs.json', 'submitted_inputs.json')
+  File "/vercel/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/zipfile/__init__.py", line 1903, in write
+    zinfo = ZipInfo.from_file(filename, arcname,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vercel/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/zipfile/__init__.py", line 589, in from_file
+    zinfo = cls(arcname, date_time)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vercel/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/zipfile/__init__.py", line 414, in __init__
+    raise ValueError('ZIP does not support timestamps before 1980')
+ValueError: ZIP does not support timestamps before 1980

@@ -1,0 +1,208 @@
+{
+  "status": "passed",
+  "message": "Archived steady and initialization profiles agree at rtol 1e-8, atol 0.",
+  "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+  "rtol": 1e-08,
+  "atol": 0.0,
+  "coordinate_atol": 1e-12,
+  "records": [
+    {
+      "passed": true,
+      "unit": "kg/s",
+      "shape": [
+        1,
+        101
+      ],
+      "max_absolute_error": 1.0408340855860843e-16,
+      "max_relative_error": 6.0091675896731515e-15,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "physical",
+      "key": "liquid.W",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "m/s",
+      "shape": [
+        1,
+        101
+      ],
+      "max_absolute_error": 1.2789769243681803e-13,
+      "max_relative_error": 9.457861076893942e-15,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "physical",
+      "key": "liquid.U",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "J/kg",
+      "shape": [
+        1,
+        101
+      ],
+      "max_absolute_error": 2.3283064365386963e-09,
+      "max_relative_error": 1.9597567442505974e-15,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "physical",
+      "key": "liquid.H",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "kg/s",
+      "shape": [
+        1,
+        101
+      ],
+      "max_absolute_error": 1.0408340855860843e-16,
+      "max_relative_error": 2.205803775350302e-14,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "physical",
+      "key": "vapor.W",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "m/s",
+      "shape": [
+        1,
+        101
+      ],
+      "max_absolute_error": 2.5579538487363607e-13,
+      "max_relative_error": 1.6540467064406292e-14,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "physical",
+      "key": "vapor.U",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "J/kg",
+      "shape": [
+        1,
+        101
+      ],
+      "max_absolute_error": 4.6566128730773926e-09,
+      "max_relative_error": 1.6722798378900717e-15,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "physical",
+      "key": "vapor.H",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "kg/s",
+      "shape": [
+        15,
+        101
+      ],
+      "max_absolute_error": 1.5959455978986625e-16,
+      "max_relative_error": 9.218460222865137e-15,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "initialization",
+      "key": "liquid.W",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "m/s",
+      "shape": [
+        15,
+        101
+      ],
+      "max_absolute_error": 4.796163466380676e-13,
+      "max_relative_error": 1.6929101866260638e-14,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "initialization",
+      "key": "liquid.U",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "J/kg",
+      "shape": [
+        15,
+        101
+      ],
+      "max_absolute_error": 3.4924596548080444e-09,
+      "max_relative_error": 2.9357020882274382e-15,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "initialization",
+      "key": "liquid.H",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "kg/s",
+      "shape": [
+        15,
+        101
+      ],
+      "max_absolute_error": 1.1796119636642288e-16,
+      "max_relative_error": 2.385112762374094e-13,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "initialization",
+      "key": "vapor.W",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "m/s",
+      "shape": [
+        15,
+        101
+      ],
+      "max_absolute_error": 2.7355895326763857e-13,
+      "max_relative_error": 1.6722570660270925e-14,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "initialization",
+      "key": "vapor.U",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "J/kg",
+      "shape": [
+        15,
+        101
+      ],
+      "max_absolute_error": 4.6566128730773926e-09,
+      "max_relative_error": 1.6722798378900717e-15,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "initialization",
+      "key": "vapor.H",
+      "group": "core"
+    }
+  ],
+  "max_relative_error": 2.385112762374094e-13,
+  "experimental_validation": "not performed",
+  "limitations": [
+    "The archive producer's MATLAB, CoolProp and source versions are unknown.",
+    "Agreement does not establish physical consistency or full OpenSTREAM parity.",
+    "Supplementary iteration/diagnostic disagreements remain documented separately."
+  ],
+  "archive": {
+    "file": "tutorial1_TwoFluidSolver.mat",
+    "sha256": "40f0c9a8f080d6ffe3887947dc5794eb756b5fa0e2ce650ff37a88003e69798d",
+    "bytes": 418905,
+    "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026"
+  },
+  "producer_metadata": {
+    "matlab_version": null,
+    "coolprop_version": null,
+    "source_commit": null
+  }
+}

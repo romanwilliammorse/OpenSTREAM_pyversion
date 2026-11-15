@@ -1,0 +1,251 @@
+{
+  "origin": "https://openstream-py.vercel.app",
+  "started_at": "2026-11-15T17:53:20.328929+00:00",
+  "python": "3.12.14",
+  "cases": [
+    {
+      "framework": "Mixture",
+      "started_at": "2026-11-15T17:53:25.506105+00:00",
+      "kind": "baseline",
+      "passed": false,
+      "run_id": "549779f66eec4602a88667a28c279d5c",
+      "terminal_observed": true,
+      "failures": [
+        "Hosted worker did not complete successfully.",
+        "Hosted archive comparison did not pass."
+      ],
+      "downloads": [
+        {
+          "name": "output/gui_verification.json",
+          "sha256": "dd1a97f395637140bda0f486d238267a3e271c4bf9d0c96daaad96469d26a6c3",
+          "size": 17554
+        },
+        {
+          "name": "output/metadata.json",
+          "sha256": "cd1bb44bf933aa037dcccb39893290ba913a75a387f1a80f40f35d7b4cae65b6",
+          "size": 40802
+        },
+        {
+          "name": "results.zip",
+          "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+          "size": 22
+        },
+        {
+          "name": "submitted_inputs.json",
+          "sha256": "c8fc700fa067cddb0d3b397190810bd380ab2d273080f3e46be203552bfbb038",
+          "size": 6828
+        },
+        {
+          "name": "worker.log",
+          "sha256": "4310a8fab86e7a6549fd264b5de1d0f52012e1b1961c36ad12fb2c7d0423a472",
+          "size": 886
+        }
+      ],
+      "submission_attempted": true,
+      "status": "failed",
+      "converged": true,
+      "reference": {
+        "message": "Comparison runs after the calculation.",
+        "status": "not_compared"
+      },
+      "physical": {
+        "message": "Consistency checks run after the calculation.",
+        "status": "not_checked"
+      },
+      "finished_at": "2026-11-15T17:54:01.767085+00:00"
+    },
+    {
+      "framework": "TwoFluid",
+      "started_at": "2026-11-15T17:54:01.770778+00:00",
+      "kind": "baseline",
+      "passed": false,
+      "run_id": "5a59cdf152414d5fb522b6f179dfcd16",
+      "terminal_observed": true,
+      "failures": [
+        "Hosted worker did not complete successfully.",
+        "Hosted archive comparison did not pass."
+      ],
+      "downloads": [
+        {
+          "name": "output/gui_verification.json",
+          "sha256": "e11d989038bbb8630b75213fea77472e8c6840a33bca61fddcbe234d08f29811",
+          "size": 14817
+        },
+        {
+          "name": "output/metadata.json",
+          "sha256": "7af67ea9b6ab57728abf43f8b379e5576c0dc4566006030c04971321363181a7",
+          "size": 34551
+        },
+        {
+          "name": "output/mixture/metadata.json",
+          "sha256": "f3b2771b7bfdeb87bea4530f63d027dd36168f22af868c78269d5fb875b7e353",
+          "size": 13074
+        },
+        {
+          "name": "results.zip",
+          "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+          "size": 22
+        },
+        {
+          "name": "submitted_inputs.json",
+          "sha256": "bd16c72886edbaec02ead31f495c13187ece0e0ea31f002ee34b0193a1b0e12a",
+          "size": 6831
+        },
+        {
+          "name": "worker.log",
+          "sha256": "4310a8fab86e7a6549fd264b5de1d0f52012e1b1961c36ad12fb2c7d0423a472",
+          "size": 886
+        }
+      ],
+      "submission_attempted": true,
+      "status": "failed",
+      "converged": true,
+      "reference": {
+        "message": "Comparison runs after the calculation.",
+        "status": "not_compared"
+      },
+      "physical": {
+        "message": "Consistency checks run after the calculation.",
+        "status": "not_checked"
+      },
+      "finished_at": "2026-11-15T17:54:43.268067+00:00"
+    },
+    {
+      "framework": "ThreeField",
+      "started_at": "2026-11-15T17:54:43.273302+00:00",
+      "kind": "baseline",
+      "passed": false,
+      "run_id": "3d93cb801b014d5face5506027219f44",
+      "terminal_observed": true,
+      "failures": [
+        "Hosted worker did not complete successfully.",
+        "Hosted archive comparison did not pass."
+      ],
+      "downloads": [
+        {
+          "name": "output/gui_verification.json",
+          "sha256": "191743727a0c478e57d4277cb0fb626cbfb531c254b5721b131658db5bcbc7a9",
+          "size": 17351
+        },
+        {
+          "name": "output/metadata.json",
+          "sha256": "e9efe489e39e20948a637782ecdfb62221f16dd90cf5553a4ef272ad3142f300",
+          "size": 39685
+        },
+        {
+          "name": "output/mixture/metadata.json",
+          "sha256": "4b9aa2366fc955268c28663e9225abab5550385aae5ba1f3048016466fa4d18e",
+          "size": 13067
+        },
+        {
+          "name": "results.zip",
+          "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+          "size": 22
+        },
+        {
+          "name": "submitted_inputs.json",
+          "sha256": "345a3c9668521c7ef0617d58db6e7559865427ef54d05fef983d09e5b5ff2b77",
+          "size": 6837
+        },
+        {
+          "name": "worker.log",
+          "sha256": "4310a8fab86e7a6549fd264b5de1d0f52012e1b1961c36ad12fb2c7d0423a472",
+          "size": 886
+        }
+      ],
+      "submission_attempted": true,
+      "status": "failed",
+      "converged": true,
+      "reference": {
+        "message": "Comparison runs after the calculation.",
+        "status": "not_compared"
+      },
+      "physical": {
+        "message": "Consistency checks run after the calculation.",
+        "status": "not_checked"
+      },
+      "finished_at": "2026-11-15T17:55:19.971131+00:00"
+    }
+  ],
+  "driver_sha256": "1575088d17aaeeeaf9d0aee7c418b759f2499afad7d731e27f5223f31ba9ebc4",
+  "scope": "Hosted HTTP functionality and unchanged archived TUTORIAL1 profiles; not experimental validation or full parity.",
+  "artifacts": "Authentication payloads, headers, cookies and CSRF tokens are not recorded. Numerical artifacts are preserved byte-for-byte.",
+  "authentication": {
+    "passed": true,
+    "checks": [
+      {
+        "check": "anonymous /api/health",
+        "http_status": 401,
+        "passed": true
+      },
+      {
+        "check": "anonymous /api/schema",
+        "http_status": 401,
+        "passed": true
+      },
+      {
+        "check": "anonymous /api/runs",
+        "http_status": 401,
+        "passed": true
+      },
+      {
+        "check": "anonymous /assets/app.js",
+        "http_status": 401,
+        "passed": true
+      },
+      {
+        "check": "anonymous /cloud-assets/cloud.js",
+        "http_status": 401,
+        "passed": true
+      },
+      {
+        "check": "anonymous /files/00000000000000000000000000000000/results.zip",
+        "http_status": 401,
+        "passed": true
+      },
+      {
+        "check": "login without CSRF",
+        "http_status": 403,
+        "passed": true
+      },
+      {
+        "check": "wrong password",
+        "http_status": 401,
+        "passed": true
+      },
+      {
+        "check": "correct password",
+        "http_status": 200,
+        "passed": true
+      },
+      {
+        "check": "secure cookie attributes",
+        "passed": true,
+        "policies": [
+          {
+            "host_prefix": true,
+            "secure": true,
+            "httponly": true,
+            "samesite_lax": true,
+            "domain_absent": true
+          }
+        ]
+      },
+      {
+        "check": "authenticated POST without CSRF",
+        "http_status": 403,
+        "passed": true
+      },
+      {
+        "check": "cross-origin POST",
+        "http_status": 403,
+        "passed": true
+      },
+      {
+        "check": "authenticated API",
+        "http_status": 200,
+        "passed": true
+      }
+    ]
+  }
+}

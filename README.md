@@ -28,6 +28,19 @@ sensitive to the control setting. Equations, closures, tolerances and defaults
 are unchanged. The supplemental screen is not an experimental or new closure
 criterion, and no MATLAB-equivalence status is promoted.
 
+## Hosted application
+
+Open [openstream-py.vercel.app](https://openstream-py.vercel.app) and enter the
+shared password supplied by the project owner. Select a model, edit inputs,
+then choose **Check** and **Run**. Results provide interactive profiles and
+authenticated ZIP downloads. Hosted calculations use the same native Python
+worker, with a 40-minute job limit including setup and export.
+
+All four hosted TUTORIAL1 workflows passed the retained archived-profile
+comparisons. See [hosting instructions](docs/HOSTED_GUI.md) and the
+[hosted verification report](docs/HOSTED_VERIFICATION.md) for the tested scope,
+retained failures and scientific limitations.
+
 ## Install and run on Windows
 
 Install 64-bit Python 3.12 and Git, then run in PowerShell:

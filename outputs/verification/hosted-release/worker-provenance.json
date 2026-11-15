@@ -1,0 +1,731 @@
+{
+  "schema": "openstream-hosted-provenance-v1",
+  "retrieved_at": "2026-11-15T18:09:06.056106+00:00",
+  "source_comparison": {
+    "base_commit": "e7ba765e9f3e75f482cea6f1fd9c3b38931680e9",
+    "deployed_commit": "ae7da5be960e1b4e20ad7a53e18c6b53b925d563",
+    "all_equal": true,
+    "module_count": 25,
+    "sha256_by_path": {
+      "src/openstream/__init__.py": "3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b",
+      "src/openstream/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "src/openstream/annular.py": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+      "src/openstream/cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+      "src/openstream/database.py": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
+      "src/openstream/experimental_comparison.py": "03c12bcfe1e8de115092d0ea1a19e21ec177c5983c575b63183a67453b3fd1f4",
+      "src/openstream/ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+      "src/openstream/fields.py": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+      "src/openstream/fourfield.py": "5dafef4ee0d26f71e9e9083a61304b6d06f36e5a852f6981f0092269064692c8",
+      "src/openstream/gui.py": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
+      "src/openstream/gui_launcher.py": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+      "src/openstream/gui_lock.py": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+      "src/openstream/gui_reference.py": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+      "src/openstream/gui_schema.py": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+      "src/openstream/gui_worker.py": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
+      "src/openstream/inputs.py": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+      "src/openstream/multifield_output.py": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+      "src/openstream/numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+      "src/openstream/output.py": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+      "src/openstream/plotting.py": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+      "src/openstream/properties.py": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+      "src/openstream/solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+      "src/openstream/tf_fields.py": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+      "src/openstream/threefield.py": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+      "src/openstream/twofluid.py": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c"
+    }
+  },
+  "runs": [
+    {
+      "id": "47b8e605097f476db27a6869e551b037",
+      "framework": "Mixture",
+      "submitted_inputs_sha256": "c8fc700fa067cddb0d3b397190810bd380ab2d273080f3e46be203552bfbb038",
+      "source": {
+        "git_commit": "ae7da5be960e1b4e20ad7a53e18c6b53b925d563",
+        "module_sha256": {
+          "src/openstream/__init__.py": "3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b",
+          "src/openstream/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/openstream/annular.py": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+          "src/openstream/cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+          "src/openstream/database.py": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
+          "src/openstream/experimental_comparison.py": "03c12bcfe1e8de115092d0ea1a19e21ec177c5983c575b63183a67453b3fd1f4",
+          "src/openstream/ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+          "src/openstream/fields.py": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+          "src/openstream/fourfield.py": "5dafef4ee0d26f71e9e9083a61304b6d06f36e5a852f6981f0092269064692c8",
+          "src/openstream/gui.py": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
+          "src/openstream/gui_launcher.py": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+          "src/openstream/gui_lock.py": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+          "src/openstream/gui_reference.py": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+          "src/openstream/gui_schema.py": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+          "src/openstream/gui_worker.py": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
+          "src/openstream/inputs.py": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+          "src/openstream/multifield_output.py": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+          "src/openstream/numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+          "src/openstream/output.py": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+          "src/openstream/plotting.py": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+          "src/openstream/properties.py": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+          "src/openstream/solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+          "src/openstream/tf_fields.py": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+          "src/openstream/threefield.py": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+          "src/openstream/twofluid.py": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c"
+        },
+        "package_version": "0.2.1"
+      },
+      "environment": {
+        "dependency_lock_sha256": "453cc2e7dd0d0b554c7dcc7348440d3bd05c93b2ed8ec897446a8e3a38ec2f51",
+        "python_requirement": "3.12",
+        "python_version": "3.12.16",
+        "sandbox_image": "vercel/sandbox/universal@sha256:9b2669397f26336812ec6835c2f67db6a546074cbabb05db93bf5e669f71ec5d"
+      },
+      "actual_environment": {
+        "implementation": "CPython",
+        "packages": {
+          "CoolProp": "8.0.0",
+          "matplotlib": "3.11.2",
+          "numpy": "2.5.4",
+          "openstream-python": "0.2.1",
+          "scipy": "1.18.1",
+          "vercel-blob": "0.5.0",
+          "vercel-sandbox": "0.10.0"
+        },
+        "platform": "Linux-6.18.56-x86_64-with-glibc2.43",
+        "python": "3.12.16"
+      },
+      "runtime": {
+        "sandbox_id": "openstream-47b8e605097f476db27a6869e551b037",
+        "sandbox_name": "openstream-47b8e605097f476db27a6869e551b037",
+        "session_id": "sbx_EmV0F0QE8z6OcQ1sDvmXdMlqMBzL",
+        "timeout_seconds": 2400
+      },
+      "status": "completed",
+      "published_at": "2026-11-15T17:58:06.832730+00:00",
+      "publication": {
+        "child_exit_code": 0,
+        "complete": true,
+        "error_type": null,
+        "stage": "published"
+      },
+      "artifacts": {
+        "job_manifest.json": {
+          "sha256": "dd8d2703b528478bac8437d2bcb56900b844061cf935877930ad3033ac71b6c8",
+          "size": 4163
+        },
+        "output/axial.png": {
+          "sha256": "40443130cfed1af2858ad61828363539cc85fa6398cf7a47c0417b0924979f7b",
+          "size": 306642
+        },
+        "output/convergence.csv": {
+          "sha256": "945eccb4edb060721bd6ad95a152ab99f014d3df1070d1384e6dcd2216239e21",
+          "size": 1565
+        },
+        "output/gui_verification.json": {
+          "sha256": "dd1a97f395637140bda0f486d238267a3e271c4bf9d0c96daaad96469d26a6c3",
+          "size": 17554
+        },
+        "output/initialization.npz": {
+          "sha256": "f08e0e314a5236c6075794ece5c5b0c21861f238b52fef854e18a033c6e16faa",
+          "size": 289455
+        },
+        "output/inputs/00-submitted_inputs.json": {
+          "sha256": "c8fc700fa067cddb0d3b397190810bd380ab2d273080f3e46be203552bfbb038",
+          "size": 6828
+        },
+        "output/metadata.json": {
+          "sha256": "92aea59d9ad8025c16392be4d7943a1e27c9814306b7f8f5166a1c9d2fabd3b8",
+          "size": 40802
+        },
+        "output/profiles.csv": {
+          "sha256": "7d7de5654145b34adea339e7512088d77ed9020f3d2c040a28d01f6069f9f2cf",
+          "size": 95882
+        },
+        "output/results.npz": {
+          "sha256": "ffb9d8b0813acc6734d255aa5205fb2b5fd46a20108cf2c65d7db47b385bb862",
+          "size": 45666
+        },
+        "output/wall_profiles.csv": {
+          "sha256": "633eab3185859b87a82f30bb70c42f4258144dd758c64eff8e3f924c69ffe8b1",
+          "size": 20316
+        },
+        "plot_data.json": {
+          "sha256": "dd8c5cff66b4e883d1f439136e7ab6beae6867460765875ca39502d8f23cffee",
+          "size": 3341719
+        },
+        "results.zip": {
+          "sha256": "d4863db5818d9442d543dfbfc28bb6a7053a66b7f924e8bbf27628fc8283f2d2",
+          "size": 656472
+        },
+        "status.json": {
+          "sha256": "33ff0d4f5142c1fa525a1be3158ef69eec9eaad36310bb19e1bb68c96a8f42f4",
+          "size": 15887
+        },
+        "submitted_inputs.json": {
+          "sha256": "c8fc700fa067cddb0d3b397190810bd380ab2d273080f3e46be203552bfbb038",
+          "size": 6828
+        },
+        "worker.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        }
+      }
+    },
+    {
+      "id": "31bdc0a96f194ec1a3dac210568e4b28",
+      "framework": "TwoFluid",
+      "submitted_inputs_sha256": "bd16c72886edbaec02ead31f495c13187ece0e0ea31f002ee34b0193a1b0e12a",
+      "source": {
+        "git_commit": "ae7da5be960e1b4e20ad7a53e18c6b53b925d563",
+        "module_sha256": {
+          "src/openstream/__init__.py": "3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b",
+          "src/openstream/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/openstream/annular.py": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+          "src/openstream/cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+          "src/openstream/database.py": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
+          "src/openstream/experimental_comparison.py": "03c12bcfe1e8de115092d0ea1a19e21ec177c5983c575b63183a67453b3fd1f4",
+          "src/openstream/ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+          "src/openstream/fields.py": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+          "src/openstream/fourfield.py": "5dafef4ee0d26f71e9e9083a61304b6d06f36e5a852f6981f0092269064692c8",
+          "src/openstream/gui.py": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
+          "src/openstream/gui_launcher.py": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+          "src/openstream/gui_lock.py": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+          "src/openstream/gui_reference.py": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+          "src/openstream/gui_schema.py": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+          "src/openstream/gui_worker.py": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
+          "src/openstream/inputs.py": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+          "src/openstream/multifield_output.py": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+          "src/openstream/numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+          "src/openstream/output.py": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+          "src/openstream/plotting.py": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+          "src/openstream/properties.py": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+          "src/openstream/solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+          "src/openstream/tf_fields.py": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+          "src/openstream/threefield.py": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+          "src/openstream/twofluid.py": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c"
+        },
+        "package_version": "0.2.1"
+      },
+      "environment": {
+        "dependency_lock_sha256": "453cc2e7dd0d0b554c7dcc7348440d3bd05c93b2ed8ec897446a8e3a38ec2f51",
+        "python_requirement": "3.12",
+        "python_version": "3.12.16",
+        "sandbox_image": "vercel/sandbox/universal@sha256:9b2669397f26336812ec6835c2f67db6a546074cbabb05db93bf5e669f71ec5d"
+      },
+      "actual_environment": {
+        "implementation": "CPython",
+        "packages": {
+          "CoolProp": "8.0.0",
+          "matplotlib": "3.11.2",
+          "numpy": "2.5.4",
+          "openstream-python": "0.2.1",
+          "scipy": "1.18.1",
+          "vercel-blob": "0.5.0",
+          "vercel-sandbox": "0.10.0"
+        },
+        "platform": "Linux-6.18.56-x86_64-with-glibc2.43",
+        "python": "3.12.16"
+      },
+      "runtime": {
+        "sandbox_id": "openstream-31bdc0a96f194ec1a3dac210568e4b28",
+        "sandbox_name": "openstream-31bdc0a96f194ec1a3dac210568e4b28",
+        "session_id": "sbx_jCxRVpQEP0szecXGacEcVnoSTFNf",
+        "timeout_seconds": 2400
+      },
+      "status": "completed",
+      "published_at": "2026-11-15T17:58:46.532413+00:00",
+      "publication": {
+        "child_exit_code": 0,
+        "complete": true,
+        "error_type": null,
+        "stage": "published"
+      },
+      "artifacts": {
+        "job_manifest.json": {
+          "sha256": "8fe160ae3a285d303f9b8c3ca073ac93e310f41ea862dfac63cdf4da3a94f3a9",
+          "size": 4165
+        },
+        "output/axial.png": {
+          "sha256": "eff4450d64897a8287ecc469a8274bc4f171b48cf3e490fac6a4a8b4e3804f75",
+          "size": 132522
+        },
+        "output/convergence.csv": {
+          "sha256": "3367836c9a30c1c58128770ab6bee8dbabd610955bef871887842c172110de46",
+          "size": 4197
+        },
+        "output/gui_verification.json": {
+          "sha256": "e11d989038bbb8630b75213fea77472e8c6840a33bca61fddcbe234d08f29811",
+          "size": 14817
+        },
+        "output/initialization.npz": {
+          "sha256": "c3fc1ada43dc8c63e7ca83c15fd64c57bb7298ff83102edccf93eae630715270",
+          "size": 89797
+        },
+        "output/metadata.json": {
+          "sha256": "1ef51ad1094db63d941c9f7608e4cd91b7ce81ea66397ad8b2ba688646149bcc",
+          "size": 34551
+        },
+        "output/mixture/axial.png": {
+          "sha256": "40443130cfed1af2858ad61828363539cc85fa6398cf7a47c0417b0924979f7b",
+          "size": 306642
+        },
+        "output/mixture/convergence.csv": {
+          "sha256": "945eccb4edb060721bd6ad95a152ab99f014d3df1070d1384e6dcd2216239e21",
+          "size": 1565
+        },
+        "output/mixture/initialization.npz": {
+          "sha256": "f08e0e314a5236c6075794ece5c5b0c21861f238b52fef854e18a033c6e16faa",
+          "size": 289455
+        },
+        "output/mixture/inputs/00-submitted_inputs.json": {
+          "sha256": "bd16c72886edbaec02ead31f495c13187ece0e0ea31f002ee34b0193a1b0e12a",
+          "size": 6831
+        },
+        "output/mixture/metadata.json": {
+          "sha256": "1daeb7860da66cc406bd38521baf6e12179d8fa64fb40d3fff4e55a2b8839d5e",
+          "size": 13074
+        },
+        "output/mixture/profiles.csv": {
+          "sha256": "7d7de5654145b34adea339e7512088d77ed9020f3d2c040a28d01f6069f9f2cf",
+          "size": 95882
+        },
+        "output/mixture/results.npz": {
+          "sha256": "ffb9d8b0813acc6734d255aa5205fb2b5fd46a20108cf2c65d7db47b385bb862",
+          "size": 45666
+        },
+        "output/mixture/wall_profiles.csv": {
+          "sha256": "633eab3185859b87a82f30bb70c42f4258144dd758c64eff8e3f924c69ffe8b1",
+          "size": 20316
+        },
+        "output/profiles.csv": {
+          "sha256": "5745b9c0cc03770fa9b3b61369f0bda39879bae218ae579607cbbe05fa36d619",
+          "size": 64082
+        },
+        "output/results.npz": {
+          "sha256": "44ac5422cda65f1a64bb582629428b493fd9f5356086ed840a946c0048e09953",
+          "size": 10371
+        },
+        "plot_data.json": {
+          "sha256": "d846a108827680a13ff3da4519a70f8fa174503d199c4d9eb5edde15a77351cd",
+          "size": 1389124
+        },
+        "results.zip": {
+          "sha256": "8ee1ffa1263d920e752736d50348128e811785bfadc4e7a18194997c2424015c",
+          "size": 895179
+        },
+        "status.json": {
+          "sha256": "c9da7e997704c1d717d78f3e469aaaf1d10a1680db000fd986ef3213fc25ae9c",
+          "size": 23527
+        },
+        "submitted_inputs.json": {
+          "sha256": "bd16c72886edbaec02ead31f495c13187ece0e0ea31f002ee34b0193a1b0e12a",
+          "size": 6831
+        },
+        "worker.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        }
+      }
+    },
+    {
+      "id": "8b87b512f1594e08a6d59082e4de90a8",
+      "framework": "ThreeField",
+      "submitted_inputs_sha256": "345a3c9668521c7ef0617d58db6e7559865427ef54d05fef983d09e5b5ff2b77",
+      "source": {
+        "git_commit": "ae7da5be960e1b4e20ad7a53e18c6b53b925d563",
+        "module_sha256": {
+          "src/openstream/__init__.py": "3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b",
+          "src/openstream/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/openstream/annular.py": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+          "src/openstream/cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+          "src/openstream/database.py": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
+          "src/openstream/experimental_comparison.py": "03c12bcfe1e8de115092d0ea1a19e21ec177c5983c575b63183a67453b3fd1f4",
+          "src/openstream/ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+          "src/openstream/fields.py": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+          "src/openstream/fourfield.py": "5dafef4ee0d26f71e9e9083a61304b6d06f36e5a852f6981f0092269064692c8",
+          "src/openstream/gui.py": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
+          "src/openstream/gui_launcher.py": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+          "src/openstream/gui_lock.py": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+          "src/openstream/gui_reference.py": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+          "src/openstream/gui_schema.py": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+          "src/openstream/gui_worker.py": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
+          "src/openstream/inputs.py": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+          "src/openstream/multifield_output.py": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+          "src/openstream/numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+          "src/openstream/output.py": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+          "src/openstream/plotting.py": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+          "src/openstream/properties.py": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+          "src/openstream/solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+          "src/openstream/tf_fields.py": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+          "src/openstream/threefield.py": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+          "src/openstream/twofluid.py": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c"
+        },
+        "package_version": "0.2.1"
+      },
+      "environment": {
+        "dependency_lock_sha256": "453cc2e7dd0d0b554c7dcc7348440d3bd05c93b2ed8ec897446a8e3a38ec2f51",
+        "python_requirement": "3.12",
+        "python_version": "3.12.16",
+        "sandbox_image": "vercel/sandbox/universal@sha256:9b2669397f26336812ec6835c2f67db6a546074cbabb05db93bf5e669f71ec5d"
+      },
+      "actual_environment": {
+        "implementation": "CPython",
+        "packages": {
+          "CoolProp": "8.0.0",
+          "matplotlib": "3.11.2",
+          "numpy": "2.5.4",
+          "openstream-python": "0.2.1",
+          "scipy": "1.18.1",
+          "vercel-blob": "0.5.0",
+          "vercel-sandbox": "0.10.0"
+        },
+        "platform": "Linux-6.18.56-x86_64-with-glibc2.43",
+        "python": "3.12.16"
+      },
+      "runtime": {
+        "sandbox_id": "openstream-8b87b512f1594e08a6d59082e4de90a8",
+        "sandbox_name": "openstream-8b87b512f1594e08a6d59082e4de90a8",
+        "session_id": "sbx_EilZEqpbO6WMo9tdvngX8ubUjAOl",
+        "timeout_seconds": 2400
+      },
+      "status": "completed",
+      "published_at": "2026-11-15T17:59:24.185231+00:00",
+      "publication": {
+        "child_exit_code": 0,
+        "complete": true,
+        "error_type": null,
+        "stage": "published"
+      },
+      "artifacts": {
+        "job_manifest.json": {
+          "sha256": "3b23b754052fa2305f7530bcaaee757dc9dfefff3688b11bea2cccd34b1ced18",
+          "size": 4169
+        },
+        "output/axial.png": {
+          "sha256": "6aa54c29ce523859b09def11ee446f8ca0ce56cbebb7e40de9de28341a65954c",
+          "size": 121479
+        },
+        "output/convergence.csv": {
+          "sha256": "c00dd513026dee68d2522bccf8b8f3d8d3fca96ec1b5e9afd94b33d6817e25c0",
+          "size": 535
+        },
+        "output/gui_verification.json": {
+          "sha256": "191743727a0c478e57d4277cb0fb626cbfb531c254b5721b131658db5bcbc7a9",
+          "size": 17351
+        },
+        "output/initialization.npz": {
+          "sha256": "e765f84ff19ccc9fb98d6b39b4fc09553b7d2313142b1941ca77692b04d5f1a8",
+          "size": 28602
+        },
+        "output/metadata.json": {
+          "sha256": "279493fed1e093bb031cfb7ad2dc4dbc6e1b7394ff67ad9dfc207f30c37d569a",
+          "size": 39684
+        },
+        "output/mixture/axial.png": {
+          "sha256": "40443130cfed1af2858ad61828363539cc85fa6398cf7a47c0417b0924979f7b",
+          "size": 306642
+        },
+        "output/mixture/convergence.csv": {
+          "sha256": "945eccb4edb060721bd6ad95a152ab99f014d3df1070d1384e6dcd2216239e21",
+          "size": 1565
+        },
+        "output/mixture/initialization.npz": {
+          "sha256": "f08e0e314a5236c6075794ece5c5b0c21861f238b52fef854e18a033c6e16faa",
+          "size": 289455
+        },
+        "output/mixture/inputs/00-submitted_inputs.json": {
+          "sha256": "345a3c9668521c7ef0617d58db6e7559865427ef54d05fef983d09e5b5ff2b77",
+          "size": 6837
+        },
+        "output/mixture/metadata.json": {
+          "sha256": "f7c40b20dc5e1fa3f659cbd69ce9a3446d307490ec05858a32301f2f8ccbb4e7",
+          "size": 13073
+        },
+        "output/mixture/profiles.csv": {
+          "sha256": "7d7de5654145b34adea339e7512088d77ed9020f3d2c040a28d01f6069f9f2cf",
+          "size": 95882
+        },
+        "output/mixture/results.npz": {
+          "sha256": "ffb9d8b0813acc6734d255aa5205fb2b5fd46a20108cf2c65d7db47b385bb862",
+          "size": 45666
+        },
+        "output/mixture/wall_profiles.csv": {
+          "sha256": "633eab3185859b87a82f30bb70c42f4258144dd758c64eff8e3f924c69ffe8b1",
+          "size": 20316
+        },
+        "output/profiles.csv": {
+          "sha256": "3029d8e50b5475b908e1c573cde8d2e0e955412d685678cd14897fb5994b7d91",
+          "size": 47990
+        },
+        "output/results.npz": {
+          "sha256": "84297f9644b2bb77a3158c676fae864562d0a3c78787c4097db87928ac70dc37",
+          "size": 8056
+        },
+        "plot_data.json": {
+          "sha256": "1fb1e2476d36cce961092b3c6f31901ebd4ab156193a7285081123ede451bf75",
+          "size": 919475
+        },
+        "results.zip": {
+          "sha256": "7cadbdaf6672321ec0dbbc6cc1100b558fc4e4e346929301293cd8c55d96d754",
+          "size": 817324
+        },
+        "status.json": {
+          "sha256": "c652f33bcad6ed2c5142508ca8c5397490a8ec22d31ea02a57517148edeeff18",
+          "size": 17948
+        },
+        "submitted_inputs.json": {
+          "sha256": "345a3c9668521c7ef0617d58db6e7559865427ef54d05fef983d09e5b5ff2b77",
+          "size": 6837
+        },
+        "worker.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        }
+      }
+    },
+    {
+      "id": "56c656bbe0bd4f6e908c190ab26d1f83",
+      "framework": "FourField",
+      "submitted_inputs_sha256": "f195929d415a6c9b533d9304b3a10771260304ae68349b4d73552c75773cf606",
+      "source": {
+        "git_commit": "ae7da5be960e1b4e20ad7a53e18c6b53b925d563",
+        "module_sha256": {
+          "src/openstream/__init__.py": "3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b",
+          "src/openstream/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/openstream/annular.py": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+          "src/openstream/cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+          "src/openstream/database.py": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
+          "src/openstream/experimental_comparison.py": "03c12bcfe1e8de115092d0ea1a19e21ec177c5983c575b63183a67453b3fd1f4",
+          "src/openstream/ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+          "src/openstream/fields.py": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+          "src/openstream/fourfield.py": "5dafef4ee0d26f71e9e9083a61304b6d06f36e5a852f6981f0092269064692c8",
+          "src/openstream/gui.py": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
+          "src/openstream/gui_launcher.py": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+          "src/openstream/gui_lock.py": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+          "src/openstream/gui_reference.py": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+          "src/openstream/gui_schema.py": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+          "src/openstream/gui_worker.py": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
+          "src/openstream/inputs.py": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+          "src/openstream/multifield_output.py": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+          "src/openstream/numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+          "src/openstream/output.py": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+          "src/openstream/plotting.py": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+          "src/openstream/properties.py": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+          "src/openstream/solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+          "src/openstream/tf_fields.py": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+          "src/openstream/threefield.py": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+          "src/openstream/twofluid.py": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c"
+        },
+        "package_version": "0.2.1"
+      },
+      "environment": {
+        "dependency_lock_sha256": "453cc2e7dd0d0b554c7dcc7348440d3bd05c93b2ed8ec897446a8e3a38ec2f51",
+        "python_requirement": "3.12",
+        "python_version": "3.12.16",
+        "sandbox_image": "vercel/sandbox/universal@sha256:9b2669397f26336812ec6835c2f67db6a546074cbabb05db93bf5e669f71ec5d"
+      },
+      "actual_environment": {
+        "implementation": "CPython",
+        "packages": {
+          "CoolProp": "8.0.0",
+          "matplotlib": "3.11.2",
+          "numpy": "2.5.4",
+          "openstream-python": "0.2.1",
+          "scipy": "1.18.1",
+          "vercel-blob": "0.5.0",
+          "vercel-sandbox": "0.10.0"
+        },
+        "platform": "Linux-6.18.56-x86_64-with-glibc2.43",
+        "python": "3.12.16"
+      },
+      "runtime": {
+        "sandbox_id": "openstream-56c656bbe0bd4f6e908c190ab26d1f83",
+        "sandbox_name": "openstream-56c656bbe0bd4f6e908c190ab26d1f83",
+        "session_id": "sbx_TAtTdsFrgCJ8yJ7NdlsJ34x5HWzR",
+        "timeout_seconds": 2400
+      },
+      "status": "completed",
+      "published_at": "2026-11-15T18:00:34.727520+00:00",
+      "publication": {
+        "child_exit_code": 0,
+        "complete": true,
+        "error_type": null,
+        "stage": "published"
+      },
+      "artifacts": {
+        "job_manifest.json": {
+          "sha256": "3da4dd07bb133e35934568dae16ac49cad881e2a6547662e7a0a307e228b4f0b",
+          "size": 4167
+        },
+        "output/axial.png": {
+          "sha256": "2326c836cd09a1fa5c705c7ec1cda99fceee1212818d684ca67ffb1162e3e544",
+          "size": 166063
+        },
+        "output/convergence.csv": {
+          "sha256": "41cc3b5f73122a5186756842324676e904ae45194504c9cab38d46f138ad42d1",
+          "size": 1410
+        },
+        "output/gui_verification.json": {
+          "sha256": "4e38910d8e32253261f064934c3673fed849e5bd1342c38a41ac1e62f5d24537",
+          "size": 23697
+        },
+        "output/initialization.npz": {
+          "sha256": "c3ae4d2f2ba2e1d48c212b222f6ca46efb89242d11ca7bbfc0f820a46752dd39",
+          "size": 92431
+        },
+        "output/metadata.json": {
+          "sha256": "1d9dd59a22a7e97703d82544e11e13fecfa583da563027b0dccd92bb303b80b0",
+          "size": 53702
+        },
+        "output/mixture/axial.png": {
+          "sha256": "40443130cfed1af2858ad61828363539cc85fa6398cf7a47c0417b0924979f7b",
+          "size": 306642
+        },
+        "output/mixture/convergence.csv": {
+          "sha256": "945eccb4edb060721bd6ad95a152ab99f014d3df1070d1384e6dcd2216239e21",
+          "size": 1565
+        },
+        "output/mixture/initialization.npz": {
+          "sha256": "f08e0e314a5236c6075794ece5c5b0c21861f238b52fef854e18a033c6e16faa",
+          "size": 289455
+        },
+        "output/mixture/inputs/00-submitted_inputs.json": {
+          "sha256": "f195929d415a6c9b533d9304b3a10771260304ae68349b4d73552c75773cf606",
+          "size": 6834
+        },
+        "output/mixture/metadata.json": {
+          "sha256": "e7fd32cf2e58fc268d42ef795de9e0d2ab8a3dbb9f4b3328ebf5033f80957511",
+          "size": 13073
+        },
+        "output/mixture/profiles.csv": {
+          "sha256": "7d7de5654145b34adea339e7512088d77ed9020f3d2c040a28d01f6069f9f2cf",
+          "size": 95882
+        },
+        "output/mixture/results.npz": {
+          "sha256": "ffb9d8b0813acc6734d255aa5205fb2b5fd46a20108cf2c65d7db47b385bb862",
+          "size": 45666
+        },
+        "output/mixture/wall_profiles.csv": {
+          "sha256": "633eab3185859b87a82f30bb70c42f4258144dd758c64eff8e3f924c69ffe8b1",
+          "size": 20316
+        },
+        "output/profiles.csv": {
+          "sha256": "27da93adc0263330e792c9cdc6ba9fdd176b02c51f5b67365d772b23c688e3fe",
+          "size": 100002
+        },
+        "output/results.npz": {
+          "sha256": "78484033e2c02cc4331e689aad5de615fce756bd2f00d8b30ec79eddd99f1eea",
+          "size": 13385
+        },
+        "output/wave_frequency.png": {
+          "sha256": "e069460c1dd509e7d3c0d5a140f1c4b54d7614653d3754f6467eae5eb65b068f",
+          "size": 59483
+        },
+        "plot_data.json": {
+          "sha256": "1c14a15c561f9f40aea3eb1499bb953f0775ad7a5a329b81603a36fb8144e7fc",
+          "size": 2477757
+        },
+        "results.zip": {
+          "sha256": "d911c801b3665e8b79af6294430cf0713e2ffbd2d1cde17b8b1716bd1a44126a",
+          "size": 988951
+        },
+        "status.json": {
+          "sha256": "d7446281d4092ef44e30c5a8a24686b1b7f10ef9d2b0ed0f1fd3c0c2d62a0958",
+          "size": 26689
+        },
+        "submitted_inputs.json": {
+          "sha256": "f195929d415a6c9b533d9304b3a10771260304ae68349b4d73552c75773cf606",
+          "size": 6834
+        },
+        "worker.log": {
+          "sha256": "f79c1df516e20fbc28c8c9d0c5e0258f307217415afce0d8a1ae3a170f50ea0b",
+          "size": 327
+        }
+      }
+    },
+    {
+      "id": "327cc37e04614aea8c071c7d9d112aa4",
+      "framework": "FourField",
+      "submitted_inputs_sha256": "f195929d415a6c9b533d9304b3a10771260304ae68349b4d73552c75773cf606",
+      "source": {
+        "git_commit": "ae7da5be960e1b4e20ad7a53e18c6b53b925d563",
+        "module_sha256": {
+          "src/openstream/__init__.py": "3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b",
+          "src/openstream/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/openstream/annular.py": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+          "src/openstream/cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+          "src/openstream/database.py": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
+          "src/openstream/experimental_comparison.py": "03c12bcfe1e8de115092d0ea1a19e21ec177c5983c575b63183a67453b3fd1f4",
+          "src/openstream/ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+          "src/openstream/fields.py": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+          "src/openstream/fourfield.py": "5dafef4ee0d26f71e9e9083a61304b6d06f36e5a852f6981f0092269064692c8",
+          "src/openstream/gui.py": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
+          "src/openstream/gui_launcher.py": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+          "src/openstream/gui_lock.py": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+          "src/openstream/gui_reference.py": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+          "src/openstream/gui_schema.py": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+          "src/openstream/gui_worker.py": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
+          "src/openstream/inputs.py": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+          "src/openstream/multifield_output.py": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+          "src/openstream/numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+          "src/openstream/output.py": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+          "src/openstream/plotting.py": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+          "src/openstream/properties.py": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+          "src/openstream/solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+          "src/openstream/tf_fields.py": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+          "src/openstream/threefield.py": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+          "src/openstream/twofluid.py": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c"
+        },
+        "package_version": "0.2.1"
+      },
+      "environment": {
+        "dependency_lock_sha256": "453cc2e7dd0d0b554c7dcc7348440d3bd05c93b2ed8ec897446a8e3a38ec2f51",
+        "python_requirement": "3.12",
+        "python_version": "3.12.16",
+        "sandbox_image": "vercel/sandbox/universal@sha256:9b2669397f26336812ec6835c2f67db6a546074cbabb05db93bf5e669f71ec5d"
+      },
+      "actual_environment": {
+        "implementation": "CPython",
+        "packages": {
+          "CoolProp": "8.0.0",
+          "matplotlib": "3.11.2",
+          "numpy": "2.5.4",
+          "openstream-python": "0.2.1",
+          "scipy": "1.18.1",
+          "vercel-blob": "0.5.0",
+          "vercel-sandbox": "0.10.0"
+        },
+        "platform": "Linux-6.18.56-x86_64-with-glibc2.43",
+        "python": "3.12.16"
+      },
+      "runtime": {
+        "sandbox_id": "openstream-327cc37e04614aea8c071c7d9d112aa4",
+        "sandbox_name": "openstream-327cc37e04614aea8c071c7d9d112aa4",
+        "session_id": "sbx_R4fRX8myk0tfFgyINUwSrEBYn0WQ",
+        "timeout_seconds": 2400
+      },
+      "status": "cancelled",
+      "published_at": "2026-11-15T18:00:55.514418+00:00",
+      "publication": {
+        "child_exit_code": 0,
+        "complete": true,
+        "error_type": null,
+        "stage": "published"
+      },
+      "artifacts": {
+        "job_manifest.json": {
+          "sha256": "0b41fc9a4984eb77420bc6523940b26d4e9eb3c079658c64a88a6c6a33bd0ff1",
+          "size": 4167
+        },
+        "status.json": {
+          "sha256": "a22020a30edb52145f1451b5f347dc06ff51d2bc863ce9bf26fce0892ef8f7eb",
+          "size": 583
+        },
+        "submitted_inputs.json": {
+          "sha256": "f195929d415a6c9b533d9304b3a10771260304ae68349b4d73552c75773cf606",
+          "size": 6834
+        },
+        "worker.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0
+        }
+      }
+    }
+  ]
+}

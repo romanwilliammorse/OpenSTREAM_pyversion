@@ -1,0 +1,214 @@
+{
+  "status": "passed",
+  "message": "Archived steady and initialization profiles agree at rtol 1e-8, atol 0.",
+  "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+  "rtol": 1e-08,
+  "atol": 0.0,
+  "coordinate_atol": 1e-12,
+  "records": [
+    {
+      "passed": true,
+      "unit": "kg/s",
+      "shape": [
+        1,
+        101,
+        1
+      ],
+      "max_absolute_error": 1.249000902703301e-16,
+      "max_relative_error": 4.0992233377218555e-14,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "physical",
+      "key": "film.W",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "m/s",
+      "shape": [
+        1,
+        101,
+        1
+      ],
+      "max_absolute_error": 4.618527782440651e-14,
+      "max_relative_error": 1.649502626080444e-14,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "physical",
+      "key": "film.U",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "J/kg",
+      "shape": [
+        1,
+        101,
+        1
+      ],
+      "max_absolute_error": 1.1641532182693481e-09,
+      "max_relative_error": 9.590010541985647e-16,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "physical",
+      "key": "film.H",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "kg/s",
+      "shape": [
+        1,
+        101
+      ],
+      "max_absolute_error": 8.326672684688674e-17,
+      "max_relative_error": 4.352214026796639e-15,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "physical",
+      "key": "drop.W",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "m/s",
+      "shape": [
+        1,
+        101
+      ],
+      "max_absolute_error": 1.8118839761882555e-13,
+      "max_relative_error": 1.6495026237711563e-14,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "physical",
+      "key": "drop.U",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "J/kg",
+      "shape": [
+        1,
+        101
+      ],
+      "max_absolute_error": 1.1641532182693481e-09,
+      "max_relative_error": 9.590010541985647e-16,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "physical",
+      "key": "drop.H",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "kg/s",
+      "shape": [
+        6,
+        101,
+        1
+      ],
+      "max_absolute_error": 1.3183898417423734e-16,
+      "max_relative_error": 4.738730788540904e-13,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "initialization",
+      "key": "film.W",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "m/s",
+      "shape": [
+        6,
+        101,
+        1
+      ],
+      "max_absolute_error": 4.618527782440651e-14,
+      "max_relative_error": 1.64950262733616e-14,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "initialization",
+      "key": "film.U",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "J/kg",
+      "shape": [
+        6,
+        101,
+        1
+      ],
+      "max_absolute_error": 1.1641532182693481e-09,
+      "max_relative_error": 9.590010541985647e-16,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "initialization",
+      "key": "film.H",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "kg/s",
+      "shape": [
+        6,
+        101
+      ],
+      "max_absolute_error": 1.249000902703301e-16,
+      "max_relative_error": 6.528320902962879e-15,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "initialization",
+      "key": "drop.W",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "m/s",
+      "shape": [
+        6,
+        101
+      ],
+      "max_absolute_error": 2.0250467969162855e-13,
+      "max_relative_error": 1.6495026237711563e-14,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "initialization",
+      "key": "drop.U",
+      "group": "core"
+    },
+    {
+      "passed": true,
+      "unit": "J/kg",
+      "shape": [
+        6,
+        101
+      ],
+      "max_absolute_error": 1.1641532182693481e-09,
+      "max_relative_error": 9.590010541985647e-16,
+      "nonmatching_reference_zeros": 0,
+      "failed_values": 0,
+      "dataset": "initialization",
+      "key": "drop.H",
+      "group": "core"
+    }
+  ],
+  "max_relative_error": 4.738730788540904e-13,
+  "experimental_validation": "not performed",
+  "limitations": [
+    "The archive producer's MATLAB, CoolProp and source versions are unknown.",
+    "Agreement does not establish physical consistency or full OpenSTREAM parity.",
+    "Supplementary iteration/diagnostic disagreements remain documented separately."
+  ],
+  "archive": {
+    "file": "tutorial1_ThreeFieldSolver.mat",
+    "sha256": "eabaef27d5b94dce4506783675d90563def40db1a491b8a16b982b9de070e884",
+    "bytes": 481108,
+    "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026"
+  },
+  "producer_metadata": {
+    "matlab_version": null,
+    "coolprop_version": null,
+    "source_commit": null
+  }
+}

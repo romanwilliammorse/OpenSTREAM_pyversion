@@ -1,0 +1,14 @@
+{
+  "framework": "Mixture",
+  "started_at": "2026-11-15T17:47:37.736830+00:00",
+  "kind": "baseline",
+  "passed": false,
+  "run_id": "1daa66819b3e470fa50ebd2e17d4ea7e",
+  "terminal_observed": false,
+  "failures": [
+    "VerificationError: Run status returned HTTP 409; run was not resubmitted."
+  ],
+  "downloads": [],
+  "submission_attempted": true,
+  "finished_at": "2026-11-15T17:48:19.476261+00:00"
+}

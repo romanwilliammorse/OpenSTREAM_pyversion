@@ -1,0 +1,33 @@
+{
+  "framework": "FourField",
+  "started_at": "2026-11-15T18:00:38.654168+00:00",
+  "kind": "cancellation",
+  "passed": true,
+  "run_id": "327cc37e04614aea8c071c7d9d112aa4",
+  "terminal_observed": true,
+  "failures": [],
+  "downloads": [
+    {
+      "name": "submitted_inputs.json",
+      "sha256": "f195929d415a6c9b533d9304b3a10771260304ae68349b4d73552c75773cf606",
+      "size": 6834
+    },
+    {
+      "name": "worker.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    }
+  ],
+  "submission_attempted": true,
+  "status": "cancelled",
+  "converged": null,
+  "reference": {
+    "message": "Comparison runs after the calculation.",
+    "status": "not_compared"
+  },
+  "physical": {
+    "message": "Consistency checks run after the calculation.",
+    "status": "not_checked"
+  },
+  "finished_at": "2026-11-15T18:00:58.420952+00:00"
+}

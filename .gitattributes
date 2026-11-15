@@ -45,3 +45,8 @@ tools/audit_sawai_oscillation_acceptance.py text eol=lf
 tools/export_sawai_oscillation_pdf.py text eol=lf
 tools/replay_matched_diagnostics.py text eol=lf
 tools/run_lecorre_reproduction.py text eol=lf
+outputs/verification/hosted-http/** -text
+outputs/verification/hosted-storage/** -text
+outputs/verification/hosted-release/** -text
+tools/verify_hosted_gui.py text eol=lf
+tools/prepare_cloud_deployment.py text eol=lf

@@ -1,0 +1,2380 @@
+{
+  "shape_and_core_finite_passed": true,
+  "all_arrays_finite": false,
+  "files": [
+    {
+      "file": "output/initialization.npz",
+      "arrays": [
+        {
+          "key": "Z",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m"
+        },
+        {
+          "key": "TIME",
+          "shape": [
+            9
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "s"
+        },
+        {
+          "key": "film.W",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "kg/s"
+        },
+        {
+          "key": "film.U",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m/s"
+        },
+        {
+          "key": "film.H",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "J/kg"
+        },
+        {
+          "key": "film.base.W",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "kg/s"
+        },
+        {
+          "key": "film.base.U",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m/s"
+        },
+        {
+          "key": "film.base.H",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "J/kg"
+        },
+        {
+          "key": "film.base.ITR.DFW",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Hz"
+        },
+        {
+          "key": "film.base.ITR.DU",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "m/s"
+        },
+        {
+          "key": "film.base.ITR.DWL",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s/m"
+        },
+        {
+          "key": "film.base.ITR.N",
+          "shape": [
+            9,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "film.wave.W",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "kg/s"
+        },
+        {
+          "key": "film.wave.U",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m/s"
+        },
+        {
+          "key": "film.wave.H",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "J/kg"
+        },
+        {
+          "key": "film.wave.FREQUENCY",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "Hz"
+        },
+        {
+          "key": "film.wave.ITR.DF",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 101,
+          "primary_or_coordinate": false,
+          "unit": "Hz"
+        },
+        {
+          "key": "film.wave.ITR.DFW",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Hz"
+        },
+        {
+          "key": "film.wave.ITR.DU",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "m/s"
+        },
+        {
+          "key": "film.wave.ITR.DWL",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s/m"
+        },
+        {
+          "key": "film.wave.ITR.N",
+          "shape": [
+            9,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "drop.W",
+          "shape": [
+            9,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "kg/s"
+        },
+        {
+          "key": "drop.U",
+          "shape": [
+            9,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m/s"
+        },
+        {
+          "key": "drop.H",
+          "shape": [
+            9,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "J/kg"
+        },
+        {
+          "key": "drop.ITR.DU",
+          "shape": [
+            9,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "m/s"
+        },
+        {
+          "key": "drop.ITR.N",
+          "shape": [
+            9,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        }
+      ],
+      "axes_passed": true
+    },
+    {
+      "file": "output/mixture/initialization.npz",
+      "arrays": [
+        {
+          "key": "Z",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m"
+        },
+        {
+          "key": "TIME",
+          "shape": [
+            10
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "s"
+        },
+        {
+          "key": "W",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "kg/s"
+        },
+        {
+          "key": "P",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "H",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "J/kg"
+        },
+        {
+          "key": "U",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m/s"
+        },
+        {
+          "key": "UP",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "m/s"
+        },
+        {
+          "key": "RHO",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/m^3"
+        },
+        {
+          "key": "X",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "XEQ",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "VF",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "T",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "K"
+        },
+        {
+          "key": "HFLUX",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "W/m^2"
+        },
+        {
+          "key": "LHGR",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "W/m"
+        },
+        {
+          "key": "TWALL",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "K"
+        },
+        {
+          "key": "MCT",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s"
+        },
+        {
+          "key": "ECT",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/m"
+        },
+        {
+          "key": "liquid.W",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "kg/s"
+        },
+        {
+          "key": "liquid.H",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "J/kg"
+        },
+        {
+          "key": "liquid.U",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m/s"
+        },
+        {
+          "key": "liquid.T",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "K"
+        },
+        {
+          "key": "liquid.X",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "liquid.VF",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "vapor.W",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "kg/s"
+        },
+        {
+          "key": "vapor.H",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "J/kg"
+        },
+        {
+          "key": "vapor.U",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m/s"
+        },
+        {
+          "key": "vapor.T",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "K"
+        },
+        {
+          "key": "vapor.X",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "vapor.VF",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "DP.Grav",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DP.Wall",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DP.Acc_z",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DP.Acc_t",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DP.Acc_s",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DP.K",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DP.Tot",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DPSUM.Grav",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DPSUM.Wall",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DPSUM.Acc_z",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DPSUM.Acc_t",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DPSUM.Acc_s",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DPSUM.K",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DPSUM.Tot",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "MDER.U_z",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "m/s^2"
+        },
+        {
+          "key": "MDER.U_t",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "m/s^2"
+        },
+        {
+          "key": "MDER.U",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "m/s^2"
+        },
+        {
+          "key": "MDER.H_z",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg/s"
+        },
+        {
+          "key": "MDER.H_t",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg/s"
+        },
+        {
+          "key": "MDER.H",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg/s"
+        },
+        {
+          "key": "MRM.WV",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s"
+        },
+        {
+          "key": "MRM.X",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "MRM.HV",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg"
+        },
+        {
+          "key": "MRM.TV",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "K"
+        },
+        {
+          "key": "MRM.TCOND",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "s"
+        },
+        {
+          "key": "MRM.TEVAP",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "s"
+        },
+        {
+          "key": "NEARWALL.TRELAX",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "s"
+        },
+        {
+          "key": "NEARWALL.W",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s"
+        },
+        {
+          "key": "NEARWALL.H",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg"
+        },
+        {
+          "key": "NEARWALL.HFLUX",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "W/m^2"
+        },
+        {
+          "key": "NEARWALL.XEQ",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "NEARWALL.WBULK",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s"
+        },
+        {
+          "key": "NEARWALL.HBULK",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg"
+        },
+        {
+          "key": "NEARWALL.XBULK",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "ITR.N",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "ITR.DW",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s"
+        },
+        {
+          "key": "ITR.DP",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "ITR.DPSUM",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "ITR.DH",
+          "shape": [
+            10,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg"
+        },
+        {
+          "key": "ITR.DWV",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s"
+        },
+        {
+          "key": "ITR.DHV",
+          "shape": [
+            10,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg"
+        }
+      ],
+      "axes_passed": true
+    },
+    {
+      "file": "output/mixture/results.npz",
+      "arrays": [
+        {
+          "key": "Z",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m"
+        },
+        {
+          "key": "TIME",
+          "shape": [
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "s"
+        },
+        {
+          "key": "W",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "kg/s"
+        },
+        {
+          "key": "P",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "H",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "J/kg"
+        },
+        {
+          "key": "U",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m/s"
+        },
+        {
+          "key": "UP",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "m/s"
+        },
+        {
+          "key": "RHO",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/m^3"
+        },
+        {
+          "key": "X",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "XEQ",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "VF",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "T",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "K"
+        },
+        {
+          "key": "HFLUX",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "W/m^2"
+        },
+        {
+          "key": "LHGR",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "W/m"
+        },
+        {
+          "key": "TWALL",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "K"
+        },
+        {
+          "key": "MCT",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s"
+        },
+        {
+          "key": "ECT",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/m"
+        },
+        {
+          "key": "liquid.W",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "kg/s"
+        },
+        {
+          "key": "liquid.H",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "J/kg"
+        },
+        {
+          "key": "liquid.U",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m/s"
+        },
+        {
+          "key": "liquid.T",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "K"
+        },
+        {
+          "key": "liquid.X",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "liquid.VF",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "vapor.W",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "kg/s"
+        },
+        {
+          "key": "vapor.H",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "J/kg"
+        },
+        {
+          "key": "vapor.U",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m/s"
+        },
+        {
+          "key": "vapor.T",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "K"
+        },
+        {
+          "key": "vapor.X",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "vapor.VF",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "DP.Grav",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DP.Wall",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DP.Acc_z",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DP.Acc_t",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DP.Acc_s",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DP.K",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DP.Tot",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DPSUM.Grav",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DPSUM.Wall",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DPSUM.Acc_z",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DPSUM.Acc_t",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DPSUM.Acc_s",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DPSUM.K",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "DPSUM.Tot",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "MDER.U_z",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "m/s^2"
+        },
+        {
+          "key": "MDER.U_t",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "m/s^2"
+        },
+        {
+          "key": "MDER.U",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "m/s^2"
+        },
+        {
+          "key": "MDER.H_z",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg/s"
+        },
+        {
+          "key": "MDER.H_t",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg/s"
+        },
+        {
+          "key": "MDER.H",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg/s"
+        },
+        {
+          "key": "MRM.WV",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s"
+        },
+        {
+          "key": "MRM.X",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "MRM.HV",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg"
+        },
+        {
+          "key": "MRM.TV",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "K"
+        },
+        {
+          "key": "MRM.TCOND",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "s"
+        },
+        {
+          "key": "MRM.TEVAP",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "s"
+        },
+        {
+          "key": "NEARWALL.TRELAX",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "s"
+        },
+        {
+          "key": "NEARWALL.W",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s"
+        },
+        {
+          "key": "NEARWALL.H",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg"
+        },
+        {
+          "key": "NEARWALL.HFLUX",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "W/m^2"
+        },
+        {
+          "key": "NEARWALL.XEQ",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "NEARWALL.WBULK",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s"
+        },
+        {
+          "key": "NEARWALL.HBULK",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg"
+        },
+        {
+          "key": "NEARWALL.XBULK",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "ITR.N",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "ITR.DW",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s"
+        },
+        {
+          "key": "ITR.DP",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "ITR.DPSUM",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Pa"
+        },
+        {
+          "key": "ITR.DH",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg"
+        },
+        {
+          "key": "ITR.DWV",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s"
+        },
+        {
+          "key": "ITR.DHV",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "J/kg"
+        }
+      ],
+      "axes_passed": true
+    },
+    {
+      "file": "output/results.npz",
+      "arrays": [
+        {
+          "key": "Z",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m"
+        },
+        {
+          "key": "TIME",
+          "shape": [
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "s"
+        },
+        {
+          "key": "film.W",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "kg/s"
+        },
+        {
+          "key": "film.U",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m/s"
+        },
+        {
+          "key": "film.H",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "J/kg"
+        },
+        {
+          "key": "film.base.W",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "kg/s"
+        },
+        {
+          "key": "film.base.U",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m/s"
+        },
+        {
+          "key": "film.base.H",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "J/kg"
+        },
+        {
+          "key": "film.base.ITR.DFW",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Hz"
+        },
+        {
+          "key": "film.base.ITR.DU",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "m/s"
+        },
+        {
+          "key": "film.base.ITR.DWL",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s/m"
+        },
+        {
+          "key": "film.base.ITR.N",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "film.wave.W",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "kg/s"
+        },
+        {
+          "key": "film.wave.U",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m/s"
+        },
+        {
+          "key": "film.wave.H",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "J/kg"
+        },
+        {
+          "key": "film.wave.FREQUENCY",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "Hz"
+        },
+        {
+          "key": "film.wave.ITR.DFW",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "Hz"
+        },
+        {
+          "key": "film.wave.ITR.DU",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "m/s"
+        },
+        {
+          "key": "film.wave.ITR.DWL",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "kg/s/m"
+        },
+        {
+          "key": "film.wave.ITR.N",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        },
+        {
+          "key": "drop.W",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "kg/s"
+        },
+        {
+          "key": "drop.U",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "m/s"
+        },
+        {
+          "key": "drop.H",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": true,
+          "unit": "J/kg"
+        },
+        {
+          "key": "drop.ITR.DU",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "m/s"
+        },
+        {
+          "key": "drop.ITR.N",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "shape_passed": true,
+          "nonfinite_count": 0,
+          "primary_or_coordinate": false,
+          "unit": "1"
+        }
+      ],
+      "axes_passed": true
+    }
+  ],
+  "scope": "All array shapes and numeric types; finite primary/archive profiles and coordinates. Nonfinite diagnostic entries are reported, not silently removed or made a new solver criterion."
+}
