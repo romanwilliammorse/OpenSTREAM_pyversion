@@ -162,6 +162,9 @@ def test_unsafe_urls_rejected_before_any_download(storage, url):
     (412, 'precondition_failed', 'precondition', True),
     (409, 'blob_already_exists', 'collision', True),
     (400, 'bad_request', 'This blob already exists.', True),
+    (400, 'bad_request', 'Vercel Blob: This blob already exists, use `allowOverwrite: true` if you want to overwrite it. '
+     'Or `addRandomSuffix: true` to generate a unique filename. Read more about this error in our documentation: '
+     'https://vercel.link/blob-allow-overwrite', True),
     (400, 'bad_request', 'Invalid content type', False),
     (409, 'unknown_conflict', 'unknown', False),
     (403, 'forbidden', 'This blob already exists.', False),

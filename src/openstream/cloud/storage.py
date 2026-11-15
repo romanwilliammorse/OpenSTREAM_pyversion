@@ -63,6 +63,9 @@ def _put_conflict(error):
         "This blob already exists", "This blob already exists.",
         "This blob already exists, use `allowOverwrite: true` to overwrite it.",
         "Vercel Blob: This blob already exists, use `allowOverwrite: true` to overwrite it.",
+        "Vercel Blob: This blob already exists, use `allowOverwrite: true` if you want to overwrite it. "
+        "Or `addRandomSuffix: true` to generate a unique filename. Read more about this error in our documentation: "
+        "https://vercel.link/blob-allow-overwrite",
     }
     return status == 400 and code in (None, "bad_request") and str(error) in messages
 
