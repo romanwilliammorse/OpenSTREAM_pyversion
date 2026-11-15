@@ -1,0 +1,2697 @@
+{
+  "schema": "openstream-lecorre-pdf-layout-review-v1",
+  "status": "passed_with_recorded_limitations",
+  "tools": {
+    "python": "3.12.14",
+    "pdfplumber": "0.11.9",
+    "pypdf": "6.10.0",
+    "Pillow": "12.3.0",
+    "pdftoppm": "pdftoppm version 26.07.0"
+  },
+  "reviewed_utc": "2026-11-15T06:00:01.691555+00:00",
+  "source_commit": "525ef6e8558a7401a04f0339737c57fadbf3b49b",
+  "review_scope": "Final pagination QA, fresh all-page geometry/font/extraction checks, and exact normalized page-content comparisons against independently reviewed _02 snapshot. No PDF or scientific source edited.",
+  "reviewed_manifest_sha256_before_layout_status_update": "a9cd59729d959a271aa1004784bc19f9133488fbf0d2acc323a03ab1a195d016",
+  "source_inventory_sha256": "a73359694a8b632cd3428ef19f6f213575af889ea29dc611df60a36e8c4d1eec",
+  "programmatic_checks": {
+    "total_pages": 76,
+    "page_bounds_tolerance_pt": 0.5,
+    "all_pdf_hashes_and_page_counts_match_export_manifest": true,
+    "all_pages_have_extractable_text": true,
+    "text_objects_outside_page": 0,
+    "image_objects_outside_page": 0,
+    "U_FFFD_black_square_or_NUL_glyph_occurrences": 0,
+    "body_and_code_fonts_embedded": true,
+    "standard_base_font_exception": "Helvetica is used for list bullets and is not embedded. Segoe UI regular/bold/italic and Consolas fonts are embedded.",
+    "documents": [
+      {
+        "file": "LECORRE_REPRODUCTION.pdf",
+        "sha256": "57f436a79dc5fe9ecac7d937a7822274e975551dbcecc652b82645caa8b1c4fd",
+        "manifest_hash_matches": true,
+        "page_count": 20,
+        "manifest_page_count_matches": true,
+        "fonts": {
+          "/Helvetica": {
+            "subtype": "/Type1",
+            "embedded": false
+          },
+          "/AAAAAA+SegoeUI-Bold": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+SegoeUI": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+SegoeUI-Italic": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+Consolas": {
+            "subtype": "/TrueType",
+            "embedded": true
+          }
+        },
+        "pages": [
+          {
+            "page": 1,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 3312,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "8.2": 95,
+              "9.0": 732,
+              "10.3": 2325,
+              "15.0": 37,
+              "22.0": 54
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Preserved scientific status; see stated evidence and limitations | Source snapshot 525ef6e8558a",
+              "Le Corre NURETH-21 reproduction and",
+              "verification report",
+              "Target: J.-M. Le Corre, J. Chan, E. Walter, E. T. Hurlburt and R. W. Morse, OpenSTREAM: An Open-Source Platform",
+              "for Two-Phase Flow Modeling and Simulation, NURETH-21 (2025), supplied as LeCorre2025OpenSTREAM.pdf. This is"
+            ]
+          },
+          {
+            "page": 2,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 3964,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "9.0": 1827,
+              "10.0": 2,
+              "10.3": 2043,
+              "15.0": 23
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Historical inspection also recovered projects/NURETH21.m from database commit",
+              "e550ff14435dcbd4c850cd655188e8b95c6ce873; it was introduced in 90facd57be3be3f3d7a6c7fa5b619cc0346134d1 on",
+              "2025-03-18. The current MLX was introduced later, in 2ce844e90900db14a959881ad953b4d6852314f3 on",
+              "2026-09-09. The historical demonstration contains material differences: scalar RELAXTCOND=0.5, SLIP=2,",
+              "commented explicit TwoFluid full-momentum assignments, explicit ThreeField VAPORFRIC=WALLIS, and FourField"
+            ]
+          },
+          {
+            "page": 3,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 2665,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "9.0": 523,
+              "10.3": 2031,
+              "15.0": 42
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "The companion's Wurtz subset is a 7 MPa pipe subset. The paper's description of the broader source experiment",
+              "includes other pressures and an annulus; those broader conditions are not silently added to the Figure 6",
+              "selection.",
+              "The raw selected Wurtz records contain 21 base-thickness, 17 wave-velocity and 14 wave-number-density",
+              "measurements: 52 present targets out of 63 possible targets. The four selected Sawai records each contain four"
+            ]
+          },
+          {
+            "page": 4,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 1809,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "9.0": 907,
+              "10.0": 8,
+              "10.3": 790,
+              "15.0": 35
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "The four model configurations are cumulative:",
+              "1. Mixture: no additional model overrides; homogeneous equilibrium.",
+              "2. TwoFluid: retain Mixture settings, then set INTNU=RELAXATION, RELAXX=[-0.5,1.0], RELAXCONDT=[0.5,0.5,0.01],",
+              "MOMENTLIQUID=FULL, MOMENTGAS=FULL, DROPDRAG=VISCOUS.",
+              "3. ThreeField: retain the TwoFluid option structure, then set MOMENTFILM=FULL, MOMENTDROP=FULL, DROPDIAM=0.001"
+            ]
+          },
+          {
+            "page": 5,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 2975,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "9.0": 1383,
+              "10.3": 1479,
+              "15.0": 44
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Selection Wurtz Figure 6 Sawai Figure 7",
+              "EQSTROUHAL pinned default SAWAI",
+              "RELAXTB pinned default 0.5 s",
+              "WAVEFREQUENCY pinned default (RELAXATION) RELAXATION",
+              "RELAXTW pinned default (0.2 s) 0.2 s paper / 0.1 s companion, separately named"
+            ]
+          },
+          {
+            "page": 6,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 2894,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "9.0": 2825
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "ID Source discrepancy or limitation Required treatment Acceptance",
+              "linkage",
+              "LC-004 Each selected Sawai record contains a Retain every raw measurement; mark EXP-006, EXP-012",
+              "measured elevation outside the stored out-of-domain exclusions explicitly. No",
+              "1.648 m channel clamping, extrapolation, coordinate shifting"
+            ]
+          },
+          {
+            "page": 7,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 3627,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "9.0": 821,
+              "10.0": 7,
+              "10.3": 2696,
+              "15.0": 34
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "ID Source discrepancy or limitation Required treatment Acceptance",
+              "linkage",
+              "LC-014 Sawai entries 1 and 5 reach the source Keep the source state and failed EXP-008, EXP-011,",
+              "temporal stopping condition while final native-convergence flag together; report CORE-033",
+              "point iterations still fail saved iteration changes, unchanged"
+            ]
+          },
+          {
+            "page": 8,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 3931,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "9.0": 740,
+              "10.0": 1,
+              "10.3": 3092,
+              "15.0": 29
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "(cid:127) Status axes: implementation, native checks, MATLAB equivalence, physical consistency and experimental",
+              "comparison remain independent in docs/acceptance/experimental.json. New evidence changes only the rows",
+              "and scopes it supports. All 81 existing requirement IDs remain stable. The current user instruction narrowly",
+              "supersedes annular area acceptance criteria, as recorded below; all unrelated criteria and original evidence",
+              "remain intact. Figure 5 and unverified publication-time metadata remain open."
+            ]
+          },
+          {
+            "page": 9,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 4569,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "8.4": 614,
+              "9.0": 266,
+              "10.3": 3591,
+              "15.0": 29
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "The separately preregistered entry-1 tightened run also stops with point failures, at pseudo-time 10 s. Its",
+              "maximum wave-flow-per-perimeter change is 0.0006427002943 kg/(s m), versus the tighter 0.00001 limit; its",
+              "maximum wave-velocity change is 0.00162855423 m/s, versus 0.001. Both fail at nodes 24-26 after 200 iterations,",
+              "with maxima at 0.39552 m. The entry-1 200- and 400-cell runs converge natively, but this does not clear either",
+              "the original 100-cell failure or the tightened-run failure. Sensitivity comparisons involving a nonconverged"
+            ]
+          },
+          {
+            "page": 10,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 2657,
+            "font_sizes_pt": {
+              "7.4": 30,
+              "8.0": 40,
+              "9.0": 598,
+              "10.3": 1948,
+              "15.0": 41
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "finite eligible interpolation brackets across all four configurations. Original results, pairwise metrics and criteria",
+              "remain unchanged.",
+              "Each run contains submitted_inputs.json, effective_inputs.json, gui_inputs.json, numerical NPZ/CSV files,",
+              "units, diagnostic assessment and paired measurement records. Import its gui_inputs.json through the local",
+              "application's Import control to inspect or rerun that configuration; edited runs are separate cases and are not"
+            ]
+          },
+          {
+            "page": 11,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 4309,
+            "font_sizes_pt": {
+              "7.4": 30,
+              "8.0": 40,
+              "9.0": 222,
+              "10.3": 3995,
+              "15.0": 22
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "groups from the raw XML and saved profiles. This is verification of reported calculations and accounting, not a",
+              "physical-validation score. The audit preserves every original native and physical classification; it does not apply",
+              "the subsequent annular diagnostic policy retroactively.",
+              "The campaign-checkpoint automated suite completed with 476 tests passed and two retained FourField",
+              "runtime warnings in 176.12 s. The warnings are the existing divide-by-zero and invalid-multiply evaluations in"
+            ]
+          },
+          {
+            "page": 12,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 2405,
+            "font_sizes_pt": {
+              "7.4": 30,
+              "8.0": 40,
+              "8.2": 161,
+              "10.0": 4,
+              "10.3": 2134,
+              "12.2": 36
+            },
+            "images": 2,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Comparison with the published curves",
+              "The plotted reference values are digitized paper graphics with explicit horizontal and vertical reading bounds,",
+              "not recovered numerical arrays. The comparison retains the source calibration and extraction exclusions.",
+              "(cid:127) Figures 3-4: sampled readings from 21 of the 22 extracted series intersect the native-curve reading envelopes",
+              "at every retained point. Three of five sampled FourField wave-velocity points do not intersect them; the series"
+            ]
+          },
+          {
+            "page": 13,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 1722,
+            "font_sizes_pt": {
+              "7.4": 30,
+              "8.0": 40,
+              "8.2": 116,
+              "9.0": 408,
+              "10.3": 1089,
+              "12.2": 39
+            },
+            "images": 1,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Figure 6 graphical residuals against the published prediction dots and separate measured-film-flow correlation stars",
+              "Comparison with the stored measurements",
+              "The following source-default RMSE values are descriptive prediction-minus- measurement errors. They retain",
+              "every original classification in the saved receipts, and the Sawai populations include nonconverged cases",
+              "explicitly. No uncertainty-qualified experimental acceptance threshold has been established."
+            ]
+          },
+          {
+            "page": 14,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 804,
+            "font_sizes_pt": {
+              "7.4": 30,
+              "8.0": 40,
+              "8.2": 238,
+              "10.3": 496
+            },
+            "images": 2,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Figure 6 targets: Wurtz measurements and native outputs, with the measured-film-flow correlation shown separately",
+              "Figure 7 targets: Sawai measurements and native outputs at the author-confirmed 0.2 s setting, retaining out-of-domain points",
+              "Figure 7 left-column panels show quality 0.48 (entries 1 and 2); right-column panels show quality 0.88 (entries 5",
+              "and 6). Titles are omitted from the figures at the user's request; axes and legends retain quantities and units.",
+              "The separate relaxation-setting comparison retains both frozen branches for the discrepancy audit. Figure 7"
+            ]
+          },
+          {
+            "page": 15,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 3362,
+            "font_sizes_pt": {
+              "7.4": 30,
+              "8.0": 40,
+              "9.0": 790,
+              "10.0": 8,
+              "10.3": 2438,
+              "15.0": 56
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Mesh dependence of the source transition",
+              "The first OAFTRANSITION parameter is described as a sigmoid width in metres in upstream Model.m:24. Upstream",
+              "Mixture.m:2153-2155 multiplies it by N/L; sigm at line 2206 then applies this coefficient to a node- index",
+              "difference. The Python implementation in fields.py:530-537 preserves the same expression, including the",
+              "equivalent index-origin shift. With uniform dz=L/N, first parameter w and second parameter offset, the logistic"
+            ]
+          },
+          {
+            "page": 16,
+            "size_pt": [
+              1190.551,
+              841.8898
+            ],
+            "text_characters": 204,
+            "font_sizes_pt": {
+              "7.4": 63,
+              "8.0": 80,
+              "10.3": 61
+            },
+            "images": 1,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "Figures 3 targets: native profiles and bounded paper readings",
+              "outputs/validation/lecorre-2025-01/figures-clean-02/figure3_paper_comparison.png",
+              "Source snapshot 525ef6e8558a | A3 landscape figure supplement 16"
+            ]
+          },
+          {
+            "page": 17,
+            "size_pt": [
+              1190.551,
+              841.8898
+            ],
+            "text_characters": 243,
+            "font_sizes_pt": {
+              "7.4": 63,
+              "8.0": 80,
+              "10.3": 100
+            },
+            "images": 1,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "Figure 4 targets: native field dimensions, velocities and frequencies against bounded paper readings",
+              "outputs/validation/lecorre-2025-01/figures-clean-02/figure4_paper_comparison.png",
+              "Source snapshot 525ef6e8558a | A3 landscape figure supplement 17"
+            ]
+          },
+          {
+            "page": 18,
+            "size_pt": [
+              1190.551,
+              841.8898
+            ],
+            "text_characters": 259,
+            "font_sizes_pt": {
+              "7.4": 63,
+              "8.0": 80,
+              "10.3": 116
+            },
+            "images": 1,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "Figure 6 graphical residuals against the published prediction dots and separate measured-film-flow correlation stars",
+              "outputs/validation/lecorre-2025-01/figures-clean-02/figure6_paper_comparison.png",
+              "Source snapshot 525ef6e8558a | A3 landscape figure supplement 18"
+            ]
+          },
+          {
+            "page": 19,
+            "size_pt": [
+              1190.551,
+              841.8898
+            ],
+            "text_characters": 262,
+            "font_sizes_pt": {
+              "7.4": 63,
+              "8.0": 86,
+              "10.3": 113
+            },
+            "images": 1,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "Figure 6 targets: Wurtz measurements and native outputs, with the measured-film-flow correlation shown separately",
+              "outputs/validation/lecorre-2025-01/figures-clean-02/figure6_measurement_comparison.png",
+              "Source snapshot 525ef6e8558a | A3 landscape figure supplement 19"
+            ]
+          },
+          {
+            "page": 20,
+            "size_pt": [
+              1190.551,
+              841.8898
+            ],
+            "text_characters": 274,
+            "font_sizes_pt": {
+              "7.4": 63,
+              "8.0": 86,
+              "10.3": 125
+            },
+            "images": 1,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "Figure 7 targets: Sawai measurements and native outputs at the author-confirmed 0.2 s setting, retaining out-of-domain points",
+              "outputs/validation/lecorre-2025-01/figures-clean-02/figure7_measurement_comparison.png",
+              "Source snapshot 525ef6e8558a | A3 landscape figure supplement 20"
+            ]
+          }
+        ],
+        "text_outside_page": [],
+        "replacement_or_black_square_glyphs": [],
+        "images_outside_page": [],
+        "outline_count_top_level": 17,
+        "named_destination_count": 0
+      },
+      {
+        "file": "LECORRE_PHYSICAL_REVIEW.pdf",
+        "sha256": "88a4e26bfe1f124d9956f365fb34950152f862ef6efb5cef7611ae5d28da4f27",
+        "manifest_hash_matches": true,
+        "page_count": 4,
+        "manifest_page_count_matches": true,
+        "fonts": {
+          "/Helvetica": {
+            "subtype": "/Type1",
+            "embedded": false
+          },
+          "/AAAAAA+SegoeUI-Bold": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+SegoeUI": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+Consolas": {
+            "subtype": "/TrueType",
+            "embedded": true
+          }
+        },
+        "pages": [
+          {
+            "page": 1,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 3964,
+            "font_sizes_pt": {
+              "7.4": 32,
+              "8.0": 40,
+              "8.2": 95,
+              "9.0": 527,
+              "10.0": 2,
+              "10.3": 3173,
+              "15.0": 38,
+              "22.0": 57
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Preserved scientific status; see stated evidence and limitations | Source snapshot 525ef6e8558a",
+              "OpenSTREAM convergence and supplemental",
+              "diagnostics review",
+              "The phase-volume closure residual is a supplemental diagnostic for ThreeField and FourField, not a",
+              "convergence or acceptance criterion. On 2026-11-14, R. W. Morse explicitly directed that it have no pass/fail"
+            ]
+          },
+          {
+            "page": 2,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 4357,
+            "font_sizes_pt": {
+              "7.4": 32,
+              "8.0": 40,
+              "9.0": 696,
+              "10.0": 2,
+              "10.3": 3539,
+              "15.0": 48
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "(cid:127) The mass-flow subtractions in ThreeField line 182 and FourField line 189 enforce W_drop = W_mixture_liquid",
+              "- W_film. They do not impose a total occupied-area equality when field velocities differ.",
+              "(cid:127) The optional MOMENTDROP=ALGEBRAIC closure uses the remaining area to prescribe droplet velocity in",
+              "upstream/+Solvers/+ThreeField/Drop.m:515-518. This is an existing selected closure, not a global convergence",
+              "criterion, and no case has been switched to it. The nearby phrase “Volumetric force residual” at line 559 refers"
+            ]
+          },
+          {
+            "page": 3,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 3353,
+            "font_sizes_pt": {
+              "7.4": 32,
+              "8.0": 40,
+              "9.0": 580,
+              "10.0": 5,
+              "10.3": 2623,
+              "15.0": 73
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "6.94e-18 kg/m. This audit imports no solver or adapter; under the recorded saturated-density assumption it also",
+              "evaluates the algebraically equivalent expression (liquid_inventory / precursor_liquid_inventory - 1)*(1 -",
+              "precursor_void_fraction). Portable output arrays are explicitly treated as (time,node) and comparison profiles",
+              "as (node,).",
+              "What the source coupling explains"
+            ]
+          },
+          {
+            "page": 4,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 1933,
+            "font_sizes_pt": {
+              "7.4": 32,
+              "8.0": 40,
+              "8.4": 145,
+              "9.0": 53,
+              "10.3": 1618,
+              "15.0": 45
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "annular mask. ID 1 minima were approximately -1.18208e-5 kg/s at z=0.36256 m; ID 5 minima were",
+              "approximately -7.70744e-6 kg/s at z=0.23072 m. Both minima have AFFNC=0.00231054. Some ID-1 tail values lie",
+              "very close to the annular mask boundary, so they should be described as transition-region values, not silently",
+              "deleted or declared harmless. The frozen whole-domain negative-value flags remain unchanged. The",
+              "downstream area residual is retained separately as information."
+            ]
+          }
+        ],
+        "text_outside_page": [],
+        "replacement_or_black_square_glyphs": [],
+        "images_outside_page": [],
+        "outline_count_top_level": 6,
+        "named_destination_count": 0
+      },
+      {
+        "file": "ACCEPTANCE_MATRIX.pdf",
+        "sha256": "0912a6090ff2c1e768e09bd8be6390d168838f02e6a57d00dadd8bed68a14c45",
+        "manifest_hash_matches": true,
+        "page_count": 52,
+        "manifest_page_count_matches": true,
+        "fonts": {
+          "/Helvetica": {
+            "subtype": "/Type1",
+            "embedded": false
+          },
+          "/AAAAAA+SegoeUI-Bold": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+SegoeUI": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+Consolas": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+SegoeUI-Italic": {
+            "subtype": "/TrueType",
+            "embedded": true
+          }
+        },
+        "pages": [
+          {
+            "page": 1,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2099,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "8.2": 95,
+              "9.0": 894,
+              "10.3": 1004,
+              "15.0": 23,
+              "22.0": 17
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Preserved scientific status; see stated evidence and limitations | Source snapshot 525ef6e8558a",
+              "Acceptance matrix",
+              "Generated from the reviewed ledgers in docs/acceptance/. This is a requirement/evidence inventory, not a percentage of full parity.",
+              "Prioritized work and acceptance rules | Complete CSV | Machine-readable JSON | Literature review",
+              "Scope: 81 requirements, 41 enum types / 127 choices, 16 interpolation entries, and 585 public method entries including inheritance. These inventories overlap"
+            ]
+          },
+          {
+            "page": 2,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1576,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 1494,
+              "15.0": 16
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "ID / priority Requirement Implementation Native checks MATLAB Physical Experimental",
+              "EXP-012 / P0 Resolve unit exceptions and out-of-domain partial passed_scoped not_applicable partial partial",
+              "measurement coordinates",
+              "EXP-014 / P1 Separate model development, partial partial not_applicable not_run partial",
+              "calibration-associated reproduction and"
+            ]
+          },
+          {
+            "page": 3,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1921,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 1855
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "ID / priority Requirement Implementation Native checks MATLAB Physical Experimental",
+              "API-006 / P1 Verify every supported interpolation method and partial passed_scoped not_run not_applicable not_applicable",
+              "public coordinate convention.",
+              "API-007 / P0 Preserve source update order, indexing and implemented passed_scoped partial not_applicable not_applicable",
+              "shared-state relationships."
+            ]
+          },
+          {
+            "page": 4,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1388,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 1288,
+              "15.0": 34
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "ID / priority Requirement Implementation Native checks MATLAB Physical Experimental",
+              "API-024 / P2 Preserve a usable local front end without implemented passed_scoped passed_scoped not_applicable not_applicable",
+              "overstating scientific coverage.",
+              "Literature Scope",
+              "ID / priority Requirement Implementation Native checks MATLAB Physical Experimental"
+            ]
+          },
+          {
+            "page": 5,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1867,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 1801
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "ID / priority Requirement Implementation Native checks MATLAB Physical Experimental",
+              "CORE-002 / P1 Preserve original TUTORIAL1 steady implemented passed_scoped passed_scoped failed not_run",
+              "primary-profile agreement",
+              "CORE-003 / P1 Preserve original TUTORIAL1 steady implemented passed_scoped passed_scoped failed not_run",
+              "primary-profile agreement"
+            ]
+          },
+          {
+            "page": 6,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1488,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 1400,
+              "15.0": 22
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "ID / priority Requirement Implementation Native checks MATLAB Physical Experimental",
+              "CORE-018 / P0 Verify onset criteria, cached sigmoid and implemented partial not_run partial not_run",
+              "initialization split",
+              "CORE-019 / P1 Cover phase momentum and local implemented partial not_run partial not_run",
+              "relative-velocity alternatives"
+            ]
+          },
+          {
+            "page": 7,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1582,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 1492,
+              "15.0": 24
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "ID / priority Requirement Implementation Native checks MATLAB Physical Experimental",
+              "CORE-026 / P0 Resolve occupied-area and conservative-balance implemented passed_scoped passed_scoped failed not_run",
+              "failure",
+              "CORE-027 / P0 Assess source-equation dryout mass residuals; implemented passed_scoped passed_scoped failed not_run",
+              "report annular volume diagnostics"
+            ]
+          },
+          {
+            "page": 8,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1712,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 890,
+              "10.0": 2,
+              "10.3": 711,
+              "12.2": 17,
+              "15.0": 26
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "ID / priority Requirement Implementation Native checks MATLAB Physical Experimental",
+              "API-021 / P0 Execute and verify the portable exporter against a implemented partial not_run not_applicable not_applicable",
+              "known MATLAB environment.",
+              "API-022 / P0 Keep structural MAT5/MCOS recovery auditable implemented passed_scoped passed_scoped not_applicable not_applicable",
+              "and correctly scoped."
+            ]
+          },
+          {
+            "page": 9,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2598,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 573,
+              "10.0": 4,
+              "10.3": 1917,
+              "12.2": 38
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Evidence: docs/ALL_BASELINES_VERIFICATION.md; outputs/baseline-parity-02/Mixture/comparison/comparison.json; outputs/baseline-parity-02/summary.json;",
+              "tests/test_solver.py; outputs/verification/native-sensitivity-01/verification.json",
+              "Dependencies: API-022, API-023",
+              "CORE-002: TwoFluid",
+              "Scope: TUTORIAL1/DEFAULT/TUTORIAL1/tutorial1.inp; 100 cells and 101 nodes; 6 original W/U/H profiles. The common case is 6 MPa, 0.07 kg/s, 87.5 kW and 5.5 m."
+            ]
+          },
+          {
+            "page": 10,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2316,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 327,
+              "10.0": 4,
+              "10.3": 1875,
+              "12.2": 43
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Dependencies: API-022, API-023",
+              "CORE-004: FourField",
+              "Scope: TUTORIAL1/DEFAULT/TUTORIAL1/tutorial1.inp; 100 cells and 101 nodes; 9 original W/U/H profiles. The common case is 6 MPa, 0.07 kg/s, 87.5 kW and 5.5 m.",
+              "Missing or unverified: Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other",
+              "closures or establish physical accuracy. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental"
+            ]
+          },
+          {
+            "page": 11,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2176,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 233,
+              "10.0": 5,
+              "10.3": 1830,
+              "12.2": 41
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "CORE-006: All frameworks",
+              "Scope: Strict relative-only physical-state failures: 14 Mixture, 6 TwoFluid, 2 ThreeField and 1 FourField; additional annular initialization iteration differences remain.",
+              "Missing or unverified: Eleven mixture failures are accounted for by stored-state differences; three point-increment differences lack archived intermediate iterates.",
+              "Other failures must retain their recorded status.",
+              "Acceptance evidence required:"
+            ]
+          },
+          {
+            "page": 12,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2131,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 308,
+              "10.0": 4,
+              "10.3": 1714,
+              "12.2": 38
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "CORE-008: TwoFluid",
+              "Scope: TUTORIAL3B with tutorial2_transient.inp; 51 states, 101 nodes.",
+              "Missing or unverified: No MATLAB transient reference. Native run converges but maximum occupied-area discrepancy is 43.3609%; this transient defect's source",
+              "attribution is unresolved.",
+              "Acceptance evidence required:"
+            ]
+          },
+          {
+            "page": 13,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2229,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 262,
+              "10.0": 4,
+              "10.3": 1825,
+              "12.2": 71
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "CORE-010: FourField",
+              "Scope: TUTORIAL5E plus tutorial2_transient.inp (workflow named TUTORIAL5F); 51 states, 101 nodes, one wall.",
+              "Missing or unverified: No MATLAB transient reference. Fully annular area discrepancy 15.5181% is now supplemental only; the separate fixed-annular mass residual",
+              "0.00642295 kg/s remains the physical failure evidence. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is",
+              "supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged."
+            ]
+          },
+          {
+            "page": 14,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2150,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 284,
+              "10.0": 4,
+              "10.3": 1746,
+              "12.2": 49
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Missing or unverified: EPRI has scoped smoke/bound checks; other tutorial executions do not establish reference equivalence. None is experimentally validated in this",
+              "port.",
+              "Acceptance evidence required:",
+              "(cid:127) Check every legal thermal model against independent MATLAB states and valid limiting conditions.",
+              "(cid:127) Retain explicit applicability domains and avoid substituting saturation equilibrium for unevaluated nonequilibrium physics."
+            ]
+          },
+          {
+            "page": 15,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1974,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 156,
+              "10.0": 6,
+              "10.3": 1688,
+              "12.2": 57
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Acceptance evidence required:",
+              "(cid:127) Check relaxation times in seconds and each mixed-unit coefficient explicitly.",
+              "(cid:127) Verify source NaN omission and near-wall source cancellation at boundaries; compare corresponding MATLAB outputs.",
+              "Next action: Construct branch-specific fixtures including obstruction interpolation, condensation/evaporation, and pure-phase limits.",
+              "Evidence: tests/test_fields.py; docs/field_notes.md; docs/FEATURE_MAP.md"
+            ]
+          },
+          {
+            "page": 16,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2051,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 206,
+              "10.0": 4,
+              "10.3": 1722,
+              "12.2": 52
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Next action: Map each closure's published domain, create independently calculated fixture values and obtain MATLAB wall-temperature/flux arrays.",
+              "Evidence: tests/test_fields.py; docs/field_notes.md",
+              "Dependencies: No additional matrix-row prerequisite.",
+              "CORE-017: Mixture transitions",
+              "Scope: CBT, MFBT and BTMTM legal selections, including BIASI/BEZRUKOV/ELEVATION, NONE/CONSTANT rewet behavior and crossing histories."
+            ]
+          },
+          {
+            "page": 17,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2278,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 239,
+              "10.0": 4,
+              "10.3": 1913,
+              "12.2": 55
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "CORE-019: TwoFluid momentum",
+              "Scope: MOMENTLIQUID/GAS=MIXTURE/SLIP/FULL; LOCRELVEL=AREAMEAN/SCALED/DRIFT in implemented legal paths; one-wall FULL momentum.",
+              "Missing or unverified: Selected original momentum tutorials and slip identities tested. Other option combinations, regime transitions and dimensional balance at",
+              "clipped bounds lack MATLAB references. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental",
+              "only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged."
+            ]
+          },
+          {
+            "page": 18,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2001,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 261,
+              "10.0": 4,
+              "10.3": 1611,
+              "12.2": 58
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "CORE-021: ThreeField exchange",
+              "Scope: ENTRAINMENT=NONE/GOVAN/OKAWA2003/OKAWA2004/OKAWA2004MOD/OKAWAGEN; DEPOSITION=NONE/GOVAN/OKAWA;",
+              "DEPENHANCEMENT=NONE/WINDECKER; THINFILMFRIC/VAPORFRIC choices.",
+              "Missing or unverified: Tutorials exercise defaults, Govan and disabled exchange. Other branches/combinations are source-inspected or scoped unit checks. Okawa",
+              "vector and pointwise iteration stopping differ upstream."
+            ]
+          },
+          {
+            "page": 19,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2120,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 237,
+              "10.0": 4,
+              "10.3": 1722,
+              "12.2": 90
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "CORE-023: FourField structure",
+              "Scope: OAFFILMSPLIT=RATIO/EQUILIBRIUM; BASEEQTHICK=RISO/COEFS/YPLUS/MFVAL; WAVEFREQUENCY=EQUILIBRIUM/RELAXATION;",
+              "EQSTROUHAL=RISO/SAWAI/MFVAL/CUSTOM/CSTFREQ.",
+              "Missing or unverified: Actual base/frequency pass TUTORIAL1 additional comparisons; alternative cases run natively but branch-wide MATLAB equivalence is not",
+              "established."
+            ]
+          },
+          {
+            "page": 20,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2498,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 247,
+              "10.0": 4,
+              "10.3": 2110,
+              "12.2": 70
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Missing or unverified: Selected steady checks pass; this is neither experimental validation nor a universal balance guarantee.",
+              "Acceptance evidence required:",
+              "(cid:127) Verify imposed discrete power 87500 W and steady enthalpy target 1139400+87500/0.07=2389400 J/kg for this case.",
+              "(cid:127) Check local and global mass/enthalpy/momentum residuals with correct units and boundary contributions, not just solver increments.",
+              "Next action: Retain independent balance gates while adding closure- and condition-specific cases."
+            ]
+          },
+          {
+            "page": 21,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2394,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 399,
+              "10.0": 4,
+              "10.3": 1889,
+              "12.2": 35
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged.",
+              "Acceptance evidence required:",
+              "(cid:127) Report phase-volume residuals without an annular acceptance threshold; retain raw clipped/unclipped source mass residuals as separate evidence.",
+              "(cid:127) Do not alter velocity/area algebra or select an additional closure to enforce volume equality; preserve the requested governing equations and model settings.",
+              "Next action: Trace clipped-cell mass residuals against the source update and independent reference arrays; keep phase-volume diagnostics informational and preserve"
+            ]
+          },
+          {
+            "page": 22,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2223,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 207,
+              "10.0": 6,
+              "10.3": 1880,
+              "12.2": 63
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "CORE-029: Convergence contracts",
+              "Scope: All frameworks; point, pseudo-time and physical-time semantics; FourField frequency criterion and source STATE versus enhanced native .converged.",
+              "Missing or unverified: Some temporally steady iterates fail point convergence. Source FourField stopping omits SSCONVFW; native STATE preserves it while",
+              ".converged additionally checks frequency/nested failures. Source initializes DFW but writes DF.",
+              "Acceptance evidence required:"
+            ]
+          },
+          {
+            "page": 23,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1986,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 314,
+              "10.0": 4,
+              "10.3": 1499,
+              "12.2": 102
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "CORE-031: TwoFluid discretization",
+              "Scope: Existing tightened 50/100/200-cell steady study and original transient; one wall.",
+              "Missing or unverified: The 50-cell tightened run failed point convergence; 100/200-cell energy defects decrease but two successful grids do not establish an order.",
+              "Transient time-step sensitivity is missing.",
+              "Acceptance evidence required:"
+            ]
+          },
+          {
+            "page": 24,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2153,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 183,
+              "10.0": 4,
+              "10.3": 1816,
+              "12.2": 83
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Missing or unverified: No successful FourField mesh/time-step sensitivity sequence is recorded. Saturated enthalpy, wave bounds and frequency changes require",
+              "separate checks.",
+              "Acceptance evidence required:",
+              "(cid:127) Require point/nested convergence and common physical domains before comparing grids/times.",
+              "(cid:127) Report uncertainty in film/base flow, wave velocity/thickness/frequency and event timing, not only final-state mixture quantities."
+            ]
+          },
+          {
+            "page": 25,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2251,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 257,
+              "10.0": 5,
+              "10.3": 1858,
+              "12.2": 64
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "(cid:127) Explicitly identify the rejected field/value and source defect.",
+              "(cid:127) Only implement a corrected path after its equations, dimensions, numerical consequences and independent reference expectations are recorded.",
+              "Next action: Document a source-backed intended contract or retain a named unsupported exception; review any correction as a separate model/API change.",
+              "Evidence: tests/test_fields.py; tests/test_threefield.py; tests/test_twofluid.py; docs/FEATURE_MAP.md; docs/field_notes.md",
+              "Dependencies: No additional matrix-row prerequisite."
+            ]
+          },
+          {
+            "page": 26,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2472,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 352,
+              "10.0": 5,
+              "10.3": 1999,
+              "12.2": 49
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "(cid:127) Reject invalid numeric inputs and distinguish unsupported conditions, indeterminate applicability and failed physical checks; do not present no-annular-domain",
+              "results as an annular pass.",
+              "Next action: Attach source/literature domains to each legal option and selected validation case; classify unknown domains explicitly.",
+              "Evidence: docs/FEATURE_MAP.md; docs/threefield_transient.md; docs/fourfield_notes.md; tests/test_inputs.py; tests/test_threefield.py",
+              "Dependencies: No additional matrix-row prerequisite."
+            ]
+          },
+          {
+            "page": 27,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2311,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 194,
+              "10.0": 8,
+              "10.3": 1967,
+              "12.2": 75
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "(cid:127) Verify raw SOLVER_DEPENDENT tokens separately from their resolved values for all four frameworks.",
+              "(cid:127) Input objects and defaults remain isolated under construction, copying and solver resolution.",
+              "(cid:127) Verify MRMTIMEINT EULER and EXPONENTIAL tokens, defaults and serialization; their numerical integration acceptance belongs to the solver/core rows.",
+              "Next action: Generate a field-by-field exported-default fixture and join enum choices to closure acceptance rows.",
+              "Evidence: docs/upstream_inventory.json; tests/test_inputs.py; tests/test_gui_schema.py; outputs/verification/github-windows-ci.json"
+            ]
+          },
+          {
+            "page": 28,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2392,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 345,
+              "10.0": 4,
+              "10.3": 1893,
+              "12.2": 83
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "(cid:127) Store a reproducible function specification and evaluated mesh values; unsupported expressions must fail explicitly.",
+              "Next action: Inventory actual function expressions in source inputs and database adapters before extending the parser.",
+              "Evidence: docs/API.md; docs/input_properties_notes.md; tests/test_gui_schema.py",
+              "Dependencies: No additional matrix-row prerequisite.",
+              "API-005: Geometry and boundary dimensions"
+            ]
+          },
+          {
+            "page": 29,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2261,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 220,
+              "10.0": 6,
+              "10.3": 1894,
+              "12.2": 74
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "(cid:127) Freeze independent MATLAB vectors for each supported method, node count, tie and extrapolation case with dimensions retained.",
+              "(cid:127) Verify axis-zero interpolation and MATLAB half-way tie behavior without accidental broadcasting.",
+              "(cid:127) Resolve CUBIC against the pinned MATLAB release or retain its explicit unsupported status; do not silently alias it.",
+              "Next action: Add method-by-method reference fixtures and public-wrapper acceptance cases.",
+              "Evidence: tests/test_solver.py; docs/API.md; docs/METHOD_COVERAGE.json"
+            ]
+          },
+          {
+            "page": 30,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2559,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 170,
+              "10.0": 7,
+              "10.3": 2229,
+              "12.2": 86
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "(cid:127) Compare exported property tables at interior and limiting states for every supported property mode with pinned CoolProp version/backend.",
+              "(cid:127) Keep dimensional identities, pressure range, saturation ordering, clamping and scalar/array return contracts explicit.",
+              "(cid:127) Document the 6 MPa lower-table inversion discrepancy and do not replace source enthalpy clamping with a temperature correction.",
+              "Next action: Create a property reference grid and boundary-condition pressure mismatch cases before broad experimental runs.",
+              "Evidence: tests/test_properties.py; docs/input_properties_notes.md; outputs/baseline-parity-02/summary.json"
+            ]
+          },
+          {
+            "page": 31,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2294,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 189,
+              "10.0": 7,
+              "10.3": 1935,
+              "12.2": 96
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "(cid:127) Compare stored, derived and computed-on-demand quantities separately; preserve errors for source-defective diagnostics.",
+              "(cid:127) Do not use a same-name method or a declaration count as proof of equation or operating-domain parity.",
+              "Next action: Join the method inventory to this acceptance ledger and prioritize public diagnostics needed by dataset adapters.",
+              "Evidence: docs/METHOD_COVERAGE.json; docs/METHOD_COVERAGE.md; tests/test_diagnostic_api.py; outputs/baseline-parity-02/summary.json",
+              "Dependencies: No additional matrix-row prerequisite."
+            ]
+          },
+          {
+            "page": 32,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2360,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 255,
+              "10.0": 7,
+              "10.3": 1952,
+              "12.2": 79
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "(cid:127) Retain distinct numerical, reference and physical statuses in all interfaces.",
+              "Next action: Write the session/state compatibility table and add remaining restart/logging acceptance cases.",
+              "Evidence: tests/test_cli.py; tests/test_gui.py; tests/test_gui_lock.py; docs/GUI_VERIFICATION.md; outputs/verification/github-windows-ci.json",
+              "Dependencies: No additional matrix-row prerequisite.",
+              "API-013: Portable results and serialization"
+            ]
+          },
+          {
+            "page": 33,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2202,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 231,
+              "10.0": 6,
+              "10.3": 1835,
+              "12.2": 63
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Next action: Retain these tests and add any missing quantity/schema cases exposed by experimental comparison plots.",
+              "Evidence: tests/test_plotting.py; docs/PLOTTING.md; outputs/saved-result-plots-02/provenance.json; outputs/saved-result-plots-02/render_verification.json",
+              "Dependencies: No additional matrix-row prerequisite.",
+              "API-015: Complete plotting API",
+              "Scope: Annular masks, obstruction/onset overlays, grouped presets, dual axes, 3D/shading, video export and interactive playback options."
+            ]
+          },
+          {
+            "page": 34,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2142,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 360,
+              "10.0": 6,
+              "10.3": 1628,
+              "12.2": 81
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Evidence: outputs/release-02/manifest.json; outputs/baseline-parity-02/summary.json; docs/ALL_BASELINES_VERIFICATION.md; docs/GUI_VERIFICATION.md",
+              "Dependencies: CORE-001, CORE-002, CORE-003, CORE-004",
+              "API-017: Tutorials 02-05: model capabilities",
+              "Scope: Mixture, TwoFluid, ThreeField and FourField tutorial cases, diagnostics, pseudo-time and physical transients; model physics gates belong to CORE rows.",
+              "Missing or unverified: Selected native tutorial inputs run, but complete cell/operation ledgers and independent comparisons for each tutorial variant/transient are"
+            ]
+          },
+          {
+            "page": 35,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2071,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 213,
+              "10.0": 6,
+              "10.3": 1688,
+              "12.2": 97
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "API-019: Tutorials 07-08: convergence and sensitivity",
+              "Scope: Point, pseudo-time and physical-time distinctions; mesh/time-step comparisons; thresholds and failure reporting without asserting unsupported convergence",
+              "order.",
+              "Missing or unverified: Existing sensitivity studies and diagnostics are narrower than complete tutorial operations or all-framework asymptotic convergence evidence;",
+              "some tightened cases fail."
+            ]
+          },
+          {
+            "page": 36,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2375,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 264,
+              "10.0": 6,
+              "10.3": 1981,
+              "12.2": 57
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "API-021: MATLAB reference export",
+              "Scope: Fresh and approved-object source modes for all four frameworks, arbitrary selected model/boundary cases, initialization and precursor arrays.",
+              "Missing or unverified: Exporter source was reviewed but never executed in MATLAB. Synthetic comparator fixtures do not verify successful class construction,",
+              "CoolProp compatibility, export dimensions or version capture.",
+              "Acceptance evidence required:"
+            ]
+          },
+          {
+            "page": 37,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2468,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 340,
+              "10.0": 6,
+              "10.3": 1980,
+              "12.2": 75
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "API-023: Comparison acceptance machinery",
+              "Scope: Core W/U/H and required FourField base/frequency, histories/precursors, inputs, units, shapes and convergence; supplementary diagnostics separately",
+              "identified.",
+              "Missing or unverified: Four original core baselines pass; supplementary diagnostic differences remain. GUI comparisons have a narrower scope than the full archived",
+              "audit. Original 1e-8/0 criteria must not be mistaken for a universal experimental or all-quantity accuracy tolerance."
+            ]
+          },
+          {
+            "page": 38,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2554,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 270,
+              "10.0": 6,
+              "10.3": 2114,
+              "12.2": 97
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Dependencies: No additional matrix-row prerequisite.",
+              "API-025: Reproducible installation and release",
+              "Scope: Pinned Python 3.12 dependencies, source/wheel installation, CLI/GUI launches, bundled inputs/reference/assets/licenses and runtime import boundaries.",
+              "Missing or unverified: The clean Windows workflow passed213 Python tests and5 JavaScript tests with2 recorded FourField warnings. This confirms the tested",
+              "installation/runtime scope, not all operating conditions or scientific parity. Test/evidence versions must remain traceable after changes."
+            ]
+          },
+          {
+            "page": 39,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 3008,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 600,
+              "10.0": 3,
+              "10.3": 2270,
+              "12.2": 68
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Dependencies: No additional matrix-row prerequisite.",
+              "EXP-001: Publication/version provenance",
+              "Scope: 2025 ICMF abstracts, 2025 NURETH paper, 2026 pinned solver and database revisions",
+              "Missing or unverified: The 33 source-default and 36 diagnostic cases were frozen before predictions in commit 03fb5eaebc7b020f441c1b47544cd836978f8469, with",
+              "paper/MLX/XML hashes and exact effective inputs. Historical March-2025 NURETH21.m is recovered, but it differs from the September-2026 companion and contains"
+            ]
+          },
+          {
+            "page": 40,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 3089,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 1058,
+              "10.0": 6,
+              "10.3": 1927,
+              "12.2": 31
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "J/kg versus SSCONVH=1 at 29 s). Original numerical arrays and exact publication runtime remain absent; graphical agreement is not MATLAB equivalence. Current",
+              "policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts",
+              "remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged.",
+              "Acceptance evidence required:",
+              "(cid:127) Archive exact generated inputs, closure selections and any sequential inheritance of options."
+            ]
+          },
+          {
+            "page": 41,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2534,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 311,
+              "10.0": 6,
+              "10.3": 2094,
+              "12.2": 56
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Evidence: docs/LITERATURE_ACCEPTANCE_REVIEW.md; local-paper:Chan2025.pdf#page=2",
+              "Dependencies: EXP-001, API-021, CORE-009, CORE-010",
+              "EXP-004: TRACE benchmark",
+              "Scope: NURETH Figure 5: 0.6 MJ/kg inlet enthalpy, 150 kW, prescribed subcooled-boiling settings and mixture slip ratio 2",
+              "Missing or unverified: Figure 5 remains not reproduced: both companion review and source audit lack the TRACE deck, version, closure selections and output arrays."
+            ]
+          },
+          {
+            "page": 42,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 3406,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 1360,
+              "10.0": 5,
+              "10.3": 1933,
+              "12.2": 41
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "(cid:127) For transient partial records, match initial-state inheritance rather than silently inheriting a previous transient record.",
+              "Next action: Extend the checked adapter contract to Moeck, Bennett and Groeneveld plus transient inheritance; obtain independent MATLAB effective-input exports",
+              "before claiming cross-runtime generation equivalence.",
+              "Evidence: docs/PARITY_COMPLETION.md; docs/LITERATURE_ACCEPTANCE_REVIEW.md; tests/test_bartolomey_adapter.py;",
+              "outputs/validation/bartolomey-pilot-01/case_registry.json; docs/BARTOLOMEY_SOURCE_REVIEW.md; docs/BARTOLOMEY_PILOT.md; docs/LECORRE_REPRODUCTION.md;"
+            ]
+          },
+          {
+            "page": 43,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 3300,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 900,
+              "10.0": 4,
+              "10.3": 2294,
+              "12.2": 35
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "tests/test_lecorre_database.py; tests/test_lecorre_runner.py; tests/test_lecorre_comparison.py; tests/test_lecorre_output_audit.py;",
+              "tests/test_lecorre_common_domain.py; references/paper/lecorre2025/figures6_7/metadata.json",
+              "Dependencies: No additional matrix-row prerequisite.",
+              "EXP-007: Uncertainty and acceptance",
+              "Scope: Measurement, digitization/transcription, input and numerical uncertainty for each compared quantity"
+            ]
+          },
+          {
+            "page": 44,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 3242,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 1137,
+              "10.0": 4,
+              "10.3": 1988,
+              "12.2": 46
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "EXP-008: Evaluation report and case accounting",
+              "Scope: All attempted cases, including nonconvergence, physical inconsistency and excluded measurements",
+              "Missing or unverified: The existing Bartolomey 40-run accounting and its 29/32 sensitivity-screen result remain unchanged. The new frozen Le Corre campaign",
+              "accounts for all 69 attempts: 69 executed, 63 natively converged, and 65 physically rejected under the original policy. The other runs remain not fully assessed, not full",
+              "physical passes. The independent saved-array/XML/CSV audit passed 4708/4708 arithmetic/accounting checks. All failed convergence gates, unit conversions,"
+            ]
+          },
+          {
+            "page": 45,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 3338,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 509,
+              "10.0": 4,
+              "10.3": 2694,
+              "12.2": 64
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "EXP-009: Bartolomey pilot",
+              "Scope: Frozen XML entries 1,22,29,31: four subcooled-boiling groups, Quality and Elevation observations; HEM and source TUTORIAL2D Saha-Zuber/Bestion",
+              "configurations; 100/200/400 cells with tighter-iteration and pseudo-time-step checks at 200 cells.",
+              "Missing or unverified: Pilot infrastructure and descriptive comparisons executed: 40/40 runs converged and passed the predeclared steady mass/enthalpy, source",
+              "discrete momentum, bounds, phase-area and boundary/heating gates. All 59 source measurements were compared under each model. Native numerical acceptance"
+            ]
+          },
+          {
+            "page": 46,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 3695,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 962,
+              "10.0": 4,
+              "10.3": 2623,
+              "12.2": 39
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "policy; these are now supplemental residuals, not acceptance failures. CONST-to-CONSTANT is an explicit runner-level spelling migration, never a global alias. This is",
+              "calibration-associated descriptive reproduction; uncertainty, adequate adiabatic-development qualification and independent MATLAB execution remain unestablished.",
+              "Source AFFNC scaling makes physical transition length proportional to dz^2/w, so refinement also changes blending and eligible domains. A labeled posthoc",
+              "common-coordinate diagnostic covers 9/12 fully natively converged four-configuration sentinels; original pairwise metrics are retained and no convergence order or",
+              "pure discretization uncertainty is claimed. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental"
+            ]
+          },
+          {
+            "page": 47,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 3811,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 1007,
+              "10.0": 4,
+              "10.3": 2697,
+              "12.2": 36
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "5 fail final wave-flow-per-perimeter point changes despite temporal stopping; only six of 12 measurement pairs per quantity are natively converged. Across 20",
+              "base/sensitivity variants 15 converge and 20 recorded area-based physical rejection under the original policy; annular area-only rejection is now superseded.",
+              "Measurement uncertainty, source coordinates, calibration independence and exact MATLAB reference remain unresolved. Source AFFNC scaling makes physical",
+              "transition length proportional to dz^2/w, so refinement also changes blending and eligible domains. A labeled posthoc common-coordinate diagnostic covers 9/12",
+              "fully natively converged four-configuration sentinels; original pairwise metrics are retained and no convergence order or pure discretization uncertainty is claimed."
+            ]
+          },
+          {
+            "page": 48,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2805,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 713,
+              "10.0": 8,
+              "10.3": 1971,
+              "12.2": 46
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Acceptance evidence required:",
+              "(cid:127) Convert milliseconds to seconds exactly once and preserve raw period values and units.",
+              "(cid:127) Reconcile the source measurement/geometry coordinate definitions against the original Sawai article and documented digitization.",
+              "(cid:127) Do not clamp, extrapolate, extend channel length or silently discard points to make comparisons look valid.",
+              "(cid:127) Until resolved, report affected points as ineligible for within-domain error metrics with explicit reasons."
+            ]
+          },
+          {
+            "page": 49,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 3236,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 1008,
+              "10.0": 4,
+              "10.3": 2116,
+              "12.2": 41
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Next action: Obtain plot-producing effective inputs and matching solver/property versions to explain historical execution; retain the author-confirmed intended Sawai",
+              "0.2 s setting and keep literal-source incompatibilities distinct.",
+              "Evidence: docs/LITERATURE_ACCEPTANCE_REVIEW.md; docs/LECORRE_REPRODUCTION.md; examples/lecorre_reproduction.json;",
+              "outputs/validation/lecorre-2025-01/report.json; outputs/validation/lecorre-2025-01/analysis/analysis.json;",
+              "outputs/validation/lecorre-2025-01/independent_output_audit.json; outputs/validation/lecorre-2025-01/common_domain_diagnostic.json;"
+            ]
+          },
+          {
+            "page": 50,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1941,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 320,
+              "10.0": 8,
+              "10.3": 1466,
+              "12.2": 80
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "outputs/validation/lecorre-2025-01/analysis/analysis.json; outputs/validation/lecorre-2025-01/independent_output_audit.json;",
+              "outputs/validation/lecorre-2025-01/common_domain_diagnostic.json; outputs/verification/lecorre-paper-extraction-replay.json;",
+              "references/paper/lecorre2025/figures6_7/metadata.json",
+              "Dependencies: EXP-001, EXP-007",
+              "EXP-015: Adamsson film-flow validation"
+            ]
+          },
+          {
+            "page": 51,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2140,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 86,
+              "10.0": 6,
+              "10.3": 1880,
+              "12.2": 101
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "Next action: Port selected database workflows with explicit observable roles and regime eligibility.",
+              "Evidence: docs/PARITY_COMPLETION.md; docs/LITERATURE_ACCEPTANCE_REVIEW.md",
+              "Dependencies: EXP-005, EXP-006, EXP-007, EXP-014, CORE-016, CORE-017, CORE-030",
+              "EXP-017: Groeneveld CHF/dryout validation",
+              "Scope: Selected compatible records; calibration overlap of CHF correlations assessed"
+            ]
+          },
+          {
+            "page": 52,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1073,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 551,
+              "10.0": 2,
+              "10.3": 453
+            },
+            "images": 0,
+            "text_nonempty": true,
+            "top_text_lines": [
+              "OpenSTREAM | Native Python documentation",
+              "(cid:127) Do not count proposed multicomponent, variable-area or thermally nonequilibrium annular extensions as missing translations unless supported by pinned",
+              "upstream.",
+              "(cid:127) Keep nonlinear convergence and mesh/timestep accuracy tests despite the paper's backward-Euler stability discussion.",
+              "Next action: Add case-level applicability gates and preserve explicit errors for unsupported paths.",
+              "Evidence: docs/LITERATURE_ACCEPTANCE_REVIEW.md; docs/FEATURE_MAP.md; docs/LECORRE_REPRODUCTION.md; examples/lecorre_reproduction.json;"
+            ]
+          }
+        ],
+        "text_outside_page": [],
+        "replacement_or_black_square_glyphs": [],
+        "images_outside_page": [],
+        "outline_count_top_level": 90,
+        "named_destination_count": 0
+      }
+    ]
+  },
+  "snapshot_comparison": {
+    "baseline_snapshot": "LeCorre_2025_Reports_02",
+    "baseline_layout_review_sha256": "1c130146d62372f371c9c9235ca831b20070db1ed15ba7488313ea64c8955b56",
+    "normalization": "Only old source-snapshot abbreviation is replaced by new abbreviation; plate footer page number is also adjusted by one. No other page contents are ignored.",
+    "documents": [
+      {
+        "file": "LECORRE_REPRODUCTION.pdf",
+        "source_lf_hash_unchanged": false,
+        "current_source_lf_hash_matches": true,
+        "pages": [
+          {
+            "page": 1,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 2,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 3,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 4,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 5,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 6,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 7,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 8,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 9,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 10,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 11,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 12,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 13,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 14,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          }
+        ]
+      },
+      {
+        "file": "LECORRE_PHYSICAL_REVIEW.pdf",
+        "source_lf_hash_unchanged": true,
+        "current_source_lf_hash_matches": true,
+        "pages": [
+          {
+            "page": 1,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 2,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 3,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 4,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          }
+        ]
+      },
+      {
+        "file": "ACCEPTANCE_MATRIX.pdf",
+        "source_lf_hash_unchanged": true,
+        "current_source_lf_hash_matches": true,
+        "pages": [
+          {
+            "page": 1,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 2,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 3,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 4,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 5,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 6,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 7,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 8,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 9,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 10,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 11,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 12,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 13,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 14,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 15,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 16,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 17,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 18,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 19,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 20,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 21,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 22,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 23,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 24,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 25,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 26,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 27,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 28,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 29,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 30,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 31,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 32,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 33,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 34,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 35,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 36,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 37,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 38,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 39,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 40,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 41,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 42,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 43,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 44,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 45,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 46,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 47,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 48,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 49,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 50,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 51,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          },
+          {
+            "page": 52,
+            "normalized_content_stream_identical": true,
+            "normalized_extracted_text_identical": true,
+            "geometry_identical": true
+          }
+        ]
+      }
+    ],
+    "plates": [
+      {
+        "old_page": 17,
+        "page": 16,
+        "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure3_paper_comparison.png",
+        "source_hash_matches": true,
+        "source_hash_unchanged": true,
+        "normalized_content_stream_identical": true,
+        "geometry_identical": true,
+        "image_pixels_unchanged": true,
+        "embedded_image_pixels_match_source": true
+      },
+      {
+        "old_page": 18,
+        "page": 17,
+        "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure4_paper_comparison.png",
+        "source_hash_matches": true,
+        "source_hash_unchanged": true,
+        "normalized_content_stream_identical": true,
+        "geometry_identical": true,
+        "image_pixels_unchanged": true,
+        "embedded_image_pixels_match_source": true
+      },
+      {
+        "old_page": 19,
+        "page": 18,
+        "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure6_paper_comparison.png",
+        "source_hash_matches": true,
+        "source_hash_unchanged": true,
+        "normalized_content_stream_identical": true,
+        "geometry_identical": true,
+        "image_pixels_unchanged": true,
+        "embedded_image_pixels_match_source": true
+      },
+      {
+        "old_page": 20,
+        "page": 19,
+        "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure6_measurement_comparison.png",
+        "source_hash_matches": true,
+        "source_hash_unchanged": true,
+        "normalized_content_stream_identical": true,
+        "geometry_identical": true,
+        "image_pixels_unchanged": true,
+        "embedded_image_pixels_match_source": true
+      },
+      {
+        "old_page": 21,
+        "page": 20,
+        "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure7_measurement_comparison.png",
+        "source_hash_matches": true,
+        "source_hash_unchanged": true,
+        "normalized_content_stream_identical": true,
+        "geometry_identical": true,
+        "image_pixels_unchanged": true,
+        "embedded_image_pixels_match_source": true
+      }
+    ]
+  },
+  "rendered_review": {
+    "current_snapshot_individual_pages": {
+      "file": "LECORRE_REPRODUCTION.pdf",
+      "pages": [
+        15,
+        16
+      ],
+      "dpi": 130,
+      "findings": "The complete final evidence paragraph and final sentence fit on body page 15 clear of the footer. Page 16 begins the first A3 figure plate cleanly. No orphan page, clipping or overlap observed."
+    },
+    "prior_snapshot_reuse": {
+      "snapshot": "LeCorre_2025_Reports_02",
+      "source_commit": "056acf29110a59986bb7bbb082feda472b761f38",
+      "layout_review_sha256": "1c130146d62372f371c9c9235ca831b20070db1ed15ba7488313ea64c8955b56",
+      "independently_reviewed_scope": {
+        "all_page_rendering": {
+          "pages": 77,
+          "dpi": 55,
+          "all_seven_thumbnail_montages_inspected": true
+        },
+        "individual_figure_plates": {
+          "file": "LECORRE_REPRODUCTION.pdf",
+          "pages": [
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "dpi": 130,
+          "findings": "All five A3 landscape plates inspected individually. No graph titles or top plate header; captions appear below the figures. Axes, legends, units and markers remain visible, with no clipping or overlap observed."
+        },
+        "individual_changed_review_pages": {
+          "file": "LECORRE_PHYSICAL_REVIEW.pdf",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "dpi": 120,
+          "findings": "All four pages inspected individually: headings, units, equations, reference paths and residual table are readable. Paragraph continuations and footer placement are intact."
+        },
+        "requested_figure7_presentation": {
+          "file": "LECORRE_REPRODUCTION.pdf",
+          "inline_page": 14,
+          "plate_page": 21,
+          "findings": "Main four-panel plot has no panel titles; its legend identifies only Python tau=0.2 s calculation, the distinct equilibrium-period dotted curves, measurements, out-of-channel measurements and digitized paper curves. The caption identifies the author-confirmed 0.2 s setting. This is a visual presentation check, not a new numerical comparison."
+        },
+        "findings": "All-page thumbnails show consistent headings, repeated table headers and wrapped table-cell content, with no gross malformed/blank page or clipped element. The reproduction report has a mostly empty final A4 page as recorded below.",
+        "montage_artifacts": [
+          {
+            "path": "tmp/pdfs/lecorre-qa-agent-02/montage_ACCEPTANCE_MATRIX_01.png",
+            "sha256": "a366c031cc352ecdbe1ebc40ce117cb3a7bece3dc2720007f093bfa605fae460"
+          },
+          {
+            "path": "tmp/pdfs/lecorre-qa-agent-02/montage_ACCEPTANCE_MATRIX_17.png",
+            "sha256": "94a35a7e6fadbaab8d93db6963147a485b33c677782ea43ae599c435536a10dd"
+          },
+          {
+            "path": "tmp/pdfs/lecorre-qa-agent-02/montage_ACCEPTANCE_MATRIX_33.png",
+            "sha256": "52459e0c5da88322590a105ae35816fb6c9b063dc44ca4142b2e733937807c83"
+          },
+          {
+            "path": "tmp/pdfs/lecorre-qa-agent-02/montage_ACCEPTANCE_MATRIX_49.png",
+            "sha256": "a1905209ad4b232c9580c6d598b08cb0368571a3029315531b6d2b733c9e5515"
+          },
+          {
+            "path": "tmp/pdfs/lecorre-qa-agent-02/montage_LECORRE_PHYSICAL_REVIEW_01.png",
+            "sha256": "592c68927c700a2ec3f5d3f04baa797e25d11964d528ecc4915726985a21fe64"
+          },
+          {
+            "path": "tmp/pdfs/lecorre-qa-agent-02/montage_LECORRE_REPRODUCTION_01.png",
+            "sha256": "477f2dd2620f3b55adcdeb9df63bd171bef4d70d7d282a322b033ee84b680666"
+          },
+          {
+            "path": "tmp/pdfs/lecorre-qa-agent-02/montage_LECORRE_REPRODUCTION_17.png",
+            "sha256": "437b050491965c5c656821e53c44eb882d4b06f0e523610f844455732b2e7fee"
+          }
+        ],
+        "poppler_warnings": "Poppler emitted global no-display-font configuration warnings for fonts not used as embedded body/code fonts; every page rendered successfully."
+      },
+      "basis_for_reuse": "Current reproduction pages 1-14, all 4 physical-review pages and all 52 matrix pages have identical content streams, extracted text and geometry after changing only the source-snapshot abbreviation. All five A3 plates have identical content streams and geometry after additionally adjusting footer page numbers; their embedded images remain pixel-identical to both the reviewed snapshot and source PNGs. Thus 75 of the 76 final pages retain previously inspected layout."
+    },
+    "requested_figure_presentation": "Unchanged figure assets retain no graph titles or top plate headers. Main Figure 7 retains only native tau=0.2 s curves alongside separately identified equilibrium-period curves, measurements, out-of-channel measurements and digitized paper readings. Final Figure 7 plate is page 20.",
+    "additional_root_review_reported": {
+      "final_reproduction_page": 15,
+      "finding": "Final sentence fits cleanly; no orphan.",
+      "figure6_residual_asset": "Clean PNG inspected at full width; banner absent and axes/units/legends intact."
+    },
+    "current_render_artifacts": [
+      {
+        "path": "tmp/pdfs/lecorre-qa-agent-03/repro-detail-15.png",
+        "sha256": "1e5290041b7dc9f1592288ef450d202ce3e20075a51af48720c4aac80173f9c8"
+      },
+      {
+        "path": "tmp/pdfs/lecorre-qa-agent-03/repro-detail-16.png",
+        "sha256": "accdaf72731db99c174e6af3f56d60a3ea5642a1ef96d97c10335e1b6581788c"
+      }
+    ]
+  },
+  "retention_check_scope": {
+    "independent_checks": "All final PDF hashes/page counts and three source LF hashes match the export manifest. All five asset hashes remain unchanged and match; final plate images match their source pixels. Exact normalized page comparisons are recorded above.",
+    "exporter_evidence": "Exporter evidence reports source numeric-token/text-fragment retention, original page content and geometry preservation, and retained bookmarks/named destinations. This QA did not independently repeat every source-fragment comparison.",
+    "numerical_tokens_checked_by_exporter": {
+      "LECORRE_REPRODUCTION.pdf": 190,
+      "LECORRE_PHYSICAL_REVIEW.pdf": 75,
+      "ACCEPTANCE_MATRIX.pdf": 154
+    },
+    "text_fragments_checked_by_exporter": {
+      "LECORRE_REPRODUCTION.pdf": 1136,
+      "LECORRE_PHYSICAL_REVIEW.pdf": 159,
+      "ACCEPTANCE_MATRIX.pdf": 3363
+    }
+  },
+  "resolved_findings": [
+    {
+      "prior_snapshot": "LeCorre_2025_Reports_02",
+      "prior_page": 16,
+      "finding": "Final sentence occupied a mostly empty page.",
+      "resolution": "Final evidence paragraph shortened in committed source; final sentence now fits on page 15, and first plate follows on page 16."
+    }
+  ],
+  "nonblocking_findings": [],
+  "blocking_findings": [],
+  "limitations": [
+    "All 76 final pages received fresh geometry/extraction/font checks. New full-size visual inspection focused on changed page 15 and following plate; unchanged pages reuse prior all-page thumbnail, five-plate and four-review-page inspection through exact normalized content-stream/text/geometry comparisons.",
+    "Long Windows command lines wrap visually in A4 PDFs. Copying commands from a PDF may require joining line breaks; pinned source Markdown retains exact commands.",
+    "Inline A4 figures are compact overviews; use the A3 plates at their native page size to read axes and legends. Fit-to-A4 printing reduces them again.",
+    "Page-bound checks do not identify every possible local overlap or semantic omission; rendered reviews complement them.",
+    "This review establishes only the stated PDF layout and retention observations, not scientific accuracy, MATLAB equivalence or experimental validation."
+  ]
+}

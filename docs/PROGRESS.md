@@ -41,13 +41,22 @@ Clean Windows CI passed for implementation commit
 490 Python tests, 11 JavaScript tests, dependency consistency and distribution
 build. The 13 archive-reader tests were local; CI did not rerun the campaign.
 
-Three revised PDFs are prepared for publication under
+Three revised PDFs are finalized under
 `output/pdf/LeCorre_2025_Reports_03/`; the original report snapshot remains
 intact. The local `_02` draft passed content/plate checks but left a one-sentence
 orphan page; final prose tightening removes that pagination defect without
-changing numerical evidence. Remaining delivery steps: export and visually
-check the final PDFs, then publish. Do not rerun the 69-case campaign or modify
-calculations to improve a comparison.
+changing numerical evidence. The final 76 pages passed geometry, extraction,
+font and source-retention checks; visual review and exact comparisons to the
+previously reviewed layouts are recorded in `LAYOUT_REVIEW.json`. Five A3 figure
+plates preserve the source image pixels. The PDFs bind to source commit
+`525ef6e8558a7401a04f0339737c57fadbf3b49b`; no code changed after the clean CI
+implementation commit. The matrix integrity check passes all 81 requirements.
+
+Resume numerical parity and validation from the current acceptance matrix:
+retain unresolved source-equation and convergence failures, recover the exact
+publication-producing MATLAB arrays/version, and resolve experimental
+uncertainty and calibration/holdout scope. Do not rerun the 69-case campaign or
+modify equations merely to improve a comparison.
 
 ## Completed Le Corre campaign — 2026-11-14
 

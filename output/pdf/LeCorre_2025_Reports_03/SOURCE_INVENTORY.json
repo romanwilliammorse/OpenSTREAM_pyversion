@@ -1,0 +1,126 @@
+{
+  "schema": "openstream-lecorre-pdf-inventory-v1",
+  "source_commit": "525ef6e8558a7401a04f0339737c57fadbf3b49b",
+  "scope": "Exactly the Le Corre reproduction report, physical review and acceptance matrix; source content unchanged.",
+  "source_identity_policy": "Working source must equal the recorded commit after CRLF-to-LF normalization only; raw hashes also retained.",
+  "counts": {
+    "markdown": 3,
+    "total": 3
+  },
+  "documents": [
+    {
+      "source": "docs/LECORRE_REPRODUCTION.md",
+      "kind": "markdown",
+      "title": "Le Corre reconstruction and discrepancies",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "LECORRE_REPRODUCTION.pdf",
+      "source_sha256": "1244a1d9214ca830ac00bf64e1315ec2dc07d373d16e858f7d0491a606cbd236",
+      "source_sha256_lf": "1244a1d9214ca830ac00bf64e1315ec2dc07d373d16e858f7d0491a606cbd236",
+      "source_bytes": 46973,
+      "source_git_blob": "38814ab06fcaa692d07542633d3a57edaebd5c56",
+      "committed_source_sha256": "1244a1d9214ca830ac00bf64e1315ec2dc07d373d16e858f7d0491a606cbd236",
+      "figure_assets": [
+        {
+          "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure3_paper_comparison.png",
+          "caption": "Figures 3 targets: native profiles and bounded paper readings",
+          "source_sha256": "8728c1c17beff2956520deda2525e847a9cbbd1ff5313af01080ae9f86709f70",
+          "source_bytes": 232813,
+          "source_git_blob": "a99991c64c1791d42a4eb5f3a9165c56ebdcc4e9",
+          "pixels": [
+            2850,
+            931
+          ],
+          "dpi": [
+            189.992,
+            189.992
+          ]
+        },
+        {
+          "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure4_paper_comparison.png",
+          "caption": "Figure 4 targets: native field dimensions, velocities and frequencies against bounded paper readings",
+          "source_sha256": "77e03a1add4b7397d7bd558a33a8348677a8463dc1d01e583a7750d9b2f7cd6f",
+          "source_bytes": 250933,
+          "source_git_blob": "fb46223b5c125a6efa2a380fb07803bfbcf5c1ef",
+          "pixels": [
+            2850,
+            931
+          ],
+          "dpi": [
+            189.992,
+            189.992
+          ]
+        },
+        {
+          "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure6_paper_comparison.png",
+          "caption": "Figure 6 graphical residuals against the published prediction dots and separate measured-film-flow correlation stars",
+          "source_sha256": "ee2aa21b61122fecc27002241970e6b161aa61c875f2fe7d157f6cbffe4b9862",
+          "source_bytes": 130195,
+          "source_git_blob": "f3ad16be6f4c7504aaf0dd8f6e180d2508bcbfbe",
+          "pixels": [
+            2470,
+            855
+          ],
+          "dpi": [
+            189.992,
+            189.992
+          ]
+        },
+        {
+          "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure6_measurement_comparison.png",
+          "caption": "Figure 6 targets: Wurtz measurements and native outputs, with the measured-film-flow correlation shown separately",
+          "source_sha256": "cbe67b4b1dee724f5a97b4e753a66e0a895e30de283ae7a25185364ee4e0dba3",
+          "source_bytes": 239993,
+          "source_git_blob": "74f25f4891e43d9d7457363a7080a714f06be5af",
+          "pixels": [
+            2470,
+            874
+          ],
+          "dpi": [
+            189.992,
+            189.992
+          ]
+        },
+        {
+          "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure7_measurement_comparison.png",
+          "caption": "Figure 7 targets: Sawai measurements and native outputs at the author-confirmed 0.2 s setting, retaining out-of-domain points",
+          "source_sha256": "e68eaad8d1af6891fa01958ea3fa674f292e9c2861fc67144dfe3c26a9a158bf",
+          "source_bytes": 295439,
+          "source_git_blob": "4d93a77d2a98e70d66132b0f827fc029ebd6d0dd",
+          "pixels": [
+            2280,
+            1710
+          ],
+          "dpi": [
+            189.992,
+            189.992
+          ]
+        }
+      ]
+    },
+    {
+      "source": "docs/LECORRE_PHYSICAL_REVIEW.md",
+      "kind": "markdown",
+      "title": "OpenSTREAM convergence and supplemental diagnostics review",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "LECORRE_PHYSICAL_REVIEW.pdf",
+      "source_sha256": "09bbc912cf805df59e6ea82c83fea02fa2618a3adabf40bcb6e4f97e0a8f8287",
+      "source_sha256_lf": "09bbc912cf805df59e6ea82c83fea02fa2618a3adabf40bcb6e4f97e0a8f8287",
+      "source_bytes": 13656,
+      "source_git_blob": "8c9ff707e8778aa71a9a8abdab5afb4e272a7939",
+      "committed_source_sha256": "09bbc912cf805df59e6ea82c83fea02fa2618a3adabf40bcb6e4f97e0a8f8287"
+    },
+    {
+      "source": "docs/ACCEPTANCE_MATRIX.md",
+      "kind": "markdown",
+      "title": "Acceptance matrix",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "ACCEPTANCE_MATRIX.pdf",
+      "source_sha256": "28f13858d698e9f695fa09df010f937266d3afaf0eccab4cab6a50004597d9d0",
+      "source_sha256_lf": "28f13858d698e9f695fa09df010f937266d3afaf0eccab4cab6a50004597d9d0",
+      "source_bytes": 125883,
+      "source_git_blob": "77f5fe5fca77e3419c8ecd3c7257b1e55a71adc9",
+      "committed_source_sha256": "28f13858d698e9f695fa09df010f937266d3afaf0eccab4cab6a50004597d9d0"
+    }
+  ],
+  "figure_plate_policy": "Append unchanged referenced PNGs on A3 landscape pages; preserve pixel aspect ratio without cropping; never exceed native DPI size when recorded (otherwise one point per pixel maximum)."
+}

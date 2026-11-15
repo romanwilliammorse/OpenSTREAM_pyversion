@@ -1,0 +1,753 @@
+{
+  "schema": "openstream-lecorre-pdf-inventory-v1",
+  "source_commit": "525ef6e8558a7401a04f0339737c57fadbf3b49b",
+  "scope": "Exactly the Le Corre reproduction report, physical review and acceptance matrix; source content unchanged.",
+  "source_identity_policy": "Working source must equal the recorded commit after CRLF-to-LF normalization only; raw hashes also retained.",
+  "counts": {
+    "markdown": 3,
+    "total": 3
+  },
+  "documents": [
+    {
+      "source": "docs/LECORRE_REPRODUCTION.md",
+      "kind": "markdown",
+      "title": "Le Corre reconstruction and discrepancies",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "LECORRE_REPRODUCTION.pdf",
+      "source_sha256": "1244a1d9214ca830ac00bf64e1315ec2dc07d373d16e858f7d0491a606cbd236",
+      "source_sha256_lf": "1244a1d9214ca830ac00bf64e1315ec2dc07d373d16e858f7d0491a606cbd236",
+      "source_bytes": 46973,
+      "source_git_blob": "38814ab06fcaa692d07542633d3a57edaebd5c56",
+      "committed_source_sha256": "1244a1d9214ca830ac00bf64e1315ec2dc07d373d16e858f7d0491a606cbd236",
+      "figure_assets": [
+        {
+          "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure3_paper_comparison.png",
+          "caption": "Figures 3 targets: native profiles and bounded paper readings",
+          "source_sha256": "8728c1c17beff2956520deda2525e847a9cbbd1ff5313af01080ae9f86709f70",
+          "source_bytes": 232813,
+          "source_git_blob": "a99991c64c1791d42a4eb5f3a9165c56ebdcc4e9",
+          "pixels": [
+            2850,
+            931
+          ],
+          "dpi": [
+            189.992,
+            189.992
+          ]
+        },
+        {
+          "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure4_paper_comparison.png",
+          "caption": "Figure 4 targets: native field dimensions, velocities and frequencies against bounded paper readings",
+          "source_sha256": "77e03a1add4b7397d7bd558a33a8348677a8463dc1d01e583a7750d9b2f7cd6f",
+          "source_bytes": 250933,
+          "source_git_blob": "fb46223b5c125a6efa2a380fb07803bfbcf5c1ef",
+          "pixels": [
+            2850,
+            931
+          ],
+          "dpi": [
+            189.992,
+            189.992
+          ]
+        },
+        {
+          "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure6_paper_comparison.png",
+          "caption": "Figure 6 graphical residuals against the published prediction dots and separate measured-film-flow correlation stars",
+          "source_sha256": "ee2aa21b61122fecc27002241970e6b161aa61c875f2fe7d157f6cbffe4b9862",
+          "source_bytes": 130195,
+          "source_git_blob": "f3ad16be6f4c7504aaf0dd8f6e180d2508bcbfbe",
+          "pixels": [
+            2470,
+            855
+          ],
+          "dpi": [
+            189.992,
+            189.992
+          ]
+        },
+        {
+          "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure6_measurement_comparison.png",
+          "caption": "Figure 6 targets: Wurtz measurements and native outputs, with the measured-film-flow correlation shown separately",
+          "source_sha256": "cbe67b4b1dee724f5a97b4e753a66e0a895e30de283ae7a25185364ee4e0dba3",
+          "source_bytes": 239993,
+          "source_git_blob": "74f25f4891e43d9d7457363a7080a714f06be5af",
+          "pixels": [
+            2470,
+            874
+          ],
+          "dpi": [
+            189.992,
+            189.992
+          ]
+        },
+        {
+          "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure7_measurement_comparison.png",
+          "caption": "Figure 7 targets: Sawai measurements and native outputs at the author-confirmed 0.2 s setting, retaining out-of-domain points",
+          "source_sha256": "e68eaad8d1af6891fa01958ea3fa674f292e9c2861fc67144dfe3c26a9a158bf",
+          "source_bytes": 295439,
+          "source_git_blob": "4d93a77d2a98e70d66132b0f827fc029ebd6d0dd",
+          "pixels": [
+            2280,
+            1710
+          ],
+          "dpi": [
+            189.992,
+            189.992
+          ]
+        }
+      ],
+      "headings": [
+        {
+          "title": "Le Corre NURETH-21 reproduction and verification report",
+          "page": 1
+        },
+        {
+          "title": "Immutable targets and evidence levels",
+          "page": 1
+        },
+        {
+          "title": "Figure-to-case contract",
+          "page": 2
+        },
+        {
+          "title": "Exact demonstration inputs and inheritance",
+          "page": 3
+        },
+        {
+          "title": "Exact experimental model selections",
+          "page": 4
+        },
+        {
+          "title": "Discrepancy register fixed before comparison",
+          "page": 5
+        },
+        {
+          "title": "Acceptance and accounting protocol",
+          "page": 7
+        },
+        {
+          "title": "Observed convergence failures",
+          "page": 8
+        },
+        {
+          "title": "Reproducible Windows commands",
+          "page": 9
+        },
+        {
+          "title": "Completed campaign and independent checks",
+          "page": 10
+        },
+        {
+          "title": "Source-default results",
+          "page": 11
+        },
+        {
+          "title": "Comparison with the published curves",
+          "page": 12
+        },
+        {
+          "title": "Comparison with the stored measurements",
+          "page": 13
+        },
+        {
+          "title": "Mesh dependence of the source transition",
+          "page": 15
+        },
+        {
+          "title": "Source locations",
+          "page": 15
+        }
+      ],
+      "pages": 20,
+      "pdf_sha256": "57f436a79dc5fe9ecac7d937a7822274e975551dbcecc652b82645caa8b1c4fd",
+      "numeric_tokens_checked": 190,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 1136,
+      "missing_text_fragments": [],
+      "pre_plate_pdf_sha256": "d0b9ad91235581c41e20b6720e5cbf0d7226e1f253dd038e31fb21477a287324",
+      "original_pages": 15,
+      "added_figure_plate_pages": 5,
+      "figure_plates": [
+        {
+          "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure3_paper_comparison.png",
+          "caption": "Figures 3 targets: native profiles and bounded paper readings",
+          "source_sha256": "8728c1c17beff2956520deda2525e847a9cbbd1ff5313af01080ae9f86709f70",
+          "source_bytes": 232813,
+          "source_git_blob": "a99991c64c1791d42a4eb5f3a9165c56ebdcc4e9",
+          "pixels": [
+            2850,
+            931
+          ],
+          "dpi": [
+            189.992,
+            189.992
+          ],
+          "pdf_page": 16,
+          "page_size_pt": [
+            1190.5511811023623,
+            841.8897637795277
+          ],
+          "rendered_size_pt": [
+            1080.0454755989726,
+            352.81485536233106
+          ],
+          "native_size_limit_applied": true
+        },
+        {
+          "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure4_paper_comparison.png",
+          "caption": "Figure 4 targets: native field dimensions, velocities and frequencies against bounded paper readings",
+          "source_sha256": "77e03a1add4b7397d7bd558a33a8348677a8463dc1d01e583a7750d9b2f7cd6f",
+          "source_bytes": 250933,
+          "source_git_blob": "fb46223b5c125a6efa2a380fb07803bfbcf5c1ef",
+          "pixels": [
+            2850,
+            931
+          ],
+          "dpi": [
+            189.992,
+            189.992
+          ],
+          "pdf_page": 17,
+          "page_size_pt": [
+            1190.5511811023623,
+            841.8897637795277
+          ],
+          "rendered_size_pt": [
+            1080.0454755989726,
+            352.81485536233106
+          ],
+          "native_size_limit_applied": true
+        },
+        {
+          "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure6_paper_comparison.png",
+          "caption": "Figure 6 graphical residuals against the published prediction dots and separate measured-film-flow correlation stars",
+          "source_sha256": "ee2aa21b61122fecc27002241970e6b161aa61c875f2fe7d157f6cbffe4b9862",
+          "source_bytes": 130195,
+          "source_git_blob": "f3ad16be6f4c7504aaf0dd8f6e180d2508bcbfbe",
+          "pixels": [
+            2470,
+            855
+          ],
+          "dpi": [
+            189.992,
+            189.992
+          ],
+          "pdf_page": 18,
+          "page_size_pt": [
+            1190.5511811023623,
+            841.8897637795277
+          ],
+          "rendered_size_pt": [
+            936.0394121857763,
+            324.01364267969177
+          ],
+          "native_size_limit_applied": true
+        },
+        {
+          "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure6_measurement_comparison.png",
+          "caption": "Figure 6 targets: Wurtz measurements and native outputs, with the measured-film-flow correlation shown separately",
+          "source_sha256": "cbe67b4b1dee724f5a97b4e753a66e0a895e30de283ae7a25185364ee4e0dba3",
+          "source_bytes": 239993,
+          "source_git_blob": "74f25f4891e43d9d7457363a7080a714f06be5af",
+          "pixels": [
+            2470,
+            874
+          ],
+          "dpi": [
+            189.992,
+            189.992
+          ],
+          "pdf_page": 19,
+          "page_size_pt": [
+            1190.5511811023623,
+            841.8897637795277
+          ],
+          "rendered_size_pt": [
+            936.0394121857763,
+            331.2139458503516
+          ],
+          "native_size_limit_applied": true
+        },
+        {
+          "source": "outputs/validation/lecorre-2025-01/figures-clean-02/figure7_measurement_comparison.png",
+          "caption": "Figure 7 targets: Sawai measurements and native outputs at the author-confirmed 0.2 s setting, retaining out-of-domain points",
+          "source_sha256": "e68eaad8d1af6891fa01958ea3fa674f292e9c2861fc67144dfe3c26a9a158bf",
+          "source_bytes": 295439,
+          "source_git_blob": "4d93a77d2a98e70d66132b0f827fc029ebd6d0dd",
+          "pixels": [
+            2280,
+            1710
+          ],
+          "dpi": [
+            189.992,
+            189.992
+          ],
+          "pdf_page": 20,
+          "page_size_pt": [
+            1190.5511811023623,
+            841.8897637795277
+          ],
+          "rendered_size_pt": [
+            864.0363804791781,
+            648.0272853593835
+          ],
+          "native_size_limit_applied": true
+        }
+      ],
+      "original_page_text_and_content_streams_retained": true,
+      "original_page_geometry_retained": true,
+      "original_bookmarks_retained": true,
+      "original_named_destinations_retained": true
+    },
+    {
+      "source": "docs/LECORRE_PHYSICAL_REVIEW.md",
+      "kind": "markdown",
+      "title": "OpenSTREAM convergence and supplemental diagnostics review",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "LECORRE_PHYSICAL_REVIEW.pdf",
+      "source_sha256": "09bbc912cf805df59e6ea82c83fea02fa2618a3adabf40bcb6e4f97e0a8f8287",
+      "source_sha256_lf": "09bbc912cf805df59e6ea82c83fea02fa2618a3adabf40bcb6e4f97e0a8f8287",
+      "source_bytes": 13656,
+      "source_git_blob": "8c9ff707e8778aa71a9a8abdab5afb4e272a7939",
+      "committed_source_sha256": "09bbc912cf805df59e6ea82c83fea02fa2618a3adabf40bcb6e4f97e0a8f8287",
+      "headings": [
+        {
+          "title": "OpenSTREAM convergence and supplemental diagnostics review",
+          "page": 1
+        },
+        {
+          "title": "What MATLAB OpenSTREAM actually checks",
+          "page": 1
+        },
+        {
+          "title": "Meaning and units of the supplemental diagnostic",
+          "page": 2
+        },
+        {
+          "title": "What the source coupling explains",
+          "page": 3
+        },
+        {
+          "title": "Diagnostic domain and observed residuals",
+          "page": 3
+        },
+        {
+          "title": "Archive agreement versus new-case attribution",
+          "page": 4
+        }
+      ],
+      "pages": 4,
+      "pdf_sha256": "88a4e26bfe1f124d9956f365fb34950152f862ef6efb5cef7611ae5d28da4f27",
+      "numeric_tokens_checked": 75,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 159,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/ACCEPTANCE_MATRIX.md",
+      "kind": "markdown",
+      "title": "Acceptance matrix",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "ACCEPTANCE_MATRIX.pdf",
+      "source_sha256": "28f13858d698e9f695fa09df010f937266d3afaf0eccab4cab6a50004597d9d0",
+      "source_sha256_lf": "28f13858d698e9f695fa09df010f937266d3afaf0eccab4cab6a50004597d9d0",
+      "source_bytes": 125883,
+      "source_git_blob": "77f5fe5fca77e3419c8ecd3c7257b1e55a71adc9",
+      "committed_source_sha256": "28f13858d698e9f695fa09df010f937266d3afaf0eccab4cab6a50004597d9d0",
+      "headings": [
+        {
+          "title": "Acceptance matrix",
+          "page": 1
+        },
+        {
+          "title": "Experimental Validation",
+          "page": 1
+        },
+        {
+          "title": "Interface Parity",
+          "page": 2
+        },
+        {
+          "title": "Literature Scope",
+          "page": 4
+        },
+        {
+          "title": "Matlab Equivalence",
+          "page": 4
+        },
+        {
+          "title": "Numerical Verification",
+          "page": 6
+        },
+        {
+          "title": "Reference Infrastructure",
+          "page": 7
+        },
+        {
+          "title": "Release",
+          "page": 8
+        },
+        {
+          "title": "Requirement details",
+          "page": 8
+        },
+        {
+          "title": "CORE-001: Mixture",
+          "page": 8
+        },
+        {
+          "title": "CORE-002: TwoFluid",
+          "page": 9
+        },
+        {
+          "title": "CORE-003: ThreeField",
+          "page": 9
+        },
+        {
+          "title": "CORE-004: FourField",
+          "page": 10
+        },
+        {
+          "title": "CORE-005: All frameworks",
+          "page": 10
+        },
+        {
+          "title": "CORE-006: All frameworks",
+          "page": 11
+        },
+        {
+          "title": "CORE-007: Mixture",
+          "page": 11
+        },
+        {
+          "title": "CORE-008: TwoFluid",
+          "page": 12
+        },
+        {
+          "title": "CORE-009: ThreeField",
+          "page": 12
+        },
+        {
+          "title": "CORE-010: FourField",
+          "page": 13
+        },
+        {
+          "title": "CORE-011: Mixture closures",
+          "page": 13
+        },
+        {
+          "title": "CORE-012: Mixture closures",
+          "page": 13
+        },
+        {
+          "title": "CORE-013: Mixture MRM",
+          "page": 14
+        },
+        {
+          "title": "CORE-014: Mixture relaxation",
+          "page": 14
+        },
+        {
+          "title": "CORE-015: Mixture momentum",
+          "page": 15
+        },
+        {
+          "title": "CORE-016: Mixture heat transfer",
+          "page": 15
+        },
+        {
+          "title": "CORE-017: Mixture transitions",
+          "page": 16
+        },
+        {
+          "title": "CORE-018: Annular onset",
+          "page": 16
+        },
+        {
+          "title": "CORE-019: TwoFluid momentum",
+          "page": 17
+        },
+        {
+          "title": "CORE-020: TwoFluid exchanges",
+          "page": 17
+        },
+        {
+          "title": "CORE-021: ThreeField exchange",
+          "page": 18
+        },
+        {
+          "title": "CORE-022: ThreeField momentum",
+          "page": 18
+        },
+        {
+          "title": "CORE-023: FourField structure",
+          "page": 19
+        },
+        {
+          "title": "CORE-024: FourField momentum",
+          "page": 19
+        },
+        {
+          "title": "CORE-025: Mixture physical checks",
+          "page": 19
+        },
+        {
+          "title": "CORE-026: TwoFluid physical checks",
+          "page": 20
+        },
+        {
+          "title": "CORE-027: ThreeField physical checks",
+          "page": 20
+        },
+        {
+          "title": "CORE-028: FourField physical checks",
+          "page": 21
+        },
+        {
+          "title": "CORE-029: Convergence contracts",
+          "page": 22
+        },
+        {
+          "title": "CORE-030: Mixture discretization",
+          "page": 22
+        },
+        {
+          "title": "CORE-031: TwoFluid discretization",
+          "page": 23
+        },
+        {
+          "title": "CORE-032: ThreeField discretization",
+          "page": 23
+        },
+        {
+          "title": "CORE-033: FourField discretization",
+          "page": 23
+        },
+        {
+          "title": "CORE-034: Multiwall numerical behavior",
+          "page": 24
+        },
+        {
+          "title": "CORE-035: Source-defective scientific options",
+          "page": 24
+        },
+        {
+          "title": "CORE-036: Numerical language semantics",
+          "page": 25
+        },
+        {
+          "title": "CORE-037: Operating domain",
+          "page": 25
+        },
+        {
+          "title": "API-001: Input readers",
+          "page": 26
+        },
+        {
+          "title": "API-002: Defaults and enums",
+          "page": 26
+        },
+        {
+          "title": "API-003: Input writers and default reporting",
+          "page": 27
+        },
+        {
+          "title": "API-004: Function-valued inputs",
+          "page": 27
+        },
+        {
+          "title": "API-005: Geometry and boundary dimensions",
+          "page": 28
+        },
+        {
+          "title": "API-006: Colon and interpolation semantics",
+          "page": 28
+        },
+        {
+          "title": "API-007: Copy, caches and array indexing",
+          "page": 29
+        },
+        {
+          "title": "API-008: Thermophysical properties",
+          "page": 29
+        },
+        {
+          "title": "API-009: Property optimization and helper scope",
+          "page": 30
+        },
+        {
+          "title": "API-010: Public diagnostics and subsets",
+          "page": 30
+        },
+        {
+          "title": "API-011: Live-field extraction and public interpolation API",
+          "page": 31
+        },
+        {
+          "title": "API-012: Session and runtime behavior",
+          "page": 31
+        },
+        {
+          "title": "API-013: Portable results and serialization",
+          "page": 32
+        },
+        {
+          "title": "API-014: Saved-array post-processing",
+          "page": 32
+        },
+        {
+          "title": "API-015: Complete plotting API",
+          "page": 33
+        },
+        {
+          "title": "API-016: Tutorial 01: quick start",
+          "page": 33
+        },
+        {
+          "title": "API-017: Tutorials 02-05: model capabilities",
+          "page": 34
+        },
+        {
+          "title": "API-018: Tutorial 06: input workflows",
+          "page": 34
+        },
+        {
+          "title": "API-019: Tutorials 07-08: convergence and sensitivity",
+          "page": 35
+        },
+        {
+          "title": "API-020: Tutorial 09: advanced visualization",
+          "page": 35
+        },
+        {
+          "title": "API-021: MATLAB reference export",
+          "page": 36
+        },
+        {
+          "title": "API-022: Archive recovery",
+          "page": 36
+        },
+        {
+          "title": "API-023: Comparison acceptance machinery",
+          "page": 37
+        },
+        {
+          "title": "API-024: GUI and command interfaces",
+          "page": 37
+        },
+        {
+          "title": "API-025: Reproducible installation and release",
+          "page": 38
+        },
+        {
+          "title": "API-026: Evidence provenance and status consistency",
+          "page": 38
+        },
+        {
+          "title": "EXP-001: Publication/version provenance",
+          "page": 39
+        },
+        {
+          "title": "EXP-002: NURETH demonstration",
+          "page": 39
+        },
+        {
+          "title": "EXP-003: ICMF annular transient",
+          "page": 40
+        },
+        {
+          "title": "EXP-004: TRACE benchmark",
+          "page": 41
+        },
+        {
+          "title": "EXP-005: Native database adapter",
+          "page": 41
+        },
+        {
+          "title": "EXP-006: Units and observable definitions",
+          "page": 42
+        },
+        {
+          "title": "EXP-007: Uncertainty and acceptance",
+          "page": 43
+        },
+        {
+          "title": "EXP-008: Evaluation report and case accounting",
+          "page": 44
+        },
+        {
+          "title": "EXP-009: Bartolomey pilot",
+          "page": 45
+        },
+        {
+          "title": "EXP-010: Wurtz publication reproduction",
+          "page": 45
+        },
+        {
+          "title": "EXP-011: Sawai publication reproduction",
+          "page": 46
+        },
+        {
+          "title": "EXP-012: Sawai unit/domain integrity",
+          "page": 47
+        },
+        {
+          "title": "EXP-013: Companion configuration compatibility",
+          "page": 48
+        },
+        {
+          "title": "EXP-014: Independent validation partition",
+          "page": 49
+        },
+        {
+          "title": "EXP-015: Adamsson film-flow validation",
+          "page": 50
+        },
+        {
+          "title": "EXP-016: Bennett thermal/dryout validation",
+          "page": 50
+        },
+        {
+          "title": "EXP-017: Groeneveld CHF/dryout validation",
+          "page": 51
+        },
+        {
+          "title": "EXP-018: Model applicability versus promised future features",
+          "page": 51
+        }
+      ],
+      "pages": 52,
+      "pdf_sha256": "0912a6090ff2c1e768e09bd8be6390d168838f02e6a57d00dadd8bed68a14c45",
+      "numeric_tokens_checked": 154,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 3363,
+      "missing_text_fragments": []
+    }
+  ],
+  "figure_plate_policy": "Append unchanged referenced PNGs on A3 landscape pages; preserve pixel aspect ratio without cropping; never exceed native DPI size when recorded (otherwise one point per pixel maximum).",
+  "created_utc": "2026-11-15T05:56:53.924817+00:00",
+  "python": "3.12.14",
+  "versions": {
+    "reportlab": "4.4.9",
+    "pypdf": "6.10.0",
+    "Pillow": "12.3.0",
+    "markdown-it-py": "4.0.0",
+    "mdurl": "0.1.2"
+  },
+  "exporter_source_sha256": {
+    "tools/export_lecorre_pdf.py": "f962bb10946ca5bc3174adcda6ebf410a7bceadba31c6797900bbc37046f678e",
+    "tools/export_documentation_pdf.py": "8fad2fb54de8b35e8814289bfe6c2919d54bb98035441f2164f7762fb5a58668"
+  },
+  "verification": {
+    "source_hashes_matched_before_and_after": true,
+    "figure_assets_match_source_commit_and_unchanged_after_export": true,
+    "all_numeric_tokens_retained": true,
+    "all_source_text_fragments_retained": true,
+    "rendered_layout_review": {
+      "status": "completed_with_recorded_limitations",
+      "receipt": "LAYOUT_REVIEW.json",
+      "receipt_sha256": "c25785a0776440883f75a995d2fb2975bd9d0c4987f00136b3da0a562ec44b28",
+      "scope": "All 76 final pages freshly checked for geometry/extraction/fonts. Revised page 15 and following plate visually inspected; other 75 page layouts match the previously reviewed snapshot after only source-stamp/footer numbering changes. Orphan page resolved; no blocking layout issue. See receipt for command wrapping and review limits."
+    }
+  }
+}
