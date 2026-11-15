@@ -1,7 +1,8 @@
-"""Native reader and input adapter for the pinned Bartolomey database.
+"""Native readers and input adapters for pinned OpenSTREAM databases.
 
 Translated from OpenSTREAM-database ``@Dataset/makeInputFiles.m`` and
-``+Bartolomey`` (MIT; retained database/LICENSE). This module reads source
+``+Bartolomey``, ``+Wurtz1978`` and ``+Sawai1989`` (MIT; database/LICENSE).
+This module reads source
 data; it neither changes solver physics nor asserts experimental validity.
 Row identifiers are one-based, as in MATLAB. TestID is a nonunique label.
 """
@@ -286,7 +287,8 @@ def load_bartolomey(path):
 
     Unknown/nested fields, duplicate scalar fields and nonfinite numeric text
     are explicit errors. Repeated vector fields and empty elements are retained.
-    Other dataset families and transient source records are not yet implemented.
+    This reader is restricted to Bartolomey. Wurtz/Sawai use their dedicated
+    loaders below; transient source records remain unsupported.
     """
     path = Path(path).resolve()
     if path.is_dir():
@@ -350,3 +352,286 @@ def load_bartolomey(path):
             raise DatasetError(f"Entry {entry_id}: missing mandatory input fields {sorted(_REQUIRED_INPUTS-set(values))}")
         records.append(BartolomeyRecord(entry_id, tuple(raw), MappingProxyType(values), source))
     return BartolomeyDataset(tuple(records), source)
+
+
+# These two families use the very same inherited Dataset inputOptions and
+# makeInputFiles implementation as Bartolomey. Their observation contracts are
+# different: Wurtz has outlet scalars, whereas Sawai has axial vectors and a
+# documented millisecond exception. Keep their contracts separate from void.
+PINNED_WURTZ_XML_SHA256_LF = "f45798013aa3516c5fa37700e76000d40742bc0b46b2b39a3d117c7f66740f8f"
+PINNED_SAWAI_XML_SHA256_LF = "9653bd5910e06c38bcd57b408274f24b2828fc28a12bd6731a46bf9273f598fa"
+ANNULAR_UNITS = MappingProxyType({
+    "MassFlux": "kg/m^2/s", "Elevation": "m", "WallPower": "1", "WallMesh": "m",
+    "InletEnthalpy": "J/kg", "OutletEnthalpy": "J/kg", "InletSubcooling": "J/kg",
+    "Power": "W", "HeatFlux": "W/m^2", "MassFlow": "kg/s", "Pressure": "Pa",
+    "Length": "m", "Area": "m^2", "Perimeter": "m", "Diameter": "m", "Xout": "1",
+    "FilmFlow": "kg/s", "BaseThickness": "m", "WaveAmplitude": "m",
+    "WaveFrequency": "Hz", "WaveVelocity": "m/s", "WaveNumberDensity": "m^-1",
+    "WaveSpacing": "m", "WaveTimePeriod": "ms", "TestID": "1", "TestName": None,
+    "Fluid": None,
+})
+_ANNULAR_SPEC = MappingProxyType({
+    "Wurtz1978": {
+        "sha256": PINNED_WURTZ_XML_SHA256_LF,
+        "citation": "J. Wurtz (1978), An Experimental and Theoretical Investigation of Annular Steam-Water Flow in Tubes and Annuli at 30 to 90 bar, Riso Report 372; manually transcribed source tables as attributed by OpenSTREAM-database.",
+        "vectors": frozenset({"WallMesh", "WallPower"}),
+        "quantities": frozenset({"Xout", "FilmFlow", "BaseThickness", "WaveAmplitude", "WaveFrequency", "WaveVelocity", "WaveNumberDensity", "WaveSpacing"}),
+    },
+    "Sawai1989": {
+        "sha256": PINNED_SAWAI_XML_SHA256_LF,
+        "citation": "T. Sawai, S. Yamauchi and S. Nakanishi (1989), Behavior of disturbance waves under hydrodynamic non-equilibrium conditions, International Journal of Multiphase Flow 15(3), 341-356; figure measurements digitized with GRABIT, as attributed by OpenSTREAM-database.",
+        "vectors": frozenset({"WallMesh", "WallPower", "Elevation", "WaveVelocity", "WaveTimePeriod"}),
+        "quantities": frozenset({"WaveVelocity", "WaveTimePeriod"}),
+    },
+})
+
+
+@dataclass(frozen=True)
+class MeasurementSeries:
+    """Quantity-aware annular observations with explicit SI conversion provenance.
+
+    ``values`` are SI; ``raw_values`` retain the stored quantity and units.
+    A derived reciprocal period retains raw frequency, not an invented direct
+    period measurement. Coordinates are never clamped or extrapolated.
+    """
+    coordinate: str
+    unit: str
+    coordinates: tuple[float | None, ...]
+    quantity: str
+    quantity_unit: str
+    values: tuple[float | None, ...]
+    raw_quantity: str
+    raw_quantity_unit: str
+    raw_values: tuple[float | None, ...]
+    transformation: str
+    point_flags: tuple[tuple[str, ...], ...]
+    measurement_uncertainty: None = None
+    digitization_uncertainty: None = None
+
+    def to_dict(self):
+        return {"coordinate": self.coordinate, "coordinate_unit": self.unit,
+                "coordinates": list(self.coordinates), "quantity": self.quantity,
+                "quantity_unit": self.quantity_unit, "values": list(self.values),
+                "raw_quantity": self.raw_quantity, "raw_quantity_unit": self.raw_quantity_unit,
+                "raw_values": list(self.raw_values), "transformation": self.transformation,
+                "point_flags": [list(x) for x in self.point_flags],
+                "measurement_uncertainty": None, "digitization_uncertainty": None}
+
+
+@dataclass(frozen=True)
+class AnnularRecord(BartolomeyRecord):
+    family: str
+
+    def to_input_set(self, *, model=None, options=None, geometry=None, boundary_conditions=None):
+        """Map stored inputs, including multiwall vectors in MATLAB column order.
+
+        Geometry IDs differ by family; all defaults/overrides otherwise use
+        the inherited upstream implementation. This input-generation method
+        does not promise that a selected solver supports a two-wall record.
+        No companion-specific closure, alias or coefficient is injected here.
+        """
+        geometry = _set_defaults(_overrides(geometry, Geometry), {"ID": self.family.upper()})
+        return super().to_input_set(model=model, options=options, geometry=geometry,
+                                    boundary_conditions=boundary_conditions)
+
+    def observations(self, quantity):
+        """Return SI observations at their unchanged source/output locations.
+
+        Wurtz values are attached to the modeled outlet Length, following its
+        plotResults.m endpoint evaluation. WaveTimePeriod is the explicitly
+        derived reciprocal of WaveFrequency. Sawai WaveTimePeriod converts
+        stored milliseconds to seconds. Other quantities are direct mappings.
+        """
+        aliases = {key.lower(): key for key in _ANNULAR_SPEC[self.family]["quantities"]}
+        if self.family == "Wurtz1978":
+            aliases["wavetimeperiod"] = "WaveTimePeriod"
+            aliases["waveperiod"] = "WaveTimePeriod"
+        if not isinstance(quantity, str) or quantity.lower() not in aliases:
+            raise DatasetError(f"{self.family}: unsupported observation {quantity!r}")
+        quantity = aliases[quantity.lower()]
+        raw_quantity = "WaveFrequency" if self.family == "Wurtz1978" and quantity == "WaveTimePeriod" else quantity
+        raw_value = self.values.get(raw_quantity)
+        raw_values = tuple(raw_value) if isinstance(raw_value, tuple) else (raw_value,)
+        if self.family == "Wurtz1978":
+            coordinates = (self.values["Length"],)
+        else:
+            coordinates = tuple(self.values.get("Elevation", ()))
+        if not coordinates or len(coordinates) != len(raw_values):
+            raise DatasetError(f"Entry {self.entry_id}: {quantity} and coordinate counts differ or are empty")
+        if quantity == "WaveTimePeriod" and self.family == "Wurtz1978":
+            if any(x is not None and x <= 0 for x in raw_values):
+                raise DatasetError("A reciprocal wave period requires positive stored frequency")
+            values = tuple(None if x is None else 1/x for x in raw_values)
+            transformation = "Derived period = 1 / stored WaveFrequency, as upstream plotResults.m; not a separately measured period."
+            unit = "s"
+        elif quantity == "WaveTimePeriod":
+            values = tuple(None if x is None else x*1e-3 for x in raw_values)
+            transformation = "Stored WaveTimePeriod [ms] multiplied by 0.001 to SI seconds; raw values retained."
+            unit = "s"
+        else:
+            values = raw_values
+            transformation = "Stored SI values retained without numerical conversion."
+            unit = ANNULAR_UNITS[quantity]
+        flags = []
+        for coordinate, value in zip(coordinates, values):
+            point = []
+            if coordinate is None:
+                point.append("missing_coordinate")
+            elif not 0 <= coordinate <= self.values["Length"]:
+                point.append("coordinate_outside_stored_channel")
+            if value is None:
+                point.append("missing_observation")
+            elif value < 0:
+                point.append("negative_observation_retained")
+            if self.family == "Wurtz1978":
+                point.append("outlet_location_from_stored_Length")
+                if np.size(self.values["Perimeter"]) > 1:
+                    point.append("multiwall_measurement_wall_unassigned")
+            if raw_quantity != quantity:
+                point.append("derived_from_stored_frequency")
+            if quantity == "Xout":
+                point.append("imposed_input_not_independent_validation_target")
+            flags.append(tuple(point))
+        return MeasurementSeries("Elevation", "m", coordinates, quantity, unit, values,
+                                 raw_quantity, ANNULAR_UNITS[raw_quantity], raw_values,
+                                 transformation, tuple(flags))
+
+    def input_consistency(self):
+        """Independent redundant-quantity arithmetic; no inputs are replaced."""
+        v = self.values
+        checks = {}
+        for label, target, fields, calculate, unit in (
+            ("mass_flux_times_area", "MassFlow", ("MassFlux","Area"), lambda:v["MassFlux"]*v["Area"], "kg/s"),
+            ("wall_mesh_length", "Length", ("WallMesh",), lambda:sum(v["WallMesh"]), "m"),
+            ("enthalpy_gain_times_flow", "Power", ("OutletEnthalpy","InletEnthalpy","MassFlow"),
+             lambda:(v["OutletEnthalpy"]-v["InletEnthalpy"])*v["MassFlow"], "W"),
+        ):
+            if any(v.get(key) is None for key in (target,*fields)):
+                checks[label] = {"status":"missing_metadata", "unit":unit}
+                continue
+            stored, computed = v[target], calculate()
+            checks[label] = {"stored": stored, "calculated": computed,
+                             "signed_difference": computed-stored, "unit": unit}
+        if v.get("HeatFlux") is None:
+            checks["heat_flux_times_heated_area"] = {"status":"missing_metadata", "unit":"W"}
+        elif np.size(v["Perimeter"]) == 1:
+            heated = sum(length for length, power in zip(v["WallMesh"],v["WallPower"]) if power > 0)
+            computed = v["HeatFlux"]*float(np.asarray(v["Perimeter"]).reshape(-1)[0])*heated
+            checks["heat_flux_times_heated_area"] = {"stored": v["Power"], "calculated": computed,
+                "signed_difference": computed-v["Power"], "unit": "W", "positive_wall_weight_length_m": heated,
+                "interpretation": "Configured positive wall weights do not imply heating when total Power is zero."}
+        else:
+            checks["heat_flux_times_heated_area"] = {"status": "not_assessed_multiwall_metadata", "unit": "W"}
+        if self.family == "Wurtz1978" and all(v.get(k) is not None for k in ("WaveFrequency","WaveVelocity","WaveNumberDensity")):
+            if v["WaveVelocity"] > 0:
+                calculated = v["WaveFrequency"]/v["WaveVelocity"]
+                checks["wave_frequency_divided_by_velocity"] = {"stored": v["WaveNumberDensity"],
+                    "calculated": calculated, "signed_difference": calculated-v["WaveNumberDensity"], "unit": "m^-1"}
+        return {"policy": "arithmetic_only; stored rounding and measurement uncertainty are not inferred", "checks": checks}
+
+    def to_dict(self):
+        return {"dataset": self.family, "entry_id": self.entry_id, "test_id": self.test_id,
+                "test_name": self.test_name, "raw_fields": [{"tag":k,"text":v} for k,v in self.raw_fields],
+                "values": {k:list(v) if isinstance(v,tuple) else v for k,v in self.values.items()},
+                "units": {k:ANNULAR_UNITS[k] for k in self.values}, "source": dict(self.source),
+                "input_transformation": "Stored mandatory inputs mapped directly; generated numeric inputs use upstream %.11f write/read rounding, with column-major multiwall semantics.",
+                "observation_transformation": "Sawai periods stored in ms; observations() returns SI seconds with raw values. Wurtz period is derived as reciprocal frequency.",
+                "uncertainty": {"measurement":None,"digitization":None},
+                "calibration_membership": "not established by this adapter"}
+
+
+@dataclass(frozen=True)
+class AnnularDataset(BartolomeyDataset):
+    def select_test_name(self, name):
+        """Return one-based rows with exactly matching TestName (no coercion)."""
+        if not isinstance(name,str):
+            raise DatasetError("TestName must be a string")
+        return tuple(r.entry_id for r in self.records if r.test_name == name)
+
+    def filter_runs(self, **ranges):
+        """Inclusive numeric scalar selection as inherited Dataset.filterRuns."""
+        for key,bounds in ranges.items():
+            if key not in ANNULAR_UNITS or key in _TEXT or any(isinstance(r.values.get(key),tuple) for r in self.records):
+                raise DatasetError(f"Range filtering requires a known numeric scalar, got {key!r}")
+            if len(bounds)!=2 or not all(math.isfinite(x) for x in bounds) or bounds[0]>bounds[1]:
+                raise DatasetError(f"Invalid inclusive range for {key}")
+        return tuple(r.entry_id for r in self.records if all(r.values.get(k) is not None and low<=r.values[k]<=high
+                                                           for k,(low,high) in ranges.items()))
+
+
+def _load_annular(path, family):
+    path=Path(path).resolve()
+    if path.is_dir():
+        path=path/('+'+family)/'+src'/(family+'.xml')
+    spec=_ANNULAR_SPEC[family]
+    content=path.read_bytes()
+    if b'<!DOCTYPE' in content.upper() or b'<!ENTITY' in content.upper():
+        raise DatasetError("DTD and entity declarations are not supported database input")
+    try:
+        root=ET.fromstring(content)
+    except ET.ParseError as exc:
+        raise DatasetError(f"Malformed database XML: {exc}") from exc
+    if root.tag!='struct' or root.attrib or not len(root) or any(r.tag!='dataset' for r in root):
+        raise DatasetError("Expected <struct> containing one or more <dataset> records")
+    canonical=hashlib.sha256(content.replace(b'\r\n',b'\n')).hexdigest()
+    source={'dataset':family,'path':str(path),'sha256':hashlib.sha256(content).hexdigest(),
+            'sha256_lf':canonical,'text_hash_policy':'CRLF normalized to LF only',
+            'database_commit':DATABASE_COMMIT if canonical==spec['sha256'] else None,
+            'expected_database_commit':DATABASE_COMMIT,'matches_pinned_xml':canonical==spec['sha256'],
+            'citation':spec['citation']}
+    package=path.parent.parent; checkout=package.parent
+    for label,candidate in (('dataset_class',package/('@'+family)/(family+'.m')),
+        ('input_adapter',checkout/'@Dataset'/'makeInputFiles.m'),
+        ('generic_dataset',checkout/'@Dataset'/'Dataset.m'),
+        ('dataset_readme',package/'README.md'),('plot_mapping',package/('@'+family)/'plotResults.m')):
+        if candidate.is_file():
+            source[label+'_sha256_lf']=hashlib.sha256(candidate.read_bytes().replace(b'\r\n',b'\n')).hexdigest()
+    source=MappingProxyType(source)
+    records=[]
+    permitted=set(_REQUIRED_INPUTS)|{'TestID','TestName','MassFlux','HeatFlux','InletSubcooling','OutletEnthalpy','Xout','Diameter'}|set(spec['quantities'])
+    if family=='Sawai1989':permitted.add('Elevation')
+    for entry_id,row in enumerate(root,1):
+        if row.attrib:raise DatasetError(f"Entry {entry_id}: XML attributes are unsupported")
+        raw=[];grouped=defaultdict(list)
+        for child in row:
+            if child.tag not in permitted or len(child) or child.attrib:
+                raise DatasetError(f"Entry {entry_id}: unsupported field/structure {child.tag!r}")
+            raw.append((child.tag,child.text));text=(child.text or '').strip()
+            if not text:value=None
+            elif child.tag in _TEXT:value=text
+            else:
+                try:value=float(text)
+                except ValueError as exc:raise DatasetError(f"Entry {entry_id}: {child.tag} is not scalar numeric text") from exc
+                if not math.isfinite(value):raise DatasetError(f"Entry {entry_id}: nonfinite {child.tag}")
+            grouped[child.tag].append(value)
+        values={}
+        for key,items in grouped.items():
+            if key in spec['vectors'] or (key=='Perimeter' and len(items)>1):values[key]=tuple(items)
+            elif len(items)!=1:raise DatasetError(f"Entry {entry_id}: duplicate scalar field {key}")
+            else:values[key]=items[0]
+        if not isinstance(values.get('TestID'),float) or not values['TestID'].is_integer() or not values.get('TestName'):
+            raise DatasetError(f"Entry {entry_id}: missing/invalid TestID or TestName")
+        if not _REQUIRED_INPUTS.issubset(values):
+            raise DatasetError(f"Entry {entry_id}: missing mandatory input fields {sorted(_REQUIRED_INPUTS-set(values))}")
+        records.append(AnnularRecord(entry_id,tuple(raw),MappingProxyType(values),source,family))
+    return AnnularDataset(tuple(records),source)
+
+
+def load_wurtz(path):
+    """Read Wurtz1978.xml or its database checkout, retaining all 50 source rows.
+
+    Native input construction preserves both tube and two-wall annulus records.
+    This does not extend any solver's multiwall support. NURETH21 selects only
+    ``select_test_name('TS 20')`` (the 21 single-wall tube records).
+    """
+    return _load_annular(path,'Wurtz1978')
+
+
+def load_sawai(path):
+    """Read Sawai1989.xml or its checkout; preserve raw milliseconds and axial data.
+
+    Source measurement positions beyond Length are retained/flagged rather than
+    clamped or used to lengthen the computational channel. Transient records,
+    nested XML, unknown fields and nonfinite numbers raise explicit errors.
+    """
+    return _load_annular(path,'Sawai1989')

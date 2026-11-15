@@ -1,0 +1,563 @@
+{
+  "schema": "openstream-paper-raster-reference-v1",
+  "paper_sha256": "f72e78c41036f84db849fb080187562777e6b6696b407b6bcce2b8ca9d11ada1",
+  "source_type": "digitized_published_raster_not_MATLAB_arrays",
+  "images": {
+    "Image173.png": {
+      "sha256": "15f038b0d4308c6fdf3c74e5ea3d9ab95787227649c4caaa1bfd8dc274e4ba61",
+      "size": [
+        546,
+        557
+      ],
+      "pdf_page": 11
+    },
+    "Image174.png": {
+      "sha256": "e711bbc5334a9651545f08a642922de11dd75b52d8741c57b46639ca94ee2358",
+      "size": [
+        526,
+        557
+      ],
+      "pdf_page": 11
+    },
+    "Image175.png": {
+      "sha256": "f626f624a5488b19cd2ce470f7a5a82f0dfa226694ab87da472551aebefe6266",
+      "size": [
+        532,
+        556
+      ],
+      "pdf_page": 11
+    },
+    "Image185.png": {
+      "sha256": "c56a676d416a432132ccb67f9318cdc02b5430947e72b97eef8fd15504137ef9",
+      "size": [
+        1199,
+        512
+      ],
+      "pdf_page": 12
+    },
+    "Image186.png": {
+      "sha256": "f382558926c24b8f4b23e18da2af5bcee76947a4419daab4fb872ec301ae4ed1",
+      "size": [
+        1206,
+        479
+      ],
+      "pdf_page": 12
+    }
+  },
+  "axis_calibrations": {
+    "base": {
+      "image": "Image173.png",
+      "page": 11,
+      "x0": 74,
+      "x1": 528,
+      "xv0": 0.0,
+      "xv1": 0.4,
+      "y0": 479,
+      "y1": 42,
+      "yv0": 0.0,
+      "yv1": 0.4,
+      "scale": 0.001,
+      "unit": "m",
+      "field": "BaseThickness",
+      "legend": [
+        277,
+        347,
+        522,
+        467
+      ]
+    },
+    "velocity": {
+      "image": "Image174.png",
+      "page": 11,
+      "x0": 59,
+      "x1": 513,
+      "xv0": 0.0,
+      "xv1": 10.0,
+      "y0": 479,
+      "y1": 42,
+      "yv0": 0.0,
+      "yv1": 10.0,
+      "scale": 1.0,
+      "unit": "m/s",
+      "field": "WaveVelocity",
+      "legend": [
+        164,
+        56,
+        408,
+        174
+      ]
+    },
+    "number_density": {
+      "image": "Image175.png",
+      "page": 11,
+      "x0": 63,
+      "x1": 456,
+      "xv0": 0.0,
+      "xv1": 10.0,
+      "y0": 476,
+      "y1": 100,
+      "yv0": 0.0,
+      "yv1": 10.0,
+      "scale": 1.0,
+      "unit": "1/m",
+      "field": "WaveNumberDensity",
+      "legend": [
+        168,
+        345,
+        412,
+        463
+      ]
+    },
+    "velocity_048": {
+      "image": "Image185.png",
+      "page": 12,
+      "x0": 252,
+      "x1": 515,
+      "xv0": 0.0,
+      "xv1": 200.0,
+      "y0": 438,
+      "y1": 40,
+      "yv0": 0.0,
+      "yv1": 9.0,
+      "scale": 1.0,
+      "unit": "m/s",
+      "quantity": "wave_velocity",
+      "quality": 0.48,
+      "legend": [
+        66,
+        52,
+        293,
+        169
+      ]
+    },
+    "velocity_088": {
+      "image": "Image185.png",
+      "page": 12,
+      "x0": 889,
+      "x1": 1152,
+      "xv0": 0.0,
+      "xv1": 200.0,
+      "y0": 438,
+      "y1": 40,
+      "yv0": 0.0,
+      "yv1": 9.0,
+      "scale": 1.0,
+      "unit": "m/s",
+      "quantity": "wave_velocity",
+      "quality": 0.88,
+      "legend": [
+        955,
+        51,
+        1183,
+        168
+      ]
+    },
+    "period_048": {
+      "image": "Image186.png",
+      "page": 12,
+      "x0": 258,
+      "x1": 520,
+      "xv0": 0.0,
+      "xv1": 200.0,
+      "y0": 406,
+      "y1": 8,
+      "yv0": 30.0,
+      "yv1": 90.0,
+      "scale": 0.001,
+      "unit": "s",
+      "quantity": "wave_period",
+      "quality": 0.48,
+      "legend": [
+        72,
+        20,
+        300,
+        137
+      ]
+    },
+    "period_088": {
+      "image": "Image186.png",
+      "page": 12,
+      "x0": 897,
+      "x1": 1160,
+      "xv0": 0.0,
+      "xv1": 200.0,
+      "y0": 406,
+      "y1": 8,
+      "yv0": 0.0,
+      "yv1": 200.0,
+      "scale": 0.001,
+      "unit": "s",
+      "quantity": "wave_period",
+      "quality": 0.88,
+      "legend": [
+        711,
+        21,
+        939,
+        138
+      ]
+    }
+  },
+  "extractor_sha256": "83e0a74679c26efba7d827dc401d1277fbb74ce6de7d0e2e59f2507f6080979f",
+  "database_xml_sha256": {
+    "+Wurtz1978\\+src\\Wurtz1978.xml": "28de55a70c5a0151eb13b67a03ac83fc45877fdd290bc51a9c383e3f34f68419",
+    "+Sawai1989\\+src\\Sawai1989.xml": "c596453e59f5e6cad269334abd4012eee5577851b9be06403b42519a6c7b99f4"
+  },
+  "figure6_method": "Exact legend RGB; eight-connected colored components; whole dot/asterisk morphology classified separately. Case identity uses only mass-flux color and measured horizontal value within 3-pixel reading bound. Ambiguous/missing IDs remain blank; no native predictions used.",
+  "figure7_method": "Inspected axis ticks and legends; exact black pixels at preselected columns away from measurement stars. Only two separately visible model branches are accepted. Solid G300 and dashed G500 identified from non-crossing curve branches, independently of native results.",
+  "reading_bound_policy": "Conservative +/-3 original image pixels each axis; not statistical uncertainty, measurement uncertainty or a numerical equivalence tolerance. Propagate horizontal and vertical bounds when comparing curves.",
+  "figure6_points": 54,
+  "figure7_points": 24,
+  "exclusions": [
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "blue",
+      "pixel_bbox": [
+        125,
+        432,
+        128,
+        434
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 4
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "blue",
+      "pixel_bbox": [
+        123,
+        429,
+        125,
+        429
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 3
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "blue",
+      "pixel_bbox": [
+        136,
+        429,
+        137,
+        429
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 2
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "blue",
+      "pixel_bbox": [
+        128,
+        436,
+        133,
+        439
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 12
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "blue",
+      "pixel_bbox": [
+        136,
+        424,
+        136,
+        424
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 1
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "blue",
+      "pixel_bbox": [
+        125,
+        423,
+        126,
+        424
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 2
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "blue",
+      "pixel_bbox": [
+        133,
+        431,
+        136,
+        433
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 4
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "orange",
+      "pixel_bbox": [
+        259,
+        290,
+        273,
+        307
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 106
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "orange",
+      "pixel_bbox": [
+        125,
+        422,
+        128,
+        424
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 6
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "orange",
+      "pixel_bbox": [
+        125,
+        431,
+        133,
+        437
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 29
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "orange",
+      "pixel_bbox": [
+        134,
+        427,
+        137,
+        428
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 7
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "orange",
+      "pixel_bbox": [
+        123,
+        427,
+        127,
+        428
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 9
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "orange",
+      "pixel_bbox": [
+        134,
+        430,
+        136,
+        432
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 4
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "orange",
+      "pixel_bbox": [
+        134,
+        423,
+        136,
+        424
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 4
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "yellow",
+      "pixel_bbox": [
+        180,
+        384,
+        194,
+        404
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 115
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "yellow",
+      "pixel_bbox": [
+        373,
+        213,
+        387,
+        233
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 116
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "yellow",
+      "pixel_bbox": [
+        95,
+        455,
+        109,
+        472
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 108
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "yellow",
+      "pixel_bbox": [
+        107,
+        451,
+        107,
+        451
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 1
+    },
+    {
+      "figure": 6,
+      "panel": "base",
+      "color": "purple",
+      "pixel_bbox": [
+        113,
+        443,
+        114,
+        443
+      ],
+      "reason": "marker_fragment_overlap_or_unclassified_shape",
+      "pixels": 2
+    },
+    {
+      "figure": 7,
+      "panel": "velocity_048",
+      "requested_coordinate": 105,
+      "pixel_x": 390,
+      "reason": "both_model_branches_not_uniquely_visible",
+      "candidate_clusters": 1
+    },
+    {
+      "figure": 7,
+      "panel": "velocity_048",
+      "requested_coordinate": 165,
+      "pixel_x": 469,
+      "reason": "both_model_branches_not_uniquely_visible",
+      "candidate_clusters": 1
+    },
+    {
+      "figure": 7,
+      "panel": "velocity_088",
+      "requested_coordinate": 65,
+      "pixel_x": 974,
+      "reason": "both_model_branches_not_uniquely_visible",
+      "candidate_clusters": 1
+    },
+    {
+      "figure": 7,
+      "panel": "velocity_088",
+      "requested_coordinate": 105,
+      "pixel_x": 1027,
+      "reason": "both_model_branches_not_uniquely_visible",
+      "candidate_clusters": 1
+    },
+    {
+      "figure": 7,
+      "panel": "velocity_088",
+      "requested_coordinate": 165,
+      "pixel_x": 1106,
+      "reason": "both_model_branches_not_uniquely_visible",
+      "candidate_clusters": 1
+    },
+    {
+      "figure": 7,
+      "panel": "velocity_088",
+      "requested_coordinate": 185,
+      "pixel_x": 1132,
+      "reason": "both_model_branches_not_uniquely_visible",
+      "candidate_clusters": 1
+    },
+    {
+      "figure": 7,
+      "panel": "period_048",
+      "requested_coordinate": 85,
+      "pixel_x": 369,
+      "reason": "both_model_branches_not_uniquely_visible",
+      "candidate_clusters": 1
+    },
+    {
+      "figure": 7,
+      "panel": "period_048",
+      "requested_coordinate": 105,
+      "pixel_x": 396,
+      "reason": "both_model_branches_not_uniquely_visible",
+      "candidate_clusters": 1
+    },
+    {
+      "figure": 7,
+      "panel": "period_048",
+      "requested_coordinate": 165,
+      "pixel_x": 474,
+      "reason": "both_model_branches_not_uniquely_visible",
+      "candidate_clusters": 1
+    },
+    {
+      "figure": 7,
+      "panel": "period_048",
+      "requested_coordinate": 185,
+      "pixel_x": 500,
+      "reason": "both_model_branches_not_uniquely_visible",
+      "candidate_clusters": 1
+    },
+    {
+      "figure": 7,
+      "panel": "period_088",
+      "requested_coordinate": 145,
+      "pixel_x": 1088,
+      "reason": "both_model_branches_not_uniquely_visible",
+      "candidate_clusters": 1
+    },
+    {
+      "figure": 7,
+      "panel": "period_088",
+      "requested_coordinate": 165,
+      "pixel_x": 1114,
+      "reason": "both_model_branches_not_uniquely_visible",
+      "candidate_clusters": 1
+    }
+  ],
+  "limitations": [
+    "Raster reading only; original paper model arrays and producing revision are unavailable.",
+    "Base-thickness stars are Le Corre2022 correlation using measured film flow; only dots are model predictions.",
+    "Overlapping/partially hidden markers are excluded. Duplicate measured values within a group preclude unique case pairing.",
+    "Figure7 period axis is milliseconds; exported values are converted to seconds.",
+    "Figure7 downstream coordinate is (z-0.8m)/0.004m for these cases; measurement points beyond the 1.648m channel are not extrapolated.",
+    "Paper states Sawai RELAXTW=0.2s while both historical/current companion scripts say 0.1s; these curves alone do not identify which input produced them."
+  ]
+}

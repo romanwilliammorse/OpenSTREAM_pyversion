@@ -1,0 +1,360 @@
+{
+  "schema": "openstream-nureth21-source-history-v1",
+  "historical_database_commit": "e550ff14435dcbd4c850cd655188e8b95c6ce873",
+  "historical_solver_commit": "108a19b42cc3a0119d1ded8c78fca0fad9bf6c5a",
+  "historical_selection_rule": "Last available repository commit on or before 2025-09-05; not proof these revisions produced the publication plots.",
+  "original_project_source": "projects/NURETH21.m",
+  "original_project_introduction_commit": "90facd57be3be3f3d7a6c7fa5b619cc0346134d1",
+  "original_project_introduction_date": "2025-03-18",
+  "original_project_sha256": "13a126eb3c773f0501ae7d2ac974e681a3ee08c89323da8ab1de0c8c3f0db391",
+  "original_project_license": "OpenSTREAM-database MIT; repository database/LICENSE remains authoritative.",
+  "historical_model_options_sha256": {
+    "Model": "506416bf188673924015f88e1e0b0b97e8e079df2c68028644b5aaee3098b9a9",
+    "Options": "53876b4c81d12dd4dea041983327ae3d1a8dc0cc67c848d04b07e64371fa1fed"
+  },
+  "current_mlx_introduction_commit": "2ce844e90900db14a959881ad953b4d6852314f3",
+  "current_mlx_introduction_date": "2026-09-09",
+  "vaporfric": {
+    "introduced_commit": "f05b6409d8586acbf063062d6e62790c3038822f",
+    "introduced_date": "2023-07-02",
+    "declared_constant_name": "CONSTANT",
+    "paper_era_enum_names": [
+      "CONSTANT",
+      "WALLIS",
+      "WALLISTHICK",
+      "SOLVER_DEPENDENT"
+    ],
+    "finding": "CONST occurs in historical and current project scripts, but not the inspected enum definitions. Mapping CONST to CONSTANT must be explicit input migration, not undocumented parser behavior."
+  },
+  "historical_demo_overrides": {
+    "TwoFluid": {
+      "INTNU": "RELAXATION",
+      "RELAXTCOND": 0.5,
+      "SLIP": 2,
+      "MOMENTLIQUID": "MIXTURE (inherited 2025 default)",
+      "MOMENTGAS": "MIXTURE (inherited 2025 default)"
+    },
+    "ThreeField": {
+      "MOMENTFILM": "FULL",
+      "VAPORFRIC": "WALLIS",
+      "MOMENTDROP": "FULL",
+      "DROPDIAM": 0.001
+    },
+    "FourField": {
+      "MOMENTBASE": "FULLNOP",
+      "MOMENTWAVE": "FULL",
+      "VAPORFRIC": "CONST",
+      "VAPORFRICCST": 0.005,
+      "WAVEBASEINT": "VAPORSHEARDROPMASS",
+      "OAFFILMSPLIT": "RATIO",
+      "OAFBASERATIO": "0.2 (source string)",
+      "BASEEQTHICK": "YPLUS"
+    }
+  },
+  "material_script_differences": [
+    "Historical two-fluid FULL momentum assignments are commented out; 2025 Model defaults are MIXTURE for both phases. Paper prose states full momentum conservation except base forces; 2026 companion explicitly FULL.",
+    "Historical demo carries SLIP=2 into later model inputs. Current companion does not set it.",
+    "Historical demo condensation setting RELAXTCOND=0.5 differs from 2026 RELAXX=[-0.5,1] and RELAXCONDT=[0.5,0.5,0.01].",
+    "Historical demo FourField OAFBASERATIO string0.2 differs from current companion numeric0.3.",
+    "Historical plotting code comments out TwoFluid velocity line, whereas paper Figure4 visibly contains an orange TwoFluid velocity curve.",
+    "Historical and current Sawai scripts both specify RELAXTW=0.1s; paper p12 specifies0.2s. Preserve both named configurations.",
+    "Historical Sawai SHAPEFACTORCOEF has2elements [1.325e5,2]; current script has4 [1.325e5,2,1,0]. Compatibility must follow source formula, not blind shape substitution."
+  ],
+  "default_lexical_differences": {
+    "Model": {
+      "ANGLE": {
+        "2025": "0",
+        "2026": null
+      },
+      "BASEYPLUS": {
+        "2025": null,
+        "2026": "15"
+      },
+      "BTHTM": {
+        "2025": null,
+        "2026": "'VAPOR'"
+      },
+      "BTMTM": {
+        "2025": null,
+        "2026": "'TPFM'"
+      },
+      "CBTELEVATION": {
+        "2025": null,
+        "2026": "1"
+      },
+      "CBTKEFFECT": {
+        "2025": null,
+        "2026": "0"
+      },
+      "CSTWAVEFREQ": {
+        "2025": null,
+        "2026": "100"
+      },
+      "DITTUSBOELTERCOEF": {
+        "2025": null,
+        "2026": "[0.023 0.8 0.4]"
+      },
+      "DTMFB": {
+        "2025": null,
+        "2026": "100;"
+      },
+      "KBLOCKRATIO": {
+        "2025": "[0 0]",
+        "2026": "0"
+      },
+      "KLOC": {
+        "2025": "[0 0]",
+        "2026": "[0]"
+      },
+      "KLOSS": {
+        "2025": "[0 0]",
+        "2026": "0"
+      },
+      "KTRELAX": {
+        "2025": null,
+        "2026": "NaN"
+      },
+      "KTUNING": {
+        "2025": "[0 0]",
+        "2026": "0"
+      },
+      "MFBT": {
+        "2025": null,
+        "2026": "'NONE'"
+      },
+      "MOECKCOEF": {
+        "2025": null,
+        "2026": "[1.09E-3 0.989 1.41 -1.15]"
+      },
+      "NEARWALLEQOAF": {
+        "2025": null,
+        "2026": "false"
+      },
+      "NEARWALLH": {
+        "2025": null,
+        "2026": "'RATIO'"
+      },
+      "NEARWALLHRATIO": {
+        "2025": null,
+        "2026": "1.0"
+      },
+      "NEARWALLRATIO": {
+        "2025": null,
+        "2026": "0.5"
+      },
+      "NEARWALLRELAX": {
+        "2025": null,
+        "2026": "'QUALITY'"
+      },
+      "NEARWALLRELAXCOEF": {
+        "2025": null,
+        "2026": "[0.1E-3 1/3 0.05]"
+      },
+      "NEARWALLRELAXT": {
+        "2025": null,
+        "2026": "[ 1.0  0.5   0.3 0.1 0.1]"
+      },
+      "NEARWALLRELAXX": {
+        "2025": null,
+        "2026": "[-0.5 -0.25 -0.1 0.0 1.0]"
+      },
+      "RELAXCONDCOEF": {
+        "2025": null,
+        "2026": "[0.1E-3 1/3 0.05 0.0]"
+      },
+      "RELAXCONDFO": {
+        "2025": null,
+        "2026": "[ 1.0  1.0   1.0 1.0 1.0].*1E-4"
+      },
+      "RELAXCONDFOCOEF": {
+        "2025": null,
+        "2026": "[5E-5 5E5 0 0]"
+      },
+      "RELAXCONDT": {
+        "2025": null,
+        "2026": "[ 1.0  0.5   0.3 0.1 0.1]"
+      },
+      "RELAXEVAPCOEF": {
+        "2025": null,
+        "2026": "[0.1E-3 1/3 1E-5 0.0]"
+      },
+      "RELAXEVAPFO": {
+        "2025": null,
+        "2026": "[ 1.0  1.0   1.0 1.0 1.0].*5E-5"
+      },
+      "RELAXEVAPFOCOEF": {
+        "2025": null,
+        "2026": "[1E-4 5E5 2 2 10E-3 1]"
+      },
+      "RELAXEVAPT": {
+        "2025": null,
+        "2026": "[ 0.3  0.3   0.3 0.3 0.3]"
+      },
+      "RELAXTCOND": {
+        "2025": "[ 1.0  0.5   0.3 0.1 0.1 0.01]",
+        "2026": null
+      },
+      "RELAXTEVAP": {
+        "2025": "[ 0.3  0.3   0.3 0.3 0.3 0.01]",
+        "2026": null
+      },
+      "SHAPEFACTORCOEF": {
+        "2025": "[1.325E5 2]",
+        "2026": "[1.325E5 2 1 0]"
+      },
+      "SPHTM": {
+        "2025": null,
+        "2026": "'DITTUSBOELTER'"
+      },
+      "SPMTM": {
+        "2025": null,
+        "2026": "'BLASIUS'"
+      },
+      "THERMALRELAX": {
+        "2025": null,
+        "2026": "'TIMEX'"
+      },
+      "TPHTM": {
+        "2025": null,
+        "2026": "'THOM'"
+      }
+    },
+    "Options": {
+      "ENTNUMMAXITER": {
+        "2025": null,
+        "2026": "100"
+      },
+      "ENTNUMTOL": {
+        "2025": null,
+        "2026": "1E-2"
+      },
+      "ERRORFW": {
+        "2025": null,
+        "2026": "1E-1"
+      },
+      "MRMTIMEINT": {
+        "2025": null,
+        "2026": "'EXPONENTIAL'"
+      },
+      "OAFEQUILMAXITER": {
+        "2025": null,
+        "2026": "100"
+      },
+      "OAFEQUILTOL": {
+        "2025": null,
+        "2026": "1E-4"
+      },
+      "RELAXHM": {
+        "2025": "1",
+        "2026": "1.0"
+      },
+      "RELAXHV": {
+        "2025": "1",
+        "2026": "0.7"
+      },
+      "RELAXPM": {
+        "2025": "1",
+        "2026": "1.0"
+      },
+      "RELAXWM": {
+        "2025": "1",
+        "2026": "1.0"
+      },
+      "RELAXWV": {
+        "2025": "0.8",
+        "2026": "0.7"
+      },
+      "SSCONVFW": {
+        "2025": null,
+        "2026": "1E-1"
+      },
+      "UDEQUILMAXITER": {
+        "2025": null,
+        "2026": "100"
+      },
+      "UDEQUILTOL": {
+        "2025": null,
+        "2026": "1E-3"
+      },
+      "UFEQUILMAXITER": {
+        "2025": null,
+        "2026": "100"
+      },
+      "UFEQUILTOL": {
+        "2025": null,
+        "2026": "1E-3"
+      }
+    }
+  },
+  "default_diff_limits": "Static assignment-text comparison; added/renamed options and textual changes are not by themselves demonstrated physical/numerical changes. RELAXHV1→0.7 and RELAXWV0.8→0.7 are clear shared numerical-default changes.",
+  "figure_semantics": [
+    "Figure6 base-film stars use LeCorre2022eq55 correlation with measured filmflow; dots use calculated base.THICK. They are distinct comparison targets.",
+    "Figure7 plots measured points beyond the final model-curve extent. Keep out-of-domain points explicit; do not extend the channel to match them.",
+    "Paper Figure3/4 annular-onset marker is approximately0.71m (about±0.04m graphical reading envelope) whereas prose p9 states0.77m. This graphical/text discrepancy remains unresolved."
+  ],
+  "conclusion": "Original historical input script recovered, but it is not demonstrated to be the exact plot-producing run. Preserve historical-script, current-companion and explicit paper-override configurations separately.",
+  "historical_literal_execution_blocker": {
+    "solver_commit": "108a19b42cc3a0119d1ded8c78fca0fad9bf6c5a",
+    "source_script_assignment": "opts.model.RELAXTCOND = 0.5;",
+    "finding": "Historical input parsing preserves one scalar value; RELAXX retains five default knots. Historical Mixture.RELAXTCOND indexes model.RELAXTCOND(1:5). MATLAB scalar indexing does not broadcast, so the literal historical script is source-incompatible at this selected revision.",
+    "evidence": [
+      {
+        "source_path": "+Inputs/Model.m",
+        "first_line": 35,
+        "last_line": 35,
+        "source_sha256": "506416bf188673924015f88e1e0b0b97e8e079df2c68028644b5aaee3098b9a9",
+        "excerpt": "        RELAXX           (1,:) double                                      = [-0.5 -0.25 -0.1 0.0 1.0]       % Interfacial phase change relaxation time thermodynamic quality [-]"
+      },
+      {
+        "source_path": "+Inputs/Model.m",
+        "first_line": 36,
+        "last_line": 36,
+        "source_sha256": "506416bf188673924015f88e1e0b0b97e8e079df2c68028644b5aaee3098b9a9",
+        "excerpt": "        RELAXTCOND       (1,:) double                                      = [ 1.0  0.5   0.3 0.1 0.1 0.01]  % Interfacial condensation relaxation time array and at local perturbations [s]"
+      },
+      {
+        "source_path": "+Inputs/Input.m",
+        "first_line": 411,
+        "last_line": 416,
+        "source_sha256": "99d9c2d2fe6f655979c112f488eb74d1f019ced763452849a0eee98e3b82d8a0",
+        "excerpt": "                                    numericValues = textscan(fileRow.VALUE, '%f');\n                                    numericValues = numericValues{1};\n                                    if isempty(numericValues)\n                                        valueToSave = fileRow.VALUE;\n                                    else\n                                        valueToSave = numericValues;"
+      },
+      {
+        "source_path": "+Solvers/+Mixture/Mixture.m",
+        "first_line": 1190,
+        "last_line": 1195,
+        "source_sha256": "72b2f579cf3bb9bf8abe2f8599c1d3cccda00d33bf6dd34817fb0ceac71ffc2e",
+        "excerpt": "            X = model.RELAXX;                                              % [-] Equilibrium quality array\n            T = model.RELAXTCOND(1:length(model.RELAXX));                  % [-] Corresponding time relaxation\n\n            t = interp1(X,T,mix.XEQ(zIdx),'linear','extrap');              % [s] Interpolated time relaxation\n            t(mix.XEQ(zIdx)<X(1))   = T(1);                                % [s] Lower bound limit\n            t(mix.XEQ(zIdx)>X(end)) = T(end);                              % [s] Upper bound limit"
+      }
+    ],
+    "inferred_repair_not_applied": "Expanding 0.5 seconds across all five RELAXX knots would implement a constant condensation-relaxation-time candidate. That is an inferred correction, not a demonstrated original input or an exact historical replay.",
+    "execution_status": "Static source proof; historical MATLAB execution unavailable. No historical candidate run was launched and no governing equation was changed."
+  },
+  "historical_oafbaseratio_parse": {
+    "source_script_assignment": "opts.model.OAFBASERATIO = '0.2';",
+    "finding": "The writer emits the character value 0.2, and the reader uses textscan with %f and stores the numeric result. Numeric 0.2 therefore preserves the historical input semantics; it is not a guessed ratio or replacement with current companion 0.3.",
+    "evidence": [
+      {
+        "source_path": "+Inputs/Input.m",
+        "first_line": 480,
+        "last_line": 491,
+        "source_sha256": "99d9c2d2fe6f655979c112f488eb74d1f019ced763452849a0eee98e3b82d8a0",
+        "excerpt": "                varValue = varargin{varIdx+1};\n                if isnumeric(varValue)\n                    varValue = num2str(reshape(varValue,1,[]),'%.11f ');\n                elseif islogical(varValue)\n                    varValue = string(varValue);\n                elseif isa(varValue, 'function_handle')\n                    varValue = func2str(varValue);\n                elseif ((isStringScalar(varValue) || ischar(varValue)) && startsWith(strtrim(varValue), '@'))\n                    % Don't modify value\n                else\n                    varValue = upper(varValue);\n                end"
+      },
+      {
+        "source_path": "+Inputs/Input.m",
+        "first_line": 508,
+        "last_line": 508,
+        "source_sha256": "99d9c2d2fe6f655979c112f488eb74d1f019ced763452849a0eee98e3b82d8a0",
+        "excerpt": "                        fprintf(fid, '%-11s! %-63s> %s\\n', varName, description, varValue);"
+      },
+      {
+        "source_path": "+Inputs/Input.m",
+        "first_line": 411,
+        "last_line": 416,
+        "source_sha256": "99d9c2d2fe6f655979c112f488eb74d1f019ced763452849a0eee98e3b82d8a0",
+        "excerpt": "                                    numericValues = textscan(fileRow.VALUE, '%f');\n                                    numericValues = numericValues{1};\n                                    if isempty(numericValues)\n                                        valueToSave = fileRow.VALUE;\n                                    else\n                                        valueToSave = numericValues;"
+      }
+    ]
+  }
+}

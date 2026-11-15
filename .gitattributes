@@ -1,3 +1,7 @@
 # Preserve exported documents and archives byte-for-byte across platforms.
 *.pdf binary
 *.zip binary
+references/paper/lecorre2025/NURETH21_2025_original.m -text
+# Scientific receipts contain hashes of exact bytes; disable newline rewriting.
+references/paper/lecorre2025/** -text
+outputs/validation/lecorre-2025-01/** -text

@@ -49,6 +49,33 @@ void measurements in their actual quality/elevation coordinates. See
 [BARTOLOMEY.md](BARTOLOMEY.md) for a complete runnable example, override semantics,
 the pinned dataset and descriptive-comparison limits.
 
+`load_wurtz(path)` and `load_sawai(path)` preserve all 50 and 8 source records,
+respectively. Selection uses the original **one-based** row number, independent
+of the dataset's `TestID`. For example:
+
+```python
+from openstream.database import load_wurtz, load_sawai
+
+wurtz = load_wurtz("database")
+record = wurtz.select(1)
+inputs = record.to_input_set()  # source dataset defaults, not the paper overrides
+observations = record.observations("BaseThickness")  # outlet coordinate, metres
+sawai_period = load_sawai("database").select(1).observations("WaveTimePeriod")
+print(sawai_period.values)  # seconds; original millisecond values remain recorded
+```
+
+`to_input_set(model=..., options=..., geometry=..., boundary_conditions=...)`
+applies explicit overrides through the upstream input-file precision and mapping.
+Records are immutable; missing measurements remain missing, and out-of-channel
+coordinates are flagged without clamping. Wurtz supports `BaseThickness`,
+`WaveVelocity`, `WaveNumberDensity` and explicitly derived `WaveTimePeriod`;
+Sawai supports `WaveVelocity` and `WaveTimePeriod`. These adapters do not make
+all multiwall or operating-regime combinations solver-supported. The complete
+paper-specific settings and runnable campaign commands are in
+[LECORRE_REPRODUCTION.md](LECORRE_REPRODUCTION.md), with the frozen manifest in
+`examples/lecorre_reproduction.json`. A bare `to_input_set()` call is not a
+reproduction of the paper's model choices.
+
 Use straight constant-area channels, single-component fluids and the flow assumptions of the selected upstream framework. The forward sweep requires positive inlet mass flow. Two-phase properties require pressure strictly between triple and critical pressures. Property availability does not validate empirical closures for a fluid. Multidimensional networks, reverse flow and arbitrary operating regimes are outside this port's verified domain. Film/drop/base/wave frameworks apply to the documented annular formulations.
 
 Both residuals and bounds must be examined. A returned upstream convergence state is not proof of conservation, numerical equivalence, physical applicability or experimental validation. See `VERIFICATION.md` for the actual checks and retained failures.

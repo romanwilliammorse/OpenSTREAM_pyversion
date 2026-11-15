@@ -37,6 +37,13 @@ provide the first measured-versus-predicted workflow; uncertainty-qualified
 experimental validation remains incomplete. The database is pinned and preserved
 as a separate Git submodule.
 
+The [Le Corre NURETH-21 reconstruction](docs/LECORRE_REPRODUCTION.md) adds native
+Wurtz and Sawai input adapters, frozen paper/companion variants, comparisons with
+digitized published curves, and separate numerical-sensitivity studies.
+Original publication-time settings remain partly unresolved. Graphical agreement,
+native convergence, physical consistency and experimental accuracy are reported
+separately; no governing equation is adjusted to improve the comparison.
+
 ## Existing local installation
 
 Double-click **OpenSTREAM GUI** on the Desktop for the local browser interface.

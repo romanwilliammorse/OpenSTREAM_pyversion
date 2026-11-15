@@ -1,0 +1,588 @@
+{
+  "schema": "openstream-lecorre-physical-scope-audit-v1",
+  "report_sha256": "429ca74a0b8d9094d13c341754a3b376502bba7a84039352a7704a18544b01f4",
+  "source_sha256": {
+    "demo-mixture-n100-base": {
+      "comparison_profiles.npz": "6d24a74d0fdbd7247442cc0d7b7b24c1c2982e65420acf4015a96158498a80df"
+    },
+    "demo-twofluid-n100-base": {
+      "comparison_profiles.npz": "85d0569fe7805210951bfc4df2dd7cb1ba8138be2ec61916f7becc6ac8308a64"
+    },
+    "demo-threefield-n100-base": {
+      "comparison_profiles.npz": "8256c54c39ba6163b737ce90a4faf3fc102c47ef7faaa7a3cc0bf082af78e748",
+      "effective_inputs.json": "c0b00ea372f7aa8f301ed0e729b626a265ce3d0b88da843f6208f1c2005c43e2",
+      "numerical/mixture/results.npz": "adc535980b95482a7b16135203ad713bef1a147d53edf4da39250cf28f645514"
+    },
+    "demo-fourfield-n100-base": {
+      "comparison_profiles.npz": "66cf8124acd794539226c7047be5413d6ef911c3f6abae5aa76871e6580ae647",
+      "effective_inputs.json": "2875bec04cc55b1068a4fd30bdbfc85342b9df1ab2c90bb27f80b0e8a9b6eec3",
+      "numerical/mixture/results.npz": "adc535980b95482a7b16135203ad713bef1a147d53edf4da39250cf28f645514"
+    },
+    "wurtz-01-n100-base": {
+      "comparison_profiles.npz": "d6a9788b7ea46ce2412975093cc02ea05cdf464212f9f6590d5a40b01858d6cf",
+      "effective_inputs.json": "963d674499f1e03fce79b5d0daece422f531acf407110f107824680f3f0048c7",
+      "numerical/mixture/results.npz": "50f6f179f108a8a7c47510c71d483be5da5ffbc59824f0f80a1384331c26c9a4"
+    },
+    "wurtz-02-n100-base": {
+      "comparison_profiles.npz": "8b0b5de2dd638a0f436c5bc1a50987807e777a3d2dc54c8856241597c7bf751c",
+      "effective_inputs.json": "270a777fadbc4a0cdfc6618233ece4ed82ffa78fee1970680f30fea52cfeabdb",
+      "numerical/mixture/results.npz": "200cdd2cf588bfc139b5c3c98118edafbe2061fb9a39c21d308fab153e2b180b"
+    },
+    "wurtz-03-n100-base": {
+      "comparison_profiles.npz": "30c68395ca18b904626ab3c862a4a7b8603a8ed429aaf912791022b89ddda7e7",
+      "effective_inputs.json": "373a8112a8be15d0547ec6f9b62f952399847933ff29674fb0f21345f1df2390",
+      "numerical/mixture/results.npz": "967676c7dc3b18810c9df9a685d6a576be3115e9f6cc41b035fb6d97e1284d26"
+    },
+    "wurtz-04-n100-base": {
+      "comparison_profiles.npz": "ffb76e3a38a971043ea8eb62df4e09a98adcf399c1ba5f3d5d0468d0c7130b8f",
+      "effective_inputs.json": "b45964708f9756949da2e461e1cc2c418334adb1438146a6d9040125b108b6e1",
+      "numerical/mixture/results.npz": "f25633eb6ddc0c70337af9f795e80a7dbae989b5d591d7defb19cac067c62412"
+    },
+    "wurtz-05-n100-base": {
+      "comparison_profiles.npz": "100e56111d1e83cc1cabfc4c67949b38f1952f7add61dcef98b82c96ee7e8e60",
+      "effective_inputs.json": "4862cf464bce4e3c604235dd89aae41817d1e27dffa8cfbbba75012556956c1d",
+      "numerical/mixture/results.npz": "7696f41cd26b9880a6019726be4e9ad7ddf05a3b3f39b16f300781315d8f98ef"
+    },
+    "wurtz-06-n100-base": {
+      "comparison_profiles.npz": "51d9526a08215406ac602a5a6acb25457a1cdc7041c9ca48611310ec17dfdb37",
+      "effective_inputs.json": "f674778268870c900aee9d766717935023728fab0a6c9fc8cda9d370e707a836",
+      "numerical/mixture/results.npz": "55121307f2db0e835b7939626d9e9b7f83d55be523342e79ad9b68e9afa19625"
+    },
+    "wurtz-07-n100-base": {
+      "comparison_profiles.npz": "13956055f156061a02d5a8c493e6b88b67f3cc6c0fe832bf0bfc78a20b7ba35b",
+      "effective_inputs.json": "7af97356e963e925e2bdac572966cff2d84c409010f0b94ecc32cf1af7cc744a",
+      "numerical/mixture/results.npz": "397f51099a9bf4dce740e5357b08b36505723b40a01024469c9a883e15d2be5b"
+    },
+    "wurtz-08-n100-base": {
+      "comparison_profiles.npz": "49245cf7c84942592aa38afad3efce5f30130297f8bb52119b5e0b30f898351e",
+      "effective_inputs.json": "a76193f7b54d8c1569939ad0ea12d5c2d1583dcd1115c1868f37c9478aab63ab",
+      "numerical/mixture/results.npz": "db6e7896badbf885404f5bf865a576e3d574cd7af067ec9c2b54eff80bec1060"
+    },
+    "wurtz-09-n100-base": {
+      "comparison_profiles.npz": "1c01521fbb4715631e9a3be1a4c19065e18c2ec3eab5fed7ba63347fd994d20a",
+      "effective_inputs.json": "3e1c40ce519688dbcb57b5b676c19246416ecd59168a48947282bb7651b588cd",
+      "numerical/mixture/results.npz": "1b862775e9fb0abd3609d37dbd83c56fcd0a48db8d6ee21b09f068d8a4ff4aba"
+    },
+    "wurtz-10-n100-base": {
+      "comparison_profiles.npz": "5cd706c4d8811f7084966b9d1cbf2c5388e8a20eba0f54c1d80ec9e232c52658",
+      "effective_inputs.json": "a04586c47168651267c13b714ce8f48558169741e6539f5f1a790cdfd1b553d3",
+      "numerical/mixture/results.npz": "321689eb401806ca2371d9e666e151e408515f61f7c35deda649e4b1e285e4ee"
+    },
+    "wurtz-11-n100-base": {
+      "comparison_profiles.npz": "05a76fd82fe9031dae5590c8d5329d7cb373a04a66b6ac103c563969305264fb",
+      "effective_inputs.json": "f4f7fe0521df25cb3b49ad15c91297e574f59e33b25718acccb9b6aca9da77d0",
+      "numerical/mixture/results.npz": "907e1059c585da718d3ba83524eadbc75ce6a28fa1d6dfa67b619f6c3dc28753"
+    },
+    "wurtz-12-n100-base": {
+      "comparison_profiles.npz": "6c358d91eb931ab78123f916accd933be7f2afa67d5ada0e339555af57a891f6",
+      "effective_inputs.json": "18bf03dd60e7df005be1c01ec2482e5c7820595fdbcb228290c3d7eaab59ae60",
+      "numerical/mixture/results.npz": "d3aa580e770ee36f3c3801111e09c14a8c4f76d0114f8e57c845c591659e6d3a"
+    },
+    "wurtz-13-n100-base": {
+      "comparison_profiles.npz": "4f260bf9d90a0fc6979468a19490f13ebc56a08d1674dbd7c597cb224aac8d1a",
+      "effective_inputs.json": "7f98ed03b9e0c57f41d2d726585117d5c09777b0e5bf77ddd43813629913bd05",
+      "numerical/mixture/results.npz": "62d51eaaa66afc9c2faf70a6aed6680eaefbc3c5039a0cc0b38ecb5b984b3b8f"
+    },
+    "wurtz-14-n100-base": {
+      "comparison_profiles.npz": "c2264ef3460f4926d74821bd5ee749a56855e545d8c2f2c4a17a8275ef0d48b7",
+      "effective_inputs.json": "ea185710fabe5095f593eb41618b5b2372f7eb0ed2f4b14aea70134a3235442a",
+      "numerical/mixture/results.npz": "9926a6f439c5e46f70247add0850fb2957c5e3af9dc9ea87806b7cb4bc09752b"
+    },
+    "wurtz-15-n100-base": {
+      "comparison_profiles.npz": "a2af3d6000313fc4c8a3f2b546e9e2a6b3ff6c946e3565b012fec9a66af0527a",
+      "effective_inputs.json": "7f32935eb50fdf66effd787d174f23d9196507b45683a9ddde583a8c810e0581",
+      "numerical/mixture/results.npz": "bd6864a3b13edf86a08b931d9514ee76769d199115139d85b3f64d2f986006e9"
+    },
+    "wurtz-16-n100-base": {
+      "comparison_profiles.npz": "87f1f8981ee0d99927e54e7223739b22d24bee060c3e02c8314b10fcb6ebf144",
+      "effective_inputs.json": "ee38e4c3f1502b2ca5c54b23b885b1fb81ee48a622258ec433e5c9c9d8057bf5",
+      "numerical/mixture/results.npz": "c4a107c105b35cfb8a4f36ddb00550936b0e1257107059286e6e17f2bbcb0ded"
+    },
+    "wurtz-17-n100-base": {
+      "comparison_profiles.npz": "5780dc9824c38d336c790261852e2f627f9cd34827387ab6be2231bcc49e659b",
+      "effective_inputs.json": "6934fa0f0bef63d7db8fc362470a9374cb7327d1a408484f28af4bd6e7c79d18",
+      "numerical/mixture/results.npz": "03bfc4f162ce254f232f2d92c4df24b243c3aab6edca55d4e58369ea8b666a13"
+    },
+    "wurtz-18-n100-base": {
+      "comparison_profiles.npz": "400283bcc87b2ac70dc0b66ac7c47e0151805700225cd34d1853b19ab5b0a2ed",
+      "effective_inputs.json": "01f0ee3dc839b118e7a1fa486e8ef43f034942c6f9387f869df70512c28aab12",
+      "numerical/mixture/results.npz": "6e1fa6d319612aa20a23c1a8eb98d443bb5b5710c45df6aeb12757ae88b526fa"
+    },
+    "wurtz-19-n100-base": {
+      "comparison_profiles.npz": "ed2f673c2c6f227d426ab1797432d2ff8c4aabb71a74cf112f3cad33ec9b275b",
+      "effective_inputs.json": "90991742ea5ad11ad5ea551d36cc02261f9ffbb2aedfbfc7bec094f3efe5aa84",
+      "numerical/mixture/results.npz": "01c511ef0de52b55f1ec44ef879a72dc500d0a3171b2557c6f093e730ba5285d"
+    },
+    "wurtz-20-n100-base": {
+      "comparison_profiles.npz": "9596936805872d380761e96cc827d9c683bfe859c1f149fd229fad06340823d6",
+      "effective_inputs.json": "baec9eb73e788763653a6fbba9a635f95f2be6db409dd2f82d769e91e02b0081",
+      "numerical/mixture/results.npz": "988e264600e3583e51738d67b6a211afe96ae7d2258c141bff65845897a67850"
+    },
+    "wurtz-21-n100-base": {
+      "comparison_profiles.npz": "45189b39ff17112ed4014735c1a7644bef4ce38244d707c4435d27bed8d4c16a",
+      "effective_inputs.json": "2d68d0af21519465fc980f21bfcefbe2d984a8b139033699bd9ba4bd9474111a",
+      "numerical/mixture/results.npz": "0b57fcfa171e1318cf53e0acbc607c93834d9fa16a5ec03cf98399b2a4808d03"
+    },
+    "sawai-01-paper-tw020-n100-base": {
+      "comparison_profiles.npz": "7a1cdb7701c833857543d81fdbab80c427147905cf3c136500cc4116d693230f",
+      "effective_inputs.json": "f60b6bd005de5febbb7aa225adbd5728a5db3f4b1cca129142113e86a151c859",
+      "numerical/mixture/results.npz": "62305ec2f2f4d63b5f8bfe208e72c31563c67f42d7b52e8e91bc352da729722b"
+    },
+    "sawai-01-companion-tw010-n100-base": {
+      "comparison_profiles.npz": "974858d21ad8cdbe0c87b5e6f3d5a9c7b77cebedb4fe037f4bff68222e904aea",
+      "effective_inputs.json": "7374cf1e367373a45151d108741a53cacbc1b0d60a99751ae97428494f04de13",
+      "numerical/mixture/results.npz": "62305ec2f2f4d63b5f8bfe208e72c31563c67f42d7b52e8e91bc352da729722b"
+    },
+    "sawai-02-paper-tw020-n100-base": {
+      "comparison_profiles.npz": "feff19836d10313820fba7869c8e546c2a2bf193b9e7669d4998f201e37ae1e3",
+      "effective_inputs.json": "ea956c0b46a5c458caa29f2d996e9ac7398485b7c7ffc94efe86c949abcb2caf",
+      "numerical/mixture/results.npz": "2757e7aa266fbebf9b6ae09eb13658747d3ec9b93ba57c998766ad778eff59f8"
+    },
+    "sawai-02-companion-tw010-n100-base": {
+      "comparison_profiles.npz": "62a2ed32cafb2ab483d353a23ec61328d8a63c22ce5d6dfbe288bd3dc2331f83",
+      "effective_inputs.json": "4658fa54ef33bd6a44f89d3da425bb336b5bd53ff5dd33db9a1bcfd062d3a634",
+      "numerical/mixture/results.npz": "2757e7aa266fbebf9b6ae09eb13658747d3ec9b93ba57c998766ad778eff59f8"
+    },
+    "sawai-05-paper-tw020-n100-base": {
+      "comparison_profiles.npz": "bdbaaae43811cf361cdd8b6e3fca898e1840030b9164d90cf14a929fe16382e3",
+      "effective_inputs.json": "1f30e550d61a6d554331187893597136ca32e39a63f2b1963a221e11338736d3",
+      "numerical/mixture/results.npz": "f10fb8884cfe85add8e4b6be38fa667a063e19c53fa6dee79bba026f65a0c6e4"
+    },
+    "sawai-05-companion-tw010-n100-base": {
+      "comparison_profiles.npz": "995dd9eaaf3f9972665c4b56ee4261f780fe7efba8ed2a38d13e68ebc35061af",
+      "effective_inputs.json": "9475b402f18f69aa30aa6bc3f550527166f50e73a6bfc59560f892f07b9d8680",
+      "numerical/mixture/results.npz": "f10fb8884cfe85add8e4b6be38fa667a063e19c53fa6dee79bba026f65a0c6e4"
+    },
+    "sawai-06-paper-tw020-n100-base": {
+      "comparison_profiles.npz": "8d4b2104f2a7dd894be94f879ff447f8027a08abdd8da45e890e76d3dce2e488",
+      "effective_inputs.json": "0431979941a0fc7f8f713d55fc5ba79104725f3cc2574c4322604fbb33ad188e",
+      "numerical/mixture/results.npz": "45972ed2320a86824e66236949cd559004d9bcf44bd1f7a87089f0158f925acf"
+    },
+    "sawai-06-companion-tw010-n100-base": {
+      "comparison_profiles.npz": "c128b989da7f05dcc921675e2fd6572bb713488284a7bc6ec5da53fa9e4b2de8",
+      "effective_inputs.json": "91413cbffc10c4ec79de8e3e67df34dd715314fcb6ae65f986cf3aa936beedc2",
+      "numerical/mixture/results.npz": "45972ed2320a86824e66236949cd559004d9bcf44bd1f7a87089f0158f925acf"
+    }
+  },
+  "runs": [
+    {
+      "run_id": "demo-mixture-n100-base",
+      "native_converged": true,
+      "physical_status": "not_fully_assessed",
+      "annular_area_relative": null,
+      "all_region_area_relative": null,
+      "film_W_over_U_additivity_abs_kg_m": null,
+      "independent_annular_area_relative": null,
+      "independent_area_difference": null,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "demo-twofluid-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": null,
+      "all_region_area_relative": 0.4105610706900207,
+      "film_W_over_U_additivity_abs_kg_m": null,
+      "independent_annular_area_relative": null,
+      "independent_area_difference": null,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "demo-threefield-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.07485259436858827,
+      "all_region_area_relative": 0.12143454516497232,
+      "film_W_over_U_additivity_abs_kg_m": null,
+      "independent_annular_area_relative": 0.07485259436858835,
+      "independent_area_difference": 8.326672684688674e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "demo-fourfield-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.07488843041579019,
+      "all_region_area_relative": 0.5437119472598098,
+      "film_W_over_U_additivity_abs_kg_m": 3.469446951953614e-18,
+      "independent_annular_area_relative": 0.07488843041579016,
+      "independent_area_difference": -2.7755575615628914e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-01-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.033275626002109204,
+      "all_region_area_relative": 0.03710521658790822,
+      "film_W_over_U_additivity_abs_kg_m": 6.938893903907228e-18,
+      "independent_annular_area_relative": 0.033275626002109274,
+      "independent_area_difference": 6.938893903907228e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-02-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.015153188197999379,
+      "all_region_area_relative": 0.01930985385863848,
+      "film_W_over_U_additivity_abs_kg_m": 6.938893903907228e-18,
+      "independent_annular_area_relative": 0.015153188197999504,
+      "independent_area_difference": 1.249000902703301e-16,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-03-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.002759578017296649,
+      "all_region_area_relative": 0.009879348992766546,
+      "film_W_over_U_additivity_abs_kg_m": 3.469446951953614e-18,
+      "independent_annular_area_relative": 0.0027595780172968046,
+      "independent_area_difference": 1.5569143196891844e-16,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-04-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.0064457443565115735,
+      "all_region_area_relative": 0.012827595611147213,
+      "film_W_over_U_additivity_abs_kg_m": 1.734723475976807e-18,
+      "independent_annular_area_relative": 0.006445744356511551,
+      "independent_area_difference": -2.2551405187698492e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-05-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.011676358663511133,
+      "all_region_area_relative": 0.015639830546505418,
+      "film_W_over_U_additivity_abs_kg_m": 0.0,
+      "independent_annular_area_relative": 0.011676358663511098,
+      "independent_area_difference": -3.469446951953614e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-06-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.015048939774882197,
+      "all_region_area_relative": 0.017743875181801316,
+      "film_W_over_U_additivity_abs_kg_m": 8.673617379884035e-19,
+      "independent_annular_area_relative": 0.01504893977488217,
+      "independent_area_difference": -2.7755575615628914e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-07-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.03330946470354257,
+      "all_region_area_relative": 0.04016290946501844,
+      "film_W_over_U_additivity_abs_kg_m": 6.938893903907228e-18,
+      "independent_annular_area_relative": 0.0333094647035426,
+      "independent_area_difference": 3.469446951953614e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-08-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.01485787940939387,
+      "all_region_area_relative": 0.0214384273803081,
+      "film_W_over_U_additivity_abs_kg_m": 3.469446951953614e-18,
+      "independent_annular_area_relative": 0.014857879409393959,
+      "independent_area_difference": 8.847089727481716e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-09-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.002622038194145304,
+      "all_region_area_relative": 0.010507152522351682,
+      "film_W_over_U_additivity_abs_kg_m": 1.734723475976807e-18,
+      "independent_annular_area_relative": 0.0026220381941454494,
+      "independent_area_difference": 1.452830911130576e-16,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-10-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.004305639890386015,
+      "all_region_area_relative": 0.009479998047483451,
+      "film_W_over_U_additivity_abs_kg_m": 8.673617379884035e-19,
+      "independent_annular_area_relative": 0.004305639890386025,
+      "independent_area_difference": 1.0408340855860843e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-11-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.008085146207622906,
+      "all_region_area_relative": 0.010501446347180199,
+      "film_W_over_U_additivity_abs_kg_m": 8.673617379884035e-19,
+      "independent_annular_area_relative": 0.008085146207622912,
+      "independent_area_difference": 5.204170427930421e-18,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-12-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.010185142261880054,
+      "all_region_area_relative": 0.01112964422191931,
+      "film_W_over_U_additivity_abs_kg_m": 8.673617379884035e-19,
+      "independent_annular_area_relative": 0.01018514226188018,
+      "independent_area_difference": 1.2663481374630692e-16,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-13-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.02950001329993257,
+      "all_region_area_relative": 0.03795016014115937,
+      "film_W_over_U_additivity_abs_kg_m": 3.469446951953614e-18,
+      "independent_annular_area_relative": 0.029500013299932574,
+      "independent_area_difference": 3.469446951953614e-18,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-14-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.011811437086550525,
+      "all_region_area_relative": 0.019301963484833484,
+      "film_W_over_U_additivity_abs_kg_m": 1.734723475976807e-18,
+      "independent_annular_area_relative": 0.011811437086550407,
+      "independent_area_difference": -1.1796119636642288e-16,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-15-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.0016244243826795124,
+      "all_region_area_relative": 0.007277491787095691,
+      "film_W_over_U_additivity_abs_kg_m": 1.734723475976807e-18,
+      "independent_annular_area_relative": 0.001624424382679488,
+      "independent_area_difference": -2.42861286636753e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-16-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.004105425497538229,
+      "all_region_area_relative": 0.008320029124865624,
+      "film_W_over_U_additivity_abs_kg_m": 8.673617379884035e-19,
+      "independent_annular_area_relative": 0.0041054254975382756,
+      "independent_area_difference": 4.683753385137379e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-17-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.006653584458315653,
+      "all_region_area_relative": 0.008774585941188962,
+      "film_W_over_U_additivity_abs_kg_m": 8.673617379884035e-19,
+      "independent_annular_area_relative": 0.0066535844583158,
+      "independent_area_difference": 1.465841337200402e-16,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-18-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.008261754997346382,
+      "all_region_area_relative": 0.009174769564123997,
+      "film_W_over_U_additivity_abs_kg_m": 4.336808689942018e-19,
+      "independent_annular_area_relative": 0.008261754997346321,
+      "independent_area_difference": -6.071532165918825e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-19-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.015389896316450491,
+      "all_region_area_relative": 0.023518635456638348,
+      "film_W_over_U_additivity_abs_kg_m": 1.734723475976807e-18,
+      "independent_annular_area_relative": 0.015389896316450486,
+      "independent_area_difference": -5.204170427930421e-18,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-20-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.0040862233248712965,
+      "all_region_area_relative": 0.009765859139417632,
+      "film_W_over_U_additivity_abs_kg_m": 8.673617379884035e-19,
+      "independent_annular_area_relative": 0.004086223324871173,
+      "independent_area_difference": -1.231653667943533e-16,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "wurtz-21-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.0018844194120691826,
+      "all_region_area_relative": 0.0049346635966806,
+      "film_W_over_U_additivity_abs_kg_m": 4.336808689942018e-19,
+      "independent_annular_area_relative": 0.0018844194120692013,
+      "independent_area_difference": 1.8648277366750676e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "sawai-01-paper-tw020-n100-base",
+      "native_converged": false,
+      "physical_status": "failed",
+      "annular_area_relative": 0.012148155897654167,
+      "all_region_area_relative": 0.8505869284472063,
+      "film_W_over_U_additivity_abs_kg_m": 8.673617379884035e-19,
+      "independent_annular_area_relative": 0.012148155897654235,
+      "independent_area_difference": 6.765421556309548e-17,
+      "negative_quantities": [
+        {
+          "quantity": "drop.W",
+          "count": 21,
+          "minimum": -1.1820825440011975e-05,
+          "minimum_z_m": 0.36255999999999994,
+          "minimum_AFFNC": 0.002310539163370708,
+          "min_z_m": 0.09888,
+          "max_z_m": 0.42847999999999997,
+          "minimum_AFFNC_over_negative_nodes": 1.5856420099395507e-45,
+          "maximum_AFFNC_over_negative_nodes": 0.9999999875790776,
+          "negative_fully_annular_count": 0
+        }
+      ]
+    },
+    {
+      "run_id": "sawai-01-companion-tw010-n100-base",
+      "native_converged": false,
+      "physical_status": "failed",
+      "annular_area_relative": 0.01233814616453821,
+      "all_region_area_relative": 0.8505869284472063,
+      "film_W_over_U_additivity_abs_kg_m": 8.673617379884035e-19,
+      "independent_annular_area_relative": 0.012338146164538214,
+      "independent_area_difference": 3.469446951953614e-18,
+      "negative_quantities": [
+        {
+          "quantity": "drop.W",
+          "count": 19,
+          "minimum": -1.1820825035621044e-05,
+          "minimum_z_m": 0.36255999999999994,
+          "minimum_AFFNC": 0.002310539163370708,
+          "min_z_m": 0.09888,
+          "max_z_m": 0.39552,
+          "minimum_AFFNC_over_negative_nodes": 1.5856420099395507e-45,
+          "maximum_AFFNC_over_negative_nodes": 0.9976894608366293,
+          "negative_fully_annular_count": 0
+        }
+      ]
+    },
+    {
+      "run_id": "sawai-02-paper-tw020-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.017500071941185302,
+      "all_region_area_relative": 0.8085847080483499,
+      "film_W_over_U_additivity_abs_kg_m": 1.734723475976807e-18,
+      "independent_annular_area_relative": 0.017500071941185233,
+      "independent_area_difference": -6.938893903907228e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "sawai-02-companion-tw010-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.017583344603550044,
+      "all_region_area_relative": 0.8085847080483499,
+      "film_W_over_U_additivity_abs_kg_m": 1.734723475976807e-18,
+      "independent_annular_area_relative": 0.01758334460354998,
+      "independent_area_difference": -6.245004513516506e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "sawai-05-paper-tw020-n100-base",
+      "native_converged": false,
+      "physical_status": "failed",
+      "annular_area_relative": 0.009581245180569464,
+      "all_region_area_relative": 0.8528677441009183,
+      "film_W_over_U_additivity_abs_kg_m": 2.710505431213761e-20,
+      "independent_annular_area_relative": 0.009581245180569176,
+      "independent_area_difference": -2.8796409701215e-16,
+      "negative_quantities": [
+        {
+          "quantity": "drop.W",
+          "count": 11,
+          "minimum": -7.707442298160363e-06,
+          "minimum_z_m": 0.23071999999999998,
+          "minimum_AFFNC": 0.002310539163370708,
+          "min_z_m": 0.08239999999999999,
+          "max_z_m": 0.24719999999999998,
+          "minimum_AFFNC_over_negative_nodes": 4.437920275789057e-27,
+          "maximum_AFFNC_over_negative_nodes": 0.5,
+          "negative_fully_annular_count": 0
+        }
+      ]
+    },
+    {
+      "run_id": "sawai-05-companion-tw010-n100-base",
+      "native_converged": false,
+      "physical_status": "failed",
+      "annular_area_relative": 0.00963546520502745,
+      "all_region_area_relative": 0.8528677441009183,
+      "film_W_over_U_additivity_abs_kg_m": 4.336808689942018e-19,
+      "independent_annular_area_relative": 0.009635465205027323,
+      "independent_area_difference": -1.2663481374630692e-16,
+      "negative_quantities": [
+        {
+          "quantity": "drop.W",
+          "count": 11,
+          "minimum": -7.707441997853708e-06,
+          "minimum_z_m": 0.23071999999999998,
+          "minimum_AFFNC": 0.002310539163370708,
+          "min_z_m": 0.08239999999999999,
+          "max_z_m": 0.24719999999999998,
+          "minimum_AFFNC_over_negative_nodes": 4.437920275789057e-27,
+          "maximum_AFFNC_over_negative_nodes": 0.5,
+          "negative_fully_annular_count": 0
+        }
+      ]
+    },
+    {
+      "run_id": "sawai-06-paper-tw020-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.025425403424371718,
+      "all_region_area_relative": 0.8078644792223468,
+      "film_W_over_U_additivity_abs_kg_m": 8.673617379884035e-19,
+      "independent_annular_area_relative": 0.025425403424371697,
+      "independent_area_difference": -2.0816681711721685e-17,
+      "negative_quantities": []
+    },
+    {
+      "run_id": "sawai-06-companion-tw010-n100-base",
+      "native_converged": true,
+      "physical_status": "failed",
+      "annular_area_relative": 0.025499049120243145,
+      "all_region_area_relative": 0.8078644792223468,
+      "film_W_over_U_additivity_abs_kg_m": 8.673617379884035e-19,
+      "independent_annular_area_relative": 0.025499049120243204,
+      "independent_area_difference": 5.898059818321144e-17,
+      "negative_quantities": []
+    }
+  ],
+  "annular_mask": "AFFNC >= 1-1e-12",
+  "independent_area_formula": "((Wfilm/Ufilm + Wdrop/Udrop)/(Wliquid_precursor/Uliquid_precursor) - 1)*(1-VF_precursor)",
+  "assumptions": "Saturated liquid density cancels between precursor and annular liquid. Precursor vapor occupies VF*A and is not updated by annular velocities. Film aggregate W/U includes base and wave inventories. Only completed base runs examined.",
+  "unmodified": "No solver inputs, equations, acceptance tolerances or frozen diagnostic flags are changed."
+}

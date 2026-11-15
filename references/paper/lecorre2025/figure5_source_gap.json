@@ -1,0 +1,37 @@
+{
+  "schema": "openstream-lecorre-figure5-source-gap-v1",
+  "paper_reference_number": 9,
+  "reference_title": "Derivation and open source implementation of a simplified one-dimensional two-fluid model",
+  "author": "Elisabeth K. Walter",
+  "year": 2024,
+  "primary_record_url": "https://www.diva-portal.org/smash/record.jsf?pid=diva2:1888131",
+  "verified_download_url": "https://www.diva-portal.org/smash/get/diva2:1888131/FULLTEXT01.pdf",
+  "pdf_sha256": "f8221e0aa7b79b2ac623cb7ae7c74f2674240c8fb6344a79ce84314ae4448aab",
+  "pdf_page_count": 98,
+  "retrieved_date": "2026-11-14",
+  "original_file_redistributed": false,
+  "chapter6_source": {
+    "pdf_pages": [84, 85],
+    "printed_pages": [72, 73],
+    "trace_input_table": {
+      "length_m": 5.5,
+      "heated_length_m": 3.5,
+      "diameter_m": 0.0088,
+      "pressure_Pa": 6000000,
+      "inlet_enthalpy_J_kg": 600000,
+      "inlet_flow_kg_s": 0.07,
+      "power_W": 150000,
+      "heat_distribution": "uniform over heated length"
+    },
+    "additional_evidence": [
+      "Volumetric heating was used in TRACE, suppressing subcooled boiling; the OpenSTREAM comparison was adjusted accordingly.",
+      "Particle diameter was increased from 1 mm to 1.5 mm to obtain closer agreement with TRACE. This is a code-comparison tuning association, not independent experimental validation."
+    ]
+  },
+  "exact_input_gap": [
+    "Earlier thesis example tables use 6.123 MPa and mixture SLIP=1.5; Le Corre2025 states 6 MPa and mixture SLIP=2. The thesis cannot be copied wholesale as the exact Figure5 input.",
+    "No original TRACE result arrays or exact updated Figure5 input deck and producing revisions have been recovered.",
+    "The current NURETH21 companion explicitly omits Figure5 because original TRACE reference results are unavailable."
+  ],
+  "action_taken": "Source evidence retained only; no inferred Figure5 run or model modification was made."
+}

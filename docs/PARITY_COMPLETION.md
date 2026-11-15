@@ -15,19 +15,26 @@ profiles, initialization histories, and mixture precursors. This establishes
 selected-case numerical agreement. It does not establish complete API/option
 parity, transient equivalence, or accuracy against measurements. Physical
 validation is to use the external experimental datasets in OpenSTREAM-database,
-as requested. The database inspection below is preparation, not an executed
-validation study.
+as requested. The later Bartolomey pilot and Le Corre reconstruction provide
+executed descriptive comparisons; neither establishes uncertainty-qualified
+experimental validation. Their reports supersede the original preparation-only
+database assessment below.
 
 ## Next concrete milestone
 
-Build a native reader and input adapter for the pinned database, then run a
-small, explicitly selected **Bartolomey void-fraction case set** end to end with
-the mixture framework. Preserve raw XML values and units, review generated
-geometry/heating/boundary inputs, calculate at the experimental coordinates,
-and publish errors and numerical-sensitivity results. Add Adamsson film-flow
-cases next, followed by appropriate Wurtz/Sawai wave measurements and
-Bennett/Groeneveld thermal/dryout cases. This order is an implementation
-recommendation, not a claim that these cases will pass physical validation.
+Native readers and source input adapters now cover Bartolomey, Wurtz and Sawai.
+The frozen Bartolomey pilot retains three failed mesh criteria. The separate
+[Le Corre reconstruction](LECORRE_REPRODUCTION.md) records paper/companion
+setting conflicts, graphical differences, convergence and physical failures.
+First resolve these open evidence gaps: identify the original paper-producing
+input/version bundle, investigate failed point convergence and numerical
+sensitivity without altering the original attempts, and quantify input and
+measurement uncertainty. Determine whether remaining discrepancies are shared
+source behavior or translation errors using independent reference evidence.
+Keep measurement-informed calibration cases separate from independent evaluation.
+Then extend the database workflows to Adamsson film-flow and applicable
+Bennett/Groeneveld thermal/dryout cases. Adding datasets does not by itself
+establish physical validation.
 
 In parallel, recover additional approved MATLAB outputs or execute the existing
 reference exporter in any available compatible MATLAB environment for transient

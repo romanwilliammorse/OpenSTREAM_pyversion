@@ -1,0 +1,5 @@
+# Optional paper-raster extraction environment; separate from solver dependencies.
+# These are the versions used to create references/paper/lecorre2025/.
+numpy==2.3.5
+Pillow==12.3.0
+pypdf==6.10.0
