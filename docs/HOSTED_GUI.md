@@ -47,6 +47,12 @@ leave temporary worker evidence available only until the sandbox expires.
 Production address: `https://openstream-py.vercel.app`.
 Project: `openstream-py`; region: `iad1`; private store: `openstream-py-results`.
 
+The project is connected to `romanwilliammorse/OpenSTREAM_pyversion` through
+the Vercel GitHub app. Pushes to `main` trigger production builds. Inspect build
+logs and the deployed commit before treating a Git deployment as verified.
+The original tested release used the explicit source-file deployment path;
+its receipts remain preserved in `outputs/verification/hosted-release/`.
+
 Required deployment environment variables:
 
 - `OPENSTREAM_PASSWORD_HASH`: Werkzeug scrypt password hash.

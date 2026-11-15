@@ -8,9 +8,12 @@ The user authorized publication at `https://openstream-py.vercel.app` and a
 shared password. Production deployment `dpl_4c32d5nAxmgZRSeFVVNBAqEKWQDY`
 serves exact committed source `ae7da5be960e1b4e20ad7a53e18c6b53b925d563`
 through Vercel's file-deployment API. The private Blob store is connected.
-Secrets are deployment environment variables, never repository files. Automatic
-GitHub deployment remains unconnected pending the account's OAuth authorization;
-the published application is usable independently of that optional connection.
+Secrets are deployment environment variables, never repository files. Following
+the user's OAuth approval and completed GitHub verification, the existing Vercel
+project is now connected to `romanwilliammorse/OpenSTREAM_pyversion`. The
+connection screenshot is `outputs/verification/hosted-release/github-connected.png`.
+The first push-triggered Git build and post-deployment checks are in progress;
+the prior tested production deployment remains the reference until they pass.
 
 The separate `openstream.cloud` adapter retains the native GUI/solver worker,
 uses isolated Linux Sandbox jobs and durable private result manifests, and
