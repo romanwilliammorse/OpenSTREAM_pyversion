@@ -6,6 +6,7 @@ from copy import deepcopy
 import hashlib
 import io
 import json
+import os
 from pathlib import Path
 import sys
 import zipfile
@@ -392,10 +393,17 @@ def test_real_child_acknowledges_cancellation_before_calculation(tmp_path):
 
 def test_real_100_cell_mixture_wrapper_preserves_archive_equivalence(tmp_path):
     directory, manifest = prepare_job(tmp_path)
+    # The real provider's tar-based upload uses epoch zero, which the native
+    # result ZIP cannot encode. Only transfer metadata may be normalized.
+    submitted = directory/"submitted_inputs.json"
+    original_bytes = submitted.read_bytes()
+    os.utime(submitted, (0, 0))
     assert baseline("Mixture")["inputs"]["model"]["NNODES"] == 100
     before = worker._verify_sources(manifest)
     store = MemoryStore()
     result = worker.run_cloud_job(directory, RUN_ID, store=store, stop_callback=lambda: None)
+    assert submitted.read_bytes() == original_bytes
+    assert submitted.stat().st_mtime >= 315532800
     assert result["status"]["status"] == "completed", result["status"]
     assert result["status"]["converged"] is True
     assert result["status"]["reference"]["status"] == "passed"

@@ -281,6 +281,11 @@ def run_cloud_job(directory, run_id, *, store, stop_callback=None):
             inputs = (directory/"submitted_inputs.json").read_bytes()
             if hashlib.sha256(inputs).hexdigest() != manifest.get("submitted_inputs_sha256"):
                 raise CloudWorkerError("Submitted inputs differ from their manifest.")
+            # Sandbox file transfer assigns epoch-zero mtime. The unchanged
+            # native ZIP writer requires a DOS-era timestamp. Adjust filesystem
+            # metadata only, after verifying the input bytes, before execution.
+            if (directory/"submitted_inputs.json").stat().st_mtime < 315532800:
+                os.utime(directory/"submitted_inputs.json", None)
             source_hashes = _verify_sources(manifest)
             if manifest["environment"].get("python_requirement") != "3.12" or sys.version_info[:2] != (3, 12):
                 raise CloudWorkerError("The declared Python 3.12 runtime is required.")
