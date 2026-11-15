@@ -5,7 +5,27 @@
 // state misalignment, and silent interpretation of unknown input schemas.
 const test = require("node:test");
 const assert = require("node:assert/strict");
-const {primaryQuantityFields, referenceIndexForTime, assertInputDocumentVersion, makeTraces} = require("../src/openstream/gui_static/app.js");
+const {inputCaseName, runCaseName, primaryQuantityFields, referenceIndexForTime, assertInputDocumentVersion, makeTraces} = require("../src/openstream/gui_static/app.js");
+
+test("case labels use the original name tag without case normalization", () => {
+  const submission = {inputs: {model: {ID: "Run0001"}}};
+  const run = {id: "original-run", is_reference: false, changes: [{value: "RUN0001"}]};
+  assert.equal(inputCaseName(submission.inputs), "Run0001");
+  assert.equal(runCaseName(run, submission), "Run0001");
+  assert.equal(run.is_reference, false);
+  const anotherEditor = {model: {ID: "Next run"}};
+  assert.equal(inputCaseName(anotherEditor), "Next run");
+  assert.equal(runCaseName(run, submission), "Run0001");
+});
+
+test("case labels preserve Unicode and literal text, with explicit missing-name fallbacks", () => {
+  const name = 'ΔP <trial> & "water"';
+  assert.equal(inputCaseName({model: {ID: name}}), name);
+  assert.equal(inputCaseName({model: {ID: "   "}}), "Unnamed case");
+  assert.equal(runCaseName({is_reference: true}), "TUTORIAL1");
+  assert.equal(runCaseName({is_reference: false}), "Unnamed case");
+  assert.equal(runCaseName({is_reference: false}, {inputs: {model: {ID: {}}}}), "Unnamed case");
+});
 
 test("enthalpy and velocity groups exclude derivatives and diagnostic copies", () => {
   const names = ["H", "liquid.H", "vapor.H", "film.H", "drop.H", "film.base.H", "film.wave.H", "MDER.H", "MRM.H", "NEARWALL.H", "U", "vapor.U", "MDER.U", "NEARWALL.U", "aux.film.H"];

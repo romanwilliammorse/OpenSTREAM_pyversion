@@ -10,15 +10,11 @@
   <script src="/assets/app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#workspace">Skip to workspace</a>
+  <a class="skip-link" href="#main-content">Skip to workspace</a>
   <div class="app-layout">
-    <aside class="sidebar" aria-label="Case setup and saved runs">
+    <aside id="sidebar" class="sidebar" aria-label="Case setup and saved runs">
       <a class="brand" href="/" aria-label="OpenSTREAM home"><img src="/assets/logo-transparent.png" alt="OpenSTREAM"></a>
       <div class="side-section">
-        <label class="control-label" for="framework">Model</label>
-        <select id="framework">
-          <option value="Mixture">Mixture</option><option value="TwoFluid">Two-fluid</option><option value="ThreeField">Three-field</option><option value="FourField">Four-field</option>
-        </select>
         <div class="template-card"><span>Preset</span><strong>TUTORIAL1</strong><span>Steady baseline</span></div>
         <details class="baseline-scope"><summary>Baseline scope</summary><p>The four steady TUTORIAL1 cases agree with archived MATLAB profiles. This is not experimental validation; edited cases are unverified.</p></details>
         <div class="file-actions"><button id="reset-case" class="text-button" type="button" aria-label="Reset reference inputs">Reset</button><button id="load-inputs" class="text-button" type="button" aria-label="Import input JSON">Import</button><button id="save-inputs" class="text-button" type="button" aria-label="Export input JSON">Export</button></div>
@@ -30,9 +26,20 @@
       </div>
       <span id="app-version" class="sidebar-version"></span>
     </aside>
-    <main id="workspace" tabindex="-1">
-      <div class="workspace-heading"><h1 id="case-title">Mixture</h1><span id="case-badge" class="badge reference">Reference inputs</span></div>
+    <main id="main-content" tabindex="-1">
+      <div class="workspace-toolbar"><button id="toggle-sidebar" class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="true" title="Hide saved runs"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M3 4h14M3 10h14M3 16h14" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>Saved runs</span></button><a class="toolbar-brand" href="/" aria-label="OpenSTREAM home"><img src="/assets/logo-transparent.png" alt="OpenSTREAM"></a></div>
       <div id="notification" class="notice" role="status" aria-live="polite" hidden></div>
+      <section id="model-picker" class="model-picker" aria-labelledby="model-picker-title">
+        <h1 id="model-picker-title">Choose a model</h1>
+        <div class="model-options">
+          <button class="model-option" type="button" data-framework="Mixture"><span>Mixture</span><span aria-hidden="true">&rarr;</span></button>
+          <button class="model-option" type="button" data-framework="TwoFluid"><span>Two-fluid</span><span aria-hidden="true">&rarr;</span></button>
+          <button class="model-option" type="button" data-framework="ThreeField"><span>Three-field</span><span aria-hidden="true">&rarr;</span></button>
+          <button class="model-option" type="button" data-framework="FourField"><span>Four-field</span><span aria-hidden="true">&rarr;</span></button>
+        </div>
+      </section>
+      <section id="workspace" tabindex="-1" aria-labelledby="case-title" hidden>
+      <div class="workspace-heading"><h1 id="case-title" class="sr-only">Model</h1><label class="model-selector" for="framework"><span>Model</span><select id="framework"><option value="" disabled selected>Choose a model</option><option value="Mixture">Mixture</option><option value="TwoFluid">Two-fluid</option><option value="ThreeField">Three-field</option><option value="FourField">Four-field</option></select></label><span id="case-badge" class="badge reference">Reference inputs</span></div>
       <nav class="view-tabs" aria-label="Workspace views"><button id="inputs-tab" class="view-tab active" type="button" aria-current="page">Inputs <span id="input-count" class="tab-count">—</span></button><button id="results-tab" class="view-tab" type="button">Results</button></nav>
       <section id="inputs-view" aria-labelledby="inputs-tab">
         <div class="search-row"><label class="search-control"><span class="sr-only">Search inputs</span><input id="input-search" type="search" placeholder="Search inputs" autocomplete="off"></label><label class="changed-filter"><input id="changed-only" type="checkbox"> Edited only</label><span id="visible-count" class="muted small"></span></div>
@@ -54,6 +61,7 @@
         </div>
       </section>
       <footer class="run-dock"><div class="run-dock-info"><span id="dock-case">TUTORIAL1 · Mixture</span><span id="change-summary" class="small muted">Reference inputs</span></div><div class="run-actions"><button id="validate-inputs" class="button secondary" type="button" aria-label="Check inputs">Check</button><button id="cancel-run" class="button danger" type="button" hidden>Cancel</button><button id="run-case" class="button primary" type="button" aria-label="Run simulation">Run</button></div></footer>
+      </section>
     </main>
   </div>
 </body>

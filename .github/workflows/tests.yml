@@ -30,6 +30,6 @@ jobs:
       - name: Numerical and GUI tests
         run: python -m pytest -q
       - name: Frontend logic
-        run: node --test tests/gui_frontend_logic.test.cjs
+        run: node --test tests/gui_frontend_logic.test.cjs tests/gui_navigation.test.cjs
       - name: Build installable distributions
         run: python -m build --no-isolation

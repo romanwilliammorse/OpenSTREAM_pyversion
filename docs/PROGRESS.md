@@ -4,6 +4,15 @@ The user's requested full native port is **not yet complete**. Continue implemen
 
 ## Current checkpoint — 0.2.1, 2026-11-14
 
+After completing and publishing the acceptance audit, implemented the requested
+GUI usability changes: original name-tag spelling in run titles/history/footer,
+an initial four-model chooser, prominent workspace model selection, and a
+collapsible sidebar with browser persistence. Saved history restores its actual
+submitted model and inputs. Protected asynchronous selection/submission against
+stale responses and a changed editor. See `GUI_USABILITY_VERIFICATION.md`.
+The running editable installation serves these static changes immediately;
+refresh the browser to load them. Numerical parity work resumes below.
+
 Acceptance audit completed using the preserved implementation, evidence and the
 three user-supplied 2025 papers (the user identifies as R.W. Morse). See
 `ACCEPTANCE_MATRIX.md/json/csv`, `ACCEPTANCE_PLAN.md`, and

@@ -5,7 +5,9 @@ local server and opens your default browser at `http://127.0.0.1:8765`. It reope
 the existing server on subsequent launches. No MATLAB, account, internet
 connection, external plotting service, or cloud execution is used.
 
-1. Select **Mixture**, **Two-fluid**, **Three-field**, or **Four-field**.
+1. The opening screen asks you to choose **Mixture**, **Two-fluid**,
+   **Three-field**, or **Four-field**. The **Model** selector above the editor
+   remains available when the sidebar is hidden.
 2. Leave the reference values unchanged for the first run. Click **Check**,
    then **Run**.
 3. In **Results**, choose **Specific enthalpy**, **Mass flow rate**, or **Velocity**.
@@ -21,6 +23,12 @@ connection, external plotting service, or cloud execution is used.
 Use **Import** to load input JSON and **Export** to save the current inputs.
 The interface uses the OpenSTREAM website's logo, fonts and colors; detailed
 field help and status explanations expand when needed.
+
+Set **ID** in the Physical model inputs to name your case. The name appears in
+the run title, saved-run history, and editor footer, preserving the spelling
+you entered. Opening a saved run restores its submitted inputs and model.
+Use **Saved runs** at the top left to hide or show the sidebar; its visibility
+is remembered in this browser. Collapsing it does not change your inputs.
 
 The editor exposes **163 input fields**: 102 model, 49 numerical controls,
 5 geometry, and 7 boundary-condition values. It includes search, section links,

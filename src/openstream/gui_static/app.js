@@ -4,11 +4,15 @@
 // remain in the native Python package; no formula is duplicated here.
 const $ = (id) => document.getElementById(id);
 const state = {
-  framework: "Mixture", schema: null, baseline: null, inputs: null,
+  framework: null, schema: null, baseline: null, inputs: null,
   invalid: new Map(), rows: new Map(), changes: [], selectedRun: null,
   activeRun: null, data: null, dataset: "physical", pollTimer: null,
-  loading: false, quantities: new Map(), loadSequence: 0,
+  loading: false, submitting: false, quantities: new Map(), loadSequence: 0, selectionSequence: 0,
 };
+// Submissions are immutable; names must come from the selected run, never
+// from the current editor or the server's case-normalized change list.
+const savedInputs = new Map();
+const pendingInputs = new Map();
 const frameworkNames = {Mixture: "Mixture", TwoFluid: "Two-fluid", ThreeField: "Three-field", FourField: "Four-field"};
 const terminalStates = new Set(["completed", "failed", "cancelled"]);
 const primaryFieldPrefixes = ["", "liquid.", "vapor.", "film.", "drop.", "film.base.", "film.wave."];
@@ -18,6 +22,35 @@ const fieldId = (field) => `${field.group}.${field.key}`;
 const domId = (value) => value.replace(/[^a-zA-Z0-9_-]/g, "-");
 const readable = (value) => value === undefined || value === null ? "—" : typeof value === "string" ? value : JSON.stringify(value);
 const numberText = (value) => typeof value === "number" ? (value === 0 ? "0" : Math.abs(value) < 0.001 || Math.abs(value) >= 1e5 ? value.toExponential(5) : Number(value.toPrecision(7)).toString()) : String(value);
+
+function inputCaseName(inputs, fallback = "Unnamed case") {
+  const name = inputs?.model?.ID;
+  return typeof name === "string" && name.trim() ? name.trim() : fallback;
+}
+
+function runCaseName(run, submission) {
+  return inputCaseName(submission?.inputs, run.is_reference ? "TUTORIAL1" : "Unnamed case");
+}
+
+async function loadSavedInputs(run) {
+  if (savedInputs.has(run.id)) return savedInputs.get(run.id);
+  if (!pendingInputs.has(run.id)) {
+    pendingInputs.set(run.id, api(`/files/${encodeURIComponent(run.id)}/submitted_inputs.json`)
+      .then((submission) => { savedInputs.set(run.id, submission); return submission; })
+      .finally(() => pendingInputs.delete(run.id)));
+  }
+  return pendingInputs.get(run.id);
+}
+
+function setSidebarCollapsed(collapsed) {
+  document.body.classList.toggle("sidebar-collapsed", collapsed);
+  $("sidebar").hidden = collapsed;
+  $("toggle-sidebar").setAttribute("aria-expanded", String(!collapsed));
+  $("toggle-sidebar").setAttribute("aria-label", collapsed ? "Show sidebar" : "Hide sidebar");
+  $("toggle-sidebar").title = collapsed ? "Show sidebar" : "Hide sidebar";
+  try { localStorage.setItem("openstream-sidebar-collapsed", String(collapsed)); } catch { /* Optional preference. */ }
+  if (state.data && !$("results-view").hidden && window.Plotly) requestAnimationFrame(() => Plotly.Plots.resize($("profile-plot")));
+}
 
 function primaryQuantityFields(names, suffix) {
   const allowed = new Set(primaryFieldPrefixes.map((prefix) => `${prefix}${suffix}`));
@@ -266,7 +299,7 @@ function updateChanges() {
   $("case-badge").textContent = count ? "Custom inputs" : "Reference inputs";
   $("case-badge").className = `badge ${count ? "custom" : "reference"}`;
   $("change-summary").textContent = count ? `${count} edited · unverified` : "Reference inputs";
-  $("dock-case").textContent = `${count ? "Custom case" : "TUTORIAL1"} · ${frameworkNames[state.framework]}`;
+  $("dock-case").textContent = `${inputCaseName(state.inputs)} · ${frameworkNames[state.framework]}`;
   filterFields(); updateRunControls();
 }
 
@@ -279,17 +312,21 @@ function filterFields() {
   $("no-fields").hidden = visible !== 0;
 }
 
-async function loadFramework(framework, {imported = null, quiet = false} = {}) {
-  const sequence = ++state.loadSequence; state.loading = true; updateRunControls();
+async function loadFramework(framework, {imported = null, quiet = false, requestSequence = null} = {}) {
+  const sequence = requestSequence ?? ++state.loadSequence; state.loading = true; updateRunControls();
   try {
     const [schema, baseline] = await Promise.all([api(`/api/schema?framework=${encodeURIComponent(framework)}`), api(`/api/baseline/${encodeURIComponent(framework)}`)]);
-    if (sequence !== state.loadSequence) return;
+    if (sequence !== state.loadSequence) return false;
     state.framework = framework; state.schema = schema; state.baseline = baseline; state.inputs = copy(imported || baseline.inputs);
     $("framework").value = framework; $("case-title").textContent = frameworkNames[framework];
     $("input-search").value = ""; $("changed-only").checked = false; $("validation").hidden = true;
+    state.selectedRun = null; state.data = null;
+    $("results-empty").hidden = false; $("run-content").hidden = true;
     renderEditor(); if (!quiet) notice("");
+    $("model-picker").hidden = true; $("workspace").hidden = false; showView("inputs");
     if (schema.version) $("app-version").textContent = `Version ${schema.version}`;
-  } catch (error) { notice(`Could not load the baseline: ${error.message}`, "error"); }
+    return true;
+  } catch (error) { if (sequence === state.loadSequence) { $("framework").value = state.framework || ""; notice(`Could not load the baseline: ${error.message}`, "error"); } return false; }
   finally { if (sequence === state.loadSequence) {state.loading = false; updateRunControls();} }
 }
 
@@ -301,11 +338,11 @@ function showValidation(valid, messages) {
   const list = element("ul"); for (const message of messages) list.append(element("li", "", message)); panel.append(list);
 }
 
-async function validateInputs({forRun = false} = {}) {
+async function validateInputs({forRun = false, submission = payload()} = {}) {
   if (state.invalid.size) { showValidation(false, [...state.invalid].map(([field, message]) => `${field}: ${message}`)); showView("inputs"); $("validation").scrollIntoView({block: "center", behavior: "smooth"}); return false; }
   $("validate-inputs").disabled = true;
   try {
-    const result = await api("/api/validate", {method: "POST", body: JSON.stringify(payload())});
+    const result = await api("/api/validate", {method: "POST", body: JSON.stringify(submission)});
     if (result.valid === false) throw new Error(result.error || "Inputs did not pass validation.");
     showValidation(true, [result.is_reference ? "Matches the steady reference." : "Custom inputs accepted. MATLAB equivalence and physical validity remain unverified.", ...(result.warnings || [])]);
     if (!forRun) { showView("inputs"); $("validation").scrollIntoView({block: "center", behavior: "smooth"}); }
@@ -316,26 +353,31 @@ async function validateInputs({forRun = false} = {}) {
 
 function updateRunControls() {
   const busy = !!state.activeRun && !terminalStates.has(state.activeRun.status);
-  $("run-case").disabled = state.loading || !state.inputs || busy;
-  $("validate-inputs").disabled = state.loading || !state.inputs;
+  const locked = state.loading || state.submitting;
+  $("run-case").disabled = locked || !state.inputs || busy;
+  $("validate-inputs").disabled = locked || !state.inputs;
   $("cancel-run").hidden = !busy;
-  $("framework").disabled = state.loading;
-  $("save-inputs").disabled = !state.inputs || state.loading;
-  $("reset-case").disabled = !state.inputs || state.loading;
+  $("framework").disabled = locked;
+  document.querySelectorAll("#model-picker [data-framework]").forEach((button) => {button.disabled = locked;});
+  document.querySelectorAll("#history button").forEach((button) => {button.disabled = state.submitting;});
+  $("save-inputs").disabled = !state.inputs || locked;
+  $("reset-case").disabled = !state.inputs || locked;
+  $("load-inputs").disabled = locked;
 }
 
 async function startRun() {
-  if (state.activeRun && !terminalStates.has(state.activeRun.status)) return;
-  $("run-case").disabled = true;
-  if (!await validateInputs({forRun: true})) return;
-  $("run-case").disabled = true;
+  if (state.loading || state.submitting || (state.activeRun && !terminalStates.has(state.activeRun.status))) return;
+  const submission = payload();
+  state.submitting = true; updateRunControls();
   try {
-    const result = await api("/api/runs", {method: "POST", body: JSON.stringify(payload())});
+    if (!await validateInputs({forRun: true, submission})) return;
+    const result = await api("/api/runs", {method: "POST", body: JSON.stringify(submission)});
     state.activeRun = result.run || result; state.selectedRun = state.activeRun; state.data = null;
+    savedInputs.set(state.activeRun.id, submission);
     renderRun(state.activeRun); showView("results"); notice("");
     await refreshHistory(); schedulePoll();
   } catch (error) { notice(`The run could not start: ${error.message}`, "error"); }
-  finally {updateRunControls();}
+  finally {state.submitting = false; updateRunControls();}
 }
 
 async function cancelRun() {
@@ -377,11 +419,13 @@ function formatDate(value) {
 async function refreshHistory() {
   try {
     const response = await api("/api/runs"); const runs = Array.isArray(response) ? response : response.runs || [];
+    // A missing legacy submission must not hide the remaining history.
+    await Promise.allSettled(runs.map(loadSavedInputs));
     $("history").replaceChildren();
     if (!runs.length) $("history").append(element("p", "muted small", "No saved runs."));
     for (const run of runs) {
       const button = element("button", `history-item${state.selectedRun?.id === run.id ? " selected" : ""}`); button.type = "button";
-      button.append(element("strong", "", `${frameworkNames[run.framework] || run.framework} · ${run.is_reference ? "TUTORIAL1" : "Custom"}`));
+      button.append(element("strong", "", `${frameworkNames[run.framework] || run.framework} · ${runCaseName(run, savedInputs.get(run.id))}`));
       const meta = element("span", "history-meta"); meta.append(element("span", "", formatDate(run.created_at)), element("span", "", run.status)); button.append(meta);
       button.title = `Open run ${run.id}`; button.addEventListener("click", () => selectRun(run.id)); $("history").append(button);
       if (!state.activeRun && ["running", "queued"].includes(run.status)) { state.activeRun = run; schedulePoll(); }
@@ -391,13 +435,23 @@ async function refreshHistory() {
 }
 
 async function selectRun(id) {
+  if (state.submitting) return;
+  const selection = ++state.selectionSequence;
+  const requestSequence = ++state.loadSequence;
+  state.loading = true; updateRunControls();
   try {
-    const run = await api(`/api/runs/${encodeURIComponent(id)}`); state.selectedRun = run; state.data = null;
+    const run = await api(`/api/runs/${encodeURIComponent(id)}`);
+    const submission = await loadSavedInputs(run);
+    if (selection !== state.selectionSequence) return;
+    if (!submission?.inputs || submission.framework !== run.framework) throw new Error("Saved inputs do not identify this run's model.");
+    if (!await loadFramework(run.framework, {imported: submission.inputs, quiet: true, requestSequence}) || selection !== state.selectionSequence) return;
+    state.selectedRun = run; state.data = null;
     renderRun(run); showView("results");
     if (["running", "queued"].includes(run.status)) {state.activeRun = run; schedulePoll();}
     else await loadRunData(run);
     await refreshHistory();
-  } catch (error) {notice(`Could not open the run: ${error.message}`, "error");}
+  } catch (error) { if (selection === state.selectionSequence) notice(`Could not open the run: ${error.message}`, "error"); }
+  finally { if (requestSequence === state.loadSequence) {state.loading = false; updateRunControls();} }
 }
 
 function setStatusCard(name, title, detail, kind = "") {
@@ -418,7 +472,7 @@ function progressText(event) {
 function renderRun(run) {
   $("results-empty").hidden = true; $("run-content").hidden = false;
   const label = frameworkNames[run.framework] || run.framework || "Simulation";
-  $("run-title").textContent = `${label} · ${run.is_reference ? "TUTORIAL1" : "Custom case"}`;
+  $("run-title").textContent = `${label} · ${runCaseName(run, savedInputs.get(run.id))}`;
   $("run-meta").textContent = formatDate(run.created_at);
   $("run-status").textContent = run.status || "queued";
   $("run-status").className = `badge ${run.status === "failed" ? "error" : run.status === "completed" ? "success" : ""}`;
@@ -437,7 +491,7 @@ function renderRun(run) {
   const reference = run.reference || {};
   if (reference.status === "passed") setStatusCard("reference", "Archived profiles agree", reference.message || "The original archived MATLAB baseline comparison passed.", "good");
   else if (reference.status === "failed") setStatusCard("reference", "Comparison failed", reference.message || "The run did not meet the baseline comparison tolerances.", "error");
-  else setStatusCard("reference", run.is_reference ? "Not yet compared" : "Custom case · unverified", reference.message || (run.is_reference ? "A reference result is reported only after the numerical comparison." : "Modified inputs are outside the four verified steady baseline cases."), run.is_reference ? "" : "warning");
+  else setStatusCard("reference", run.is_reference ? "Not yet compared" : "Unverified", reference.message || (run.is_reference ? "A reference result is reported only after the numerical comparison." : "Modified inputs are outside the four verified steady baseline cases."), run.is_reference ? "" : "warning");
   const physical = run.physical || {};
   if (physical.status === "passed") setStatusCard("physical", "Reported checks passed", physical.message || "Available consistency checks passed. This is not experimental validation.", "good");
   else if (physical.status === "failed") setStatusCard("physical", "Consistency checks failed", physical.message || "Inspect the diagnostics. Numerical convergence does not establish physical consistency.", "error");
@@ -446,7 +500,7 @@ function renderRun(run) {
   $("plots-panel").hidden = !state.data;
   renderDownloads(run.files || []);
   const diagnostics = $("diagnostic-details"); diagnostics.replaceChildren();
-  const details = {run_id: run.id, created_at: run.created_at, framework: run.framework, input_case: run.is_reference ? "Unchanged reference inputs" : "Custom inputs", ...(run.reference ? {reference: run.reference} : {}), ...(physical.diagnostics ? {physical_diagnostics: physical.diagnostics} : {})};
+  const details = {run_id: run.id, case_name: runCaseName(run, savedInputs.get(run.id)), created_at: run.created_at, framework: run.framework, input_case: run.is_reference ? "Unchanged reference inputs" : "Custom inputs", ...(run.reference ? {reference: run.reference} : {}), ...(physical.diagnostics ? {physical_diagnostics: physical.diagnostics} : {})};
   diagnostics.append(element("pre", "diagnostic-json", JSON.stringify(details, null, 2)));
   updateRunControls();
 }
@@ -566,6 +620,7 @@ function downloadInputs() {
 
 async function importInputs(event) {
   const file = event.target.files?.[0]; if (!file) return;
+  ++state.selectionSequence;
   try {
     if (file.size > 2 * 1024 * 1024) throw new Error("The input JSON file is larger than 2 MB.");
     const imported = JSON.parse(await file.text());
@@ -574,14 +629,19 @@ async function importInputs(event) {
     if (!imported.inputs || !imported.inputs.model || !imported.inputs.geometry || !imported.inputs.options || !Array.isArray(imported.inputs.bc)) throw new Error("The file must contain model, options, geometry, and bc under inputs. Use Save inputs to create this format.");
     const checked = await api("/api/validate", {method: "POST", body: JSON.stringify({framework: imported.framework, inputs: imported.inputs})});
     if (checked.valid === false) throw new Error(checked.error || "The input file failed validation.");
-    await loadFramework(imported.framework, {imported: checked.inputs || imported.inputs, quiet: true}); showView("inputs"); notice(`Loaded ${file.name}. ${checked.is_reference ? "The inputs match the steady reference." : "This is a custom case; equivalence is unverified."}`, "success");
+    if (await loadFramework(imported.framework, {imported: checked.inputs || imported.inputs, quiet: true})) notice(`Loaded ${file.name}. ${checked.is_reference ? "The inputs match the steady reference." : "This is a custom case; equivalence is unverified."}`, "success");
   } catch (error) {notice(`Inputs were not loaded: ${error.message}`, "error");}
   finally {event.target.value = "";}
 }
 
 function bindEvents() {
   $("input-editor").addEventListener("submit", (event) => event.preventDefault());
-  $("framework").addEventListener("change", (event) => loadFramework(event.target.value));
+  const chooseFramework = (framework) => { ++state.selectionSequence; return loadFramework(framework); };
+  $("framework").addEventListener("change", (event) => chooseFramework(event.target.value));
+  document.querySelectorAll("#model-picker [data-framework]").forEach((button) => button.addEventListener("click", async () => {
+    if (await chooseFramework(button.dataset.framework)) $("workspace").focus();
+  }));
+  $("toggle-sidebar").addEventListener("click", () => setSidebarCollapsed(!document.body.classList.contains("sidebar-collapsed")));
   $("reset-case").addEventListener("click", () => {state.inputs = copy(state.baseline.inputs); renderEditor(); $("validation").hidden = true; notice("Reference inputs restored.");});
   $("input-search").addEventListener("input", filterFields); $("changed-only").addEventListener("change", filterFields);
   $("inputs-tab").addEventListener("click", () => showView("inputs")); $("results-tab").addEventListener("click", () => showView("results")); $("empty-inputs").addEventListener("click", () => showView("inputs"));
@@ -595,8 +655,11 @@ function bindEvents() {
 }
 
 // These pure adapters are exported only to the dependency-free Node checks.
-if (typeof module !== "undefined" && module.exports) module.exports = {primaryQuantityFields, referenceIndexForTime, assertInputDocumentVersion, makeTraces};
+if (typeof module !== "undefined" && module.exports) module.exports = {inputCaseName, runCaseName, primaryQuantityFields, referenceIndexForTime, assertInputDocumentVersion, makeTraces};
 if (typeof document !== "undefined") {
   bindEvents();
-  Promise.allSettled([loadFramework("Mixture"), refreshHistory(), api("/api/health").then((health) => {$("app-version").textContent = `Version ${health.version}`; $("app-version").title = `Saved runs: ${health.output_root}`;})]);
+  let collapsed = false;
+  try { collapsed = localStorage.getItem("openstream-sidebar-collapsed") === "true"; } catch { /* Storage may be disabled. */ }
+  setSidebarCollapsed(collapsed); updateRunControls();
+  Promise.allSettled([refreshHistory(), api("/api/health").then((health) => {$("app-version").textContent = `Version ${health.version}`; $("app-version").title = `Saved runs: ${health.output_root}`;})]);
 }
