@@ -36,11 +36,18 @@ The method fingerprints and 81-row matrix have been regenerated and checked.
 Live GUI inspection confirmed neutral annular information and retained TwoFluid
 rejection without editing saved results.
 
+Clean Windows CI passed for implementation commit
+`056acf29110a59986bb7bbb082feda472b761f38` (run `43682832263`):
+490 Python tests, 11 JavaScript tests, dependency consistency and distribution
+build. The 13 archive-reader tests were local; CI did not rerun the campaign.
+
 Three revised PDFs are prepared for publication under
-`output/pdf/LeCorre_2025_Reports_02/`; the original report snapshot remains
-intact. Remaining delivery steps: commit source documents, export and visually
-check PDFs, record final clean Windows CI, and publish. Do not rerun the69-case
-campaign or modify calculations to improve a comparison.
+`output/pdf/LeCorre_2025_Reports_03/`; the original report snapshot remains
+intact. The local `_02` draft passed content/plate checks but left a one-sentence
+orphan page; final prose tightening removes that pagination defect without
+changing numerical evidence. Remaining delivery steps: export and visually
+check the final PDFs, then publish. Do not rerun the 69-case campaign or modify
+calculations to improve a comparison.
 
 ## Completed Le Corre campaign — 2026-11-14
 

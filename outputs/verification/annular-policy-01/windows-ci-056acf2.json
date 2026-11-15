@@ -1,0 +1,28 @@
+{
+  "schema": "openstream-clean-windows-ci-v1",
+  "source_commit": "056acf29110a59986bb7bbb082feda472b761f38",
+  "run_id": 43682832263,
+  "job_id": 132716946693,
+  "url": "https://github.com/romanwilliammorse/OpenSTREAM_pyversion/actions/runs/43682832263",
+  "status": "completed",
+  "conclusion": "success",
+  "python": "3.12.10",
+  "platform": "windows",
+  "python_tests": {
+    "passed": 490,
+    "warnings": 2,
+    "seconds": 173
+  },
+  "javascript_tests": {
+    "passed": 11,
+    "failed": 0
+  },
+  "dependency_consistency": "No broken requirements found.",
+  "distribution_build": [
+    "openstream_python-0.2.1.tar.gz",
+    "openstream_python-0.2.1-py3-none-any.whl"
+  ],
+  "scope": "CI numerical/GUI/frontend suite, pinned dependency install and distribution build; not a rerun of the 69 Le Corre cases or the 13 locally executed archive-reader tests.",
+  "decoded_log": "windows-ci-056acf2.log",
+  "source_tool": "GitHub fetch_workflow_run_jobs and fetch_workflow_job_logs"
+}

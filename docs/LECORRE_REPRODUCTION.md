@@ -705,11 +705,9 @@ uncertainty, mesh independence or new acceptance threshold is claimed.
 - `src/openstream/output.py`, `twofluid.py`, `threefield.py`, `fourfield.py`,
   `multifield_output.py`: existing portable outputs and diagnostic scope.
 
-Complete numerical evidence is saved in
-`outputs/validation/lecorre-2025-01/report.json` and the corresponding
-per-run directories. Final comparisons and plots are in its `analysis`
-directory. `independent_output_audit.json` accounts for all 69 frozen
-attempts, while `common_domain_diagnostic.json` retains the separate
-posthoc study and `physical_scope_audit.json` independently audits the
-33 source-default cases. Source inputs, equations, original reference
-results and acceptance tolerances were not changed to obtain agreement.
+Evidence is in `outputs/validation/lecorre-2025-01/report.json`, its per-run
+directories and `analysis/`. `independent_output_audit.json` covers all 69
+frozen attempts; `common_domain_diagnostic.json` retains the posthoc study;
+`physical_scope_audit.json` audits the 33 source-default cases. Source inputs,
+equations, original reference results and acceptance tolerances were not
+changed to obtain agreement.
