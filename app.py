@@ -55,14 +55,37 @@ class VercelRequestContext:
         except BaseException:
             set_headers(None)
             raise
-        def stream():
-            try:
-                yield from iterable
-            finally:
-                if hasattr(iterable, 'close'):
-                    iterable.close()
-                set_headers(None)
-        return stream()
+        class ContextStream:
+            def __init__(self):
+                self.iterator = iter(iterable)
+                self.closed = False
+
+            def __iter__(self):
+                return self
+
+            def __next__(self):
+                if self.closed:
+                    raise StopIteration
+                try:
+                    return next(self.iterator)
+                except BaseException:
+                    self.close()
+                    raise
+
+            def close(self):
+                if self.closed:
+                    return
+                self.closed = True
+                try:
+                    if hasattr(iterable, 'close'):
+                        iterable.close()
+                finally:
+                    set_headers(None)
+        try:
+            return ContextStream()
+        except BaseException:
+            set_headers(None)
+            raise
 
 
 app.wsgi_app = VercelRequestContext(app.wsgi_app)

@@ -62,7 +62,9 @@ the Hugging Face search identified no suitable reusable hosting component.
 
 The root `app.py` is the Vercel entry point. `.vercelignore` excludes the local
 package manifest **from the deployment only** so the Python builder installs
-the complete pinned `requirements.txt`/`requirements-cloud.lock` environment.
+the complete pinned `requirements.txt` environment. Its pins duplicate
+`requirements-cloud.lock` because the deployed builder rejected an include of
+that `.lock` file; a test checks that the two lists stay identical.
 It also excludes research outputs, local environments, upstream checkouts and
 secrets. Normal `pip install .[gui]` and Windows launchers are unchanged.
 The worker image is pinned by digest in `cloud/gateway.py`.
