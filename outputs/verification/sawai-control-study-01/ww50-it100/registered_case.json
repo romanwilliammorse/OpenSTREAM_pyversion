@@ -1,0 +1,8 @@
+{
+  "case_id": "ww50-it100",
+  "option_overrides": {
+    "RELAXWW": 0.5,
+    "MAXITER": 100
+  },
+  "role": "fresh reference control"
+}

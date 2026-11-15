@@ -1,0 +1,113 @@
+........................................................................ [ 12%]
+........................................................................ [ 25%]
+....F.F................................................................. [ 37%]
+........................................................................ [ 50%]
+........................................................................ [ 62%]
+........................................................................ [ 75%]
+........................................................................ [ 88%]
+....................................................................     [100%]
+================================== FAILURES ===================================
+_______________________ test_real_baseline_run[Mixture] _______________________
+
+app = <Flask 'openstream.gui'>, framework = 'Mixture'
+
+    @pytest.mark.parametrize('framework', ['Mixture', 'TwoFluid', 'ThreeField', 'FourField'])
+    def test_real_baseline_run(app, framework):
+        client = app.test_client()
+        body = baseline(framework)
+        assert client.post('/api/validate', json=body).json['is_reference']
+        response = client.post('/api/runs', json=body)
+        assert response.status_code == 202, response.json
+        run_id = response.json['id']
+        manager = app.extensions['runs']
+>       state = finish(manager, run_id)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_gui.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_gui.py:23: in finish
+    state = manager.status(run_id)
+            ^^^^^^^^^^^^^^^^^^^^^^
+src\openstream\gui.py:48: in status
+    state = json.loads(path.read_text(encoding='utf-8'))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/Roman/AppData/Local/Temp/pytest-of-Roman/pytest-99/test_real_baseline_run_Mixture0/runs/35f9b0aa7d254de68092d612008f8ab6/status.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Roman\\AppData\\Local\\Temp\\pytest-of-Roman\\pytest-99\\test_real_baseline_run_Mixture0\\runs\\35f9b0aa7d254de68092d612008f8ab6\\status.json'
+
+..\..\..\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1013: PermissionError
+_____________________ test_real_baseline_run[ThreeField] ______________________
+
+app = <Flask 'openstream.gui'>, framework = 'ThreeField'
+
+    @pytest.mark.parametrize('framework', ['Mixture', 'TwoFluid', 'ThreeField', 'FourField'])
+    def test_real_baseline_run(app, framework):
+        client = app.test_client()
+        body = baseline(framework)
+        assert client.post('/api/validate', json=body).json['is_reference']
+        response = client.post('/api/runs', json=body)
+        assert response.status_code == 202, response.json
+        run_id = response.json['id']
+        manager = app.extensions['runs']
+>       state = finish(manager, run_id)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_gui.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_gui.py:23: in finish
+    state = manager.status(run_id)
+            ^^^^^^^^^^^^^^^^^^^^^^
+src\openstream\gui.py:48: in status
+    state = json.loads(path.read_text(encoding='utf-8'))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/Roman/AppData/Local/Temp/pytest-of-Roman/pytest-99/test_real_baseline_run_ThreeFi0/runs/c9055195ad5b4412a44887a33c031054/status.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Roman\\AppData\\Local\\Temp\\pytest-of-Roman\\pytest-99\\test_real_baseline_run_ThreeFi0\\runs\\c9055195ad5b4412a44887a33c031054\\status.json'
+
+..\..\..\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1013: PermissionError
+============================== warnings summary ===============================
+tests/test_fourfield.py::test_original_inputs_converge_with_bounded_primary_fields
+  C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\ff_fields.py:178: RuntimeWarning: divide by zero encountered in divide
+    return (c[1]/self.REV(i))**2+c[2]
+
+tests/test_fourfield.py::test_original_inputs_converge_with_bounded_primary_fields
+  C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\ff_fields.py:140: RuntimeWarning: invalid value encountered in multiply
+    force = .5*self.SHAPEFACTOR(i)*self.DRAGCOEF(i)*self.fluid.RHOG*difference**2
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_gui.py::test_real_baseline_run[Mixture] - PermissionError: ...
+FAILED tests/test_gui.py::test_real_baseline_run[ThreeField] - PermissionErro...
+2 failed, 570 passed, 2 warnings in 172.53s (0:02:52)

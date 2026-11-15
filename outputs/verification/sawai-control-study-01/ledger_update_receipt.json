@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "scope": "Evidence and next-action update only; no criteria/status changes",
+  "changed_rows": [
+    "CORE-023",
+    "CORE-024",
+    "CORE-029",
+    "CORE-033",
+    "CORE-036",
+    "EXP-008",
+    "EXP-011"
+  ],
+  "files": {
+    "docs/acceptance/core.json": {
+      "before_sha256": "30b98cf98e4b924dd2af8ad797e9a4db47f6f7a7b27b38f91a976cdb67e451d2",
+      "after_sha256": "00d2761c7a594583962130c18520afd8422b731d0e8135b30ad7d18b6820c57e",
+      "rows": 37
+    },
+    "docs/acceptance/experimental.json": {
+      "before_sha256": "2ee5a30a827e82aafbc93194bd78c05a9107a0dec062a899a4e88394865195c7",
+      "after_sha256": "ddac525a1039e566f506e33dfcef4ccf40a38a4eb868cfeb53fac40124e37672",
+      "rows": 18
+    },
+    "docs/acceptance/plan.json": {
+      "before_sha256": "7351f90b4e218186da5e4d2eac7de8dfe6015421950ab504013ff545b9d91c3b",
+      "after_sha256": "092a9d3b5f16ecae07295e2c5fdd65b1aa498987b91f175a602aace133ce88a8",
+      "only_W3_work_changed": true
+    }
+  },
+  "all_acceptance_criteria_and_status_axes_unchanged": true
+}

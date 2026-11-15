@@ -1,5 +1,13 @@
 # Full parity and experimental validation: acceptance plan
 
+The [Sawai numerical-control study](SAWAI_CONTROL_STUDY.md) completed eight
+separate RELAXWW/MAXITER cases with unchanged equations, closures, tolerances
+and defaults. Six meet native convergence; none meets the fixed-scale
+common-state wave mass screen. Higher iteration caps have negligible effect.
+Next, trace sequential proposals and subsequent coupled changes in the 0.25
+native pass before preregistering tighter-stop/control checks. Preserve all
+original failures and experimental metrics; no acceptance status is promoted.
+
 Snapshot: 2026-11-15. Numerical target: OpenSTREAM `a614c7173822a93c1e64ac28d1541cbac028cbd8` and CoolPropWrapper `a7c40902ff66faf6ed668986398bb1b9faa16e13`. Database target: `b48541e6438a92b4c0ddc83cf0ceda3f71a59b22`. Python implementation: 0.2.1, with source-hash-tracked corrections. The supplied 2025 papers are additional model and benchmark evidence, not replacements for the pinned implementation.
 
 Current execution update: the [matched diagnostic replay](MATCHED_DIAGNOSTIC_REPLAY.md)

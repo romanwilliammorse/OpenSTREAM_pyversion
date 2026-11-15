@@ -1,0 +1,10 @@
+ww05-it100: constructing source-equivalent precursor and executing registered controls
+ww05-it100: t=1s; point=True; maxiter=78
+ww05-it100: t=2s; point=True; maxiter=68
+ww05-it100: t=3s; point=True; maxiter=50
+ww05-it100: t=4s; point=True; maxiter=34
+ww05-it100: t=5s; point=True; maxiter=18
+ww05-it100: t=6s; point=True; maxiter=7
+ww05-it100: t=7s; point=True; maxiter=2
+ww05-it100: t=8s; point=True; maxiter=1
+ww05-it100: completed; native_converged=True; 116.1s

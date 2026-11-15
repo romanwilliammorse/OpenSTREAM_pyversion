@@ -1,0 +1,1297 @@
+{
+  "schema": "openstream-sawai-control-independent-results-audit-v1",
+  "solver_executed": false,
+  "governing_equations_changed": false,
+  "decimal_precision": 60,
+  "input_conversion": "Decimal.from_float: exact stored binary64 values",
+  "equations_checked": 1600,
+  "all_arithmetic_and_report_metric_checks_passed": true,
+  "roundoff_rule": "32*binary64 epsilon times L1 residual-term magnitude; ratio allowance scales by 0.5/(P*ERRORWF). Arithmetic check only; no scientific acceptance threshold is changed.",
+  "cases": [
+    {
+      "case_id": "ww50-it100",
+      "fields": [
+        {
+          "field": "base",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 1.8661194619196304e-21,
+          "max_direct_proposal_defect_difference_kg_s": 1.8032537353656003e-21,
+          "max_ratio_difference_dimensionless": 7.173081573164097e-16,
+          "roundoff_allowance_kg_s_min_max": [
+            2.1140877859986598e-18,
+            3.8163011856265505e-18
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 0.3496880987438382,
+            "all_interior": 0.3496880987438382
+          }
+        },
+        {
+          "field": "wave",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 2.0954139277193297e-20,
+          "max_direct_proposal_defect_difference_kg_s": 2.005085804828539e-20,
+          "max_ratio_difference_dimensionless": 7.979727989493313e-15,
+          "roundoff_allowance_kg_s_min_max": [
+            2.4813135202411757e-17,
+            4.982983334279009e-17
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 7.676375519298528,
+            "all_interior": 7.676375519298528
+          }
+        }
+      ],
+      "point_ratio": 7.675963972049171,
+      "minimum_drop_flow_kg_s": -1.1818091381061817e-05,
+      "negative_drop_flow_fixed_nodes": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "minimum_drop_velocity_at_negative_flow_m_s": 0.3644546116212151,
+      "artifact_sha256": {
+        "assessment.json": "867025c1525933796c6246c75382cb1027180e0498373ceb93c205a7fa1dcdcc",
+        "effective_inputs.json": "f60b6bd005de5febbb7aa225adbd5728a5db3f4b1cca129142113e86a151c859",
+        "frozen_state.json": "d91f8caee988995e0fc4cbc5176d85443c61d33f5458222d5bb28cfccb5aaf77",
+        "frozen_state.npz": "5d1dec59cecea2bdd0660c39c716fdba01252f8119e0329646dc5f4f4e7456fe",
+        "numerical/initialization.npz": "266b6acabc747f8349c5636a2acb52ac38b7767ad6d159a32ee285c3ab0e83c9"
+      }
+    },
+    {
+      "case_id": "ww50-it250",
+      "fields": [
+        {
+          "field": "base",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 1.197757526976784e-21,
+          "max_direct_proposal_defect_difference_kg_s": 1.1580528575742387e-21,
+          "max_ratio_difference_dimensionless": 4.579669976578771e-16,
+          "roundoff_allowance_kg_s_min_max": [
+            2.1140877859986598e-18,
+            3.8163011856265505e-18
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 0.34968809874425444,
+            "all_interior": 0.34968809874425444
+          }
+        },
+        {
+          "field": "wave",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 2.0954139277193297e-20,
+          "max_direct_proposal_defect_difference_kg_s": 2.005085804828539e-20,
+          "max_ratio_difference_dimensionless": 7.979727989493313e-15,
+          "roundoff_allowance_kg_s_min_max": [
+            2.4813135202411606e-17,
+            4.982983334279009e-17
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 7.676375519298543,
+            "all_interior": 7.676375519298543
+          }
+        }
+      ],
+      "point_ratio": 7.675963972049171,
+      "minimum_drop_flow_kg_s": -1.1818091381061817e-05,
+      "negative_drop_flow_fixed_nodes": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "minimum_drop_velocity_at_negative_flow_m_s": 0.3644546116212151,
+      "artifact_sha256": {
+        "assessment.json": "09d584eb806f0f08651f2719a3311566095d5b41c79caef97497f2f2bb134e05",
+        "effective_inputs.json": "51d96395a68426c82783b19d992df06a4c5281b00c0d466da05b84326551283a",
+        "frozen_state.json": "7df9cfbc2303571957b0d8bd57d537e32ebe6b5413d2b985e76045aafd915746",
+        "frozen_state.npz": "22e59671a7991d6a4eb634384b93dd3027378cb0b845b7dee3d3c8f2762810e5",
+        "numerical/initialization.npz": "0b6c36a8b01a302157e6b6bb50823753fe7819f9efe96037539a2cbe6b1cbd9c"
+      }
+    },
+    {
+      "case_id": "ww25-it100",
+      "fields": [
+        {
+          "field": "base",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 1.5881867761018131e-21,
+          "max_direct_proposal_defect_difference_kg_s": 1.5881867761018131e-21,
+          "max_ratio_difference_dimensionless": 6.661338147750939e-16,
+          "roundoff_allowance_kg_s_min_max": [
+            2.064690849790924e-18,
+            3.8706128593938936e-18
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 0.3653480700295583,
+            "all_interior": 0.3653480700295583
+          }
+        },
+        {
+          "field": "wave",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 2.371692252312041e-20,
+          "max_direct_proposal_defect_difference_kg_s": 2.286988957586611e-20,
+          "max_ratio_difference_dimensionless": 9.103828801926284e-15,
+          "roundoff_allowance_kg_s_min_max": [
+            2.478624385686023e-17,
+            5.029649659735719e-17
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 2.995931990995817,
+            "all_interior": 2.995931990995817
+          }
+        }
+      ],
+      "point_ratio": 0.961645275118217,
+      "minimum_drop_flow_kg_s": -6.816286136073716e-05,
+      "negative_drop_flow_fixed_nodes": [
+        23,
+        24
+      ],
+      "minimum_drop_velocity_at_negative_flow_m_s": 0.3644546116212151,
+      "artifact_sha256": {
+        "assessment.json": "c95a8914353da50e00094d2c38db1a93a54a37d8e192a0b1e8e66d053b066929",
+        "effective_inputs.json": "3ba1afb09f1233b99a7d1fcaefa310325dba3f55d1a674f7d38afc55477dc631",
+        "frozen_state.json": "6339db762800cd8c2076f82908999c0ceca9293f10cc5c5cfef1f71a1521c603",
+        "frozen_state.npz": "d8057006cbf9a6918e1d52e347e819b63553827433e7a7276dd41f54c5861895",
+        "numerical/initialization.npz": "392a809685243a22d994f6068ac59dbdd0cd724f78c2be9e43453eb692f1c252"
+      }
+    },
+    {
+      "case_id": "ww25-it250",
+      "fields": [
+        {
+          "field": "base",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 1.5881867761018131e-21,
+          "max_direct_proposal_defect_difference_kg_s": 1.5881867761018131e-21,
+          "max_ratio_difference_dimensionless": 6.661338147750939e-16,
+          "roundoff_allowance_kg_s_min_max": [
+            2.064690849790924e-18,
+            3.8706128593938936e-18
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 0.3653480700295583,
+            "all_interior": 0.3653480700295583
+          }
+        },
+        {
+          "field": "wave",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 2.371692252312041e-20,
+          "max_direct_proposal_defect_difference_kg_s": 2.286988957586611e-20,
+          "max_ratio_difference_dimensionless": 9.103828801926284e-15,
+          "roundoff_allowance_kg_s_min_max": [
+            2.478624385686023e-17,
+            5.029649659735719e-17
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 2.995931990995817,
+            "all_interior": 2.995931990995817
+          }
+        }
+      ],
+      "point_ratio": 0.961645275118217,
+      "minimum_drop_flow_kg_s": -6.816286136073716e-05,
+      "negative_drop_flow_fixed_nodes": [
+        23,
+        24
+      ],
+      "minimum_drop_velocity_at_negative_flow_m_s": 0.3644546116212151,
+      "artifact_sha256": {
+        "assessment.json": "180388c434a4a7df1a713348370b7e491770c7acb4b51c9e9a3b977c3a29751c",
+        "effective_inputs.json": "725d977417c9c82306c4555073f6465b01583834dc4fce13e180d48c1528f5b3",
+        "frozen_state.json": "d4aabcb6dabf5d9aafd2ba5d5e859b786d6b56c300797f8cae26734dbb5c71d4",
+        "frozen_state.npz": "d8057006cbf9a6918e1d52e347e819b63553827433e7a7276dd41f54c5861895",
+        "numerical/initialization.npz": "392a809685243a22d994f6068ac59dbdd0cd724f78c2be9e43453eb692f1c252"
+      }
+    },
+    {
+      "case_id": "ww10-it100",
+      "fields": [
+        {
+          "field": "base",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 1.4823076576950256e-21,
+          "max_direct_proposal_defect_difference_kg_s": 1.4823076576950256e-21,
+          "max_ratio_difference_dimensionless": 6.106226635438361e-16,
+          "roundoff_allowance_kg_s_min_max": [
+            2.1485295784315187e-18,
+            4.075577114683925e-18
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 0.3430297588825916,
+            "all_interior": 0.3430297588825916
+          }
+        },
+        {
+          "field": "wave",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 2.202285662861181e-20,
+          "max_direct_proposal_defect_difference_kg_s": 2.0328790734103208e-20,
+          "max_ratio_difference_dimensionless": 7.993605777301127e-15,
+          "roundoff_allowance_kg_s_min_max": [
+            2.4501012763552395e-17,
+            5.176487734790807e-17
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 4.166720699605785,
+            "all_interior": 4.4368873409632865
+          }
+        }
+      ],
+      "point_ratio": 0.9860417034185387,
+      "minimum_drop_flow_kg_s": -0.00023662407298015442,
+      "negative_drop_flow_fixed_nodes": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "minimum_drop_velocity_at_negative_flow_m_s": 0.3644546116212151,
+      "artifact_sha256": {
+        "assessment.json": "b790d044df17da7b4e8fb83b81545cb2d6fb1470146c945bbd4c489bec1c5a34",
+        "effective_inputs.json": "68d8901744318672b7ea855c9ae8e8b14b091da23615a0896bf6626fc1f6b962",
+        "frozen_state.json": "99ca7639b37140a4c3473462e8856425ceb5a5baa2dea0c01b5ba1c6de4fc097",
+        "frozen_state.npz": "d76e3f1b28402bd482e4798cad6329dfc78fc58c03642a516ca8047138925fa5",
+        "numerical/initialization.npz": "50d8db6862073acea461ea5dbba6d45aa70be2ba1851813f820480efba5c771c"
+      }
+    },
+    {
+      "case_id": "ww10-it250",
+      "fields": [
+        {
+          "field": "base",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 1.4823076576950256e-21,
+          "max_direct_proposal_defect_difference_kg_s": 1.4823076576950256e-21,
+          "max_ratio_difference_dimensionless": 6.106226635438361e-16,
+          "roundoff_allowance_kg_s_min_max": [
+            2.1485295784315187e-18,
+            4.075577114683925e-18
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 0.3430297588825916,
+            "all_interior": 0.3430297588825916
+          }
+        },
+        {
+          "field": "wave",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 2.202285662861181e-20,
+          "max_direct_proposal_defect_difference_kg_s": 2.0328790734103208e-20,
+          "max_ratio_difference_dimensionless": 7.993605777301127e-15,
+          "roundoff_allowance_kg_s_min_max": [
+            2.4501012763552395e-17,
+            5.176487734790807e-17
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 4.166720699605785,
+            "all_interior": 4.4368873409632865
+          }
+        }
+      ],
+      "point_ratio": 0.9860417034185387,
+      "minimum_drop_flow_kg_s": -0.00023662407298015442,
+      "negative_drop_flow_fixed_nodes": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "minimum_drop_velocity_at_negative_flow_m_s": 0.3644546116212151,
+      "artifact_sha256": {
+        "assessment.json": "6e817873ead320f1d4be8d0465a3ce054f11ffcb30ac9513cbf18d5456a7ec4c",
+        "effective_inputs.json": "108a11ad8af040dd9eb47775ddd076c07c3eca66c9eec821268b1323900800f5",
+        "frozen_state.json": "34e64dae43c5a6dc029a43d136b6deedbeef2d661afe4744b282161ada6a2b23",
+        "frozen_state.npz": "d76e3f1b28402bd482e4798cad6329dfc78fc58c03642a516ca8047138925fa5",
+        "numerical/initialization.npz": "50d8db6862073acea461ea5dbba6d45aa70be2ba1851813f820480efba5c771c"
+      }
+    },
+    {
+      "case_id": "ww05-it100",
+      "fields": [
+        {
+          "field": "base",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 1.5451733842490557e-21,
+          "max_direct_proposal_defect_difference_kg_s": 1.4988512699460861e-21,
+          "max_ratio_difference_dimensionless": 5.967448757360216e-16,
+          "roundoff_allowance_kg_s_min_max": [
+            1.9495253831484775e-18,
+            4.451714901304206e-18
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 0.34241619190125044,
+            "all_interior": 0.34241619190125044
+          }
+        },
+        {
+          "field": "wave",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 2.710505431213761e-20,
+          "max_direct_proposal_defect_difference_kg_s": 2.710505431213761e-20,
+          "max_ratio_difference_dimensionless": 1.0658141036401503e-14,
+          "roundoff_allowance_kg_s_min_max": [
+            2.3979626163182828e-17,
+            5.44186529532442e-17
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 9.08892276433434,
+            "all_interior": 9.436161594183599
+          }
+        }
+      ],
+      "point_ratio": 0.9932801678097514,
+      "minimum_drop_flow_kg_s": -0.0005230546404185257,
+      "negative_drop_flow_fixed_nodes": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "minimum_drop_velocity_at_negative_flow_m_s": 0.3644546116212151,
+      "artifact_sha256": {
+        "assessment.json": "ba43b33a8fb5496ef5752d970d319e199a888f9a496b2765cd521d6a5b0bdf23",
+        "effective_inputs.json": "af2a4663d572020be359b232869866a9ab4b1ee6bdf1f2c9ff076fb819bb00f7",
+        "frozen_state.json": "df94e9dd874ead84a25444410f754cf23442d393de3354ee98976fa40e095a57",
+        "frozen_state.npz": "c82e757bc5db7a906cf27622276e088d7263281732c70a15786a900be6d68d2f",
+        "numerical/initialization.npz": "bcd83b6971f57ee87488a0335869856de704543a567534551c669cdd7e818421"
+      }
+    },
+    {
+      "case_id": "ww05-it250",
+      "fields": [
+        {
+          "field": "base",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 1.5451733842490557e-21,
+          "max_direct_proposal_defect_difference_kg_s": 1.4988512699460861e-21,
+          "max_ratio_difference_dimensionless": 5.967448757360216e-16,
+          "roundoff_allowance_kg_s_min_max": [
+            1.9495253831484775e-18,
+            4.451714901304206e-18
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 0.34241619190125044,
+            "all_interior": 0.34241619190125044
+          }
+        },
+        {
+          "field": "wave",
+          "interior_equations_checked": 100,
+          "max_residual_difference_kg_s": 2.710505431213761e-20,
+          "max_direct_proposal_defect_difference_kg_s": 2.710505431213761e-20,
+          "max_ratio_difference_dimensionless": 1.0658141036401503e-14,
+          "roundoff_allowance_kg_s_min_max": [
+            2.3979626163182828e-17,
+            5.44186529532442e-17
+          ],
+          "ratio_maxima_decimal": {
+            "frozen_reference_mask": 9.08892276433434,
+            "all_interior": 9.436161594183599
+          }
+        }
+      ],
+      "point_ratio": 0.9932801678097514,
+      "minimum_drop_flow_kg_s": -0.0005230546404185257,
+      "negative_drop_flow_fixed_nodes": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "minimum_drop_velocity_at_negative_flow_m_s": 0.3644546116212151,
+      "artifact_sha256": {
+        "assessment.json": "1cde9e3569e1b5a6d9843256ee18a61cdcbc2e9ab9f9e5c2d9bc871c3d329bf0",
+        "effective_inputs.json": "2e099f94b5b9243e56e904fa17eb3cc8cd40ca3844d3fa0ef644015e8b3193c6",
+        "frozen_state.json": "d65d9c0e174bcd38dc0d9c434f0013ec5fc3db3bfee7659c8c9326e35fca634e",
+        "frozen_state.npz": "c82e757bc5db7a906cf27622276e088d7263281732c70a15786a900be6d68d2f",
+        "numerical/initialization.npz": "bcd83b6971f57ee87488a0335869856de704543a567534551c669cdd7e818421"
+      }
+    }
+  ],
+  "profile_comparisons": [
+    {
+      "first": "ww50-it100",
+      "second": "ww50-it250",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 1.0842021724855044e-17,
+          "relative_linf_to_second": 4.039396110593557e-14,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "base.U": {
+          "max_absolute": 7.849276784099857e-14,
+          "relative_linf_to_second": 5.888609556049521e-14,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "wave.W": {
+          "max_absolute": 1.1275702593849246e-17,
+          "relative_linf_to_second": 3.2160803677464452e-15,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "wave.U": {
+          "max_absolute": 7.029932191926491e-13,
+          "relative_linf_to_second": 1.347059685595849e-13,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "drop.W": {
+          "max_absolute": 1.734723475976807e-18,
+          "relative_linf_to_second": 1.4678541737768725e-13,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 4.298783551348606e-13,
+          "relative_linf_to_second": 1.7702508484304842e-14,
+          "unit": "Hz",
+          "bitwise_identical": false
+        },
+        "wave.PERIOD": {
+          "max_absolute": 1.2004286453759505e-15,
+          "relative_linf_to_second": 1.8946931912843508e-14,
+          "unit": "s",
+          "bitwise_identical": false
+        }
+      }
+    },
+    {
+      "first": "ww25-it100",
+      "second": "ww25-it250",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "kg/s",
+          "bitwise_identical": true
+        },
+        "base.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.W": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "kg/s",
+          "bitwise_identical": true
+        },
+        "wave.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "drop.W": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "kg/s",
+          "bitwise_identical": true
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "Hz",
+          "bitwise_identical": true
+        },
+        "wave.PERIOD": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "s",
+          "bitwise_identical": true
+        }
+      }
+    },
+    {
+      "first": "ww25-it100",
+      "second": "ww10-it100",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 1.4409456500079874e-05,
+          "relative_linf_to_second": 0.050272221344363655,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "base.U": {
+          "max_absolute": 0.009512067842497807,
+          "relative_linf_to_second": 0.007077432722788261,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "wave.W": {
+          "max_absolute": 0.00015405250398278997,
+          "relative_linf_to_second": 0.04235381672377174,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "wave.U": {
+          "max_absolute": 0.36396184864968806,
+          "relative_linf_to_second": 0.06364690107355421,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "drop.W": {
+          "max_absolute": 0.00016846121161941726,
+          "relative_linf_to_second": 0.7119360659198274,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 0.37608340481603975,
+          "relative_linf_to_second": 0.015523497976154302,
+          "unit": "Hz",
+          "bitwise_identical": false
+        },
+        "wave.PERIOD": {
+          "max_absolute": 0.0013104887328820106,
+          "relative_linf_to_second": 0.02152065691762828,
+          "unit": "s",
+          "bitwise_identical": false
+        }
+      }
+    },
+    {
+      "first": "ww25-it100",
+      "second": "ww10-it250",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 1.4409456500079874e-05,
+          "relative_linf_to_second": 0.050272221344363655,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "base.U": {
+          "max_absolute": 0.009512067842497807,
+          "relative_linf_to_second": 0.007077432722788261,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "wave.W": {
+          "max_absolute": 0.00015405250398278997,
+          "relative_linf_to_second": 0.04235381672377174,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "wave.U": {
+          "max_absolute": 0.36396184864968806,
+          "relative_linf_to_second": 0.06364690107355421,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "drop.W": {
+          "max_absolute": 0.00016846121161941726,
+          "relative_linf_to_second": 0.7119360659198274,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 0.37608340481603975,
+          "relative_linf_to_second": 0.015523497976154302,
+          "unit": "Hz",
+          "bitwise_identical": false
+        },
+        "wave.PERIOD": {
+          "max_absolute": 0.0013104887328820106,
+          "relative_linf_to_second": 0.02152065691762828,
+          "unit": "s",
+          "bitwise_identical": false
+        }
+      }
+    },
+    {
+      "first": "ww25-it100",
+      "second": "ww05-it100",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 4.086392996759201e-05,
+          "relative_linf_to_second": 0.13052127403904729,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "base.U": {
+          "max_absolute": 0.022760824656501644,
+          "relative_linf_to_second": 0.016769828417856545,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "wave.W": {
+          "max_absolute": 0.00041402784909019656,
+          "relative_linf_to_second": 0.10845314340194147,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "wave.U": {
+          "max_absolute": 0.8413849609996031,
+          "relative_linf_to_second": 0.13579756411645783,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "drop.W": {
+          "max_absolute": 0.00045489177905778857,
+          "relative_linf_to_second": 0.86968309600275,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 0.7889058197864358,
+          "relative_linf_to_second": 0.03251419473974856,
+          "unit": "Hz",
+          "bitwise_identical": false
+        },
+        "wave.PERIOD": {
+          "max_absolute": 0.002655724909559058,
+          "relative_linf_to_second": 0.042677722837008485,
+          "unit": "s",
+          "bitwise_identical": false
+        }
+      }
+    },
+    {
+      "first": "ww25-it100",
+      "second": "ww05-it250",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 4.086392996759201e-05,
+          "relative_linf_to_second": 0.13052127403904729,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "base.U": {
+          "max_absolute": 0.022760824656501644,
+          "relative_linf_to_second": 0.016769828417856545,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "wave.W": {
+          "max_absolute": 0.00041402784909019656,
+          "relative_linf_to_second": 0.10845314340194147,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "wave.U": {
+          "max_absolute": 0.8413849609996031,
+          "relative_linf_to_second": 0.13579756411645783,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "drop.W": {
+          "max_absolute": 0.00045489177905778857,
+          "relative_linf_to_second": 0.86968309600275,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 0.7889058197864358,
+          "relative_linf_to_second": 0.03251419473974856,
+          "unit": "Hz",
+          "bitwise_identical": false
+        },
+        "wave.PERIOD": {
+          "max_absolute": 0.002655724909559058,
+          "relative_linf_to_second": 0.042677722837008485,
+          "unit": "s",
+          "bitwise_identical": false
+        }
+      }
+    },
+    {
+      "first": "ww25-it250",
+      "second": "ww10-it100",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 1.4409456500079874e-05,
+          "relative_linf_to_second": 0.050272221344363655,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "base.U": {
+          "max_absolute": 0.009512067842497807,
+          "relative_linf_to_second": 0.007077432722788261,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "wave.W": {
+          "max_absolute": 0.00015405250398278997,
+          "relative_linf_to_second": 0.04235381672377174,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "wave.U": {
+          "max_absolute": 0.36396184864968806,
+          "relative_linf_to_second": 0.06364690107355421,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "drop.W": {
+          "max_absolute": 0.00016846121161941726,
+          "relative_linf_to_second": 0.7119360659198274,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 0.37608340481603975,
+          "relative_linf_to_second": 0.015523497976154302,
+          "unit": "Hz",
+          "bitwise_identical": false
+        },
+        "wave.PERIOD": {
+          "max_absolute": 0.0013104887328820106,
+          "relative_linf_to_second": 0.02152065691762828,
+          "unit": "s",
+          "bitwise_identical": false
+        }
+      }
+    },
+    {
+      "first": "ww25-it250",
+      "second": "ww10-it250",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 1.4409456500079874e-05,
+          "relative_linf_to_second": 0.050272221344363655,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "base.U": {
+          "max_absolute": 0.009512067842497807,
+          "relative_linf_to_second": 0.007077432722788261,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "wave.W": {
+          "max_absolute": 0.00015405250398278997,
+          "relative_linf_to_second": 0.04235381672377174,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "wave.U": {
+          "max_absolute": 0.36396184864968806,
+          "relative_linf_to_second": 0.06364690107355421,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "drop.W": {
+          "max_absolute": 0.00016846121161941726,
+          "relative_linf_to_second": 0.7119360659198274,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 0.37608340481603975,
+          "relative_linf_to_second": 0.015523497976154302,
+          "unit": "Hz",
+          "bitwise_identical": false
+        },
+        "wave.PERIOD": {
+          "max_absolute": 0.0013104887328820106,
+          "relative_linf_to_second": 0.02152065691762828,
+          "unit": "s",
+          "bitwise_identical": false
+        }
+      }
+    },
+    {
+      "first": "ww25-it250",
+      "second": "ww05-it100",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 4.086392996759201e-05,
+          "relative_linf_to_second": 0.13052127403904729,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "base.U": {
+          "max_absolute": 0.022760824656501644,
+          "relative_linf_to_second": 0.016769828417856545,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "wave.W": {
+          "max_absolute": 0.00041402784909019656,
+          "relative_linf_to_second": 0.10845314340194147,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "wave.U": {
+          "max_absolute": 0.8413849609996031,
+          "relative_linf_to_second": 0.13579756411645783,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "drop.W": {
+          "max_absolute": 0.00045489177905778857,
+          "relative_linf_to_second": 0.86968309600275,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 0.7889058197864358,
+          "relative_linf_to_second": 0.03251419473974856,
+          "unit": "Hz",
+          "bitwise_identical": false
+        },
+        "wave.PERIOD": {
+          "max_absolute": 0.002655724909559058,
+          "relative_linf_to_second": 0.042677722837008485,
+          "unit": "s",
+          "bitwise_identical": false
+        }
+      }
+    },
+    {
+      "first": "ww25-it250",
+      "second": "ww05-it250",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 4.086392996759201e-05,
+          "relative_linf_to_second": 0.13052127403904729,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "base.U": {
+          "max_absolute": 0.022760824656501644,
+          "relative_linf_to_second": 0.016769828417856545,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "wave.W": {
+          "max_absolute": 0.00041402784909019656,
+          "relative_linf_to_second": 0.10845314340194147,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "wave.U": {
+          "max_absolute": 0.8413849609996031,
+          "relative_linf_to_second": 0.13579756411645783,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "drop.W": {
+          "max_absolute": 0.00045489177905778857,
+          "relative_linf_to_second": 0.86968309600275,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 0.7889058197864358,
+          "relative_linf_to_second": 0.03251419473974856,
+          "unit": "Hz",
+          "bitwise_identical": false
+        },
+        "wave.PERIOD": {
+          "max_absolute": 0.002655724909559058,
+          "relative_linf_to_second": 0.042677722837008485,
+          "unit": "s",
+          "bitwise_identical": false
+        }
+      }
+    },
+    {
+      "first": "ww10-it100",
+      "second": "ww10-it250",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "kg/s",
+          "bitwise_identical": true
+        },
+        "base.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.W": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "kg/s",
+          "bitwise_identical": true
+        },
+        "wave.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "drop.W": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "kg/s",
+          "bitwise_identical": true
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "Hz",
+          "bitwise_identical": true
+        },
+        "wave.PERIOD": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "s",
+          "bitwise_identical": true
+        }
+      }
+    },
+    {
+      "first": "ww10-it100",
+      "second": "ww05-it100",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 2.6457431431224155e-05,
+          "relative_linf_to_second": 0.08450625431628307,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "base.U": {
+          "max_absolute": 0.015002864895534707,
+          "relative_linf_to_second": 0.01105388200433818,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "wave.W": {
+          "max_absolute": 0.0002599753451074066,
+          "relative_linf_to_second": 0.0680996301235776,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "wave.U": {
+          "max_absolute": 0.5052277145583615,
+          "relative_linf_to_second": 0.08154257104814464,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "drop.W": {
+          "max_absolute": 0.0002864305674383713,
+          "relative_linf_to_second": 0.5476111773125307,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 0.4405416813565992,
+          "relative_linf_to_second": 0.018156613450363856,
+          "unit": "Hz",
+          "bitwise_identical": false
+        },
+        "wave.PERIOD": {
+          "max_absolute": 0.0014469850561381961,
+          "relative_linf_to_second": 0.02325317164924751,
+          "unit": "s",
+          "bitwise_identical": false
+        }
+      }
+    },
+    {
+      "first": "ww10-it100",
+      "second": "ww05-it250",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 2.6457431431224155e-05,
+          "relative_linf_to_second": 0.08450625431628307,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "base.U": {
+          "max_absolute": 0.015002864895534707,
+          "relative_linf_to_second": 0.01105388200433818,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "wave.W": {
+          "max_absolute": 0.0002599753451074066,
+          "relative_linf_to_second": 0.0680996301235776,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "wave.U": {
+          "max_absolute": 0.5052277145583615,
+          "relative_linf_to_second": 0.08154257104814464,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "drop.W": {
+          "max_absolute": 0.0002864305674383713,
+          "relative_linf_to_second": 0.5476111773125307,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 0.4405416813565992,
+          "relative_linf_to_second": 0.018156613450363856,
+          "unit": "Hz",
+          "bitwise_identical": false
+        },
+        "wave.PERIOD": {
+          "max_absolute": 0.0014469850561381961,
+          "relative_linf_to_second": 0.02325317164924751,
+          "unit": "s",
+          "bitwise_identical": false
+        }
+      }
+    },
+    {
+      "first": "ww10-it250",
+      "second": "ww05-it100",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 2.6457431431224155e-05,
+          "relative_linf_to_second": 0.08450625431628307,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "base.U": {
+          "max_absolute": 0.015002864895534707,
+          "relative_linf_to_second": 0.01105388200433818,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "wave.W": {
+          "max_absolute": 0.0002599753451074066,
+          "relative_linf_to_second": 0.0680996301235776,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "wave.U": {
+          "max_absolute": 0.5052277145583615,
+          "relative_linf_to_second": 0.08154257104814464,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "drop.W": {
+          "max_absolute": 0.0002864305674383713,
+          "relative_linf_to_second": 0.5476111773125307,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 0.4405416813565992,
+          "relative_linf_to_second": 0.018156613450363856,
+          "unit": "Hz",
+          "bitwise_identical": false
+        },
+        "wave.PERIOD": {
+          "max_absolute": 0.0014469850561381961,
+          "relative_linf_to_second": 0.02325317164924751,
+          "unit": "s",
+          "bitwise_identical": false
+        }
+      }
+    },
+    {
+      "first": "ww10-it250",
+      "second": "ww05-it250",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 2.6457431431224155e-05,
+          "relative_linf_to_second": 0.08450625431628307,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "base.U": {
+          "max_absolute": 0.015002864895534707,
+          "relative_linf_to_second": 0.01105388200433818,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "wave.W": {
+          "max_absolute": 0.0002599753451074066,
+          "relative_linf_to_second": 0.0680996301235776,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "wave.U": {
+          "max_absolute": 0.5052277145583615,
+          "relative_linf_to_second": 0.08154257104814464,
+          "unit": "m/s",
+          "bitwise_identical": false
+        },
+        "drop.W": {
+          "max_absolute": 0.0002864305674383713,
+          "relative_linf_to_second": 0.5476111773125307,
+          "unit": "kg/s",
+          "bitwise_identical": false
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 0.4405416813565992,
+          "relative_linf_to_second": 0.018156613450363856,
+          "unit": "Hz",
+          "bitwise_identical": false
+        },
+        "wave.PERIOD": {
+          "max_absolute": 0.0014469850561381961,
+          "relative_linf_to_second": 0.02325317164924751,
+          "unit": "s",
+          "bitwise_identical": false
+        }
+      }
+    },
+    {
+      "first": "ww05-it100",
+      "second": "ww05-it250",
+      "metrics": {
+        "base.W": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "kg/s",
+          "bitwise_identical": true
+        },
+        "base.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.W": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "kg/s",
+          "bitwise_identical": true
+        },
+        "wave.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "drop.W": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "kg/s",
+          "bitwise_identical": true
+        },
+        "drop.U": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "m/s",
+          "bitwise_identical": true
+        },
+        "wave.FREQUENCY": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "Hz",
+          "bitwise_identical": true
+        },
+        "wave.PERIOD": {
+          "max_absolute": 0.0,
+          "relative_linf_to_second": 0.0,
+          "unit": "s",
+          "bitwise_identical": true
+        }
+      }
+    }
+  ],
+  "artifact_sha256": {
+    "frozen_manifest.json": "6b7f89eaf3169cf26abe0d77de85751a707216284866ec41a74095f560e3c4b1",
+    "analysis/analysis.json": "a0a898576da468ea596a203e8e4511bd64cdfa775920ed6e61385e1f93db6e63",
+    "analysis/mass_defects.npz": "4fe19310d46853ae185c554311ea909a4f42a8ca75b8fa24c3e095bbea30215a"
+  },
+  "audit_tool_sha256": "b1f3f35d9e16be578ce8006678df6f94b099e33f38b6a8748bac263f38e7451e",
+  "limits": [
+    "Saved source returns are inputs, not independently validated closures.",
+    "No solver reruns, MATLAB comparison, dynamical-stability proof or experimental-validation claim.",
+    "Native and supplementary qualification statuses are not modified."
+  ]
+}

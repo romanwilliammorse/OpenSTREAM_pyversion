@@ -1,0 +1,3009 @@
+{
+  "schema": "openstream-sawai-control-case-v1",
+  "case_id": "ww10-it100",
+  "started_utc": "2026-11-15T08:42:43.666760+00:00",
+  "preregistration_commit": "a43298385963a248fc9dac2ffef517122724fb77",
+  "registered_options": {
+    "RELAXWW": 0.1,
+    "MAXITER": 100
+  },
+  "role": "separate numerical-control variant",
+  "manifest_sha256": "6b7f89eaf3169cf26abe0d77de85751a707216284866ec41a74095f560e3c4b1",
+  "execution": "completed",
+  "native_converged": true,
+  "matlab_equivalence": "not_run",
+  "experimental_validation": "not_established",
+  "executed_sources": {
+    "runner_sha256": "7237ba8398935a83f97ed2e710501762bbbf09ec3e5ea30369d61d9a6edc2195",
+    "executed_runner_sha256": "7237ba8398935a83f97ed2e710501762bbbf09ec3e5ea30369d61d9a6edc2195",
+    "helpers": {
+      "tools/replay_matched_diagnostics.py": {
+        "sha256": "fea6ffbff90a92477abbe445c5cf1232fb6d53441f1cabdbd350074dd175e748",
+        "registration_equal_after_line_ending_normalization": true
+      },
+      "tools/run_lecorre_reproduction.py": {
+        "sha256": "85f50f755d444ce4ea1705cc0dcff96e8b032573847e80db73555c86aed16b0f",
+        "registration_equal_after_line_ending_normalization": true
+      }
+    }
+  },
+  "is_unchanged_reference_control": false,
+  "source_state": "INITIALSTEPCONVERGED",
+  "point_converged": true,
+  "frequency_temporally_converged": true,
+  "transient_converged": true,
+  "history": [
+    {
+      "phase": "initialization",
+      "time_s": 1.0,
+      "point_converged": true,
+      "max_iterations": 46,
+      "time_dWLb_kg_s_m": 0.012805641510199577,
+      "time_dUb_m_s": 1.9600908996109014,
+      "time_dWLw_kg_s_m": 0.11129925373671645,
+      "time_dUw_m_s": 1.0003467479857973,
+      "time_dFw_Hz": 11.412528997961903,
+      "time_dUd_m_s": 0.006191593750180857,
+      "wave_frequency_temporally_converged": false
+    },
+    {
+      "phase": "initialization",
+      "time_s": 2.0,
+      "point_converged": true,
+      "max_iterations": 43,
+      "time_dWLb_kg_s_m": 0.01622570690320207,
+      "time_dUb_m_s": 0.026783786704869306,
+      "time_dWLw_kg_s_m": 0.06156021218523766,
+      "time_dUw_m_s": 0.33164367450704724,
+      "time_dFw_Hz": 8.128107394924278,
+      "time_dUd_m_s": 0.0,
+      "wave_frequency_temporally_converged": false
+    },
+    {
+      "phase": "initialization",
+      "time_s": 3.0,
+      "point_converged": true,
+      "max_iterations": 34,
+      "time_dWLb_kg_s_m": 0.006562136306933333,
+      "time_dUb_m_s": 0.02844677582239924,
+      "time_dWLw_kg_s_m": 0.02001486353587989,
+      "time_dUw_m_s": 0.07841340635050464,
+      "time_dFw_Hz": 3.2448879785389977,
+      "time_dUd_m_s": 0.0,
+      "wave_frequency_temporally_converged": false
+    },
+    {
+      "phase": "initialization",
+      "time_s": 4.0,
+      "point_converged": true,
+      "max_iterations": 26,
+      "time_dWLb_kg_s_m": 0.004324466564142683,
+      "time_dUb_m_s": 0.01588996287861899,
+      "time_dWLw_kg_s_m": 0.005231876389460766,
+      "time_dUw_m_s": 0.07920839828362758,
+      "time_dFw_Hz": 1.0965409973178204,
+      "time_dUd_m_s": 0.0,
+      "wave_frequency_temporally_converged": false
+    },
+    {
+      "phase": "initialization",
+      "time_s": 5.0,
+      "point_converged": true,
+      "max_iterations": 16,
+      "time_dWLb_kg_s_m": 0.00248983208117674,
+      "time_dUb_m_s": 0.008105992342612667,
+      "time_dWLw_kg_s_m": 0.0016464287662505683,
+      "time_dUw_m_s": 0.048628298249888235,
+      "time_dFw_Hz": 0.6525932934898933,
+      "time_dUd_m_s": 0.0,
+      "wave_frequency_temporally_converged": false
+    },
+    {
+      "phase": "initialization",
+      "time_s": 6.0,
+      "point_converged": true,
+      "max_iterations": 8,
+      "time_dWLb_kg_s_m": 0.001153616180346019,
+      "time_dUb_m_s": 0.0037187924229730163,
+      "time_dWLw_kg_s_m": 0.0009710531296548974,
+      "time_dUw_m_s": 0.0277567749687897,
+      "time_dFw_Hz": 0.36432583175877653,
+      "time_dUd_m_s": 0.0,
+      "wave_frequency_temporally_converged": false
+    },
+    {
+      "phase": "initialization",
+      "time_s": 7.0,
+      "point_converged": true,
+      "max_iterations": 4,
+      "time_dWLb_kg_s_m": 0.0004300008723928245,
+      "time_dUb_m_s": 0.0013726858228195749,
+      "time_dWLw_kg_s_m": 0.00032462242077471726,
+      "time_dUw_m_s": 0.009882402215959374,
+      "time_dFw_Hz": 0.07135408867120319,
+      "time_dUd_m_s": 0.0,
+      "wave_frequency_temporally_converged": true
+    },
+    {
+      "phase": "initialization",
+      "time_s": 8.0,
+      "point_converged": true,
+      "max_iterations": 1,
+      "time_dWLb_kg_s_m": 7.203397830378086e-05,
+      "time_dUb_m_s": 0.00037356775554808763,
+      "time_dWLw_kg_s_m": 9.424363761156851e-05,
+      "time_dUw_m_s": 0.009843376517499003,
+      "time_dFw_Hz": 0.06443965211187219,
+      "time_dUd_m_s": 0.0,
+      "wave_frequency_temporally_converged": true
+    }
+  ],
+  "onset": [
+    {
+      "node": 23,
+      "iterations": 7,
+      "residual_kg_s_m": 5.018629831059844e-05,
+      "original_tolerance_kg_s_m": 0.0001,
+      "effective_tolerance_kg_s_m": 0.0001,
+      "converged": true
+    }
+  ],
+  "last_init_time_s": 8.0,
+  "final_point": {
+    "time_s": 8.0,
+    "nodes": 101,
+    "evaluated_nodes": 100,
+    "failed_nodes_zero_based": [],
+    "criteria_maxima": {
+      "dWLb": {
+        "value": 7.203397830378086e-05,
+        "threshold": 0.0001,
+        "unit": "kg/(s m)"
+      },
+      "dUb": {
+        "value": 0.00037356775554808763,
+        "threshold": 0.01,
+        "unit": "m/s"
+      },
+      "dWLw": {
+        "value": 9.860417034185387e-05,
+        "threshold": 0.0001,
+        "unit": "kg/(s m)"
+      },
+      "dUw": {
+        "value": 0.009843376517499003,
+        "threshold": 0.01,
+        "unit": "m/s"
+      },
+      "dFw": {
+        "value": 0.06443965211187219,
+        "threshold": 0.1,
+        "unit": "Hz"
+      },
+      "dUd": {
+        "value": 0.0,
+        "threshold": 0.01,
+        "unit": "m/s"
+      }
+    },
+    "units": {
+      "dWLb": "kg/(s m)",
+      "dUb": "m/s",
+      "dWLw": "kg/(s m)",
+      "dUw": "m/s",
+      "dFw": "Hz",
+      "dUd": "m/s"
+    }
+  },
+  "physical_diagnostics": {
+    "physical_consistency": null,
+    "phase_volume_closure_role": "informational",
+    "phase_volume_closure_status": "reported",
+    "area_closure_relative_tolerance": null,
+    "max_area_closure_relative": 0.8505869284472063,
+    "max_unblended_annular_area_closure_relative": 0.015040155985579395,
+    "outlet_area_closure_relative": -0.015040155985579395,
+    "common_annular_upstream_face_z_m": 0.46143999999999996,
+    "common_annular_downstream_face_z_m": 1.648,
+    "common_annular_cell_count": 72,
+    "max_common_annular_cell_mass_residual_kg_s": 1.4457082666424759e-11,
+    "max_abs_common_annular_mass_residual_kg_s": 4.735331818501998e-10,
+    "inventory_by_time": [
+      {
+        "time_s": 0.0,
+        "max_area_closure_relative": 0.8505869284472063,
+        "outlet_area_closure_relative": -0.015040155985579395,
+        "max_unblended_annular_area_closure_relative": 0.015040155985579395,
+        "unblended_annular_node_count": 73,
+        "nonfinite_inventory_or_area_node_count": 0,
+        "nonfinite_unblended_annular_node_count": 0,
+        "max_all_phase_cell_mass_residual_kg_s": 3.1504929307729634e-11,
+        "global_all_phase_mass_residual_kg_s": 4.763345464592339e-10,
+        "max_common_annular_cell_mass_residual_kg_s": 1.4457082666424759e-11,
+        "common_annular_mass_residual_kg_s": 4.735331818501998e-10,
+        "common_annular_mass_inventory_kg": 0.000989878370371629,
+        "integrated_phase_mass_inventory_kg": 0.00453845893074826
+      }
+    ],
+    "inventory_interpretation": "W/U is kg/m; occupied area = sum(Wfilm/Ufilm)/rhoF + Wdrop/(Udrop*rhoF) + Wvapor/(Uvapor*rhoV). Phase-volume closure is informational for ThreeField/FourField: the original MATLAB frameworks do not impose this residual as a convergence or acceptance gate. No area-residual acceptance threshold is applied. Finite residuals and indeterminate NaN/Inf inventory or area values do not change solver acceptance; existing solver convergence and exceptions remain unchanged. AFFNC >= 1-1e-12 identifies the numerically unblended annular region for reporting, and absence of such nodes leaves that result unavailable. Common-annular mass diagnostics use a fixed downstream control volume whose upstream face and all cells satisfy this mask at every time; its residual is outflow minus inflow plus backward-Euler storage, with no storage for the initial steady state. Pre-annular values are source initialization quantities and all-region area/mass diagnostics there are descriptive. Zero/zero inventory is indeterminate and is not silently zeroed. Any four-field film-thickness caps do not independently enforce this inventory identity. Numerical convergence and algebraic flow partition do not establish mass-storage conservation or physical validation. Whether a discrepancy is shared with upstream is established by a separate reference comparison; see the baseline verification report.",
+    "nonfinite_state_count": 0,
+    "base_plus_wave_minus_film_max_kg_s": 0.0,
+    "film_plus_drop_minus_liquid_max_kg_s": 0.0,
+    "all_fields_minus_mixture_max_kg_s": 4.336808689942018e-19,
+    "base_min_kg_s": 0.00014994575355439148,
+    "wave_min_kg_s": 0.0017178216288633549,
+    "drop_min_kg_s": -0.00023662407298015442,
+    "base_min_m_s": 0.3644546116212151,
+    "wave_min_m_s": 0.18222730581060756,
+    "drop_min_m_s": 0.3644546116212151,
+    "frequency_min_Hz": 16.421855737973665,
+    "frequency_temporally_converged": true,
+    "onset_equilibrium_converged": true,
+    "nested_closure_failures": [],
+    "balance_note": "Raw final pseudo-time mass residuals; POSFILM clipping and sequential source updates are retained.",
+    "base_mass_residual_max_kg_s": 8.829696290282029e-07,
+    "base_wet_annular_mass_residual_max_kg_s": 8.829696290282029e-07,
+    "base_unclamped_annular_mass_residual_max_kg_s": 8.829696290282029e-07,
+    "base_zero_mass_node_count": 0,
+    "wave_mass_residual_max_kg_s": 1.150662268407988e-05,
+    "wave_wet_annular_mass_residual_max_kg_s": 1.051034774984615e-05,
+    "wave_unclamped_annular_mass_residual_max_kg_s": 1.051034774984615e-05,
+    "wave_zero_mass_node_count": 0
+  },
+  "output_primary_arrays_unchanged": true,
+  "native_converged_after_output": true,
+  "comparisons_to_corrected_reference": [
+    {
+      "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\verification\\matched-replay-01\\native-after\\sawai-01-paper-tw020-n100-base\\comparison_profiles.npz",
+      "replay": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\verification\\sawai-control-study-01\\ww10-it100\\comparison_profiles.npz",
+      "passed": false,
+      "arrays": [
+        {
+          "key": "Z",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "HFLUX",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "mixture.W",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "mixture.liquid.W",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "mixture.VF",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "mixture.X",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "mixture.XEQ",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "mixture.vapor.U",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "AFFNC",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.W",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.0002248059815990926
+        },
+        {
+          "key": "film.U",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.28780571220841367
+        },
+        {
+          "key": "film.THICK",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 3.889779248030423e-05
+        },
+        {
+          "key": "drop.W",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.0002248059815990926
+        },
+        {
+          "key": "drop.U",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "base.W",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 1.822221420151853e-05
+        },
+        {
+          "key": "base.U",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.011040469476014225
+        },
+        {
+          "key": "base.THICK",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 4.832951025824766e-06
+        },
+        {
+          "key": "wave.W",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.0002065860248408346
+        },
+        {
+          "key": "wave.U",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.4997299548624081
+        },
+        {
+          "key": "wave.AMPLITUDE",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 2.4106059216283084e-05
+        },
+        {
+          "key": "wave.FREQUENCY",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.6383837375119317
+        },
+        {
+          "key": "wave.EQFREQUENCY",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.8184964772091305
+        },
+        {
+          "key": "wave.PERIOD",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.0024629581827768574
+        },
+        {
+          "key": "wave.N",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.8415594294360105
+        }
+      ]
+    },
+    {
+      "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\verification\\matched-replay-01\\native-after\\sawai-01-paper-tw020-n100-base\\numerical\\results.npz",
+      "replay": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\verification\\sawai-control-study-01\\ww10-it100\\numerical\\results.npz",
+      "passed": false,
+      "arrays": [
+        {
+          "key": "Z",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "TIME",
+          "shape": [
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.W",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.0002248059815990926
+        },
+        {
+          "key": "film.U",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.28780571220841367
+        },
+        {
+          "key": "film.H",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.base.W",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 1.822221420151853e-05
+        },
+        {
+          "key": "film.base.U",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.011040469476014225
+        },
+        {
+          "key": "film.base.H",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.base.ITR.DFW",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.base.ITR.DU",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.base.ITR.DWL",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.base.ITR.N",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.wave.W",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.0002065860248408346
+        },
+        {
+          "key": "film.wave.U",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.4997299548624081
+        },
+        {
+          "key": "film.wave.H",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.wave.FREQUENCY",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.6383837375119317
+        },
+        {
+          "key": "film.wave.ITR.DFW",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.wave.ITR.DU",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.wave.ITR.DWL",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.wave.ITR.N",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "drop.W",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.0002248059815990926
+        },
+        {
+          "key": "drop.U",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "drop.H",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "drop.ITR.DU",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "drop.ITR.N",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 99.0
+        }
+      ]
+    },
+    {
+      "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\verification\\matched-replay-01\\native-after\\sawai-01-paper-tw020-n100-base\\numerical\\initialization.npz",
+      "replay": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\verification\\sawai-control-study-01\\ww10-it100\\numerical\\initialization.npz",
+      "passed": false,
+      "arrays": [
+        {
+          "key": "Z",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "TIME",
+          "shape": [
+            9
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.W",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.00023036851223964686
+        },
+        {
+          "key": "film.U",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.4515851417929282
+        },
+        {
+          "key": "film.H",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.base.W",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 2.168270966688762e-05
+        },
+        {
+          "key": "film.base.U",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.013719186658925353
+        },
+        {
+          "key": "film.base.H",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.base.ITR.DFW",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.base.ITR.DU",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.0011564431064612357
+        },
+        {
+          "key": "film.base.ITR.DWL",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 9.80250416960475e-05
+        },
+        {
+          "key": "film.base.ITR.N",
+          "shape": [
+            9,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 99.0
+        },
+        {
+          "key": "film.wave.W",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.00021019366927208264
+        },
+        {
+          "key": "film.wave.U",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.5783748050766038
+        },
+        {
+          "key": "film.wave.H",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.wave.FREQUENCY",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.9286601349679593
+        },
+        {
+          "key": "film.wave.ITR.DF",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.09397913762065713
+        },
+        {
+          "key": "film.wave.ITR.DFW",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "film.wave.ITR.DU",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.009665940626585545
+        },
+        {
+          "key": "film.wave.ITR.DWL",
+          "shape": [
+            9,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.0008239438853509806
+        },
+        {
+          "key": "film.wave.ITR.N",
+          "shape": [
+            9,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 99.0
+        },
+        {
+          "key": "drop.W",
+          "shape": [
+            9,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 0.00023036851223964686
+        },
+        {
+          "key": "drop.U",
+          "shape": [
+            9,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "drop.H",
+          "shape": [
+            9,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "drop.ITR.DU",
+          "shape": [
+            9,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "drop.ITR.N",
+          "shape": [
+            9,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": false,
+          "max_abs_difference": 99.0
+        }
+      ]
+    },
+    {
+      "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\verification\\matched-replay-01\\native-after\\sawai-01-paper-tw020-n100-base\\numerical\\mixture\\results.npz",
+      "replay": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\verification\\sawai-control-study-01\\ww10-it100\\numerical\\mixture\\results.npz",
+      "passed": true,
+      "arrays": [
+        {
+          "key": "Z",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "TIME",
+          "shape": [
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "W",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "P",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "H",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "U",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "UP",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "RHO",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "X",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "XEQ",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "VF",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "T",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "HFLUX",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "LHGR",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "TWALL",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MCT",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ECT",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.W",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.H",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.U",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.T",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.X",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.VF",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.W",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.H",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.U",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.T",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.X",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.VF",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Grav",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Wall",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Acc_z",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Acc_t",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Acc_s",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.K",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Tot",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Grav",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Wall",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Acc_z",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Acc_t",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Acc_s",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.K",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Tot",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.U_z",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.U_t",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.U",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.H_z",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.H_t",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.H",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.WV",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.X",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.HV",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.TV",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.TCOND",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.TEVAP",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.TRELAX",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.W",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.H",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.HFLUX",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.XEQ",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.WBULK",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.HBULK",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.XBULK",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.N",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DW",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DP",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DPSUM",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DH",
+          "shape": [
+            1,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DWV",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DHV",
+          "shape": [
+            1,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        }
+      ]
+    },
+    {
+      "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\verification\\matched-replay-01\\native-after\\sawai-01-paper-tw020-n100-base\\numerical\\mixture\\initialization.npz",
+      "replay": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\verification\\sawai-control-study-01\\ww10-it100\\numerical\\mixture\\initialization.npz",
+      "passed": true,
+      "arrays": [
+        {
+          "key": "Z",
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "TIME",
+          "shape": [
+            12
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "W",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "P",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "H",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "U",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "UP",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "RHO",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "X",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "XEQ",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "VF",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "T",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "HFLUX",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "LHGR",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "TWALL",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MCT",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ECT",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.W",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.H",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.U",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.T",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.X",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.VF",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.W",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.H",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.U",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.T",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.X",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.VF",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Grav",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Wall",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Acc_z",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Acc_t",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Acc_s",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.K",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Tot",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Grav",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Wall",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Acc_z",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Acc_t",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Acc_s",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.K",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Tot",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.U_z",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.U_t",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.U",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.H_z",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.H_t",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.H",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.WV",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.X",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.HV",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.TV",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.TCOND",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.TEVAP",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.TRELAX",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.W",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.H",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.HFLUX",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.XEQ",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.WBULK",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.HBULK",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.XBULK",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.N",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DW",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DP",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DPSUM",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DH",
+          "shape": [
+            12,
+            101
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DWV",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DHV",
+          "shape": [
+            12,
+            101,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        }
+      ]
+    }
+  ],
+  "precursor_exact": true,
+  "all_215_reference_arrays_exact": false,
+  "baseline_array_exact": false,
+  "numeric_arrays_compared": 215,
+  "frozen_state_diagnostics": {
+    "schema": "openstream-sawai-frozen-state-diagnostics-v1",
+    "interpretation": "Recomputed source returns at saved final initialization states on a deepcopy of the entire solver. These are not observed point-iteration proposals or new solver convergence gates.",
+    "constants": {
+      "PERIM_m": 0.012566,
+      "DZ_m": 0.016479999999999998,
+      "DT_s": 1.0,
+      "RHOF_kg_m3": 823.1696030606413,
+      "time_s": 8.0,
+      "onset_node_zero_based": 23
+    },
+    "units": {
+      "W": "kg/s",
+      "U": "m/s",
+      "H": "J/kg",
+      "FREQUENCY": "Hz",
+      "Z": "m",
+      "MTOT": "kg/(m^2 s)",
+      "FTOT": "Pa",
+      "THICK": "m",
+      "DELTAFREQ": "Hz/m",
+      "AFFNC": "1"
+    },
+    "original_graph_before": {
+      "sha256": "c1917ff9b36622dbb276d04504e0934c512b684cdcd533c951c0452befb0041a",
+      "array_count": 2549
+    },
+    "original_graph_after": {
+      "sha256": "c1917ff9b36622dbb276d04504e0934c512b684cdcd533c951c0452befb0041a",
+      "array_count": 2549
+    },
+    "original_stored_arrays_caches_scalars_unchanged": true,
+    "detached_primary_arrays_unchanged": true,
+    "precursor_handle_graph_preserved": true,
+    "opaque_backend_note": "The immutable FluidProperties wrapper deliberately shares its locked CoolProp backend; opaque backend/lock internals are excluded from the stored-state fingerprint.",
+    "warnings": [
+      "divide by zero encountered in divide",
+      "invalid value encountered in multiply"
+    ],
+    "data_sha256": "d76e3f1b28402bd482e4798cad6329dfc78fc58c03642a516ca8047138925fa5"
+  },
+  "warnings": [
+    "divide by zero encountered in divide",
+    "invalid value encountered in multiply"
+  ],
+  "elapsed_seconds_including_precursor_output": 99.96484830003465,
+  "runtime_s": 99.96484830003465,
+  "native_source_sha256": {
+    "__init__.py": "3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "annular.py": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+    "cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+    "database.py": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
+    "experimental_comparison.py": "03c12bcfe1e8de115092d0ea1a19e21ec177c5983c575b63183a67453b3fd1f4",
+    "ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+    "fields.py": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+    "fourfield.py": "5dafef4ee0d26f71e9e9083a61304b6d06f36e5a852f6981f0092269064692c8",
+    "gui.py": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
+    "gui_launcher.py": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+    "gui_lock.py": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+    "gui_reference.py": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+    "gui_schema.py": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+    "gui_worker.py": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
+    "inputs.py": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+    "multifield_output.py": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+    "numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+    "output.py": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+    "plotting.py": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+    "properties.py": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+    "solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+    "tf_fields.py": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+    "threefield.py": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+    "twofluid.py": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c"
+  },
+  "source_unchanged": true,
+  "source_and_reference_evidence_unchanged": true,
+  "artifact_sha256": {
+    "comparison_profiles.npz": "7fc12bd0ab6d3e93349ef3e8505bf537f6fb121672ca55bfd80aed06b889b55e",
+    "comparison_units.json": "bd3a9d359db4e207bec3e815030f0bde33b4ae5bf187e79466199ddb8b198e5a",
+    "effective_inputs.json": "68d8901744318672b7ea855c9ae8e8b14b091da23615a0896bf6626fc1f6b962",
+    "final_point_criteria.csv": "1b700efe328e00acf224727dd072b4f3716a6f651797e3025a2e785b0ec69bcf",
+    "frozen_state.json": "99ca7639b37140a4c3473462e8856425ceb5a5baa2dea0c01b5ba1c6de4fc097",
+    "frozen_state.npz": "d76e3f1b28402bd482e4798cad6329dfc78fc58c03642a516ca8047138925fa5",
+    "registered_case.json": "f57129e73151146aa75e3efd94e7a4de5ccf801af5a095f7ad0c9fe06ca291a9",
+    "numerical/axial.png": "897537fb3e5f87058b507b5b8c0e7cc13cf78ac8c118b0b9e7e5abeb9a13fb03",
+    "numerical/convergence.csv": "9217d0f150fe16c79ccb83bab2dcb4340490cf399aa5903dd3a48de3b1aedd59",
+    "numerical/initialization.npz": "50d8db6862073acea461ea5dbba6d45aa70be2ba1851813f820480efba5c771c",
+    "numerical/metadata.json": "acfdc3b8af24a12abbda1c8fa1124beeb354ce2c24b317ffbe4cba9ab923eeaa",
+    "numerical/profiles.csv": "21b87502d76a3bd2688318bde0b2b4c50eca33b6dc0b5eb353f19076170fd88f",
+    "numerical/results.npz": "24a960889ec867d7660afd980f82293751988d58125b7e449abbd1582ea14e34",
+    "numerical/wave_frequency.png": "4a4eb64bf92bf78e2cc92ba51ea7a3a1f83e3f53bae3ddb499fb6931b3e73794",
+    "numerical/mixture/axial.png": "ee7f48fb49e1e9e3f7cb916e5cbd6225e499964d1d9a75d4fc5984869d78478a",
+    "numerical/mixture/convergence.csv": "a682f68e855d858995c9aa1b0662e4f090ea9dbeb7afcc81f5cd47c06a2c9c5e",
+    "numerical/mixture/initialization.npz": "cc4c1f543c5c83dcc61d404bfcd03dff306fcf0b081ba5f14c7d55c8c2d804af",
+    "numerical/mixture/metadata.json": "0953a7794137e3aef93bf986383585712e94f832223de582cfb91beec9696cde",
+    "numerical/mixture/profiles.csv": "d5b3dc569e25c78fc437bfef63dcd00067c3c29872121542f2bdff8ffd797919",
+    "numerical/mixture/results.npz": "62305ec2f2f4d63b5f8bfe208e72c31563c67f42d7b52e8e91bc352da729722b",
+    "numerical/mixture/wall_profiles.csv": "64bfe8c7a3f4fb430eb1046c1a2f1da998733f21585205b44c9b1889e36d3d5d",
+    "numerical/mixture/inputs/00-Sawai1989.xml": "c596453e59f5e6cad269334abd4012eee5577851b9be06403b42519a6c7b99f4"
+  }
+}

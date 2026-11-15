@@ -20,6 +20,14 @@ All 215 reference arrays are reproduced exactly. No additional translation
 error was confirmed or numerical setting changed; the failed point criterion
 and unresolved matched MATLAB comparison remain in the acceptance matrix.
 
+The separate [Sawai numerical-control study](docs/SAWAI_CONTROL_STUDY.md)
+completed all eight registered cases: six native convergence passes, but none
+passes the fixed-scale common-state wave mass-defect screen. A higher point
+iteration cap alone has negligible effect; lower-relaxation profiles remain
+sensitive to the control setting. Equations, closures, tolerances and defaults
+are unchanged. The supplemental screen is not an experimental or new closure
+criterion, and no MATLAB-equivalence status is promoted.
+
 ## Install and run on Windows
 
 Install 64-bit Python 3.12 and Git, then run in PowerShell:

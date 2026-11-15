@@ -1,0 +1,41 @@
+{
+  "schema": "openstream-sawai-frozen-state-diagnostics-v1",
+  "interpretation": "Recomputed source returns at saved final initialization states on a deepcopy of the entire solver. These are not observed point-iteration proposals or new solver convergence gates.",
+  "constants": {
+    "PERIM_m": 0.012566,
+    "DZ_m": 0.016479999999999998,
+    "DT_s": 1.0,
+    "RHOF_kg_m3": 823.1696030606413,
+    "time_s": 8.0,
+    "onset_node_zero_based": 23
+  },
+  "units": {
+    "W": "kg/s",
+    "U": "m/s",
+    "H": "J/kg",
+    "FREQUENCY": "Hz",
+    "Z": "m",
+    "MTOT": "kg/(m^2 s)",
+    "FTOT": "Pa",
+    "THICK": "m",
+    "DELTAFREQ": "Hz/m",
+    "AFFNC": "1"
+  },
+  "original_graph_before": {
+    "sha256": "f786908ced50b5415a206107add88585597fd20a39c3cd9b89a05429cf168caf",
+    "array_count": 2549
+  },
+  "original_graph_after": {
+    "sha256": "f786908ced50b5415a206107add88585597fd20a39c3cd9b89a05429cf168caf",
+    "array_count": 2549
+  },
+  "original_stored_arrays_caches_scalars_unchanged": true,
+  "detached_primary_arrays_unchanged": true,
+  "precursor_handle_graph_preserved": true,
+  "opaque_backend_note": "The immutable FluidProperties wrapper deliberately shares its locked CoolProp backend; opaque backend/lock internals are excluded from the stored-state fingerprint.",
+  "warnings": [
+    "divide by zero encountered in divide",
+    "invalid value encountered in multiply"
+  ],
+  "data_sha256": "5d1dec59cecea2bdd0660c39c716fdba01252f8119e0329646dc5f4f4e7456fe"
+}

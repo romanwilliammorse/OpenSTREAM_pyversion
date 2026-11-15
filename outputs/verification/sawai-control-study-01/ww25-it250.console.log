@@ -1,0 +1,10 @@
+ww25-it250: constructing source-equivalent precursor and executing registered controls
+ww25-it250: t=1s; point=True; maxiter=21
+ww25-it250: t=2s; point=True; maxiter=20
+ww25-it250: t=3s; point=True; maxiter=17
+ww25-it250: t=4s; point=True; maxiter=14
+ww25-it250: t=5s; point=True; maxiter=10
+ww25-it250: t=6s; point=True; maxiter=5
+ww25-it250: t=7s; point=True; maxiter=3
+ww25-it250: t=8s; point=True; maxiter=2
+ww25-it250: completed; native_converged=True; 72.1s

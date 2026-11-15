@@ -30,6 +30,13 @@ error was confirmed. All 215 reference arrays and coarse histories are
 reproduced, with the original failed point criterion intact. This adds evidence
 without promoting any framework or closure to broader equivalence or validation.
 
+The [separate numerical-control study](SAWAI_CONTROL_STUDY.md) adds eight
+source-supported RELAXWW/MAXITER cases with unchanged equations and tolerances.
+Six meet native convergence, but none meets the fixed-scale common-state wave
+mass screen; profiles remain relaxation-sensitive. All precursors are exact.
+This adds scoped numerical evidence without changing feature-equivalence or
+experimental-validation statuses or production defaults.
+
 Implemented means native code exists. Tested identifies an actual check/run, not full branch coverage. Unsupported means explicit rejection or an unavailable API. Unverified means no executed reference comparison for that scope. Tests that expose a physical defect do not establish that physical criterion passed.
 
 | Upstream component | Python equivalent | Implementation | Actual test evidence | Equivalence |

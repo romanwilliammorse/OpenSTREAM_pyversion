@@ -1,0 +1,1244 @@
+{
+  "schema": "openstream-sawai-control-baseline-arithmetic-review-v1",
+  "case_id": "ww50-it100",
+  "solver_executed": false,
+  "equations_checked": 200,
+  "decimal_precision": 60,
+  "all_arithmetic_checks_passed": true,
+  "roundoff_rule": "32*binary64 epsilon times the L1 magnitude of the four residual terms; an arithmetic check, not a solver acceptance tolerance.",
+  "native_converged_before_output": false,
+  "native_converged_after_output": false,
+  "fields": [
+    {
+      "field": "base",
+      "interior_equations_checked": 100,
+      "max_residual_difference_kg_s": 1.8661194619196304e-21,
+      "max_direct_proposal_defect_difference_kg_s": 1.8032537353656003e-21,
+      "max_reference_scaled_ratio": 0.3496880987438379,
+      "checks": [
+        {
+          "node_zero_based": 1,
+          "residual_difference_kg_s": 2.634570250981393e-22,
+          "direct_proposal_defect_difference_kg_s": 2.5229008682867344e-22,
+          "roundoff_allowance_kg_s": 3.814258713458513e-18
+        },
+        {
+          "node_zero_based": 2,
+          "residual_difference_kg_s": 4.2020775117693806e-22,
+          "direct_proposal_defect_difference_kg_s": 4.0200977770077145e-22,
+          "roundoff_allowance_kg_s": 3.814285101994258e-18
+        },
+        {
+          "node_zero_based": 3,
+          "residual_difference_kg_s": 9.950982769012923e-22,
+          "direct_proposal_defect_difference_kg_s": 9.520848850485349e-22,
+          "roundoff_allowance_kg_s": 3.814299707304865e-18
+        },
+        {
+          "node_zero_based": 4,
+          "residual_difference_kg_s": 9.496033432108758e-22,
+          "direct_proposal_defect_difference_kg_s": 9.082443125832244e-22,
+          "roundoff_allowance_kg_s": 3.814307768085695e-18
+        },
+        {
+          "node_zero_based": 5,
+          "residual_difference_kg_s": 1.0041972636393756e-21,
+          "direct_proposal_defect_difference_kg_s": 9.603566911740651e-22,
+          "roundoff_allowance_kg_s": 3.814312300322439e-18
+        },
+        {
+          "node_zero_based": 6,
+          "residual_difference_kg_s": 9.785546646502317e-22,
+          "direct_proposal_defect_difference_kg_s": 9.363684534100273e-22,
+          "roundoff_allowance_kg_s": 3.814314955903771e-18
+        },
+        {
+          "node_zero_based": 7,
+          "residual_difference_kg_s": 3.3914405114674135e-23,
+          "direct_proposal_defect_difference_kg_s": 3.226004388956808e-23,
+          "roundoff_allowance_kg_s": 3.814316682486429e-18
+        },
+        {
+          "node_zero_based": 8,
+          "residual_difference_kg_s": 1.5468277454741618e-22,
+          "direct_proposal_defect_difference_kg_s": 1.4806532964699195e-22,
+          "roundoff_allowance_kg_s": 3.8143179697802674e-18
+        },
+        {
+          "node_zero_based": 9,
+          "residual_difference_kg_s": 2.2003004293910536e-22,
+          "direct_proposal_defect_difference_kg_s": 2.1093105620102206e-22,
+          "roundoff_allowance_kg_s": 3.8143190542585084e-18
+        },
+        {
+          "node_zero_based": 10,
+          "residual_difference_kg_s": 7.841672207002702e-22,
+          "direct_proposal_defect_difference_kg_s": 7.494256349730431e-22,
+          "roundoff_allowance_kg_s": 3.8143201069502125e-18
+        },
+        {
+          "node_zero_based": 11,
+          "residual_difference_kg_s": 1.166324663699769e-21,
+          "direct_proposal_defect_difference_kg_s": 1.1150394657214813e-21,
+          "roundoff_allowance_kg_s": 3.814321204836318e-18
+        },
+        {
+          "node_zero_based": 12,
+          "residual_difference_kg_s": 5.7240898388669515e-22,
+          "direct_proposal_defect_difference_kg_s": 5.475935655101043e-22,
+          "roundoff_allowance_kg_s": 3.814324156410952e-18
+        },
+        {
+          "node_zero_based": 13,
+          "residual_difference_kg_s": 1.613002194478404e-22,
+          "direct_proposal_defect_difference_kg_s": 1.5385559393486315e-22,
+          "roundoff_allowance_kg_s": 3.814328631259356e-18
+        },
+        {
+          "node_zero_based": 14,
+          "residual_difference_kg_s": 6.154223757394526e-22,
+          "direct_proposal_defect_difference_kg_s": 5.889525961377557e-22,
+          "roundoff_allowance_kg_s": 3.814333284502178e-18
+        },
+        {
+          "node_zero_based": 15,
+          "residual_difference_kg_s": 5.8729823491264965e-22,
+          "direct_proposal_defect_difference_kg_s": 5.624828165360588e-22,
+          "roundoff_allowance_kg_s": 3.814335359444001e-18
+        },
+        {
+          "node_zero_based": 16,
+          "residual_difference_kg_s": 6.6505321249263425e-22,
+          "direct_proposal_defect_difference_kg_s": 6.394106135034904e-22,
+          "roundoff_allowance_kg_s": 3.814333619921488e-18
+        },
+        {
+          "node_zero_based": 17,
+          "residual_difference_kg_s": 6.658803931051873e-22,
+          "direct_proposal_defect_difference_kg_s": 6.435465165662555e-22,
+          "roundoff_allowance_kg_s": 3.8143262916959554e-18
+        },
+        {
+          "node_zero_based": 18,
+          "residual_difference_kg_s": 1.4806532964699195e-22,
+          "direct_proposal_defect_difference_kg_s": 1.4392942658422682e-22,
+          "roundoff_allowance_kg_s": 3.814314978128164e-18
+        },
+        {
+          "node_zero_based": 19,
+          "residual_difference_kg_s": 1.7288074802358278e-22,
+          "direct_proposal_defect_difference_kg_s": 1.6874484496081765e-22,
+          "roundoff_allowance_kg_s": 3.814302240528627e-18
+        },
+        {
+          "node_zero_based": 20,
+          "residual_difference_kg_s": 2.6800651846718097e-22,
+          "direct_proposal_defect_difference_kg_s": 2.6221625417930977e-22,
+          "roundoff_allowance_kg_s": 3.814289943075264e-18
+        },
+        {
+          "node_zero_based": 21,
+          "residual_difference_kg_s": 2.5229008682867344e-23,
+          "direct_proposal_defect_difference_kg_s": 2.4401828070314316e-23,
+          "roundoff_allowance_kg_s": 3.81427915520579e-18
+        },
+        {
+          "node_zero_based": 22,
+          "residual_difference_kg_s": 7.378451063973007e-22,
+          "direct_proposal_defect_difference_kg_s": 7.246102165964522e-22,
+          "roundoff_allowance_kg_s": 3.8143060392521794e-18
+        },
+        {
+          "node_zero_based": 23,
+          "residual_difference_kg_s": 2.6469779601696886e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 3.8163011856265505e-18
+        },
+        {
+          "node_zero_based": 24,
+          "residual_difference_kg_s": 5.293955920339377e-23,
+          "direct_proposal_defect_difference_kg_s": 4.632211430296955e-23,
+          "roundoff_allowance_kg_s": 3.810100099483219e-18
+        },
+        {
+          "node_zero_based": 25,
+          "residual_difference_kg_s": 1.8661194619196304e-21,
+          "direct_proposal_defect_difference_kg_s": 1.8032537353656003e-21,
+          "roundoff_allowance_kg_s": 3.7106782614285215e-18
+        },
+        {
+          "node_zero_based": 26,
+          "residual_difference_kg_s": 5.128519797828772e-22,
+          "direct_proposal_defect_difference_kg_s": 4.979627287569227e-22,
+          "roundoff_allowance_kg_s": 3.6213775528392955e-18
+        },
+        {
+          "node_zero_based": 27,
+          "residual_difference_kg_s": 1.376428539288238e-21,
+          "direct_proposal_defect_difference_kg_s": 1.3499587596865412e-21,
+          "roundoff_allowance_kg_s": 3.545966998300278e-18
+        },
+        {
+          "node_zero_based": 28,
+          "residual_difference_kg_s": 1.5881867761018131e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 3.484718198745229e-18
+        },
+        {
+          "node_zero_based": 29,
+          "residual_difference_kg_s": 4.235164736271502e-22,
+          "direct_proposal_defect_difference_kg_s": 4.235164736271502e-22,
+          "roundoff_allowance_kg_s": 3.435067318988482e-18
+        },
+        {
+          "node_zero_based": 30,
+          "residual_difference_kg_s": 4.235164736271502e-22,
+          "direct_proposal_defect_difference_kg_s": 5.293955920339377e-22,
+          "roundoff_allowance_kg_s": 3.394493462215626e-18
+        },
+        {
+          "node_zero_based": 31,
+          "residual_difference_kg_s": 4.235164736271502e-22,
+          "direct_proposal_defect_difference_kg_s": 4.235164736271502e-22,
+          "roundoff_allowance_kg_s": 3.359414117633333e-18
+        },
+        {
+          "node_zero_based": 32,
+          "residual_difference_kg_s": 7.411538288475128e-22,
+          "direct_proposal_defect_difference_kg_s": 7.411538288475128e-22,
+          "roundoff_allowance_kg_s": 3.327940758968637e-18
+        },
+        {
+          "node_zero_based": 33,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 3.2989494835123325e-18
+        },
+        {
+          "node_zero_based": 34,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 3.271758765087844e-18
+        },
+        {
+          "node_zero_based": 35,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 3.245936838153232e-18
+        },
+        {
+          "node_zero_based": 36,
+          "residual_difference_kg_s": 5.293955920339377e-22,
+          "direct_proposal_defect_difference_kg_s": 4.235164736271502e-22,
+          "roundoff_allowance_kg_s": 3.22119408562262e-18
+        },
+        {
+          "node_zero_based": 37,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 3.197324450267706e-18
+        },
+        {
+          "node_zero_based": 38,
+          "residual_difference_kg_s": 5.293955920339377e-22,
+          "direct_proposal_defect_difference_kg_s": 4.235164736271502e-22,
+          "roundoff_allowance_kg_s": 3.174170796653892e-18
+        },
+        {
+          "node_zero_based": 39,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 3.1516061166946537e-18
+        },
+        {
+          "node_zero_based": 40,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 3.1295234432688036e-18
+        },
+        {
+          "node_zero_based": 41,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 3.107830071452028e-18
+        },
+        {
+          "node_zero_based": 42,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 3.086444670423433e-18
+        },
+        {
+          "node_zero_based": 43,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 0.0,
+          "roundoff_allowance_kg_s": 3.0652960389177015e-18
+        },
+        {
+          "node_zero_based": 44,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 3.044323079737317e-18
+        },
+        {
+          "node_zero_based": 45,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 3.0234731693975223e-18
+        },
+        {
+          "node_zero_based": 46,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 3.0027249492929142e-18
+        },
+        {
+          "node_zero_based": 47,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.9820106481469335e-18
+        },
+        {
+          "node_zero_based": 48,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 2.961295141382235e-18
+        },
+        {
+          "node_zero_based": 49,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.9405502246221475e-18
+        },
+        {
+          "node_zero_based": 50,
+          "residual_difference_kg_s": 4.235164736271502e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 2.916816704861705e-18
+        },
+        {
+          "node_zero_based": 51,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.893570835796326e-18
+        },
+        {
+          "node_zero_based": 52,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.870836120831066e-18
+        },
+        {
+          "node_zero_based": 53,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 2.848672949295029e-18
+        },
+        {
+          "node_zero_based": 54,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 2.8271305180386596e-18
+        },
+        {
+          "node_zero_based": 55,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 4.235164736271502e-22,
+          "roundoff_allowance_kg_s": 2.806236397924302e-18
+        },
+        {
+          "node_zero_based": 56,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 2.7859996248114996e-18
+        },
+        {
+          "node_zero_based": 57,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 2.766413446287147e-18
+        },
+        {
+          "node_zero_based": 58,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 0.0,
+          "roundoff_allowance_kg_s": 2.7474586081514986e-18
+        },
+        {
+          "node_zero_based": 59,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 2.7291064002574043e-18
+        },
+        {
+          "node_zero_based": 60,
+          "residual_difference_kg_s": 4.235164736271502e-22,
+          "direct_proposal_defect_difference_kg_s": 4.235164736271502e-22,
+          "roundoff_allowance_kg_s": 2.7113214273537845e-18
+        },
+        {
+          "node_zero_based": 61,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.6940639873146417e-18
+        },
+        {
+          "node_zero_based": 62,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.677292016158176e-18
+        },
+        {
+          "node_zero_based": 63,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.660965075455678e-18
+        },
+        {
+          "node_zero_based": 64,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.645047865177313e-18
+        },
+        {
+          "node_zero_based": 65,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.6295084688101923e-18
+        },
+        {
+          "node_zero_based": 66,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.6143165532297e-18
+        },
+        {
+          "node_zero_based": 67,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 0.0,
+          "roundoff_allowance_kg_s": 2.599442198366493e-18
+        },
+        {
+          "node_zero_based": 68,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 0.0,
+          "roundoff_allowance_kg_s": 2.5848553337504806e-18
+        },
+        {
+          "node_zero_based": 69,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 2.570525650414835e-18
+        },
+        {
+          "node_zero_based": 70,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 2.556422831707074e-18
+        },
+        {
+          "node_zero_based": 71,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 4.235164736271502e-22,
+          "roundoff_allowance_kg_s": 2.5425528082997447e-18
+        },
+        {
+          "node_zero_based": 72,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.5289547099331255e-18
+        },
+        {
+          "node_zero_based": 73,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 0.0,
+          "roundoff_allowance_kg_s": 2.515650181829614e-18
+        },
+        {
+          "node_zero_based": 74,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.502633607743844e-18
+        },
+        {
+          "node_zero_based": 75,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 0.0,
+          "roundoff_allowance_kg_s": 2.4898760829901008e-18
+        },
+        {
+          "node_zero_based": 76,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.4778765226691265e-18
+        },
+        {
+          "node_zero_based": 77,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 2.46712378137503e-18
+        },
+        {
+          "node_zero_based": 78,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.4574234843378995e-18
+        },
+        {
+          "node_zero_based": 79,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.448381335714404e-18
+        },
+        {
+          "node_zero_based": 80,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 4.235164736271502e-22,
+          "roundoff_allowance_kg_s": 2.4396013361795975e-18
+        },
+        {
+          "node_zero_based": 81,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.43075534773751e-18
+        },
+        {
+          "node_zero_based": 82,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.421598645901256e-18
+        },
+        {
+          "node_zero_based": 83,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.4119367441038984e-18
+        },
+        {
+          "node_zero_based": 84,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.401906060849141e-18
+        },
+        {
+          "node_zero_based": 85,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.391515272010531e-18
+        },
+        {
+          "node_zero_based": 86,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.380396828096322e-18
+        },
+        {
+          "node_zero_based": 87,
+          "residual_difference_kg_s": 5.293955920339377e-22,
+          "direct_proposal_defect_difference_kg_s": 5.293955920339377e-22,
+          "roundoff_allowance_kg_s": 2.3691003444449816e-18
+        },
+        {
+          "node_zero_based": 88,
+          "residual_difference_kg_s": 5.293955920339377e-23,
+          "direct_proposal_defect_difference_kg_s": 5.293955920339377e-23,
+          "roundoff_allowance_kg_s": 2.356266037390562e-18
+        },
+        {
+          "node_zero_based": 89,
+          "residual_difference_kg_s": 1.522012327097571e-22,
+          "direct_proposal_defect_difference_kg_s": 1.522012327097571e-22,
+          "roundoff_allowance_kg_s": 2.3398210247282216e-18
+        },
+        {
+          "node_zero_based": 90,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 2.6469779601696886e-23,
+          "roundoff_allowance_kg_s": 2.3201714276997612e-18
+        },
+        {
+          "node_zero_based": 91,
+          "residual_difference_kg_s": 2.6469779601696886e-22,
+          "direct_proposal_defect_difference_kg_s": 2.6469779601696886e-22,
+          "roundoff_allowance_kg_s": 2.2983423975739515e-18
+        },
+        {
+          "node_zero_based": 92,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 5.293955920339377e-23,
+          "roundoff_allowance_kg_s": 2.275401394708202e-18
+        },
+        {
+          "node_zero_based": 93,
+          "residual_difference_kg_s": 1.5881867761018131e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 2.2522034837083252e-18
+        },
+        {
+          "node_zero_based": 94,
+          "residual_difference_kg_s": 5.293955920339377e-23,
+          "direct_proposal_defect_difference_kg_s": 5.293955920339377e-23,
+          "roundoff_allowance_kg_s": 2.2293588691403286e-18
+        },
+        {
+          "node_zero_based": 95,
+          "residual_difference_kg_s": 5.293955920339377e-23,
+          "direct_proposal_defect_difference_kg_s": 5.293955920339377e-23,
+          "roundoff_allowance_kg_s": 2.2072736457340454e-18
+        },
+        {
+          "node_zero_based": 96,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 2.1862028062194845e-18
+        },
+        {
+          "node_zero_based": 97,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 5.293955920339377e-23,
+          "roundoff_allowance_kg_s": 2.1662951879577197e-18
+        },
+        {
+          "node_zero_based": 98,
+          "residual_difference_kg_s": 5.293955920339377e-23,
+          "direct_proposal_defect_difference_kg_s": 5.293955920339377e-23,
+          "roundoff_allowance_kg_s": 2.14762611306686e-18
+        },
+        {
+          "node_zero_based": 99,
+          "residual_difference_kg_s": 1.5881867761018131e-22,
+          "direct_proposal_defect_difference_kg_s": 1.5881867761018131e-22,
+          "roundoff_allowance_kg_s": 2.130219541420453e-18
+        },
+        {
+          "node_zero_based": 100,
+          "residual_difference_kg_s": 5.293955920339377e-23,
+          "direct_proposal_defect_difference_kg_s": 2.6469779601696886e-23,
+          "roundoff_allowance_kg_s": 2.1140877859986598e-18
+        }
+      ]
+    },
+    {
+      "field": "wave",
+      "interior_equations_checked": 100,
+      "max_residual_difference_kg_s": 2.0954139277193297e-20,
+      "max_direct_proposal_defect_difference_kg_s": 2.005085804828539e-20,
+      "max_reference_scaled_ratio": 7.6763755192985235,
+      "checks": [
+        {
+          "node_zero_based": 1,
+          "residual_difference_kg_s": 2.0954139277193297e-20,
+          "direct_proposal_defect_difference_kg_s": 2.005085804828539e-20,
+          "roundoff_allowance_kg_s": 4.974248386021402e-17
+        },
+        {
+          "node_zero_based": 2,
+          "residual_difference_kg_s": 1.0759965408089784e-20,
+          "direct_proposal_defect_difference_kg_s": 1.0296744265060088e-20,
+          "roundoff_allowance_kg_s": 4.9743123965463206e-17
+        },
+        {
+          "node_zero_based": 3,
+          "residual_difference_kg_s": 1.4558378780933287e-21,
+          "direct_proposal_defect_difference_kg_s": 1.376428539288238e-21,
+          "roundoff_allowance_kg_s": 4.974472013718908e-17
+        },
+        {
+          "node_zero_based": 4,
+          "residual_difference_kg_s": 2.6469779601696886e-21,
+          "direct_proposal_defect_difference_kg_s": 2.4881592825595072e-21,
+          "roundoff_allowance_kg_s": 4.974770041911914e-17
+        },
+        {
+          "node_zero_based": 5,
+          "residual_difference_kg_s": 1.0587911840678754e-20,
+          "direct_proposal_defect_difference_kg_s": 1.0164395367051604e-20,
+          "roundoff_allowance_kg_s": 4.975197015126397e-17
+        },
+        {
+          "node_zero_based": 6,
+          "residual_difference_kg_s": 1.2705494208814505e-21,
+          "direct_proposal_defect_difference_kg_s": 1.2176098616780567e-21,
+          "roundoff_allowance_kg_s": 4.975728770033717e-17
+        },
+        {
+          "node_zero_based": 7,
+          "residual_difference_kg_s": 5.558653716356346e-21,
+          "direct_proposal_defect_difference_kg_s": 5.346895479542771e-21,
+          "roundoff_allowance_kg_s": 4.9763402708656524e-17
+        },
+        {
+          "node_zero_based": 8,
+          "residual_difference_kg_s": 1.8211208365967457e-20,
+          "direct_proposal_defect_difference_kg_s": 1.7364175418713157e-20,
+          "roundoff_allowance_kg_s": 4.9770201762076176e-17
+        },
+        {
+          "node_zero_based": 9,
+          "residual_difference_kg_s": 2.064642808932357e-20,
+          "direct_proposal_defect_difference_kg_s": 1.979939514206927e-20,
+          "roundoff_allowance_kg_s": 4.9777968788634094e-17
+        },
+        {
+          "node_zero_based": 10,
+          "residual_difference_kg_s": 2.117582368135751e-21,
+          "direct_proposal_defect_difference_kg_s": 2.0117032497289633e-21,
+          "roundoff_allowance_kg_s": 4.978674243671691e-17
+        },
+        {
+          "node_zero_based": 11,
+          "residual_difference_kg_s": 2.752857078576476e-21,
+          "direct_proposal_defect_difference_kg_s": 2.6469779601696886e-21,
+          "roundoff_allowance_kg_s": 4.9796439057296566e-17
+        },
+        {
+          "node_zero_based": 12,
+          "residual_difference_kg_s": 1.376428539288238e-21,
+          "direct_proposal_defect_difference_kg_s": 1.2705494208814505e-21,
+          "roundoff_allowance_kg_s": 4.980641365153557e-17
+        },
+        {
+          "node_zero_based": 13,
+          "residual_difference_kg_s": 1.4399560103323106e-20,
+          "direct_proposal_defect_difference_kg_s": 1.376428539288238e-20,
+          "roundoff_allowance_kg_s": 4.9816185293548163e-17
+        },
+        {
+          "node_zero_based": 14,
+          "residual_difference_kg_s": 4.235164736271502e-22,
+          "direct_proposal_defect_difference_kg_s": 4.235164736271502e-22,
+          "roundoff_allowance_kg_s": 4.982626705121759e-17
+        },
+        {
+          "node_zero_based": 15,
+          "residual_difference_kg_s": 5.293955920339377e-21,
+          "direct_proposal_defect_difference_kg_s": 5.082197683525802e-21,
+          "roundoff_allowance_kg_s": 4.982983334279009e-17
+        },
+        {
+          "node_zero_based": 16,
+          "residual_difference_kg_s": 2.329340604949326e-21,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-21,
+          "roundoff_allowance_kg_s": 4.976882923280402e-17
+        },
+        {
+          "node_zero_based": 17,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 4.95831006736931e-17
+        },
+        {
+          "node_zero_based": 18,
+          "residual_difference_kg_s": 3.1763735522036263e-21,
+          "direct_proposal_defect_difference_kg_s": 3.0704944337968387e-21,
+          "roundoff_allowance_kg_s": 4.924982542516924e-17
+        },
+        {
+          "node_zero_based": 19,
+          "residual_difference_kg_s": 8.152692117322641e-21,
+          "direct_proposal_defect_difference_kg_s": 7.940933880509066e-21,
+          "roundoff_allowance_kg_s": 4.8778235894120783e-17
+        },
+        {
+          "node_zero_based": 20,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 0.0,
+          "roundoff_allowance_kg_s": 4.8194442110661554e-17
+        },
+        {
+          "node_zero_based": 21,
+          "residual_difference_kg_s": 8.787966827763366e-21,
+          "direct_proposal_defect_difference_kg_s": 8.682087709356578e-21,
+          "roundoff_allowance_kg_s": 4.7527875821342505e-17
+        },
+        {
+          "node_zero_based": 22,
+          "residual_difference_kg_s": 9.846758011831241e-21,
+          "direct_proposal_defect_difference_kg_s": 9.634999775017666e-21,
+          "roundoff_allowance_kg_s": 4.6803940629789406e-17
+        },
+        {
+          "node_zero_based": 23,
+          "residual_difference_kg_s": 3.1763735522036263e-21,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-21,
+          "roundoff_allowance_kg_s": 4.6030601035804477e-17
+        },
+        {
+          "node_zero_based": 24,
+          "residual_difference_kg_s": 1.0164395367051604e-20,
+          "direct_proposal_defect_difference_kg_s": 1.0164395367051604e-20,
+          "roundoff_allowance_kg_s": 4.5233437017848487e-17
+        },
+        {
+          "node_zero_based": 25,
+          "residual_difference_kg_s": 3.3881317890172014e-21,
+          "direct_proposal_defect_difference_kg_s": 3.3881317890172014e-21,
+          "roundoff_allowance_kg_s": 4.4501237170365874e-17
+        },
+        {
+          "node_zero_based": 26,
+          "residual_difference_kg_s": 1.0164395367051604e-20,
+          "direct_proposal_defect_difference_kg_s": 8.470329472543003e-21,
+          "roundoff_allowance_kg_s": 4.373490506063508e-17
+        },
+        {
+          "node_zero_based": 27,
+          "residual_difference_kg_s": 5.399835038746165e-21,
+          "direct_proposal_defect_difference_kg_s": 5.293955920339377e-21,
+          "roundoff_allowance_kg_s": 4.287550899753459e-17
+        },
+        {
+          "node_zero_based": 28,
+          "residual_difference_kg_s": 1.555099551599692e-21,
+          "direct_proposal_defect_difference_kg_s": 1.5352472168984194e-21,
+          "roundoff_allowance_kg_s": 4.206669598786063e-17
+        },
+        {
+          "node_zero_based": 29,
+          "residual_difference_kg_s": 4.658681209898652e-21,
+          "direct_proposal_defect_difference_kg_s": 4.552802091491864e-21,
+          "roundoff_allowance_kg_s": 4.126080043221824e-17
+        },
+        {
+          "node_zero_based": 30,
+          "residual_difference_kg_s": 8.152692117322641e-21,
+          "direct_proposal_defect_difference_kg_s": 8.152692117322641e-21,
+          "roundoff_allowance_kg_s": 4.044906877456321e-17
+        },
+        {
+          "node_zero_based": 31,
+          "residual_difference_kg_s": 6.03510974918689e-21,
+          "direct_proposal_defect_difference_kg_s": 6.03510974918689e-21,
+          "roundoff_allowance_kg_s": 3.963368164143564e-17
+        },
+        {
+          "node_zero_based": 32,
+          "residual_difference_kg_s": 1.4823076576950256e-21,
+          "direct_proposal_defect_difference_kg_s": 1.4823076576950256e-21,
+          "roundoff_allowance_kg_s": 3.881512725670952e-17
+        },
+        {
+          "node_zero_based": 33,
+          "residual_difference_kg_s": 4.552802091491864e-21,
+          "direct_proposal_defect_difference_kg_s": 4.552802091491864e-21,
+          "roundoff_allowance_kg_s": 3.7994078278039387e-17
+        },
+        {
+          "node_zero_based": 34,
+          "residual_difference_kg_s": 4.235164736271502e-21,
+          "direct_proposal_defect_difference_kg_s": 4.235164736271502e-21,
+          "roundoff_allowance_kg_s": 3.7171110428983034e-17
+        },
+        {
+          "node_zero_based": 35,
+          "residual_difference_kg_s": 7.411538288475128e-22,
+          "direct_proposal_defect_difference_kg_s": 7.411538288475128e-22,
+          "roundoff_allowance_kg_s": 3.634813340394329e-17
+        },
+        {
+          "node_zero_based": 36,
+          "residual_difference_kg_s": 1.2705494208814505e-21,
+          "direct_proposal_defect_difference_kg_s": 1.2705494208814505e-21,
+          "roundoff_allowance_kg_s": 3.552342981365343e-17
+        },
+        {
+          "node_zero_based": 37,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 0.0,
+          "roundoff_allowance_kg_s": 3.4697610201092984e-17
+        },
+        {
+          "node_zero_based": 38,
+          "residual_difference_kg_s": 2.2234614865425384e-21,
+          "direct_proposal_defect_difference_kg_s": 2.2234614865425384e-21,
+          "roundoff_allowance_kg_s": 3.387105691584511e-17
+        },
+        {
+          "node_zero_based": 39,
+          "residual_difference_kg_s": 2.117582368135751e-21,
+          "direct_proposal_defect_difference_kg_s": 2.2234614865425384e-21,
+          "roundoff_allowance_kg_s": 3.304403715927367e-17
+        },
+        {
+          "node_zero_based": 40,
+          "residual_difference_kg_s": 7.411538288475128e-22,
+          "direct_proposal_defect_difference_kg_s": 6.352747104407253e-22,
+          "roundoff_allowance_kg_s": 3.2216782409195333e-17
+        },
+        {
+          "node_zero_based": 41,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 0.0,
+          "roundoff_allowance_kg_s": 3.1389433834630977e-17
+        },
+        {
+          "node_zero_based": 42,
+          "residual_difference_kg_s": 2.541098841762901e-21,
+          "direct_proposal_defect_difference_kg_s": 2.541098841762901e-21,
+          "roundoff_allowance_kg_s": 3.056212005940751e-17
+        },
+        {
+          "node_zero_based": 43,
+          "residual_difference_kg_s": 4.235164736271502e-22,
+          "direct_proposal_defect_difference_kg_s": 5.293955920339377e-22,
+          "roundoff_allowance_kg_s": 2.973496323189846e-17
+        },
+        {
+          "node_zero_based": 44,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.890806714502723e-17
+        },
+        {
+          "node_zero_based": 45,
+          "residual_difference_kg_s": 2.4352197233561135e-21,
+          "direct_proposal_defect_difference_kg_s": 2.4352197233561135e-21,
+          "roundoff_allowance_kg_s": 2.8081520662445676e-17
+        },
+        {
+          "node_zero_based": 46,
+          "residual_difference_kg_s": 7.411538288475128e-21,
+          "direct_proposal_defect_difference_kg_s": 7.411538288475128e-21,
+          "roundoff_allowance_kg_s": 2.7255376827233657e-17
+        },
+        {
+          "node_zero_based": 47,
+          "residual_difference_kg_s": 2.541098841762901e-21,
+          "direct_proposal_defect_difference_kg_s": 2.541098841762901e-21,
+          "roundoff_allowance_kg_s": 2.6429730757362125e-17
+        },
+        {
+          "node_zero_based": 48,
+          "residual_difference_kg_s": 3.282252670610414e-21,
+          "direct_proposal_defect_difference_kg_s": 3.282252670610414e-21,
+          "roundoff_allowance_kg_s": 2.5604640755557493e-17
+        },
+        {
+          "node_zero_based": 49,
+          "residual_difference_kg_s": 4.235164736271502e-22,
+          "direct_proposal_defect_difference_kg_s": 4.235164736271502e-22,
+          "roundoff_allowance_kg_s": 2.4813135202411757e-17
+        },
+        {
+          "node_zero_based": 50,
+          "residual_difference_kg_s": 5.293955920339377e-22,
+          "direct_proposal_defect_difference_kg_s": 5.293955920339377e-22,
+          "roundoff_allowance_kg_s": 2.483558431162806e-17
+        },
+        {
+          "node_zero_based": 51,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 2.4857789418736774e-17
+        },
+        {
+          "node_zero_based": 52,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 2.4879651035538393e-17
+        },
+        {
+          "node_zero_based": 53,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.4901055562958447e-17
+        },
+        {
+          "node_zero_based": 54,
+          "residual_difference_kg_s": 6.352747104407253e-22,
+          "direct_proposal_defect_difference_kg_s": 6.352747104407253e-22,
+          "roundoff_allowance_kg_s": 2.4921921038036143e-17
+        },
+        {
+          "node_zero_based": 55,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 2.4942199790924394e-17
+        },
+        {
+          "node_zero_based": 56,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 2.496186711598877e-17
+        },
+        {
+          "node_zero_based": 57,
+          "residual_difference_kg_s": 5.293955920339377e-22,
+          "direct_proposal_defect_difference_kg_s": 6.352747104407253e-22,
+          "roundoff_allowance_kg_s": 2.4980918898925315e-17
+        },
+        {
+          "node_zero_based": 58,
+          "residual_difference_kg_s": 9.529120656610879e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-21,
+          "roundoff_allowance_kg_s": 2.499936707884524e-17
+        },
+        {
+          "node_zero_based": 59,
+          "residual_difference_kg_s": 7.411538288475128e-22,
+          "direct_proposal_defect_difference_kg_s": 6.352747104407253e-22,
+          "roundoff_allowance_kg_s": 2.5017235615662083e-17
+        },
+        {
+          "node_zero_based": 60,
+          "residual_difference_kg_s": 5.293955920339377e-22,
+          "direct_proposal_defect_difference_kg_s": 5.293955920339377e-22,
+          "roundoff_allowance_kg_s": 2.503455666593436e-17
+        },
+        {
+          "node_zero_based": 61,
+          "residual_difference_kg_s": 6.352747104407253e-22,
+          "direct_proposal_defect_difference_kg_s": 6.352747104407253e-22,
+          "roundoff_allowance_kg_s": 2.50513674101641e-17
+        },
+        {
+          "node_zero_based": 62,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 2.5067707638201324e-17
+        },
+        {
+          "node_zero_based": 63,
+          "residual_difference_kg_s": 5.293955920339377e-22,
+          "direct_proposal_defect_difference_kg_s": 5.293955920339377e-22,
+          "roundoff_allowance_kg_s": 2.5083616523163868e-17
+        },
+        {
+          "node_zero_based": 64,
+          "residual_difference_kg_s": 9.529120656610879e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-21,
+          "roundoff_allowance_kg_s": 2.5099125953874624e-17
+        },
+        {
+          "node_zero_based": 65,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.5114265679037486e-17
+        },
+        {
+          "node_zero_based": 66,
+          "residual_difference_kg_s": 6.352747104407253e-22,
+          "direct_proposal_defect_difference_kg_s": 6.352747104407253e-22,
+          "roundoff_allowance_kg_s": 2.51290652087726e-17
+        },
+        {
+          "node_zero_based": 67,
+          "residual_difference_kg_s": 4.235164736271502e-22,
+          "direct_proposal_defect_difference_kg_s": 5.293955920339377e-22,
+          "roundoff_allowance_kg_s": 2.514355412965655e-17
+        },
+        {
+          "node_zero_based": 68,
+          "residual_difference_kg_s": 4.235164736271502e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 2.5157762141680464e-17
+        },
+        {
+          "node_zero_based": 69,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 2.517171898770388e-17
+        },
+        {
+          "node_zero_based": 70,
+          "residual_difference_kg_s": 7.411538288475128e-22,
+          "direct_proposal_defect_difference_kg_s": 7.411538288475128e-22,
+          "roundoff_allowance_kg_s": 2.5185454220819858e-17
+        },
+        {
+          "node_zero_based": 71,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.5198965182322028e-17
+        },
+        {
+          "node_zero_based": 72,
+          "residual_difference_kg_s": 6.352747104407253e-22,
+          "direct_proposal_defect_difference_kg_s": 6.352747104407253e-22,
+          "roundoff_allowance_kg_s": 2.521220935088631e-17
+        },
+        {
+          "node_zero_based": 73,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 0.0,
+          "roundoff_allowance_kg_s": 2.5225166284047194e-17
+        },
+        {
+          "node_zero_based": 74,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 0.0,
+          "roundoff_allowance_kg_s": 2.5237842665988073e-17
+        },
+        {
+          "node_zero_based": 75,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 2.525026691555569e-17
+        },
+        {
+          "node_zero_based": 76,
+          "residual_difference_kg_s": 6.352747104407253e-22,
+          "direct_proposal_defect_difference_kg_s": 6.352747104407253e-22,
+          "roundoff_allowance_kg_s": 2.5261978108953633e-17
+        },
+        {
+          "node_zero_based": 77,
+          "residual_difference_kg_s": 6.352747104407253e-22,
+          "direct_proposal_defect_difference_kg_s": 7.411538288475128e-22,
+          "roundoff_allowance_kg_s": 2.5272469779978713e-17
+        },
+        {
+          "node_zero_based": 78,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 2.528192907068795e-17
+        },
+        {
+          "node_zero_based": 79,
+          "residual_difference_kg_s": 5.293955920339377e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 2.5290739249627485e-17
+        },
+        {
+          "node_zero_based": 80,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 2.5299285807065348e-17
+        },
+        {
+          "node_zero_based": 81,
+          "residual_difference_kg_s": 4.235164736271502e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 2.5307887936209845e-17
+        },
+        {
+          "node_zero_based": 82,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 2.5316788561844218e-17
+        },
+        {
+          "node_zero_based": 83,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 4.235164736271502e-22,
+          "roundoff_allowance_kg_s": 2.532617295148977e-17
+        },
+        {
+          "node_zero_based": 84,
+          "residual_difference_kg_s": 4.235164736271502e-22,
+          "direct_proposal_defect_difference_kg_s": 4.235164736271502e-22,
+          "roundoff_allowance_kg_s": 2.5335922625187314e-17
+        },
+        {
+          "node_zero_based": 85,
+          "residual_difference_kg_s": 0.0,
+          "direct_proposal_defect_difference_kg_s": 0.0,
+          "roundoff_allowance_kg_s": 2.5346011068201068e-17
+        },
+        {
+          "node_zero_based": 86,
+          "residual_difference_kg_s": 1.0587911840678754e-22,
+          "direct_proposal_defect_difference_kg_s": 1.0587911840678754e-22,
+          "roundoff_allowance_kg_s": 2.53568106733619e-17
+        },
+        {
+          "node_zero_based": 87,
+          "residual_difference_kg_s": 4.235164736271502e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 2.5367812597382866e-17
+        },
+        {
+          "node_zero_based": 88,
+          "residual_difference_kg_s": 3.705769144237564e-22,
+          "direct_proposal_defect_difference_kg_s": 4.235164736271502e-22,
+          "roundoff_allowance_kg_s": 2.538023092130807e-17
+        },
+        {
+          "node_zero_based": 89,
+          "residual_difference_kg_s": 1.9852334701272664e-23,
+          "direct_proposal_defect_difference_kg_s": 1.9852334701272664e-23,
+          "roundoff_allowance_kg_s": 2.5396172171824926e-17
+        },
+        {
+          "node_zero_based": 90,
+          "residual_difference_kg_s": 2.6469779601696886e-22,
+          "direct_proposal_defect_difference_kg_s": 2.3822801641527197e-22,
+          "roundoff_allowance_kg_s": 2.5415297835957298e-17
+        },
+        {
+          "node_zero_based": 91,
+          "residual_difference_kg_s": 2.6469779601696886e-22,
+          "direct_proposal_defect_difference_kg_s": 2.6469779601696886e-22,
+          "roundoff_allowance_kg_s": 2.54365742318752e-17
+        },
+        {
+          "node_zero_based": 92,
+          "residual_difference_kg_s": 3.705769144237564e-22,
+          "direct_proposal_defect_difference_kg_s": 3.1763735522036263e-22,
+          "roundoff_allowance_kg_s": 2.545895088733987e-17
+        },
+        {
+          "node_zero_based": 93,
+          "residual_difference_kg_s": 7.411538288475128e-22,
+          "direct_proposal_defect_difference_kg_s": 6.88214269644119e-22,
+          "roundoff_allowance_kg_s": 2.5481585697559242e-17
+        },
+        {
+          "node_zero_based": 94,
+          "residual_difference_kg_s": 5.293955920339377e-22,
+          "direct_proposal_defect_difference_kg_s": 5.293955920339377e-22,
+          "roundoff_allowance_kg_s": 2.5503881017809925e-17
+        },
+        {
+          "node_zero_based": 95,
+          "residual_difference_kg_s": 5.293955920339377e-23,
+          "direct_proposal_defect_difference_kg_s": 0.0,
+          "roundoff_allowance_kg_s": 2.5525438717302166e-17
+        },
+        {
+          "node_zero_based": 96,
+          "residual_difference_kg_s": 8.470329472543003e-22,
+          "direct_proposal_defect_difference_kg_s": 8.470329472543003e-22,
+          "roundoff_allowance_kg_s": 2.5546008719517032e-17
+        },
+        {
+          "node_zero_based": 97,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 2.6469779601696886e-22,
+          "roundoff_allowance_kg_s": 2.5565444960550517e-17
+        },
+        {
+          "node_zero_based": 98,
+          "residual_difference_kg_s": 4.235164736271502e-22,
+          "direct_proposal_defect_difference_kg_s": 4.235164736271502e-22,
+          "roundoff_allowance_kg_s": 2.5583673364362452e-17
+        },
+        {
+          "node_zero_based": 99,
+          "residual_difference_kg_s": 3.1763735522036263e-22,
+          "direct_proposal_defect_difference_kg_s": 2.9116757561866574e-22,
+          "roundoff_allowance_kg_s": 2.5600670131889395e-17
+        },
+        {
+          "node_zero_based": 100,
+          "residual_difference_kg_s": 2.117582368135751e-22,
+          "direct_proposal_defect_difference_kg_s": 2.117582368135751e-22,
+          "roundoff_allowance_kg_s": 2.5616424301390333e-17
+        }
+      ]
+    }
+  ],
+  "case_artifact_sha256": {
+    "assessment.json": "867025c1525933796c6246c75382cb1027180e0498373ceb93c205a7fa1dcdcc",
+    "frozen_state.npz": "5d1dec59cecea2bdd0660c39c716fdba01252f8119e0329646dc5f4f4e7456fe",
+    "frozen_state.json": "d91f8caee988995e0fc4cbc5176d85443c61d33f5458222d5bb28cfccb5aaf77",
+    "effective_inputs.json": "f60b6bd005de5febbb7aa225adbd5728a5db3f4b1cca129142113e86a151c859"
+  },
+  "audit_tool_sha256": "dda7973c67f0cf1a7421729bb09f6f4cb0b5aca928d5a286c1229408998b7fb7",
+  "analyzer_sha256_at_review": "e9026e370e2e9fc3adfce3301cdf724ad685dd496982a6e53be89617f87b5448",
+  "limits": [
+    "Independent arithmetic of the saved baseline source returns only; closure values themselves are not independently validated.",
+    "No alternate numerical-control case is evaluated by this audit.",
+    "No MATLAB-equivalence, full stability or experimental-validation claim."
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "case_id": "ww05-it250",
+  "option_overrides": {
+    "RELAXWW": 0.05,
+    "MAXITER": 250
+  },
+  "role": "separate numerical-control variant"
+}

@@ -24,6 +24,9 @@ output/pdf/Sawai_Control_Study_01/** -text
 tools/run_sawai_control_study.py text eol=lf
 tools/analyze_sawai_control_study.py text eol=lf
 tools/export_sawai_control_pdf.py text eol=lf
+tools/audit_sawai_control_baseline.py text eol=lf
+tools/audit_sawai_control_acceptance.py text eol=lf
+tools/audit_sawai_control_results.py text eol=lf
 # Match the exact runtime bytes bound by scientific source receipts on checkout.
 # These rules preserve the existing normalized Git blobs and all current bytes.
 src/openstream/*.py text eol=lf

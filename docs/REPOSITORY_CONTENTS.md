@@ -21,6 +21,8 @@ the archived results.
 | `references/paper/` | Digitized published curve/marker readings, image-resolution bounds, source hashes and explicit extraction exclusions; not MATLAB output arrays |
 | `outputs/` | Saved numerical outputs, plots, verification reports, logs and retained failed/development runs |
 | `outputs/verification/matched-replay-01/` | Ordered before/after diagnostic replays, unchanged-input comparisons, source/handle audits, separate TwoFluid budget study and archived-baseline recheck |
+| `outputs/verification/sawai-control-study-01/` | Eight preregistered relaxation/iteration cases, preserved failures, exact precursor checks, common-state mass diagnostics, profile sensitivity and independent audit receipts |
+| `output/pdf/Sawai_Control_Study_01/` | Source-bound control-study report and updated acceptance matrix, with title-free plot and PDF layout receipts |
 | `outputs/verification/matched-matlab-replay-kit-02.zip` | Portable source/input/trace bundle for later MATLAB reference execution; statically checked, not executed in MATLAB |
 | `output/pdf/LeCorre_2025_Reports_03/` | Current three source-linked PDFs: clean figure plates with main Figure 7 at 0.2 s, OpenSTREAM convergence/supplemental diagnostics review, and amended acceptance matrix |
 | `output/pdf/Matched_Diagnostic_Replay_01/` | Later replay report and updated acceptance matrix; source-bound PDFs with retained text/numbers, A3 diagnostic plot and layout receipts |

@@ -24,6 +24,15 @@ translation correction is justified by the reviewed evidence. Acceptance
 statuses are unchanged; the diagnosis is neither a convergence pass nor a new
 MATLAB or experimental-validation result.
 
+The [separate Sawai control study](SAWAI_CONTROL_STUDY.md) executes all eight
+registered RELAXWW/MAXITER settings: six native passes, zero qualified candidates
+under its fixed-scale common-state mass screen. All precursor arrays are exact,
+and the fresh original-control case reproduces all 215 reference arrays.
+Iteration-cap increases have negligible effect; relaxation-sensitive profiles
+and wave defects remain unresolved. These are numerical diagnostics, not new
+closure criteria. All governing equations, tolerances and defaults remain fixed;
+the acceptance ledger gains evidence without promoting any status axis.
+
 ## Progress measures
 
 | Measure | Numerator / denominator | Interpretation |

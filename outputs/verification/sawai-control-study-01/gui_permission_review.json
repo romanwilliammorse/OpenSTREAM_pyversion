@@ -1,0 +1,85 @@
+{
+  "schema": "openstream-gui-status-permission-review-v1",
+  "scope": "Read-only source and retained temporary-run inspection; one rerun of exactly the two failed tests. No source or test edits.",
+  "original_full_test_log_sha256": "a6d285715bff7d9f8024bcb13887cdb7d85e3e2f858975514601917c33e05c25",
+  "original_full_test_result": {
+    "passed": 570,
+    "failed": 2,
+    "warnings": 2
+  },
+  "observed_error": "PermissionError [Errno 13] while opening status.json for reading at gui.py:48; not a numerical assertion failure.",
+  "observed_original_jobs": [
+    {
+      "framework": "Mixture",
+      "original_status_path": "C:\\Users\\Roman\\AppData\\Local\\Temp\\pytest-of-Roman\\pytest-99\\test_real_baseline_run_Mixture0\\runs\\35f9b0aa7d254de68092d612008f8ab6\\status.json",
+      "copied_status_path": "outputs/verification/sawai-control-study-01/gui_permission_evidence/Mixture-status.json",
+      "sha256": "a4bc3c4c404cdf56c76e0172b24be2263d7837063678ab42ce09de5b40da8e24",
+      "observed_final_status": "completed",
+      "converged": true,
+      "reference_status": "passed",
+      "physical_status": "passed",
+      "worker_log_bytes": 0,
+      "finished_at": "2026-11-15T08:48:43.884796+00:00"
+    },
+    {
+      "framework": "ThreeField",
+      "original_status_path": "C:\\Users\\Roman\\AppData\\Local\\Temp\\pytest-of-Roman\\pytest-99\\test_real_baseline_run_ThreeFi0\\runs\\c9055195ad5b4412a44887a33c031054\\status.json",
+      "copied_status_path": "outputs/verification/sawai-control-study-01/gui_permission_evidence/ThreeField-status.json",
+      "sha256": "60047023c3672b03583feb70169431fa66eae695bac49eb1edd0ce07c100974e",
+      "observed_final_status": "completed",
+      "converged": true,
+      "reference_status": "passed",
+      "physical_status": "informational",
+      "worker_log_bytes": 0,
+      "finished_at": "2026-11-15T08:49:05.396035+00:00"
+    }
+  ],
+  "recheck_command": ".venv/Scripts/python.exe -m pytest -q tests/test_gui.py::test_real_baseline_run[Mixture] tests/test_gui.py::test_real_baseline_run[ThreeField]",
+  "recheck_attempts": 1,
+  "recheck_result": {
+    "passed": 2,
+    "seconds": 18.12,
+    "log_sha256": "82673b6e14caa280028546787a831a9b8f911d8acc233941949dd5111d087178"
+  },
+  "source_observations": [
+    "RunManager.status directly calls Path.read_text under a process-local threading.RLock.",
+    "The separate worker writes a temporary JSON file, then calls os.replace; writer-side PermissionError retries are bounded at 10 attempts, 0.02 s apart.",
+    "The reader has no equivalent PermissionError retry.",
+    "The test polls every 0.1 s; its fixture closes only the server lock after failure, allowing the worker to finish."
+  ],
+  "inference": "A transient file-access or sharing conflict during concurrent status replacement and polling is consistent with the failures and later readable completed jobs. This is plausible race attribution, not identification of the exact lock holder or proof that os.replace caused the read failure.",
+  "limitations": [
+    "Original traceback does not preserve a Windows-specific winerror value or file-handle trace.",
+    "External file scanners or another transient handle are not excluded.",
+    "One passing rerun does not repair or disprove the original failures.",
+    "This investigation does not change the eight numerical-study results or equations."
+  ],
+  "native_source_sha256": {
+    "__init__.py": "3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "annular.py": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+    "cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+    "database.py": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
+    "experimental_comparison.py": "03c12bcfe1e8de115092d0ea1a19e21ec177c5983c575b63183a67453b3fd1f4",
+    "ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+    "fields.py": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+    "fourfield.py": "5dafef4ee0d26f71e9e9083a61304b6d06f36e5a852f6981f0092269064692c8",
+    "gui.py": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
+    "gui_launcher.py": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+    "gui_lock.py": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+    "gui_reference.py": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+    "gui_schema.py": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+    "gui_worker.py": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
+    "inputs.py": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+    "multifield_output.py": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+    "numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+    "output.py": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+    "plotting.py": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+    "properties.py": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+    "solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+    "tf_fields.py": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+    "threefield.py": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+    "twofluid.py": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c"
+  },
+  "all25native_modules_unchanged": true
+}

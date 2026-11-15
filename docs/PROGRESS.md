@@ -2,6 +2,45 @@
 
 The user's requested full native port is **not yet complete**. Continue implementation and verification without replacing the preserved source or changing equations to obtain passing tests.
 
+## Sawai relaxation and iteration controls — 2026-11-15
+
+The user authorized a separate control study and reinforced the project-wide
+requirement to keep all governing equations unchanged. `AGENTS.md` now records
+that requirement for future work. No numerical source or closure is changed.
+
+Preregistration `a43298385963a248fc9dac2ffef517122724fb77` freezes eight cases in
+`examples/sawai_control_study.json`: RELAXWW=0.5/0.25/0.1/0.05 crossed with
+MAXITER=100/250, within the source uint8 range. RELAXTW=0.2 s, 100 cells, all
+other controls and all tolerances remain fixed. The frozen 78-node annular mask
+and reference-scaled common-state mass-defect screen are supplementary numerical
+diagnostics, not new governing equations or solver stopping criteria.
+
+All eight attempts are complete under `outputs/verification/sawai-control-study-01/`.
+Six native passes occur at RELAXWW=0.25/0.1/0.05 under either budget. Both 0.5
+cases fail. None passes the supplementary fixed-scale wave mass screen:
+q maxima are 7.676376/2.995932/4.166721/9.088923 for 0.5/0.25/0.1/0.05.
+All base q maxima are below 0.366. Both precursor files are exact in every case;
+the fresh 0.5/100 reference reproduces all 215 arrays exactly. Increasing
+MAXITER has negligible effect. The native-passing 0.25 and 0.05 profiles differ
+by up to 0.841385 m/s in wave velocity and 2.655725 ms in period. No new default
+or translation correction is selected.
+
+Runner checkpoint `c89952f` has 12 focused tests; the independent analyzer adds
+10. The 200-equation baseline Decimal audit passes. Initial full local pytest:
+570 passed, two GUI PermissionError failures. The exactly-once recheck passes
+both tests; both original workers subsequently completed and passed archived
+comparisons. Original failure logs are retained. Frontend: 11 passed. Source
+and scientific states remain unchanged. The report is `docs/SAWAI_CONTROL_STUDY.md`;
+analysis artifacts are in `analysis/`. Seven ledger evidence rows and plan W3
+are updated without changing any acceptance criteria or status axes.
+
+Next: observe final sequential proposals and later coupled changes for the
+0.25 native pass, reconstruct the common-state wave defect, then preregister
+a separate tighter-stopping/control study if justified. Do not claim the
+two-cycle is eliminated from final summaries alone. Do not overwrite current
+attempts or change governing equations. No matched MATLAB or experimental
+validation follows from this study; MATLAB access remains unavailable.
+
 ## Sawai oscillation diagnosis — 2026-11-15
 
 Completed the requested source-unchanged diagnosis of Sawai entry 1 at

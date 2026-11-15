@@ -1,0 +1,258 @@
+{
+  "schema": "openstream-sawai-control-study-v1",
+  "baseline_commit": "6774a3d78649f6c48d8a6c6314839897ea531cfa",
+  "original_run_id": "sawai-01-paper-tw020-n100-base",
+  "corrected_reference_directory": "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base",
+  "corrected_reference_sha256": {
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/comparison_profiles.npz": "046fe83f222f6892bcd5e43f0d638f7b5dd0950fbba2a1206096c2db9e4b8c0d",
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/numerical/results.npz": "037044c4825729b17d32f65934aeb037838940c0bb991ba85557a313b31d7d8f",
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/numerical/initialization.npz": "266b6acabc747f8349c5636a2acb52ac38b7767ad6d159a32ee285c3ab0e83c9",
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/numerical/mixture/results.npz": "62305ec2f2f4d63b5f8bfe208e72c31563c67f42d7b52e8e91bc352da729722b",
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/numerical/mixture/initialization.npz": "cc4c1f543c5c83dcc61d404bfcd03dff306fcf0b081ba5f14c7d55c8c2d804af",
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/effective_inputs.json": "f60b6bd005de5febbb7aa225adbd5728a5db3f4b1cca129142113e86a151c859",
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/update_trace.jsonl": "a74f74e0eed9994fd8e05e1dfd43f421c374fb0a8767b980bca0be483c1b5098",
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/point_trace.csv": "ce16490d753ed3e0ba55c80ba04245394ece75c30a92a303b99c817d76a8c439"
+  },
+  "native_source_sha256": {
+    "__init__.py": "3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "annular.py": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+    "cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+    "database.py": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
+    "experimental_comparison.py": "03c12bcfe1e8de115092d0ea1a19e21ec177c5983c575b63183a67453b3fd1f4",
+    "ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+    "fields.py": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+    "fourfield.py": "5dafef4ee0d26f71e9e9083a61304b6d06f36e5a852f6981f0092269064692c8",
+    "gui.py": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
+    "gui_launcher.py": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+    "gui_lock.py": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+    "gui_reference.py": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+    "gui_schema.py": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+    "gui_worker.py": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
+    "inputs.py": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+    "multifield_output.py": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+    "numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+    "output.py": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+    "plotting.py": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+    "properties.py": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+    "solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+    "tf_fields.py": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+    "threefield.py": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+    "twofluid.py": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c"
+  },
+  "numeric_files": [
+    "comparison_profiles.npz",
+    "numerical/results.npz",
+    "numerical/initialization.npz",
+    "numerical/mixture/results.npz",
+    "numerical/mixture/initialization.npz"
+  ],
+  "cases": [
+    {
+      "case_id": "ww50-it100",
+      "option_overrides": {
+        "RELAXWW": 0.5,
+        "MAXITER": 100
+      },
+      "role": "fresh reference control"
+    },
+    {
+      "case_id": "ww50-it250",
+      "option_overrides": {
+        "RELAXWW": 0.5,
+        "MAXITER": 250
+      },
+      "role": "separate numerical-control variant"
+    },
+    {
+      "case_id": "ww25-it100",
+      "option_overrides": {
+        "RELAXWW": 0.25,
+        "MAXITER": 100
+      },
+      "role": "separate numerical-control variant"
+    },
+    {
+      "case_id": "ww25-it250",
+      "option_overrides": {
+        "RELAXWW": 0.25,
+        "MAXITER": 250
+      },
+      "role": "separate numerical-control variant"
+    },
+    {
+      "case_id": "ww10-it100",
+      "option_overrides": {
+        "RELAXWW": 0.1,
+        "MAXITER": 100
+      },
+      "role": "separate numerical-control variant"
+    },
+    {
+      "case_id": "ww10-it250",
+      "option_overrides": {
+        "RELAXWW": 0.1,
+        "MAXITER": 250
+      },
+      "role": "separate numerical-control variant"
+    },
+    {
+      "case_id": "ww05-it100",
+      "option_overrides": {
+        "RELAXWW": 0.05,
+        "MAXITER": 100
+      },
+      "role": "separate numerical-control variant"
+    },
+    {
+      "case_id": "ww05-it250",
+      "option_overrides": {
+        "RELAXWW": 0.05,
+        "MAXITER": 250
+      },
+      "role": "separate numerical-control variant"
+    }
+  ],
+  "fixed_physical_case": {
+    "RELAXTW_s": 0.2,
+    "cells": 100
+  },
+  "source_constraints": {
+    "MAXITER_type": "uint8",
+    "minimum": 1,
+    "maximum": 255,
+    "study_maximum": 250,
+    "anchor": "upstream/+Inputs/Options.m:15"
+  },
+  "fixed_controls": {
+    "RELAXWB": 0.5,
+    "SSMAXITER": 30,
+    "SSTSTEP": 1
+  },
+  "prohibited_changes": [
+    "governing equations",
+    "closure models",
+    "physical inputs and coefficients",
+    "all convergence tolerances",
+    "application defaults",
+    "preserved reference results"
+  ],
+  "acceptance": {
+    "native": "Retain the original solver point, temporal, frequency, onset and nested convergence definitions without modification.",
+    "baseline_reproducibility": "Fresh ww50-it100 must reproduce all215 saved reference arrays exactly.",
+    "precursor_identity": "Compare both saved mixture results and initialization arrays exactly; report any differences instead of attributing every change to FourField alone.",
+    "supplementary_mass_defect": "For each base/wave field at the final saved state compute R=Wj-Wj-1+(dz/dt)*(Wj/Uj-Woldj/Uoldj)-P*MTOTj*dz. Compute D=-Uj/(Uj+dz/dt)*R. Report max(0.5*abs(D)/P)/ERRORWF with original fixed ERRORWF; strict ratio<1 is a reference-scaled numerical diagnostic, not a new solver stop or closure.",
+    "mass_defect_masks": "Report all solved nodes j>=1 and the same frozen mask from the corrected reference: j>=onset and reference base and wave mass flows>0. Report actual per-case masks additionally; never silently drop failures.",
+    "profile_sensitivity": "Report absolute and relative differences between iteration budgets at each relaxation and between converged variants; do not invent a full-parity score or certify mesh independence.",
+    "bounds": "Retain nonfinite states, signed droplet flow, existing balances and warnings. Annular phase-volume closure remains informational.",
+    "matlab": "No matched MATLAB equivalence claimed.",
+    "experimental": "No measurement fitting or experimental-validation claim; numerical controls are not physical calibration.",
+    "qualified_numerical_control_candidate": {
+      "all_required": [
+        "original native converged flag true",
+        "source onset and nested closure checks pass",
+        "both mixture result and initialization precursor comparisons exact",
+        "all primary W/U/H/F states finite",
+        "frozen reference mask nonempty and retained unchanged",
+        "candidate base and wave mass flows and usable velocities positive on every frozen-mask node",
+        "both base and wave reference-scaled mass-defect maxima finite and strictly less than1 on the frozen reference mask"
+      ],
+      "scope": "Numerical-control adequacy screen only; not a solver stopping predicate, governing equation, physical-validation gate or MATLAB-equivalence claim",
+      "all_node_reporting": "Always retain full interior residuals, nonfinite diagnostics, exclusions and signed-flow bounds even if masked qualification succeeds"
+    }
+  },
+  "execution_policy": {
+    "run_all_eight_cases": true,
+    "no_adaptive_case_additions": true,
+    "preserve_every_attempt": true,
+    "independent_processes_allowed": true,
+    "maximum_parallel_runs": 2,
+    "new_output_directory_per_case": true,
+    "postsolve_source_evaluations": "Only on a separate copied state, explicitly labelled evaluated diagnostics rather than observed iteration returns; verify original arrays/caches unchanged."
+  },
+  "frozen_reference_mask": {
+    "onset_node_zero_based": 23,
+    "nodes_zero_based": [
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100
+    ],
+    "source_initialization_sha256": "266b6acabc747f8349c5636a2acb52ac38b7767ad6d159a32ee285c3ab0e83c9",
+    "definition": "j>=1 and j>=reference onset, reference base.W>0 and wave.W>0; fixed before study results"
+  }
+}
