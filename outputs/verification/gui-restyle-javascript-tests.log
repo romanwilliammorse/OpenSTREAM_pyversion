@@ -1,0 +1,13 @@
+✔ enthalpy and velocity groups exclude derivatives and diagnostic copies (1.3243ms)
+✔ reference overlays choose the matching time rather than the native array index (0.3666ms)
+✔ missing reference states are omitted without clamping to a different state (0.1454ms)
+✔ individual derivative profiles keep their derivative units (0.2094ms)
+✔ input import rejects unknown explicit schema versions (0.5333ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 93.0468

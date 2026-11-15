@@ -1,0 +1,55 @@
+{
+  "schema": "openstream-github-ci-verification-v1",
+  "observed_utc": "2026-11-15T00:51:56.308801+00:00",
+  "repository": "romanwilliammorse/OpenSTREAM_pyversion",
+  "workflow_run_id": 43659759994,
+  "job_id": 132646201024,
+  "workflow_url": "https://github.com/romanwilliammorse/OpenSTREAM_pyversion/actions/runs/43659759994",
+  "tested_commit": "9b3d67e8e56f30381a7ae127792de42079148546",
+  "status": "completed",
+  "conclusion": "success",
+  "job": "windows",
+  "runner_os": "Microsoft Windows Server 2025",
+  "runner_image": "windows-2025-vs2026",
+  "python_version": "3.12.10",
+  "checks": {
+    "recursive_checkout": "success",
+    "python_and_node_setup": "success",
+    "pinned_dependency_install": "success",
+    "pip_check": "No broken requirements found.",
+    "pytest": {
+      "passed": 213,
+      "warnings": 2,
+      "duration_seconds": 216.94,
+      "warning_details": [
+        {
+          "category": "RuntimeWarning",
+          "message": "divide by zero encountered in divide",
+          "source": "src/openstream/ff_fields.py:178"
+        },
+        {
+          "category": "RuntimeWarning",
+          "message": "invalid value encountered in multiply",
+          "source": "src/openstream/ff_fields.py:140"
+        }
+      ],
+      "warning_note": "Retained known four-field initialization behavior; warnings were reported, not suppressed. Passing tests does not establish physical validity of pre-annular field values."
+    },
+    "frontend_logic": {
+      "tests": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "package_build": {
+      "wheel": "openstream_python-0.2.1-py3-none-any.whl",
+      "sdist": "openstream_python-0.2.1.tar.gz",
+      "status": "success"
+    }
+  },
+  "log": {
+    "file": "outputs/verification/github-windows-ci.log",
+    "sha256": "afe8d80cef169f6f555b3c9334c4a58aa3004a4ad9f29c8f6a3b92cfaee4ac1e",
+    "format": "Decoded GitHub job log; UTF-8 BOM removed and line endings normalized."
+  },
+  "scope": "Clean hosted Windows checkout/install, native numerical and GUI backend tests, frontend logic tests, and distribution build. Browser rendering was checked separately on the local machine. This is not experimental validation."
+}

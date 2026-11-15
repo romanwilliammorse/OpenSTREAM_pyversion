@@ -1,6 +1,6 @@
 {
   "schema": "openstream-publication-audit-v1",
-  "created_utc": "2026-11-15T00:43:47.217905+00:00",
+  "created_utc": "2026-11-15T00:52:24.673588+00:00",
   "scope": "Project source, documentation, tests, tools, results and reference exports; not Git internals or external checkouts.",
   "exclusions": [
     "**/*.egg-info/",
@@ -25,8 +25,8 @@
       "bytes": 15051
     },
     "docs": {
-      "files": 36,
-      "bytes": 818253
+      "files": 37,
+      "bytes": 823143
     },
     "examples": {
       "files": 2,
@@ -37,8 +37,8 @@
       "bytes": 24185
     },
     "outputs": {
-      "files": 1154,
-      "bytes": 194696563
+      "files": 1160,
+      "bytes": 195013877
     },
     "provenance": {
       "files": 4,
@@ -61,9 +61,9 @@
       "bytes": 297378
     }
   },
-  "files": 1352,
-  "bytes": 208525042,
-  "text_files_scanned": 925,
+  "files": 1359,
+  "bytes": 208847246,
+  "text_files_scanned": 930,
   "credential_pattern_findings": [],
   "files_at_least_50_MiB": [],
   "files_containing_local_user_paths": [
@@ -233,6 +233,7 @@
     "outputs/verification/final-tests-02.log",
     "outputs/verification/final-tests.log",
     "outputs/verification/fourfield-diagnostics.log",
+    "outputs/verification/github-windows-ci.log",
     "outputs/verification/gui-0.2.1-build.log",
     "outputs/verification/gui-0.2.1-wheel-smoke.log",
     "outputs/verification/gui-build.log",
@@ -287,7 +288,7 @@
     "docs/GETTING_STARTED.md": "8c7232e7af12364e670f9e80948e57ab079e836b499d3756d508a8f0ccab6d41",
     "docs/GUI.md": "8e9fa9fca17c0a5debf3b80511fa882e96554cf242c1b2703822b9c0aca6cd8b",
     "docs/GUI_COMPONENT_REVIEW.md": "70caabe801534ec8ebb85185fab2df17e6e62156ed575fcee7cc67f7702d7b40",
-    "docs/GUI_STYLE.md": "b4ccf5d5e7d4e8226160133572c6393a3544169e64b3170baf6debe301b13386",
+    "docs/GUI_STYLE.md": "0cddf459b471be55fd33180590810d4f562ec35530504aec34afb239f1e0dc7e",
     "docs/GUI_VERIFICATION.md": "58c4c2a2ac184d5ac5ba2fd776b89b62779cadf082d7ea0ef8d4d125e56f87f6",
     "docs/input_properties_notes.md": "928937bbca96ea22ff537371810fe6085e6081c4206e461662c73a54d324d872",
     "docs/METHOD_COVERAGE.json": "b56ab26af414de7ff55f5486f680704812ad572bc04d445eca917b407fd2895d",
@@ -299,7 +300,8 @@
     "docs/PARITY_COMPLETION.md": "3cd4de0ff4741b60532570ddb76109192e3333a25fceacb52f1b596033d59312",
     "docs/PARITY_STATUS.md": "ad3c89b77f65f2e5cfc25d9f515365b467d4648fcbc053cf041ea241d3754d86",
     "docs/PLOTTING.md": "b0562630faae037be049d55bfc83fe5168f5a8f5a7be9e5418fd9296c5eeb5de",
-    "docs/PROGRESS.md": "6242c63f07436f8b76bf10f687f7f6c368e332fe6c909c05f82a5ae4cf8363ca",
+    "docs/PROGRESS.md": "8e397fe1f465e37e84bf7ec26589c80972ee6e6e9fd939b532399e66da431dde",
+    "docs/PUBLICATION.md": "e5d39f4f6139db23acacadc85ae257af67010e3a2289e35e6fb4e6c7676ca55e",
     "docs/reference_archive_inspection.json": "24e8877e5065fc4fc0c98066579ea958013084439b7e04c4765e52ea68b854ce",
     "docs/REFERENCE_COMPARISON.md": "7cc445b1c170437999b8647c8ba978c9db1473fa1ec66b120d0e1abaa84a4a9d",
     "docs/REPOSITORY_CONTENTS.md": "d8c30ba0b3a3540b5f9bdf223a4483f06b760082d90dc0c3b46a77a25010de06",
@@ -1318,17 +1320,23 @@
     "outputs/verification/fourfield-diagnostics.log": "69a0ba2eaec89abac6645c90c1a7c6c34d380d9e8e144a8051ad7272704eb1cc",
     "outputs/verification/fourfield-transient-audited-exit.txt": "24ba1e99dc06b19351323aae0d7370243d586475a634b7f6ff7927fbc72cfaed",
     "outputs/verification/fourfield-transient-audited.log": "ac42145c9fb4c5f0d6d063b80cfc61ea185481ea4335b8e830516832477be2f2",
-    "outputs/verification/gui-0.2.1-build.log": "5cba8239db35480428a56bb8dbf8cb00e019bb62ae152e4ef777cde5883a2bbd",
-    "outputs/verification/gui-0.2.1-package.json": "a20b09d504823be173f7f7a3c7a65e1bafa15cbbc4d93dc51af1d32e2a622164",
+    "outputs/verification/github-public-repository.jpg": "2fde2d8896fa5d19ebfdeec842720574aa6eaf2a3ab911a96f6d2ddb8b51b2a1",
+    "outputs/verification/github-windows-ci.json": "ddf507387627c28af098e9aeeb6f1b2e35c2fccacb7298d0b8e4daffd33f2483",
+    "outputs/verification/github-windows-ci.log": "afe8d80cef169f6f555b3c9334c4a58aa3004a4ad9f29c8f6a3b92cfaee4ac1e",
+    "outputs/verification/gui-0.2.1-build.log": "826dab094fcbc2de0ee6cd3b62b9fc2284e23887cefab33fd9a6ffd7ebbb2360",
+    "outputs/verification/gui-0.2.1-package.json": "d6c64547902f63d472b10e25232f37855b1ce262f152903724b017365bfaae65",
     "outputs/verification/gui-0.2.1-wheel-smoke.log": "8803de9153a971c5dc70c15bb37ad400b346b080a1cdb9a681315a07e393bbab",
     "outputs/verification/gui-backend-tests.xml": "01d1de7452d06e1ce6b17e2614738b9972585c7a19f2c40549913d0763d46977",
     "outputs/verification/gui-build.log": "606cb4de879b0705e63c8d7533f25ad5bf04b14cd97d671b74ba9a64dcbe7494",
     "outputs/verification/gui-clean-inputs.jpg": "352830da10736e670cce367f2d9b99a9cab1659ecea064b43daf885b25dc3a6b",
+    "outputs/verification/gui-clean-results.jpg": "8f06331e9f8e6a08e9c7703a08cc69ee96f6d494fa28b2669aec574e63916c38",
     "outputs/verification/gui-frontend-tests.log": "95af03ade46d6e1e71b6d152e0c612b84cadd2eaf445982d5c243f75deeb3707",
     "outputs/verification/gui-mixture-screen.jpg": "b208674431322c2eae2a820e7b92548f420f8475d4ece4a5c4d3e2c70bc8b268",
     "outputs/verification/gui-release-tests.log": "5dff4eac098d40bedc903cd5980c3f7e491abb3fad8fd1578b1d4538111e4f72",
     "outputs/verification/gui-release-tests.xml": "9a66cfd818f0cf758bca6b273cc35f8c372b31628032e304dc918cd14f65a0f0",
     "outputs/verification/gui-release.json": "04ad17df745704de2eb1ddd450df0854987b9909af8aeee886a74cc80b45058a",
+    "outputs/verification/gui-restyle-backend-tests.log": "8bf69588bec0962c43329834e164599670915635cedb76b0db2c55cea879f8bf",
+    "outputs/verification/gui-restyle-javascript-tests.log": "9e1930943ff94b4e02980b98d3f48487b0a1b5ee31eea4eecbe987781b51358c",
     "outputs/verification/gui-restyle-tests.log": "c24f613f58e8583e12454b9f14e436be8b65c48637ab2b97005c8f4c224d6415",
     "outputs/verification/gui-tests.xml": "748e796acc21d74a830c38ed8dfb3489b93d1aa6da7215f98afa714ba3b31295",
     "outputs/verification/gui-wheel-smoke.log": "97702b70493332e11a36f6a285bc9aea0479efb4653b7749662b8ca4fb0eb472",

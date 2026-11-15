@@ -386,7 +386,7 @@ running install_egg_info
 Copying src\openstream_python.egg-info to build\bdist.win-amd64\wheel\.\openstream_python-0.2.1-py3.12.egg-info
 running install_scripts
 creating build\bdist.win-amd64\wheel\openstream_python-0.2.1.dist-info\WHEEL
-creating 'C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\dist\\gui-0.2.1-final\\.tmp-l6tv0sjk\\openstream_python-0.2.1-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
+creating 'C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\dist\\gui-0.2.1-final\\.tmp-rsb3ca2q\\openstream_python-0.2.1-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
 adding 'openstream/__init__.py'
 adding 'openstream/__main__.py'
 adding 'openstream/annular.py'

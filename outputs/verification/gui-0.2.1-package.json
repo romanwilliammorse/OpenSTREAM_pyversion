@@ -5,11 +5,11 @@
   "artifacts": {
     "dist/gui-0.2.1-final/openstream_python-0.2.1-py3-none-any.whl": {
       "bytes": 886863,
-      "sha256": "1d36522791dc70879d529ddb8ba3e7633967cc11a387ed9d5de814ba9340c854"
+      "sha256": "f53c990f020a89e2ccf08efcc994d24974b1117dfc2d28f5ff299a87e5b7db6b"
     },
     "dist/gui-0.2.1-final/openstream_python-0.2.1.tar.gz": {
-      "bytes": 1123256,
-      "sha256": "99454f935e83d1b399df79af8619282dda6289fbc1e138bd47ff473c25d1434e"
+      "bytes": 1124503,
+      "sha256": "e9096ac77f89b2f0e154ca59dddc3ca882d473ce7589c7098549f1a4891f2080"
     }
   },
   "source_package_files_byte_verified": 50,
@@ -110,5 +110,60 @@
       "mime_type": "text/css",
       "bytes": 19552
     }
-  ]
+  ],
+  "final_documentation_rebuild": {
+    "created_utc": "2026-11-15T00:45:58.055645+00:00",
+    "reason": "Include final GUI style/usage/progress/changelog documentation and revised interactive console wording.",
+    "previous_artifacts": {
+      "dist/gui-0.2.1-final/openstream_python-0.2.1-py3-none-any.whl": {
+        "bytes": 886863,
+        "sha256": "1d36522791dc70879d529ddb8ba3e7633967cc11a387ed9d5de814ba9340c854"
+      },
+      "dist/gui-0.2.1-final/openstream_python-0.2.1.tar.gz": {
+        "bytes": 1123256,
+        "sha256": "99454f935e83d1b399df79af8619282dda6289fbc1e138bd47ff473c25d1434e"
+      }
+    },
+    "source_package_files_byte_verified_against_smoke_install": 50,
+    "metadata_matches_smoke_install": true,
+    "sdist_latest_files_byte_verified": [
+      "docs/ALL_BASELINES_VERIFICATION.md",
+      "docs/annular_reference_audit.md",
+      "docs/API.md",
+      "docs/FEATURE_MAP.md",
+      "docs/field_notes.md",
+      "docs/fourfield_notes.md",
+      "docs/fourfield_review.md",
+      "docs/framework_comparator_review.md",
+      "docs/GETTING_STARTED.md",
+      "docs/GUI.md",
+      "docs/GUI_COMPONENT_REVIEW.md",
+      "docs/GUI_STYLE.md",
+      "docs/GUI_VERIFICATION.md",
+      "docs/input_properties_notes.md",
+      "docs/METHOD_COVERAGE.md",
+      "docs/MIXTURE_BASELINE_VERIFICATION.md",
+      "docs/mixture_documentation_review.md",
+      "docs/mixture_followup.md",
+      "docs/mixture_translation_audit.md",
+      "docs/PARITY_COMPLETION.md",
+      "docs/PARITY_STATUS.md",
+      "docs/PLOTTING.md",
+      "docs/PROGRESS.md",
+      "docs/REFERENCE_COMPARISON.md",
+      "docs/REPOSITORY_CONTENTS.md",
+      "docs/SOLVER_REVIEW.md",
+      "docs/THIRD_PARTY.md",
+      "docs/threefield_review.md",
+      "docs/threefield_transient.md",
+      "docs/twofluid_baseline_audit.md",
+      "docs/twofluid_notes.md",
+      "docs/UPSTREAM_AUDIT.md",
+      "docs/VERIFICATION.md",
+      "CHANGELOG.md",
+      "tools/interactive_console.py"
+    ],
+    "real_solver_rerun": false,
+    "reason_no_solver_rerun": "All numerical and GUI runtime package files and wheel metadata remain byte-identical to the installed package that passed the recorded smoke run."
+  }
 }

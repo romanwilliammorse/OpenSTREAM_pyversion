@@ -9,14 +9,22 @@ with shorter visible labels and expandable help. Actions are **Check**, **Run**,
 **Cancel**, **Import**, **Export** and **Save PNG**. All 163 inputs and separate
 convergence, MATLAB-archive and physical-consistency results remain available.
 No numerical equations or comparison tolerances changed. The focused restyle
-suite passed 76 tests (`outputs/verification/gui-restyle-tests.log`); build and
+suite passed 76 schema/reference/lock tests plus eight real-job GUI tests and
+five JavaScript tests. Logs are `outputs/verification/gui-restyle-tests.log` and
+`gui-restyle-backend-tests.log`; build and
 installed-wheel mixture checks are recorded in `gui-0.2.1-build.log` and
 `gui-0.2.1-wheel-smoke.log` under the same directory.
 
-Public upload is prepared for
+The project is published publicly at
 [romanwilliammorse/OpenSTREAM_pyversion](https://github.com/romanwilliammorse/OpenSTREAM_pyversion);
-the push was pending at this checkpoint. This records the intended destination,
-not a claim that the files have been published.
+the first complete source/evidence commit is
+`9b3d67e8e56f30381a7ae127792de42079148546`. Its remote hash was checked against
+the local commit. The upstream submodule remains pinned. Environments, caches,
+scratch checkouts and live process locks are excluded; scientific outputs,
+references, failures and license notices are retained. A Windows GitHub Actions
+workflow passed clean installation, all Python and JavaScript tests, and
+distribution builds. Its first run is linked in
+[PUBLICATION.md](PUBLICATION.md).
 
 Physical validation will use the external OpenSTREAM-database, pinned to
 `b48541e6438a92b4c0ddc83cf0ceda3f71a59b22`. Six dataset families were inspected;
