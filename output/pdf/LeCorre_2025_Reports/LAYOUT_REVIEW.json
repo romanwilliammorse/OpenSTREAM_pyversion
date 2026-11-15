@@ -1,0 +1,1540 @@
+{
+  "schema": "openstream-lecorre-pdf-layout-review-v1",
+  "reviewed_utc": "2026-11-15T05:27:16.206504+00:00",
+  "status": "passed_with_recorded_limitations",
+  "source_commit": "ac2f419ebfe58de705398c0be5c3840f037ea546",
+  "review_scope": "Independent saved-PDF geometry, fonts, extraction diagnostics and rendered layout review. No PDF or scientific source was edited.",
+  "reviewed_manifest_sha256_before_layout_status_update": "7e1c0870b3c860c1e3b681b841b2ac6650f46eb6832348b287f8f90464ed54d5",
+  "tools": {
+    "python": "3.12.14",
+    "pdfplumber": "0.11.9",
+    "pypdf": "6.10.0",
+    "Pillow": "12.3.0",
+    "pdftoppm": "pdftoppm version 26.07.0"
+  },
+  "programmatic_checks": {
+    "total_pages": 73,
+    "page_bounds_tolerance_pt": 0.5,
+    "all_pdf_hashes_and_page_counts_match_export_manifest": true,
+    "all_pages_have_extractable_text": true,
+    "text_objects_outside_page": 0,
+    "image_objects_outside_page": 0,
+    "U_FFFD_black_square_or_NUL_glyph_occurrences": 0,
+    "body_and_code_fonts_embedded": true,
+    "standard_base_font_exception": "Helvetica is used for list bullets and is not embedded. Segoe UI regular/bold/italic and Consolas fonts are embedded.",
+    "extractor_difference": "pdfplumber represents 251 standard Helvetica bullets as (cid:127); pypdf resolves them and rendered list dots were visually confirmed. These are not visible replacement squares.",
+    "documents": [
+      {
+        "file": "LECORRE_REPRODUCTION.pdf",
+        "sha256": "d8d9b0f1458c9c4796fad689fe219e3aa46806123d0ba0af8d7c645c7c07c03c",
+        "manifest_hash_matches": true,
+        "page_count": 19,
+        "manifest_page_count_matches": true,
+        "fonts": {
+          "/Helvetica": {
+            "subtype": "/Type1",
+            "embedded": false
+          },
+          "/AAAAAA+SegoeUI-Bold": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+SegoeUI": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+SegoeUI-Italic": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+Consolas": {
+            "subtype": "/TrueType",
+            "embedded": true
+          }
+        },
+        "text_outside_page": [],
+        "replacement_or_black_square_glyphs": [],
+        "images_outside_page": [],
+        "outline_count_top_level": 17,
+        "named_destination_count": 0,
+        "pages": [
+          {
+            "page": 1,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 3539,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "8.2": 95,
+              "9.0": 958,
+              "10.3": 2326,
+              "15.0": 37,
+              "22.0": 54
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 2,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 3729,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "9.0": 1601,
+              "10.0": 2,
+              "10.3": 2034,
+              "15.0": 23
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 3,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 2280,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "9.0": 673,
+              "10.0": 6,
+              "10.3": 1490,
+              "15.0": 42
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 4,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 1607,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "9.0": 938,
+              "10.0": 2,
+              "10.3": 563,
+              "15.0": 35
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 5,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 3342,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "9.0": 1750,
+              "10.3": 1479,
+              "15.0": 44
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 6,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 2997,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "9.0": 2819,
+              "10.3": 75,
+              "15.0": 34
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 7,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 4191,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "9.0": 176,
+              "10.0": 8,
+              "10.3": 3909,
+              "15.0": 29
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 8,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 3864,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "8.4": 614,
+              "9.0": 519,
+              "10.3": 2633,
+              "15.0": 29
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 9,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 3420,
+            "font_sizes_pt": {
+              "7.4": 29,
+              "8.0": 40,
+              "9.0": 413,
+              "10.3": 2897,
+              "15.0": 41
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 10,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 4275,
+            "font_sizes_pt": {
+              "7.4": 30,
+              "8.0": 40,
+              "9.0": 69,
+              "10.0": 3,
+              "10.3": 4075,
+              "12.2": 36,
+              "15.0": 22
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 11,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 1026,
+            "font_sizes_pt": {
+              "7.4": 30,
+              "8.0": 40,
+              "8.2": 277,
+              "10.0": 1,
+              "10.3": 678
+            },
+            "images": 3,
+            "text_nonempty": true
+          },
+          {
+            "page": 12,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 1625,
+            "font_sizes_pt": {
+              "7.4": 30,
+              "8.0": 40,
+              "8.2": 113,
+              "9.0": 408,
+              "10.3": 995,
+              "12.2": 39
+            },
+            "images": 1,
+            "text_nonempty": true
+          },
+          {
+            "page": 13,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 1872,
+            "font_sizes_pt": {
+              "7.4": 30,
+              "8.0": 40,
+              "8.2": 104,
+              "9.0": 148,
+              "10.3": 1510,
+              "15.0": 40
+            },
+            "images": 1,
+            "text_nonempty": true
+          },
+          {
+            "page": 14,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 1787,
+            "font_sizes_pt": {
+              "7.4": 30,
+              "8.0": 40,
+              "9.0": 641,
+              "10.0": 8,
+              "10.3": 1052,
+              "15.0": 16
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 15,
+            "size_pt": [
+              1190.551,
+              841.8898
+            ],
+            "text_characters": 325,
+            "font_sizes_pt": {
+              "7.4": 63,
+              "8.0": 72,
+              "9.0": 89,
+              "10.3": 61,
+              "14.0": 40
+            },
+            "images": 1,
+            "text_nonempty": true
+          },
+          {
+            "page": 16,
+            "size_pt": [
+              1190.551,
+              841.8898
+            ],
+            "text_characters": 364,
+            "font_sizes_pt": {
+              "7.4": 63,
+              "8.0": 72,
+              "9.0": 89,
+              "10.3": 100,
+              "14.0": 40
+            },
+            "images": 1,
+            "text_nonempty": true
+          },
+          {
+            "page": 17,
+            "size_pt": [
+              1190.551,
+              841.8898
+            ],
+            "text_characters": 380,
+            "font_sizes_pt": {
+              "7.4": 63,
+              "8.0": 72,
+              "9.0": 89,
+              "10.3": 116,
+              "14.0": 40
+            },
+            "images": 1,
+            "text_nonempty": true
+          },
+          {
+            "page": 18,
+            "size_pt": [
+              1190.551,
+              841.8898
+            ],
+            "text_characters": 383,
+            "font_sizes_pt": {
+              "7.4": 63,
+              "8.0": 78,
+              "9.0": 89,
+              "10.3": 113,
+              "14.0": 40
+            },
+            "images": 1,
+            "text_nonempty": true
+          },
+          {
+            "page": 19,
+            "size_pt": [
+              1190.551,
+              841.8898
+            ],
+            "text_characters": 374,
+            "font_sizes_pt": {
+              "7.4": 63,
+              "8.0": 78,
+              "9.0": 89,
+              "10.3": 104,
+              "14.0": 40
+            },
+            "images": 1,
+            "text_nonempty": true
+          }
+        ],
+        "pdfplumber_unmapped_standard_font_bullets": 22
+      },
+      {
+        "file": "LECORRE_PHYSICAL_REVIEW.pdf",
+        "sha256": "b67809bdd8b3bc10def0d37565ba3c2d97efdf8017dcd43624f56a3c37a76f83",
+        "manifest_hash_matches": true,
+        "page_count": 3,
+        "manifest_page_count_matches": true,
+        "fonts": {
+          "/Helvetica": {
+            "subtype": "/Type1",
+            "embedded": false
+          },
+          "/AAAAAA+SegoeUI-Bold": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+SegoeUI": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+Consolas": {
+            "subtype": "/TrueType",
+            "embedded": true
+          }
+        },
+        "text_outside_page": [],
+        "replacement_or_black_square_glyphs": [],
+        "images_outside_page": [],
+        "outline_count_top_level": 5,
+        "named_destination_count": 0,
+        "pages": [
+          {
+            "page": 1,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 4054,
+            "font_sizes_pt": {
+              "7.4": 32,
+              "8.0": 40,
+              "8.2": 95,
+              "9.0": 783,
+              "10.3": 3018,
+              "15.0": 29,
+              "22.0": 57
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 2,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 3198,
+            "font_sizes_pt": {
+              "7.4": 32,
+              "8.0": 40,
+              "9.0": 507,
+              "10.0": 5,
+              "10.3": 2542,
+              "15.0": 72
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 3,
+            "size_pt": [
+              595.2756,
+              841.8898
+            ],
+            "text_characters": 1205,
+            "font_sizes_pt": {
+              "7.4": 32,
+              "8.0": 40,
+              "8.4": 145,
+              "9.0": 37,
+              "10.3": 906,
+              "15.0": 45
+            },
+            "images": 0,
+            "text_nonempty": true
+          }
+        ],
+        "pdfplumber_unmapped_standard_font_bullets": 5
+      },
+      {
+        "file": "ACCEPTANCE_MATRIX.pdf",
+        "sha256": "474f7c20aeb8c8529dd768ceb3139c045f8054a1ea7d7e6165a62fed461227ee",
+        "manifest_hash_matches": true,
+        "page_count": 51,
+        "manifest_page_count_matches": true,
+        "fonts": {
+          "/Helvetica": {
+            "subtype": "/Type1",
+            "embedded": false
+          },
+          "/AAAAAA+SegoeUI-Bold": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+SegoeUI": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+Consolas": {
+            "subtype": "/TrueType",
+            "embedded": true
+          },
+          "/AAAAAA+SegoeUI-Italic": {
+            "subtype": "/TrueType",
+            "embedded": true
+          }
+        },
+        "text_outside_page": [],
+        "replacement_or_black_square_glyphs": [],
+        "images_outside_page": [],
+        "outline_count_top_level": 90,
+        "named_destination_count": 0,
+        "pages": [
+          {
+            "page": 1,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2097,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "8.2": 95,
+              "9.0": 892,
+              "10.3": 1004,
+              "15.0": 23,
+              "22.0": 17
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 2,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1576,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 1494,
+              "15.0": 16
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 3,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1921,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 1855
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 4,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1388,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 1288,
+              "15.0": 34
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 5,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1867,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 1801
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 6,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1488,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 1400,
+              "15.0": 22
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 7,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1534,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 1444,
+              "15.0": 24
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 8,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1712,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 890,
+              "10.0": 2,
+              "10.3": 711,
+              "12.2": 17,
+              "15.0": 26
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 9,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2151,
+            "font_sizes_pt": {
+              "7.4": 26,
+              "8.0": 40,
+              "9.0": 486,
+              "10.0": 4,
+              "10.3": 1557,
+              "12.2": 38
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 10,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2219,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 240,
+              "10.0": 4,
+              "10.3": 1841,
+              "12.2": 67
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 11,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2067,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 233,
+              "10.0": 5,
+              "10.3": 1727,
+              "12.2": 35
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 12,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2208,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 322,
+              "10.0": 6,
+              "10.3": 1774,
+              "12.2": 39
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 13,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2111,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 178,
+              "10.0": 4,
+              "10.3": 1789,
+              "12.2": 73
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 14,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1990,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 238,
+              "10.0": 5,
+              "10.3": 1626,
+              "12.2": 54
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 15,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2037,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 195,
+              "10.0": 5,
+              "10.3": 1710,
+              "12.2": 60
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 16,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1906,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 198,
+              "10.0": 4,
+              "10.3": 1587,
+              "12.2": 50
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 17,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1915,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 169,
+              "10.0": 4,
+              "10.3": 1618,
+              "12.2": 57
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 18,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1931,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 277,
+              "10.0": 4,
+              "10.3": 1525,
+              "12.2": 58
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 19,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2357,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 238,
+              "10.0": 4,
+              "10.3": 1953,
+              "12.2": 95
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 20,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1942,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 238,
+              "10.0": 4,
+              "10.3": 1562,
+              "12.2": 71
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 21,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2416,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 238,
+              "10.0": 7,
+              "10.3": 2041,
+              "12.2": 63
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 22,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2155,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 394,
+              "10.0": 5,
+              "10.3": 1621,
+              "12.2": 68
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 23,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1920,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 183,
+              "10.0": 4,
+              "10.3": 1594,
+              "12.2": 72
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 24,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2053,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 257,
+              "10.0": 4,
+              "10.3": 1642,
+              "12.2": 83
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 25,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2525,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 352,
+              "10.0": 5,
+              "10.3": 2053,
+              "12.2": 48
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 26,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2197,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 194,
+              "10.0": 7,
+              "10.3": 1858,
+              "12.2": 71
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 27,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2548,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 345,
+              "10.0": 6,
+              "10.3": 2058,
+              "12.2": 72
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 28,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2228,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 220,
+              "10.0": 6,
+              "10.3": 1853,
+              "12.2": 82
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 29,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2408,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 170,
+              "10.0": 6,
+              "10.3": 2084,
+              "12.2": 81
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 30,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2307,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 189,
+              "10.0": 6,
+              "10.3": 1947,
+              "12.2": 98
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 31,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2345,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 255,
+              "10.0": 6,
+              "10.3": 1937,
+              "12.2": 80
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 32,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2096,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 231,
+              "10.0": 6,
+              "10.3": 1726,
+              "12.2": 66
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 33,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2167,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 261,
+              "10.0": 6,
+              "10.3": 1756,
+              "12.2": 77
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 34,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1928,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 220,
+              "10.0": 6,
+              "10.3": 1545,
+              "12.2": 90
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 35,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2126,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 185,
+              "10.0": 6,
+              "10.3": 1792,
+              "12.2": 76
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 36,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2278,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 171,
+              "10.0": 6,
+              "10.3": 1969,
+              "12.2": 65
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 37,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2478,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 340,
+              "10.0": 6,
+              "10.3": 1984,
+              "12.2": 81
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 38,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2618,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 270,
+              "10.0": 6,
+              "10.3": 2185,
+              "12.2": 90
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 39,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 3314,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 1470,
+              "10.0": 3,
+              "10.3": 1745,
+              "12.2": 29
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 40,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2385,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 412,
+              "10.0": 6,
+              "10.3": 1845,
+              "12.2": 55
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 41,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 3095,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 715,
+              "10.0": 4,
+              "10.3": 2236,
+              "12.2": 73
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 42,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 3411,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 857,
+              "10.0": 5,
+              "10.3": 2447,
+              "12.2": 35
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 43,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2900,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 688,
+              "10.0": 7,
+              "10.3": 2092,
+              "12.2": 46
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 44,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 3533,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 1303,
+              "10.0": 4,
+              "10.3": 2134,
+              "12.2": 25
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 45,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 3401,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 1131,
+              "10.0": 4,
+              "10.3": 2160,
+              "12.2": 39
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 46,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 3346,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 920,
+              "10.0": 4,
+              "10.3": 2280,
+              "12.2": 75
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 47,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2992,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 713,
+              "10.0": 5,
+              "10.3": 2161,
+              "12.2": 46
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 48,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2887,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 646,
+              "10.0": 7,
+              "10.3": 2126,
+              "12.2": 41
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 49,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2208,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 682,
+              "10.0": 4,
+              "10.3": 1375,
+              "12.2": 80
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 50,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 2280,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 86,
+              "10.0": 8,
+              "10.3": 2018,
+              "12.2": 101
+            },
+            "images": 0,
+            "text_nonempty": true
+          },
+          {
+            "page": 51,
+            "size_pt": [
+              841.8898,
+              595.2756
+            ],
+            "text_characters": 1287,
+            "font_sizes_pt": {
+              "7.4": 27,
+              "8.0": 40,
+              "9.0": 551,
+              "10.0": 4,
+              "10.3": 665
+            },
+            "images": 0,
+            "text_nonempty": true
+          }
+        ],
+        "pdfplumber_unmapped_standard_font_bullets": 224
+      }
+    ]
+  },
+  "rendered_review": {
+    "all_page_rendering": {
+      "pages": 73,
+      "dpi": 55,
+      "all_seven_thumbnail_montages_inspected": true
+    },
+    "individual_figure_plates": {
+      "file": "LECORRE_REPRODUCTION.pdf",
+      "pages": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "dpi": 140,
+      "findings": "All five A3 landscape plates inspected individually: images, axes, legends, scientific qualifiers, captions and footers visible; no cropping or overlap observed."
+    },
+    "individual_representative_pages": [
+      {
+        "file": "LECORRE_REPRODUCTION.pdf",
+        "pages": [
+          6,
+          8
+        ],
+        "dpi": 120
+      },
+      {
+        "file": "LECORRE_PHYSICAL_REVIEW.pdf",
+        "pages": [
+          2
+        ],
+        "dpi": 120
+      },
+      {
+        "file": "ACCEPTANCE_MATRIX.pdf",
+        "pages": [
+          1,
+          46
+        ],
+        "dpi": 120
+      }
+    ],
+    "additional_root_review_reported": {
+      "LECORRE_REPRODUCTION.pdf": [
+        1,
+        16
+      ],
+      "LECORRE_PHYSICAL_REVIEW.pdf": [
+        1
+      ],
+      "ACCEPTANCE_MATRIX.pdf": [
+        1
+      ]
+    },
+    "findings": "Consistent headings, table header repetition, wrapped cell text, readable units and status columns; no visible clipping, overlap, cropped figure content or replacement glyphs observed in reviewed pages. All-page thumbnails showed no blank or grossly malformed page.",
+    "montage_artifacts": [
+      {
+        "path": "tmp/pdfs/lecorre-qa-agent/montage_ACCEPTANCE_MATRIX_01.png",
+        "sha256": "1b23332ba47f567111b78366b0b6f93c508572c235dafea6b1736c058e3145f1"
+      },
+      {
+        "path": "tmp/pdfs/lecorre-qa-agent/montage_ACCEPTANCE_MATRIX_17.png",
+        "sha256": "ab26a290f19790442299fa83df0f24e4ec11ae36d40d23925a9df38d276c9c85"
+      },
+      {
+        "path": "tmp/pdfs/lecorre-qa-agent/montage_ACCEPTANCE_MATRIX_33.png",
+        "sha256": "33aefc03f17f4b9a870ea75e1ce3edc11493ca021abb5cbba8e5a836cd71bda7"
+      },
+      {
+        "path": "tmp/pdfs/lecorre-qa-agent/montage_ACCEPTANCE_MATRIX_49.png",
+        "sha256": "bd505dd96925d6569f4bd9742ffec5ab3ee0700485f41845d62d1c4239b5bfb8"
+      },
+      {
+        "path": "tmp/pdfs/lecorre-qa-agent/montage_LECORRE_PHYSICAL_REVIEW_01.png",
+        "sha256": "631c11c35ffbbddf2b6a87b43e32dffe2ff72cb1dd1fb9087b2602d35ff126cd"
+      },
+      {
+        "path": "tmp/pdfs/lecorre-qa-agent/montage_LECORRE_REPRODUCTION_01.png",
+        "sha256": "3747bda97892369238cf08d5fd1f2cc415d66d51001c1da663bd812a3b4a2047"
+      },
+      {
+        "path": "tmp/pdfs/lecorre-qa-agent/montage_LECORRE_REPRODUCTION_17.png",
+        "sha256": "9cec218774389d37fdd67f76211de926b44f69c5f9dce025c203aef0d95726d6"
+      }
+    ],
+    "poppler_warnings": "Poppler emitted global no-display-font configuration warnings for Symbol/ArialNarrow/HelveticaNarrow/BookAntiqua/ArialUnicode variants, which are not the embedded body/code fonts in these PDFs; every page rendered successfully."
+  },
+  "retention_check_scope": {
+    "exporter_evidence": "Existing Exporter.build_one checks reported all rendered source numeric tokens/text fragments retained. Plate merge retained original page content streams/text, geometry, bookmarks and named destinations. This QA confirmed final hashes/counts; it did not independently rerun every source-retention comparison.",
+    "numerical_tokens_checked_by_exporter": {
+      "LECORRE_REPRODUCTION.pdf": 168,
+      "LECORRE_PHYSICAL_REVIEW.pdf": 53,
+      "ACCEPTANCE_MATRIX.pdf": 154
+    },
+    "text_fragments_checked_by_exporter": {
+      "LECORRE_REPRODUCTION.pdf": 1020,
+      "LECORRE_PHYSICAL_REVIEW.pdf": 122,
+      "ACCEPTANCE_MATRIX.pdf": 3319
+    }
+  },
+  "limitations": [
+    "All 73 pages received geometry/extraction checks and thumbnail inspection; only the listed representative prose/table pages and all five figure plates received individual high-resolution visual inspection.",
+    "Long Windows command lines wrap visually in the A4 reproduction PDF. Copying from PDF may require joining line breaks; the pinned source Markdown retains the exact runnable command lines.",
+    "Inline A4 figures remain small overview images. Use the appended A3 plates at their native page size for reading axes and legends; fit-to-A4 printing reduces them again.",
+    "Page-bound checks cannot detect every local text overlap or missing semantic element; rendered spot checks complement them.",
+    "This review establishes only the stated PDF layout/retention observations. It does not verify scientific accuracy, MATLAB equivalence, physical consistency or experimental validation."
+  ],
+  "blocking_findings": []
+}

@@ -46,6 +46,9 @@ assessed. These counts describe this campaign, not full-software parity.
 Original publication-time settings remain partly unresolved. Graphical agreement,
 native convergence, physical consistency and experimental accuracy are reported
 separately; no governing equation is adjusted to improve the comparison.
+The [reconstruction report with figure plates](output/pdf/LeCorre_2025_Reports/LECORRE_REPRODUCTION.pdf)
+contains the native Python counterparts to Figures 3, 4, 6 and 7. Figures 1 and
+2 are model schematics; Figure 5 still lacks the original TRACE reference data.
 
 ## Existing local installation
 

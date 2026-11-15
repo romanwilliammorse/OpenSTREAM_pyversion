@@ -1,0 +1,1120 @@
+﻿2026-11-15T05:22:15.6579899Z Current runner version: '2.338.2'
+2026-11-15T05:22:15.6602757Z ##[group]Runner Image Provisioner
+2026-11-15T05:22:15.6603430Z Hosted Compute Agent
+2026-11-15T05:22:15.6603896Z Version: 20261103.629
+2026-11-15T05:22:15.6604430Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-15T05:22:15.6604981Z Build Date: 2026-11-03T17:26:59Z
+2026-11-15T05:22:15.6605524Z Worker ID: {19eb323e-fcdb-4b48-8198-f6bb74498cdf}
+2026-11-15T05:22:15.6606124Z Region: westus3
+2026-11-15T05:22:15.6606609Z Cloud: Azure
+2026-11-15T05:22:15.6607087Z ##[endgroup]
+2026-11-15T05:22:15.6608086Z ##[group]Operating System
+2026-11-15T05:22:15.6608581Z Microsoft Windows Server 2025
+2026-11-15T05:22:15.6609052Z 10.0.26100
+2026-11-15T05:22:15.6609468Z Datacenter
+2026-11-15T05:22:15.6610347Z ##[endgroup]
+2026-11-15T05:22:15.6610766Z ##[group]Runner Image
+2026-11-15T05:22:15.6611233Z Image: windows-2025-vs2026
+2026-11-15T05:22:15.6611720Z Version: 20261103.298.1
+2026-11-15T05:22:15.6612987Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261103.298/images/windows/Windows2025-VS2026-Readme.md
+2026-11-15T05:22:15.6614357Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261103.298
+2026-11-15T05:22:15.6615125Z ##[endgroup]
+2026-11-15T05:22:15.6616005Z ##[group]GITHUB_TOKEN Permissions
+2026-11-15T05:22:15.6617481Z Contents: read
+2026-11-15T05:22:15.6617962Z Metadata: read
+2026-11-15T05:22:15.6618395Z ##[endgroup]
+2026-11-15T05:22:15.6620192Z Secret source: Actions
+2026-11-15T05:22:15.6620877Z Cache mode: write
+2026-11-15T05:22:15.6621455Z Prepare workflow directory
+2026-11-15T05:22:15.6919494Z Prepare all required actions
+2026-11-15T05:22:15.6962356Z Getting action download info
+2026-11-15T05:22:15.9984430Z Download action repository 'actions/checkout@v7.0.1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-15T05:22:16.1667168Z Download action repository 'actions/setup-python@v7.1.0' (SHA:6d4fd22b20465ccc0f7354476588e8df7c9ca0e0)
+2026-11-15T05:22:16.8116613Z Download action repository 'actions/setup-node@v7.1.0' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)
+2026-11-15T05:22:17.0639407Z Complete job name: windows
+2026-11-15T05:22:17.1924977Z ##[group]Run actions/checkout@v7.0.1
+2026-11-15T05:22:17.1925981Z with:
+2026-11-15T05:22:17.1926313Z   submodules: recursive
+2026-11-15T05:22:17.1926756Z   repository: romanwilliammorse/OpenSTREAM_pyversion
+2026-11-15T05:22:17.1930446Z   token: ***
+2026-11-15T05:22:17.1931134Z   ssh-strict: true
+2026-11-15T05:22:17.1931477Z   ssh-user: git
+2026-11-15T05:22:17.1931824Z   persist-credentials: true
+2026-11-15T05:22:17.1932213Z   clean: true
+2026-11-15T05:22:17.1932555Z   sparse-checkout-cone-mode: true
+2026-11-15T05:22:17.1932962Z   fetch-depth: 1
+2026-11-15T05:22:17.1933288Z   fetch-tags: false
+2026-11-15T05:22:17.1933629Z   show-progress: true
+2026-11-15T05:22:17.1933975Z   lfs: false
+2026-11-15T05:22:17.1934305Z   set-safe-directory: true
+2026-11-15T05:22:17.1934698Z   allow-unsafe-pr-checkout: false
+2026-11-15T05:22:17.1935358Z ##[endgroup]
+2026-11-15T05:22:17.3318994Z Syncing repository: romanwilliammorse/OpenSTREAM_pyversion
+2026-11-15T05:22:17.3320639Z ##[group]Getting Git version info
+2026-11-15T05:22:17.3321247Z Working directory is 'D:\a\OpenSTREAM_pyversion\OpenSTREAM_pyversion'
+2026-11-15T05:22:17.4202421Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-15T05:22:18.7208595Z git version 2.56.0.windows.4
+2026-11-15T05:22:18.7272305Z ##[endgroup]
+2026-11-15T05:22:18.7284985Z Temporarily overriding HOME='D:\a\_temp\b6d2c2e5-6b3e-42a7-b042-234a37f2cc44' before making global git config changes
+2026-11-15T05:22:18.7286350Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-15T05:22:18.7293297Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\OpenSTREAM_pyversion\OpenSTREAM_pyversion
+2026-11-15T05:22:18.7884143Z Deleting the contents of 'D:\a\OpenSTREAM_pyversion\OpenSTREAM_pyversion'
+2026-11-15T05:22:18.7888907Z ##[group]Determining repository object format
+2026-11-15T05:22:18.7890334Z ##[endgroup]
+2026-11-15T05:22:18.7891570Z ##[group]Initializing the repository
+2026-11-15T05:22:18.7898096Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\OpenSTREAM_pyversion\OpenSTREAM_pyversion
+2026-11-15T05:22:19.2625725Z Initialized empty Git repository in D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/
+2026-11-15T05:22:19.2670302Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/romanwilliammorse/OpenSTREAM_pyversion
+2026-11-15T05:22:19.3319519Z ##[endgroup]
+2026-11-15T05:22:19.3319928Z ##[group]Disabling automatic garbage collection
+2026-11-15T05:22:19.3327768Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-11-15T05:22:19.3631482Z ##[endgroup]
+2026-11-15T05:22:19.3631967Z ##[group]Setting up auth
+2026-11-15T05:22:19.3632278Z Removing SSH command configuration
+2026-11-15T05:22:19.3641478Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-15T05:22:19.3955354Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-15T05:22:22.8444345Z Removing HTTP extra header
+2026-11-15T05:22:22.8452292Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-15T05:22:22.8777175Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-15T05:22:23.3612064Z Removing includeIf entries pointing to credentials config files
+2026-11-15T05:22:23.3621979Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-15T05:22:23.3966054Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-15T05:22:23.9134892Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-11-15T05:22:23.9467055Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git.path D:\a\_temp\git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:22:23.9796636Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/worktrees/*.path D:\a\_temp\git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:22:24.0172479Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:22:24.0514095Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:22:24.0870688Z ##[endgroup]
+2026-11-15T05:22:24.0871100Z ##[group]Fetching the repository
+2026-11-15T05:22:24.0882410Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ac2f419ebfe58de705398c0be5c3840f037ea546:refs/remotes/origin/main
+2026-11-15T05:22:31.6411509Z From https://github.com/romanwilliammorse/OpenSTREAM_pyversion
+2026-11-15T05:22:31.6412139Z  * [new ref]         ac2f419ebfe58de705398c0be5c3840f037ea546 -> origin/main
+2026-11-15T05:22:31.6463041Z [command]"C:\Program Files\Git\bin\git.exe" branch --list --remote origin/main
+2026-11-15T05:22:31.6848984Z   origin/main
+2026-11-15T05:22:31.6892247Z [command]"C:\Program Files\Git\bin\git.exe" rev-parse refs/remotes/origin/main
+2026-11-15T05:22:31.7259257Z ac2f419ebfe58de705398c0be5c3840f037ea546
+2026-11-15T05:22:31.7297843Z ##[endgroup]
+2026-11-15T05:22:31.7298223Z ##[group]Determining the checkout info
+2026-11-15T05:22:31.7299951Z ##[endgroup]
+2026-11-15T05:22:31.7308115Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-11-15T05:22:31.7844062Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-11-15T05:22:31.8164542Z ##[group]Checking out the ref
+2026-11-15T05:22:31.8176632Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+2026-11-15T05:22:32.8840917Z Updating files:  34% (1263/3651)
+2026-11-15T05:22:32.9098513Z Updating files:  35% (1278/3651)
+2026-11-15T05:22:32.9405050Z Updating files:  36% (1315/3651)
+2026-11-15T05:22:32.9764674Z Updating files:  37% (1351/3651)
+2026-11-15T05:22:32.9941256Z Updating files:  38% (1388/3651)
+2026-11-15T05:22:33.0167885Z Updating files:  39% (1424/3651)
+2026-11-15T05:22:33.0358354Z Updating files:  40% (1461/3651)
+2026-11-15T05:22:33.0592505Z Updating files:  41% (1497/3651)
+2026-11-15T05:22:33.0771984Z Updating files:  42% (1534/3651)
+2026-11-15T05:22:33.0950000Z Updating files:  43% (1570/3651)
+2026-11-15T05:22:33.1167573Z Updating files:  44% (1607/3651)
+2026-11-15T05:22:33.1368216Z Updating files:  45% (1643/3651)
+2026-11-15T05:22:33.1592016Z Updating files:  46% (1680/3651)
+2026-11-15T05:22:33.1733629Z Updating files:  47% (1716/3651)
+2026-11-15T05:22:33.1995759Z Updating files:  48% (1753/3651)
+2026-11-15T05:22:33.2126233Z Updating files:  49% (1789/3651)
+2026-11-15T05:22:33.2266278Z Updating files:  50% (1826/3651)
+2026-11-15T05:22:33.2397957Z Updating files:  51% (1863/3651)
+2026-11-15T05:22:33.2530933Z Updating files:  52% (1899/3651)
+2026-11-15T05:22:33.2659729Z Updating files:  53% (1936/3651)
+2026-11-15T05:22:33.2813681Z Updating files:  54% (1972/3651)
+2026-11-15T05:22:33.3001806Z Updating files:  55% (2009/3651)
+2026-11-15T05:22:33.3193334Z Updating files:  56% (2045/3651)
+2026-11-15T05:22:33.3335287Z Updating files:  57% (2082/3651)
+2026-11-15T05:22:33.3590632Z Updating files:  58% (2118/3651)
+2026-11-15T05:22:33.3741703Z Updating files:  59% (2155/3651)
+2026-11-15T05:22:33.3891064Z Updating files:  60% (2191/3651)
+2026-11-15T05:22:33.4117954Z Updating files:  61% (2228/3651)
+2026-11-15T05:22:33.4286227Z Updating files:  62% (2264/3651)
+2026-11-15T05:22:33.4456483Z Updating files:  63% (2301/3651)
+2026-11-15T05:22:33.4624657Z Updating files:  64% (2337/3651)
+2026-11-15T05:22:33.4843298Z Updating files:  65% (2374/3651)
+2026-11-15T05:22:33.5003550Z Updating files:  66% (2410/3651)
+2026-11-15T05:22:33.5162218Z Updating files:  67% (2447/3651)
+2026-11-15T05:22:33.5366532Z Updating files:  68% (2483/3651)
+2026-11-15T05:22:33.5484688Z Updating files:  69% (2520/3651)
+2026-11-15T05:22:33.5653195Z Updating files:  70% (2556/3651)
+2026-11-15T05:22:33.5773042Z Updating files:  71% (2593/3651)
+2026-11-15T05:22:33.5890958Z Updating files:  72% (2629/3651)
+2026-11-15T05:22:33.6010495Z Updating files:  73% (2666/3651)
+2026-11-15T05:22:33.6122463Z Updating files:  74% (2702/3651)
+2026-11-15T05:22:33.6270706Z Updating files:  75% (2739/3651)
+2026-11-15T05:22:33.6399518Z Updating files:  76% (2775/3651)
+2026-11-15T05:22:33.6522960Z Updating files:  77% (2812/3651)
+2026-11-15T05:22:33.6643156Z Updating files:  78% (2848/3651)
+2026-11-15T05:22:33.6750789Z Updating files:  79% (2885/3651)
+2026-11-15T05:22:33.6874773Z Updating files:  80% (2921/3651)
+2026-11-15T05:22:33.6998812Z Updating files:  81% (2958/3651)
+2026-11-15T05:22:33.7145356Z Updating files:  82% (2994/3651)
+2026-11-15T05:22:33.7262343Z Updating files:  83% (3031/3651)
+2026-11-15T05:22:33.7375591Z Updating files:  84% (3067/3651)
+2026-11-15T05:22:33.7491634Z Updating files:  85% (3104/3651)
+2026-11-15T05:22:33.7603699Z Updating files:  86% (3140/3651)
+2026-11-15T05:22:33.7748040Z Updating files:  87% (3177/3651)
+2026-11-15T05:22:33.7868564Z Updating files:  88% (3213/3651)
+2026-11-15T05:22:33.7942921Z Updating files:  89% (3250/3651)
+2026-11-15T05:22:33.8054810Z Updating files:  90% (3286/3651)
+2026-11-15T05:22:33.8223749Z Updating files:  91% (3323/3651)
+2026-11-15T05:22:33.8388851Z Updating files:  92% (3359/3651)
+2026-11-15T05:22:33.8885548Z Updating files:  93% (3396/3651)
+2026-11-15T05:22:33.9299055Z Updating files:  93% (3420/3651)
+2026-11-15T05:22:33.9568166Z Updating files:  94% (3432/3651)
+2026-11-15T05:22:33.9885924Z Updating files:  95% (3469/3651)
+2026-11-15T05:22:33.9979624Z Updating files:  96% (3505/3651)
+2026-11-15T05:22:34.0083900Z Updating files:  97% (3542/3651)
+2026-11-15T05:22:34.0156560Z Updating files:  98% (3578/3651)
+2026-11-15T05:22:34.0230917Z Updating files:  99% (3615/3651)
+2026-11-15T05:22:34.0231452Z Updating files: 100% (3651/3651)
+2026-11-15T05:22:34.0231684Z Updating files: 100% (3651/3651), done.
+2026-11-15T05:22:34.0387918Z Switched to a new branch 'main'
+2026-11-15T05:22:34.0493722Z branch 'main' set up to track 'origin/main'.
+2026-11-15T05:22:34.0667000Z ##[endgroup]
+2026-11-15T05:22:34.0667476Z ##[group]Setting up auth for fetching submodules
+2026-11-15T05:22:34.0740072Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-11-15T05:22:34.1435390Z [command]"C:\Program Files\Git\bin\git.exe" config --global include.path D:\a\_temp\git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:22:34.1765305Z [command]"C:\Program Files\Git\bin\git.exe" config --global --unset-all url.https://github.com/.insteadOf
+2026-11-15T05:22:34.2089189Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add url.https://github.com/.insteadOf git@github.com:
+2026-11-15T05:22:34.2421619Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add url.https://github.com/.insteadOf org-257643259@github.com:
+2026-11-15T05:22:34.2759607Z ##[endgroup]
+2026-11-15T05:22:34.2759909Z ##[group]Fetching submodules
+2026-11-15T05:22:34.2768581Z [command]"C:\Program Files\Git\bin\git.exe" submodule sync --recursive
+2026-11-15T05:22:34.7493116Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2026-11-15T05:22:35.2402276Z Submodule 'database' (https://github.com/OpenSTREAM-solvers/openstream-database.git) registered for path 'database'
+2026-11-15T05:22:35.2421914Z Submodule 'upstream' (https://github.com/OpenSTREAM-solvers/openstream.git) registered for path 'upstream'
+2026-11-15T05:22:35.2774799Z Cloning into 'D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/database'...
+2026-11-15T05:22:36.3982773Z Cloning into 'D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/upstream'...
+2026-11-15T05:22:38.5143801Z Submodule path 'database': checked out 'b48541e6438a92b4c0ddc83cf0ceda3f71a59b22'
+2026-11-15T05:22:38.7355706Z Submodule path 'upstream': checked out 'a614c7173822a93c1e64ac28d1541cbac028cbd8'
+2026-11-15T05:22:38.7475412Z Submodule 'CoolPropWrapper' (https://github.com/mfval/CoolPropWrapper.git) registered for path 'upstream/+CoolPropWrapper'
+2026-11-15T05:22:38.7696571Z Cloning into 'D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/upstream/+CoolPropWrapper'...
+2026-11-15T05:22:39.4305487Z Submodule path 'upstream/+CoolPropWrapper': checked out 'a7c40902ff66faf6ed668986398bb1b9faa16e13'
+2026-11-15T05:22:39.4534813Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local gc.auto 0"
+2026-11-15T05:22:39.9334813Z Entering 'database'
+2026-11-15T05:22:39.9906681Z Entering 'upstream'
+2026-11-15T05:22:40.0343515Z Entering 'upstream/+CoolPropWrapper'
+2026-11-15T05:22:40.0912183Z ##[endgroup]
+2026-11-15T05:22:40.0912507Z ##[group]Persisting credentials for submodules
+2026-11-15T05:22:40.0921397Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :\""
+2026-11-15T05:22:40.5658410Z Entering 'database'
+2026-11-15T05:22:40.6416543Z Entering 'upstream'
+2026-11-15T05:22:40.7306162Z Entering 'upstream/+CoolPropWrapper'
+2026-11-15T05:22:40.8117765Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-15T05:22:41.2949615Z Entering 'database'
+2026-11-15T05:22:41.3290424Z file:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/database/config	remote.origin.url
+2026-11-15T05:22:41.3466861Z Entering 'upstream'
+2026-11-15T05:22:41.3761806Z file:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/config	remote.origin.url
+2026-11-15T05:22:41.3948136Z Entering 'upstream/+CoolPropWrapper'
+2026-11-15T05:22:41.4276764Z file:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/modules/CoolPropWrapper/config	remote.origin.url
+2026-11-15T05:22:41.4718475Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/database/config includeIf.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/database.path D:\a\_temp\git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:22:41.5069784Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/database/config includeIf.gitdir:/github/workspace/.git/modules/database.path /github/runner_temp/git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:22:41.5414045Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/config includeIf.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream.path D:\a\_temp\git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:22:41.5751016Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/config includeIf.gitdir:/github/workspace/.git/modules/upstream.path /github/runner_temp/git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:22:41.6070944Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/modules/CoolPropWrapper/config includeIf.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/modules/CoolPropWrapper.path D:\a\_temp\git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:22:41.6404379Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/modules/CoolPropWrapper/config includeIf.gitdir:/github/workspace/.git/modules/upstream/modules/CoolPropWrapper.path /github/runner_temp/git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:22:41.6748062Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'"
+2026-11-15T05:22:42.1781851Z Entering 'database'
+2026-11-15T05:22:42.2259307Z Entering 'upstream'
+2026-11-15T05:22:42.2712166Z Entering 'upstream/+CoolPropWrapper'
+2026-11-15T05:22:42.3295108Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --add 'url.https://github.com/.insteadOf' 'org-257643259@github.com:'"
+2026-11-15T05:22:42.8289239Z Entering 'database'
+2026-11-15T05:22:42.8768826Z Entering 'upstream'
+2026-11-15T05:22:42.9232461Z Entering 'upstream/+CoolPropWrapper'
+2026-11-15T05:22:42.9815865Z ##[endgroup]
+2026-11-15T05:22:43.0421407Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-11-15T05:22:43.0725190Z ac2f419ebfe58de705398c0be5c3840f037ea546
+2026-11-15T05:22:43.1178358Z ##[group]Run actions/setup-python@v7.1.0
+2026-11-15T05:22:43.1178632Z with:
+2026-11-15T05:22:43.1179432Z   python-version: 3.12
+2026-11-15T05:22:43.1179602Z   check-latest: false
+2026-11-15T05:22:43.1181921Z   token: ***
+2026-11-15T05:22:43.1182161Z   mirror: https://raw.githubusercontent.com/actions/python-versions/main
+2026-11-15T05:22:43.1182456Z   update-environment: true
+2026-11-15T05:22:43.1182633Z   allow-prereleases: false
+2026-11-15T05:22:43.1182791Z   freethreaded: false
+2026-11-15T05:22:43.1182965Z ##[endgroup]
+2026-11-15T05:22:43.2420941Z ##[group]Installed versions
+2026-11-15T05:22:43.2584461Z Successfully set up CPython (3.12.10)
+2026-11-15T05:22:43.2585152Z ##[endgroup]
+2026-11-15T05:22:43.2860558Z ##[group]Run actions/setup-node@v7.1.0
+2026-11-15T05:22:43.2860822Z with:
+2026-11-15T05:22:43.2860972Z   node-version: 22
+2026-11-15T05:22:43.2861129Z   check-latest: false
+2026-11-15T05:22:43.2863360Z   token: ***
+2026-11-15T05:22:43.2863528Z   package-manager-cache: true
+2026-11-15T05:22:43.2863705Z env:
+2026-11-15T05:22:43.2863912Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:22:43.2864342Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-15T05:22:43.2864687Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:22:43.2864984Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:22:43.2865280Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:22:43.2865510Z ##[endgroup]
+2026-11-15T05:22:43.4338906Z Found in cache @ C:\hostedtoolcache\windows\node\22.23.4\x64
+2026-11-15T05:22:44.4084668Z ##[group]Environment details
+2026-11-15T05:22:49.2779191Z node: v22.23.4
+2026-11-15T05:22:49.2779407Z npm: 10.9.9
+2026-11-15T05:22:49.2779553Z yarn: 1.22.22
+2026-11-15T05:22:49.2779942Z ##[endgroup]
+2026-11-15T05:22:49.3177976Z ##[group]Run python -m pip install -r requirements.lock -r requirements-gui.lock
+2026-11-15T05:22:49.3178574Z [36;1mpython -m pip install -r requirements.lock -r requirements-gui.lock[0m
+2026-11-15T05:22:49.3178963Z [36;1mpython -m pip install --no-build-isolation -e ".[gui]"[0m
+2026-11-15T05:22:49.3179246Z [36;1mpython -m pip check[0m
+2026-11-15T05:22:49.3709390Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-15T05:22:49.3709693Z env:
+2026-11-15T05:22:49.3709917Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:22:49.3710269Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-15T05:22:49.3710603Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:22:49.3710902Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:22:49.3711210Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:22:49.3711516Z ##[endgroup]
+2026-11-15T05:22:56.3409040Z Collecting build==1.6.1 (from -r requirements.lock (line 1))
+2026-11-15T05:22:56.5147560Z   Downloading build-1.6.1-py3-none-any.whl.metadata (5.6 kB)
+2026-11-15T05:22:56.5389306Z Requirement already satisfied: colorama==0.4.6 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from -r requirements.lock (line 2)) (0.4.6)
+2026-11-15T05:22:56.6650391Z Collecting contourpy==1.4.0 (from -r requirements.lock (line 3))
+2026-11-15T05:22:56.6696221Z   Downloading contourpy-1.4.0-cp312-cp312-win_amd64.whl.metadata (3.8 kB)
+2026-11-15T05:22:56.7939014Z Collecting CoolProp==8.0.0 (from -r requirements.lock (line 4))
+2026-11-15T05:22:56.8006848Z   Downloading coolprop-8.0.0-cp312-abi3-win_amd64.whl.metadata (4.0 kB)
+2026-11-15T05:22:56.9315661Z Collecting cycler==0.12.1 (from -r requirements.lock (line 5))
+2026-11-15T05:22:56.9361383Z   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+2026-11-15T05:22:57.1163409Z Collecting fonttools==4.68.0 (from -r requirements.lock (line 6))
+2026-11-15T05:22:57.1226791Z   Downloading fonttools-4.68.0-cp312-cp312-win_amd64.whl.metadata (142 kB)
+2026-11-15T05:22:57.2662846Z Collecting iniconfig==2.3.1 (from -r requirements.lock (line 7))
+2026-11-15T05:22:57.2721325Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-11-15T05:22:57.5669339Z Collecting kiwisolver==1.5.1 (from -r requirements.lock (line 8))
+2026-11-15T05:22:57.5722741Z   Downloading kiwisolver-1.5.1-cp312-cp312-win_amd64.whl.metadata (5.2 kB)
+2026-11-15T05:22:57.7353814Z Collecting matplotlib==3.11.2 (from -r requirements.lock (line 9))
+2026-11-15T05:22:57.7417318Z   Downloading matplotlib-3.11.2-cp312-cp312-win_amd64.whl.metadata (80 kB)
+2026-11-15T05:22:57.9665049Z Collecting numpy==2.5.4 (from -r requirements.lock (line 10))
+2026-11-15T05:22:57.9707170Z   Downloading numpy-2.5.4-cp312-cp312-win_amd64.whl.metadata (6.6 kB)
+2026-11-15T05:22:57.9888383Z Requirement already satisfied: packaging==26.3 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from -r requirements.lock (line 11)) (26.3)
+2026-11-15T05:22:58.1739580Z Collecting pillow==13.0.0 (from -r requirements.lock (line 12))
+2026-11-15T05:22:58.1791497Z   Downloading pillow-13.0.0-cp312-cp312-win_amd64.whl.metadata (9.3 kB)
+2026-11-15T05:22:58.2304469Z Collecting pluggy==1.7.0 (from -r requirements.lock (line 13))
+2026-11-15T05:22:58.2344113Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+2026-11-15T05:22:58.3555852Z Collecting Pygments==2.21.0 (from -r requirements.lock (line 14))
+2026-11-15T05:22:58.3600576Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-11-15T05:22:58.4152205Z Collecting pyparsing==3.3.3 (from -r requirements.lock (line 15))
+2026-11-15T05:22:58.4206892Z   Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+2026-11-15T05:22:58.4718831Z Collecting pyproject_hooks==1.3.3 (from -r requirements.lock (line 16))
+2026-11-15T05:22:58.4768308Z   Downloading pyproject_hooks-1.3.3-py3-none-any.whl.metadata (1.3 kB)
+2026-11-15T05:22:58.5429343Z Collecting pytest==9.2.0 (from -r requirements.lock (line 17))
+2026-11-15T05:22:58.5470236Z   Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+2026-11-15T05:22:58.5952134Z Collecting python-dateutil==4.0.0 (from -r requirements.lock (line 18))
+2026-11-15T05:22:58.5996488Z   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+2026-11-15T05:22:58.7485100Z Collecting scipy==1.18.1 (from -r requirements.lock (line 19))
+2026-11-15T05:22:58.7532142Z   Downloading scipy-1.18.1-cp312-cp312-win_amd64.whl.metadata (61 kB)
+2026-11-15T05:22:58.8646669Z Collecting setuptools==84.2.1 (from -r requirements.lock (line 20))
+2026-11-15T05:22:58.8698745Z   Downloading setuptools-84.2.1-py3-none-any.whl.metadata (6.6 kB)
+2026-11-15T05:22:58.9354259Z Collecting tzdata==2026.6 (from -r requirements.lock (line 21))
+2026-11-15T05:22:58.9398684Z   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-11-15T05:22:58.9992432Z Collecting Flask==3.1.3 (from -r requirements-gui.lock (line 2))
+2026-11-15T05:22:59.0034559Z   Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+2026-11-15T05:22:59.0626204Z Collecting blinker==1.9.0 (from -r requirements-gui.lock (line 3))
+2026-11-15T05:22:59.0681406Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2026-11-15T05:22:59.1301953Z Collecting click==8.5.1 (from -r requirements-gui.lock (line 4))
+2026-11-15T05:22:59.1351525Z   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+2026-11-15T05:22:59.1889836Z Collecting itsdangerous==2.2.0 (from -r requirements-gui.lock (line 5))
+2026-11-15T05:22:59.1934322Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2026-11-15T05:22:59.2461750Z Collecting Jinja2==3.1.6 (from -r requirements-gui.lock (line 6))
+2026-11-15T05:22:59.2510790Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-11-15T05:22:59.5445784Z Collecting MarkupSafe==3.0.4 (from -r requirements-gui.lock (line 7))
+2026-11-15T05:22:59.5491131Z   Downloading markupsafe-3.0.4-cp312-cp312-win_amd64.whl.metadata (2.8 kB)
+2026-11-15T05:22:59.6132964Z Collecting Werkzeug==3.1.9 (from -r requirements-gui.lock (line 8))
+2026-11-15T05:22:59.6175471Z   Downloading werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+2026-11-15T05:22:59.6869780Z Collecting plotly==7.1.0 (from -r requirements-gui.lock (line 9))
+2026-11-15T05:22:59.6919175Z   Downloading plotly-7.1.0-py3-none-any.whl.metadata (8.8 kB)
+2026-11-15T05:22:59.7948400Z Collecting narwhals==2.28.0 (from -r requirements-gui.lock (line 10))
+2026-11-15T05:22:59.7998479Z   Downloading narwhals-2.28.0-py3-none-any.whl.metadata (15 kB)
+2026-11-15T05:22:59.8538126Z Collecting waitress==3.0.2 (from -r requirements-gui.lock (line 11))
+2026-11-15T05:22:59.8584694Z   Downloading waitress-3.0.2-py3-none-any.whl.metadata (5.8 kB)
+2026-11-15T05:22:59.9252249Z Downloading build-1.6.1-py3-none-any.whl (31 kB)
+2026-11-15T05:22:59.9484222Z Downloading contourpy-1.4.0-cp312-cp312-win_amd64.whl (234 kB)
+2026-11-15T05:22:59.9793433Z Downloading coolprop-8.0.0-cp312-abi3-win_amd64.whl (10.9 MB)
+2026-11-15T05:23:00.1269318Z    ---------------------------------------- 10.9/10.9 MB 84.8 MB/s  0:00:00
+2026-11-15T05:23:00.1313890Z Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+2026-11-15T05:23:00.1524835Z Downloading fonttools-4.68.0-cp312-cp312-win_amd64.whl (2.5 MB)
+2026-11-15T05:23:00.1832091Z    ---------------------------------------- 2.5/2.5 MB 73.3 MB/s  0:00:00
+2026-11-15T05:23:00.1876465Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-11-15T05:23:00.2121122Z Downloading kiwisolver-1.5.1-cp312-cp312-win_amd64.whl (70 kB)
+2026-11-15T05:23:00.2366440Z Downloading matplotlib-3.11.2-cp312-cp312-win_amd64.whl (9.3 MB)
+2026-11-15T05:23:00.3167737Z    ---------------------------------------- 9.3/9.3 MB 146.6 MB/s  0:00:00
+2026-11-15T05:23:00.3237977Z Downloading numpy-2.5.4-cp312-cp312-win_amd64.whl (12.6 MB)
+2026-11-15T05:23:00.4180771Z    ---------------------------------------- 12.6/12.6 MB 131.0 MB/s  0:00:00
+2026-11-15T05:23:00.4230020Z Downloading pillow-13.0.0-cp312-cp312-win_amd64.whl (7.3 MB)
+2026-11-15T05:23:00.5065930Z    ---------------------------------------- 7.3/7.3 MB 88.7 MB/s  0:00:00
+2026-11-15T05:23:00.5106487Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+2026-11-15T05:23:00.5351785Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-11-15T05:23:00.5583364Z    ---------------------------------------- 1.3/1.3 MB 65.9 MB/s  0:00:00
+2026-11-15T05:23:00.5626111Z Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+2026-11-15T05:23:00.5858493Z Downloading pyproject_hooks-1.3.3-py3-none-any.whl (10 kB)
+2026-11-15T05:23:00.6147136Z Downloading pytest-9.2.0-py3-none-any.whl (411 kB)
+2026-11-15T05:23:00.7250940Z Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+2026-11-15T05:23:00.7481550Z Downloading scipy-1.18.1-cp312-cp312-win_amd64.whl (36.7 MB)
+2026-11-15T05:23:01.4714180Z    ---------------------------------------- 36.7/36.7 MB 50.6 MB/s  0:00:00
+2026-11-15T05:23:01.4758989Z Downloading setuptools-84.2.1-py3-none-any.whl (876 kB)
+2026-11-15T05:23:01.5022269Z    ---------------------------------------- 876.3/876.3 kB 38.4 MB/s  0:00:00
+2026-11-15T05:23:01.5066004Z Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+2026-11-15T05:23:01.5801365Z Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+2026-11-15T05:23:01.6062584Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2026-11-15T05:23:01.6272115Z Downloading click-8.5.1-py3-none-any.whl (126 kB)
+2026-11-15T05:23:01.6507656Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+2026-11-15T05:23:01.6709964Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-11-15T05:23:01.7256533Z Downloading markupsafe-3.0.4-cp312-cp312-win_amd64.whl (14 kB)
+2026-11-15T05:23:01.7480632Z Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
+2026-11-15T05:23:01.7736727Z Downloading plotly-7.1.0-py3-none-any.whl (9.7 MB)
+2026-11-15T05:23:01.8631092Z    ---------------------------------------- 9.7/9.7 MB 120.9 MB/s  0:00:00
+2026-11-15T05:23:01.8691457Z Downloading narwhals-2.28.0-py3-none-any.whl (490 kB)
+2026-11-15T05:23:01.9064425Z Downloading waitress-3.0.2-py3-none-any.whl (56 kB)
+2026-11-15T05:23:02.5217972Z Installing collected packages: waitress, tzdata, setuptools, pyproject_hooks, pyparsing, Pygments, pluggy, pillow, numpy, narwhals, MarkupSafe, kiwisolver, itsdangerous, iniconfig, fonttools, cycler, click, blinker, Werkzeug, scipy, python-dateutil, pytest, plotly, Jinja2, CoolProp, contourpy, build, matplotlib, Flask
+2026-11-15T05:23:18.0623683Z   Attempting uninstall: click
+2026-11-15T05:23:18.0651083Z     Found existing installation: click 8.5.0
+2026-11-15T05:23:18.0986622Z     Uninstalling click-8.5.0:
+2026-11-15T05:23:18.1013412Z       Successfully uninstalled click-8.5.0
+2026-11-15T05:23:38.8023776Z 
+2026-11-15T05:23:38.8052410Z Successfully installed CoolProp-8.0.0 Flask-3.1.3 Jinja2-3.1.6 MarkupSafe-3.0.4 Pygments-2.21.0 Werkzeug-3.1.9 blinker-1.9.0 build-1.6.1 click-8.5.1 contourpy-1.4.0 cycler-0.12.1 fonttools-4.68.0 iniconfig-2.3.1 itsdangerous-2.2.0 kiwisolver-1.5.1 matplotlib-3.11.2 narwhals-2.28.0 numpy-2.5.4 pillow-13.0.0 plotly-7.1.0 pluggy-1.7.0 pyparsing-3.3.3 pyproject_hooks-1.3.3 pytest-9.2.0 python-dateutil-4.0.0 scipy-1.18.1 setuptools-84.2.1 tzdata-2026.6 waitress-3.0.2
+2026-11-15T05:23:39.9727513Z Obtaining file:///D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion
+2026-11-15T05:23:39.9746419Z   Checking if build backend supports build_editable: started
+2026-11-15T05:23:40.2854899Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-11-15T05:23:40.2876694Z   Preparing editable metadata (pyproject.toml): started
+2026-11-15T05:23:40.6142723Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-11-15T05:23:40.6198509Z Requirement already satisfied: numpy==2.5.4 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from openstream-python==0.2.1) (2.5.4)
+2026-11-15T05:23:40.6202241Z Requirement already satisfied: scipy==1.18.1 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from openstream-python==0.2.1) (1.18.1)
+2026-11-15T05:23:40.6205568Z Requirement already satisfied: CoolProp==8.0.0 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from openstream-python==0.2.1) (8.0.0)
+2026-11-15T05:23:40.6208777Z Requirement already satisfied: matplotlib==3.11.2 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from openstream-python==0.2.1) (3.11.2)
+2026-11-15T05:23:40.6216182Z Requirement already satisfied: Flask==3.1.3 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from openstream-python==0.2.1) (3.1.3)
+2026-11-15T05:23:40.6220395Z Requirement already satisfied: plotly==7.1.0 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from openstream-python==0.2.1) (7.1.0)
+2026-11-15T05:23:40.6224238Z Requirement already satisfied: waitress==3.0.2 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from openstream-python==0.2.1) (3.0.2)
+2026-11-15T05:23:40.6237558Z Requirement already satisfied: blinker>=1.9.0 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from Flask==3.1.3->openstream-python==0.2.1) (1.9.0)
+2026-11-15T05:23:40.6241840Z Requirement already satisfied: click>=8.1.3 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from Flask==3.1.3->openstream-python==0.2.1) (8.5.1)
+2026-11-15T05:23:40.6246316Z Requirement already satisfied: itsdangerous>=2.2.0 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from Flask==3.1.3->openstream-python==0.2.1) (2.2.0)
+2026-11-15T05:23:40.6249719Z Requirement already satisfied: jinja2>=3.1.2 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from Flask==3.1.3->openstream-python==0.2.1) (3.1.6)
+2026-11-15T05:23:40.6253029Z Requirement already satisfied: markupsafe>=2.1.1 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from Flask==3.1.3->openstream-python==0.2.1) (3.0.4)
+2026-11-15T05:23:40.6256281Z Requirement already satisfied: werkzeug>=3.1.0 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from Flask==3.1.3->openstream-python==0.2.1) (3.1.9)
+2026-11-15T05:23:40.6304507Z Requirement already satisfied: contourpy>=1.0.1 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from matplotlib==3.11.2->openstream-python==0.2.1) (1.4.0)
+2026-11-15T05:23:40.6307874Z Requirement already satisfied: cycler>=0.10 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from matplotlib==3.11.2->openstream-python==0.2.1) (0.12.1)
+2026-11-15T05:23:40.6311322Z Requirement already satisfied: fonttools>=4.28.2 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from matplotlib==3.11.2->openstream-python==0.2.1) (4.68.0)
+2026-11-15T05:23:40.6314623Z Requirement already satisfied: kiwisolver>=1.3.1 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from matplotlib==3.11.2->openstream-python==0.2.1) (1.5.1)
+2026-11-15T05:23:40.6318922Z Requirement already satisfied: packaging>=20.0 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from matplotlib==3.11.2->openstream-python==0.2.1) (26.3)
+2026-11-15T05:23:40.6322299Z Requirement already satisfied: pillow>=9 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from matplotlib==3.11.2->openstream-python==0.2.1) (13.0.0)
+2026-11-15T05:23:40.6326038Z Requirement already satisfied: pyparsing>=3 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from matplotlib==3.11.2->openstream-python==0.2.1) (3.3.3)
+2026-11-15T05:23:40.6329432Z Requirement already satisfied: python-dateutil>=2.7 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from matplotlib==3.11.2->openstream-python==0.2.1) (4.0.0)
+2026-11-15T05:23:40.6346731Z Requirement already satisfied: narwhals>=1.15.1 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from plotly==7.1.0->openstream-python==0.2.1) (2.28.0)
+2026-11-15T05:23:40.6567707Z Requirement already satisfied: tzdata in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from python-dateutil>=2.7->matplotlib==3.11.2->openstream-python==0.2.1) (2026.6)
+2026-11-15T05:23:40.6595838Z Building wheels for collected packages: openstream-python
+2026-11-15T05:23:40.6614635Z   Building editable for openstream-python (pyproject.toml): started
+2026-11-15T05:23:41.0888149Z   Building editable for openstream-python (pyproject.toml): finished with status 'done'
+2026-11-15T05:23:41.0925743Z   Created wheel for openstream-python: filename=openstream_python-0.2.1-0.editable-py3-none-any.whl size=22730 sha256=a91fd56c6a09f4c6cfae2890746af7793d3180fe7857701755fe880d01c92b4c
+2026-11-15T05:23:41.0927509Z   Stored in directory: C:\Users\runneradmin\AppData\Local\Temp\pip-ephem-wheel-cache-d0ti32ua\wheels\38\08\c9\a7df98c4bf8bb5c5a0e954cedd1f36396994b7bc20d559bbae
+2026-11-15T05:23:41.0961714Z Successfully built openstream-python
+2026-11-15T05:23:41.1439097Z Installing collected packages: openstream-python
+2026-11-15T05:23:41.4383748Z Successfully installed openstream-python-0.2.1
+2026-11-15T05:23:41.8136577Z No broken requirements found.
+2026-11-15T05:23:41.9396784Z ##[group]Run python -m pytest -q
+2026-11-15T05:23:41.9397071Z [36;1mpython -m pytest -q[0m
+2026-11-15T05:23:41.9453991Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-15T05:23:41.9454261Z env:
+2026-11-15T05:23:41.9454472Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:23:41.9454819Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-15T05:23:41.9455154Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:23:41.9455462Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:23:41.9455769Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:23:41.9456009Z ##[endgroup]
+2026-11-15T05:23:59.7962528Z ........................................................................ [ 15%]
+2026-11-15T05:25:38.4590575Z ........................................................................ [ 30%]
+2026-11-15T05:25:45.2690036Z ........................................................................ [ 45%]
+2026-11-15T05:25:45.5350749Z ........................................................................ [ 60%]
+2026-11-15T05:25:45.8476395Z ........................................................................ [ 75%]
+2026-11-15T05:25:47.7081184Z ........................................................................ [ 90%]
+2026-11-15T05:26:13.0603856Z ............................................                             [100%]
+2026-11-15T05:26:13.0604573Z ============================== warnings summary ===============================
+2026-11-15T05:26:13.0605434Z tests/test_fourfield.py::test_original_inputs_converge_with_bounded_primary_fields
+2026-11-15T05:26:13.0606462Z   D:\a\OpenSTREAM_pyversion\OpenSTREAM_pyversion\src\openstream\ff_fields.py:178: RuntimeWarning: divide by zero encountered in divide
+2026-11-15T05:26:13.0607001Z     return (c[1]/self.REV(i))**2+c[2]
+2026-11-15T05:26:13.0607189Z 
+2026-11-15T05:26:13.0607517Z tests/test_fourfield.py::test_original_inputs_converge_with_bounded_primary_fields
+2026-11-15T05:26:13.0608201Z   D:\a\OpenSTREAM_pyversion\OpenSTREAM_pyversion\src\openstream\ff_fields.py:140: RuntimeWarning: invalid value encountered in multiply
+2026-11-15T05:26:13.0608859Z     force = .5*self.SHAPEFACTOR(i)*self.DRAGCOEF(i)*self.fluid.RHOG*difference**2
+2026-11-15T05:26:13.0609144Z 
+2026-11-15T05:26:13.0609376Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-11-15T05:26:13.0609803Z 476 passed, 2 warnings in 150.22s (0:02:30)
+2026-11-15T05:26:13.3583282Z ##[group]Run node --test tests/gui_frontend_logic.test.cjs tests/gui_navigation.test.cjs
+2026-11-15T05:26:13.3583887Z [36;1mnode --test tests/gui_frontend_logic.test.cjs tests/gui_navigation.test.cjs[0m
+2026-11-15T05:26:13.3641494Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-15T05:26:13.3641816Z env:
+2026-11-15T05:26:13.3642084Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:26:13.3642516Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-15T05:26:13.3642923Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:26:13.3643303Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:26:13.3643663Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:26:13.3643971Z ##[endgroup]
+2026-11-15T05:26:13.8065799Z TAP version 13
+2026-11-15T05:26:13.8744364Z # Subtest: case labels use the original name tag without case normalization
+2026-11-15T05:26:13.8749488Z ok 1 - case labels use the original name tag without case normalization
+2026-11-15T05:26:13.8750405Z   ---
+2026-11-15T05:26:13.8750656Z   duration_ms: 0.8203
+2026-11-15T05:26:13.8750913Z   type: 'test'
+2026-11-15T05:26:13.8751406Z   ...
+2026-11-15T05:26:13.8765117Z # Subtest: case labels preserve Unicode and literal text, with explicit missing-name fallbacks
+2026-11-15T05:26:13.8768413Z ok 2 - case labels preserve Unicode and literal text, with explicit missing-name fallbacks
+2026-11-15T05:26:13.8769143Z   ---
+2026-11-15T05:26:13.8769512Z   duration_ms: 0.1315
+2026-11-15T05:26:13.8769886Z   type: 'test'
+2026-11-15T05:26:13.8770228Z   ...
+2026-11-15T05:26:13.8770872Z # Subtest: enthalpy and velocity groups exclude derivatives and diagnostic copies
+2026-11-15T05:26:13.8773016Z ok 3 - enthalpy and velocity groups exclude derivatives and diagnostic copies
+2026-11-15T05:26:13.8773862Z   ---
+2026-11-15T05:26:13.8774204Z   duration_ms: 9.3073
+2026-11-15T05:26:13.8774651Z   type: 'test'
+2026-11-15T05:26:13.8775014Z   ...
+2026-11-15T05:26:13.8776031Z # Subtest: reference overlays choose the matching time rather than the native array index
+2026-11-15T05:26:13.8777548Z ok 4 - reference overlays choose the matching time rather than the native array index
+2026-11-15T05:26:13.8778226Z   ---
+2026-11-15T05:26:13.8778612Z   duration_ms: 0.3531
+2026-11-15T05:26:13.8779004Z   type: 'test'
+2026-11-15T05:26:13.8779771Z   ...
+2026-11-15T05:26:13.8780465Z # Subtest: missing reference states are omitted without clamping to a different state
+2026-11-15T05:26:13.8781466Z ok 5 - missing reference states are omitted without clamping to a different state
+2026-11-15T05:26:13.8782116Z   ---
+2026-11-15T05:26:13.8782473Z   duration_ms: 0.1448
+2026-11-15T05:26:13.8782861Z   type: 'test'
+2026-11-15T05:26:13.8783232Z   ...
+2026-11-15T05:26:13.8783820Z # Subtest: individual derivative profiles keep their derivative units
+2026-11-15T05:26:13.8784653Z ok 6 - individual derivative profiles keep their derivative units
+2026-11-15T05:26:13.8785698Z   ---
+2026-11-15T05:26:13.8786151Z   duration_ms: 0.224
+2026-11-15T05:26:13.8786550Z   type: 'test'
+2026-11-15T05:26:13.8786910Z   ...
+2026-11-15T05:26:13.8787486Z # Subtest: input import rejects unknown explicit schema versions
+2026-11-15T05:26:13.8788276Z ok 7 - input import rejects unknown explicit schema versions
+2026-11-15T05:26:13.8788810Z   ---
+2026-11-15T05:26:13.8789160Z   duration_ms: 0.5717
+2026-11-15T05:26:13.8789527Z   type: 'test'
+2026-11-15T05:26:13.8789877Z   ...
+2026-11-15T05:26:13.8890147Z # Subtest: Run validates and submits the same captured model and case despite subsequent editor changes
+2026-11-15T05:26:13.8891098Z ok 8 - Run validates and submits the same captured model and case despite subsequent editor changes
+2026-11-15T05:26:13.8891558Z   ---
+2026-11-15T05:26:13.8891712Z   duration_ms: 11.6131
+2026-11-15T05:26:13.8891887Z   type: 'test'
+2026-11-15T05:26:13.8892049Z   ...
+2026-11-15T05:26:13.8894637Z # Subtest: a stale history model load cannot overwrite a newer selection or unlock Run early
+2026-11-15T05:26:13.8895427Z ok 9 - a stale history model load cannot overwrite a newer selection or unlock Run early
+2026-11-15T05:26:13.8895886Z   ---
+2026-11-15T05:26:13.8896076Z   duration_ms: 7.0228
+2026-11-15T05:26:13.8896307Z   type: 'test'
+2026-11-15T05:26:13.8896499Z   ...
+2026-11-15T05:26:13.8896707Z 1..9
+2026-11-15T05:26:13.8896893Z # tests 9
+2026-11-15T05:26:13.8897062Z # suites 0
+2026-11-15T05:26:13.8897274Z # pass 9
+2026-11-15T05:26:13.8897455Z # fail 0
+2026-11-15T05:26:13.8897615Z # cancelled 0
+2026-11-15T05:26:13.8897844Z # skipped 0
+2026-11-15T05:26:13.8898031Z # todo 0
+2026-11-15T05:26:13.8898270Z # duration_ms 146.2423
+2026-11-15T05:26:14.0088613Z ##[group]Run python -m build --no-isolation
+2026-11-15T05:26:14.0088992Z [36;1mpython -m build --no-isolation[0m
+2026-11-15T05:26:14.0147703Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-15T05:26:14.0148360Z env:
+2026-11-15T05:26:14.0148638Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:26:14.0149040Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-15T05:26:14.0149448Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:26:14.0149816Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:26:14.0150195Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-15T05:26:14.0150505Z ##[endgroup]
+2026-11-15T05:26:14.3730693Z * Getting build dependencies for sdist...
+2026-11-15T05:26:14.5960784Z running egg_info
+2026-11-15T05:26:14.6003215Z creating src\openstream_python.egg-info
+2026-11-15T05:26:14.6006239Z writing src\openstream_python.egg-info\PKG-INFO
+2026-11-15T05:26:14.6017956Z writing dependency_links to src\openstream_python.egg-info\dependency_links.txt
+2026-11-15T05:26:14.6021837Z writing entry points to src\openstream_python.egg-info\entry_points.txt
+2026-11-15T05:26:14.6027061Z writing requirements to src\openstream_python.egg-info\requires.txt
+2026-11-15T05:26:14.6029833Z writing top-level names to src\openstream_python.egg-info\top_level.txt
+2026-11-15T05:26:14.6032688Z writing manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+2026-11-15T05:26:14.6184705Z reading manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+2026-11-15T05:26:14.6187526Z reading manifest template 'MANIFEST.in'
+2026-11-15T05:26:14.6295045Z no previously-included directories found matching 'tools\vendor'
+2026-11-15T05:26:14.6358343Z adding license file 'LICENSE'
+2026-11-15T05:26:14.6358898Z adding license file 'licenses/CoolPropWrapper_LICENSE'
+2026-11-15T05:26:14.6359514Z adding license file 'licenses/OpenSTREAM_database_LICENSE'
+2026-11-15T05:26:14.6360167Z adding license file 'licenses/mat_io_LICENSE'
+2026-11-15T05:26:14.6360953Z adding license file 'licenses/gui/Apache-License-2.0.txt'
+2026-11-15T05:26:14.6361334Z adding license file 'licenses/gui/Flask-LICENSE.txt'
+2026-11-15T05:26:14.6361696Z adding license file 'licenses/gui/OFL-License.txt'
+2026-11-15T05:26:14.6362044Z adding license file 'licenses/gui/plotly-LICENSE.txt'
+2026-11-15T05:26:14.6362475Z adding license file 'licenses/gui/sphinx-rtd-theme-LICENSE.txt'
+2026-11-15T05:26:14.6362872Z adding license file 'licenses/gui/waitress-LICENSE.txt'
+2026-11-15T05:26:14.6363213Z adding license file 'docs/THIRD_PARTY.md'
+2026-11-15T05:26:14.6390522Z writing manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+2026-11-15T05:26:14.6676112Z * Building sdist...
+2026-11-15T05:26:14.8836901Z running sdist
+2026-11-15T05:26:14.8837915Z running egg_info
+2026-11-15T05:26:14.8917924Z writing src\openstream_python.egg-info\PKG-INFO
+2026-11-15T05:26:14.8929048Z writing dependency_links to src\openstream_python.egg-info\dependency_links.txt
+2026-11-15T05:26:14.8933398Z writing entry points to src\openstream_python.egg-info\entry_points.txt
+2026-11-15T05:26:14.8938460Z writing requirements to src\openstream_python.egg-info\requires.txt
+2026-11-15T05:26:14.8940989Z writing top-level names to src\openstream_python.egg-info\top_level.txt
+2026-11-15T05:26:14.9092100Z reading manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+2026-11-15T05:26:14.9120119Z reading manifest template 'MANIFEST.in'
+2026-11-15T05:26:14.9227018Z no previously-included directories found matching 'tools\vendor'
+2026-11-15T05:26:14.9290612Z adding license file 'LICENSE'
+2026-11-15T05:26:14.9291163Z adding license file 'licenses/CoolPropWrapper_LICENSE'
+2026-11-15T05:26:14.9291924Z adding license file 'licenses/OpenSTREAM_database_LICENSE'
+2026-11-15T05:26:14.9292751Z adding license file 'licenses/mat_io_LICENSE'
+2026-11-15T05:26:14.9295605Z adding license file 'licenses/gui/Apache-License-2.0.txt'
+2026-11-15T05:26:14.9296075Z adding license file 'licenses/gui/Flask-LICENSE.txt'
+2026-11-15T05:26:14.9296443Z adding license file 'licenses/gui/OFL-License.txt'
+2026-11-15T05:26:14.9296794Z adding license file 'licenses/gui/plotly-LICENSE.txt'
+2026-11-15T05:26:14.9297188Z adding license file 'licenses/gui/sphinx-rtd-theme-LICENSE.txt'
+2026-11-15T05:26:14.9297605Z adding license file 'licenses/gui/waitress-LICENSE.txt'
+2026-11-15T05:26:14.9297937Z adding license file 'docs/THIRD_PARTY.md'
+2026-11-15T05:26:14.9331356Z writing manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+2026-11-15T05:26:14.9334692Z running check
+2026-11-15T05:26:14.9383353Z creating openstream_python-0.2.1
+2026-11-15T05:26:14.9392040Z creating openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9394155Z creating openstream_python-0.2.1\docs\acceptance
+2026-11-15T05:26:14.9396552Z creating openstream_python-0.2.1\examples
+2026-11-15T05:26:14.9398943Z creating openstream_python-0.2.1\licenses
+2026-11-15T05:26:14.9401479Z creating openstream_python-0.2.1\licenses\gui
+2026-11-15T05:26:14.9403820Z creating openstream_python-0.2.1\provenance
+2026-11-15T05:26:14.9406093Z creating openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9409310Z creating openstream_python-0.2.1\src\openstream\data
+2026-11-15T05:26:14.9411548Z creating openstream_python-0.2.1\src\openstream\data\gui_baselines
+2026-11-15T05:26:14.9413659Z creating openstream_python-0.2.1\src\openstream\gui_static
+2026-11-15T05:26:14.9415918Z creating openstream_python-0.2.1\src\openstream_python.egg-info
+2026-11-15T05:26:14.9418068Z creating openstream_python-0.2.1\tests
+2026-11-15T05:26:14.9420159Z creating openstream_python-0.2.1\tools
+2026-11-15T05:26:14.9424898Z copying files to openstream_python-0.2.1...
+2026-11-15T05:26:14.9425934Z copying CHANGELOG.md -> openstream_python-0.2.1
+2026-11-15T05:26:14.9430334Z copying LICENSE -> openstream_python-0.2.1
+2026-11-15T05:26:14.9434579Z copying MANIFEST.in -> openstream_python-0.2.1
+2026-11-15T05:26:14.9438554Z copying OpenSTREAM-GUI.cmd -> openstream_python-0.2.1
+2026-11-15T05:26:14.9442890Z copying OpenSTREAM.cmd -> openstream_python-0.2.1
+2026-11-15T05:26:14.9446854Z copying README.md -> openstream_python-0.2.1
+2026-11-15T05:26:14.9451790Z copying pyproject.toml -> openstream_python-0.2.1
+2026-11-15T05:26:14.9456136Z copying requirements-gui.lock -> openstream_python-0.2.1
+2026-11-15T05:26:14.9460241Z copying requirements.lock -> openstream_python-0.2.1
+2026-11-15T05:26:14.9464380Z copying docs\ACCEPTANCE_MATRIX.csv -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9470251Z copying docs\ACCEPTANCE_MATRIX.json -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9476421Z copying docs\ACCEPTANCE_MATRIX.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9481776Z copying docs\ACCEPTANCE_METHODS.csv -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9487338Z copying docs\ACCEPTANCE_OPTIONS.csv -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9493824Z copying docs\ACCEPTANCE_PLAN.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9498549Z copying docs\ALL_BASELINES_VERIFICATION.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9514458Z copying docs\API.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9515251Z copying docs\BARTOLOMEY.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9515884Z copying docs\BARTOLOMEY_PILOT.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9517783Z copying docs\BARTOLOMEY_SOURCE_REVIEW.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9520136Z copying docs\FEATURE_MAP.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9524436Z copying docs\GETTING_STARTED.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9528372Z copying docs\GUI.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9533013Z copying docs\GUI_COMPONENT_REVIEW.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9537181Z copying docs\GUI_STYLE.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9541936Z copying docs\GUI_USABILITY_VERIFICATION.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9546159Z copying docs\GUI_VERIFICATION.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9550411Z copying docs\LECORRE_PHYSICAL_REVIEW.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9554559Z copying docs\LECORRE_REPRODUCTION.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9559282Z copying docs\LITERATURE_ACCEPTANCE_REVIEW.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9563737Z copying docs\METHOD_COVERAGE.json -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9572265Z copying docs\METHOD_COVERAGE.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9576462Z copying docs\MIXTURE_BASELINE_VERIFICATION.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9580522Z copying docs\PARITY_COMPLETION.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9584953Z copying docs\PARITY_STATUS.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9589373Z copying docs\PLOTTING.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9593881Z copying docs\PROGRESS.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9598180Z copying docs\PUBLICATION.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9602339Z copying docs\REFERENCE_COMPARISON.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9606170Z copying docs\REPOSITORY_CONTENTS.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9610963Z copying docs\SOLVER_REVIEW.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9615921Z copying docs\THIRD_PARTY.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9620066Z copying docs\UPSTREAM_AUDIT.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9624015Z copying docs\VERIFICATION.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9628570Z copying docs\annular_reference_audit.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9633409Z copying docs\field_notes.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9637423Z copying docs\fourfield_notes.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9641391Z copying docs\fourfield_review.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9645469Z copying docs\framework_comparator_review.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9649411Z copying docs\input_properties_notes.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9653689Z copying docs\mixture_documentation_review.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9657820Z copying docs\mixture_followup.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9661775Z copying docs\mixture_translation_audit.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9665837Z copying docs\reference_archive_inspection.json -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9669846Z copying docs\threefield_review.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9674121Z copying docs\threefield_transient.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9678253Z copying docs\twofluid_baseline_audit.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9682243Z copying docs\twofluid_notes.md -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9686400Z copying docs\upstream_inventory.json -> openstream_python-0.2.1\docs
+2026-11-15T05:26:14.9690657Z copying docs\acceptance\core.json -> openstream_python-0.2.1\docs\acceptance
+2026-11-15T05:26:14.9695690Z copying docs\acceptance\experimental.json -> openstream_python-0.2.1\docs\acceptance
+2026-11-15T05:26:14.9700492Z copying docs\acceptance\interfaces.json -> openstream_python-0.2.1\docs\acceptance
+2026-11-15T05:26:14.9705378Z copying docs\acceptance\plan.json -> openstream_python-0.2.1\docs\acceptance
+2026-11-15T05:26:14.9709527Z copying examples\bartolomey_pilot.json -> openstream_python-0.2.1\examples
+2026-11-15T05:26:14.9714006Z copying examples\lecorre_reproduction.json -> openstream_python-0.2.1\examples
+2026-11-15T05:26:14.9718205Z copying examples\official_sample.py -> openstream_python-0.2.1\examples
+2026-11-15T05:26:14.9722136Z copying examples\plot_saved_results.py -> openstream_python-0.2.1\examples
+2026-11-15T05:26:14.9726139Z copying licenses\CoolPropWrapper_LICENSE -> openstream_python-0.2.1\licenses
+2026-11-15T05:26:14.9730249Z copying licenses\OpenSTREAM_database_LICENSE -> openstream_python-0.2.1\licenses
+2026-11-15T05:26:14.9734303Z copying licenses\mat_io_LICENSE -> openstream_python-0.2.1\licenses
+2026-11-15T05:26:14.9738489Z copying licenses/gui\Apache-License-2.0.txt -> openstream_python-0.2.1\licenses/gui
+2026-11-15T05:26:14.9742349Z copying licenses/gui\Flask-LICENSE.txt -> openstream_python-0.2.1\licenses/gui
+2026-11-15T05:26:14.9746378Z copying licenses/gui\OFL-License.txt -> openstream_python-0.2.1\licenses/gui
+2026-11-15T05:26:14.9750360Z copying licenses/gui\plotly-LICENSE.txt -> openstream_python-0.2.1\licenses/gui
+2026-11-15T05:26:14.9754717Z copying licenses/gui\sphinx-rtd-theme-LICENSE.txt -> openstream_python-0.2.1\licenses/gui
+2026-11-15T05:26:14.9758709Z copying licenses/gui\waitress-LICENSE.txt -> openstream_python-0.2.1\licenses/gui
+2026-11-15T05:26:14.9767061Z copying provenance\acceptance_sources.json -> openstream_python-0.2.1\provenance
+2026-11-15T05:26:14.9771190Z copying provenance\baseline-parity-02.json -> openstream_python-0.2.1\provenance
+2026-11-15T05:26:14.9774970Z copying provenance\environment.json -> openstream_python-0.2.1\provenance
+2026-11-15T05:26:14.9778828Z copying provenance\sha256.json -> openstream_python-0.2.1\provenance
+2026-11-15T05:26:14.9782868Z copying provenance\upstream.json -> openstream_python-0.2.1\provenance
+2026-11-15T05:26:14.9786582Z copying src\openstream\__init__.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9790816Z copying src\openstream\__main__.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9794535Z copying src\openstream\annular.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9798603Z copying src\openstream\cli.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9802610Z copying src\openstream\database.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9808328Z copying src\openstream\experimental_comparison.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9812455Z copying src\openstream\ff_fields.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9816460Z copying src\openstream\fields.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9820926Z copying src\openstream\fourfield.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9825246Z copying src\openstream\gui.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9830274Z copying src\openstream\gui_launcher.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9834228Z copying src\openstream\gui_lock.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9838276Z copying src\openstream\gui_reference.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9842174Z copying src\openstream\gui_schema.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9846555Z copying src\openstream\gui_worker.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9851356Z copying src\openstream\inputs.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9855767Z copying src\openstream\multifield_output.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9859768Z copying src\openstream\numerics.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9863815Z copying src\openstream\output.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9867729Z copying src\openstream\plotting.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9872202Z copying src\openstream\properties.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9876190Z copying src\openstream\solver.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9880083Z copying src\openstream\tf_fields.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9884305Z copying src\openstream\threefield.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9888425Z copying src\openstream\twofluid.py -> openstream_python-0.2.1\src\openstream
+2026-11-15T05:26:14.9892846Z copying src\openstream\data\geom.inp -> openstream_python-0.2.1\src\openstream\data
+2026-11-15T05:26:14.9897050Z copying src\openstream\data\gui_fields.json -> openstream_python-0.2.1\src\openstream\data
+2026-11-15T05:26:14.9901604Z copying src\openstream\data\models.inp -> openstream_python-0.2.1\src\openstream\data
+2026-11-15T05:26:14.9905612Z copying src\openstream\data\options.inp -> openstream_python-0.2.1\src\openstream\data
+2026-11-15T05:26:14.9909466Z copying src\openstream\data\tutorial1.inp -> openstream_python-0.2.1\src\openstream\data
+2026-11-15T05:26:14.9913250Z copying src\openstream\data\tutorial2_transient.inp -> openstream_python-0.2.1\src\openstream\data
+2026-11-15T05:26:14.9918693Z copying src\openstream\data\upstream.json -> openstream_python-0.2.1\src\openstream\data
+2026-11-15T05:26:14.9922872Z copying src\openstream\data\gui_baselines\FourField.initialization.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+2026-11-15T05:26:14.9928109Z copying src\openstream\data\gui_baselines\FourField.json -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+2026-11-15T05:26:14.9932141Z copying src\openstream\data\gui_baselines\FourField.physical.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+2026-11-15T05:26:14.9936368Z copying src\openstream\data\gui_baselines\Mixture.initialization.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+2026-11-15T05:26:14.9940817Z copying src\openstream\data\gui_baselines\Mixture.json -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+2026-11-15T05:26:14.9945483Z copying src\openstream\data\gui_baselines\Mixture.physical.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+2026-11-15T05:26:14.9950490Z copying src\openstream\data\gui_baselines\ThreeField.initialization.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+2026-11-15T05:26:14.9954860Z copying src\openstream\data\gui_baselines\ThreeField.json -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+2026-11-15T05:26:14.9959106Z copying src\openstream\data\gui_baselines\ThreeField.physical.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+2026-11-15T05:26:14.9963259Z copying src\openstream\data\gui_baselines\TwoFluid.initialization.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+2026-11-15T05:26:14.9968440Z copying src\openstream\data\gui_baselines\TwoFluid.json -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+2026-11-15T05:26:14.9972764Z copying src\openstream\data\gui_baselines\TwoFluid.physical.npz -> openstream_python-0.2.1\src\openstream\data\gui_baselines
+2026-11-15T05:26:14.9976733Z copying src\openstream\gui_static\Roboto-Slab-Bold.woff2 -> openstream_python-0.2.1\src\openstream\gui_static
+2026-11-15T05:26:14.9981617Z copying src\openstream\gui_static\Roboto-Slab-Regular.woff2 -> openstream_python-0.2.1\src\openstream\gui_static
+2026-11-15T05:26:14.9986706Z copying src\openstream\gui_static\app.js -> openstream_python-0.2.1\src\openstream\gui_static
+2026-11-15T05:26:14.9991313Z copying src\openstream\gui_static\index.html -> openstream_python-0.2.1\src\openstream\gui_static
+2026-11-15T05:26:14.9995441Z copying src\openstream\gui_static\lato-bold.woff2 -> openstream_python-0.2.1\src\openstream\gui_static
+2026-11-15T05:26:15.0001277Z copying src\openstream\gui_static\lato-normal.woff2 -> openstream_python-0.2.1\src\openstream\gui_static
+2026-11-15T05:26:15.0008864Z copying src\openstream\gui_static\logo-transparent.png -> openstream_python-0.2.1\src\openstream\gui_static
+2026-11-15T05:26:15.0013827Z copying src\openstream\gui_static\style.css -> openstream_python-0.2.1\src\openstream\gui_static
+2026-11-15T05:26:15.0017588Z copying src\openstream_python.egg-info\PKG-INFO -> openstream_python-0.2.1\src\openstream_python.egg-info
+2026-11-15T05:26:15.0022169Z copying src\openstream_python.egg-info\SOURCES.txt -> openstream_python-0.2.1\src\openstream_python.egg-info
+2026-11-15T05:26:15.0025768Z copying src\openstream_python.egg-info\dependency_links.txt -> openstream_python-0.2.1\src\openstream_python.egg-info
+2026-11-15T05:26:15.0029678Z copying src\openstream_python.egg-info\entry_points.txt -> openstream_python-0.2.1\src\openstream_python.egg-info
+2026-11-15T05:26:15.0033750Z copying src\openstream_python.egg-info\requires.txt -> openstream_python-0.2.1\src\openstream_python.egg-info
+2026-11-15T05:26:15.0037710Z copying src\openstream_python.egg-info\top_level.txt -> openstream_python-0.2.1\src\openstream_python.egg-info
+2026-11-15T05:26:15.0042658Z copying tests\gui_frontend_logic.test.cjs -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0047098Z copying tests\gui_navigation.test.cjs -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0051049Z copying tests\test_bartolomey_adapter.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0055117Z copying tests\test_bartolomey_pilot_policy.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0059703Z copying tests\test_cli.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0063812Z copying tests\test_diagnostic_api.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0069318Z copying tests\test_experimental_comparison.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0073501Z copying tests\test_fields.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0077411Z copying tests\test_fourfield.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0081525Z copying tests\test_gui.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0086202Z copying tests\test_gui_lock.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0090303Z copying tests\test_gui_reference.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0094377Z copying tests\test_gui_schema.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0098312Z copying tests\test_inputs.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0102352Z copying tests\test_lecorre_common_domain.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0106665Z copying tests\test_lecorre_comparison.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0110993Z copying tests\test_lecorre_database.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0115127Z copying tests\test_lecorre_output_audit.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0119126Z copying tests\test_lecorre_runner.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0123406Z copying tests\test_mixture_mrm_semantics.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0127735Z copying tests\test_plotting.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0131745Z copying tests\test_properties.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0135794Z copying tests\test_solver.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0139805Z copying tests\test_threefield.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0143954Z copying tests\test_threefield_transient_audit.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0148154Z copying tests\test_transient.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0152801Z copying tests\test_twofluid.py -> openstream_python-0.2.1\tests
+2026-11-15T05:26:15.0156808Z copying tools\REFERENCE_READER.md -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0161076Z copying tools\audit_bartolomey_outputs.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0168062Z copying tools\audit_lecorre_common_domain.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0172159Z copying tools\audit_lecorre_outputs.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0176576Z copying tools\audit_lecorre_physical_scope.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0180610Z copying tools\audit_method_coverage.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0186463Z copying tools\audit_mixture_diagnostics.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0190611Z copying tools\audit_publication.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0194499Z copying tools\audit_recovered_annular.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0198465Z copying tools\audit_recovered_mixture.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0202558Z copying tools\audit_recovered_twofluid.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0207060Z copying tools\build_acceptance_matrix.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0211868Z copying tools\capture_provenance.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0215951Z copying tools\compare_lecorre_paper_extra.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0220195Z copying tools\compare_lecorre_results.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0224660Z copying tools\compare_matlab_reference.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0229497Z copying tools\diagnose_bartolomey_mesh.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0233728Z copying tools\diagnose_twofluid_area.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0237789Z copying tools\export_documentation_pdf.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0242136Z copying tools\export_lecorre_pdf.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0247055Z copying tools\export_matlab_reference.m -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0251623Z copying tools\extract_lecorre_reference.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0255645Z copying tools\extract_lecorre_reference_extra.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0259762Z copying tools\gui_wheel_smoke.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0263900Z copying tools\install_gui_shortcut.ps1 -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0268343Z copying tools\interactive_console.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0272504Z copying tools\recover_annular_reference.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0277165Z copying tools\recover_mcos_reference.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0281719Z copying tools\recover_twofluid_reference.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0285715Z copying tools\release_examples.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0291266Z copying tools\requirements-reference.lock -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0295040Z copying tools\run_bartolomey_pilot.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0299290Z copying tools\run_lecorre_reproduction.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0303458Z copying tools\smoke_wheel.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0307585Z copying tools\summarize_bartolomey_pilot.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0311853Z copying tools\test_recover_annular_reference.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0315944Z copying tools\test_recover_mcos_reference.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0319960Z copying tools\test_recovered_framework.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0324226Z copying tools\test_recovered_mixture_comparison.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0328513Z copying tools\test_recovered_twofluid.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0332691Z copying tools\test_reference_comparator.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0336999Z copying tools\verify_all_baselines.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0341018Z copying tools\verify_fourfield.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0345026Z copying tools\verify_mrm_transient.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0349574Z copying tools\verify_recovered_framework.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0355073Z copying tools\verify_recovered_mixture.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0359341Z copying tools\verify_sensitivity.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0363661Z copying tools\verify_threefield_transient.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0367861Z copying tools\verify_twofluid_transient.py -> openstream_python-0.2.1\tools
+2026-11-15T05:26:15.0383032Z Writing openstream_python-0.2.1\setup.cfg
+2026-11-15T05:26:15.0386942Z Creating tar archive
+2026-11-15T05:26:15.2427937Z removing 'openstream_python-0.2.1' (and everything under it)
+2026-11-15T05:26:15.5497988Z * Building wheel from sdist
+2026-11-15T05:26:15.5502039Z * Getting build dependencies for wheel...
+2026-11-15T05:26:15.7679272Z running egg_info
+2026-11-15T05:26:15.7723077Z writing src\openstream_python.egg-info\PKG-INFO
+2026-11-15T05:26:15.7737266Z writing dependency_links to src\openstream_python.egg-info\dependency_links.txt
+2026-11-15T05:26:15.7741768Z writing entry points to src\openstream_python.egg-info\entry_points.txt
+2026-11-15T05:26:15.7747580Z writing requirements to src\openstream_python.egg-info\requires.txt
+2026-11-15T05:26:15.7750521Z writing top-level names to src\openstream_python.egg-info\top_level.txt
+2026-11-15T05:26:15.7914693Z reading manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+2026-11-15T05:26:15.7952177Z reading manifest template 'MANIFEST.in'
+2026-11-15T05:26:15.8078819Z no previously-included directories found matching 'tools\vendor'
+2026-11-15T05:26:15.8138311Z adding license file 'LICENSE'
+2026-11-15T05:26:15.8138719Z adding license file 'licenses/CoolPropWrapper_LICENSE'
+2026-11-15T05:26:15.8139258Z adding license file 'licenses/OpenSTREAM_database_LICENSE'
+2026-11-15T05:26:15.8139769Z adding license file 'licenses/mat_io_LICENSE'
+2026-11-15T05:26:15.8140268Z adding license file 'licenses/gui/Apache-License-2.0.txt'
+2026-11-15T05:26:15.8141119Z adding license file 'licenses/gui/Flask-LICENSE.txt'
+2026-11-15T05:26:15.8141408Z adding license file 'licenses/gui/OFL-License.txt'
+2026-11-15T05:26:15.8141717Z adding license file 'licenses/gui/plotly-LICENSE.txt'
+2026-11-15T05:26:15.8142059Z adding license file 'licenses/gui/sphinx-rtd-theme-LICENSE.txt'
+2026-11-15T05:26:15.8142388Z adding license file 'licenses/gui/waitress-LICENSE.txt'
+2026-11-15T05:26:15.8142658Z adding license file 'docs/THIRD_PARTY.md'
+2026-11-15T05:26:15.8187773Z writing manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+2026-11-15T05:26:15.8455517Z * Building wheel...
+2026-11-15T05:26:16.0581503Z running bdist_wheel
+2026-11-15T05:26:16.0774638Z running build
+2026-11-15T05:26:16.0775031Z running build_py
+2026-11-15T05:26:16.0819136Z creating build\lib\openstream
+2026-11-15T05:26:16.0828299Z copying src\openstream\annular.py -> build\lib\openstream
+2026-11-15T05:26:16.0835403Z copying src\openstream\cli.py -> build\lib\openstream
+2026-11-15T05:26:16.0842122Z copying src\openstream\database.py -> build\lib\openstream
+2026-11-15T05:26:16.0848928Z copying src\openstream\experimental_comparison.py -> build\lib\openstream
+2026-11-15T05:26:16.0854889Z copying src\openstream\ff_fields.py -> build\lib\openstream
+2026-11-15T05:26:16.0877587Z copying src\openstream\fields.py -> build\lib\openstream
+2026-11-15T05:26:16.0884634Z copying src\openstream\fourfield.py -> build\lib\openstream
+2026-11-15T05:26:16.0890937Z copying src\openstream\gui.py -> build\lib\openstream
+2026-11-15T05:26:16.0896963Z copying src\openstream\gui_launcher.py -> build\lib\openstream
+2026-11-15T05:26:16.0903356Z copying src\openstream\gui_lock.py -> build\lib\openstream
+2026-11-15T05:26:16.0909528Z copying src\openstream\gui_reference.py -> build\lib\openstream
+2026-11-15T05:26:16.0915450Z copying src\openstream\gui_schema.py -> build\lib\openstream
+2026-11-15T05:26:16.0922432Z copying src\openstream\gui_worker.py -> build\lib\openstream
+2026-11-15T05:26:16.0928369Z copying src\openstream\inputs.py -> build\lib\openstream
+2026-11-15T05:26:16.0934808Z copying src\openstream\multifield_output.py -> build\lib\openstream
+2026-11-15T05:26:16.0940666Z copying src\openstream\numerics.py -> build\lib\openstream
+2026-11-15T05:26:16.0947082Z copying src\openstream\output.py -> build\lib\openstream
+2026-11-15T05:26:16.0953243Z copying src\openstream\plotting.py -> build\lib\openstream
+2026-11-15T05:26:16.0959292Z copying src\openstream\properties.py -> build\lib\openstream
+2026-11-15T05:26:16.0965799Z copying src\openstream\solver.py -> build\lib\openstream
+2026-11-15T05:26:16.0971978Z copying src\openstream\tf_fields.py -> build\lib\openstream
+2026-11-15T05:26:16.0977902Z copying src\openstream\threefield.py -> build\lib\openstream
+2026-11-15T05:26:16.0984661Z copying src\openstream\twofluid.py -> build\lib\openstream
+2026-11-15T05:26:16.0990657Z copying src\openstream\__init__.py -> build\lib\openstream
+2026-11-15T05:26:16.0996517Z copying src\openstream\__main__.py -> build\lib\openstream
+2026-11-15T05:26:16.1006693Z running egg_info
+2026-11-15T05:26:16.1051556Z writing src\openstream_python.egg-info\PKG-INFO
+2026-11-15T05:26:16.1066130Z writing dependency_links to src\openstream_python.egg-info\dependency_links.txt
+2026-11-15T05:26:16.1070906Z writing entry points to src\openstream_python.egg-info\entry_points.txt
+2026-11-15T05:26:16.1077156Z writing requirements to src\openstream_python.egg-info\requires.txt
+2026-11-15T05:26:16.1080161Z writing top-level names to src\openstream_python.egg-info\top_level.txt
+2026-11-15T05:26:16.1164041Z reading manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+2026-11-15T05:26:16.1201393Z reading manifest template 'MANIFEST.in'
+2026-11-15T05:26:16.1329191Z no previously-included directories found matching 'tools\vendor'
+2026-11-15T05:26:16.1390089Z adding license file 'LICENSE'
+2026-11-15T05:26:16.1390480Z adding license file 'licenses/CoolPropWrapper_LICENSE'
+2026-11-15T05:26:16.1391224Z adding license file 'licenses/OpenSTREAM_database_LICENSE'
+2026-11-15T05:26:16.1392025Z adding license file 'licenses/mat_io_LICENSE'
+2026-11-15T05:26:16.1392659Z adding license file 'licenses/gui/Apache-License-2.0.txt'
+2026-11-15T05:26:16.1393113Z adding license file 'licenses/gui/Flask-LICENSE.txt'
+2026-11-15T05:26:16.1393398Z adding license file 'licenses/gui/OFL-License.txt'
+2026-11-15T05:26:16.1393691Z adding license file 'licenses/gui/plotly-LICENSE.txt'
+2026-11-15T05:26:16.1394016Z adding license file 'licenses/gui/sphinx-rtd-theme-LICENSE.txt'
+2026-11-15T05:26:16.1394343Z adding license file 'licenses/gui/waitress-LICENSE.txt'
+2026-11-15T05:26:16.1394607Z adding license file 'docs/THIRD_PARTY.md'
+2026-11-15T05:26:16.1440705Z writing manifest file 'src\openstream_python.egg-info\SOURCES.txt'
+2026-11-15T05:26:16.1477705Z creating build\lib\openstream\data
+2026-11-15T05:26:16.1481694Z copying src\openstream\data\geom.inp -> build\lib\openstream\data
+2026-11-15T05:26:16.1489207Z copying src\openstream\data\models.inp -> build\lib\openstream\data
+2026-11-15T05:26:16.1496682Z copying src\openstream\data\options.inp -> build\lib\openstream\data
+2026-11-15T05:26:16.1503404Z copying src\openstream\data\tutorial1.inp -> build\lib\openstream\data
+2026-11-15T05:26:16.1510440Z copying src\openstream\data\tutorial2_transient.inp -> build\lib\openstream\data
+2026-11-15T05:26:16.1533717Z copying src\openstream\data\gui_fields.json -> build\lib\openstream\data
+2026-11-15T05:26:16.1541472Z copying src\openstream\data\upstream.json -> build\lib\openstream\data
+2026-11-15T05:26:16.1547901Z creating build\lib\openstream\data\gui_baselines
+2026-11-15T05:26:16.1552734Z copying src\openstream\data\gui_baselines\FourField.initialization.npz -> build\lib\openstream\data\gui_baselines
+2026-11-15T05:26:16.1560478Z copying src\openstream\data\gui_baselines\FourField.json -> build\lib\openstream\data\gui_baselines
+2026-11-15T05:26:16.1567817Z copying src\openstream\data\gui_baselines\FourField.physical.npz -> build\lib\openstream\data\gui_baselines
+2026-11-15T05:26:16.1591309Z copying src\openstream\data\gui_baselines\Mixture.initialization.npz -> build\lib\openstream\data\gui_baselines
+2026-11-15T05:26:16.1599864Z copying src\openstream\data\gui_baselines\Mixture.json -> build\lib\openstream\data\gui_baselines
+2026-11-15T05:26:16.1606531Z copying src\openstream\data\gui_baselines\Mixture.physical.npz -> build\lib\openstream\data\gui_baselines
+2026-11-15T05:26:16.1614111Z copying src\openstream\data\gui_baselines\ThreeField.initialization.npz -> build\lib\openstream\data\gui_baselines
+2026-11-15T05:26:16.1621599Z copying src\openstream\data\gui_baselines\ThreeField.json -> build\lib\openstream\data\gui_baselines
+2026-11-15T05:26:16.1629054Z copying src\openstream\data\gui_baselines\ThreeField.physical.npz -> build\lib\openstream\data\gui_baselines
+2026-11-15T05:26:16.1636253Z copying src\openstream\data\gui_baselines\TwoFluid.initialization.npz -> build\lib\openstream\data\gui_baselines
+2026-11-15T05:26:16.1644001Z copying src\openstream\data\gui_baselines\TwoFluid.json -> build\lib\openstream\data\gui_baselines
+2026-11-15T05:26:16.1651432Z copying src\openstream\data\gui_baselines\TwoFluid.physical.npz -> build\lib\openstream\data\gui_baselines
+2026-11-15T05:26:16.1658112Z creating build\lib\openstream\gui_static
+2026-11-15T05:26:16.1676254Z copying src\openstream\gui_static\app.js -> build\lib\openstream\gui_static
+2026-11-15T05:26:16.1684463Z copying src\openstream\gui_static\index.html -> build\lib\openstream\gui_static
+2026-11-15T05:26:16.1691739Z copying src\openstream\gui_static\lato-bold.woff2 -> build\lib\openstream\gui_static
+2026-11-15T05:26:16.1700538Z copying src\openstream\gui_static\lato-normal.woff2 -> build\lib\openstream\gui_static
+2026-11-15T05:26:16.1726437Z copying src\openstream\gui_static\logo-transparent.png -> build\lib\openstream\gui_static
+2026-11-15T05:26:16.1734407Z copying src\openstream\gui_static\Roboto-Slab-Bold.woff2 -> build\lib\openstream\gui_static
+2026-11-15T05:26:16.1742561Z copying src\openstream\gui_static\Roboto-Slab-Regular.woff2 -> build\lib\openstream\gui_static
+2026-11-15T05:26:16.1750302Z copying src\openstream\gui_static\style.css -> build\lib\openstream\gui_static
+2026-11-15T05:26:16.1883697Z installing to build\bdist.win-amd64\wheel
+2026-11-15T05:26:16.1884052Z running install
+2026-11-15T05:26:16.1894045Z running install_lib
+2026-11-15T05:26:16.1935485Z creating build\bdist.win-amd64\wheel
+2026-11-15T05:26:16.1942296Z creating build\bdist.win-amd64\wheel\openstream
+2026-11-15T05:26:16.1945862Z copying build\lib\openstream\annular.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.1953119Z copying build\lib\openstream\cli.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.1960430Z creating build\bdist.win-amd64\wheel\openstream\data
+2026-11-15T05:26:16.1963997Z copying build\lib\openstream\data\geom.inp -> build\bdist.win-amd64\wheel\.\openstream\data
+2026-11-15T05:26:16.1972294Z creating build\bdist.win-amd64\wheel\openstream\data\gui_baselines
+2026-11-15T05:26:16.1976183Z copying build\lib\openstream\data\gui_baselines\FourField.initialization.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+2026-11-15T05:26:16.1983526Z copying build\lib\openstream\data\gui_baselines\FourField.json -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+2026-11-15T05:26:16.1990339Z copying build\lib\openstream\data\gui_baselines\FourField.physical.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+2026-11-15T05:26:16.2013899Z copying build\lib\openstream\data\gui_baselines\Mixture.initialization.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+2026-11-15T05:26:16.2020797Z copying build\lib\openstream\data\gui_baselines\Mixture.json -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+2026-11-15T05:26:16.2027459Z copying build\lib\openstream\data\gui_baselines\Mixture.physical.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+2026-11-15T05:26:16.2034794Z copying build\lib\openstream\data\gui_baselines\ThreeField.initialization.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+2026-11-15T05:26:16.2041933Z copying build\lib\openstream\data\gui_baselines\ThreeField.json -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+2026-11-15T05:26:16.2048147Z copying build\lib\openstream\data\gui_baselines\ThreeField.physical.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+2026-11-15T05:26:16.2054768Z copying build\lib\openstream\data\gui_baselines\TwoFluid.initialization.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+2026-11-15T05:26:16.2061786Z copying build\lib\openstream\data\gui_baselines\TwoFluid.json -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+2026-11-15T05:26:16.2068331Z copying build\lib\openstream\data\gui_baselines\TwoFluid.physical.npz -> build\bdist.win-amd64\wheel\.\openstream\data\gui_baselines
+2026-11-15T05:26:16.2074675Z copying build\lib\openstream\data\gui_fields.json -> build\bdist.win-amd64\wheel\.\openstream\data
+2026-11-15T05:26:16.2081644Z copying build\lib\openstream\data\models.inp -> build\bdist.win-amd64\wheel\.\openstream\data
+2026-11-15T05:26:16.2088321Z copying build\lib\openstream\data\options.inp -> build\bdist.win-amd64\wheel\.\openstream\data
+2026-11-15T05:26:16.2111519Z copying build\lib\openstream\data\tutorial1.inp -> build\bdist.win-amd64\wheel\.\openstream\data
+2026-11-15T05:26:16.2117853Z copying build\lib\openstream\data\tutorial2_transient.inp -> build\bdist.win-amd64\wheel\.\openstream\data
+2026-11-15T05:26:16.2124389Z copying build\lib\openstream\data\upstream.json -> build\bdist.win-amd64\wheel\.\openstream\data
+2026-11-15T05:26:16.2130674Z copying build\lib\openstream\database.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2137683Z copying build\lib\openstream\experimental_comparison.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2160184Z copying build\lib\openstream\ff_fields.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2166321Z copying build\lib\openstream\fields.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2173244Z copying build\lib\openstream\fourfield.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2179947Z copying build\lib\openstream\gui.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2186299Z copying build\lib\openstream\gui_launcher.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2192812Z copying build\lib\openstream\gui_lock.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2198946Z copying build\lib\openstream\gui_reference.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2205317Z copying build\lib\openstream\gui_schema.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2213902Z creating build\bdist.win-amd64\wheel\openstream\gui_static
+2026-11-15T05:26:16.2217561Z copying build\lib\openstream\gui_static\app.js -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+2026-11-15T05:26:16.2224964Z copying build\lib\openstream\gui_static\index.html -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+2026-11-15T05:26:16.2231429Z copying build\lib\openstream\gui_static\lato-bold.woff2 -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+2026-11-15T05:26:16.2239592Z copying build\lib\openstream\gui_static\lato-normal.woff2 -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+2026-11-15T05:26:16.2264024Z copying build\lib\openstream\gui_static\logo-transparent.png -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+2026-11-15T05:26:16.2271370Z copying build\lib\openstream\gui_static\Roboto-Slab-Bold.woff2 -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+2026-11-15T05:26:16.2279057Z copying build\lib\openstream\gui_static\Roboto-Slab-Regular.woff2 -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+2026-11-15T05:26:16.2286740Z copying build\lib\openstream\gui_static\style.css -> build\bdist.win-amd64\wheel\.\openstream\gui_static
+2026-11-15T05:26:16.2293517Z copying build\lib\openstream\gui_worker.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2299678Z copying build\lib\openstream\inputs.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2307179Z copying build\lib\openstream\multifield_output.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2313263Z copying build\lib\openstream\numerics.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2319476Z copying build\lib\openstream\output.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2325980Z copying build\lib\openstream\plotting.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2332342Z copying build\lib\openstream\properties.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2339013Z copying build\lib\openstream\solver.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2345618Z copying build\lib\openstream\tf_fields.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2351781Z copying build\lib\openstream\threefield.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2358318Z copying build\lib\openstream\twofluid.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2364923Z copying build\lib\openstream\__init__.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2386669Z copying build\lib\openstream\__main__.py -> build\bdist.win-amd64\wheel\.\openstream
+2026-11-15T05:26:16.2392320Z running install_egg_info
+2026-11-15T05:26:16.2437864Z Copying src\openstream_python.egg-info to build\bdist.win-amd64\wheel\.\openstream_python-0.2.1-py3.12.egg-info
+2026-11-15T05:26:16.2496847Z running install_scripts
+2026-11-15T05:26:16.2672204Z creating build\bdist.win-amd64\wheel\openstream_python-0.2.1.dist-info\WHEEL
+2026-11-15T05:26:16.2680183Z creating 'D:\\a\\OpenSTREAM_pyversion\\OpenSTREAM_pyversion\\dist\\.tmp-u_jmglrt\\openstream_python-0.2.1-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
+2026-11-15T05:26:16.2686460Z adding 'openstream/__init__.py'
+2026-11-15T05:26:16.2689628Z adding 'openstream/__main__.py'
+2026-11-15T05:26:16.2696591Z adding 'openstream/annular.py'
+2026-11-15T05:26:16.2699873Z adding 'openstream/cli.py'
+2026-11-15T05:26:16.2711176Z adding 'openstream/database.py'
+2026-11-15T05:26:16.2715454Z adding 'openstream/experimental_comparison.py'
+2026-11-15T05:26:16.2720466Z adding 'openstream/ff_fields.py'
+2026-11-15T05:26:16.2731734Z adding 'openstream/fields.py'
+2026-11-15T05:26:16.2738127Z adding 'openstream/fourfield.py'
+2026-11-15T05:26:16.2743913Z adding 'openstream/gui.py'
+2026-11-15T05:26:16.2746987Z adding 'openstream/gui_launcher.py'
+2026-11-15T05:26:16.2750540Z adding 'openstream/gui_lock.py'
+2026-11-15T05:26:16.2755094Z adding 'openstream/gui_reference.py'
+2026-11-15T05:26:16.2763119Z adding 'openstream/gui_schema.py'
+2026-11-15T05:26:16.2767291Z adding 'openstream/gui_worker.py'
+2026-11-15T05:26:16.2775582Z adding 'openstream/inputs.py'
+2026-11-15T05:26:16.2779924Z adding 'openstream/multifield_output.py'
+2026-11-15T05:26:16.2782861Z adding 'openstream/numerics.py'
+2026-11-15T05:26:16.2787735Z adding 'openstream/output.py'
+2026-11-15T05:26:16.2792845Z adding 'openstream/plotting.py'
+2026-11-15T05:26:16.2797574Z adding 'openstream/properties.py'
+2026-11-15T05:26:16.2803509Z adding 'openstream/solver.py'
+2026-11-15T05:26:16.2809035Z adding 'openstream/tf_fields.py'
+2026-11-15T05:26:16.2815725Z adding 'openstream/threefield.py'
+2026-11-15T05:26:16.2821871Z adding 'openstream/twofluid.py'
+2026-11-15T05:26:16.2826236Z adding 'openstream/data/geom.inp'
+2026-11-15T05:26:16.2833515Z adding 'openstream/data/gui_fields.json'
+2026-11-15T05:26:16.2837273Z adding 'openstream/data/models.inp'
+2026-11-15T05:26:16.2840087Z adding 'openstream/data/options.inp'
+2026-11-15T05:26:16.2842778Z adding 'openstream/data/tutorial1.inp'
+2026-11-15T05:26:16.2845478Z adding 'openstream/data/tutorial2_transient.inp'
+2026-11-15T05:26:16.2848073Z adding 'openstream/data/upstream.json'
+2026-11-15T05:26:16.2866602Z adding 'openstream/data/gui_baselines/FourField.initialization.npz'
+2026-11-15T05:26:16.2870205Z adding 'openstream/data/gui_baselines/FourField.json'
+2026-11-15T05:26:16.2874761Z adding 'openstream/data/gui_baselines/FourField.physical.npz'
+2026-11-15T05:26:16.2887232Z adding 'openstream/data/gui_baselines/Mixture.initialization.npz'
+2026-11-15T05:26:16.2890697Z adding 'openstream/data/gui_baselines/Mixture.json'
+2026-11-15T05:26:16.2894503Z adding 'openstream/data/gui_baselines/Mixture.physical.npz'
+2026-11-15T05:26:16.2901104Z adding 'openstream/data/gui_baselines/ThreeField.initialization.npz'
+2026-11-15T05:26:16.2904223Z adding 'openstream/data/gui_baselines/ThreeField.json'
+2026-11-15T05:26:16.2907742Z adding 'openstream/data/gui_baselines/ThreeField.physical.npz'
+2026-11-15T05:26:16.2922727Z adding 'openstream/data/gui_baselines/TwoFluid.initialization.npz'
+2026-11-15T05:26:16.2926298Z adding 'openstream/data/gui_baselines/TwoFluid.json'
+2026-11-15T05:26:16.2929817Z adding 'openstream/data/gui_baselines/TwoFluid.physical.npz'
+2026-11-15T05:26:16.2949817Z adding 'openstream/gui_static/Roboto-Slab-Bold.woff2'
+2026-11-15T05:26:16.2968688Z adding 'openstream/gui_static/Roboto-Slab-Regular.woff2'
+2026-11-15T05:26:16.2985368Z adding 'openstream/gui_static/app.js'
+2026-11-15T05:26:16.2989792Z adding 'openstream/gui_static/index.html'
+2026-11-15T05:26:16.3045553Z adding 'openstream/gui_static/lato-bold.woff2'
+2026-11-15T05:26:16.3102698Z adding 'openstream/gui_static/lato-normal.woff2'
+2026-11-15T05:26:16.3122366Z adding 'openstream/gui_static/logo-transparent.png'
+2026-11-15T05:26:16.3129875Z adding 'openstream/gui_static/style.css'
+2026-11-15T05:26:16.3136302Z adding 'openstream_python-0.2.1.dist-info/licenses/LICENSE'
+2026-11-15T05:26:16.3140772Z adding 'openstream_python-0.2.1.dist-info/licenses/docs/THIRD_PARTY.md'
+2026-11-15T05:26:16.3144476Z adding 'openstream_python-0.2.1.dist-info/licenses/licenses/CoolPropWrapper_LICENSE'
+2026-11-15T05:26:16.3147402Z adding 'openstream_python-0.2.1.dist-info/licenses/licenses/OpenSTREAM_database_LICENSE'
+2026-11-15T05:26:16.3150196Z adding 'openstream_python-0.2.1.dist-info/licenses/licenses/mat_io_LICENSE'
+2026-11-15T05:26:16.3156957Z adding 'openstream_python-0.2.1.dist-info/licenses/licenses/gui/Apache-License-2.0.txt'
+2026-11-15T05:26:16.3160038Z adding 'openstream_python-0.2.1.dist-info/licenses/licenses/gui/Flask-LICENSE.txt'
+2026-11-15T05:26:16.3163686Z adding 'openstream_python-0.2.1.dist-info/licenses/licenses/gui/OFL-License.txt'
+2026-11-15T05:26:16.3166548Z adding 'openstream_python-0.2.1.dist-info/licenses/licenses/gui/plotly-LICENSE.txt'
+2026-11-15T05:26:16.3169331Z adding 'openstream_python-0.2.1.dist-info/licenses/licenses/gui/sphinx-rtd-theme-LICENSE.txt'
+2026-11-15T05:26:16.3172240Z adding 'openstream_python-0.2.1.dist-info/licenses/licenses/gui/waitress-LICENSE.txt'
+2026-11-15T05:26:16.3177094Z adding 'openstream_python-0.2.1.dist-info/METADATA'
+2026-11-15T05:26:16.3179264Z adding 'openstream_python-0.2.1.dist-info/WHEEL'
+2026-11-15T05:26:16.3181311Z adding 'openstream_python-0.2.1.dist-info/entry_points.txt'
+2026-11-15T05:26:16.3183242Z adding 'openstream_python-0.2.1.dist-info/top_level.txt'
+2026-11-15T05:26:16.3186893Z adding 'openstream_python-0.2.1.dist-info/RECORD'
+2026-11-15T05:26:16.3189643Z removing build\bdist.win-amd64\wheel
+2026-11-15T05:26:16.4571385Z Successfully built openstream_python-0.2.1.tar.gz and openstream_python-0.2.1-py3-none-any.whl
+2026-11-15T05:26:16.5710377Z Post job cleanup.
+2026-11-15T05:26:16.7166011Z Post job cleanup.
+2026-11-15T05:26:16.8593688Z Post job cleanup.
+2026-11-15T05:26:17.0101428Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-15T05:26:17.0484056Z git version 2.56.0.windows.4
+2026-11-15T05:26:17.0550799Z Temporarily overriding HOME='D:\a\_temp\48d6234e-f55b-46d1-a0dd-64283d488a9d' before making global git config changes
+2026-11-15T05:26:17.0552872Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-15T05:26:17.0562863Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\OpenSTREAM_pyversion\OpenSTREAM_pyversion
+2026-11-15T05:26:17.0939604Z Removing SSH command configuration
+2026-11-15T05:26:17.0949631Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-15T05:26:17.1291058Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-15T05:26:17.5961657Z Entering 'database'
+2026-11-15T05:26:17.6667356Z Entering 'upstream'
+2026-11-15T05:26:17.7314434Z Entering 'upstream/+CoolPropWrapper'
+2026-11-15T05:26:17.8036416Z Removing HTTP extra header
+2026-11-15T05:26:17.8044810Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-15T05:26:17.8353950Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-15T05:26:18.2915575Z Entering 'database'
+2026-11-15T05:26:18.3597168Z Entering 'upstream'
+2026-11-15T05:26:18.4275242Z Entering 'upstream/+CoolPropWrapper'
+2026-11-15T05:26:18.5031049Z Removing includeIf entries pointing to credentials config files
+2026-11-15T05:26:18.5040558Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-15T05:26:18.5311443Z includeif.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git.path
+2026-11-15T05:26:18.5312453Z includeif.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/worktrees/*.path
+2026-11-15T05:26:18.5313067Z includeif.gitdir:/github/workspace/.git.path
+2026-11-15T05:26:18.5313839Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-15T05:26:18.5345846Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git.path
+2026-11-15T05:26:18.5615216Z D:\a\_temp\git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:26:18.5652872Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git.path D\:\\a\\_temp\\git\-credentials\-6764cd52\-ec14\-4353\-b5fd\-bafd498dd4b8\.config
+2026-11-15T05:26:18.6010755Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/worktrees/*.path
+2026-11-15T05:26:18.6279239Z D:\a\_temp\git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:26:18.6315431Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/worktrees/*.path D\:\\a\\_temp\\git\-credentials\-6764cd52\-ec14\-4353\-b5fd\-bafd498dd4b8\.config
+2026-11-15T05:26:18.6618282Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-15T05:26:18.6896736Z /github/runner_temp/git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:26:18.6932407Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-6764cd52\-ec14\-4353\-b5fd\-bafd498dd4b8\.config
+2026-11-15T05:26:18.7235753Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-15T05:26:18.7494770Z /github/runner_temp/git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:26:18.7528620Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-6764cd52\-ec14\-4353\-b5fd\-bafd498dd4b8\.config
+2026-11-15T05:26:18.7831415Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-15T05:26:19.2429081Z Entering 'database'
+2026-11-15T05:26:19.2724154Z file:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/database/config	remote.origin.url
+2026-11-15T05:26:19.2867566Z Entering 'upstream'
+2026-11-15T05:26:19.3159005Z file:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/config	remote.origin.url
+2026-11-15T05:26:19.3306409Z Entering 'upstream/+CoolPropWrapper'
+2026-11-15T05:26:19.3595843Z file:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/modules/CoolPropWrapper/config	remote.origin.url
+2026-11-15T05:26:19.3848558Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/database/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-15T05:26:19.4110452Z includeif.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/database.path
+2026-11-15T05:26:19.4111533Z includeif.gitdir:/github/workspace/.git/modules/database.path
+2026-11-15T05:26:19.4142791Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/database/config --get-all includeif.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/database.path
+2026-11-15T05:26:19.4401392Z D:\a\_temp\git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:26:19.4434259Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/database/config --unset includeif.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/database.path D\:\\a\\_temp\\git\-credentials\-6764cd52\-ec14\-4353\-b5fd\-bafd498dd4b8\.config
+2026-11-15T05:26:19.4731083Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/database/config --get-all includeif.gitdir:/github/workspace/.git/modules/database.path
+2026-11-15T05:26:19.4991291Z /github/runner_temp/git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:26:19.5025506Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/database/config --unset includeif.gitdir:/github/workspace/.git/modules/database.path \/github\/runner_temp\/git\-credentials\-6764cd52\-ec14\-4353\-b5fd\-bafd498dd4b8\.config
+2026-11-15T05:26:19.5316669Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-15T05:26:19.5571593Z includeif.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream.path
+2026-11-15T05:26:19.5572562Z includeif.gitdir:/github/workspace/.git/modules/upstream.path
+2026-11-15T05:26:19.5605313Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/config --get-all includeif.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream.path
+2026-11-15T05:26:19.5860542Z D:\a\_temp\git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:26:19.5894163Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/config --unset includeif.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream.path D\:\\a\\_temp\\git\-credentials\-6764cd52\-ec14\-4353\-b5fd\-bafd498dd4b8\.config
+2026-11-15T05:26:19.6191177Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/config --get-all includeif.gitdir:/github/workspace/.git/modules/upstream.path
+2026-11-15T05:26:19.6449258Z /github/runner_temp/git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:26:19.6489072Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/config --unset includeif.gitdir:/github/workspace/.git/modules/upstream.path \/github\/runner_temp\/git\-credentials\-6764cd52\-ec14\-4353\-b5fd\-bafd498dd4b8\.config
+2026-11-15T05:26:19.6789520Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/modules/CoolPropWrapper/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-15T05:26:19.7050765Z includeif.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/modules/CoolPropWrapper.path
+2026-11-15T05:26:19.7051836Z includeif.gitdir:/github/workspace/.git/modules/upstream/modules/CoolPropWrapper.path
+2026-11-15T05:26:19.7084555Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/modules/CoolPropWrapper/config --get-all includeif.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/modules/CoolPropWrapper.path
+2026-11-15T05:26:19.7346764Z D:\a\_temp\git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:26:19.7382563Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/modules/CoolPropWrapper/config --unset includeif.gitdir:D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/modules/CoolPropWrapper.path D\:\\a\\_temp\\git\-credentials\-6764cd52\-ec14\-4353\-b5fd\-bafd498dd4b8\.config
+2026-11-15T05:26:19.7691922Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/modules/CoolPropWrapper/config --get-all includeif.gitdir:/github/workspace/.git/modules/upstream/modules/CoolPropWrapper.path
+2026-11-15T05:26:19.7963201Z /github/runner_temp/git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config
+2026-11-15T05:26:19.7998487Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:/a/OpenSTREAM_pyversion/OpenSTREAM_pyversion/.git/modules/upstream/modules/CoolPropWrapper/config --unset includeif.gitdir:/github/workspace/.git/modules/upstream/modules/CoolPropWrapper.path \/github\/runner_temp\/git\-credentials\-6764cd52\-ec14\-4353\-b5fd\-bafd498dd4b8\.config
+2026-11-15T05:26:19.8297091Z Removing credentials config 'D:\a\_temp\git-credentials-6764cd52-ec14-4353-b5fd-bafd498dd4b8.config'
+2026-11-15T05:26:19.8461739Z Cleaning up orphan processes
+

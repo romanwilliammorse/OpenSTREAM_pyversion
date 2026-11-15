@@ -20,6 +20,7 @@ the archived results.
 | `reference_exports/` | Preserved portable arrays and metadata recovered from the original MATLAB archives |
 | `references/paper/` | Digitized published curve/marker readings, image-resolution bounds, source hashes and explicit extraction exclusions; not MATLAB output arrays |
 | `outputs/` | Saved numerical outputs, plots, verification reports, logs and retained failed/development runs |
+| `output/pdf/LeCorre_2025_Reports/` | Three source-linked PDFs: paper reconstruction with figure plates, physical-consistency review and updated acceptance matrix; manifests record source and PDF hashes |
 | `provenance/` | Source, environment and dependency fingerprints |
 | `upstream/` | Original OpenSTREAM source as a pinned Git submodule, including its CoolPropWrapper submodule |
 | `database/` | OpenSTREAM-database pinned at b48541e; includes the preserved experimental XML and MATLAB adapters |

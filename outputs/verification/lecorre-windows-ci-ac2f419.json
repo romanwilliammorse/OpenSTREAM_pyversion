@@ -1,0 +1,18 @@
+{
+  "schema": "openstream-clean-windows-ci-v1",
+  "commit": "ac2f419ebfe58de705398c0be5c3840f037ea546",
+  "run_id": 43680782526,
+  "job_id": 132710715736,
+  "status": "completed",
+  "conclusion": "success",
+  "python": "3.12.10",
+  "url": "https://github.com/romanwilliammorse/OpenSTREAM_pyversion/actions/runs/43680782526",
+  "native_tests": 476,
+  "retained_warnings": 2,
+  "javascript_tests": 9,
+  "dependency_check": "passed",
+  "wheel_and_sdist_build": "passed",
+  "scope": "Clean Windows installation and automated tests of the final numerical/comparison implementation. Does not rerun the 69-case Le Corre campaign or establish physical validation. Later documentation/PDF commits contain no numerical code changes.",
+  "log": "outputs/verification/lecorre-windows-ci-ac2f419.log",
+  "log_encoding_policy": "Decoded GitHub job log stored as UTF-8 with LF newlines; timestamped blank lines retained."
+}

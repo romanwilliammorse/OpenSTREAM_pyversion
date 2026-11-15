@@ -5,3 +5,4 @@ references/paper/lecorre2025/NURETH21_2025_original.m -text
 # Scientific receipts contain hashes of exact bytes; disable newline rewriting.
 references/paper/lecorre2025/** -text
 outputs/validation/lecorre-2025-01/** -text
+output/pdf/LeCorre_2025_Reports/** -text
