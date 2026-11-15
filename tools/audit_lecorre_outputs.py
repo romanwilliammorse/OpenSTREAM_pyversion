@@ -61,7 +61,7 @@ def match_point(z, y, affnc, position, measured):
         return None, "outside_stored_channel"
     upper = bisect_left(z, position)
     lower = upper if z[upper] == position else upper - 1
-    if any(affnc[index] < 1 - 1e-12 for index in (lower, upper)):
+    if any(not math.isfinite(affnc[index]) or affnc[index] < 1 - 1e-12 for index in (lower, upper)):
         return None, "outside_fully_annular_domain"
     if any(not math.isfinite(y[index]) for index in (lower, upper)):
         return None, "nonfinite_prediction"
@@ -221,6 +221,7 @@ def audit_campaign(directory, allow_partial=False):
 
     observations = {"compared": 0, "excluded": 0, "excluded_reasons": {}}
     base_populations = {}
+    base_error_groups = {}
     unique_source_targets = {}
     run_facts = {}
     for run_id, assessment in report["runs"].items():
@@ -280,6 +281,7 @@ def audit_campaign(directory, allow_partial=False):
             check(f"{run_id}.physical_failure_retained", physical["status"] == "failed")
         convergence = convergence_diagnosis(run_dir, assessment, inputs, point_evidence)
         check(f"{run_id}.native_convergence_diagnosed", not assessment["native_converged"] or not convergence["rejection_reasons"])
+        check(f"{run_id}.no_unexplained_native_rejection", not any("requires" in reason for reason in convergence["rejection_reasons"]))
         family = assessment["family"]
         comparisons = json.loads((run_dir / "comparisons.json").read_text(encoding="utf-8"))
         check(f"{run_id}.comparison_report_identity", comparisons == assessment["comparisons"])
@@ -328,6 +330,13 @@ def audit_campaign(directory, allow_partial=False):
                         if reason:
                             population["reasons"][reason] = population["reasons"].get(reason, 0) + 1
                         unique_source_targets[(family, assessment["entry_id"], quantity, index)] = measured
+                        group_key = (family, assessment.get("variant_id", "companion"), quantity)
+                        metrics = base_error_groups.setdefault(group_key, {"n_total": 0, "errors": [], "native_pairs": 0, "physical_failed_pairs": 0})
+                        metrics["n_total"] += 1
+                        if error is not None:
+                            metrics["errors"].append(error)
+                            metrics["native_pairs"] += assessment["native_converged"]
+                            metrics["physical_failed_pairs"] += physical["status"] == "failed"
                     if reason:
                         observations["excluded_reasons"][reason] = observations["excluded_reasons"].get(reason, 0) + 1
                     else:
@@ -344,8 +353,33 @@ def audit_campaign(directory, allow_partial=False):
                              "convergence_diagnosis": convergence,
                              "audit_checks": len(checks) - run_checks_start,
                              "audit_passed": all(c["passed"] for c in checks[run_checks_start:])}
+    analysis_path = directory / "analysis/analysis.json"
+    check("final_analysis_present", analysis_path.exists() or allow_partial)
+    analysis_hash = None
+    if analysis_path.exists():
+        analysis_bytes = analysis_path.read_bytes()
+        analysis_hash = hashlib.sha256(analysis_bytes).hexdigest()
+        analysis = json.loads(analysis_bytes)
+        check("final_analysis_report_hash", analysis["report_sha256"] == hashlib.sha256(report_bytes).hexdigest())
+        groups = analysis["experimental_comparison"]["groups"]
+        check("aggregate_comparison_groups", {(g["family"], g["variant"], g["quantity"]) for g in groups} == set(base_error_groups))
+        for group in groups:
+            group_key = group["family"], group["variant"], group["quantity"]
+            expected_group = base_error_groups[group_key]
+            errors = expected_group["errors"]
+            check("aggregate." + ".".join(group_key) + ".counts", group["n_total"] == expected_group["n_total"]
+                  and group["n"] == len(errors) and group["n_excluded"] == expected_group["n_total"] - len(errors)
+                  and group["qualified_converged_pairs"] == expected_group["native_pairs"]
+                  and group["pairs_from_physical_failed_runs"] == expected_group["physical_failed_pairs"])
+            statistics = {"bias": math.fsum(errors) / len(errors) if errors else None,
+                          "mae": math.fsum(map(abs, errors)) / len(errors) if errors else None,
+                          "rmse": math.sqrt(math.fsum(e * e for e in errors) / len(errors)) if errors else None,
+                          "max_absolute_error": max(map(abs, errors)) if errors else None}
+            for name, value in statistics.items():
+                check("aggregate." + ".".join(group_key) + "." + name, close(group[name], value))
     return {"schema": "openstream-lecorre-independent-output-audit-v1", "created_utc": datetime.now(timezone.utc).isoformat(),
             "report_sha256": hashlib.sha256(report_bytes).hexdigest(), "manifest_sha256_lf": canonical_hash,
+            "analysis_sha256": analysis_hash, "aggregate_measurement_statistics_audited": analysis_hash is not None,
             "audit_source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
             "scope": "Independent saved-array, raw-XML, unit, population, CSV and arithmetic audit. No solver execution or MATLAB equivalence; no new physical or uncertainty-qualified experimental acceptance.",
             "float_arithmetic_policy": {"rtol": 2e-12, "atol": 1e-12, "power_W_atol": 1e-7,

@@ -40,6 +40,9 @@ as a separate Git submodule.
 The [Le Corre NURETH-21 reconstruction](docs/LECORRE_REPRODUCTION.md) adds native
 Wurtz and Sawai input adapters, frozen paper/companion variants, comparisons with
 digitized published curves, and separate numerical-sensitivity studies.
+All 69 planned runs completed: 63 met the native convergence checks and 65
+retained physical-consistency failures; four mixture runs remain partially
+assessed. These counts describe this campaign, not full-software parity.
 Original publication-time settings remain partly unresolved. Graphical agreement,
 native convergence, physical consistency and experimental accuracy are reported
 separately; no governing equation is adjusted to improve the comparison.

@@ -1,0 +1,3 @@
+phase,time_s,point_converged,max_iterations,time_dW_kg_s,time_dP_Pa,time_dH_J_kg,time_dWV_kg_s,time_dHV_J_kg,point_dW_kg_s,point_dP_Pa,point_dH_J_kg
+initialization,1.0,True,2,1.6653345369377348e-16,32332.620440796018,0.0,0.0,0.0,0.0,0.0,0.0
+initialization,2.0,True,1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

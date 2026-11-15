@@ -17,14 +17,19 @@ remain separate, unfinished requirements.
 | Selected steady example execution | 4 / 4 | Fresh original-input samples in outputs/release-02 |
 | Selected transient example execution | 4 / 4 | Each framework has a completed 51-state, 101-node original-input transient |
 | Passing archived MATLAB core baselines | 4 / 4 = 100% | All original TUTORIAL1 W/U/H profiles, initializations and precursors pass; this is not full-software parity |
-| Existing native automated tests | 129 / 129 passed | Includes two new MRM branch tests; this is neither branch coverage nor full parity |
+| Earlier native automated tests | 129 / 129 passed | Historical numerical-core checkpoint; this is neither branch coverage nor full parity |
 | Fresh-export comparator machinery tests | 34 / 34 passed | Historical synthetic fixtures |
 | Baseline-audit native/recovery/comparison suite | 212 / 212 passed | Earlier executed checkpoint: 129 native + 83 recovery/comparison tests; one optional-reader deprecation and two retained four-field warnings |
 | GUI 0.2.0 native/GUI suite | 213 / 213 passed | 129 native + 84 GUI tests, plus 5 passing JavaScript tests; recovery-tool internals were not rerun in this checkpoint |
 | Bartolomey native data adapter | 34 / 34 records | 85 adapter/comparator/pilot-policy tests passed; source mapping checked, MATLAB execution not run |
 | Bartolomey pilot execution / physical gates | 40 / 40 passed | Four records, two fixed closures, meshes and tighter controls; scoped steady checks only |
 | Bartolomey numerical sensitivity | 29 / 32 passed | Three frozen mesh criteria failed and remain open |
-| Experimental comparison against OpenSTREAM-database | Descriptive pilot executed | 59 unique measurements; uncertainty-qualified validation and independent holdout status not established; see BARTOLOMEY_PILOT.md |
+| Wurtz / Sawai native data adapters | 50 / 50 and 8 / 8 records | Source mapping, immutable measurements, missing values, units and domain flags; this is adapter coverage, not validated solver applicability |
+| Le Corre source-default reconstruction | 33 completed runs; 29 natively converged | Four demonstrations, 21 Wurtz cases, four Sawai cases under both stated relaxation settings; physical failures remain |
+| Le Corre complete frozen campaign | 69 / 69 executed; 63 natively converged | Includes 36 mesh/control studies; 65 physical failures and four partially assessed mixture runs retained |
+| Le Corre numerical sensitivity | 31 / 36 pairwise comparisons eligible; 9 / 12 common-domain sentinels eligible | Descriptive differences only; source blending changes with mesh, so mesh independence is not established |
+| Published Le Corre curves | Graphical comparisons executed | Figures 3/4, 6 and 7 sampled with explicit reading bounds; original publication runtime and full-precision equivalence remain unresolved; Figure 5 TRACE references unavailable |
+| Experimental comparison against OpenSTREAM-database | Bartolomey, Wurtz and Sawai comparisons executed | Bartolomey: 59 unique measurements. Le Corre selections: 84 present targets, including eight outside the stored channel. Uncertainty-qualified validation and independent holdout status remain unresolved |
 | Acceptance requirements ledger | 81 reviewed rows | Separate implementation/test/MATLAB/physical/experimental statuses; not a completion percentage |
 | Full feature/option/API parity | Not yet quantified | The ledger links 127 enum choices, 16 interpolation entries and 585 public method entries; combinations and operating-domain coverage remain incomplete |
 
@@ -64,6 +69,10 @@ METHOD_COVERAGE.md/json for the scope and limitations.
   supports one wall.
 - Portable NPZ/CSV/JSON outputs with units, inputs, provenance and convergence;
   axial profiles, time histories, space-time maps and GIF animations.
+- Pinned Bartolomey/Wurtz/Sawai database input adapters and separately frozen
+  measured/paper comparisons. The Le Corre campaign preserves source settings,
+  named differences, failed convergence, physical rejections and excluded data;
+  see LECORRE_REPRODUCTION.md. These cases do not add verified GUI presets.
 - Portable MATLAB exporter and all-framework reference comparator. The exporter
   has not yet been executed in MATLAB.
 - Native structural recovery of the mixture MCOS archive, preserved raw shapes,

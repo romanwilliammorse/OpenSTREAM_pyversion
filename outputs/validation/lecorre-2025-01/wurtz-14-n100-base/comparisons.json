@@ -1,0 +1,167 @@
+{
+  "BaseThickness": {
+    "quantity": "BaseThickness",
+    "unit": "m",
+    "error_definition": "predicted minus measured",
+    "kind": "descriptive",
+    "observations": {
+      "coordinate": "Elevation",
+      "coordinate_unit": "m",
+      "coordinates": [
+        9.0
+      ],
+      "quantity": "BaseThickness",
+      "quantity_unit": "m",
+      "values": [
+        0.00017
+      ],
+      "raw_quantity": "BaseThickness",
+      "raw_quantity_unit": "m",
+      "raw_values": [
+        0.00017
+      ],
+      "transformation": "Stored SI values retained without numerical conversion.",
+      "point_flags": [
+        [
+          "outlet_location_from_stored_Length"
+        ]
+      ],
+      "measurement_uncertainty": null,
+      "digitization_uncertainty": null
+    },
+    "points": [
+      {
+        "index": 0,
+        "elevation_m": 9.0,
+        "measured": 0.00017,
+        "predicted": 0.00012006294966945431,
+        "error": -4.99370503305457e-05,
+        "unit": "m",
+        "status": "compared",
+        "reason": null,
+        "source_flags": [
+          "outlet_location_from_stored_Length"
+        ]
+      }
+    ],
+    "summary": {
+      "n_total": 1,
+      "n_compared": 1,
+      "n_excluded": 0,
+      "bias": -4.99370503305457e-05,
+      "mae": 4.99370503305457e-05,
+      "rmse": 4.99370503305457e-05
+    },
+    "scope": "No extrapolation, coordinate adjustment, or uncertainty-qualified acceptance. Inlet/onset initialization outside unblended annular domain excluded."
+  },
+  "WaveVelocity": {
+    "quantity": "WaveVelocity",
+    "unit": "m/s",
+    "error_definition": "predicted minus measured",
+    "kind": "descriptive",
+    "observations": {
+      "coordinate": "Elevation",
+      "coordinate_unit": "m",
+      "coordinates": [
+        9.0
+      ],
+      "quantity": "WaveVelocity",
+      "quantity_unit": "m/s",
+      "values": [
+        4.0
+      ],
+      "raw_quantity": "WaveVelocity",
+      "raw_quantity_unit": "m/s",
+      "raw_values": [
+        4.0
+      ],
+      "transformation": "Stored SI values retained without numerical conversion.",
+      "point_flags": [
+        [
+          "outlet_location_from_stored_Length"
+        ]
+      ],
+      "measurement_uncertainty": null,
+      "digitization_uncertainty": null
+    },
+    "points": [
+      {
+        "index": 0,
+        "elevation_m": 9.0,
+        "measured": 4.0,
+        "predicted": 3.8741469391372916,
+        "error": -0.12585306086270842,
+        "unit": "m/s",
+        "status": "compared",
+        "reason": null,
+        "source_flags": [
+          "outlet_location_from_stored_Length"
+        ]
+      }
+    ],
+    "summary": {
+      "n_total": 1,
+      "n_compared": 1,
+      "n_excluded": 0,
+      "bias": -0.12585306086270842,
+      "mae": 0.12585306086270842,
+      "rmse": 0.12585306086270842
+    },
+    "scope": "No extrapolation, coordinate adjustment, or uncertainty-qualified acceptance. Inlet/onset initialization outside unblended annular domain excluded."
+  },
+  "WaveNumberDensity": {
+    "quantity": "WaveNumberDensity",
+    "unit": "m^-1",
+    "error_definition": "predicted minus measured",
+    "kind": "descriptive",
+    "observations": {
+      "coordinate": "Elevation",
+      "coordinate_unit": "m",
+      "coordinates": [
+        9.0
+      ],
+      "quantity": "WaveNumberDensity",
+      "quantity_unit": "m^-1",
+      "values": [
+        8.25
+      ],
+      "raw_quantity": "WaveNumberDensity",
+      "raw_quantity_unit": "m^-1",
+      "raw_values": [
+        8.25
+      ],
+      "transformation": "Stored SI values retained without numerical conversion.",
+      "point_flags": [
+        [
+          "outlet_location_from_stored_Length"
+        ]
+      ],
+      "measurement_uncertainty": null,
+      "digitization_uncertainty": null
+    },
+    "points": [
+      {
+        "index": 0,
+        "elevation_m": 9.0,
+        "measured": 8.25,
+        "predicted": 8.382463864247221,
+        "error": 0.1324638642472209,
+        "unit": "m^-1",
+        "status": "compared",
+        "reason": null,
+        "source_flags": [
+          "outlet_location_from_stored_Length"
+        ]
+      }
+    ],
+    "summary": {
+      "n_total": 1,
+      "n_compared": 1,
+      "n_excluded": 0,
+      "bias": 0.1324638642472209,
+      "mae": 0.1324638642472209,
+      "rmse": 0.1324638642472209
+    },
+    "scope": "No extrapolation, coordinate adjustment, or uncertainty-qualified acceptance. Inlet/onset initialization outside unblended annular domain excluded."
+  }
+}

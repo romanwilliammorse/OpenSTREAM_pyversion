@@ -19,6 +19,26 @@ SPEC.loader.exec_module(COMPARISON)
 EXTRA=sys.modules['compare_lecorre_paper_extra']
 
 
+def test_common_domain_receipt_is_optional_and_binds_exact_report_and_manifest(tmp_path):
+    assert COMPARISON.common_domain_receipt(tmp_path)=={'status':'not_run'}
+    report=b'{"runs": {}}\n';manifest=b'{"study": {}}\r\n'
+    (tmp_path/'report.json').write_bytes(report)
+    (tmp_path/'frozen_manifest.json').write_bytes(manifest)
+    receipt={'schema':'openstream-lecorre-common-domain-diagnostic-v1',
+        'report_sha256':hashlib.sha256(report).hexdigest(),
+        'manifest_sha256_lf':hashlib.sha256(manifest.replace(b'\r\n',b'\n')).hexdigest(),
+        'summary':{'eligible_sentinels':1}}
+    path=tmp_path/'common_domain_diagnostic.json';path.write_text(json.dumps(receipt),encoding='utf-8')
+    result=COMPARISON.common_domain_receipt(tmp_path)
+    assert result['sha256']==hashlib.sha256(path.read_bytes()).hexdigest()
+    assert result['status']=='posthoc_descriptive_diagnostic'
+    (tmp_path/'report.json').write_bytes(report+b' ')
+    with pytest.raises(ValueError,match='different campaign report'):COMPARISON.common_domain_receipt(tmp_path)
+    (tmp_path/'report.json').write_bytes(report)
+    (tmp_path/'frozen_manifest.json').write_bytes(manifest+b' ')
+    with pytest.raises(ValueError,match='different frozen manifest'):COMPARISON.common_domain_receipt(tmp_path)
+
+
 def saved_profile(tmp_path,run_id,z,values,aff=None,units=None):
     directory=tmp_path/run_id;directory.mkdir()
     arrays={'Z':np.asarray(z,dtype=float),'AFFNC':np.ones(len(z)) if aff is None else np.asarray(aff,dtype=float)}

@@ -1,0 +1,11 @@
+{
+  "Z": "m",
+  "HFLUX": "W/m^2",
+  "mixture.W": "kg/s",
+  "mixture.liquid.W": "kg/s",
+  "mixture.VF": "1",
+  "mixture.X": "1",
+  "mixture.XEQ": "1",
+  "mixture.vapor.U": "m/s",
+  "AFFNC": "1"
+}

@@ -56,6 +56,22 @@ def statistics(errors):
     return {'n':len(a),'bias':float(a.mean()) if a.size else None,'mae':float(np.abs(a).mean()) if a.size else None,
             'rmse':float(np.sqrt(np.mean(a*a))) if a.size else None,'max_absolute_error':float(np.max(np.abs(a))) if a.size else None}
 
+def common_domain_receipt(campaign):
+    """Bind the optional posthoc diagnostic to these exact frozen outputs."""
+    path=campaign/'common_domain_diagnostic.json'
+    if not path.exists():return {'status':'not_run'}
+    raw=path.read_bytes();receipt=json.loads(raw)
+    if receipt.get('schema')!='openstream-lecorre-common-domain-diagnostic-v1':
+        raise ValueError('Unrecognized common-domain diagnostic schema')
+    if receipt.get('report_sha256')!=hashlib.sha256((campaign/'report.json').read_bytes()).hexdigest():
+        raise ValueError('Common-domain diagnostic describes a different campaign report')
+    manifest_hash=hashlib.sha256((campaign/'frozen_manifest.json').read_bytes().replace(b'\r\n',b'\n')).hexdigest()
+    if receipt.get('manifest_sha256_lf')!=manifest_hash:
+        raise ValueError('Common-domain diagnostic describes a different frozen manifest')
+    return {'status':'posthoc_descriptive_diagnostic','path_relative_to_campaign':path.name,
+        'sha256':hashlib.sha256(raw).hexdigest(),'summary':receipt['summary'],
+        'scope':'Identical coarse coordinates and all-four-native convergence gate. No original pairwise result or acceptance criterion is replaced.'}
+
 def graphical_point(x,y,coordinate,value,x_bound,y_bound):
     """Compare a linearly interpolated profile to a bounded graphical reading.
 
@@ -198,7 +214,7 @@ def make_plots(campaign,output,report,paper,experimental,extra):
                 frame,key=PAPER_MAP[series];run_id=f'demo-{frame}-n100-base';run=report['runs'].get(run_id)
                 if not run or run['execution']!='completed':continue
                 p=profiles(campaign,run_id);start=run['onset']['annular_onset_index_zero_based'] if frame in ('threefield','fourfield') else 0
-                dash='--' if any(word in series for word in ('drop','wave_mass','wave_amplitude','vapor_quality')) else '-'
+                dash=':' if 'equilibrium_wave' in series else ('--' if any(word in series for word in ('drop','wave_mass','wave_amplitude','wave_velocity','vapor_quality')) else '-')
                 color='#c82727' if 'equilibrium_wave' in series else colors[frame]
                 ax.plot(p['Z'][start:],p[key][start:]*scale,dash,color=color,label=series.replace('_',' '),lw=1.6)
                 points=[q for q in paper['points'] if q['series']==series and q['status']=='compared']
@@ -299,6 +315,7 @@ def main(argv=None):
     manifest=json.loads((args.campaign/'frozen_manifest.json').read_text(encoding='utf-8'))
     if len(report['runs'])!=manifest['expected_attempts']['total'] and not args.allow_incomplete:
         raise ValueError('Campaign incomplete; final analysis requires every planned attempt')
+    common_domain=common_domain_receipt(args.campaign)
     args.output.mkdir(parents=True,exist_ok=False)
     scripts=[Path(__file__),ROOT/'tools/compare_lecorre_paper_extra.py']
     fingerprints={str(path.relative_to(ROOT)):hashlib.sha256(path.read_bytes().replace(b'\r\n',b'\n')).hexdigest() for path in scripts}
@@ -314,7 +331,8 @@ def main(argv=None):
         'report_sha256':hashlib.sha256((args.campaign/'report.json').read_bytes()).hexdigest(),
         'paper_reference_sha256':hashlib.sha256(reference.read_bytes()).hexdigest(),'paper_comparison':paper,
         'paper_figures6_7_comparison':extra,
-        'experimental_comparison':experiments,'numerical_sensitivity':study,'matlab_equivalence':'unverified',
+        'experimental_comparison':experiments,'numerical_sensitivity':study,
+        'common_domain_diagnostic':common_domain,'matlab_equivalence':'unverified',
         'experimental_acceptance':'not_established','figure5_status':'unavailable_TRACE_reference'}
     dump(args.output/'analysis.json',analysis)
     csv_output(args.output/'paper_comparison.csv',paper['points'])
@@ -323,6 +341,13 @@ def main(argv=None):
     csv_output(args.output/'paper_metrics.csv',paper['series'])
     csv_output(args.output/'paper_figures6_7_comparison.csv',extra['points'])
     csv_output(args.output/'paper_figures6_7_metrics.csv',extra['series'])
+    sensitivity_rows=[]
+    for item in study:
+        common={key:value for key,value in item.items() if key!='quantities'}
+        if item['status']=='descriptive_sensitivity':
+            sensitivity_rows.extend({**common,'quantity':key,**value} for key,value in item['quantities'].items())
+        else:sensitivity_rows.append(common)
+    csv_output(args.output/'numerical_sensitivity.csv',sensitivity_rows)
     make_plots(args.campaign,args.output,report,paper,experiments,extra)
     print(json.dumps({'counts':report['counts'],'graphical_points':len(paper['points']),
         'experimental_groups':experiments['groups'],'eligible_sensitivity_pairs':sum(s['status']=='descriptive_sensitivity' for s in study)},indent=2))

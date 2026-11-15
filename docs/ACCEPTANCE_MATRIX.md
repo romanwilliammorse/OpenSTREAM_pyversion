@@ -17,11 +17,11 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 | EXP-005 / P0 | Implement native reading, selection and case input generation | partial | partial | not_run | not_applicable | partial |
 | EXP-006 / P0 | Match the actual measured quantity and coordinate system | partial | partial | not_run | not_applicable | partial |
 | EXP-007 / P0 | Establish evidence-based validation criteria | partial | partial | not_applicable | not_run | partial |
-| EXP-008 / P1 | Produce reproducible per-case and aggregate validation evidence | partial | partial | not_applicable | passed_scoped | partial |
+| EXP-008 / P1 | Produce reproducible per-case and aggregate validation evidence | partial | partial | not_applicable | failed | partial |
 | EXP-009 / P1 | Execute the first measured-versus-calculated mixture cases | implemented | failed | not_run | passed_scoped | partial |
-| EXP-010 / P1 | Reproduce the selected NURETH Figure 6 comparisons | missing | not_run | not_run | not_run | not_run |
-| EXP-011 / P1 | Reproduce the selected NURETH Figure 7 comparisons | missing | not_run | not_run | not_run | not_run |
-| EXP-012 / P0 | Resolve unit exceptions and out-of-domain measurement coordinates | missing | not_run | not_applicable | not_run | not_run |
+| EXP-010 / P1 | Reproduce the selected NURETH Figure 6 comparisons | implemented | passed_scoped | not_run | failed | partial |
+| EXP-011 / P1 | Reproduce the selected NURETH Figure 7 comparisons | implemented | failed | not_run | failed | partial |
+| EXP-012 / P0 | Resolve unit exceptions and out-of-domain measurement coordinates | partial | passed_scoped | not_applicable | partial | partial |
 | EXP-014 / P1 | Separate model development, calibration-associated reproduction and independent evaluation | partial | partial | not_applicable | not_run | partial |
 | EXP-015 / P2 | Compare predicted liquid-film flow against measured heated-tube film flow | missing | not_run | not_run | not_run | not_run |
 | EXP-016 / P2 | Validate thermal predictions and onset/dryout observables separately | missing | not_run | not_run | not_run | not_run |
@@ -55,11 +55,11 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 | ID / priority | Requirement | Implementation | Native checks | MATLAB | Physical | Experimental |
 |---|---|---|---|---|---|---|
-| EXP-001 / P0 | Define distinct publication, companion and pinned-code targets | partial | not_run | not_run | not_applicable | not_applicable |
-| EXP-002 / P1 | Reproduce NURETH Figures 3-4 with their selected physics | partial | not_run | not_run | not_run | not_applicable |
+| EXP-001 / P0 | Define distinct publication, companion and pinned-code targets | partial | partial | not_run | not_applicable | not_applicable |
+| EXP-002 / P1 | Reproduce NURETH Figures 3-4 with their selected physics | implemented | failed | not_run | failed | not_applicable |
 | EXP-003 / P1 | Reproduce the Chan demonstration as a separately identified transient | partial | not_run | not_run | not_run | not_applicable |
 | EXP-004 / P2 | Reproduce the two-fluid code-to-code comparison without calling it experimental validation | partial | not_run | not_run | not_run | not_applicable |
-| EXP-013 / P0 | Resolve paper-to-companion and companion-to-solver inconsistencies | partial | not_run | not_run | not_applicable | not_applicable |
+| EXP-013 / P0 | Resolve paper-to-companion and companion-to-solver inconsistencies | partial | passed_scoped | not_run | not_applicable | not_applicable |
 | EXP-018 / P0 | Enforce the supplied papers' domain limits without expanding parity into future model development | partial | partial | not_run | not_run | not_applicable |
 
 ## Matlab Equivalence
@@ -1233,7 +1233,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** 2025 ICMF abstracts, 2025 NURETH paper, 2026 pinned solver and database revisions
 
-**Missing or unverified:** Paper/source input identity is not established; current companion and archived TUTORIAL1 use different model configurations.
+**Missing or unverified:** The 33 source-default and 36 diagnostic cases were frozen before predictions in commit 03fb5eaebc7b020f441c1b47544cd836978f8469, with paper/MLX/XML hashes and exact effective inputs. Historical March-2025 NURETH21.m is recovered, but it differs from the September-2026 companion and contains literal CONST and scalar RELAXTCOND incompatibilities. The selected historical solver revision is a date-based audit target, not established publication-producing provenance. Current-companion reconstruction is distinct from exact historical replay.
 
 **Acceptance evidence required:**
 
@@ -1241,9 +1241,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Keep 5 m ICMF and 5.5 m NURETH cases distinct; preserve explicit perimeter/area and inlet enthalpy rather than replacing them with rounded paper values.
 - Document which current-code changes differ from the publication-time implementation.
 
-**Next action:** Create a case registry linking each figure to complete inputs and source/version evidence.
+**Next action:** Obtain the actual plot-producing generated inputs, solver/property versions and numerical reference arrays; reconcile the recovered script inconsistencies without inferring a constant-relaxation repair.
 
-**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:Chan2025.pdf#page=1`; `local-paper:LeCorre2025ICMF.pdf#page=2`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=8`
+**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:Chan2025.pdf#page=1`; `local-paper:LeCorre2025ICMF.pdf#page=2`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=8`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `references/paper/lecorre2025/source_history.json`; `references/paper/lecorre2025/NURETH21_2025_original.m`
 
 **Dependencies:** No additional matrix-row prerequisite.
 
@@ -1251,7 +1251,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Water; 6 MPa; 0.07 kg/s; 87.5 kW; 3.5 m heated plus 2 m adiabatic; explicit companion closure selections
 
-**Missing or unverified:** Existing four steady baseline passes are not proof of publication-case equivalence; companion outputArray is empty and its four-field settings differ.
+**Missing or unverified:** All four frozen companion demonstration frameworks executed and converged at 100 cells. Sampled readings from 21 of 22 Figure 3/4 series intersect graphical reading envelopes; three of five sampled FourField wave-velocity points do not (RMSE 0.499978 m/s). The 100-cell onset 0.715 m agrees graphically with the marker but differs from the paper-text 0.77 m. Across all 16 demonstration variants 15 converge natively and 12 retain physical failures; the 400-cell TwoFluid run fails temporal liquid enthalpy (2.07523442 J/kg versus SSCONVH=1 at 29 s). Original numerical arrays and exact publication runtime remain absent; graphical agreement is not MATLAB equivalence.
 
 **Acceptance evidence required:**
 
@@ -1259,9 +1259,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Obtain independent numerical reference arrays for all plotted quantities and compare on matched coordinates with predeclared justified criteria.
 - Check convergence and applicable balances; retain source-shared physical failures separately from equivalence results.
 
-**Next action:** Translate the companion case setup after EXP-001 and resolve configuration discrepancies before producing matched reference comparisons.
+**Next action:** Recover independent demonstration arrays and original inputs; investigate the TwoFluid 400-cell temporal limit and retained area failures before accepting numerical/physical accuracy. Preserve all original attempts.
 
-**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=8`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=9`
+**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=8`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=9`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `references/paper/lecorre2025/source_history.json`; `references/paper/lecorre2025/NURETH21_2025_original.m`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `references/paper/lecorre2025/physical_scope_review.json`; `outputs/validation/lecorre-2025-01/physical_scope_audit.json`; `references/paper/lecorre2025/metadata.json`; `references/paper/lecorre2025/digitized_curves.csv`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`
 
 **Dependencies:** EXP-001, EXP-013, API-023
 
@@ -1287,7 +1287,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** NURETH Figure 5: 0.6 MJ/kg inlet enthalpy, 150 kW, prescribed subcooled-boiling settings and mixture slip ratio 2
 
-**Missing or unverified:** The companion explicitly excludes Figure 5 because TRACE reference results are absent; exact TRACE settings and arrays remain unavailable.
+**Missing or unverified:** Figure 5 remains not reproduced: both companion review and source audit lack the TRACE deck, version, closure selections and output arrays. The paper's rounded HIN=0.6 MJ/kg and POWER=150 kW do not establish an exact paired input configuration. No substitute TRACE result or invented reference was created.
 
 **Acceptance evidence required:**
 
@@ -1297,7 +1297,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Recover the TRACE reference case and arrays if available; keep the benchmark outside experimental-validation counts.
 
-**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=10`
+**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=10`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `references/paper/lecorre2025/source_history.json`; `references/paper/lecorre2025/NURETH21_2025_original.m`
 
 **Dependencies:** EXP-001, API-023, CORE-026
 
@@ -1305,7 +1305,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** All six inspected experimental families; inherited Dataset behavior, explicit overrides and transient schedule semantics
 
-**Missing or unverified:** Native Bartolomey loading, one-based record selection, explicit overrides and steady input generation are implemented and tested across all 34 XML records. Raw repeated/empty values, source hashes and case identities are retained; the pilot executed four selected records. The other five dataset families, inherited general Dataset API and transient partial-record inheritance remain unimplemented. Source-implementation inspection and native fixtures are not an executed MATLAB generated-input comparison.
+**Missing or unverified:** Native steady adapters now cover Bartolomey (34 records), Wurtz1978 (50) and Sawai1989 (8), with raw repeated/missing fields, one-based identities, source hashes and generated-input precision retained. The paper campaign executes the exact 21 TS 20 Wurtz records and Sawai rows 1,2,5,6 under both named relaxation settings. The remaining three dataset families, inherited general Dataset API and transient partial-record inheritance remain incomplete. Source inspection/native fixtures are not an executed MATLAB generated-input comparison.
 
 **Acceptance evidence required:**
 
@@ -1314,9 +1314,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Verify mass flux times area equals mass flow and integrated prescribed heating equals power within documented input precision.
 - For transient partial records, match initial-state inheritance rather than silently inheriting a previous transient record.
 
-**Next action:** Extend the checked adapter contract to the remaining families and transient inheritance; obtain independent MATLAB effective-input exports before claiming cross-runtime input-generation equivalence.
+**Next action:** Extend the checked adapter contract to Moeck, Bennett and Groeneveld plus transient inheritance; obtain independent MATLAB effective-input exports before claiming cross-runtime generation equivalence.
 
-**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `tests/test_bartolomey_adapter.py`; `outputs/validation/bartolomey-pilot-01/case_registry.json`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `docs/BARTOLOMEY_PILOT.md`
+**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `tests/test_bartolomey_adapter.py`; `outputs/validation/bartolomey-pilot-01/case_registry.json`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `docs/BARTOLOMEY_PILOT.md`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`
 
 **Dependencies:** API-001, API-005, EXP-006, EXP-018
 
@@ -1324,7 +1324,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Film/base/wave quantities, void fraction, quality, heat transfer and dryout measurements
 
-**Missing or unverified:** Bartolomey equilibrium-quality [1] and inlet-elevation [m] observations now retain their source definitions and match predictions by strict within-domain linear interpolation. Missing and out-of-domain values have explicit exclusions; negative digitized void values remain flagged, not clipped. The 59 selected measurements were all compared for both frozen models (118 finest-grid pairs; zero exclusions). Film/wave, thermal and dryout definitions and uncertainty propagation remain outside this implementation.
+**Missing or unverified:** Bartolomey definitions remain preserved. Wurtz outlet base thickness [m], wave velocity [m/s] and stored wave number density [m^-1] now compare directly; the Figure 6 measured-film-flow correlation remains distinct from native base.THICK. Sawai raw periods [ms] convert once to seconds, with strict within-channel/unblended-annular interpolation. All selected raw targets are accounted: Wurtz 52 present and 11 missing; Sawai 32 raw targets per relaxation variant with 24 within-channel and eight out-of-domain. Unknown measurement/digitization uncertainty and thermal/dryout definitions remain unresolved.
 
 **Acceptance evidence required:**
 
@@ -1333,9 +1333,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Record axial origin and use within-domain interpolation with stated numerical error; no silent clamping or extrapolation.
 - Missing measurements remain missing and relative errors are not computed with physically meaningless near-zero denominators.
 
-**Next action:** Extend observation contracts to the remaining datasets, recover coordinate/digitization uncertainty, and retain direct versus derived observables separately.
+**Next action:** Reconcile Sawai source coordinates and quantify measurement/digitization uncertainty; extend observable definitions to the remaining thermal/dryout families without extrapolating missing data.
 
-**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `tests/test_bartolomey_adapter.py`; `tests/test_experimental_comparison.py`; `outputs/validation/bartolomey-pilot-01/report.json`; `outputs/validation/bartolomey-pilot-01/summary/summary.json`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `docs/BARTOLOMEY_PILOT.md`
+**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `tests/test_bartolomey_adapter.py`; `tests/test_experimental_comparison.py`; `outputs/validation/bartolomey-pilot-01/report.json`; `outputs/validation/bartolomey-pilot-01/summary/summary.json`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `docs/BARTOLOMEY_PILOT.md`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`; `references/paper/lecorre2025/figures6_7/metadata.json`
 
 **Dependencies:** No additional matrix-row prerequisite.
 
@@ -1343,7 +1343,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Measurement, digitization/transcription, input and numerical uncertainty for each compared quantity
 
-**Missing or unverified:** NUREG/IA-0025 section 3.1, printed p.9 reports an absolute void-fraction error below 0.04 for its tests, without a stated confidence level or distribution; example input-error bounds apply to its 1982 reference. The pilot freezes descriptive-only comparisons and numerical sensitivity screens before predictions. Digitization/coordinate uncertainty, group-specific input propagation, correlations and a combined uncertainty budget remain unresolved. The 0.04 bound is not a total experimental acceptance tolerance; three mesh screens failed and no asymptotic numerical uncertainty was estimated.
+**Missing or unverified:** NUREG/IA-0025 section 3.1, printed p.9 reports an absolute void-fraction error below 0.04 for its tests, without a stated confidence level or distribution; example input-error bounds apply to its 1982 reference. The pilot freezes descriptive-only comparisons and numerical sensitivity screens before predictions. Digitization/coordinate uncertainty, group-specific input propagation, correlations and a combined uncertainty budget remain unresolved. The 0.04 bound is not a total experimental acceptance tolerance; three mesh screens failed and no asymptotic numerical uncertainty was estimated. The Le Corre campaign adds descriptive measurement errors, pixel-bounded paper comparisons and 31/36 available convergence-qualified numerical sensitivity pairs. Pixel reading envelopes are not confidence intervals or experimental acceptance bands. No experimental threshold was fitted or adopted from plot guides, and no asymptotic numerical uncertainty is established. Source AFFNC scaling makes physical transition length proportional to dz^2/w, so refinement also changes blending and eligible domains. A labeled posthoc common-coordinate diagnostic covers 9/12 fully natively converged four-configuration sentinels; original pairwise metrics are retained and no convergence order or pure discretization uncertainty is claimed.
 
 **Acceptance evidence required:**
 
@@ -1352,9 +1352,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Allow descriptive comparisons with unknown uncertainty but prohibit an uncertainty-based pass claim.
 - Predeclare criteria before fitting; do not adopt plotting guides or baseline 1e-8 tolerances as experimental accuracy thresholds.
 
-**Next action:** Recover case-group-specific uncertainty and digitization evidence, propagate applicable input/property uncertainty, and resolve failed mesh screens before defining any uncertainty-qualified validation acceptance.
+**Next action:** Recover original dataset uncertainty and source digitization records, propagate input/property and coordinate uncertainty, and resolve failed numerical/physical gates before declaring uncertainty-qualified validation.
 
-**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `examples/bartolomey_pilot.json`; `tests/test_bartolomey_pilot_policy.py`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `outputs/validation/bartolomey-pilot-01/summary/summary.json`; `docs/BARTOLOMEY_PILOT.md`
+**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `examples/bartolomey_pilot.json`; `tests/test_bartolomey_pilot_policy.py`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `outputs/validation/bartolomey-pilot-01/summary/summary.json`; `docs/BARTOLOMEY_PILOT.md`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `references/paper/lecorre2025/metadata.json`; `references/paper/lecorre2025/figures6_7/metadata.json`
 
 **Dependencies:** No additional matrix-row prerequisite.
 
@@ -1362,7 +1362,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** All attempted cases, including nonconvergence, physical inconsistency and excluded measurements
 
-**Missing or unverified:** The Bartolomey campaign now accounts for all 40 attempted case/model/numerical variants, with inputs, hashes, units, convergence, explicit source-equation physical checks, paired errors, per-run CSVs and grouped descriptive statistics. All 40 executed and passed the stated physical gates; sensitivity failures remain visible (29/32 screens passed). Broader dataset reporting, statistical uncertainty and uncertainty-qualified experimental acceptance remain incomplete; the reported 118 finest-grid pairs reuse 59 source measurements across two models.
+**Missing or unverified:** The existing Bartolomey 40-run accounting and its 29/32 sensitivity-screen result remain unchanged. The new frozen Le Corre campaign accounts for all 69 attempts: 69 executed, 63 natively converged, and 65 physically rejected. The other runs remain not fully assessed, not full physical passes. The independent saved-array/XML/CSV audit passed 4708/4708 arithmetic/accounting checks. All failed convergence gates, unit conversions, missing/out-of-domain targets, graphical exclusions and source versions remain visible. Arithmetic-audit success does not remove physical failures or establish experimental/MATLAB acceptance.
 
 **Acceptance evidence required:**
 
@@ -1371,9 +1371,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Archive inputs, code/property/data versions, settings, sensitivity and comparison scripts.
 - Limit conclusions to measured quantities and tested fluid/geometry/regime/model configurations.
 
-**Next action:** Retain the complete Bartolomey accounting as other datasets are added; investigate and report failed sensitivity screens without filtering cases or treating repeated predictions as independent measurements.
+**Next action:** Retain complete reporting while resolving the explicitly diagnosed native/physical failures; improve uncertainty and independent-reference evidence without filtering failed cases or counting repeated predictions as independent measurements.
 
-**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `outputs/validation/bartolomey-pilot-01/report.json`; `outputs/validation/bartolomey-pilot-01/summary/summary.json`; `outputs/validation/bartolomey-pilot-01/summary/all_runs.csv`; `tests/test_experimental_comparison.py`; `tests/test_bartolomey_pilot_policy.py`; `docs/BARTOLOMEY_PILOT.md`; `outputs/validation/bartolomey-pilot-01/independent_output_audit.json`
+**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `outputs/validation/bartolomey-pilot-01/report.json`; `outputs/validation/bartolomey-pilot-01/summary/summary.json`; `outputs/validation/bartolomey-pilot-01/summary/all_runs.csv`; `tests/test_experimental_comparison.py`; `tests/test_bartolomey_pilot_policy.py`; `docs/BARTOLOMEY_PILOT.md`; `outputs/validation/bartolomey-pilot-01/independent_output_audit.json`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `references/paper/lecorre2025/physical_scope_review.json`; `outputs/validation/lecorre-2025-01/physical_scope_audit.json`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`
 
 **Dependencies:** EXP-005, EXP-006, EXP-007, EXP-014
 
@@ -1400,7 +1400,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Pinned companion TS 20 cases: base-film thickness, wave velocity and wave number density
 
-**Missing or unverified:** Python comparison not executed; companion uses measurement-informed reduced entrainment coefficient and unresolved CONST spelling.
+**Missing or unverified:** All 21 source-selected TS 20 cases executed; all 52 present measured targets were paired and 11 missing targets retained. Source-default RMSE: base thickness 3.75347e-5 m, wave velocity 0.750053 m/s, number density 2.35742 m^-1. All 39 identifiable published solver dots and 15 distinct measured-film-flow correlation stars intersect their graphical envelopes. Across 33 base/sensitivity variants 33 converge natively and 33 retain area-closure failures. CONST-to-CONSTANT is an explicit runner-level spelling migration, never a global alias. This is calibration-associated descriptive reproduction; uncertainty, adequate adiabatic-development qualification and independent MATLAB execution remain unestablished. Source AFFNC scaling makes physical transition length proportional to dz^2/w, so refinement also changes blending and eligible domains. A labeled posthoc common-coordinate diagnostic covers 9/12 fully natively converged four-configuration sentinels; original pairwise metrics are retained and no convergence order or pure discretization uncertainty is claimed.
 
 **Acceptance evidence required:**
 
@@ -1409,9 +1409,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Establish adequate adiabatic development and numerical/physical eligibility at the observation location.
 - Label this as publication/calibration-associated reproduction; do not infer coverage of all 3-9 MPa or annular-geometry measurements from the selected 7 MPa plot groups.
 
-**Next action:** Resolve EXP-013, run the companion selection, and publish explicit comparison/uncertainty results.
+**Next action:** Clarify the preserved source AFFNC transition scaling and establish numerical uncertainty on matched domains, physical eligibility, adequate development and experimental uncertainty; compare independent MATLAB arrays and holdout groups separately from this calibrated 7 MPa pipe subset.
 
-**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=11`; `docs/PARITY_COMPLETION.md`
+**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=11`; `docs/PARITY_COMPLETION.md`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `references/paper/lecorre2025/physical_scope_review.json`; `outputs/validation/lecorre-2025-01/physical_scope_audit.json`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`; `references/paper/lecorre2025/figures6_7/digitized_figure6.csv`; `references/paper/lecorre2025/figures6_7/metadata.json`
 
 **Dependencies:** EXP-005, EXP-006, EXP-007, EXP-013, EXP-014, CORE-028, CORE-033
 
@@ -1419,7 +1419,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Companion indices 1,2,5,6; 2.95 MPa; 4 mm tube; heated/adiabatic developing-wave measurements
 
-**Missing or unverified:** No native measurement comparison; paper uses relaxation time 0.2 s while companion sets 0.1 s; units/domain issues and calibration reuse need explicit handling.
+**Missing or unverified:** All four selected rows execute under the frozen paper 0.2 s and companion 0.1 s settings. Each variant compares 12/16 targets for each quantity, excluding four out-of-domain points per quantity. Velocity/period RMSE are 0.703085 m/s and 0.0252651 s (0.2 s), versus 0.764504 m/s and 0.0101516 s (0.1 s). Graphical envelopes intersect at 2/24 retained paper-curve readings for 0.2 s and 24/24 for 0.1 s; this supports a code/text discrepancy, not an exact-runtime claim. Source-default entries 1 and 5 fail final wave-flow-per-perimeter point changes despite temporal stopping; only six of 12 measurement pairs per quantity are natively converged. Across 20 base/sensitivity variants 15 converge and 20 retain physical rejection. Measurement uncertainty, source coordinates, calibration independence and exact MATLAB reference remain unresolved. Source AFFNC scaling makes physical transition length proportional to dz^2/w, so refinement also changes blending and eligible domains. A labeled posthoc common-coordinate diagnostic covers 9/12 fully natively converged four-configuration sentinels; original pairwise metrics are retained and no convergence order or pure discretization uncertainty is claimed.
 
 **Acceptance evidence required:**
 
@@ -1428,9 +1428,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Check downstream-domain eligibility, annular masks, iterative convergence and spatial/temporal sensitivity where applicable.
 - Report the source-associated calibration status and all rejected/out-of-domain points.
 
-**Next action:** Resolve EXP-012 and EXP-013, then execute the four selected comparisons.
+**Next action:** Recover the actual plot-producing inputs and reconcile the 0.1/0.2 s discrepancy; investigate transition-region point failures, retained area errors and numerical sensitivity before uncertainty-qualified validation.
 
-**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=11`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=12`; `docs/PARITY_COMPLETION.md`
+**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=11`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=12`; `docs/PARITY_COMPLETION.md`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `references/paper/lecorre2025/physical_scope_review.json`; `outputs/validation/lecorre-2025-01/physical_scope_audit.json`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`; `references/paper/lecorre2025/figures6_7/digitized_figure7.csv`; `references/paper/lecorre2025/figures6_7/metadata.json`
 
 **Dependencies:** EXP-005, EXP-006, EXP-007, EXP-012, EXP-013, EXP-014, CORE-028, CORE-033
 
@@ -1438,7 +1438,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Eight XML cases; WaveTimePeriod in ms; stored length 1.648 m with final elevations 1.6923-1.7002 m
 
-**Missing or unverified:** Coordinate discrepancy is unresolved; README and actual plotting units contradict one source-code comment.
+**Missing or unverified:** All eight source records are loaded with raw period milliseconds and explicit SI conversion. For the four selected rows, the final measurements at 1.6932,1.6926,1.6923,1.6932 m exceed the stored 1.648 m channel; eight quantity/location targets per variant are retained but excluded from within-domain errors. The paper itself displays measured points beyond the model-curve endpoint. Unit handling and strict exclusion are verified, but the original coordinate/digitization discrepancy is unresolved; no channel extension, coordinate shift or extrapolation was applied.
 
 **Acceptance evidence required:**
 
@@ -1447,9 +1447,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Do not clamp, extrapolate, extend channel length or silently discard points to make comparisons look valid.
 - Until resolved, report affected points as ineligible for within-domain error metrics with explicit reasons.
 
-**Next action:** Audit the original Sawai coordinates and retain a source-correction record separate from model changes.
+**Next action:** Recover original Sawai measurement coordinate and digitization records; any justified correction needs an explicit source-correction record and a new named campaign.
 
-**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=11`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=12`
+**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=11`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=12`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`; `references/paper/lecorre2025/figures6_7/metadata.json`
 
 **Dependencies:** EXP-001, EXP-006
 
@@ -1457,7 +1457,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** NURETH21.mlx at pinned database commit versus supplied paper and pinned enum definitions
 
-**Missing or unverified:** RELAXTW differs(0.2 s paper vs 0.1 s script); CONST is not a declared pinned VAPORFRIC member; demo and TUTORIAL1 four-field settings differ.
+**Missing or unverified:** Literal CONST is rejected as expected and mapped narrowly to CONSTANT only in the publication-run configuration; historical enums already used CONSTANT. Both RELAXTW variants were frozen before outputs, and the plotted curves favor 0.1 s without resolving the paper-text 0.2 s. Recovered historical demo differs in momentum, slip, friction, OAFBASERATIO and numerical defaults; scalar RELAXTCOND=0.5 is incompatible with five indexed RELAXX knots in the inspected historical source. The OAFBASERATIO string 0.2 does parse numerically. No inferred scalar expansion, global enum alias, governing-equation change or tolerance relaxation was made.
 
 **Acceptance evidence required:**
 
@@ -1466,9 +1466,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Any CONST-to-CONSTANT compatibility mapping is explicit, narrow and tested; arbitrary unknown enums remain rejected.
 - No governing equation, empirical coefficient or tolerance is changed merely to improve agreement.
 
-**Next action:** Create separate named paper/companion configurations and a reviewed compatibility-decision record.
+**Next action:** Obtain plot-producing effective inputs and matching solver/property versions to resolve historical intent; keep literal-source incompatibilities and current reconstruction distinct until then.
 
-**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`
+**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `references/paper/lecorre2025/source_history.json`; `references/paper/lecorre2025/NURETH21_2025_original.m`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`
 
 **Dependencies:** EXP-001
 
@@ -1476,7 +1476,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Wurtz entrainment adjustment, Sawai relaxation selection, calibrated NUTHOS15 MRM cases and Bartolomey pilot/correlation-development overlap
 
-**Missing or unverified:** The Bartolomey manifest was frozen in commit 4e76cc1 before prediction inspection, using the first XML entry in each experimental group and two unchanged source configurations; no coefficients were fitted to pilot measurements. Calibrated NUTHOS15 MRM entries 20 and 33 (TestIDs 22 and 35) are explicitly distinguished and not selected. Historical overlap of pilot groups with closure development remains unknown, so the campaign is not claimed as independent holdout validation. Complete calibration/evaluation registers for all datasets remain absent.
+**Missing or unverified:** The Bartolomey manifest was frozen in commit 4e76cc1 before prediction inspection, using the first XML entry in each experimental group and two unchanged source configurations; no coefficients were fitted to pilot measurements. Calibrated NUTHOS15 MRM entries 20 and 33 (TestIDs 22 and 35) are explicitly distinguished and not selected. Historical overlap of pilot groups with closure development remains unknown, so the campaign is not claimed as independent holdout validation. Complete calibration/evaluation registers for all datasets remain absent. The Le Corre manifest was likewise committed before prediction inspection. Wurtz uses the source measurement-informed OKAWACOEFS and its separate measured-film-flow correlation; Sawai uses both predefined relaxation choices. Neither was refitted. Both are explicitly calibration-associated reproductions, and 84 present source targets are not multiplied into independent evidence by repeated relaxation/mesh runs.
 
 **Acceptance evidence required:**
 
@@ -1485,9 +1485,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Report calibration-associated reproduction separately from independent validation.
 - If no independent cases are available, state that limitation and avoid an independence claim.
 
-**Next action:** Trace selected closure-development datasets and build group-level calibration/evaluation provenance; only label an evaluation independent when overlap has been assessed, not merely because settings were frozen.
+**Next action:** Build source/group-level closure-development and calibration provenance, then freeze genuinely independent evaluation groups with justified uncertainty criteria; do not label these paper reproductions holdout validation.
 
-**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=12`; `examples/bartolomey_pilot.json`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `outputs/validation/bartolomey-pilot-01/report.json`; `tests/test_bartolomey_pilot_policy.py`; `docs/BARTOLOMEY_PILOT.md`
+**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=12`; `examples/bartolomey_pilot.json`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `outputs/validation/bartolomey-pilot-01/report.json`; `tests/test_bartolomey_pilot_policy.py`; `docs/BARTOLOMEY_PILOT.md`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `references/paper/lecorre2025/figures6_7/metadata.json`
 
 **Dependencies:** EXP-001, EXP-007
 
@@ -1552,7 +1552,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Single-component straight constant-area flow; annular thermal equilibrium through film dryout; pinned source overrides general overview prose
 
-**Missing or unverified:** Documented limits lack a complete case-level domain/eligibility matrix; paper broad stability/consistency statements cannot waive observed numerical or physical failures.
+**Missing or unverified:** Documented limits lack a complete case-level domain/eligibility matrix; paper broad stability/consistency statements cannot waive observed numerical or physical failures. The Le Corre campaign now tags exact steady water/geometry/model configurations and distinguishes transition-region initialization, fully annular comparison domains and failed native/physical gates. Pinned-source clipping and one-way pressure/enthalpy coupling remain unchanged; graphical agreement does not expand model validity.
 
 **Acceptance evidence required:**
 
@@ -1563,6 +1563,6 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Add case-level applicability gates and preserve explicit errors for unsupported paths.
 
-**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `docs/FEATURE_MAP.md`
+**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `docs/FEATURE_MAP.md`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `references/paper/lecorre2025/physical_scope_review.json`; `outputs/validation/lecorre-2025-01/physical_scope_audit.json`
 
 **Dependencies:** No additional matrix-row prerequisite.

@@ -1,0 +1,320 @@
+{
+  "model": {
+    "ID": "DEFAULT",
+    "NNODES": 100,
+    "FLUID": "WATER",
+    "PROPERTIES": "SATURATED",
+    "KLOC": [
+      0.0
+    ],
+    "WBOILINGXSUB": -0.2,
+    "WBOILINGN": 2.0,
+    "WBOILINGXSAT": 0.0,
+    "OAF": "WALLIS",
+    "OAFTRANSITION": [
+      0.1,
+      0.0
+    ],
+    "CBT": "NONE",
+    "CBTMULT": "<Python callable>",
+    "CBTKEFFECT": [
+      0.0,
+      0.0
+    ],
+    "CBTELEVATION": 1.0,
+    "MFBT": "NONE",
+    "DTMFB": 100.0,
+    "SPMTM": "BLASIUS",
+    "FRICTION": [
+      0.2,
+      -0.2,
+      0.0
+    ],
+    "TPFM": "HOMOGENEOUS",
+    "KLOSS": [
+      0.0
+    ],
+    "TPKM": "HOMOGENEOUS",
+    "BTMTM": "TPFM",
+    "SPHTM": "DITTUSBOELTER",
+    "DITTUSBOELTERCOEF": [
+      0.023,
+      0.8,
+      0.4
+    ],
+    "TPHTM": "THOM",
+    "BTHTM": "VAPOR",
+    "MOECKCOEF": [
+      0.00109,
+      0.989,
+      1.41,
+      -1.15
+    ],
+    "VOID": "HOMOGENEOUS",
+    "SLIP": 1.0,
+    "THERMALNONEQ": "EQUILIBRIUM",
+    "THERMALRELAX": "TIMEX",
+    "RELAXX": [
+      -0.5,
+      1.0
+    ],
+    "RELAXCONDFO": [
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001
+    ],
+    "RELAXEVAPFO": [
+      5e-05,
+      5e-05,
+      5e-05,
+      5e-05,
+      5e-05
+    ],
+    "RELAXCONDT": [
+      0.5,
+      0.5,
+      0.01
+    ],
+    "RELAXEVAPT": [
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3
+    ],
+    "RELAXCONDCOEF": [
+      0.0001,
+      0.33333333333,
+      0.05,
+      0.0
+    ],
+    "RELAXEVAPCOEF": [
+      0.0001,
+      0.33333333333,
+      1e-05,
+      0.0
+    ],
+    "RELAXCONDFOCOEF": [
+      5e-05,
+      500000.0,
+      0.0,
+      0.0
+    ],
+    "RELAXEVAPFOCOEF": [
+      0.0001,
+      500000.0,
+      2.0,
+      2.0,
+      0.01,
+      1.0
+    ],
+    "KTRELAX": [
+      "NaN"
+    ],
+    "NEARWALLRATIO": 0.5,
+    "NEARWALLEQOAF": false,
+    "NEARWALLH": "RATIO",
+    "NEARWALLHRATIO": 1.0,
+    "NEARWALLRELAX": "QUALITY",
+    "NEARWALLRELAXX": [
+      -0.5,
+      -0.25,
+      -0.1,
+      0.0,
+      1.0
+    ],
+    "NEARWALLRELAXT": [
+      1.0,
+      0.5,
+      0.3,
+      0.1,
+      0.1
+    ],
+    "NEARWALLRELAXCOEF": [
+      0.0001,
+      0.33333333333,
+      0.05
+    ],
+    "INTLENGTH": "CONSTANT",
+    "INTAREA": "DISPGAS2DISPLIQ",
+    "INTLENGTHVCST": 0.002,
+    "INTLENGTHLCST": 0.002,
+    "LOCRELVEL": "AREAMEAN",
+    "RELVELCST": 1.0,
+    "MOMENTLIQUID": "FULL",
+    "MOMENTGAS": "FULL",
+    "DROPDRAG": "VISCOUS",
+    "DROPDRAGCOEF": 0.45,
+    "BUBBLEDRAG": "STOKES",
+    "BUBBLEDRAGCOEF": 0.45,
+    "INTNU": "RELAXATION",
+    "INTNUVCST": 2.0,
+    "INTNULCST": 2.0,
+    "RANZMARSHALLVCST": [
+      2.0,
+      0.6,
+      0.5,
+      0.33333333333
+    ],
+    "RANZMARSHALLLCST": [
+      2.0,
+      0.6,
+      0.5,
+      0.33333333333
+    ],
+    "INTTRANSH": "BULK",
+    "POSFILM": true,
+    "OAFENTRAINED": "EQUILIBRIUM",
+    "OAFDROPRATIO": 0.7,
+    "DEPOSITION": "OKAWA",
+    "DEPENHANCEMENT": "NONE",
+    "KBLOCKRATIO": [
+      0.0
+    ],
+    "KTUNING": [
+      0.0
+    ],
+    "ENTRAINMENT": "OKAWA2003",
+    "OKAWACOEFS": [
+      320.0,
+      0.111,
+      0.000479,
+      1.0
+    ],
+    "MOMENTFILM": "ALGEBRAIC",
+    "VAPORFRIC": "SOLVER_DEPENDENT",
+    "VAPORFRICCST": 0.005,
+    "THINFILMFRIC": "TURBULENT",
+    "THINFILMTHICK": 0.0001,
+    "MOMENTDROP": "SLIP",
+    "DROPSLIP": 1.0,
+    "DROPDIAM": 0.001,
+    "OAFFILMSPLIT": "EQUILIBRIUM",
+    "OAFBASERATIO": 0.5,
+    "BASEEQTHICK": "RISO",
+    "BASEEQTHICKCOEF": [
+      5.37e-05,
+      -0.64,
+      1.21
+    ],
+    "BASEYPLUS": 15.0,
+    "RELAXTB": 0.2,
+    "WAVEMIXCOEF": [
+      2.0
+    ],
+    "WAVEFREQUENCY": "RELAXATION",
+    "EQSTROUHAL": "RISO",
+    "EQSTROUHALCOEF": [
+      0.00011236,
+      0.5,
+      0.0
+    ],
+    "RELAXTW": 0.2,
+    "CSTWAVEFREQ": 100.0,
+    "MOMENTBASE": "FULLNOP",
+    "MOMENTWAVE": "FULL",
+    "WAVEBASEINT": "VAPORSHEAR",
+    "SHAPEFACTORCOEF": [
+      132500.0,
+      2.0,
+      1.0,
+      0.0
+    ],
+    "WAVEDRAGCOEF": [
+      0.02,
+      135000.0,
+      0.437
+    ],
+    "THINWAVETHICK": 1e-05
+  },
+  "options": {
+    "ID": "DEFAULT",
+    "AXIALINTERP": "NEXT",
+    "TIMEINTERP": "LINEAR",
+    "TSTEP": 0.1,
+    "MAXITER": 200,
+    "SSTSTEP": 1.0,
+    "SSMAXITER": 60,
+    "MRMTIMEINT": "EXPONENTIAL",
+    "ERRORW": 0.0001,
+    "ERRORP": 0.01,
+    "ERRORH": 0.01,
+    "SSCONVW": 0.0001,
+    "SSCONVP": 0.1,
+    "SSCONVH": 0.1,
+    "RELAXWM": 1.0,
+    "RELAXPM": 1.0,
+    "RELAXHM": 1.0,
+    "RELAXWV": 0.7,
+    "RELAXHV": 0.7,
+    "ERRORU": 1e-05,
+    "SSCONVU": 0.0001,
+    "RELAXWL": 1.0,
+    "RELAXUL": 0.5,
+    "RELAXUV": 0.5,
+    "RELAXHL": 1.0,
+    "OAFEQUILMAXITER": 100,
+    "OAFEQUILTOL": 0.0001,
+    "UDEQUILMAXITER": 100,
+    "UDEQUILTOL": 0.001,
+    "UFEQUILMAXITER": 100,
+    "UFEQUILTOL": 0.001,
+    "ENTNUMMAXITER": 100,
+    "ENTNUMTOL": 0.01,
+    "ERRORWF": 1e-05,
+    "ERRORUF": 0.001,
+    "ERRORUD": 0.001,
+    "SSCONVWF": 1e-05,
+    "SSCONVUF": 0.001,
+    "SSCONVUD": 0.001,
+    "RELAXWF": 0.5,
+    "RELAXUF": 0.2,
+    "RELAXUD": 0.2,
+    "ERRORFW": 0.01,
+    "SSCONVFW": 0.01,
+    "RELAXWB": 0.5,
+    "RELAXUB": 0.2,
+    "RELAXWW": 0.5,
+    "RELAXUW": 0.2,
+    "RELAXFW": 0.5
+  },
+  "geometry": {
+    "ID": "GENERICDATASET",
+    "LENGTH": 5.5,
+    "AREA": 6.0821e-05,
+    "PERIM": [
+      0.0276
+    ],
+    "ANGLE": 0.0
+  },
+  "bc": [
+    {
+      "TIME": 0.0,
+      "PRESSURE": 6000000.0,
+      "HIN": 1139400.0,
+      "MFLOW": 0.07,
+      "POWER": 87500.0,
+      "WMESH": [
+        1.75,
+        1.75,
+        2.0
+      ],
+      "WPOWER": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ]
+    }
+  ],
+  "source_files": [
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\database\\projects\\NURETH21.mlx"
+  ]
+}

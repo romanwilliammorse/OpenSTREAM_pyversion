@@ -41,6 +41,16 @@ source is not required to run the package.
 
 ## Which results are authoritative
 
+- `outputs/validation/lecorre-2025-01/` retains the frozen Le Corre reconstruction:
+  original attempts, effective inputs, numerical profiles, paper comparisons,
+  measured errors and separately labeled refinement studies. Consult its
+  `report.json` planned/attempted counts and `analysis/analysis.json` completeness
+  flag: all 69 planned attempts completed. Read-only audits bind their results to
+  the final report hash; the common-domain diagnostic supplements the original
+  pairwise metrics without replacing them. Graphical agreement is distinct from MATLAB equivalence and experimental
+  validation. `references/paper/lecorre2025/` preserves source history and
+  digitization metadata; user-supplied whole papers are not redistributed.
+
 - `outputs/validation/bartolomey-pilot-01/` contains the frozen first experimental
   comparison campaign: 40 native runs, 59 unique measurements, all raw inputs,
   errors and physical checks, plus three retained mesh-sensitivity failures.

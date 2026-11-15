@@ -1,0 +1,22 @@
+{
+  "schema": "openstream-checkpoint-hash-recovery-v1",
+  "method": "Enumerate ordered prefixes of retained immutable run records; recompute exact runner counts and serialize with original JSON options. Accept only exact SHA256 equality with the previously recorded audit report hash.",
+  "input_current_report_sha256": "f2fc6cc1665ff5c5b2b4b881563e3099df7d97230c8ee6b99048ec0c01b85f9c",
+  "target_report_sha256": "429ca74a0b8d9094d13c341754a3b376502bba7a84039352a7704a18544b01f4",
+  "matches": [
+    {
+      "run_count": 37,
+      "newline": "CRLF",
+      "ensure_ascii": false,
+      "sha256": "429ca74a0b8d9094d13c341754a3b376502bba7a84039352a7704a18544b01f4"
+    },
+    {
+      "run_count": 37,
+      "newline": "CRLF",
+      "ensure_ascii": true,
+      "sha256": "429ca74a0b8d9094d13c341754a3b376502bba7a84039352a7704a18544b01f4"
+    }
+  ],
+  "checkpoint_path": "physical_scope_checkpoint_report.json",
+  "qualification": "Cryptographically exact byte recovery if and only if a candidate hash equals the pre-existing target; no evidence hash is edited."
+}

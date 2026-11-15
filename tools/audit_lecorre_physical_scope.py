@@ -49,10 +49,11 @@ for run_id,run in report['runs'].items():
         'independent_area_difference':independent_area-diag['max_unblended_annular_area_closure_relative'] if independent_area is not None else None,
         'negative_quantities':negative})
 result={'schema':'openstream-lecorre-physical-scope-audit-v1','report_sha256':hashlib.sha256(report_bytes).hexdigest(),
+    'audit_source_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
     'source_sha256':hashes,'runs':out,'annular_mask':'AFFNC >= 1-1e-12',
     'independent_area_formula':'((Wfilm/Ufilm + Wdrop/Udrop)/(Wliquid_precursor/Uliquid_precursor) - 1)*(1-VF_precursor)',
     'assumptions':'Saturated liquid density cancels between precursor and annular liquid. Precursor vapor occupies VF*A and is not updated by annular velocities. Film aggregate W/U includes base and wave inventories. Only completed base runs examined.',
     'unmodified':'No solver inputs, equations, acceptance tolerances or frozen diagnostic flags are changed.'}
 args.output.parent.mkdir(parents=True,exist_ok=True)
-args.output.write_text(json.dumps(result,indent=2)+'\n')
+args.output.write_text(json.dumps(result,indent=2,allow_nan=False)+'\n',encoding='utf-8')
 print(json.dumps({'base_runs_audited':len(out),'negative_runs':[x for x in out if x['negative_quantities']],'demo':[x for x in out if x['run_id'].startswith('demo')]},indent=2))

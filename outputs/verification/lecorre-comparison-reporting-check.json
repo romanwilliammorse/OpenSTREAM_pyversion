@@ -1,0 +1,10 @@
+{
+  "scope": "Additional reporting guards and provenance snapshots leave all completed33 base-run comparison values unchanged. Does not assess solver equivalence.",
+  "checks": {
+    "paper_comparison": true,
+    "paper_figures6_7_comparison": true,
+    "experimental_metric_groups": true
+  },
+  "status": "passed",
+  "code_commit": "4cda1a4d5c34dba397bc408ec27c93e69fe52aee"
+}

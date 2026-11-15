@@ -1,0 +1,143 @@
+{
+  "case_id": "demo-fourfield",
+  "framework": "FourField",
+  "model": {
+    "INTNU": "RELAXATION",
+    "RELAXX": [
+      -0.5,
+      1.0
+    ],
+    "RELAXCONDT": [
+      0.5,
+      0.5,
+      0.01
+    ],
+    "MOMENTLIQUID": "FULL",
+    "MOMENTGAS": "FULL",
+    "DROPDRAG": "VISCOUS",
+    "MOMENTFILM": "FULL",
+    "MOMENTDROP": "FULL",
+    "DROPDIAM": 0.001,
+    "MOMENTBASE": "FULLNOP",
+    "MOMENTWAVE": "FULL",
+    "WAVEBASEINT": "VAPORSHEARDROPMASS",
+    "OAFFILMSPLIT": "RATIO",
+    "OAFBASERATIO": 0.3,
+    "BASEEQTHICK": "YPLUS"
+  },
+  "family": "demo",
+  "entry_id": null,
+  "cells": 200,
+  "numerics": "mesh",
+  "run_id": "demo-fourfield-n200-mesh",
+  "execution": "completed",
+  "native_converged": true,
+  "source_state": "INITIALSTEPCONVERGED",
+  "precursor_converged": true,
+  "wave_frequency_converged": true,
+  "onset": {
+    "annular_onset_index_zero_based": 26,
+    "annular_onset_z_m": 0.715
+  },
+  "physical": {
+    "status": "failed",
+    "precursor_balances": {
+      "prescribed_power_W": 87500.0,
+      "discrete_wall_power_W": 87500.0,
+      "steady_enthalpy_gain_W": 87499.99947824398,
+      "steady_energy_relative_error": 5.962925996365292e-09,
+      "steady_mass_max_deviation_kg_s": 4.1527724314871506e-10,
+      "discrete_mass_max_residual_kg_s": 5.383023454069711e-14,
+      "discrete_energy_max_residual_W_per_m": 1.5934347175061703e-09,
+      "discrete_momentum_max_residual_Pa": 5.718032048207533e-05,
+      "pressure_drop_Pa": 155853.01723416243,
+      "outlet_enthalpy_J_kg": 2389399.9925463423,
+      "outlet_void_fraction": 0.9865154129723911,
+      "outlet_vapor_quality": 0.7483937881817311,
+      "minimum_pressure_Pa": 5844146.982765838,
+      "minimum_density_kg_m3": 40.62416299380656
+    },
+    "source_field_diagnostics": {
+      "physical_consistency": false,
+      "area_closure_relative_tolerance": 1e-06,
+      "max_area_closure_relative": 0.5453062541211875,
+      "max_unblended_annular_area_closure_relative": 0.12250137458175425,
+      "outlet_area_closure_relative": 0.013921604876432792,
+      "common_annular_upstream_face_z_m": 0.935,
+      "common_annular_downstream_face_z_m": 5.5,
+      "common_annular_cell_count": 166,
+      "max_common_annular_cell_mass_residual_kg_s": 5.830058658062853e-12,
+      "max_abs_common_annular_mass_residual_kg_s": 4.1016666452176054e-10,
+      "inventory_by_time": [
+        {
+          "time_s": 0.0,
+          "max_area_closure_relative": 0.5453062541211875,
+          "outlet_area_closure_relative": 0.013921604876432792,
+          "max_unblended_annular_area_closure_relative": 0.12250137458175425,
+          "unblended_annular_node_count": 167,
+          "nonfinite_inventory_or_area_node_count": 0,
+          "nonfinite_unblended_annular_node_count": 0,
+          "max_all_phase_cell_mass_residual_kg_s": 5.830058658062853e-12,
+          "global_all_phase_mass_residual_kg_s": 4.1527724314871506e-10,
+          "max_common_annular_cell_mass_residual_kg_s": 5.830058658062853e-12,
+          "common_annular_mass_residual_kg_s": 4.1016666452176054e-10,
+          "common_annular_mass_inventory_kg": 0.02305060063099225,
+          "integrated_phase_mass_inventory_kg": 0.04659062974304618
+        }
+      ],
+      "inventory_interpretation": "W/U is kg/m; occupied area = sum(Wfilm/Ufilm)/rhoF + Wdrop/(Udrop*rhoF) + Wvapor/(Uvapor*rhoV). The 1e-6 tolerance tests an algebraic geometry identity, not measurement uncertainty. Physical-consistency rejection applies only where AFFNC >= 1-1e-12 (numerically unblended annular flow); absence of such nodes leaves status unknown. Common-annular mass diagnostics use a fixed downstream control volume whose upstream face and all cells satisfy this mask at every time; its residual is outflow minus inflow plus backward-Euler storage, with no storage for the initial steady state. Pre-annular values are source initialization quantities and all-region area/mass diagnostics there are descriptive, not physical-domain acceptance checks. Zero/zero inventory is indeterminate and fails if in the applicable region. Any four-field film-thickness caps do not independently enforce this inventory identity. Numerical convergence and algebraic flow partition do not establish mass-storage conservation. Whether a discrepancy is shared with upstream is established by a separate reference comparison; see the baseline verification report.",
+      "nonfinite_state_count": 0,
+      "base_plus_wave_minus_film_max_kg_s": 0.0,
+      "film_plus_drop_minus_liquid_max_kg_s": 3.469446951953614e-18,
+      "all_fields_minus_mixture_max_kg_s": 1.3877787807814457e-17,
+      "base_min_kg_s": 0.0,
+      "wave_min_kg_s": 0.0,
+      "drop_min_kg_s": 0.011740588935806043,
+      "base_min_m_s": 1.518365570164666,
+      "wave_min_m_s": 0.759182785082333,
+      "drop_min_m_s": 1.518365570164666,
+      "frequency_min_Hz": 20.809607902017955,
+      "frequency_temporally_converged": true,
+      "onset_equilibrium_converged": true,
+      "nested_closure_failures": [],
+      "balance_note": "Raw final pseudo-time mass residuals; POSFILM clipping and sequential source updates are retained.",
+      "base_mass_residual_max_kg_s": 0.00023062644353303292,
+      "base_wet_annular_mass_residual_max_kg_s": 0.00023062644353303292,
+      "base_unclamped_annular_mass_residual_max_kg_s": 2.4257543464076498e-06,
+      "base_zero_mass_node_count": 2,
+      "wave_mass_residual_max_kg_s": 0.00023061082760140124,
+      "wave_wet_annular_mass_residual_max_kg_s": 1.8250303425041206e-06,
+      "wave_unclamped_annular_mass_residual_max_kg_s": 1.8250303425041206e-06,
+      "wave_zero_mass_node_count": 7
+    },
+    "finite_primary_curves": true,
+    "fraction_bounds": {
+      "mixture.VF": true,
+      "mixture.X": true
+    },
+    "nonnegative_flows_speeds_thickness_frequency": {
+      "mixture.W": true,
+      "mixture.liquid.W": true,
+      "mixture.vapor.U": true,
+      "film.W": true,
+      "film.U": true,
+      "film.THICK": true,
+      "drop.W": true,
+      "drop.U": true,
+      "base.W": true,
+      "base.U": true,
+      "base.THICK": true,
+      "wave.W": true,
+      "wave.U": true,
+      "wave.AMPLITUDE": true,
+      "wave.FREQUENCY": true
+    },
+    "interpretation": "Passing listed bounds or absence of area rejection is not complete physical acceptance. Original diagnostic tolerances and applicable annular-domain masks retained."
+  },
+  "comparisons": {},
+  "warnings": [
+    "divide by zero encountered in divide",
+    "invalid value encountered in multiply"
+  ],
+  "elapsed_seconds_including_precursor": 137.65450110001257
+}

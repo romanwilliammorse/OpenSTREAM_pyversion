@@ -1,0 +1,53 @@
+{
+  "case_id": "demo-mixture",
+  "framework": "Mixture",
+  "model": {},
+  "family": "demo",
+  "entry_id": null,
+  "cells": 200,
+  "numerics": "mesh",
+  "run_id": "demo-mixture-n200-mesh",
+  "execution": "completed",
+  "native_converged": true,
+  "source_state": "INITIALSTEPCONVERGED",
+  "precursor_converged": true,
+  "wave_frequency_converged": null,
+  "onset": {
+    "annular_onset_index_zero_based": 26,
+    "annular_onset_z_m": 0.715
+  },
+  "physical": {
+    "status": "not_fully_assessed",
+    "precursor_balances": {
+      "prescribed_power_W": 87500.0,
+      "discrete_wall_power_W": 87500.0,
+      "steady_enthalpy_gain_W": 87499.99947824398,
+      "steady_energy_relative_error": 5.962925996365292e-09,
+      "steady_mass_max_deviation_kg_s": 4.1527724314871506e-10,
+      "discrete_mass_max_residual_kg_s": 5.383023454069711e-14,
+      "discrete_energy_max_residual_W_per_m": 1.5934347175061703e-09,
+      "discrete_momentum_max_residual_Pa": 5.718032048207533e-05,
+      "pressure_drop_Pa": 155853.01723416243,
+      "outlet_enthalpy_J_kg": 2389399.9925463423,
+      "outlet_void_fraction": 0.9865154129723911,
+      "outlet_vapor_quality": 0.7483937881817311,
+      "minimum_pressure_Pa": 5844146.982765838,
+      "minimum_density_kg_m3": 40.62416299380656
+    },
+    "source_field_diagnostics": {},
+    "finite_primary_curves": true,
+    "fraction_bounds": {
+      "mixture.VF": true,
+      "mixture.X": true
+    },
+    "nonnegative_flows_speeds_thickness_frequency": {
+      "mixture.W": true,
+      "mixture.liquid.W": true,
+      "mixture.vapor.U": true
+    },
+    "interpretation": "Passing listed bounds or absence of area rejection is not complete physical acceptance. Original diagnostic tolerances and applicable annular-domain masks retained."
+  },
+  "comparisons": {},
+  "warnings": [],
+  "elapsed_seconds_including_precursor": 7.461961299995892
+}

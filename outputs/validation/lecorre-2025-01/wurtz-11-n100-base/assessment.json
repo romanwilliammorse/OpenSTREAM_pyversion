@@ -1,0 +1,302 @@
+{
+  "case_id": "wurtz-11",
+  "family": "wurtz",
+  "entry_id": 11,
+  "framework": "FourField",
+  "model": {
+    "VOID": "BESTION",
+    "OAFENTRAINED": "EQUILIBRIUM",
+    "DEPOSITION": "OKAWA",
+    "ENTRAINMENT": "OKAWAGEN",
+    "OKAWACOEFS": [
+      320,
+      0.111,
+      0.00035,
+      1
+    ],
+    "OAFFILMSPLIT": "EQUILIBRIUM",
+    "MOMENTBASE": "FULLNOP",
+    "MOMENTWAVE": "FULL",
+    "VAPORFRIC": "CONSTANT",
+    "VAPORFRICCST": 0.005,
+    "WAVEBASEINT": "VAPORSHEAR"
+  },
+  "cells": 100,
+  "numerics": "base",
+  "run_id": "wurtz-11-n100-base",
+  "execution": "completed",
+  "native_converged": true,
+  "source_state": "INITIALSTEPCONVERGED",
+  "precursor_converged": true,
+  "wave_frequency_converged": true,
+  "onset": {
+    "annular_onset_index_zero_based": 0,
+    "annular_onset_z_m": 0.0
+  },
+  "physical": {
+    "status": "failed",
+    "precursor_balances": {
+      "prescribed_power_W": 0.0,
+      "discrete_wall_power_W": 0.0,
+      "steady_enthalpy_gain_W": 0.0,
+      "steady_energy_relative_error": 0.0,
+      "steady_mass_max_deviation_kg_s": 1.6653345369377348e-16,
+      "discrete_mass_max_residual_kg_s": 2.7755575615628914e-17,
+      "discrete_energy_max_residual_W_per_m": 0.0,
+      "discrete_momentum_max_residual_Pa": 1.3983481039758772e-11,
+      "pressure_drop_Pa": 41055.42591223493,
+      "outlet_enthalpy_J_kg": 2170641.4856,
+      "outlet_void_fraction": 0.9411101061289472,
+      "outlet_vapor_quality": 0.6000000000702043,
+      "minimum_pressure_Pa": 6958944.574087765,
+      "minimum_density_kg_m3": 77.93639596688996
+    },
+    "source_field_diagnostics": {
+      "physical_consistency": false,
+      "area_closure_relative_tolerance": 1e-06,
+      "max_area_closure_relative": 0.010501446347180199,
+      "max_unblended_annular_area_closure_relative": 0.008085146207622906,
+      "outlet_area_closure_relative": -0.00808509955756409,
+      "common_annular_upstream_face_z_m": 2.25,
+      "common_annular_downstream_face_z_m": 9.0,
+      "common_annular_cell_count": 75,
+      "max_common_annular_cell_mass_residual_kg_s": 0.0,
+      "max_abs_common_annular_mass_residual_kg_s": 0.0,
+      "inventory_by_time": [
+        {
+          "time_s": 0.0,
+          "max_area_closure_relative": 0.010501446347180199,
+          "outlet_area_closure_relative": -0.00808509955756409,
+          "max_unblended_annular_area_closure_relative": 0.008085146207622906,
+          "unblended_annular_node_count": 76,
+          "nonfinite_inventory_or_area_node_count": 0,
+          "nonfinite_unblended_annular_node_count": 0,
+          "max_all_phase_cell_mass_residual_kg_s": 5.551115123125783e-17,
+          "global_all_phase_mass_residual_kg_s": 1.6653345369377348e-16,
+          "max_common_annular_cell_mass_residual_kg_s": 0.0,
+          "common_annular_mass_residual_kg_s": 0.0,
+          "common_annular_mass_inventory_kg": 0.152627597297125,
+          "integrated_phase_mass_inventory_kg": 0.20407170723435514
+        }
+      ],
+      "inventory_interpretation": "W/U is kg/m; occupied area = sum(Wfilm/Ufilm)/rhoF + Wdrop/(Udrop*rhoF) + Wvapor/(Uvapor*rhoV). The 1e-6 tolerance tests an algebraic geometry identity, not measurement uncertainty. Physical-consistency rejection applies only where AFFNC >= 1-1e-12 (numerically unblended annular flow); absence of such nodes leaves status unknown. Common-annular mass diagnostics use a fixed downstream control volume whose upstream face and all cells satisfy this mask at every time; its residual is outflow minus inflow plus backward-Euler storage, with no storage for the initial steady state. Pre-annular values are source initialization quantities and all-region area/mass diagnostics there are descriptive, not physical-domain acceptance checks. Zero/zero inventory is indeterminate and fails if in the applicable region. Any four-field film-thickness caps do not independently enforce this inventory identity. Numerical convergence and algebraic flow partition do not establish mass-storage conservation. Whether a discrepancy is shared with upstream is established by a separate reference comparison; see the baseline verification report.",
+      "nonfinite_state_count": 0,
+      "base_plus_wave_minus_film_max_kg_s": 0.0,
+      "film_plus_drop_minus_liquid_max_kg_s": 0.0,
+      "all_fields_minus_mixture_max_kg_s": 2.7755575615628914e-17,
+      "base_min_kg_s": 0.0051301491834501965,
+      "wave_min_kg_s": 0.020454692543835327,
+      "drop_min_kg_s": 0.06427032617817277,
+      "base_min_m_s": 2.732737218396682,
+      "wave_min_m_s": 4.549366201721241,
+      "drop_min_m_s": 9.988967232791227,
+      "frequency_min_Hz": 52.238745671051646,
+      "frequency_temporally_converged": true,
+      "onset_equilibrium_converged": true,
+      "nested_closure_failures": [],
+      "balance_note": "Raw final pseudo-time mass residuals; POSFILM clipping and sequential source updates are retained.",
+      "base_mass_residual_max_kg_s": 3.2538781038335602e-06,
+      "base_wet_annular_mass_residual_max_kg_s": 3.2538781038335602e-06,
+      "base_unclamped_annular_mass_residual_max_kg_s": 3.2538781038335602e-06,
+      "base_zero_mass_node_count": 0,
+      "wave_mass_residual_max_kg_s": 5.46226862159516e-06,
+      "wave_wet_annular_mass_residual_max_kg_s": 5.46226862159516e-06,
+      "wave_unclamped_annular_mass_residual_max_kg_s": 5.46226862159516e-06,
+      "wave_zero_mass_node_count": 0
+    },
+    "finite_primary_curves": true,
+    "fraction_bounds": {
+      "mixture.VF": true,
+      "mixture.X": true
+    },
+    "nonnegative_flows_speeds_thickness_frequency": {
+      "mixture.W": true,
+      "mixture.liquid.W": true,
+      "mixture.vapor.U": true,
+      "film.W": true,
+      "film.U": true,
+      "film.THICK": true,
+      "drop.W": true,
+      "drop.U": true,
+      "base.W": true,
+      "base.U": true,
+      "base.THICK": true,
+      "wave.W": true,
+      "wave.U": true,
+      "wave.AMPLITUDE": true,
+      "wave.FREQUENCY": true
+    },
+    "interpretation": "Passing listed bounds or absence of area rejection is not complete physical acceptance. Original diagnostic tolerances and applicable annular-domain masks retained."
+  },
+  "comparisons": {
+    "BaseThickness": {
+      "quantity": "BaseThickness",
+      "unit": "m",
+      "error_definition": "predicted minus measured",
+      "kind": "descriptive",
+      "observations": {
+        "coordinate": "Elevation",
+        "coordinate_unit": "m",
+        "coordinates": [
+          9.0
+        ],
+        "quantity": "BaseThickness",
+        "quantity_unit": "m",
+        "values": [
+          5e-05
+        ],
+        "raw_quantity": "BaseThickness",
+        "raw_quantity_unit": "m",
+        "raw_values": [
+          5e-05
+        ],
+        "transformation": "Stored SI values retained without numerical conversion.",
+        "point_flags": [
+          [
+            "outlet_location_from_stored_Length"
+          ]
+        ],
+        "measurement_uncertainty": null,
+        "digitization_uncertainty": null
+      },
+      "points": [
+        {
+          "index": 0,
+          "elevation_m": 9.0,
+          "measured": 5e-05,
+          "predicted": 4.039080515034627e-05,
+          "error": -9.609194849653735e-06,
+          "unit": "m",
+          "status": "compared",
+          "reason": null,
+          "source_flags": [
+            "outlet_location_from_stored_Length"
+          ]
+        }
+      ],
+      "summary": {
+        "n_total": 1,
+        "n_compared": 1,
+        "n_excluded": 0,
+        "bias": -9.609194849653735e-06,
+        "mae": 9.609194849653735e-06,
+        "rmse": 9.609194849653735e-06
+      },
+      "scope": "No extrapolation, coordinate adjustment, or uncertainty-qualified acceptance. Inlet/onset initialization outside unblended annular domain excluded."
+    },
+    "WaveVelocity": {
+      "quantity": "WaveVelocity",
+      "unit": "m/s",
+      "error_definition": "predicted minus measured",
+      "kind": "descriptive",
+      "observations": {
+        "coordinate": "Elevation",
+        "coordinate_unit": "m",
+        "coordinates": [
+          9.0
+        ],
+        "quantity": "WaveVelocity",
+        "quantity_unit": "m/s",
+        "values": [
+          4.3
+        ],
+        "raw_quantity": "WaveVelocity",
+        "raw_quantity_unit": "m/s",
+        "raw_values": [
+          4.3
+        ],
+        "transformation": "Stored SI values retained without numerical conversion.",
+        "point_flags": [
+          [
+            "outlet_location_from_stored_Length"
+          ]
+        ],
+        "measurement_uncertainty": null,
+        "digitization_uncertainty": null
+      },
+      "points": [
+        {
+          "index": 0,
+          "elevation_m": 9.0,
+          "measured": 4.3,
+          "predicted": 4.948633704746997,
+          "error": 0.648633704746997,
+          "unit": "m/s",
+          "status": "compared",
+          "reason": null,
+          "source_flags": [
+            "outlet_location_from_stored_Length"
+          ]
+        }
+      ],
+      "summary": {
+        "n_total": 1,
+        "n_compared": 1,
+        "n_excluded": 0,
+        "bias": 0.648633704746997,
+        "mae": 0.648633704746997,
+        "rmse": 0.648633704746997
+      },
+      "scope": "No extrapolation, coordinate adjustment, or uncertainty-qualified acceptance. Inlet/onset initialization outside unblended annular domain excluded."
+    },
+    "WaveNumberDensity": {
+      "quantity": "WaveNumberDensity",
+      "unit": "m^-1",
+      "error_definition": "predicted minus measured",
+      "kind": "descriptive",
+      "observations": {
+        "coordinate": "Elevation",
+        "coordinate_unit": "m",
+        "coordinates": [
+          9.0
+        ],
+        "quantity": "WaveNumberDensity",
+        "quantity_unit": "m^-1",
+        "values": [
+          null
+        ],
+        "raw_quantity": "WaveNumberDensity",
+        "raw_quantity_unit": "m^-1",
+        "raw_values": [
+          null
+        ],
+        "transformation": "Stored SI values retained without numerical conversion.",
+        "point_flags": [
+          [
+            "missing_observation",
+            "outlet_location_from_stored_Length"
+          ]
+        ],
+        "measurement_uncertainty": null,
+        "digitization_uncertainty": null
+      },
+      "points": [
+        {
+          "index": 0,
+          "elevation_m": 9.0,
+          "measured": null,
+          "predicted": null,
+          "error": null,
+          "unit": "m^-1",
+          "status": "excluded",
+          "reason": "missing_coordinate_or_measurement",
+          "source_flags": [
+            "missing_observation",
+            "outlet_location_from_stored_Length"
+          ]
+        }
+      ],
+      "summary": {
+        "n_total": 1,
+        "n_compared": 0,
+        "n_excluded": 1,
+        "bias": null,
+        "mae": null,
+        "rmse": null
+      },
+      "scope": "No extrapolation, coordinate adjustment, or uncertainty-qualified acceptance. Inlet/onset initialization outside unblended annular domain excluded."
+    }
+  },
+  "warnings": [],
+  "elapsed_seconds_including_precursor": 31.81646840000758
+}

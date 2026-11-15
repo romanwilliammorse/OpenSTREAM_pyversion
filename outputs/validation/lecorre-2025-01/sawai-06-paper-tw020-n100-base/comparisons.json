@@ -1,0 +1,202 @@
+{
+  "WaveVelocity": {
+    "quantity": "WaveVelocity",
+    "unit": "m/s",
+    "error_definition": "predicted minus measured",
+    "kind": "descriptive",
+    "observations": {
+      "coordinate": "Elevation",
+      "coordinate_unit": "m",
+      "coordinates": [
+        0.87911,
+        0.98487,
+        1.2961,
+        1.6932
+      ],
+      "quantity": "WaveVelocity",
+      "quantity_unit": "m/s",
+      "values": [
+        4.6003,
+        4.2851,
+        4.4852,
+        4.4616
+      ],
+      "raw_quantity": "WaveVelocity",
+      "raw_quantity_unit": "m/s",
+      "raw_values": [
+        4.6003,
+        4.2851,
+        4.4852,
+        4.4616
+      ],
+      "transformation": "Stored SI values retained without numerical conversion.",
+      "point_flags": [
+        [],
+        [],
+        [],
+        [
+          "coordinate_outside_stored_channel"
+        ]
+      ],
+      "measurement_uncertainty": null,
+      "digitization_uncertainty": null
+    },
+    "points": [
+      {
+        "index": 0,
+        "elevation_m": 0.87911,
+        "measured": 4.6003,
+        "predicted": 4.481837177165646,
+        "error": -0.11846282283435361,
+        "unit": "m/s",
+        "status": "compared",
+        "reason": null,
+        "source_flags": []
+      },
+      {
+        "index": 1,
+        "elevation_m": 0.98487,
+        "measured": 4.2851,
+        "predicted": 4.40017471339691,
+        "error": 0.11507471339691033,
+        "unit": "m/s",
+        "status": "compared",
+        "reason": null,
+        "source_flags": []
+      },
+      {
+        "index": 2,
+        "elevation_m": 1.2961,
+        "measured": 4.4852,
+        "predicted": 4.489296098255397,
+        "error": 0.004096098255397251,
+        "unit": "m/s",
+        "status": "compared",
+        "reason": null,
+        "source_flags": []
+      },
+      {
+        "index": 3,
+        "elevation_m": 1.6932,
+        "measured": 4.4616,
+        "predicted": null,
+        "error": null,
+        "unit": "m/s",
+        "status": "excluded",
+        "reason": "outside_stored_channel",
+        "source_flags": [
+          "coordinate_outside_stored_channel"
+        ]
+      }
+    ],
+    "summary": {
+      "n_total": 4,
+      "n_compared": 3,
+      "n_excluded": 1,
+      "bias": 0.00023599627265132503,
+      "mae": 0.07921121149555373,
+      "rmse": 0.09538065505852916
+    },
+    "scope": "No extrapolation, coordinate adjustment, or uncertainty-qualified acceptance. Inlet/onset initialization outside unblended annular domain excluded."
+  },
+  "WaveTimePeriod": {
+    "quantity": "WaveTimePeriod",
+    "unit": "s",
+    "error_definition": "predicted minus measured",
+    "kind": "descriptive",
+    "observations": {
+      "coordinate": "Elevation",
+      "coordinate_unit": "m",
+      "coordinates": [
+        0.87911,
+        0.98487,
+        1.2961,
+        1.6932
+      ],
+      "quantity": "WaveTimePeriod",
+      "quantity_unit": "s",
+      "values": [
+        0.06645291,
+        0.08381279000000001,
+        0.1060459,
+        0.1391821
+      ],
+      "raw_quantity": "WaveTimePeriod",
+      "raw_quantity_unit": "ms",
+      "raw_values": [
+        66.45291,
+        83.81279,
+        106.0459,
+        139.1821
+      ],
+      "transformation": "Stored WaveTimePeriod [ms] multiplied by 0.001 to SI seconds; raw values retained.",
+      "point_flags": [
+        [],
+        [],
+        [],
+        [
+          "coordinate_outside_stored_channel"
+        ]
+      ],
+      "measurement_uncertainty": null,
+      "digitization_uncertainty": null
+    },
+    "points": [
+      {
+        "index": 0,
+        "elevation_m": 0.87911,
+        "measured": 0.06645291,
+        "predicted": 0.049730291831981334,
+        "error": -0.01672261816801867,
+        "unit": "s",
+        "status": "compared",
+        "reason": null,
+        "source_flags": []
+      },
+      {
+        "index": 1,
+        "elevation_m": 0.98487,
+        "measured": 0.08381279000000001,
+        "predicted": 0.05407097792506786,
+        "error": -0.02974181207493215,
+        "unit": "s",
+        "status": "compared",
+        "reason": null,
+        "source_flags": []
+      },
+      {
+        "index": 2,
+        "elevation_m": 1.2961,
+        "measured": 0.1060459,
+        "predicted": 0.06789439650213212,
+        "error": -0.038151503497867875,
+        "unit": "s",
+        "status": "compared",
+        "reason": null,
+        "source_flags": []
+      },
+      {
+        "index": 3,
+        "elevation_m": 1.6932,
+        "measured": 0.1391821,
+        "predicted": null,
+        "error": null,
+        "unit": "s",
+        "status": "excluded",
+        "reason": "outside_stored_channel",
+        "source_flags": [
+          "coordinate_outside_stored_channel"
+        ]
+      }
+    ],
+    "summary": {
+      "n_total": 4,
+      "n_compared": 3,
+      "n_excluded": 1,
+      "bias": -0.028205311246939563,
+      "mae": 0.028205311246939563,
+      "rmse": 0.029550852007129185
+    },
+    "scope": "No extrapolation, coordinate adjustment, or uncertainty-qualified acceptance. Inlet/onset initialization outside unblended annular domain excluded."
+  }
+}

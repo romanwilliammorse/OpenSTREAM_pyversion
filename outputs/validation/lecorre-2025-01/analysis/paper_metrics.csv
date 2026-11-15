@@ -1,0 +1,23 @@
+series,unit,n_total,n_excluded,n,bias,mae,rmse,max_absolute_error,reading_envelopes_intersect_count,qualification
+wall_heat_flux,W/m^2,13,0,13,-1611.9262287544382,1611.9262287544382,1727.594069850876,2398.0815347721823,13,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+mixture_liquid_mass_flow,kg/s,13,0,13,-0.00013334916469365832,0.00013916354581464065,0.00016012653050970107,0.00022929175510900957,13,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+twofluid_liquid_mass_flow,kg/s,13,0,13,-3.8653371386421485e-05,8.464257179700546e-05,9.782694491074205e-05,0.0001572833863529334,13,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+mixture_void_fraction,1,6,0,6,-0.002904953981223405,0.002904953981223405,0.0029863180412368446,0.003892260837584094,6,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+twofluid_void_fraction,1,8,0,8,-0.0016289181496636496,0.0016289181496636496,0.0017120529509447831,0.00255024032298512,8,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+mixture_vapor_quality,1,6,0,6,-0.0024305799819327087,0.0024305799819327087,0.002448116272023434,0.0029282913715598102,6,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+twofluid_vapor_quality,1,4,0,4,-0.0028688725685927577,0.0028688725685927577,0.0031501630157133166,0.005045066314951385,4,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+threefield_film_mass_flow,kg/s,1,0,1,5.332374457249142e-05,5.332374457249142e-05,5.332374457249142e-05,5.332374457249142e-05,1,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+threefield_drop_mass_flow,kg/s,1,0,1,-0.00021195841859278017,0.00021195841859278017,0.00021195841859278017,0.00021195841859278017,1,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+fourfield_base_mass_flow,kg/s,3,0,3,0.00010677180456017414,0.00025738341029497353,0.0003307747414394718,0.0005462328222827215,3,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+fourfield_wave_mass_flow,kg/s,3,0,3,-0.00034496255558441965,0.00034496255558441965,0.0004570316405261288,0.0007624712081689827,3,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+threefield_film_thickness,m,9,0,9,-4.3654415785222166e-06,4.3654415785222166e-06,4.535368058854163e-06,6.200630999877134e-06,9,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+fourfield_base_thickness,m,2,0,2,-1.2374677124991804e-07,4.7145436275529765e-06,4.716167393074079e-06,4.838290398802894e-06,2,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+fourfield_wave_amplitude,m,2,0,2,-2.50268610097136e-05,2.50268610097136e-05,3.0895392560242134e-05,4.314264168436138e-05,2,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+mixture_vapor_velocity,m/s,8,0,8,-0.12237518585071272,0.12237518585071272,0.13772967818221854,0.18038101468185452,8,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+twofluid_liquid_velocity,m/s,8,0,8,-0.0950119183275383,0.0950119183275383,0.10456760291661016,0.15334572573228034,8,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+threefield_film_velocity,m/s,6,0,6,-0.10239440402477136,0.10239440402477136,0.10396222707645152,0.12996870407700767,6,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+threefield_drop_velocity,m/s,6,0,6,-0.17914439361161394,0.17914439361161394,0.21078068516477474,0.30714520584084326,6,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+fourfield_base_velocity,m/s,5,0,5,-0.07768582632313965,0.07768582632313965,0.08111143751240942,0.10480489273105498,5,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+fourfield_wave_velocity,m/s,5,0,5,-0.43575911122984684,0.43575911122984684,0.49997794995823874,0.6516583659343871,2,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+fourfield_wave_frequency,Hz,97,0,97,0.8253291175675945,1.0127488078902405,1.1190009775368612,1.8610412608626916,97,Graphical reconstruction only; not numerical equivalence or experimental acceptance.
+fourfield_equilibrium_wave_frequency,Hz,75,0,75,-0.5557052838228512,0.5557052838228512,0.8093121417704969,2.0394812426010986,75,Graphical reconstruction only; not numerical equivalence or experimental acceptance.

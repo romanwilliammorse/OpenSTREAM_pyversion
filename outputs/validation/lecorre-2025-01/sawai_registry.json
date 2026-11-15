@@ -1,0 +1,2242 @@
+[
+  {
+    "record": {
+      "dataset": "Sawai1989",
+      "entry_id": 1,
+      "test_id": 1,
+      "test_name": "A_G300",
+      "raw_fields": [
+        {
+          "tag": "HeatFlux",
+          "text": "510000"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "3.7942"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "3.6945"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "3.5786"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "3.7915"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "64.3567"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "76.4333"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "76.763"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "80.3794"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.87442"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.97726"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.2907"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.6932"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "InletSubcooling",
+          "text": "496399.8273"
+        },
+        {
+          "tag": "InletEnthalpy",
+          "text": "507550.5738"
+        },
+        {
+          "tag": "OutletEnthalpy",
+          "text": "1867550.5738"
+        },
+        {
+          "tag": "Xout",
+          "text": "0.48"
+        },
+        {
+          "tag": "Power",
+          "text": "5127.0792"
+        },
+        {
+          "tag": "TestName",
+          "text": "A_G300"
+        },
+        {
+          "tag": "MassFlow",
+          "text": "0.0037699"
+        },
+        {
+          "tag": "MassFlux",
+          "text": "300"
+        },
+        {
+          "tag": "Pressure",
+          "text": "2950000"
+        },
+        {
+          "tag": "Length",
+          "text": "1.648"
+        },
+        {
+          "tag": "Area",
+          "text": "1.2566e-05"
+        },
+        {
+          "tag": "Perimeter",
+          "text": "0.012566"
+        },
+        {
+          "tag": "Diameter",
+          "text": "0.004"
+        },
+        {
+          "tag": "Fluid",
+          "text": "water"
+        },
+        {
+          "tag": "TestID",
+          "text": "1"
+        }
+      ],
+      "values": {
+        "HeatFlux": 510000.0,
+        "WaveVelocity": [
+          3.7942,
+          3.6945,
+          3.5786,
+          3.7915
+        ],
+        "WaveTimePeriod": [
+          64.3567,
+          76.4333,
+          76.763,
+          80.3794
+        ],
+        "Elevation": [
+          0.87442,
+          0.97726,
+          1.2907,
+          1.6932
+        ],
+        "WallPower": [
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "WallMesh": [
+          0.4,
+          0.4,
+          0.424,
+          0.424
+        ],
+        "InletSubcooling": 496399.8273,
+        "InletEnthalpy": 507550.5738,
+        "OutletEnthalpy": 1867550.5738,
+        "Xout": 0.48,
+        "Power": 5127.0792,
+        "TestName": "A_G300",
+        "MassFlow": 0.0037699,
+        "MassFlux": 300.0,
+        "Pressure": 2950000.0,
+        "Length": 1.648,
+        "Area": 1.2566e-05,
+        "Perimeter": 0.012566,
+        "Diameter": 0.004,
+        "Fluid": "water",
+        "TestID": 1.0
+      },
+      "units": {
+        "HeatFlux": "W/m^2",
+        "WaveVelocity": "m/s",
+        "WaveTimePeriod": "ms",
+        "Elevation": "m",
+        "WallPower": "1",
+        "WallMesh": "m",
+        "InletSubcooling": "J/kg",
+        "InletEnthalpy": "J/kg",
+        "OutletEnthalpy": "J/kg",
+        "Xout": "1",
+        "Power": "W",
+        "TestName": null,
+        "MassFlow": "kg/s",
+        "MassFlux": "kg/m^2/s",
+        "Pressure": "Pa",
+        "Length": "m",
+        "Area": "m^2",
+        "Perimeter": "m",
+        "Diameter": "m",
+        "Fluid": null,
+        "TestID": "1"
+      },
+      "source": {
+        "dataset": "Sawai1989",
+        "path": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\database\\+Sawai1989\\+src\\Sawai1989.xml",
+        "sha256": "c596453e59f5e6cad269334abd4012eee5577851b9be06403b42519a6c7b99f4",
+        "sha256_lf": "9653bd5910e06c38bcd57b408274f24b2828fc28a12bd6731a46bf9273f598fa",
+        "text_hash_policy": "CRLF normalized to LF only",
+        "database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "expected_database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "matches_pinned_xml": true,
+        "citation": "T. Sawai, S. Yamauchi and S. Nakanishi (1989), Behavior of disturbance waves under hydrodynamic non-equilibrium conditions, International Journal of Multiphase Flow 15(3), 341-356; figure measurements digitized with GRABIT, as attributed by OpenSTREAM-database.",
+        "dataset_class_sha256_lf": "714d6edded4eaa670d7bc46a1f0905b0eace1f80892d45ef8b2856a03d806acc",
+        "input_adapter_sha256_lf": "58df13406f5610a412f40c7b4292c85897bb1006e247ec07d02b791899f53a0d",
+        "generic_dataset_sha256_lf": "a694e9add82cf8d4461770c3de615caa904f409af4ea75b02ab7fe3a800783e3",
+        "dataset_readme_sha256_lf": "f0d5ce1a864d12e4c7caf5cdde54de8c69cdec5550ed0eaff7ac6b8eb5e58714",
+        "plot_mapping_sha256_lf": "3f09691e51f7fa7782921b0826918a135a3054dc4ec0927cc6481f84396cef2d"
+      },
+      "input_transformation": "Stored mandatory inputs mapped directly; generated numeric inputs use upstream %.11f write/read rounding, with column-major multiwall semantics.",
+      "observation_transformation": "Sawai periods stored in ms; observations() returns SI seconds with raw values. Wurtz period is derived as reciprocal frequency.",
+      "uncertainty": {
+        "measurement": null,
+        "digitization": null
+      },
+      "calibration_membership": "not established by this adapter"
+    },
+    "input_consistency": {
+      "policy": "arithmetic_only; stored rounding and measurement uncertainty are not inferred",
+      "checks": {
+        "mass_flux_times_area": {
+          "stored": 0.0037699,
+          "calculated": 0.0037698,
+          "signed_difference": -1.0000000000027348e-07,
+          "unit": "kg/s"
+        },
+        "wall_mesh_length": {
+          "stored": 1.648,
+          "calculated": 1.6480000000000001,
+          "signed_difference": 2.220446049250313e-16,
+          "unit": "m"
+        },
+        "enthalpy_gain_times_flow": {
+          "stored": 5127.0792,
+          "calculated": 5127.064,
+          "signed_difference": -0.015199999999822467,
+          "unit": "W"
+        },
+        "heat_flux_times_heated_area": {
+          "stored": 5127.0792,
+          "calculated": 5126.928000000001,
+          "signed_difference": -0.15119999999933498,
+          "unit": "W",
+          "positive_wall_weight_length_m": 0.8,
+          "interpretation": "Configured positive wall weights do not imply heating when total Power is zero."
+        }
+      }
+    },
+    "selected": true
+  },
+  {
+    "record": {
+      "dataset": "Sawai1989",
+      "entry_id": 2,
+      "test_id": 2,
+      "test_name": "A_G500",
+      "raw_fields": [
+        {
+          "tag": "HeatFlux",
+          "text": "830000"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "4.7909"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "5.961"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "5.9366"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "5.9218"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "46.7863"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "50.5777"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "49.4"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "73.852"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.87822"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.98209"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.297"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.6926"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "InletSubcooling",
+          "text": "464399.8273"
+        },
+        {
+          "tag": "InletEnthalpy",
+          "text": "539550.5738"
+        },
+        {
+          "tag": "OutletEnthalpy",
+          "text": "1867550.5738"
+        },
+        {
+          "tag": "Xout",
+          "text": "0.48"
+        },
+        {
+          "tag": "Power",
+          "text": "8344.0701"
+        },
+        {
+          "tag": "TestName",
+          "text": "A_G500"
+        },
+        {
+          "tag": "MassFlow",
+          "text": "0.0062832"
+        },
+        {
+          "tag": "MassFlux",
+          "text": "500"
+        },
+        {
+          "tag": "Pressure",
+          "text": "2950000"
+        },
+        {
+          "tag": "Length",
+          "text": "1.648"
+        },
+        {
+          "tag": "Area",
+          "text": "1.2566e-05"
+        },
+        {
+          "tag": "Perimeter",
+          "text": "0.012566"
+        },
+        {
+          "tag": "Diameter",
+          "text": "0.004"
+        },
+        {
+          "tag": "Fluid",
+          "text": "water"
+        },
+        {
+          "tag": "TestID",
+          "text": "2"
+        }
+      ],
+      "values": {
+        "HeatFlux": 830000.0,
+        "WaveVelocity": [
+          4.7909,
+          5.961,
+          5.9366,
+          5.9218
+        ],
+        "WaveTimePeriod": [
+          46.7863,
+          50.5777,
+          49.4,
+          73.852
+        ],
+        "Elevation": [
+          0.87822,
+          0.98209,
+          1.297,
+          1.6926
+        ],
+        "WallPower": [
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "WallMesh": [
+          0.4,
+          0.4,
+          0.424,
+          0.424
+        ],
+        "InletSubcooling": 464399.8273,
+        "InletEnthalpy": 539550.5738,
+        "OutletEnthalpy": 1867550.5738,
+        "Xout": 0.48,
+        "Power": 8344.0701,
+        "TestName": "A_G500",
+        "MassFlow": 0.0062832,
+        "MassFlux": 500.0,
+        "Pressure": 2950000.0,
+        "Length": 1.648,
+        "Area": 1.2566e-05,
+        "Perimeter": 0.012566,
+        "Diameter": 0.004,
+        "Fluid": "water",
+        "TestID": 2.0
+      },
+      "units": {
+        "HeatFlux": "W/m^2",
+        "WaveVelocity": "m/s",
+        "WaveTimePeriod": "ms",
+        "Elevation": "m",
+        "WallPower": "1",
+        "WallMesh": "m",
+        "InletSubcooling": "J/kg",
+        "InletEnthalpy": "J/kg",
+        "OutletEnthalpy": "J/kg",
+        "Xout": "1",
+        "Power": "W",
+        "TestName": null,
+        "MassFlow": "kg/s",
+        "MassFlux": "kg/m^2/s",
+        "Pressure": "Pa",
+        "Length": "m",
+        "Area": "m^2",
+        "Perimeter": "m",
+        "Diameter": "m",
+        "Fluid": null,
+        "TestID": "1"
+      },
+      "source": {
+        "dataset": "Sawai1989",
+        "path": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\database\\+Sawai1989\\+src\\Sawai1989.xml",
+        "sha256": "c596453e59f5e6cad269334abd4012eee5577851b9be06403b42519a6c7b99f4",
+        "sha256_lf": "9653bd5910e06c38bcd57b408274f24b2828fc28a12bd6731a46bf9273f598fa",
+        "text_hash_policy": "CRLF normalized to LF only",
+        "database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "expected_database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "matches_pinned_xml": true,
+        "citation": "T. Sawai, S. Yamauchi and S. Nakanishi (1989), Behavior of disturbance waves under hydrodynamic non-equilibrium conditions, International Journal of Multiphase Flow 15(3), 341-356; figure measurements digitized with GRABIT, as attributed by OpenSTREAM-database.",
+        "dataset_class_sha256_lf": "714d6edded4eaa670d7bc46a1f0905b0eace1f80892d45ef8b2856a03d806acc",
+        "input_adapter_sha256_lf": "58df13406f5610a412f40c7b4292c85897bb1006e247ec07d02b791899f53a0d",
+        "generic_dataset_sha256_lf": "a694e9add82cf8d4461770c3de615caa904f409af4ea75b02ab7fe3a800783e3",
+        "dataset_readme_sha256_lf": "f0d5ce1a864d12e4c7caf5cdde54de8c69cdec5550ed0eaff7ac6b8eb5e58714",
+        "plot_mapping_sha256_lf": "3f09691e51f7fa7782921b0826918a135a3054dc4ec0927cc6481f84396cef2d"
+      },
+      "input_transformation": "Stored mandatory inputs mapped directly; generated numeric inputs use upstream %.11f write/read rounding, with column-major multiwall semantics.",
+      "observation_transformation": "Sawai periods stored in ms; observations() returns SI seconds with raw values. Wurtz period is derived as reciprocal frequency.",
+      "uncertainty": {
+        "measurement": null,
+        "digitization": null
+      },
+      "calibration_membership": "not established by this adapter"
+    },
+    "input_consistency": {
+      "policy": "arithmetic_only; stored rounding and measurement uncertainty are not inferred",
+      "checks": {
+        "mass_flux_times_area": {
+          "stored": 0.0062832,
+          "calculated": 0.0062829999999999995,
+          "signed_difference": -2.0000000000054696e-07,
+          "unit": "kg/s"
+        },
+        "wall_mesh_length": {
+          "stored": 1.648,
+          "calculated": 1.6480000000000001,
+          "signed_difference": 2.220446049250313e-16,
+          "unit": "m"
+        },
+        "enthalpy_gain_times_flow": {
+          "stored": 8344.0701,
+          "calculated": 8344.0896,
+          "signed_difference": 0.019499999998515705,
+          "unit": "W"
+        },
+        "heat_flux_times_heated_area": {
+          "stored": 8344.0701,
+          "calculated": 8343.824,
+          "signed_difference": -0.24610000000029686,
+          "unit": "W",
+          "positive_wall_weight_length_m": 0.8,
+          "interpretation": "Configured positive wall weights do not imply heating when total Power is zero."
+        }
+      }
+    },
+    "selected": true
+  },
+  {
+    "record": {
+      "dataset": "Sawai1989",
+      "entry_id": 3,
+      "test_id": 3,
+      "test_name": "B_G300",
+      "raw_fields": [
+        {
+          "tag": "HeatFlux",
+          "text": "710000"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "3.4783"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "3.2832"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "3.458"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "3.2038"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "89.98271"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "112.4023"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "112.9893"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "120.4475"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.88141"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.98456"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.2991"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.6943"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "InletSubcooling",
+          "text": "489983.0527"
+        },
+        {
+          "tag": "InletEnthalpy",
+          "text": "513967.3484"
+        },
+        {
+          "tag": "OutletEnthalpy",
+          "text": "2407300.6817"
+        },
+        {
+          "tag": "Xout",
+          "text": "0.78"
+        },
+        {
+          "tag": "Power",
+          "text": "7137.6985"
+        },
+        {
+          "tag": "TestName",
+          "text": "B_G300"
+        },
+        {
+          "tag": "MassFlow",
+          "text": "0.0037699"
+        },
+        {
+          "tag": "MassFlux",
+          "text": "300"
+        },
+        {
+          "tag": "Pressure",
+          "text": "2950000"
+        },
+        {
+          "tag": "Length",
+          "text": "1.648"
+        },
+        {
+          "tag": "Area",
+          "text": "1.2566e-05"
+        },
+        {
+          "tag": "Perimeter",
+          "text": "0.012566"
+        },
+        {
+          "tag": "Diameter",
+          "text": "0.004"
+        },
+        {
+          "tag": "Fluid",
+          "text": "water"
+        },
+        {
+          "tag": "TestID",
+          "text": "3"
+        }
+      ],
+      "values": {
+        "HeatFlux": 710000.0,
+        "WaveVelocity": [
+          3.4783,
+          3.2832,
+          3.458,
+          3.2038
+        ],
+        "WaveTimePeriod": [
+          89.98271,
+          112.4023,
+          112.9893,
+          120.4475
+        ],
+        "Elevation": [
+          0.88141,
+          0.98456,
+          1.2991,
+          1.6943
+        ],
+        "WallPower": [
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "WallMesh": [
+          0.4,
+          0.4,
+          0.424,
+          0.424
+        ],
+        "InletSubcooling": 489983.0527,
+        "InletEnthalpy": 513967.3484,
+        "OutletEnthalpy": 2407300.6817,
+        "Xout": 0.78,
+        "Power": 7137.6985,
+        "TestName": "B_G300",
+        "MassFlow": 0.0037699,
+        "MassFlux": 300.0,
+        "Pressure": 2950000.0,
+        "Length": 1.648,
+        "Area": 1.2566e-05,
+        "Perimeter": 0.012566,
+        "Diameter": 0.004,
+        "Fluid": "water",
+        "TestID": 3.0
+      },
+      "units": {
+        "HeatFlux": "W/m^2",
+        "WaveVelocity": "m/s",
+        "WaveTimePeriod": "ms",
+        "Elevation": "m",
+        "WallPower": "1",
+        "WallMesh": "m",
+        "InletSubcooling": "J/kg",
+        "InletEnthalpy": "J/kg",
+        "OutletEnthalpy": "J/kg",
+        "Xout": "1",
+        "Power": "W",
+        "TestName": null,
+        "MassFlow": "kg/s",
+        "MassFlux": "kg/m^2/s",
+        "Pressure": "Pa",
+        "Length": "m",
+        "Area": "m^2",
+        "Perimeter": "m",
+        "Diameter": "m",
+        "Fluid": null,
+        "TestID": "1"
+      },
+      "source": {
+        "dataset": "Sawai1989",
+        "path": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\database\\+Sawai1989\\+src\\Sawai1989.xml",
+        "sha256": "c596453e59f5e6cad269334abd4012eee5577851b9be06403b42519a6c7b99f4",
+        "sha256_lf": "9653bd5910e06c38bcd57b408274f24b2828fc28a12bd6731a46bf9273f598fa",
+        "text_hash_policy": "CRLF normalized to LF only",
+        "database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "expected_database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "matches_pinned_xml": true,
+        "citation": "T. Sawai, S. Yamauchi and S. Nakanishi (1989), Behavior of disturbance waves under hydrodynamic non-equilibrium conditions, International Journal of Multiphase Flow 15(3), 341-356; figure measurements digitized with GRABIT, as attributed by OpenSTREAM-database.",
+        "dataset_class_sha256_lf": "714d6edded4eaa670d7bc46a1f0905b0eace1f80892d45ef8b2856a03d806acc",
+        "input_adapter_sha256_lf": "58df13406f5610a412f40c7b4292c85897bb1006e247ec07d02b791899f53a0d",
+        "generic_dataset_sha256_lf": "a694e9add82cf8d4461770c3de615caa904f409af4ea75b02ab7fe3a800783e3",
+        "dataset_readme_sha256_lf": "f0d5ce1a864d12e4c7caf5cdde54de8c69cdec5550ed0eaff7ac6b8eb5e58714",
+        "plot_mapping_sha256_lf": "3f09691e51f7fa7782921b0826918a135a3054dc4ec0927cc6481f84396cef2d"
+      },
+      "input_transformation": "Stored mandatory inputs mapped directly; generated numeric inputs use upstream %.11f write/read rounding, with column-major multiwall semantics.",
+      "observation_transformation": "Sawai periods stored in ms; observations() returns SI seconds with raw values. Wurtz period is derived as reciprocal frequency.",
+      "uncertainty": {
+        "measurement": null,
+        "digitization": null
+      },
+      "calibration_membership": "not established by this adapter"
+    },
+    "input_consistency": {
+      "policy": "arithmetic_only; stored rounding and measurement uncertainty are not inferred",
+      "checks": {
+        "mass_flux_times_area": {
+          "stored": 0.0037699,
+          "calculated": 0.0037698,
+          "signed_difference": -1.0000000000027348e-07,
+          "unit": "kg/s"
+        },
+        "wall_mesh_length": {
+          "stored": 1.648,
+          "calculated": 1.6480000000000001,
+          "signed_difference": 2.220446049250313e-16,
+          "unit": "m"
+        },
+        "enthalpy_gain_times_flow": {
+          "stored": 7137.6985,
+          "calculated": 7137.67733320767,
+          "signed_difference": -0.02116679233040486,
+          "unit": "W"
+        },
+        "heat_flux_times_heated_area": {
+          "stored": 7137.6985,
+          "calculated": 7137.488000000001,
+          "signed_difference": -0.21049999999922875,
+          "unit": "W",
+          "positive_wall_weight_length_m": 0.8,
+          "interpretation": "Configured positive wall weights do not imply heating when total Power is zero."
+        }
+      }
+    },
+    "selected": false
+  },
+  {
+    "record": {
+      "dataset": "Sawai1989",
+      "entry_id": 4,
+      "test_id": 4,
+      "test_name": "B_G500",
+      "raw_fields": [
+        {
+          "tag": "HeatFlux",
+          "text": "1160000"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "5.4596"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "5.011"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "4.8402"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "4.8392"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "55.6625"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "65.9817"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "83.1106"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "94.5212"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.87932"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.98417"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.3001"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.6926"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "InletSubcooling",
+          "text": "452649.7194"
+        },
+        {
+          "tag": "InletEnthalpy",
+          "text": "551300.6817"
+        },
+        {
+          "tag": "OutletEnthalpy",
+          "text": "2407300.6817"
+        },
+        {
+          "tag": "Xout",
+          "text": "0.78"
+        },
+        {
+          "tag": "Power",
+          "text": "11661.5919"
+        },
+        {
+          "tag": "TestName",
+          "text": "B_G500"
+        },
+        {
+          "tag": "MassFlow",
+          "text": "0.0062832"
+        },
+        {
+          "tag": "MassFlux",
+          "text": "500"
+        },
+        {
+          "tag": "Pressure",
+          "text": "2950000"
+        },
+        {
+          "tag": "Length",
+          "text": "1.648"
+        },
+        {
+          "tag": "Area",
+          "text": "1.2566e-05"
+        },
+        {
+          "tag": "Perimeter",
+          "text": "0.012566"
+        },
+        {
+          "tag": "Diameter",
+          "text": "0.004"
+        },
+        {
+          "tag": "Fluid",
+          "text": "water"
+        },
+        {
+          "tag": "TestID",
+          "text": "4"
+        }
+      ],
+      "values": {
+        "HeatFlux": 1160000.0,
+        "WaveVelocity": [
+          5.4596,
+          5.011,
+          4.8402,
+          4.8392
+        ],
+        "WaveTimePeriod": [
+          55.6625,
+          65.9817,
+          83.1106,
+          94.5212
+        ],
+        "Elevation": [
+          0.87932,
+          0.98417,
+          1.3001,
+          1.6926
+        ],
+        "WallPower": [
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "WallMesh": [
+          0.4,
+          0.4,
+          0.424,
+          0.424
+        ],
+        "InletSubcooling": 452649.7194,
+        "InletEnthalpy": 551300.6817,
+        "OutletEnthalpy": 2407300.6817,
+        "Xout": 0.78,
+        "Power": 11661.5919,
+        "TestName": "B_G500",
+        "MassFlow": 0.0062832,
+        "MassFlux": 500.0,
+        "Pressure": 2950000.0,
+        "Length": 1.648,
+        "Area": 1.2566e-05,
+        "Perimeter": 0.012566,
+        "Diameter": 0.004,
+        "Fluid": "water",
+        "TestID": 4.0
+      },
+      "units": {
+        "HeatFlux": "W/m^2",
+        "WaveVelocity": "m/s",
+        "WaveTimePeriod": "ms",
+        "Elevation": "m",
+        "WallPower": "1",
+        "WallMesh": "m",
+        "InletSubcooling": "J/kg",
+        "InletEnthalpy": "J/kg",
+        "OutletEnthalpy": "J/kg",
+        "Xout": "1",
+        "Power": "W",
+        "TestName": null,
+        "MassFlow": "kg/s",
+        "MassFlux": "kg/m^2/s",
+        "Pressure": "Pa",
+        "Length": "m",
+        "Area": "m^2",
+        "Perimeter": "m",
+        "Diameter": "m",
+        "Fluid": null,
+        "TestID": "1"
+      },
+      "source": {
+        "dataset": "Sawai1989",
+        "path": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\database\\+Sawai1989\\+src\\Sawai1989.xml",
+        "sha256": "c596453e59f5e6cad269334abd4012eee5577851b9be06403b42519a6c7b99f4",
+        "sha256_lf": "9653bd5910e06c38bcd57b408274f24b2828fc28a12bd6731a46bf9273f598fa",
+        "text_hash_policy": "CRLF normalized to LF only",
+        "database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "expected_database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "matches_pinned_xml": true,
+        "citation": "T. Sawai, S. Yamauchi and S. Nakanishi (1989), Behavior of disturbance waves under hydrodynamic non-equilibrium conditions, International Journal of Multiphase Flow 15(3), 341-356; figure measurements digitized with GRABIT, as attributed by OpenSTREAM-database.",
+        "dataset_class_sha256_lf": "714d6edded4eaa670d7bc46a1f0905b0eace1f80892d45ef8b2856a03d806acc",
+        "input_adapter_sha256_lf": "58df13406f5610a412f40c7b4292c85897bb1006e247ec07d02b791899f53a0d",
+        "generic_dataset_sha256_lf": "a694e9add82cf8d4461770c3de615caa904f409af4ea75b02ab7fe3a800783e3",
+        "dataset_readme_sha256_lf": "f0d5ce1a864d12e4c7caf5cdde54de8c69cdec5550ed0eaff7ac6b8eb5e58714",
+        "plot_mapping_sha256_lf": "3f09691e51f7fa7782921b0826918a135a3054dc4ec0927cc6481f84396cef2d"
+      },
+      "input_transformation": "Stored mandatory inputs mapped directly; generated numeric inputs use upstream %.11f write/read rounding, with column-major multiwall semantics.",
+      "observation_transformation": "Sawai periods stored in ms; observations() returns SI seconds with raw values. Wurtz period is derived as reciprocal frequency.",
+      "uncertainty": {
+        "measurement": null,
+        "digitization": null
+      },
+      "calibration_membership": "not established by this adapter"
+    },
+    "input_consistency": {
+      "policy": "arithmetic_only; stored rounding and measurement uncertainty are not inferred",
+      "checks": {
+        "mass_flux_times_area": {
+          "stored": 0.0062832,
+          "calculated": 0.0062829999999999995,
+          "signed_difference": -2.0000000000054696e-07,
+          "unit": "kg/s"
+        },
+        "wall_mesh_length": {
+          "stored": 1.648,
+          "calculated": 1.6480000000000001,
+          "signed_difference": 2.220446049250313e-16,
+          "unit": "m"
+        },
+        "enthalpy_gain_times_flow": {
+          "stored": 11661.5919,
+          "calculated": 11661.619200000001,
+          "signed_difference": 0.027300000001559965,
+          "unit": "W"
+        },
+        "heat_flux_times_heated_area": {
+          "stored": 11661.5919,
+          "calculated": 11661.248000000001,
+          "signed_difference": -0.34389999999802967,
+          "unit": "W",
+          "positive_wall_weight_length_m": 0.8,
+          "interpretation": "Configured positive wall weights do not imply heating when total Power is zero."
+        }
+      }
+    },
+    "selected": false
+  },
+  {
+    "record": {
+      "dataset": "Sawai1989",
+      "entry_id": 5,
+      "test_id": 5,
+      "test_name": "C_G300",
+      "raw_fields": [
+        {
+          "tag": "HeatFlux",
+          "text": "770000"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "3.1968"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "3.0453"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "3.1523"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "3.1048"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "94.31529"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "122.6203"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "128.4337"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "149.6307"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.87741"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.98328"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.2981"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.6923"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "InletSubcooling",
+          "text": "470066.3501"
+        },
+        {
+          "tag": "InletEnthalpy",
+          "text": "533884.051"
+        },
+        {
+          "tag": "OutletEnthalpy",
+          "text": "2587217.3844"
+        },
+        {
+          "tag": "Xout",
+          "text": "0.88"
+        },
+        {
+          "tag": "Power",
+          "text": "7740.8843"
+        },
+        {
+          "tag": "TestName",
+          "text": "C_G300"
+        },
+        {
+          "tag": "MassFlow",
+          "text": "0.0037699"
+        },
+        {
+          "tag": "MassFlux",
+          "text": "300"
+        },
+        {
+          "tag": "Pressure",
+          "text": "2950000"
+        },
+        {
+          "tag": "Length",
+          "text": "1.648"
+        },
+        {
+          "tag": "Area",
+          "text": "1.2566e-05"
+        },
+        {
+          "tag": "Perimeter",
+          "text": "0.012566"
+        },
+        {
+          "tag": "Diameter",
+          "text": "0.004"
+        },
+        {
+          "tag": "Fluid",
+          "text": "water"
+        },
+        {
+          "tag": "TestID",
+          "text": "5"
+        }
+      ],
+      "values": {
+        "HeatFlux": 770000.0,
+        "WaveVelocity": [
+          3.1968,
+          3.0453,
+          3.1523,
+          3.1048
+        ],
+        "WaveTimePeriod": [
+          94.31529,
+          122.6203,
+          128.4337,
+          149.6307
+        ],
+        "Elevation": [
+          0.87741,
+          0.98328,
+          1.2981,
+          1.6923
+        ],
+        "WallPower": [
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "WallMesh": [
+          0.4,
+          0.4,
+          0.424,
+          0.424
+        ],
+        "InletSubcooling": 470066.3501,
+        "InletEnthalpy": 533884.051,
+        "OutletEnthalpy": 2587217.3844,
+        "Xout": 0.88,
+        "Power": 7740.8843,
+        "TestName": "C_G300",
+        "MassFlow": 0.0037699,
+        "MassFlux": 300.0,
+        "Pressure": 2950000.0,
+        "Length": 1.648,
+        "Area": 1.2566e-05,
+        "Perimeter": 0.012566,
+        "Diameter": 0.004,
+        "Fluid": "water",
+        "TestID": 5.0
+      },
+      "units": {
+        "HeatFlux": "W/m^2",
+        "WaveVelocity": "m/s",
+        "WaveTimePeriod": "ms",
+        "Elevation": "m",
+        "WallPower": "1",
+        "WallMesh": "m",
+        "InletSubcooling": "J/kg",
+        "InletEnthalpy": "J/kg",
+        "OutletEnthalpy": "J/kg",
+        "Xout": "1",
+        "Power": "W",
+        "TestName": null,
+        "MassFlow": "kg/s",
+        "MassFlux": "kg/m^2/s",
+        "Pressure": "Pa",
+        "Length": "m",
+        "Area": "m^2",
+        "Perimeter": "m",
+        "Diameter": "m",
+        "Fluid": null,
+        "TestID": "1"
+      },
+      "source": {
+        "dataset": "Sawai1989",
+        "path": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\database\\+Sawai1989\\+src\\Sawai1989.xml",
+        "sha256": "c596453e59f5e6cad269334abd4012eee5577851b9be06403b42519a6c7b99f4",
+        "sha256_lf": "9653bd5910e06c38bcd57b408274f24b2828fc28a12bd6731a46bf9273f598fa",
+        "text_hash_policy": "CRLF normalized to LF only",
+        "database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "expected_database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "matches_pinned_xml": true,
+        "citation": "T. Sawai, S. Yamauchi and S. Nakanishi (1989), Behavior of disturbance waves under hydrodynamic non-equilibrium conditions, International Journal of Multiphase Flow 15(3), 341-356; figure measurements digitized with GRABIT, as attributed by OpenSTREAM-database.",
+        "dataset_class_sha256_lf": "714d6edded4eaa670d7bc46a1f0905b0eace1f80892d45ef8b2856a03d806acc",
+        "input_adapter_sha256_lf": "58df13406f5610a412f40c7b4292c85897bb1006e247ec07d02b791899f53a0d",
+        "generic_dataset_sha256_lf": "a694e9add82cf8d4461770c3de615caa904f409af4ea75b02ab7fe3a800783e3",
+        "dataset_readme_sha256_lf": "f0d5ce1a864d12e4c7caf5cdde54de8c69cdec5550ed0eaff7ac6b8eb5e58714",
+        "plot_mapping_sha256_lf": "3f09691e51f7fa7782921b0826918a135a3054dc4ec0927cc6481f84396cef2d"
+      },
+      "input_transformation": "Stored mandatory inputs mapped directly; generated numeric inputs use upstream %.11f write/read rounding, with column-major multiwall semantics.",
+      "observation_transformation": "Sawai periods stored in ms; observations() returns SI seconds with raw values. Wurtz period is derived as reciprocal frequency.",
+      "uncertainty": {
+        "measurement": null,
+        "digitization": null
+      },
+      "calibration_membership": "not established by this adapter"
+    },
+    "input_consistency": {
+      "policy": "arithmetic_only; stored rounding and measurement uncertainty are not inferred",
+      "checks": {
+        "mass_flux_times_area": {
+          "stored": 0.0037699,
+          "calculated": 0.0037698,
+          "signed_difference": -1.0000000000027348e-07,
+          "unit": "kg/s"
+        },
+        "wall_mesh_length": {
+          "stored": 1.648,
+          "calculated": 1.6480000000000001,
+          "signed_difference": 2.220446049250313e-16,
+          "unit": "m"
+        },
+        "enthalpy_gain_times_flow": {
+          "stored": 7740.8843,
+          "calculated": 7740.861333584659,
+          "signed_difference": -0.022966415340306412,
+          "unit": "W"
+        },
+        "heat_flux_times_heated_area": {
+          "stored": 7740.8843,
+          "calculated": 7740.656,
+          "signed_difference": -0.2282999999997628,
+          "unit": "W",
+          "positive_wall_weight_length_m": 0.8,
+          "interpretation": "Configured positive wall weights do not imply heating when total Power is zero."
+        }
+      }
+    },
+    "selected": true
+  },
+  {
+    "record": {
+      "dataset": "Sawai1989",
+      "entry_id": 6,
+      "test_id": 6,
+      "test_name": "C_G500",
+      "raw_fields": [
+        {
+          "tag": "HeatFlux",
+          "text": "1290000"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "4.6003"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "4.2851"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "4.4852"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "4.4616"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "66.45291"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "83.81279"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "106.0459"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "139.1821"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.87911"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.98487"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.2961"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.6932"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "InletSubcooling",
+          "text": "480733.0167"
+        },
+        {
+          "tag": "InletEnthalpy",
+          "text": "523217.3844"
+        },
+        {
+          "tag": "OutletEnthalpy",
+          "text": "2587217.3844"
+        },
+        {
+          "tag": "Xout",
+          "text": "0.88"
+        },
+        {
+          "tag": "Power",
+          "text": "12968.4945"
+        },
+        {
+          "tag": "TestName",
+          "text": "C_G500"
+        },
+        {
+          "tag": "MassFlow",
+          "text": "0.0062832"
+        },
+        {
+          "tag": "MassFlux",
+          "text": "500"
+        },
+        {
+          "tag": "Pressure",
+          "text": "2950000"
+        },
+        {
+          "tag": "Length",
+          "text": "1.648"
+        },
+        {
+          "tag": "Area",
+          "text": "1.2566e-05"
+        },
+        {
+          "tag": "Perimeter",
+          "text": "0.012566"
+        },
+        {
+          "tag": "Diameter",
+          "text": "0.004"
+        },
+        {
+          "tag": "Fluid",
+          "text": "water"
+        },
+        {
+          "tag": "TestID",
+          "text": "6"
+        }
+      ],
+      "values": {
+        "HeatFlux": 1290000.0,
+        "WaveVelocity": [
+          4.6003,
+          4.2851,
+          4.4852,
+          4.4616
+        ],
+        "WaveTimePeriod": [
+          66.45291,
+          83.81279,
+          106.0459,
+          139.1821
+        ],
+        "Elevation": [
+          0.87911,
+          0.98487,
+          1.2961,
+          1.6932
+        ],
+        "WallPower": [
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "WallMesh": [
+          0.4,
+          0.4,
+          0.424,
+          0.424
+        ],
+        "InletSubcooling": 480733.0167,
+        "InletEnthalpy": 523217.3844,
+        "OutletEnthalpy": 2587217.3844,
+        "Xout": 0.88,
+        "Power": 12968.4945,
+        "TestName": "C_G500",
+        "MassFlow": 0.0062832,
+        "MassFlux": 500.0,
+        "Pressure": 2950000.0,
+        "Length": 1.648,
+        "Area": 1.2566e-05,
+        "Perimeter": 0.012566,
+        "Diameter": 0.004,
+        "Fluid": "water",
+        "TestID": 6.0
+      },
+      "units": {
+        "HeatFlux": "W/m^2",
+        "WaveVelocity": "m/s",
+        "WaveTimePeriod": "ms",
+        "Elevation": "m",
+        "WallPower": "1",
+        "WallMesh": "m",
+        "InletSubcooling": "J/kg",
+        "InletEnthalpy": "J/kg",
+        "OutletEnthalpy": "J/kg",
+        "Xout": "1",
+        "Power": "W",
+        "TestName": null,
+        "MassFlow": "kg/s",
+        "MassFlux": "kg/m^2/s",
+        "Pressure": "Pa",
+        "Length": "m",
+        "Area": "m^2",
+        "Perimeter": "m",
+        "Diameter": "m",
+        "Fluid": null,
+        "TestID": "1"
+      },
+      "source": {
+        "dataset": "Sawai1989",
+        "path": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\database\\+Sawai1989\\+src\\Sawai1989.xml",
+        "sha256": "c596453e59f5e6cad269334abd4012eee5577851b9be06403b42519a6c7b99f4",
+        "sha256_lf": "9653bd5910e06c38bcd57b408274f24b2828fc28a12bd6731a46bf9273f598fa",
+        "text_hash_policy": "CRLF normalized to LF only",
+        "database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "expected_database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "matches_pinned_xml": true,
+        "citation": "T. Sawai, S. Yamauchi and S. Nakanishi (1989), Behavior of disturbance waves under hydrodynamic non-equilibrium conditions, International Journal of Multiphase Flow 15(3), 341-356; figure measurements digitized with GRABIT, as attributed by OpenSTREAM-database.",
+        "dataset_class_sha256_lf": "714d6edded4eaa670d7bc46a1f0905b0eace1f80892d45ef8b2856a03d806acc",
+        "input_adapter_sha256_lf": "58df13406f5610a412f40c7b4292c85897bb1006e247ec07d02b791899f53a0d",
+        "generic_dataset_sha256_lf": "a694e9add82cf8d4461770c3de615caa904f409af4ea75b02ab7fe3a800783e3",
+        "dataset_readme_sha256_lf": "f0d5ce1a864d12e4c7caf5cdde54de8c69cdec5550ed0eaff7ac6b8eb5e58714",
+        "plot_mapping_sha256_lf": "3f09691e51f7fa7782921b0826918a135a3054dc4ec0927cc6481f84396cef2d"
+      },
+      "input_transformation": "Stored mandatory inputs mapped directly; generated numeric inputs use upstream %.11f write/read rounding, with column-major multiwall semantics.",
+      "observation_transformation": "Sawai periods stored in ms; observations() returns SI seconds with raw values. Wurtz period is derived as reciprocal frequency.",
+      "uncertainty": {
+        "measurement": null,
+        "digitization": null
+      },
+      "calibration_membership": "not established by this adapter"
+    },
+    "input_consistency": {
+      "policy": "arithmetic_only; stored rounding and measurement uncertainty are not inferred",
+      "checks": {
+        "mass_flux_times_area": {
+          "stored": 0.0062832,
+          "calculated": 0.0062829999999999995,
+          "signed_difference": -2.0000000000054696e-07,
+          "unit": "kg/s"
+        },
+        "wall_mesh_length": {
+          "stored": 1.648,
+          "calculated": 1.6480000000000001,
+          "signed_difference": 2.220446049250313e-16,
+          "unit": "m"
+        },
+        "enthalpy_gain_times_flow": {
+          "stored": 12968.4945,
+          "calculated": 12968.524800000001,
+          "signed_difference": 0.030300000000352156,
+          "unit": "W"
+        },
+        "heat_flux_times_heated_area": {
+          "stored": 12968.4945,
+          "calculated": 12968.112000000001,
+          "signed_difference": -0.38249999999970896,
+          "unit": "W",
+          "positive_wall_weight_length_m": 0.8,
+          "interpretation": "Configured positive wall weights do not imply heating when total Power is zero."
+        }
+      }
+    },
+    "selected": true
+  },
+  {
+    "record": {
+      "dataset": "Sawai1989",
+      "entry_id": 7,
+      "test_id": 7,
+      "test_name": "D_G300",
+      "raw_fields": [
+        {
+          "tag": "HeatFlux",
+          "text": "830000"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "2.0891"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "1.2944"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "2.1106"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "2.4747"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "160"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "350"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "395"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "750"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.8805"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.98184"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.3043"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.6948"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "InletSubcooling",
+          "text": "486132.988"
+        },
+        {
+          "tag": "InletEnthalpy",
+          "text": "517817.4131"
+        },
+        {
+          "tag": "OutletEnthalpy",
+          "text": "2731150.7465"
+        },
+        {
+          "tag": "Xout",
+          "text": "0.96"
+        },
+        {
+          "tag": "Power",
+          "text": "8344.0701"
+        },
+        {
+          "tag": "TestName",
+          "text": "D_G300"
+        },
+        {
+          "tag": "MassFlow",
+          "text": "0.0037699"
+        },
+        {
+          "tag": "MassFlux",
+          "text": "300"
+        },
+        {
+          "tag": "Pressure",
+          "text": "2950000"
+        },
+        {
+          "tag": "Length",
+          "text": "1.648"
+        },
+        {
+          "tag": "Area",
+          "text": "1.2566e-05"
+        },
+        {
+          "tag": "Perimeter",
+          "text": "0.012566"
+        },
+        {
+          "tag": "Diameter",
+          "text": "0.004"
+        },
+        {
+          "tag": "Fluid",
+          "text": "water"
+        },
+        {
+          "tag": "TestID",
+          "text": "7"
+        }
+      ],
+      "values": {
+        "HeatFlux": 830000.0,
+        "WaveVelocity": [
+          2.0891,
+          1.2944,
+          2.1106,
+          2.4747
+        ],
+        "WaveTimePeriod": [
+          160.0,
+          350.0,
+          395.0,
+          750.0
+        ],
+        "Elevation": [
+          0.8805,
+          0.98184,
+          1.3043,
+          1.6948
+        ],
+        "WallPower": [
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "WallMesh": [
+          0.4,
+          0.4,
+          0.424,
+          0.424
+        ],
+        "InletSubcooling": 486132.988,
+        "InletEnthalpy": 517817.4131,
+        "OutletEnthalpy": 2731150.7465,
+        "Xout": 0.96,
+        "Power": 8344.0701,
+        "TestName": "D_G300",
+        "MassFlow": 0.0037699,
+        "MassFlux": 300.0,
+        "Pressure": 2950000.0,
+        "Length": 1.648,
+        "Area": 1.2566e-05,
+        "Perimeter": 0.012566,
+        "Diameter": 0.004,
+        "Fluid": "water",
+        "TestID": 7.0
+      },
+      "units": {
+        "HeatFlux": "W/m^2",
+        "WaveVelocity": "m/s",
+        "WaveTimePeriod": "ms",
+        "Elevation": "m",
+        "WallPower": "1",
+        "WallMesh": "m",
+        "InletSubcooling": "J/kg",
+        "InletEnthalpy": "J/kg",
+        "OutletEnthalpy": "J/kg",
+        "Xout": "1",
+        "Power": "W",
+        "TestName": null,
+        "MassFlow": "kg/s",
+        "MassFlux": "kg/m^2/s",
+        "Pressure": "Pa",
+        "Length": "m",
+        "Area": "m^2",
+        "Perimeter": "m",
+        "Diameter": "m",
+        "Fluid": null,
+        "TestID": "1"
+      },
+      "source": {
+        "dataset": "Sawai1989",
+        "path": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\database\\+Sawai1989\\+src\\Sawai1989.xml",
+        "sha256": "c596453e59f5e6cad269334abd4012eee5577851b9be06403b42519a6c7b99f4",
+        "sha256_lf": "9653bd5910e06c38bcd57b408274f24b2828fc28a12bd6731a46bf9273f598fa",
+        "text_hash_policy": "CRLF normalized to LF only",
+        "database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "expected_database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "matches_pinned_xml": true,
+        "citation": "T. Sawai, S. Yamauchi and S. Nakanishi (1989), Behavior of disturbance waves under hydrodynamic non-equilibrium conditions, International Journal of Multiphase Flow 15(3), 341-356; figure measurements digitized with GRABIT, as attributed by OpenSTREAM-database.",
+        "dataset_class_sha256_lf": "714d6edded4eaa670d7bc46a1f0905b0eace1f80892d45ef8b2856a03d806acc",
+        "input_adapter_sha256_lf": "58df13406f5610a412f40c7b4292c85897bb1006e247ec07d02b791899f53a0d",
+        "generic_dataset_sha256_lf": "a694e9add82cf8d4461770c3de615caa904f409af4ea75b02ab7fe3a800783e3",
+        "dataset_readme_sha256_lf": "f0d5ce1a864d12e4c7caf5cdde54de8c69cdec5550ed0eaff7ac6b8eb5e58714",
+        "plot_mapping_sha256_lf": "3f09691e51f7fa7782921b0826918a135a3054dc4ec0927cc6481f84396cef2d"
+      },
+      "input_transformation": "Stored mandatory inputs mapped directly; generated numeric inputs use upstream %.11f write/read rounding, with column-major multiwall semantics.",
+      "observation_transformation": "Sawai periods stored in ms; observations() returns SI seconds with raw values. Wurtz period is derived as reciprocal frequency.",
+      "uncertainty": {
+        "measurement": null,
+        "digitization": null
+      },
+      "calibration_membership": "not established by this adapter"
+    },
+    "input_consistency": {
+      "policy": "arithmetic_only; stored rounding and measurement uncertainty are not inferred",
+      "checks": {
+        "mass_flux_times_area": {
+          "stored": 0.0037699,
+          "calculated": 0.0037698,
+          "signed_difference": -1.0000000000027348e-07,
+          "unit": "kg/s"
+        },
+        "wall_mesh_length": {
+          "stored": 1.648,
+          "calculated": 1.6480000000000001,
+          "signed_difference": 2.220446049250313e-16,
+          "unit": "m"
+        },
+        "enthalpy_gain_times_flow": {
+          "stored": 8344.0701,
+          "calculated": 8344.04533358466,
+          "signed_difference": -0.024766415341218817,
+          "unit": "W"
+        },
+        "heat_flux_times_heated_area": {
+          "stored": 8344.0701,
+          "calculated": 8343.824,
+          "signed_difference": -0.24610000000029686,
+          "unit": "W",
+          "positive_wall_weight_length_m": 0.8,
+          "interpretation": "Configured positive wall weights do not imply heating when total Power is zero."
+        }
+      }
+    },
+    "selected": false
+  },
+  {
+    "record": {
+      "dataset": "Sawai1989",
+      "entry_id": 8,
+      "test_id": 8,
+      "test_name": "D_G500",
+      "raw_fields": [
+        {
+          "tag": "HeatFlux",
+          "text": "1330000"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "3.9411"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "2.6615"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "2.4807"
+        },
+        {
+          "tag": "WaveVelocity",
+          "text": "3.957"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "75"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "155"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "325"
+        },
+        {
+          "tag": "WaveTimePeriod",
+          "text": "255"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.88304"
+        },
+        {
+          "tag": "Elevation",
+          "text": "0.98709"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.3033"
+        },
+        {
+          "tag": "Elevation",
+          "text": "1.7002"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "1"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallPower",
+          "text": "0"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.4"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "WallMesh",
+          "text": "0.424"
+        },
+        {
+          "tag": "InletSubcooling",
+          "text": "454774.6654"
+        },
+        {
+          "tag": "InletEnthalpy",
+          "text": "549175.7357"
+        },
+        {
+          "tag": "OutletEnthalpy",
+          "text": "2677175.7357"
+        },
+        {
+          "tag": "Xout",
+          "text": "0.93"
+        },
+        {
+          "tag": "Power",
+          "text": "13370.6183"
+        },
+        {
+          "tag": "TestName",
+          "text": "D_G500"
+        },
+        {
+          "tag": "MassFlow",
+          "text": "0.0062832"
+        },
+        {
+          "tag": "MassFlux",
+          "text": "500"
+        },
+        {
+          "tag": "Pressure",
+          "text": "2950000"
+        },
+        {
+          "tag": "Length",
+          "text": "1.648"
+        },
+        {
+          "tag": "Area",
+          "text": "1.2566e-05"
+        },
+        {
+          "tag": "Perimeter",
+          "text": "0.012566"
+        },
+        {
+          "tag": "Diameter",
+          "text": "0.004"
+        },
+        {
+          "tag": "Fluid",
+          "text": "water"
+        },
+        {
+          "tag": "TestID",
+          "text": "8"
+        }
+      ],
+      "values": {
+        "HeatFlux": 1330000.0,
+        "WaveVelocity": [
+          3.9411,
+          2.6615,
+          2.4807,
+          3.957
+        ],
+        "WaveTimePeriod": [
+          75.0,
+          155.0,
+          325.0,
+          255.0
+        ],
+        "Elevation": [
+          0.88304,
+          0.98709,
+          1.3033,
+          1.7002
+        ],
+        "WallPower": [
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "WallMesh": [
+          0.4,
+          0.4,
+          0.424,
+          0.424
+        ],
+        "InletSubcooling": 454774.6654,
+        "InletEnthalpy": 549175.7357,
+        "OutletEnthalpy": 2677175.7357,
+        "Xout": 0.93,
+        "Power": 13370.6183,
+        "TestName": "D_G500",
+        "MassFlow": 0.0062832,
+        "MassFlux": 500.0,
+        "Pressure": 2950000.0,
+        "Length": 1.648,
+        "Area": 1.2566e-05,
+        "Perimeter": 0.012566,
+        "Diameter": 0.004,
+        "Fluid": "water",
+        "TestID": 8.0
+      },
+      "units": {
+        "HeatFlux": "W/m^2",
+        "WaveVelocity": "m/s",
+        "WaveTimePeriod": "ms",
+        "Elevation": "m",
+        "WallPower": "1",
+        "WallMesh": "m",
+        "InletSubcooling": "J/kg",
+        "InletEnthalpy": "J/kg",
+        "OutletEnthalpy": "J/kg",
+        "Xout": "1",
+        "Power": "W",
+        "TestName": null,
+        "MassFlow": "kg/s",
+        "MassFlux": "kg/m^2/s",
+        "Pressure": "Pa",
+        "Length": "m",
+        "Area": "m^2",
+        "Perimeter": "m",
+        "Diameter": "m",
+        "Fluid": null,
+        "TestID": "1"
+      },
+      "source": {
+        "dataset": "Sawai1989",
+        "path": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\database\\+Sawai1989\\+src\\Sawai1989.xml",
+        "sha256": "c596453e59f5e6cad269334abd4012eee5577851b9be06403b42519a6c7b99f4",
+        "sha256_lf": "9653bd5910e06c38bcd57b408274f24b2828fc28a12bd6731a46bf9273f598fa",
+        "text_hash_policy": "CRLF normalized to LF only",
+        "database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "expected_database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+        "matches_pinned_xml": true,
+        "citation": "T. Sawai, S. Yamauchi and S. Nakanishi (1989), Behavior of disturbance waves under hydrodynamic non-equilibrium conditions, International Journal of Multiphase Flow 15(3), 341-356; figure measurements digitized with GRABIT, as attributed by OpenSTREAM-database.",
+        "dataset_class_sha256_lf": "714d6edded4eaa670d7bc46a1f0905b0eace1f80892d45ef8b2856a03d806acc",
+        "input_adapter_sha256_lf": "58df13406f5610a412f40c7b4292c85897bb1006e247ec07d02b791899f53a0d",
+        "generic_dataset_sha256_lf": "a694e9add82cf8d4461770c3de615caa904f409af4ea75b02ab7fe3a800783e3",
+        "dataset_readme_sha256_lf": "f0d5ce1a864d12e4c7caf5cdde54de8c69cdec5550ed0eaff7ac6b8eb5e58714",
+        "plot_mapping_sha256_lf": "3f09691e51f7fa7782921b0826918a135a3054dc4ec0927cc6481f84396cef2d"
+      },
+      "input_transformation": "Stored mandatory inputs mapped directly; generated numeric inputs use upstream %.11f write/read rounding, with column-major multiwall semantics.",
+      "observation_transformation": "Sawai periods stored in ms; observations() returns SI seconds with raw values. Wurtz period is derived as reciprocal frequency.",
+      "uncertainty": {
+        "measurement": null,
+        "digitization": null
+      },
+      "calibration_membership": "not established by this adapter"
+    },
+    "input_consistency": {
+      "policy": "arithmetic_only; stored rounding and measurement uncertainty are not inferred",
+      "checks": {
+        "mass_flux_times_area": {
+          "stored": 0.0062832,
+          "calculated": 0.0062829999999999995,
+          "signed_difference": -2.0000000000054696e-07,
+          "unit": "kg/s"
+        },
+        "wall_mesh_length": {
+          "stored": 1.648,
+          "calculated": 1.6480000000000001,
+          "signed_difference": 2.220446049250313e-16,
+          "unit": "m"
+        },
+        "enthalpy_gain_times_flow": {
+          "stored": 13370.6183,
+          "calculated": 13370.6496,
+          "signed_difference": 0.03130000000055588,
+          "unit": "W"
+        },
+        "heat_flux_times_heated_area": {
+          "stored": 13370.6183,
+          "calculated": 13370.224000000002,
+          "signed_difference": -0.39429999999811116,
+          "unit": "W",
+          "positive_wall_weight_length_m": 0.8,
+          "interpretation": "Configured positive wall weights do not imply heating when total Power is zero."
+        }
+      }
+    },
+    "selected": false
+  }
+]

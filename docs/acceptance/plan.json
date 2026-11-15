@@ -8,59 +8,350 @@
     "Dependencies apply to acceptance of the relevant subcase. They do not prevent exploratory execution, investigation, or independent work on other cases.",
     "Preserve governing equations and original core tolerances. Diagnose translation errors separately from intentional approximations, source defects and calibration choices.",
     "The initial 2026-11-14 acceptance audit performed no new numerical calculation or MATLAB execution. Subsequent Bartolomey evidence is tracked explicitly: 40 native pilot runs and descriptive experimental comparisons are complete, three mesh screens failed, and no uncertainty-qualified experimental acceptance or fresh MATLAB equivalence is claimed.",
-    "Original PDFs and raw extracted text remain local; source hashes and analytical citations identify them without redistributing the files."
+    "Original PDFs and raw extracted text remain local; source hashes and analytical citations identify them without redistributing the files.",
+    "The frozen Le Corre reconstruction executed all 69 attempts: 63 natively converge and 65 retain physical rejection. Paper raster comparisons, measured-data errors and independent arithmetic audits are separate evidence; none establishes fresh MATLAB equivalence or uncertainty-qualified validation. Historical script/version inconsistencies and the Sawai 0.1/0.2 s discrepancy remain explicit."
   ],
   "prioritized_work": [
-    {"id":"W0", "priority":"P0", "work":"Freeze case identity, source/version mappings, measured definitions and applicable domains", "requirements":["EXP-001","EXP-006","EXP-012","EXP-013","EXP-018","API-008","API-026","CORE-037"]},
-    {"id":"W1", "priority":"P0/P1", "work":"Extend the partial native database adapter after the frozen Bartolomey pilot; resolve failed mesh screens and incomplete uncertainty/independence gates before qualified validation", "requirements":["EXP-005","EXP-007","EXP-009","EXP-014","API-001","API-005"]},
-    {"id":"W2", "priority":"P0/P1", "work":"Extend independent MATLAB references to transients and required closure branches", "requirements":["API-021","API-022","API-023","CORE-006","CORE-007","CORE-008","CORE-009","CORE-010","CORE-013","CORE-036"]},
-    {"id":"W3", "priority":"P0/P1", "work":"Attribute physical/diagnostic failures and establish numerical uncertainty", "requirements":["CORE-018","CORE-025","CORE-026","CORE-027","CORE-028","CORE-029","CORE-030","CORE-031","CORE-032","CORE-033"]},
-    {"id":"W4", "priority":"P1/P2", "work":"Reproduce named literature cases and assess independent experimental cases", "requirements":["EXP-002","EXP-003","EXP-004","EXP-008","EXP-010","EXP-011","EXP-014","EXP-015","EXP-016","EXP-017"]},
-    {"id":"W5", "priority":"P1/P2", "work":"Close public API, all tutorial workflows, branch domains and reproducible release", "requirements":["API-003","API-004","API-009","API-010","API-011","API-012","API-013","API-014","API-015","API-016","API-017","API-018","API-019","API-020","API-024","API-025","CORE-011","CORE-012","CORE-014","CORE-015","CORE-016","CORE-017","CORE-019","CORE-020","CORE-021","CORE-022","CORE-023","CORE-024","CORE-034","CORE-035"]}
+    {
+      "id": "W0",
+      "priority": "P0",
+      "work": "Recover publication-producing inputs/versions and resolve historical script, Sawai relaxation and measurement-coordinate discrepancies; preserve the completed immutable reconstruction",
+      "requirements": [
+        "EXP-001",
+        "EXP-006",
+        "EXP-012",
+        "EXP-013",
+        "EXP-018",
+        "API-008",
+        "API-026",
+        "CORE-037"
+      ]
+    },
+    {
+      "id": "W1",
+      "priority": "P0/P1",
+      "work": "Extend the three implemented steady database families and resolve uncertainty/independence gaps; retain Bartolomey mesh failures and Le Corre native/physical rejections",
+      "requirements": [
+        "EXP-005",
+        "EXP-007",
+        "EXP-009",
+        "EXP-014",
+        "API-001",
+        "API-005"
+      ]
+    },
+    {
+      "id": "W2",
+      "priority": "P0/P1",
+      "work": "Extend independent MATLAB references to transients and required closure branches",
+      "requirements": [
+        "API-021",
+        "API-022",
+        "API-023",
+        "CORE-006",
+        "CORE-007",
+        "CORE-008",
+        "CORE-009",
+        "CORE-010",
+        "CORE-013",
+        "CORE-036"
+      ]
+    },
+    {
+      "id": "W3",
+      "priority": "P0/P1",
+      "work": "Diagnose Sawai point failures, TwoFluid temporal refinement failure, source mesh-dependent AFFNC blending and retained area identities against source/MATLAB before changing models; establish numerical uncertainty",
+      "requirements": [
+        "CORE-018",
+        "CORE-025",
+        "CORE-026",
+        "CORE-027",
+        "CORE-028",
+        "CORE-029",
+        "CORE-030",
+        "CORE-031",
+        "CORE-032",
+        "CORE-033"
+      ]
+    },
+    {
+      "id": "W4",
+      "priority": "P1/P2",
+      "work": "Close the named Le Corre discrepancies with independent references; then reproduce exact ICMF/TRACE workflows and assess held-out experimental groups",
+      "requirements": [
+        "EXP-002",
+        "EXP-003",
+        "EXP-004",
+        "EXP-008",
+        "EXP-010",
+        "EXP-011",
+        "EXP-014",
+        "EXP-015",
+        "EXP-016",
+        "EXP-017"
+      ]
+    },
+    {
+      "id": "W5",
+      "priority": "P1/P2",
+      "work": "Close public API, all tutorial workflows, branch domains and reproducible release",
+      "requirements": [
+        "API-003",
+        "API-004",
+        "API-009",
+        "API-010",
+        "API-011",
+        "API-012",
+        "API-013",
+        "API-014",
+        "API-015",
+        "API-016",
+        "API-017",
+        "API-018",
+        "API-019",
+        "API-020",
+        "API-024",
+        "API-025",
+        "CORE-011",
+        "CORE-012",
+        "CORE-014",
+        "CORE-015",
+        "CORE-016",
+        "CORE-017",
+        "CORE-019",
+        "CORE-020",
+        "CORE-021",
+        "CORE-022",
+        "CORE-023",
+        "CORE-024",
+        "CORE-034",
+        "CORE-035"
+      ]
+    }
   ],
   "dependencies": {
-    "CORE-001":["API-022","API-023"],
-    "CORE-002":["API-022","API-023"],
-    "CORE-003":["API-022","API-023"],
-    "CORE-004":["API-022","API-023"],
-    "CORE-005":["API-022","API-023","API-007"],
-    "CORE-006":["API-023","API-010"],
-    "CORE-007":["API-021","API-008","CORE-036"],
-    "CORE-008":["API-021","API-008","CORE-036"],
-    "CORE-009":["API-021","API-008","CORE-018","CORE-036"],
-    "CORE-010":["API-021","API-008","CORE-018","CORE-036"],
-    "CORE-013":["API-008","CORE-012","CORE-036"],
-    "CORE-018":["API-006","API-007","CORE-037"],
-    "CORE-026":["CORE-029","CORE-037"],
-    "CORE-027":["CORE-018","CORE-029","CORE-037"],
-    "CORE-028":["CORE-018","CORE-029","CORE-037"],
-    "CORE-030":["CORE-029"],
-    "CORE-031":["CORE-026","CORE-029"],
-    "CORE-032":["CORE-027","CORE-029"],
-    "CORE-033":["CORE-028","CORE-029"],
-    "CORE-034":["API-005","CORE-035"],
-    "CORE-036":["API-006","API-007"],
-    "API-016":["CORE-001","CORE-002","CORE-003","CORE-004"],
-    "API-017":["CORE-007","CORE-008","CORE-009","CORE-010"],
-    "API-018":["API-001","API-002","API-003"],
-    "API-019":["CORE-029","CORE-030","CORE-031","CORE-032","CORE-033"],
-    "API-020":["API-011","API-014","API-015"],
-    "API-021":["API-026"],
-    "API-022":["API-026"],
-    "API-023":["API-026"],
-    "EXP-002":["EXP-001","EXP-013","API-023"],
-    "EXP-003":["EXP-001","API-021","CORE-009","CORE-010"],
-    "EXP-004":["EXP-001","API-023","CORE-026"],
-    "EXP-005":["API-001","API-005","EXP-006","EXP-018"],
-    "EXP-008":["EXP-005","EXP-006","EXP-007","EXP-014"],
-    "EXP-009":["EXP-005","EXP-006","EXP-007","CORE-025","CORE-030"],
-    "EXP-010":["EXP-005","EXP-006","EXP-007","EXP-013","EXP-014","CORE-028","CORE-033"],
-    "EXP-011":["EXP-005","EXP-006","EXP-007","EXP-012","EXP-013","EXP-014","CORE-028","CORE-033"],
-    "EXP-012":["EXP-001","EXP-006"],
-    "EXP-013":["EXP-001"],
-    "EXP-014":["EXP-001","EXP-007"],
-    "EXP-015":["EXP-005","EXP-006","EXP-007","EXP-014","CORE-027","CORE-032"],
-    "EXP-016":["EXP-005","EXP-006","EXP-007","EXP-014","CORE-016","CORE-017","CORE-030"],
-    "EXP-017":["EXP-005","EXP-006","EXP-007","EXP-014","CORE-017","CORE-027","CORE-032"]
+    "CORE-001": [
+      "API-022",
+      "API-023"
+    ],
+    "CORE-002": [
+      "API-022",
+      "API-023"
+    ],
+    "CORE-003": [
+      "API-022",
+      "API-023"
+    ],
+    "CORE-004": [
+      "API-022",
+      "API-023"
+    ],
+    "CORE-005": [
+      "API-022",
+      "API-023",
+      "API-007"
+    ],
+    "CORE-006": [
+      "API-023",
+      "API-010"
+    ],
+    "CORE-007": [
+      "API-021",
+      "API-008",
+      "CORE-036"
+    ],
+    "CORE-008": [
+      "API-021",
+      "API-008",
+      "CORE-036"
+    ],
+    "CORE-009": [
+      "API-021",
+      "API-008",
+      "CORE-018",
+      "CORE-036"
+    ],
+    "CORE-010": [
+      "API-021",
+      "API-008",
+      "CORE-018",
+      "CORE-036"
+    ],
+    "CORE-013": [
+      "API-008",
+      "CORE-012",
+      "CORE-036"
+    ],
+    "CORE-018": [
+      "API-006",
+      "API-007",
+      "CORE-037"
+    ],
+    "CORE-026": [
+      "CORE-029",
+      "CORE-037"
+    ],
+    "CORE-027": [
+      "CORE-018",
+      "CORE-029",
+      "CORE-037"
+    ],
+    "CORE-028": [
+      "CORE-018",
+      "CORE-029",
+      "CORE-037"
+    ],
+    "CORE-030": [
+      "CORE-029"
+    ],
+    "CORE-031": [
+      "CORE-026",
+      "CORE-029"
+    ],
+    "CORE-032": [
+      "CORE-027",
+      "CORE-029"
+    ],
+    "CORE-033": [
+      "CORE-028",
+      "CORE-029"
+    ],
+    "CORE-034": [
+      "API-005",
+      "CORE-035"
+    ],
+    "CORE-036": [
+      "API-006",
+      "API-007"
+    ],
+    "API-016": [
+      "CORE-001",
+      "CORE-002",
+      "CORE-003",
+      "CORE-004"
+    ],
+    "API-017": [
+      "CORE-007",
+      "CORE-008",
+      "CORE-009",
+      "CORE-010"
+    ],
+    "API-018": [
+      "API-001",
+      "API-002",
+      "API-003"
+    ],
+    "API-019": [
+      "CORE-029",
+      "CORE-030",
+      "CORE-031",
+      "CORE-032",
+      "CORE-033"
+    ],
+    "API-020": [
+      "API-011",
+      "API-014",
+      "API-015"
+    ],
+    "API-021": [
+      "API-026"
+    ],
+    "API-022": [
+      "API-026"
+    ],
+    "API-023": [
+      "API-026"
+    ],
+    "EXP-002": [
+      "EXP-001",
+      "EXP-013",
+      "API-023"
+    ],
+    "EXP-003": [
+      "EXP-001",
+      "API-021",
+      "CORE-009",
+      "CORE-010"
+    ],
+    "EXP-004": [
+      "EXP-001",
+      "API-023",
+      "CORE-026"
+    ],
+    "EXP-005": [
+      "API-001",
+      "API-005",
+      "EXP-006",
+      "EXP-018"
+    ],
+    "EXP-008": [
+      "EXP-005",
+      "EXP-006",
+      "EXP-007",
+      "EXP-014"
+    ],
+    "EXP-009": [
+      "EXP-005",
+      "EXP-006",
+      "EXP-007",
+      "CORE-025",
+      "CORE-030"
+    ],
+    "EXP-010": [
+      "EXP-005",
+      "EXP-006",
+      "EXP-007",
+      "EXP-013",
+      "EXP-014",
+      "CORE-028",
+      "CORE-033"
+    ],
+    "EXP-011": [
+      "EXP-005",
+      "EXP-006",
+      "EXP-007",
+      "EXP-012",
+      "EXP-013",
+      "EXP-014",
+      "CORE-028",
+      "CORE-033"
+    ],
+    "EXP-012": [
+      "EXP-001",
+      "EXP-006"
+    ],
+    "EXP-013": [
+      "EXP-001"
+    ],
+    "EXP-014": [
+      "EXP-001",
+      "EXP-007"
+    ],
+    "EXP-015": [
+      "EXP-005",
+      "EXP-006",
+      "EXP-007",
+      "EXP-014",
+      "CORE-027",
+      "CORE-032"
+    ],
+    "EXP-016": [
+      "EXP-005",
+      "EXP-006",
+      "EXP-007",
+      "EXP-014",
+      "CORE-016",
+      "CORE-017",
+      "CORE-030"
+    ],
+    "EXP-017": [
+      "EXP-005",
+      "EXP-006",
+      "EXP-007",
+      "EXP-014",
+      "CORE-017",
+      "CORE-027",
+      "CORE-032"
+    ]
   }
 }

@@ -13,6 +13,8 @@ These files preserve inspected source evidence and recoverable graphical coordin
 | `source_history.json` | Historical/current version differences, source-level execution blockers and figure semantics |
 | `figure5_source_gap.json` | Recovered primary thesis provenance and unresolved exact TRACE-case input/array gap |
 | `physical_scope_review.json` | Independent audit of 33 native base runs; derived diagnostic evidence, not original reference data |
+| `physical_scope_checkpoint_report.json` | Exact-byte recovered campaign report resolving the earlier physical-audit report hash |
+| `checkpoint_recovery.json` | Exact SHA256 verification and method for that checkpoint recovery |
 
 The original user PDF, whole-paper extracted text and embedded paper images are not redistributed here. The historical project script is reproduced byte-for-byte from the pinned database revision recorded in `source_history.json`; `database/LICENSE` contains its license notice.
 

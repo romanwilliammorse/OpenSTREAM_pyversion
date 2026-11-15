@@ -1,0 +1,46 @@
+{
+  "scope": "Re-extract original PDF using the committed digitization algorithm, without reading native predictions. Exact byte comparison of reference CSVs and metadata.",
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.3.5",
+    "Pillow": "12.3.0",
+    "pypdf": "6.10.0"
+  },
+  "checks": [
+    {
+      "reference": "references/paper/lecorre2025/digitized_curves.csv",
+      "recreated": "tmp/lecorre/reextract-demo-01/digitized_curves.csv",
+      "identical_bytes": true,
+      "reference_sha256": "416ceb4aba584e4535254ba2e8377dcd5f3496021b54e96b76c132cfe7578c7a",
+      "recreated_sha256": "416ceb4aba584e4535254ba2e8377dcd5f3496021b54e96b76c132cfe7578c7a"
+    },
+    {
+      "reference": "references/paper/lecorre2025/metadata.json",
+      "recreated": "tmp/lecorre/reextract-demo-01/metadata.json",
+      "identical_bytes": true,
+      "reference_sha256": "56d9de42f30aad07341a115e5f805c1e499ce629d90921aa0d3616a8b94b8636",
+      "recreated_sha256": "56d9de42f30aad07341a115e5f805c1e499ce629d90921aa0d3616a8b94b8636"
+    },
+    {
+      "reference": "references/paper/lecorre2025/figures6_7/digitized_figure6.csv",
+      "recreated": "tmp/lecorre/reextract-extra-01/digitized_figure6.csv",
+      "identical_bytes": true,
+      "reference_sha256": "4c3e7cc1c043f35eacacc4ac3184a3df384413b538582e36a2f03aea02d3333f",
+      "recreated_sha256": "4c3e7cc1c043f35eacacc4ac3184a3df384413b538582e36a2f03aea02d3333f"
+    },
+    {
+      "reference": "references/paper/lecorre2025/figures6_7/digitized_figure7.csv",
+      "recreated": "tmp/lecorre/reextract-extra-01/digitized_figure7.csv",
+      "identical_bytes": true,
+      "reference_sha256": "13bc2f12139c45f15e3cda313c9c61969074ab54e28e7d32750141331f9d1acd",
+      "recreated_sha256": "13bc2f12139c45f15e3cda313c9c61969074ab54e28e7d32750141331f9d1acd"
+    },
+    {
+      "reference": "references/paper/lecorre2025/figures6_7/metadata.json",
+      "recreated": "tmp/lecorre/reextract-extra-01/metadata.json",
+      "identical_bytes": true,
+      "reference_sha256": "0d054bc7233f8c1c17bbb635e796f49a1a936870f1738dc8e13bd963842ad94f",
+      "recreated_sha256": "0d054bc7233f8c1c17bbb635e796f49a1a936870f1738dc8e13bd963842ad94f"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+quantity,index,elevation_m,measured,predicted,error,unit,status,reason,source_flags
+BaseThickness,0,9.0,2.5e-05,1.9238048449316026e-05,-5.7619515506839756e-06,m,compared,,['outlet_location_from_stored_Length']
+WaveVelocity,0,9.0,,,,m/s,excluded,missing_coordinate_or_measurement,"['missing_observation', 'outlet_location_from_stored_Length']"
+WaveNumberDensity,0,9.0,,,,m^-1,excluded,missing_coordinate_or_measurement,"['missing_observation', 'outlet_location_from_stored_Length']"

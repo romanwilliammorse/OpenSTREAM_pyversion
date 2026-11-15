@@ -1,0 +1,9 @@
+quantity,index,elevation_m,measured,predicted,error,unit,status,reason,source_flags
+WaveVelocity,0,0.87741,3.1968,2.6429806239648213,-0.5538193760351788,m/s,compared,,[]
+WaveVelocity,1,0.98328,3.0453,2.661327314073046,-0.3839726859269543,m/s,compared,,[]
+WaveVelocity,2,1.2981,3.1523,2.81388048706789,-0.3384195129321097,m/s,compared,,[]
+WaveVelocity,3,1.6923,3.1048,,,m/s,excluded,outside_stored_channel,['coordinate_outside_stored_channel']
+WaveTimePeriod,0,0.87741,0.09431529000000001,0.0893704896395686,-0.004944800360431406,s,compared,,[]
+WaveTimePeriod,1,0.98328,0.1226203,0.10742522450624126,-0.015195075493758745,s,compared,,[]
+WaveTimePeriod,2,1.2981,0.12843369999999998,0.15050961191473747,0.022075911914737484,s,compared,,[]
+WaveTimePeriod,3,1.6923,0.1496307,,,s,excluded,outside_stored_channel,['coordinate_outside_stored_channel']

@@ -4,11 +4,28 @@ The occupied-area rejection is applicable to the separately transported base and
 
 This review preserves all solver equations, frozen inputs, diagnostic flags and tolerances. It covers the 33 completed 100-cell base runs in `outputs/validation/lecorre-2025-01`; refinement runs are outside this snapshot. Source: OpenSTREAM `a614c7173822a93c1e64ac28d1541cbac028cbd8`. Portable audit evidence is `references/paper/lecorre2025/physical_scope_review.json`.
 
+The audit's original report hash resolves to `references/paper/lecorre2025/physical_scope_checkpoint_report.json`. Those bytes were recovered from the unchanged ordered run records and original serialization only after obtaining an exact match to the already recorded SHA256 `429ca74a0b8d9094d13c341754a3b376502bba7a84039352a7704a18544b01f4`. This checkpoint contains 37 attempted runs; the audit selected its 33 base runs. `checkpoint_recovery.json` records the method. All 95 per-run files hashed by the audit and all 25 native source fingerprints were independently checked unchanged.
+
+The same read-only arithmetic was also executed after all 69 planned attempts
+finished. `outputs/validation/lecorre-2025-01/physical_scope_audit.json` binds
+that repeated 33-base-run review to the final campaign report and the executed
+audit script. It preserves the earlier checkpoint and reaches the same base-run
+results; it does not extend this physical review to the refinement runs.
+
 ## Why the area identity applies
 
 For field mass flow W [kg/s], density rho [kg/m³] and velocity u [m/s], W/(rho u) is its occupied cross-sectional area [m²]. The total must equal the specified channel area when the fields are a physical partition of that channel:
 
 `A_occ = (W_base/u_base + W_wave/u_wave + W_drop/u_drop)/rho_liquid + W_vapor/(rho_vapor*u_vapor)`.
+
+The channel's geometric area is correctly specified. Upstream
+`+Inputs/Geometry.m:109` and native `inputs.py:445` use
+`Dh = 4*A/sum(PERIM)`, equivalently `A = Dh*P_wetted/4`. The diagnostic
+compares the phase-state-implied occupied area with this known geometric
+target; it does not recalculate or replace the channel geometry. A precise
+name for the discrepancy is **phase-volume closure residual**. For TUTORIAL1,
+`A=6.0821e-5 m^2` and `P_wetted=0.0276 m` imply `Dh=0.00881463768 m`.
+The paper's rounded diameter must not silently replace the stored area.
 
 The supplied paper's Equations (14) and (15), page 7, store **W_base/u_base** and **W_wave/u_wave** in the respective continuity equations. Those are already axial mass inventories [kg/m]. An extra multiplication by wave/interface fraction would alter those stated inventories. Upstream `+Solvers/+FourField/Film.m:75` defines film flow as base plus wave flow; its harmonic velocity at line 114 makes `W_film/u_film = W_base/u_base + W_wave/u_wave`. `+Solvers/AbstractFilm.m:47` likewise defines equivalent film thickness from W/(perimeter rho u). The wave thickness closure at `+Solvers/+FourField/Wave.m:96` is amplitude times interfacial fraction; it does not authorize applying that fraction again to W/u. Thickness/amplitude caps are separate closures, not enforcement of the total channel inventory.
 
