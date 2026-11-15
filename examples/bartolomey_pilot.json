@@ -1,0 +1,43 @@
+{
+  "schema": "openstream-bartolomey-pilot-v1",
+  "campaign_id": "bartolomey-pilot-01",
+  "selection_frozen_before_predictions": true,
+  "selection_rule": "First XML entry in each TestName group, in source order. Selection uses metadata only, not prediction errors.",
+  "entries": [1, 22, 29, 31],
+  "expected_test_ids": [1, 26, 31, 33],
+  "expected_coordinates": ["Quality", "Quality", "Elevation", "Elevation"],
+  "database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+  "upstream_commit": "a614c7173822a93c1e64ac28d1541cbac028cbd8",
+  "models": {
+    "hem": {"VOID": "HOMOGENEOUS", "THERMALNONEQ": "EQUILIBRIUM"},
+    "saha_zuber_bestion": {"VOID": "BESTION", "THERMALNONEQ": "SAHAZUBER"}
+  },
+  "model_provenance": "HEM uses upstream defaults. Saha-Zuber/Bestion is the unchanged closure selection in upstream inputs/models.inp TUTORIAL2D. Remaining coefficients are upstream defaults. No fitting to these measurements.",
+  "calibration_membership": "No coefficients are fitted in this campaign. Historical overlap of selected data with closure development is unknown; these cases are not claimed as independent holdout validation. NUTHOS15's calibrated MRM cases TestID22 and35 are not selected.",
+  "mesh_cells": [100, 200, 400],
+  "sensitivity_cells": 200,
+  "numerical_options": {
+    "SSTSTEP": 1.0, "SSMAXITER": 100, "MAXITER": 200,
+    "ERRORW": 1e-9, "ERRORP": 0.001, "ERRORH": 0.001,
+    "SSCONVW": 1e-8, "SSCONVP": 0.01, "SSCONVH": 0.01
+  },
+  "iteration_tightening_factor": 0.1,
+  "pseudo_time_step_s": 0.5,
+  "pseudo_time_max_iterations": 200,
+  "acceptance": {
+    "experimental": "Descriptive comparison only. No uncertainty-qualified pass/fail threshold; combined experimental, digitization and input uncertainty is incomplete.",
+    "reported_void_error_bound": {"value": 0.04, "unit": "1", "interpretation": "NUREG/IA-0025 states absolute void-fraction error less than 0.04 for all tests; confidence/distribution and digitization uncertainty are not established. Not a total validation tolerance."},
+    "mesh_max_void_change": 0.002,
+    "iteration_max_void_change": 0.0002,
+    "pseudo_time_max_void_change": 0.0002,
+    "sensitivity_basis": "Predeclared numerical screening goals: mesh 5% and iteration/pseudo-time 0.5% of reported 0.04 absolute void error. These are sensitivity goals, not estimates of numerical uncertainty or asymptotic convergence.",
+    "mass_relative": 1e-6, "mass_absolute_kg_s": 1e-10,
+    "enthalpy_relative": 1e-6,
+    "momentum_absolute_Pa_floor": 1e-6,
+    "fraction_bound_tolerance": 1e-12,
+    "area_closure_tolerance": 1e-9,
+    "point_policy": "Preserve all source measurements, including negative digitized void values with flags. No clipping or extrapolation. Every unavailable or out-of-domain point is listed with its exclusion reason. Quality observations remain in equilibrium-quality coordinates; do not infer measured elevation.",
+    "relative_error_policy": "Do not compute relative void error near zero; report signed error, bias, MAE and RMSE in dimensionless void fraction and explicitly labelled percentage points.",
+    "aggregation_policy": "Report every attempted case/model/grid and every exclusion. Aggregate errors only within a named coordinate/model population, retaining convergence and physical status. An apparent fit cannot override failed checks."
+  }
+}

@@ -1,3 +1,6 @@
 [submodule "upstream"]
 	path = upstream
 	url = https://github.com/OpenSTREAM-solvers/openstream.git
+[submodule "database"]
+	path = database
+	url = https://github.com/OpenSTREAM-solvers/openstream-database.git
