@@ -1,0 +1,517 @@
+{
+  "schema": "openstream-sawai-oscillation-pdf-inventory-v1",
+  "source_commit": "617f030a78bb66549729bb079b525abc29b83e60",
+  "scope": "Exactly the Sawai oscillation diagnostic report and acceptance matrix; source text unchanged.",
+  "source_identity_policy": "Working source must equal the recorded commit after CRLF-to-LF normalization only; raw hashes also retained.",
+  "counts": {
+    "markdown": 2,
+    "total": 2
+  },
+  "documents": [
+    {
+      "source": "docs/SAWAI_OSCILLATION_DIAGNOSTIC.md",
+      "kind": "markdown",
+      "title": "Sawai entry 1: iteration oscillation diagnostic",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "SAWAI_OSCILLATION_DIAGNOSTIC.pdf",
+      "source_sha256": "07e44979b22fd5ce86d75da7eace45b98bad0d37a70b23747909989e11add3c9",
+      "source_sha256_lf": "07e44979b22fd5ce86d75da7eace45b98bad0d37a70b23747909989e11add3c9",
+      "source_bytes": 13076,
+      "source_git_blob": "12c50c1be500bb2ae46a1399edd0b68d4d545690",
+      "committed_source_sha256": "07e44979b22fd5ce86d75da7eace45b98bad0d37a70b23747909989e11add3c9",
+      "figure_assets": [
+        {
+          "source": "outputs/verification/sawai-oscillation-01/cycle_diagnostics.png",
+          "caption": "Retained native iteration diagnostics",
+          "source_sha256": "f104c9c072399e7e43004e7b1cf4fced06bd35ed91011a03e01fa4a97feac650",
+          "source_bytes": 247149,
+          "source_git_blob": "87fcd46290b16b1c31b07c7b12d7ffa287a79421",
+          "pixels": [
+            1836,
+            1260
+          ],
+          "dpi": [
+            180.00979999999998,
+            180.00979999999998
+          ]
+        }
+      ],
+      "headings": [
+        {
+          "title": "Sawai entry 1: iteration oscillation diagnostic",
+          "page": 1
+        },
+        {
+          "title": "Result and attribution",
+          "page": 1
+        },
+        {
+          "title": "Fixed case and evidence",
+          "page": 1
+        },
+        {
+          "title": "The remaining failure",
+          "page": 2
+        },
+        {
+          "title": "What drives the alternating update",
+          "page": 2
+        },
+        {
+          "title": "Alternatives checked and limits",
+          "page": 3
+        },
+        {
+          "title": "Acceptance consequence and next work",
+          "page": 3
+        },
+        {
+          "title": "Reproduction and retained files",
+          "page": 4
+        }
+      ],
+      "pages": 6,
+      "pdf_sha256": "6f74b65bdae167e0301c16c052e8bcb597deb24ee3038fcf625c0f94aa86a8be",
+      "numeric_tokens_checked": 71,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 121,
+      "missing_text_fragments": [],
+      "pre_plate_pdf_sha256": "08a329d05cdba3d26fcf46e6d5dbbc298c4c9e7efc2ed8382fd1dbdf2fd72e8d",
+      "original_pages": 5,
+      "added_figure_plate_pages": 1,
+      "figure_plates": [
+        {
+          "source": "outputs/verification/sawai-oscillation-01/cycle_diagnostics.png",
+          "caption": "Retained native iteration diagnostics",
+          "source_sha256": "f104c9c072399e7e43004e7b1cf4fced06bd35ed91011a03e01fa4a97feac650",
+          "source_bytes": 247149,
+          "source_git_blob": "87fcd46290b16b1c31b07c7b12d7ffa287a79421",
+          "pixels": [
+            1836,
+            1260
+          ],
+          "dpi": [
+            180.00979999999998,
+            180.00979999999998
+          ],
+          "pdf_page": 6,
+          "page_size_pt": [
+            1190.5511811023623,
+            841.8897637795277
+          ],
+          "rendered_size_pt": [
+            734.3600181767882,
+            503.97256149387425
+          ],
+          "native_size_limit_applied": true
+        }
+      ],
+      "original_page_text_and_content_streams_retained": true,
+      "original_page_geometry_retained": true,
+      "original_bookmarks_retained": true,
+      "original_named_destinations_retained": true
+    },
+    {
+      "source": "docs/ACCEPTANCE_MATRIX.md",
+      "kind": "markdown",
+      "title": "Acceptance matrix",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "ACCEPTANCE_MATRIX.pdf",
+      "source_sha256": "f0aae72a73207acfad817f8bba3b8d38079a32e744690f870c32d63372b883f1",
+      "source_sha256_lf": "f0aae72a73207acfad817f8bba3b8d38079a32e744690f870c32d63372b883f1",
+      "source_bytes": 149236,
+      "source_git_blob": "50982b57a99b803aaed7f59dad8d0a48126bb887",
+      "committed_source_sha256": "f0aae72a73207acfad817f8bba3b8d38079a32e744690f870c32d63372b883f1",
+      "headings": [
+        {
+          "title": "Acceptance matrix",
+          "page": 1
+        },
+        {
+          "title": "Experimental Validation",
+          "page": 1
+        },
+        {
+          "title": "Interface Parity",
+          "page": 2
+        },
+        {
+          "title": "Literature Scope",
+          "page": 4
+        },
+        {
+          "title": "Matlab Equivalence",
+          "page": 4
+        },
+        {
+          "title": "Numerical Verification",
+          "page": 6
+        },
+        {
+          "title": "Reference Infrastructure",
+          "page": 7
+        },
+        {
+          "title": "Release",
+          "page": 8
+        },
+        {
+          "title": "Requirement details",
+          "page": 8
+        },
+        {
+          "title": "CORE-001: Mixture",
+          "page": 8
+        },
+        {
+          "title": "CORE-002: TwoFluid",
+          "page": 9
+        },
+        {
+          "title": "CORE-003: ThreeField",
+          "page": 9
+        },
+        {
+          "title": "CORE-004: FourField",
+          "page": 10
+        },
+        {
+          "title": "CORE-005: All frameworks",
+          "page": 10
+        },
+        {
+          "title": "CORE-006: All frameworks",
+          "page": 11
+        },
+        {
+          "title": "CORE-007: Mixture",
+          "page": 12
+        },
+        {
+          "title": "CORE-008: TwoFluid",
+          "page": 12
+        },
+        {
+          "title": "CORE-009: ThreeField",
+          "page": 13
+        },
+        {
+          "title": "CORE-010: FourField",
+          "page": 13
+        },
+        {
+          "title": "CORE-011: Mixture closures",
+          "page": 14
+        },
+        {
+          "title": "CORE-012: Mixture closures",
+          "page": 14
+        },
+        {
+          "title": "CORE-013: Mixture MRM",
+          "page": 14
+        },
+        {
+          "title": "CORE-014: Mixture relaxation",
+          "page": 15
+        },
+        {
+          "title": "CORE-015: Mixture momentum",
+          "page": 15
+        },
+        {
+          "title": "CORE-016: Mixture heat transfer",
+          "page": 16
+        },
+        {
+          "title": "CORE-017: Mixture transitions",
+          "page": 16
+        },
+        {
+          "title": "CORE-018: Annular onset",
+          "page": 17
+        },
+        {
+          "title": "CORE-019: TwoFluid momentum",
+          "page": 17
+        },
+        {
+          "title": "CORE-020: TwoFluid exchanges",
+          "page": 18
+        },
+        {
+          "title": "CORE-021: ThreeField exchange",
+          "page": 18
+        },
+        {
+          "title": "CORE-022: ThreeField momentum",
+          "page": 18
+        },
+        {
+          "title": "CORE-023: FourField structure",
+          "page": 19
+        },
+        {
+          "title": "CORE-024: FourField momentum",
+          "page": 20
+        },
+        {
+          "title": "CORE-025: Mixture physical checks",
+          "page": 20
+        },
+        {
+          "title": "CORE-026: TwoFluid physical checks",
+          "page": 21
+        },
+        {
+          "title": "CORE-027: ThreeField physical checks",
+          "page": 21
+        },
+        {
+          "title": "CORE-028: FourField physical checks",
+          "page": 22
+        },
+        {
+          "title": "CORE-029: Convergence contracts",
+          "page": 23
+        },
+        {
+          "title": "CORE-030: Mixture discretization",
+          "page": 24
+        },
+        {
+          "title": "CORE-031: TwoFluid discretization",
+          "page": 24
+        },
+        {
+          "title": "CORE-032: ThreeField discretization",
+          "page": 25
+        },
+        {
+          "title": "CORE-033: FourField discretization",
+          "page": 25
+        },
+        {
+          "title": "CORE-034: Multiwall numerical behavior",
+          "page": 26
+        },
+        {
+          "title": "CORE-035: Source-defective scientific options",
+          "page": 26
+        },
+        {
+          "title": "CORE-036: Numerical language semantics",
+          "page": 27
+        },
+        {
+          "title": "CORE-037: Operating domain",
+          "page": 28
+        },
+        {
+          "title": "API-001: Input readers",
+          "page": 28
+        },
+        {
+          "title": "API-002: Defaults and enums",
+          "page": 29
+        },
+        {
+          "title": "API-003: Input writers and default reporting",
+          "page": 29
+        },
+        {
+          "title": "API-004: Function-valued inputs",
+          "page": 30
+        },
+        {
+          "title": "API-005: Geometry and boundary dimensions",
+          "page": 30
+        },
+        {
+          "title": "API-006: Colon and interpolation semantics",
+          "page": 31
+        },
+        {
+          "title": "API-007: Copy, caches and array indexing",
+          "page": 31
+        },
+        {
+          "title": "API-008: Thermophysical properties",
+          "page": 32
+        },
+        {
+          "title": "API-009: Property optimization and helper scope",
+          "page": 32
+        },
+        {
+          "title": "API-010: Public diagnostics and subsets",
+          "page": 33
+        },
+        {
+          "title": "API-011: Live-field extraction and public interpolation API",
+          "page": 33
+        },
+        {
+          "title": "API-012: Session and runtime behavior",
+          "page": 34
+        },
+        {
+          "title": "API-013: Portable results and serialization",
+          "page": 34
+        },
+        {
+          "title": "API-014: Saved-array post-processing",
+          "page": 35
+        },
+        {
+          "title": "API-015: Complete plotting API",
+          "page": 35
+        },
+        {
+          "title": "API-016: Tutorial 01: quick start",
+          "page": 35
+        },
+        {
+          "title": "API-017: Tutorials 02-05: model capabilities",
+          "page": 36
+        },
+        {
+          "title": "API-018: Tutorial 06: input workflows",
+          "page": 36
+        },
+        {
+          "title": "API-019: Tutorials 07-08: convergence and sensitivity",
+          "page": 37
+        },
+        {
+          "title": "API-020: Tutorial 09: advanced visualization",
+          "page": 37
+        },
+        {
+          "title": "API-021: MATLAB reference export",
+          "page": 38
+        },
+        {
+          "title": "API-022: Archive recovery",
+          "page": 38
+        },
+        {
+          "title": "API-023: Comparison acceptance machinery",
+          "page": 39
+        },
+        {
+          "title": "API-024: GUI and command interfaces",
+          "page": 39
+        },
+        {
+          "title": "API-025: Reproducible installation and release",
+          "page": 40
+        },
+        {
+          "title": "API-026: Evidence provenance and status consistency",
+          "page": 40
+        },
+        {
+          "title": "EXP-001: Publication/version provenance",
+          "page": 41
+        },
+        {
+          "title": "EXP-002: NURETH demonstration",
+          "page": 42
+        },
+        {
+          "title": "EXP-003: ICMF annular transient",
+          "page": 43
+        },
+        {
+          "title": "EXP-004: TRACE benchmark",
+          "page": 43
+        },
+        {
+          "title": "EXP-005: Native database adapter",
+          "page": 44
+        },
+        {
+          "title": "EXP-006: Units and observable definitions",
+          "page": 45
+        },
+        {
+          "title": "EXP-007: Uncertainty and acceptance",
+          "page": 45
+        },
+        {
+          "title": "EXP-008: Evaluation report and case accounting",
+          "page": 46
+        },
+        {
+          "title": "EXP-009: Bartolomey pilot",
+          "page": 48
+        },
+        {
+          "title": "EXP-010: Wurtz publication reproduction",
+          "page": 48
+        },
+        {
+          "title": "EXP-011: Sawai publication reproduction",
+          "page": 49
+        },
+        {
+          "title": "EXP-012: Sawai unit/domain integrity",
+          "page": 51
+        },
+        {
+          "title": "EXP-013: Companion configuration compatibility",
+          "page": 52
+        },
+        {
+          "title": "EXP-014: Independent validation partition",
+          "page": 52
+        },
+        {
+          "title": "EXP-015: Adamsson film-flow validation",
+          "page": 53
+        },
+        {
+          "title": "EXP-016: Bennett thermal/dryout validation",
+          "page": 54
+        },
+        {
+          "title": "EXP-017: Groeneveld CHF/dryout validation",
+          "page": 54
+        },
+        {
+          "title": "EXP-018: Model applicability versus promised future features",
+          "page": 55
+        }
+      ],
+      "pages": 55,
+      "pdf_sha256": "cb526d349b9e993610eb5cdcc18debbe5b4365e6ced425129f941bb83c395f33",
+      "numeric_tokens_checked": 168,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 3659,
+      "missing_text_fragments": []
+    }
+  ],
+  "figure_plate_policy": "Append unchanged referenced PNGs on A3 landscape pages; preserve pixel aspect ratio without cropping; never exceed native DPI size when recorded (otherwise one point per pixel maximum).",
+  "created_utc": "2026-11-15T08:03:27.691355+00:00",
+  "python": "3.12.14",
+  "versions": {
+    "reportlab": "4.4.9",
+    "pypdf": "6.10.0",
+    "Pillow": "12.3.0",
+    "markdown-it-py": "4.0.0",
+    "mdurl": "0.1.2"
+  },
+  "exporter_source_sha256": {
+    "tools/export_sawai_oscillation_pdf.py": "503235be483ab3fe7f7db334d89ae00e2365d514ce2b0c64f87cad2080b96d4b",
+    "tools/export_lecorre_pdf.py": "f962bb10946ca5bc3174adcda6ebf410a7bceadba31c6797900bbc37046f678e",
+    "tools/export_documentation_pdf.py": "8fad2fb54de8b35e8814289bfe6c2919d54bb98035441f2164f7762fb5a58668"
+  },
+  "verification": {
+    "source_hashes_matched_before_and_after": true,
+    "figure_assets_match_source_commit_and_unchanged_after_export": true,
+    "all_numeric_tokens_retained": true,
+    "all_source_text_fragments_retained": true,
+    "rendered_layout_review": "Passed: all 6 report pages and all 55 matrix pages reviewed; see QA_RECEIPT.json"
+  }
+}

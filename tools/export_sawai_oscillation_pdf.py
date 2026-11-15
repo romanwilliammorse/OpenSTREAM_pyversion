@@ -38,6 +38,17 @@ def main(argv=None):
     class MatchedExporter(Exporter):
         def markdown_story(self, meta, width):
             story=super().markdown_story(meta,width)
+            for i,item in enumerate(story):
+                if meta["source"]==SOURCES[1][0] and hasattr(item,"style") and (item.style.name=="body" or item.style.name.startswith("list")):
+                    item.spaceAfter=6
+                if hasattr(item,"getPlainText") and item.getPlainText().strip()=="Acceptance evidence required:":
+                    # Keep the matrix label with its first criterion, including
+                    # intervening spacing. Scientific source text is unchanged.
+                    item.keepWithNext=True
+                    following=i+1
+                    while following<len(story) and isinstance(story[following],Spacer):
+                        story[following].keepWithNext=True
+                        following+=1
             if meta["source"]!=SOURCES[0][0]:
                 return story
             arranged=[]

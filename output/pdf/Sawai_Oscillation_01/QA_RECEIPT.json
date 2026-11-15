@@ -1,0 +1,28 @@
+{
+  "schema": "openstream-sawai-pdf-release-qa-v1",
+  "source_commit": "617f030a78bb66549729bb079b525abc29b83e60",
+  "documents": {
+    "SAWAI_OSCILLATION_DIAGNOSTIC.pdf": {
+      "pages": 6,
+      "sha256": "6f74b65bdae167e0301c16c052e8bcb597deb24ee3038fcf625c0f94aa86a8be",
+      "review": "All pages viewed at full page resolution"
+    },
+    "ACCEPTANCE_MATRIX.pdf": {
+      "pages": 55,
+      "sha256": "cb526d349b9e993610eb5cdcc18debbe5b4365e6ced425129f941bb83c395f33",
+      "review": "All pages contact-reviewed; 17 pages additionally reviewed at full page resolution"
+    }
+  },
+  "review_receipt_sha256": {
+    "REPORT_QA.json": "ef7b4c55e4fee67a450ea79bed3e42b90e3c04b2225b1199728e440750a9902b",
+    "MATRIX_QA.json": "622727c403275cc2245d486692ce41233a604a8fe076ec3f73059eab4b832b44"
+  },
+  "document_manifest_sha256_at_review_before_status_update": "89df2d6df2ed666cae247ac1493ee44e3375a72272cb03693c4953657b6f6f4b",
+  "final_document_manifest_sha256": "ce930e243b476a39bfb72d80cc38838f3952d343ce4706a8db26e6de86d25008",
+  "source_text_and_numbers_retained": true,
+  "figure_title_banners_added": false,
+  "scientific_source_unchanged_during_export": true,
+  "pagination": "Acceptance labels kept with their first criterion; matrix paragraph spacing adjusted without changing text, fonts or numerical results. Earlier draft renders retained in tmp/pdfs.",
+  "status": "passed_content_and_rendered_review",
+  "limitations": "PDF presentation/content verification only; scientific limitations and failures remain as stated."
+}

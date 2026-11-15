@@ -1,0 +1,18 @@
+{
+  "schema": "openstream-sawai-clean-windows-ci-v1",
+  "commit": "617f030a78bb66549729bb079b525abc29b83e60",
+  "run_id": 43692133185,
+  "job_id": 132744825880,
+  "url": "https://github.com/romanwilliammorse/OpenSTREAM_pyversion/actions/runs/43692133185",
+  "status": "completed",
+  "conclusion": "success",
+  "python_tests_passed": 550,
+  "retained_warnings": 2,
+  "python_test_seconds": 176.87,
+  "javascript_tests_passed": 11,
+  "dependency_consistency": "passed",
+  "wheel_and_sdist_build": "passed",
+  "log_sha256": "ba2ce825a39f4f72aba2dbaad51bbcb73d89ba05199782f4ab6f96f08ef5137c",
+  "log_format": "decoded GitHub job log normalized to LF",
+  "interpretation": "Fresh Windows checkout and software verification, including exact registered source bytes. Does not close the retained Sawai scientific failure or establish matched MATLAB or experimental validation."
+}

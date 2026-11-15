@@ -1,0 +1,40 @@
+{
+  "schema": "openstream-sawai-report-pdf-qa-v1",
+  "source_commit": "617f030a78bb66549729bb079b525abc29b83e60",
+  "pdf_sha256": "6f74b65bdae167e0301c16c052e8bcb597deb24ee3038fcf625c0f94aa86a8be",
+  "pages": 6,
+  "visually_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "render_command": "pdftoppm -r 95 -png",
+  "render_sha256": {
+    "page-1.png": "520e7698d7a7370ac72a68fd351bcd9bdfaf11fbf42c314dc7ebdefd54361d04",
+    "page-2.png": "d2a28264299543435b3c7b6d781644582bbefb8469bea96cf548f49832153378",
+    "page-3.png": "7faaba69bd63da1099128d440a57fe7a390c397ddfeb8b8ae35807f0fe7bfcdd",
+    "page-4.png": "7fd22eeb054bdeb07160a2e5ad120f1c5276bc36480726940e60601586c85f7c",
+    "page-5.png": "7d9dddb34fc350647aea0000d1affcb2cbeed0383890a46182e25d4fc2530b3d",
+    "page-6.png": "7d57796733d58210a53d3fe304c8cf8149e16403c1c72acdf8edec8d1283d80f"
+  },
+  "final_render_pixel_identity_to_reviewed_first_render": true,
+  "source_text_and_numeric_retention": {
+    "source_hashes_matched_before_and_after": true,
+    "figure_assets_match_source_commit_and_unchanged_after_export": true,
+    "all_numeric_tokens_retained": true,
+    "all_source_text_fragments_retained": true,
+    "rendered_layout_review": "passed for the report; all 6 pages reviewed"
+  },
+  "observations": [
+    "All 6 pages reviewed, including both tables, complete prose/code and A3 landscape figure plate.",
+    "No observed clipping, overlaps, missing symbols or figure title banners.",
+    "Existing source PNG preserved with readable axes, units and legends.",
+    "Segoe UI and Consolas fonts embedded; standard Helvetica retained for default/bullet use. Host Poppler font-map warnings did not affect observed rendering."
+  ],
+  "limitations": [
+    "Visual inspection at 95 dpi plus exact page-render comparison and automated text/numeric retention; not independent physics validation."
+  ]
+}

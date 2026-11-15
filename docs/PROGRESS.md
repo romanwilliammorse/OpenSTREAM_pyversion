@@ -38,6 +38,16 @@ native modules and 45 original files are unchanged. Git line-ending rules now
 preserve the already traced mixed-LF/CRLF native bytes on a fresh checkout, with
 no change to source content or current bytes.
 
+The published diagnostic checkpoint `617f030a78bb66549729bb079b525abc29b83e60`
+also passes a clean Windows CI checkout: 550 Python tests (two retained warnings),
+11 frontend tests, dependency consistency, wheel and sdist builds. CI receipts:
+`outputs/verification/sawai-oscillation-01/windows-ci-617f030.json` and its log;
+run `43692133185`. The final diagnostic report and acceptance-matrix PDFs are
+under `output/pdf/Sawai_Oscillation_01/`, with source hashes and rendered QA.
+Only PDF pagination was adjusted after this checkpoint; scientific text and
+numerical source remain unchanged. Future intentional source changes require a
+new diagnostic checkpoint, not rewriting the historical source-hash manifest.
+
 Next: preregister a separate source-exposed numerical-control study with the
 same equations/closures and fixed acceptance tolerances, or analyze the complete
 local sequential iteration map. Keep alternative numerical configurations

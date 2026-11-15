@@ -1,0 +1,54 @@
+{
+  "schema": "openstream-sawai-oscillation-pdf-inventory-v1",
+  "source_commit": "617f030a78bb66549729bb079b525abc29b83e60",
+  "scope": "Exactly the Sawai oscillation diagnostic report and acceptance matrix; source text unchanged.",
+  "source_identity_policy": "Working source must equal the recorded commit after CRLF-to-LF normalization only; raw hashes also retained.",
+  "counts": {
+    "markdown": 2,
+    "total": 2
+  },
+  "documents": [
+    {
+      "source": "docs/SAWAI_OSCILLATION_DIAGNOSTIC.md",
+      "kind": "markdown",
+      "title": "Sawai entry 1: iteration oscillation diagnostic",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "SAWAI_OSCILLATION_DIAGNOSTIC.pdf",
+      "source_sha256": "07e44979b22fd5ce86d75da7eace45b98bad0d37a70b23747909989e11add3c9",
+      "source_sha256_lf": "07e44979b22fd5ce86d75da7eace45b98bad0d37a70b23747909989e11add3c9",
+      "source_bytes": 13076,
+      "source_git_blob": "12c50c1be500bb2ae46a1399edd0b68d4d545690",
+      "committed_source_sha256": "07e44979b22fd5ce86d75da7eace45b98bad0d37a70b23747909989e11add3c9",
+      "figure_assets": [
+        {
+          "source": "outputs/verification/sawai-oscillation-01/cycle_diagnostics.png",
+          "caption": "Retained native iteration diagnostics",
+          "source_sha256": "f104c9c072399e7e43004e7b1cf4fced06bd35ed91011a03e01fa4a97feac650",
+          "source_bytes": 247149,
+          "source_git_blob": "87fcd46290b16b1c31b07c7b12d7ffa287a79421",
+          "pixels": [
+            1836,
+            1260
+          ],
+          "dpi": [
+            180.00979999999998,
+            180.00979999999998
+          ]
+        }
+      ]
+    },
+    {
+      "source": "docs/ACCEPTANCE_MATRIX.md",
+      "kind": "markdown",
+      "title": "Acceptance matrix",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "ACCEPTANCE_MATRIX.pdf",
+      "source_sha256": "f0aae72a73207acfad817f8bba3b8d38079a32e744690f870c32d63372b883f1",
+      "source_sha256_lf": "f0aae72a73207acfad817f8bba3b8d38079a32e744690f870c32d63372b883f1",
+      "source_bytes": 149236,
+      "source_git_blob": "50982b57a99b803aaed7f59dad8d0a48126bb887",
+      "committed_source_sha256": "f0aae72a73207acfad817f8bba3b8d38079a32e744690f870c32d63372b883f1"
+    }
+  ],
+  "figure_plate_policy": "Append unchanged referenced PNGs on A3 landscape pages; preserve pixel aspect ratio without cropping; never exceed native DPI size when recorded (otherwise one point per pixel maximum)."
+}
