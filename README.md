@@ -8,6 +8,12 @@ This project translates [OpenSTREAM](https://github.com/OpenSTREAM-solvers/opens
 
 **All four steady baselines verified:** Mixture, TwoFluid, ThreeField and FourField pass their original W/U/H comparisons against recovered MATLAB archives at unchanged `rtol=1e-8`, `atol=0`, including initialization histories and mixture precursors. No MATLAB runtime was needed. Version 0.1.1 also corrects the source-specific MRM NaN/Inf fallback. Physical area inconsistencies are confirmed in the original archives; diagnostic differences and unknown producer metadata remain explicit in [docs/ALL_BASELINES_VERIFICATION.md](docs/ALL_BASELINES_VERIFICATION.md). This is selected-case agreement, not complete feature parity or experimental validation.
 
+The [matched diagnostic replay](docs/MATCHED_DIAGNOSTIC_REPLAY.md) identifies and
+corrects a FourField precursor-selection translation error. All four archived
+baselines still pass. Sawai point nonconvergence remains; the 400-cell TwoFluid
+case converges with a separately tested longer initialization budget. Equations
+and tolerances are unchanged; fresh MATLAB comparison remains unavailable.
+
 ## Install and run on Windows
 
 Install 64-bit Python 3.12 and Git, then run in PowerShell:

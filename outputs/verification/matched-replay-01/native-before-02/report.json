@@ -1,0 +1,3784 @@
+{
+  "schema": "openstream-matched-native-replay-v1",
+  "manifest_sha256": "c4516d07d8e1d0c06bb6df35376de57a714460beb59cc804c2fba7c46771e4c4",
+  "native_source_sha256_before": {
+    "__init__.py": "3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "annular.py": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+    "cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+    "database.py": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
+    "experimental_comparison.py": "03c12bcfe1e8de115092d0ea1a19e21ec177c5983c575b63183a67453b3fd1f4",
+    "ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+    "fields.py": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+    "fourfield.py": "6a73a107f776882bce97c187806e6563048f7a55a5b908b627afdf923cfef9a0",
+    "gui.py": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
+    "gui_launcher.py": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+    "gui_lock.py": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+    "gui_reference.py": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+    "gui_schema.py": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+    "gui_worker.py": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
+    "inputs.py": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+    "multifield_output.py": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+    "numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+    "output.py": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+    "plotting.py": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+    "properties.py": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+    "solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+    "tf_fields.py": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+    "threefield.py": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+    "twofluid.py": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c"
+  },
+  "matlab_equivalence": "not_run",
+  "cases": [
+    {
+      "run_id": "sawai-01-paper-tw020-n100-base",
+      "source_state": "INITIALSTEPCONVERGED",
+      "native_converged": false,
+      "elapsed_seconds": 285.75172890000977,
+      "onset": {
+        "annular_onset_index_zero_based": 23,
+        "annular_onset_z_m": 0.37903999999999993
+      },
+      "warnings": [
+        "Temporal convergence reached without point convergence",
+        "divide by zero encountered in divide",
+        "invalid value encountered in multiply"
+      ],
+      "native_exact_reproducibility": true,
+      "comparisons": [
+        {
+          "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\sawai-01-paper-tw020-n100-base\\comparison_profiles.npz",
+          "replay": "outputs\\verification\\matched-replay-01\\native-before-02\\sawai-01-paper-tw020-n100-base\\comparison_profiles.npz",
+          "passed": true,
+          "arrays": [
+            {
+              "key": "Z",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "HFLUX",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "mixture.W",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "mixture.liquid.W",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "mixture.VF",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "mixture.X",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "mixture.XEQ",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "mixture.vapor.U",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "AFFNC",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.W",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.U",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.THICK",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "drop.W",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "drop.U",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "base.W",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "base.U",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "base.THICK",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "wave.W",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "wave.U",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "wave.AMPLITUDE",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "wave.FREQUENCY",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "wave.EQFREQUENCY",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "wave.PERIOD",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "wave.N",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            }
+          ]
+        },
+        {
+          "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\sawai-01-paper-tw020-n100-base\\numerical\\results.npz",
+          "replay": "outputs\\verification\\matched-replay-01\\native-before-02\\sawai-01-paper-tw020-n100-base\\numerical\\results.npz",
+          "passed": true,
+          "arrays": [
+            {
+              "key": "Z",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "TIME",
+              "shape": [
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.W",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.U",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.H",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.base.W",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.base.U",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.base.H",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.base.ITR.DFW",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.base.ITR.DU",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.base.ITR.DWL",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.base.ITR.N",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.W",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.U",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.H",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.FREQUENCY",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.ITR.DFW",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.ITR.DU",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.ITR.DWL",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.ITR.N",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "drop.W",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "drop.U",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "drop.H",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "drop.ITR.DU",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "drop.ITR.N",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            }
+          ]
+        },
+        {
+          "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\sawai-01-paper-tw020-n100-base\\numerical\\initialization.npz",
+          "replay": "outputs\\verification\\matched-replay-01\\native-before-02\\sawai-01-paper-tw020-n100-base\\numerical\\initialization.npz",
+          "passed": true,
+          "arrays": [
+            {
+              "key": "Z",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "TIME",
+              "shape": [
+                9
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.W",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.U",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.H",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.base.W",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.base.U",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.base.H",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.base.ITR.DFW",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.base.ITR.DU",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.base.ITR.DWL",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.base.ITR.N",
+              "shape": [
+                9,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.W",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.U",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.H",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.FREQUENCY",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.ITR.DF",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.ITR.DFW",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.ITR.DU",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.ITR.DWL",
+              "shape": [
+                9,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "film.wave.ITR.N",
+              "shape": [
+                9,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "drop.W",
+              "shape": [
+                9,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "drop.U",
+              "shape": [
+                9,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "drop.H",
+              "shape": [
+                9,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "drop.ITR.DU",
+              "shape": [
+                9,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "drop.ITR.N",
+              "shape": [
+                9,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            }
+          ]
+        },
+        {
+          "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\sawai-01-paper-tw020-n100-base\\numerical\\mixture\\results.npz",
+          "replay": "outputs\\verification\\matched-replay-01\\native-before-02\\sawai-01-paper-tw020-n100-base\\numerical\\mixture\\results.npz",
+          "passed": true,
+          "arrays": [
+            {
+              "key": "Z",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "TIME",
+              "shape": [
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "W",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "P",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "H",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "U",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "UP",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "RHO",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "X",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "XEQ",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "VF",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "T",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "HFLUX",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "LHGR",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "TWALL",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MCT",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ECT",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.W",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.H",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.U",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.T",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.X",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.VF",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.W",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.H",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.U",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.T",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.X",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.VF",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Grav",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Wall",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Acc_z",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Acc_t",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Acc_s",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.K",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Tot",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Grav",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Wall",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Acc_z",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Acc_t",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Acc_s",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.K",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Tot",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.U_z",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.U_t",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.U",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.H_z",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.H_t",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.H",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.WV",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.X",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.HV",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.TV",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.TCOND",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.TEVAP",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.TRELAX",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.W",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.H",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.HFLUX",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.XEQ",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.WBULK",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.HBULK",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.XBULK",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.N",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DW",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DP",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DPSUM",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DH",
+              "shape": [
+                1,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DWV",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DHV",
+              "shape": [
+                1,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            }
+          ]
+        },
+        {
+          "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\sawai-01-paper-tw020-n100-base\\numerical\\mixture\\initialization.npz",
+          "replay": "outputs\\verification\\matched-replay-01\\native-before-02\\sawai-01-paper-tw020-n100-base\\numerical\\mixture\\initialization.npz",
+          "passed": true,
+          "arrays": [
+            {
+              "key": "Z",
+              "shape": [
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "TIME",
+              "shape": [
+                12
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "W",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "P",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "H",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "U",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "UP",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "RHO",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "X",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "XEQ",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "VF",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "T",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "HFLUX",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "LHGR",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "TWALL",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MCT",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ECT",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.W",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.H",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.U",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.T",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.X",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.VF",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.W",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.H",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.U",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.T",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.X",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.VF",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Grav",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Wall",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Acc_z",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Acc_t",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Acc_s",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.K",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Tot",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Grav",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Wall",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Acc_z",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Acc_t",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Acc_s",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.K",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Tot",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.U_z",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.U_t",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.U",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.H_z",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.H_t",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.H",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.WV",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.X",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.HV",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.TV",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.TCOND",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.TEVAP",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.TRELAX",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.W",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.H",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.HFLUX",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.XEQ",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.WBULK",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.HBULK",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.XBULK",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.N",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DW",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DP",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DPSUM",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DH",
+              "shape": [
+                12,
+                101
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DWV",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DHV",
+              "shape": [
+                12,
+                101,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            }
+          ]
+        }
+      ],
+      "matlab_equivalence": "not_run; native reproducibility is not a MATLAB comparison"
+    },
+    {
+      "run_id": "demo-twofluid-n400-mesh",
+      "source_state": "INITIALSTEPNOTCONVERGED",
+      "native_converged": false,
+      "elapsed_seconds": 136.1967156000319,
+      "onset": {
+        "annular_onset_index_zero_based": 53,
+        "annular_onset_z_m": 0.72875
+      },
+      "warnings": [],
+      "native_exact_reproducibility": true,
+      "comparisons": [
+        {
+          "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\demo-twofluid-n400-mesh\\comparison_profiles.npz",
+          "replay": "outputs\\verification\\matched-replay-01\\native-before-02\\demo-twofluid-n400-mesh\\comparison_profiles.npz",
+          "passed": true,
+          "arrays": [
+            {
+              "key": "Z",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "HFLUX",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "mixture.W",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "mixture.liquid.W",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "mixture.VF",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "mixture.X",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "mixture.XEQ",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "mixture.vapor.U",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "AFFNC",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.W",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.U",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.VF",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.X",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            }
+          ]
+        },
+        {
+          "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\demo-twofluid-n400-mesh\\numerical\\results.npz",
+          "replay": "outputs\\verification\\matched-replay-01\\native-before-02\\demo-twofluid-n400-mesh\\numerical\\results.npz",
+          "passed": true,
+          "arrays": [
+            {
+              "key": "Z",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "TIME",
+              "shape": [
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.W",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.U",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.H",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.ITR.DH",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.ITR.DU",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.ITR.DW",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.ITR.N",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.W",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.U",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.H",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.ITR.DH",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.ITR.DU",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.ITR.DW",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.ITR.N",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            }
+          ]
+        },
+        {
+          "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\demo-twofluid-n400-mesh\\numerical\\initialization.npz",
+          "replay": "outputs\\verification\\matched-replay-01\\native-before-02\\demo-twofluid-n400-mesh\\numerical\\initialization.npz",
+          "passed": true,
+          "arrays": [
+            {
+              "key": "Z",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "TIME",
+              "shape": [
+                30
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.W",
+              "shape": [
+                30,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.U",
+              "shape": [
+                30,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.H",
+              "shape": [
+                30,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.ITR.DH",
+              "shape": [
+                30,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.ITR.DU",
+              "shape": [
+                30,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.ITR.DW",
+              "shape": [
+                30,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.ITR.N",
+              "shape": [
+                30,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.W",
+              "shape": [
+                30,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.U",
+              "shape": [
+                30,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.H",
+              "shape": [
+                30,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.ITR.DH",
+              "shape": [
+                30,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.ITR.DU",
+              "shape": [
+                30,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.ITR.DW",
+              "shape": [
+                30,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.ITR.N",
+              "shape": [
+                30,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            }
+          ]
+        },
+        {
+          "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\demo-twofluid-n400-mesh\\numerical\\mixture\\results.npz",
+          "replay": "outputs\\verification\\matched-replay-01\\native-before-02\\demo-twofluid-n400-mesh\\numerical\\mixture\\results.npz",
+          "passed": true,
+          "arrays": [
+            {
+              "key": "Z",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "TIME",
+              "shape": [
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "W",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "P",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "H",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "U",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "UP",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "RHO",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "X",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "XEQ",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "VF",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "T",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "HFLUX",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "LHGR",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "TWALL",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MCT",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ECT",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.W",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.H",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.U",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.T",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.X",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.VF",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.W",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.H",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.U",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.T",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.X",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.VF",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Grav",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Wall",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Acc_z",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Acc_t",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Acc_s",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.K",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Tot",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Grav",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Wall",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Acc_z",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Acc_t",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Acc_s",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.K",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Tot",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.U_z",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.U_t",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.U",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.H_z",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.H_t",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.H",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.WV",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.X",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.HV",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.TV",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.TCOND",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.TEVAP",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.TRELAX",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.W",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.H",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.HFLUX",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.XEQ",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.WBULK",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.HBULK",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.XBULK",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.N",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DW",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DP",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DPSUM",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DH",
+              "shape": [
+                1,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DWV",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DHV",
+              "shape": [
+                1,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            }
+          ]
+        },
+        {
+          "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\demo-twofluid-n400-mesh\\numerical\\mixture\\initialization.npz",
+          "replay": "outputs\\verification\\matched-replay-01\\native-before-02\\demo-twofluid-n400-mesh\\numerical\\mixture\\initialization.npz",
+          "passed": true,
+          "arrays": [
+            {
+              "key": "Z",
+              "shape": [
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "TIME",
+              "shape": [
+                10
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "W",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "P",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "H",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "U",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "UP",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "RHO",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "X",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "XEQ",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "VF",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "T",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "HFLUX",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "LHGR",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "TWALL",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MCT",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ECT",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.W",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.H",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.U",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.T",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.X",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "liquid.VF",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.W",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.H",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.U",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.T",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.X",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "vapor.VF",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Grav",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Wall",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Acc_z",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Acc_t",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Acc_s",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.K",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DP.Tot",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Grav",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Wall",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Acc_z",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Acc_t",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Acc_s",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.K",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "DPSUM.Tot",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.U_z",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.U_t",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.U",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.H_z",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.H_t",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MDER.H",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.WV",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.X",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.HV",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.TV",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.TCOND",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "MRM.TEVAP",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.TRELAX",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.W",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.H",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.HFLUX",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.XEQ",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.WBULK",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.HBULK",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "NEARWALL.XBULK",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.N",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DW",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DP",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DPSUM",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DH",
+              "shape": [
+                10,
+                401
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DWV",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            },
+            {
+              "key": "ITR.DHV",
+              "shape": [
+                10,
+                401,
+                1
+              ],
+              "exact_equal": true,
+              "max_abs_difference": 0.0
+            }
+          ]
+        }
+      ],
+      "matlab_equivalence": "not_run; native reproducibility is not a MATLAB comparison"
+    }
+  ],
+  "source_and_original_evidence_unchanged": true,
+  "execution_complete": true
+}

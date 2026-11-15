@@ -37,7 +37,7 @@
     "Solvers.ThreeField.ThreeFieldSolver": "threefield.ThreeFieldSolver",
     "Solvers.FourField.FourFieldSolver": "fourfield.FourFieldSolver"
   },
-  "feature_map_sha256": "9a9ec7a2a0ff1cd6c800e21af35348e1de3ca299255f8d247893867c849afd05",
+  "feature_map_sha256": "ab31ada02e1ecdb2410ee7244eb7606d8127fde2907a401a1be0b3927ad22304",
   "upstream_files": {
     "upstream/+Solvers/AbstractField.m": "c1d1a6d49128ee177b8287a9e61f7a5ad623b28d1b997e78a76ca6a1c543c17b",
     "upstream/+Solvers/AbstractFilm.m": "70ef168294006e1925149ee7116f14465ac0bce7e79996ac64cbf64d9e886db2",
@@ -79,7 +79,7 @@
     "src/openstream/database.py": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
     "src/openstream/ff_fields.py": "55861dc5049c9c08db77428aba5fb3d757b89647a569757eb7bb14353862ef89",
     "src/openstream/fields.py": "5a5de291341fea82d60b261ccc471bc3493e179011e422b10f9e2a43158dacb6",
-    "src/openstream/fourfield.py": "a648abffacba304f15e83df009e3266dc415b5d13152ebc81ff22a0b4e17f176",
+    "src/openstream/fourfield.py": "15b222f5247523197aa1e7b9249f433e2c32bcfe22db9d885780aa765eb72724",
     "src/openstream/gui.py": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
     "src/openstream/gui_lock.py": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
     "src/openstream/gui_worker.py": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",

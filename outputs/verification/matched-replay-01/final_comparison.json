@@ -1,0 +1,514 @@
+{
+  "schema": "openstream-matched-replay-comparison-v1",
+  "cases": [
+    {
+      "run_id": "sawai-01-paper-tw020-n100-base",
+      "before_source_state": "INITIALSTEPCONVERGED",
+      "after_source_state": "INITIALSTEPCONVERGED",
+      "before_native_converged": false,
+      "after_native_converged": false,
+      "all_frozen_inputs_identical": true,
+      "profile_changes": [
+        {
+          "quantity": "Z",
+          "unit": "m",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 0.0,
+          "after_value": 0.0
+        },
+        {
+          "quantity": "HFLUX",
+          "unit": "W/m^2",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 515791.909977455,
+          "after_value": 515791.909977455
+        },
+        {
+          "quantity": "mixture.W",
+          "unit": "kg/s",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 0.0037699,
+          "after_value": 0.0037699
+        },
+        {
+          "quantity": "mixture.liquid.W",
+          "unit": "kg/s",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 0.0037699,
+          "after_value": 0.0037699
+        },
+        {
+          "quantity": "mixture.VF",
+          "unit": "1",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 0.0,
+          "after_value": 0.0
+        },
+        {
+          "quantity": "mixture.X",
+          "unit": "1",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 0.0,
+          "after_value": 0.0
+        },
+        {
+          "quantity": "mixture.XEQ",
+          "unit": "1",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": -0.27590536067021243,
+          "after_value": -0.27590536067021243
+        },
+        {
+          "quantity": "mixture.vapor.U",
+          "unit": "m/s",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 0.3644546116212151,
+          "after_value": 0.3644546116212151
+        },
+        {
+          "quantity": "AFFNC",
+          "unit": "1",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 2.4463176074369192e-61,
+          "after_value": 2.4463176074369192e-61
+        },
+        {
+          "quantity": "film.W",
+          "unit": "kg/s",
+          "exact_equal": false,
+          "max_absolute_change": 1.2384867649657683e-09,
+          "maximum_node_zero_based": 24,
+          "z_m": 0.39552,
+          "before_value": 0.0033842005241436464,
+          "after_value": 0.0033842017626304114
+        },
+        {
+          "quantity": "film.U",
+          "unit": "m/s",
+          "exact_equal": false,
+          "max_absolute_change": 0.0010582486900277965,
+          "maximum_node_zero_based": 23,
+          "z_m": 0.37903999999999993,
+          "before_value": 0.9793711867348687,
+          "after_value": 0.9783129380448409
+        },
+        {
+          "quantity": "film.THICK",
+          "unit": "m",
+          "exact_equal": false,
+          "max_absolute_change": 3.6755742537428323e-07,
+          "maximum_node_zero_based": 23,
+          "z_m": 0.37903999999999993,
+          "before_value": 0.0003397002338593028,
+          "after_value": 0.0003400677912846771
+        },
+        {
+          "quantity": "drop.W",
+          "unit": "kg/s",
+          "exact_equal": false,
+          "max_absolute_change": 6.337739672478138e-09,
+          "maximum_node_zero_based": 18,
+          "z_m": 0.29663999999999996,
+          "before_value": -8.316920314931867e-06,
+          "after_value": -8.310582575259389e-06
+        },
+        {
+          "quantity": "drop.U",
+          "unit": "m/s",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 0.3644546116212151,
+          "after_value": 0.3644546116212151
+        },
+        {
+          "quantity": "base.W",
+          "unit": "kg/s",
+          "exact_equal": false,
+          "max_absolute_change": 1.4471652199938428e-08,
+          "maximum_node_zero_based": 32,
+          "z_m": 0.5273599999999999,
+          "before_value": 0.00023168967291803877,
+          "after_value": 0.00023167520126583883
+        },
+        {
+          "quantity": "base.U",
+          "unit": "m/s",
+          "exact_equal": false,
+          "max_absolute_change": 0.00012669191198266816,
+          "maximum_node_zero_based": 26,
+          "z_m": 0.42847999999999997,
+          "before_value": 0.5104003852887455,
+          "after_value": 0.5102736933767629
+        },
+        {
+          "quantity": "base.THICK",
+          "unit": "m",
+          "exact_equal": false,
+          "max_absolute_change": 9.962461574725405e-09,
+          "maximum_node_zero_based": 26,
+          "z_m": 0.42847999999999997,
+          "before_value": 4.72452922207412e-05,
+          "after_value": 4.725525468231593e-05
+        },
+        {
+          "quantity": "wave.W",
+          "unit": "kg/s",
+          "exact_equal": false,
+          "max_absolute_change": 1.4576289369960804e-08,
+          "maximum_node_zero_based": 32,
+          "z_m": 0.5273599999999999,
+          "before_value": 0.0026740302164742283,
+          "after_value": 0.0026740447927635982
+        },
+        {
+          "quantity": "wave.U",
+          "unit": "m/s",
+          "exact_equal": false,
+          "max_absolute_change": 0.0012583502928711354,
+          "maximum_node_zero_based": 23,
+          "z_m": 0.37903999999999993,
+          "before_value": 1.0258218736473865,
+          "after_value": 1.0245635233545154
+        },
+        {
+          "quantity": "wave.AMPLITUDE",
+          "unit": "m",
+          "exact_equal": false,
+          "max_absolute_change": 3.236223986328394e-09,
+          "maximum_node_zero_based": 33,
+          "z_m": 0.54384,
+          "before_value": 0.0001825921922431613,
+          "after_value": 0.00018259542846714764
+        },
+        {
+          "quantity": "wave.FREQUENCY",
+          "unit": "Hz",
+          "exact_equal": false,
+          "max_absolute_change": 0.0007002404190750156,
+          "maximum_node_zero_based": 92,
+          "z_m": 1.5161599999999997,
+          "before_value": 16.670730288452507,
+          "after_value": 16.670030048033432
+        },
+        {
+          "quantity": "wave.EQFREQUENCY",
+          "unit": "Hz",
+          "exact_equal": false,
+          "max_absolute_change": 3.9076826503503526e-06,
+          "maximum_node_zero_based": 24,
+          "z_m": 0.39552,
+          "before_value": 23.212729828841866,
+          "after_value": 23.212733736524516
+        },
+        {
+          "quantity": "wave.PERIOD",
+          "unit": "s",
+          "exact_equal": false,
+          "max_absolute_change": 2.574967418636498e-06,
+          "maximum_node_zero_based": 96,
+          "z_m": 1.58208,
+          "before_value": 0.06161232708237708,
+          "after_value": 0.061614902049795715
+        },
+        {
+          "quantity": "wave.N",
+          "unit": "m^-1",
+          "exact_equal": false,
+          "max_absolute_change": 0.029074404174526336,
+          "maximum_node_zero_based": 23,
+          "z_m": 0.37903999999999993,
+          "before_value": 23.672209759389315,
+          "after_value": 23.70128416356384
+        }
+      ]
+    },
+    {
+      "run_id": "demo-twofluid-n400-mesh",
+      "before_source_state": "INITIALSTEPNOTCONVERGED",
+      "after_source_state": "INITIALSTEPNOTCONVERGED",
+      "before_native_converged": false,
+      "after_native_converged": false,
+      "all_frozen_inputs_identical": true,
+      "profile_changes": [
+        {
+          "quantity": "Z",
+          "unit": "m",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 0.0,
+          "after_value": 0.0
+        },
+        {
+          "quantity": "HFLUX",
+          "unit": "W/m^2",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 907742.2634423663,
+          "after_value": 907742.2634423663
+        },
+        {
+          "quantity": "mixture.W",
+          "unit": "kg/s",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 0.07,
+          "after_value": 0.07
+        },
+        {
+          "quantity": "mixture.liquid.W",
+          "unit": "kg/s",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 0.07,
+          "after_value": 0.07
+        },
+        {
+          "quantity": "mixture.VF",
+          "unit": "1",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 0.0,
+          "after_value": 0.0
+        },
+        {
+          "quantity": "mixture.X",
+          "unit": "1",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 0.0,
+          "after_value": 0.0
+        },
+        {
+          "quantity": "mixture.XEQ",
+          "unit": "1",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": -0.047446584960332626,
+          "after_value": -0.047446584960332626
+        },
+        {
+          "quantity": "mixture.vapor.U",
+          "unit": "m/s",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 1.518365570164666,
+          "after_value": 1.518365570164666
+        },
+        {
+          "quantity": "AFFNC",
+          "unit": "1",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 3.9739086957146706e-168,
+          "after_value": 3.9739086957146706e-168
+        },
+        {
+          "quantity": "liquid.W",
+          "unit": "kg/s",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 0.07,
+          "after_value": 0.07
+        },
+        {
+          "quantity": "liquid.U",
+          "unit": "m/s",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 1.518365570164666,
+          "after_value": 1.518365570164666
+        },
+        {
+          "quantity": "vapor.VF",
+          "unit": "1",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 0.0,
+          "after_value": 0.0
+        },
+        {
+          "quantity": "vapor.X",
+          "unit": "1",
+          "exact_equal": true,
+          "max_absolute_change": 0.0,
+          "maximum_node_zero_based": 0,
+          "z_m": 0.0,
+          "before_value": 0.0,
+          "after_value": 0.0
+        }
+      ]
+    }
+  ],
+  "comparison_scope": "Native before/after correction with identical case inputs. Not a matched MATLAB execution.",
+  "sources": {
+    "native-before-02\\report.json": "5619d1c390508909814e25163337209054cea057c93616693f2f37641c84026a",
+    "native-after\\report.json": "a21a51a218865977ff0248d564f146195d0fdeebcc8c1e36b796d54fc7e4588b",
+    "twofluid-budget-60\\report.json": "54972f291d44eae9f2df3db9d2360d9e73795f3e012d5894387025460d86d5e2",
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\sawai-01-paper-tw020-n100-base\\comparison_units.json": "bd3a9d359db4e207bec3e815030f0bde33b4ae5bf187e79466199ddb8b198e5a",
+    "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\demo-twofluid-n400-mesh\\comparison_units.json": "f4194a416d38c757aea26644050cf9e9be83be10935eaedf038b80faa05db3ea"
+  },
+  "postprocessor_sha256": "8d90a2cece1003c259ce45cf92abbd9049d2edfeef4a62bd381b76b60fe9d5da",
+  "sawai_final_node24": {
+    "time_s": 8.0,
+    "z_m": 0.39552,
+    "point_limit_kg_s_m": 0.0001,
+    "last_six_iterations": [
+      {
+        "iteration": 95.0,
+        "wave_W": 0.0031134378650534648,
+        "wave_U": 1.199293456616459,
+        "dWLw": 0.0007675963972048616,
+        "base_W": 0.0002611337650339075,
+        "base_U": 0.4381216794394955
+      },
+      {
+        "iteration": 96.0,
+        "wave_W": 0.0031230834813807413,
+        "wave_U": 1.1973395239569835,
+        "dWLw": 0.0007675963972048616,
+        "base_W": 0.0002611182812496697,
+        "base_U": 0.4381753234379563
+      },
+      {
+        "iteration": 97.0,
+        "wave_W": 0.0031134378650534648,
+        "wave_U": 1.1992934566164593,
+        "dWLw": 0.0007675963972048616,
+        "base_W": 0.0002611337650339075,
+        "base_U": 0.43812167943949554
+      },
+      {
+        "iteration": 98.0,
+        "wave_W": 0.0031230834813807417,
+        "wave_U": 1.1973395239569835,
+        "dWLw": 0.0007675963972049171,
+        "base_W": 0.0002611182812496697,
+        "base_U": 0.4381753234379563
+      },
+      {
+        "iteration": 99.0,
+        "wave_W": 0.0031134378650534648,
+        "wave_U": 1.1992934566164593,
+        "dWLw": 0.0007675963972049171,
+        "base_W": 0.0002611337650339075,
+        "base_U": 0.43812167943949554
+      },
+      {
+        "iteration": 100.0,
+        "wave_W": 0.0031230834813807417,
+        "wave_U": 1.1973395239569835,
+        "dWLw": 0.0007675963972049171,
+        "base_W": 0.0002611182812496697,
+        "base_U": 0.4381753234379563
+      }
+    ],
+    "interpretation": "Alternating late iterates persist after the source-object correction. Their MATLAB values remain unverified."
+  },
+  "sawai_final_failed_wave_nodes": [
+    {
+      "node_zero_based": 24,
+      "z_m": 0.39552,
+      "before_increment_kg_s_m": 0.0007676067362375749,
+      "after_increment_kg_s_m": 0.0007675963972049171
+    },
+    {
+      "node_zero_based": 25,
+      "z_m": 0.412,
+      "before_increment_kg_s_m": 0.0006608969629151584,
+      "after_increment_kg_s_m": 0.000660900463362063
+    },
+    {
+      "node_zero_based": 26,
+      "z_m": 0.42847999999999997,
+      "before_increment_kg_s_m": 0.00053909227209048,
+      "after_increment_kg_s_m": 0.0005391071720539375
+    }
+  ],
+  "twofluid_budget": {
+    "only_input_change": {
+      "options.SSMAXITER": {
+        "from": 30,
+        "to": 60
+      }
+    },
+    "source_state": "INITIALSTEPCONVERGED",
+    "native_converged": true,
+    "last_initialization_time_s": 39.0,
+    "stored_states": 40,
+    "last_history": {
+      "phase": "initialization",
+      "time_s": 39.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dWL_kg_s": 1.106834961531189e-08,
+      "time_dWV_kg_s": 1.1455346649036358e-07,
+      "time_dUL_m_s": 0.00025212947131336705,
+      "time_dUV_m_s": 0.00025261228562101223,
+      "time_dHL_J_kg": 0.9414000483229756,
+      "time_dHV_J_kg": 9.313225746154785e-10,
+      "point_DWL_kg_s": 1.7744246141870867e-09,
+      "point_DUL_m_s": 8.404556781016481e-05,
+      "point_DHL_J_kg": 0.09984151530079544,
+      "point_DWV_kg_s": 2.63122843305319e-08,
+      "point_DUV_m_s": 8.397550706717993e-05,
+      "point_DHV_J_kg": 9.313225746154785e-10
+    },
+    "original_initialization_prefix_exact": true,
+    "precursor_exact": true,
+    "source_unchanged": true
+  },
+  "figure_sha256": "35fd16a2df0d277336d252f39d70511f1f1253ccdce41e4183209c97ea042b6d"
+}

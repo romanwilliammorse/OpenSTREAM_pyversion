@@ -1,6 +1,6 @@
 # Feature map
 
-Source anchors: OpenSTREAM `a614c7173822a93c1e64ac28d1541cbac028cbd8`, wrapper `a7c40902ff66faf6ed668986398bb1b9faa16e13`. Updated 2026-11-14, native version 0.2.1 (GUI styling; governing equations unchanged). `upstream_inventory.json` preserves all 41 enum definitions. **The full port is incomplete. All four TUTORIAL1 baselines pass their original W/U/H comparisons, initialization histories and mixture precursors against recovered MATLAB state. Broader numerical equivalence and experimental validation remain unestablished.** See ALL_BASELINES_VERIFICATION.md.
+Source anchors: OpenSTREAM `a614c7173822a93c1e64ac28d1541cbac028cbd8`, wrapper `a7c40902ff66faf6ed668986398bb1b9faa16e13`. Updated 2026-11-15, native version 0.2.1 with source-hash-tracked FourField precursor-selection correction; governing equations unchanged. `upstream_inventory.json` preserves all 41 enum definitions. **The full port is incomplete. All four TUTORIAL1 baselines pass their original W/U/H comparisons, initialization histories and mixture precursors against recovered MATLAB state. Broader numerical equivalence and experimental validation remain unestablished.** See ALL_BASELINES_VERIFICATION.md.
 
 The requirement-level [acceptance matrix](ACCEPTANCE_MATRIX.md) and
 [prioritized acceptance plan](ACCEPTANCE_PLAN.md) now link this feature summary
@@ -13,6 +13,15 @@ informational only, as directed by the project owner after inspecting the
 original MATLAB OpenSTREAM convergence logic. Raw residuals remain available;
 they do not change solver acceptance. Mixture/TwoFluid checks and all governing
 equations, closure models and numerical convergence tolerances are unchanged.
+
+The [matched diagnostic replay](MATCHED_DIAGNOSTIC_REPLAY.md) corrects a
+source-confirmed FourField outer-sweep precursor selection while retaining the
+distinct mixture handles used by its field closures. All four archived baselines
+were rerun and still pass. The corrected Sawai case still fails point convergence;
+TwoFluid's original 400-cell attempt still reaches its iteration cap. A separate
+60-state-budget diagnostic converges at 39 s with unchanged tolerances and an
+exact original 30-state prefix. These are native/source-audit results, not fresh
+MATLAB equivalence. The original 69-case campaign remains a pre-correction record.
 
 Implemented means native code exists. Tested identifies an actual check/run, not full branch coverage. Unsupported means explicit rejection or an unavailable API. Unverified means no executed reference comparison for that scope. Tests that expose a physical defect do not establish that physical criterion passed.
 

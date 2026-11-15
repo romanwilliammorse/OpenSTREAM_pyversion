@@ -20,6 +20,8 @@ the archived results.
 | `reference_exports/` | Preserved portable arrays and metadata recovered from the original MATLAB archives |
 | `references/paper/` | Digitized published curve/marker readings, image-resolution bounds, source hashes and explicit extraction exclusions; not MATLAB output arrays |
 | `outputs/` | Saved numerical outputs, plots, verification reports, logs and retained failed/development runs |
+| `outputs/verification/matched-replay-01/` | Ordered before/after diagnostic replays, unchanged-input comparisons, source/handle audits, separate TwoFluid budget study and archived-baseline recheck |
+| `outputs/verification/matched-matlab-replay-kit-02.zip` | Portable source/input/trace bundle for later MATLAB reference execution; statically checked, not executed in MATLAB |
 | `output/pdf/LeCorre_2025_Reports_03/` | Current three source-linked PDFs: clean figure plates with main Figure 7 at 0.2 s, OpenSTREAM convergence/supplemental diagnostics review, and amended acceptance matrix |
 | `output/pdf/LeCorre_2025_Reports/` | Preserved earlier PDF snapshot under the original diagnostic policy |
 | `provenance/` | Source, environment and dependency fingerprints |

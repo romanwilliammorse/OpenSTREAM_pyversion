@@ -1,6 +1,6 @@
 # Capability and parity status
 
-Snapshot: 2026-11-14. Target source: OpenSTREAM
+Snapshot: 2026-11-15. Target source: OpenSTREAM
 `a614c7173822a93c1e64ac28d1541cbac028cbd8`, CoolPropWrapper
 `a7c40902ff66faf6ed668986398bb1b9faa16e13`.
 
@@ -8,6 +8,14 @@ The local native Python application is operational, including a browser GUI and
 command-window launcher. The four archived steady core baselines agree; full
 feature parity, broader MATLAB numerical equivalence and experimental validation
 remain separate, unfinished requirements.
+
+The [matched diagnostic replay](MATCHED_DIAGNOSTIC_REPLAY.md) corrects the
+FourField outer-sweep precursor selection and rechecks all four archived
+baselines successfully. Both unchanged cases reproduced 400 saved arrays;
+the corrected Sawai case still fails point convergence. A separately frozen
+TwoFluid 60-state initialization budget converges at 39 s with unchanged
+tolerances and an exact original 30-state prefix. The original 69-case campaign
+is retained as pre-correction evidence, and fresh MATLAB comparison is not run.
 
 ## Progress measures
 

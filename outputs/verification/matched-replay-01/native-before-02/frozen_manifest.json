@@ -1,0 +1,98 @@
+{
+  "schema": "openstream-matched-diagnostic-replay-v1",
+  "baseline_commit": "787839a27e2ffebdbc1e3a73eaa8ec5273cbe580",
+  "upstream_commit": "a614c7173822a93c1e64ac28d1541cbac028cbd8",
+  "wrapper_commit": "a7c40902ff66faf6ed668986398bb1b9faa16e13",
+  "database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+  "case_order": [
+    "sawai-01-paper-tw020-n100-base",
+    "demo-twofluid-n400-mesh"
+  ],
+  "cases": [
+    {
+      "run_id": "sawai-01-paper-tw020-n100-base",
+      "framework": "FourField",
+      "trace_nodes_zero_based": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "original_directory": "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base",
+      "original_file_sha256": {
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/assessment.json": "5a725a35cd4a6b0ad690645569f7c5e97976aa9008c6522cb1be2c5fac02f503",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/comparison_profiles.npz": "7a1cdb7701c833857543d81fdbab80c427147905cf3c136500cc4116d693230f",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/comparison_units.json": "bd3a9d359db4e207bec3e815030f0bde33b4ae5bf187e79466199ddb8b198e5a",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/comparisons.json": "1b1a6d913460cdb57bef17670b5529ffcac6c8df0f4a1bd4d9ebbd2de2baa403",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/effective_inputs.json": "f60b6bd005de5febbb7aa225adbd5728a5db3f4b1cca129142113e86a151c859",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/gui_inputs.json": "cd78fc86150fc336cad694b48d99fb150d5db152c0a0c189a9fd0b5f1cd2de33",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/axial.png": "b799b60933a5f9edaef3adc19c0c1813669d90232e032f467f49bf3ce33a263c",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/convergence.csv": "8d6cdea50262a494626b422b592b7b4dd724b07b439788c6626170eb68e324c5",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/initialization.npz": "2538243681aa03fee6606ce402622783ee536887c3c81ea2a1f4ab6f49deab5e",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/metadata.json": "af3d4e35eaa010302fe9b45efa44f1c9f61b0c2653eb084e44376f96c5a885d7",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/mixture/axial.png": "ee7f48fb49e1e9e3f7cb916e5cbd6225e499964d1d9a75d4fc5984869d78478a",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/mixture/convergence.csv": "a682f68e855d858995c9aa1b0662e4f090ea9dbeb7afcc81f5cd47c06a2c9c5e",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/mixture/initialization.npz": "cc4c1f543c5c83dcc61d404bfcd03dff306fcf0b081ba5f14c7d55c8c2d804af",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/mixture/inputs/00-Sawai1989.xml": "c596453e59f5e6cad269334abd4012eee5577851b9be06403b42519a6c7b99f4",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/mixture/metadata.json": "711e28bc7ee0522faa0d5a49a2060c02cef3c4986a33c8cc91e81b6efa5ac933",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/mixture/profiles.csv": "d5b3dc569e25c78fc437bfef63dcd00067c3c29872121542f2bdff8ffd797919",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/mixture/results.npz": "62305ec2f2f4d63b5f8bfe208e72c31563c67f42d7b52e8e91bc352da729722b",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/mixture/wall_profiles.csv": "64bfe8c7a3f4fb430eb1046c1a2f1da998733f21585205b44c9b1889e36d3d5d",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/profiles.csv": "2f5d9de064b48dd75ccfd91093c4becc09b70ddce3096dee473c08b03830bb6f",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/results.npz": "8fed4058a2535925fcab040b4c07a7fb1a7d832f9cb5b2db3eb98ff2b276eebb",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/wave_frequency.png": "9993dd47ee482590bc0bd172063fbc90e8cc19b0d72a91c8462af4e719e5b3d4",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/paired_measurements.csv": "b848142400155315019dcaf651417408df1644c70413b3f4070e10e8a01f57d4",
+        "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/submitted_inputs.json": "f60b6bd005de5febbb7aa225adbd5728a5db3f4b1cca129142113e86a151c859"
+      }
+    },
+    {
+      "run_id": "demo-twofluid-n400-mesh",
+      "framework": "TwoFluid",
+      "trace_nodes_zero_based": [
+        397,
+        398,
+        399,
+        400
+      ],
+      "original_directory": "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh",
+      "original_file_sha256": {
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/assessment.json": "076d9fb135da03a49142248eaf50b5af8d97d38fb83ad9c99db36eaa3e9cafee",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/comparison_profiles.npz": "621c49b519d60cfcdbb50f1b4160f65a83f51d8145b49afa70ec0271cb17ac78",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/comparison_units.json": "f4194a416d38c757aea26644050cf9e9be83be10935eaedf038b80faa05db3ea",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/comparisons.json": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/effective_inputs.json": "d40b569151d34cfba9a685c6f3ab9a4f904128e232a4278269a13a86445a8f35",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/gui_inputs.json": "9358f310fe1c6a1de64fa089750a117b981c7efd0a5bf1d142aaa4c86ea75906",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/numerical/axial.png": "7296c0451761635e77723f488907ee72b7d3250e8cb445ac039f1ddb875c5d5d",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/numerical/convergence.csv": "6562e6c1bff4fa0ea0392dbc0f1f4267b77fc9a3129b44edf93bf0d9d29e04ab",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/numerical/initialization.npz": "7f0ac20aa0236e1035d6c84d6c13efb861c94f8173cd736943e553422dd89151",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/numerical/metadata.json": "a48889aebc3b27dbe148fd27295de89eae828277b197d8ccd3406c17081dfe9d",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/numerical/mixture/axial.png": "8c5dd2fc96a5f1fa0112ae26bc2d2ea805bdee192beee6c43ac016cb7dfb7822",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/numerical/mixture/convergence.csv": "de405e62d1bdbdbae34dbcdd31956c44daf39349e09e65655aa7ca265dcae3f6",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/numerical/mixture/initialization.npz": "21608d53a20a708b58046af17c9dd201703c840e460f78542e1c78300288807d",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/numerical/mixture/inputs/00-NURETH21.mlx": "f43f99a7a9dbfc0894748b97e05a1043379254d2cde39f59be5f3688ab8b960c",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/numerical/mixture/metadata.json": "8ad042c89c949bd8996022b71688dc177b16682df7face5f7815134ed5416395",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/numerical/mixture/profiles.csv": "c4a66f9d20dcfe8b9a461539dd5deb697ed7ff0e019a63275a8cf9ed9b3b1065",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/numerical/mixture/results.npz": "ad06b872d5a67fede69cfba05b84732cde97a8e4abdf24a4a421986e3c713f14",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/numerical/mixture/wall_profiles.csv": "151cd7dc6bfe9085c554f3bcac003650853ab6d5e72310066da7d51a4974d8d4",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/numerical/profiles.csv": "1350e909dc03ab6e06af00aeda36defdc79af740ebc2a5eb2e61629594eb7559",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/numerical/results.npz": "6f1fb75de59818b80ceebcddc759df93e054033c0cff9c88a80a71abc50485eb",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/paired_measurements.csv": "0081151f62850f4d8705bee5be60b8191e1519625ace11de0cc4382cc3101d7f",
+        "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh/submitted_inputs.json": "6e9cfc6ae2b1c041c1d8bac41a945697593f88d65c26116b388f00e1de6e879b"
+      }
+    }
+  ],
+  "constraints": {
+    "equations": "unchanged",
+    "numerical_controls": "identical to frozen effective inputs",
+    "native_replay_criterion": "exact array equality including NaN locations; this is reproducibility, not MATLAB equivalence",
+    "matlab_status": "no matched execution established at preregistration",
+    "old_outputs": "hash checked before and after; never overwritten",
+    "trace": "read-only observation; no solver-source edits",
+    "correction_policy": "only independently confirmed translation errors; keep pre-correction evidence"
+  }
+}

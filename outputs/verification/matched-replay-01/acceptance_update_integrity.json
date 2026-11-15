@@ -1,0 +1,62 @@
+{
+  "schema": "openstream-matched-replay-acceptance-integrity-v1",
+  "baseline_commit": "178ac2b4152b31016dc8847aebab139de0d88d2d",
+  "requirements": 81,
+  "identical_id_set": true,
+  "unchanged_fields": [
+    "acceptance_criteria",
+    "implementation",
+    "native_tests",
+    "matlab",
+    "physical",
+    "experimental"
+  ],
+  "criteria_and_status_differences": [],
+  "updated_rows": [
+    "CORE-001",
+    "CORE-002",
+    "CORE-003",
+    "CORE-004",
+    "CORE-005",
+    "CORE-006",
+    "CORE-018",
+    "CORE-023",
+    "CORE-024",
+    "CORE-028",
+    "CORE-029",
+    "CORE-031",
+    "CORE-033",
+    "CORE-036",
+    "EXP-001",
+    "EXP-002",
+    "EXP-007",
+    "EXP-008",
+    "EXP-010",
+    "EXP-011"
+  ],
+  "source_ledger_sha256_lf": {
+    "docs/acceptance/core.json": {
+      "before_sha256_lf": "c797feb01cb3009bec2c4402ccc7a1da415b99969da07ebb2368c55804fc6738",
+      "after_sha256_lf": "41289e23fb92ddce77b8d3da5a4d52e3b9722d22741d18fcf5ce25ed5c2d8640"
+    },
+    "docs/acceptance/interfaces.json": {
+      "before_sha256_lf": "d8f4b4f52ff3c9e201181e3161b6a500cc1b0a1af4247e7f543309f878f2a753",
+      "after_sha256_lf": "d8f4b4f52ff3c9e201181e3161b6a500cc1b0a1af4247e7f543309f878f2a753"
+    },
+    "docs/acceptance/experimental.json": {
+      "before_sha256_lf": "255083ec46ccf7b51e25f5b6ddd9db87facd13b62d6b16c43cb115191c271498",
+      "after_sha256_lf": "191b02887f43e72c3ae245fab80fe724076d86cd55ae03e1ac2165761bd4bf6e"
+    }
+  },
+  "generated_artifact_sha256_lf": {
+    "docs/METHOD_COVERAGE.json": "164c6bff3a4f016fcbdcb377a3c95dd8613a44f3e888f108f9eb8794c385dc21",
+    "docs/ACCEPTANCE_MATRIX.json": "6ccdb729f40b6dc9656dbcf5ffcc1b52d51b0a87840389ceac71684cc7f239ac",
+    "docs/ACCEPTANCE_MATRIX.md": "3768036e21e1fb840b39f3bd5d6b878641678a7a4da0003036d43b0d89a5ea6a",
+    "docs/ACCEPTANCE_MATRIX.csv": "01437bf27c19a7f592fb90042509d1f44ff82f7db6f62188acae4bd23a0b99b9",
+    "docs/ACCEPTANCE_METHODS.csv": "a770d820864e2366b84d3c97f73bdc66f554e93e7f6950842fc5afc99ebb73b6",
+    "docs/ACCEPTANCE_OPTIONS.csv": "e56890e841904ad32e0bb50d3954907dfe83a683f4aad0665e834eb6e79b5b18"
+  },
+  "audit_script_sha256_lf": "d822d3a47a5e323c7ccfd28ded31fdaf4677707199d29a400f55b0b7041665ad",
+  "matrix_check_stdout": "{\n  \"requirements\": 81,\n  \"tracks\": {\n    \"matlab_equivalence\": 27,\n    \"numerical_verification\": 10,\n    \"interface_parity\": 19,\n    \"reference_infrastructure\": 5,\n    \"release\": 2,\n    \"literature_scope\": 6,\n    \"experimental_validation\": 12\n  },\n  \"priorities\": {\n    \"P1\": 41,\n    \"P0\": 31,\n    \"P2\": 9\n  },\n  \"implementation\": {\n    \"implemented\": 46,\n    \"partial\": 31,\n    \"unsupported_source_defect\": 1,\n    \"missing\": 3\n  },\n  \"status_axes\": {\n    \"native_tests\": {\n      \"passed_scoped\": 35,\n      \"partial\": 35,\n      \"failed\": 5,\n      \"not_run\": 6\n    },\n    \"matlab\": {\n      \"passed_scoped\": 13,\n      \"failed\": 1,\n      \"not_run\": 51,\n      \"not_applicable\": 12,\n      \"partial\": 4\n    },\n    \"physical\": {\n      \"passed_scoped\": 4,\n      \"failed\": 14,\n      \"not_applicable\": 32,\n      \"partial\": 22,\n      \"not_run\": 9\n    },\n    \"experimental\": {\n      \"not_run\": 37,\n      \"not_applicable\": 35,\n      \"partial\": 9\n    }\n  },\n  \"enum_types\": 41,\n  \"enum_choices\": 127,\n  \"interpolation_choices\": 16,\n  \"public_method_entries_with_inheritance\": 585\n}\nAcceptance ledger integrity and generated files: PASS\n",
+  "limitation": "Ledger integrity and evidence inventory; no additional numerical acceptance, physical validation or MATLAB execution."
+}

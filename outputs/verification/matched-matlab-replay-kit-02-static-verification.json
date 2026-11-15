@@ -1,0 +1,25 @@
+{
+  "schema": "openstream-matlab-kit-static-verification-v1",
+  "kit_directory": "outputs\\verification\\matched-matlab-replay-kit-02",
+  "kit_manifest_sha256": "4fa17be1652d6f692d212228d388cb172383db255fea0ef0ce5eb8c4fd9792ba",
+  "zip_sha256": "47fe32f52a7e78a0fb8d6552798fd05a273c3bee4fdcc98bdb0918e73d7250ad",
+  "zip_bytes": 541187,
+  "checksummed_files_verified": 230,
+  "pinned_source_files_verified": 105,
+  "modified_source_paths": [
+    "+Solvers/+FourField/@FourFieldSolver/solve.m",
+    "+Solvers/+TwoFluid/@TwoFluidSolver/solve.m"
+  ],
+  "only_registered_observation_insertions": true,
+  "original_frozen_artifacts_unchanged": 45,
+  "python_static_tests": {
+    "command": ".venv/Scripts/python.exe -m unittest discover -s tests -p test_matched*.py -v",
+    "tests": 7,
+    "failures": 0
+  },
+  "matlab_syntax_or_runtime_execution": "NOT PERFORMED; Python tests and manual source inspection do not substitute for MATLAB execution",
+  "point_comparator_actual_reference_execution": "NOT RUN; no actual matched MATLAB outputs available",
+  "comparison_policy": "strict join and raw diagnostic differences; no new acceptance tolerance",
+  "point_comparison_command": "python tools/compare_matched_point_traces.py outputs/verification/matched-matlab-replay-kit-02 <native-case-directory> <actual-MATLAB-result-directory> <case-id> --output <new-report.json>",
+  "availability_evidence_sha256": "83252de5aca1db2ca1eadfb36492360a263ef4dbbcf5fd7d7212ce3cdbe4302f"
+}

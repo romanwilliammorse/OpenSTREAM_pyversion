@@ -1,0 +1,9 @@
+{
+  "execution_complete": false,
+  "failure_kind": "trace serialization error",
+  "error": "TypeError: Object of type ndarray is not JSON serializable",
+  "location": "IterationTrace.emit closure_return",
+  "numerical_failure_claim": false,
+  "resolution": "explicit recursive NumPy-to-portable-JSON conversion in tracing tool; no solver code changed",
+  "successor": "../native-before-02"
+}

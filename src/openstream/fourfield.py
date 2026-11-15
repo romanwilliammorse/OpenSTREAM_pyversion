@@ -157,7 +157,8 @@ class FourFieldSolver(ThreeFieldSolver):
         try:
             self.STATE = SolverState.SOLVEDCONVERGED
             for k in range(1,len(self.filmInit)):
-                ok,change = self._advance(self.filmInit[k-1],self.dropInit[k-1],self.filmInit[k],self.dropInit[k])
+                ok,change = self._advance(self.filmInit[k-1],self.dropInit[k-1],self.filmInit[k],self.dropInit[k],
+                                         sweep_mix=self.mixSolver.mixture[0])
                 self._record("initialization",self.filmInit[k],self.dropInit[k],ok,change,progress)
                 # Exact upstream convergence predicate: timeDFw is logged,
                 # but NOT included in this stop decision.
@@ -178,7 +179,8 @@ class FourFieldSolver(ThreeFieldSolver):
             if self.STATE==SolverState.INITIALSTEPCONVERGED and self.NTIME>1:
                 self.STATE,self.transient_converged = SolverState.SOLVEDCONVERGED,True
                 for k in range(1,self.NTIME):
-                    ok,change = self._advance(self.film[k-1],self.drop[k-1],self.film[k],self.drop[k])
+                    ok,change = self._advance(self.film[k-1],self.drop[k-1],self.film[k],self.drop[k],
+                                             sweep_mix=self.mixSolver.mixture[k])
                     self._record("transient",self.film[k],self.drop[k],ok,change,progress)
                     self.transient_converged &= ok
                     if not ok: self.STATE=SolverState.SOLVEDNOTCONVERGED
@@ -186,12 +188,14 @@ class FourFieldSolver(ThreeFieldSolver):
         finally:
             self.elapsed_seconds = time.perf_counter()-started
 
-    def _advance(self,old_film,old_drop,film,drop):
+    def _advance(self,old_film,old_drop,film,drop,*,sweep_mix):
         m,o,g = self.inputSet.model,self.inputSet.options,self.inputSet.geometry
         base,wave = film.base,film.wave
         old_base,old_wave = old_film.base,old_film.wave
         old_base.copy_flow_properties(base); old_wave.copy_flow_properties(wave); old_drop.copy_flow_properties(drop)
-        mix = film.mix
+        # MATLAB solve.m uses the physical precursor for this outer sweep;
+        # aggregate film/drop and base/wave retain their own source handles.
+        mix = sweep_mix
         dz,dt,rho = self.DZ,film.DT,film.fluid.RHOF
         onset = mix.OAFIDX()
         fraction = film.distributeOAFW(film.W[onset].copy(),onset)

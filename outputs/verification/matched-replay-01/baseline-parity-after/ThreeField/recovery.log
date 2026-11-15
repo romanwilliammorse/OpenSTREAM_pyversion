@@ -1,0 +1,30 @@
+{
+  "framework": "ThreeField",
+  "output": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\verification\\matched-replay-01\\baseline-parity-after\\ThreeField\\reference",
+  "state": "INITIALSTEPCONVERGED",
+  "point_converged": true,
+  "temporal_converged": true,
+  "physical_checks": {
+    "area_closure_relative_tolerance": null,
+    "phase_volume_closure_role": "informational",
+    "phase_volume_closure_status": "reported",
+    "max_unblended_annular_area_closure_relative": 0.07485259436858871,
+    "physical_consistency": null,
+    "records": [
+      {
+        "time_s": 0.0,
+        "annular_node_count": 72,
+        "onset_index_matlab": 14,
+        "first_fully_annular_z_m": 1.595,
+        "max_unblended_annular_area_closure_relative": 0.07485259436858871,
+        "outlet_area_closure_relative": 0.016066442992564767,
+        "nonfinite_annular_nodes": 0,
+        "common_annular_mass_residual_kg_s": 7.240893162840933e-10,
+        "common_annular_cell_count": 71,
+        "common_annular_inventory_kg": 0.015147112887789608,
+        "phase_partition_max_error_kg_s": 1.3877787807814457e-17
+      }
+    ],
+    "interpretation": "Independent saved-state occupied area sum(W/U/rho); reporting domain is stored sigmoid >=1-1e-12. Phase-volume closure is informational: the original MATLAB ThreeField/FourField frameworks do not impose an acceptance or convergence gate on this diagnostic. No residual threshold is applied; indeterminate NaN/Inf values are retained without adding a failure criterion. Steady mass flux differences only, no transient storage evaluated. This report does not establish physical or experimental validation."
+  }
+}

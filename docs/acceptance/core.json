@@ -25,9 +25,11 @@
       "outputs/baseline-parity-02/Mixture/comparison/comparison.json",
       "outputs/baseline-parity-02/summary.json",
       "tests/test_solver.py",
-      "outputs/verification/native-sensitivity-01/verification.json"
+      "outputs/verification/native-sensitivity-01/verification.json",
+      "docs/MATCHED_DIAGNOSTIC_REPLAY.md",
+      "outputs/verification/matched-replay-01/baseline-parity-after/summary.json"
     ],
-    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy.",
+    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy. After the scoped FourField precursor correction, all four original steady archive and initialization gates were rerun and pass with unchanged rtol=1e-8, atol=0. This is an archived-reference check, not a new MATLAB run.",
     "priority": "P1",
     "acceptance_criteria": [
       "Compare every original core value at all matching nodes using unchanged rtol=1e-8, atol=0 and exact reference zeros.",
@@ -60,9 +62,11 @@
     "evidence": [
       "docs/ALL_BASELINES_VERIFICATION.md",
       "outputs/baseline-parity-02/TwoFluid/comparison/comparison.json",
-      "outputs/baseline-parity-02/summary.json"
+      "outputs/baseline-parity-02/summary.json",
+      "docs/MATCHED_DIAGNOSTIC_REPLAY.md",
+      "outputs/verification/matched-replay-01/baseline-parity-after/summary.json"
     ],
-    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy.",
+    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy. After the scoped FourField precursor correction, all four original steady archive and initialization gates were rerun and pass with unchanged rtol=1e-8, atol=0. This is an archived-reference check, not a new MATLAB run.",
     "priority": "P1",
     "acceptance_criteria": [
       "Compare every original core value at all matching nodes using unchanged rtol=1e-8, atol=0 and exact reference zeros.",
@@ -97,9 +101,11 @@
       "outputs/baseline-parity-02/ThreeField/comparison/comparison.json",
       "outputs/baseline-parity-02/summary.json",
       "docs/LECORRE_PHYSICAL_REVIEW.md",
-      "outputs/verification/annular-policy-01/reassessment.json"
+      "outputs/verification/annular-policy-01/reassessment.json",
+      "docs/MATCHED_DIAGNOSTIC_REPLAY.md",
+      "outputs/verification/matched-replay-01/baseline-parity-after/summary.json"
     ],
-    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. Its retained physical failure concerns separately recorded clipped-cell mass residuals (CORE-027), not area alone.",
+    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. Its retained physical failure concerns separately recorded clipped-cell mass residuals (CORE-027), not area alone. After the scoped FourField precursor correction, all four original steady archive and initialization gates were rerun and pass with unchanged rtol=1e-8, atol=0. This is an archived-reference check, not a new MATLAB run.",
     "priority": "P1",
     "acceptance_criteria": [
       "Compare every original core value at all matching nodes using unchanged rtol=1e-8, atol=0 and exact reference zeros.",
@@ -134,9 +140,14 @@
       "outputs/baseline-parity-02/FourField/comparison/comparison.json",
       "outputs/baseline-parity-02/summary.json",
       "docs/LECORRE_PHYSICAL_REVIEW.md",
-      "outputs/verification/annular-policy-01/reassessment.json"
+      "outputs/verification/annular-policy-01/reassessment.json",
+      "docs/MATCHED_DIAGNOSTIC_REPLAY.md",
+      "outputs/verification/matched-replay-01/baseline-parity-after/summary.json",
+      "outputs/verification/matched-replay-01/precursor_handle_audit.json",
+      "outputs/verification/matched-replay-01/precursor_change_audit.json",
+      "docs/replay_sawai_source_audit.md"
     ],
-    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. Its retained physical failure concerns separately recorded base/wave mass residuals (CORE-028), not area alone.",
+    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. Its retained physical failure concerns separately recorded base/wave mass residuals (CORE-028), not area alone. After the scoped FourField precursor correction, all four original steady archive and initialization gates were rerun and pass with unchanged rtol=1e-8, atol=0. This is an archived-reference check, not a new MATLAB run. FourField maximum physical-state core relative error is 2.5396096926761515e-9 after the correction. Previously recorded separate residual failures remain open.",
     "priority": "P1",
     "acceptance_criteria": [
       "Compare every original core value at all matching nodes using unchanged rtol=1e-8, atol=0 and exact reference zeros.",
@@ -172,15 +183,24 @@
     "evidence": [
       "docs/ALL_BASELINES_VERIFICATION.md",
       "outputs/baseline-parity-02/summary.json",
-      "docs/annular_reference_audit.md"
+      "docs/annular_reference_audit.md",
+      "docs/MATCHED_DIAGNOSTIC_REPLAY.md",
+      "outputs/verification/matched-replay-01/native-before-02/report.json",
+      "outputs/verification/matched-replay-01/native-after/report.json",
+      "outputs/verification/matched-replay-01/baseline-parity-after/summary.json",
+      "outputs/verification/matched-replay-01/precursor_handle_audit.json",
+      "outputs/verification/matched-replay-01/precursor_change_audit.json",
+      "docs/replay_sawai_source_audit.md",
+      "outputs/verification/matched-replay-01/native-before-02/independent_arithmetic_audit_02.json",
+      "outputs/verification/matched-replay-01/native-after/independent_arithmetic_audit.json"
     ],
-    "gap": "Agreement is limited to stored TUTORIAL1 histories; the archive does not preserve every point iteration.",
+    "gap": "Agreement is limited to stored TUTORIAL1 histories; the archive does not preserve every point iteration. The 2026-11-15 source audit confirms and corrects a FourField translation error: the outer sweep must use the physical mixture precursor, while aggregate and base/wave objects retain their distinct source handles. Only precursor selection changed; closures, governing equations, clipping, relaxation and tolerances did not. Source/MCOS topology evidence and focused tests support this correction; no new MATLAB execution was available. All archived initialization core gates still pass. Both ordered matched cases reproduced their frozen native arrays exactly before the correction. The repeated TwoFluid case is unchanged afterward; Sawai arrays change but its point failure remains. Independent read-only arithmetic audits pass 22,694 exact checks in each before/after replay, with all 400 original/replay dtype pairs identical and complete declared trace-node/time coverage. These checks do not independently validate raw closure returns or supply MATLAB iterates.",
     "priority": "P1",
     "acceptance_criteria": [
       "Continue exact matching of archived state counts, axes and core profiles at rtol=1e-8, atol=0.",
       "Verify boundary-node exclusion, shallow aggregate handles and final initialization-to-physical transfer on additional cases."
     ],
-    "next_action": "Extend reference export to retain point iterates where needed and branch-specific initialization cases.",
+    "next_action": "Retain archived histories and the corrected outer-sweep handle selection; obtain independent point traces for unresolved clipping/iteration behavior and other initialization branches.",
     "selectors": []
   },
   {
@@ -210,9 +230,13 @@
       "docs/ALL_BASELINES_VERIFICATION.md",
       "docs/mixture_followup.md",
       "outputs/mixture-followup/diagnostic-audit.json",
-      "outputs/baseline-parity-02"
+      "outputs/baseline-parity-02",
+      "docs/MATCHED_DIAGNOSTIC_REPLAY.md",
+      "outputs/verification/matched-replay-01/native-before-02/report.json",
+      "outputs/verification/matched-replay-01/native-after/report.json",
+      "outputs/verification/matched-replay-01/baseline-parity-after/summary.json"
     ],
-    "gap": "Eleven mixture failures are accounted for by stored-state differences; three point-increment differences lack archived intermediate iterates. Other failures must retain their recorded status.",
+    "gap": "Eleven mixture failures are accounted for by stored-state differences; three point-increment differences lack archived intermediate iterates. Other failures must retain their recorded status. The matched native replay and corrected archived baseline rerun do not close the 23 original supplementary physical-state diagnostic comparisons. Their failed status and original tolerances remain unchanged; native repeatability is not an independent MATLAB comparison.",
     "priority": "P0",
     "acceptance_criteria": [
       "Keep all existing strict comparisons and failures unchanged.",
@@ -657,9 +681,14 @@
       "tests/test_fields.py",
       "outputs/threefield_variant_checks.json",
       "docs/threefield_transient.md",
-      "docs/fourfield_notes.md"
+      "docs/fourfield_notes.md",
+      "docs/MATCHED_DIAGNOSTIC_REPLAY.md",
+      "outputs/verification/matched-replay-01/native-after/report.json",
+      "outputs/verification/matched-replay-01/precursor_handle_audit.json",
+      "outputs/verification/matched-replay-01/precursor_change_audit.json",
+      "docs/replay_sawai_source_audit.md"
     ],
-    "gap": "WALLIS/cached sigmoid and selected split cases tested; alternative onset and wall-enhancement interactions lack references. Mesh changes alter the source sigmoid's physical width.",
+    "gap": "WALLIS/cached sigmoid and selected split cases tested; alternative onset and wall-enhancement interactions lack references. Mesh changes alter the source sigmoid's physical width. The scoped FourField precursor correction preserves constructor/field handle identities and the source AFFNC scaling. Sawai entry 1 onset remains node 23,z 0.37904 m; its transition-region point failure remains.",
     "priority": "P0",
     "acceptance_criteria": [
       "Compare onset indices/elevations and cached transition arrays exactly under documented indexing semantics.",
@@ -865,9 +894,15 @@
       "tests/test_fourfield.py",
       "outputs/fourfield_tutorials/verification.json",
       "docs/fourfield_notes.md",
-      "docs/annular_reference_audit.md"
+      "docs/annular_reference_audit.md",
+      "docs/MATCHED_DIAGNOSTIC_REPLAY.md",
+      "outputs/verification/matched-replay-01/native-after/report.json",
+      "outputs/verification/matched-replay-01/final_comparison.json",
+      "outputs/verification/matched-replay-01/precursor_handle_audit.json",
+      "outputs/verification/matched-replay-01/precursor_change_audit.json",
+      "docs/replay_sawai_source_audit.md"
     ],
-    "gap": "Actual base/frequency pass TUTORIAL1 additional comparisons; alternative cases run natively but branch-wide MATLAB equivalence is not established.",
+    "gap": "Actual base/frequency pass TUTORIAL1 additional comparisons; alternative cases run natively but branch-wide MATLAB equivalence is not established. The 2026-11-15 source audit confirms and corrects a FourField translation error: the outer sweep must use the physical mixture precursor, while aggregate and base/wave objects retain their distinct source handles. Only precursor selection changed; closures, governing equations, clipping, relaxation and tolerances did not. Source/MCOS topology evidence and focused tests support this correction; no new MATLAB execution was available. The corrected, separately stored Sawai entry 1, intended tau=0.2 s, 100-cell replay still fails the final wave-flow-per-perimeter point criterion at nodes 24-26: maximum 7.675963972049171e-4 kg/(s m) versus unchanged ERRORWF=1e-4 kg/(s m), with a two-cycle at node 24. The confirmed handle error is therefore not a sufficient explanation of this failure. Other original 69 cases were not recomputed with the correction.",
     "priority": "P1",
     "acceptance_criteria": [
       "Check W=base.W+wave.W, source residence-inventory weighted film U, dimensions of thickness/width/spacing and frequency in Hz.",
@@ -906,9 +941,14 @@
       "tests/test_fourfield.py",
       "outputs/fourfield_tutorials/verification.json",
       "docs/fourfield_notes.md",
-      "docs/fourfield_review.md"
+      "docs/fourfield_review.md",
+      "docs/MATCHED_DIAGNOSTIC_REPLAY.md",
+      "outputs/verification/matched-replay-01/native-after/report.json",
+      "outputs/verification/matched-replay-01/precursor_handle_audit.json",
+      "outputs/verification/matched-replay-01/precursor_change_audit.json",
+      "docs/replay_sawai_source_audit.md"
     ],
-    "gap": "Selected tutorials and cancellation tests exist; all branch combinations and source-order momentum residuals lack independent reference coverage. Exact zero-slip evaluates infinity times zero upstream.",
+    "gap": "Selected tutorials and cancellation tests exist; all branch combinations and source-order momentum residuals lack independent reference coverage. Exact zero-slip evaluates infinity times zero upstream. The source-confirmed outer-sweep precursor correction affects the physical precursor used by velocity bounds/blending, without replacing the force laws. Broader branch equivalence and raw force-component order remain unverified.",
     "priority": "P1",
     "acceptance_criteria": [
       "Verify internal shear and mass exchange cancellation with N/m2 and kg/(s m2) conventions preserved.",
@@ -1055,9 +1095,13 @@
       "docs/fourfield_notes.md",
       "tests/test_fourfield.py",
       "docs/LECORRE_PHYSICAL_REVIEW.md",
-      "outputs/verification/annular-policy-01/reassessment.json"
+      "outputs/verification/annular-policy-01/reassessment.json",
+      "docs/MATCHED_DIAGNOSTIC_REPLAY.md",
+      "outputs/verification/matched-replay-01/native-after/report.json",
+      "outputs/verification/matched-replay-01/native-before-02/independent_arithmetic_audit_02.json",
+      "outputs/verification/matched-replay-01/native-after/independent_arithmetic_audit.json"
     ],
-    "gap": "Archived fully annular phase-volume discrepancy is 11.241052%, reproduced natively, and is now supplemental information. The retained physical failure is the separately documented base/wave raw pseudo-time mass residuals of about 4.31e-4 and 4.24e-4 kg/s near clipping. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged.",
+    "gap": "Archived fully annular phase-volume discrepancy is 11.241052%, reproduced natively, and is now supplemental information. The retained physical failure is the separately documented base/wave raw pseudo-time mass residuals of about 4.31e-4 and 4.24e-4 kg/s near clipping. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. Independent before/after trace arithmetic verifies observed mass proposals, relaxation and the source compensating-clip sequence for the selected Sawai nodes. This does not resolve the archived raw residual attribution or supply independent MATLAB source values. The corrected, separately stored Sawai entry 1, intended tau=0.2 s, 100-cell replay still fails the final wave-flow-per-perimeter point criterion at nodes 24-26: maximum 7.675963972049171e-4 kg/(s m) versus unchanged ERRORWF=1e-4 kg/(s m), with a two-cycle at node 24. The confirmed handle error is therefore not a sufficient explanation of this failure. Other original 69 cases were not recomputed with the correction.",
     "priority": "P0",
     "acceptance_criteria": [
       "Report phase-volume residuals as supplemental information, without an annular acceptance threshold or additional model constraint.",
@@ -1095,16 +1139,24 @@
       "tests/test_fourfield.py",
       "docs/fourfield_notes.md",
       "docs/threefield_transient.md",
-      "outputs/twofluid_mesh_checks.json"
+      "outputs/twofluid_mesh_checks.json",
+      "docs/MATCHED_DIAGNOSTIC_REPLAY.md",
+      "outputs/verification/matched-replay-01/native-before-02/report.json",
+      "outputs/verification/matched-replay-01/native-after/report.json",
+      "outputs/verification/matched-replay-01/twofluid-budget-60/report.json",
+      "outputs/verification/matched-replay-01/final_comparison.json",
+      "docs/replay_twofluid_source_audit.md",
+      "outputs/verification/matched-replay-01/native-before-02/independent_arithmetic_audit_02.json",
+      "outputs/verification/matched-replay-01/native-after/independent_arithmetic_audit.json"
     ],
-    "gap": "Some temporally steady iterates fail point convergence. Source FourField stopping omits SSCONVFW; native STATE preserves it while .converged additionally checks frequency/nested failures. Source initializes DFW but writes DF.",
+    "gap": "Some temporally steady iterates fail point convergence. Source FourField stopping omits SSCONVFW; native STATE preserves it while .converged additionally checks frequency/nested failures. Source initializes DFW but writes DF. A separate preregistered TwoFluid 400-cell diagnostic changes only SSMAXITER from 30 to 60, retains the complete original 30-state prefix exactly, and converges at 39 s (40 states) with temporal liquid-enthalpy change 0.9414000483229756 J/kg < 1 J/kg. The matched original 30-state attempt still fails at 29 s with 2.0752344205975533 J/kg; its failure remains recorded. This establishes an insufficient initialization budget for the native case under its stated criteria, not fresh MATLAB equivalence, mesh independence or physical validation. Retained TwoFluid area checks still fail. The corrected, separately stored Sawai entry 1, intended tau=0.2 s, 100-cell replay still fails the final wave-flow-per-perimeter point criterion at nodes 24-26: maximum 7.675963972049171e-4 kg/(s m) versus unchanged ERRORWF=1e-4 kg/(s m), with a two-cycle at node 24. The confirmed handle error is therefore not a sufficient explanation of this failure. Other original 69 cases were not recomputed with the correction. Both ordered matched cases reproduced their frozen native arrays exactly before the correction. The repeated TwoFluid case is unchanged afterward; Sawai arrays change but its point failure remains. Independent read-only arithmetic audits pass 22,694 exact checks in each before/after replay, with all 400 original/replay dtype pairs identical and complete declared trace-node/time coverage. These checks do not independently validate raw closure returns or supply MATLAB iterates.",
     "priority": "P0",
     "acceptance_criteria": [
       "Preserve source iteration counts/stopping when testing equivalence; label enhanced acceptance separately.",
       "Require all applicable nested and point criteria plus independently calculated residuals for a numerically accepted solution.",
       "Never use unused DFW zeros as frequency evidence or convert failure to pass by loosening controls."
     ],
-    "next_action": "Create acceptance tests for exhaustion, false temporal convergence, inner failure, actual DF and each source stop branch with MATLAB traces.",
+    "next_action": "Preserve original failed attempts. Diagnose the remaining Sawai wave-flow two-cycle using matched native/source update traces and independent MATLAB iterates when available; retain point, temporal, nested and supplemental-diagnostic distinctions.",
     "selectors": []
   },
   {
@@ -1161,15 +1213,22 @@
     "evidence": [
       "outputs/twofluid_mesh_checks.json",
       "outputs/twofluid-transient-02/verification.json",
-      "docs/twofluid_notes.md"
+      "docs/twofluid_notes.md",
+      "docs/MATCHED_DIAGNOSTIC_REPLAY.md",
+      "outputs/verification/matched-replay-01/native-before-02/report.json",
+      "outputs/verification/matched-replay-01/native-after/report.json",
+      "outputs/verification/matched-replay-01/twofluid-budget-60/report.json",
+      "docs/replay_twofluid_source_audit.md",
+      "outputs/verification/matched-replay-01/native-before-02/independent_arithmetic_audit_02.json",
+      "outputs/verification/matched-replay-01/native-after/independent_arithmetic_audit.json"
     ],
-    "gap": "The 50-cell tightened run failed point convergence; 100/200-cell energy defects decrease but two successful grids do not establish an order. Transient time-step sensitivity is missing.",
+    "gap": "The 50-cell tightened run failed point convergence; 100/200-cell energy defects decrease but two successful grids do not establish an order. Transient time-step sensitivity is missing. A separate preregistered TwoFluid 400-cell diagnostic changes only SSMAXITER from 30 to 60, retains the complete original 30-state prefix exactly, and converges at 39 s (40 states) with temporal liquid-enthalpy change 0.9414000483229756 J/kg < 1 J/kg. The matched original 30-state attempt still fails at 29 s with 2.0752344205975533 J/kg; its failure remains recorded. This establishes an insufficient initialization budget for the native case under its stated criteria, not fresh MATLAB equivalence, mesh independence or physical validation. Retained TwoFluid area checks still fail.",
     "priority": "P0",
     "acceptance_criteria": [
       "Exclude failed iterates from convergence-order estimates while retaining them in evidence.",
       "Separate conservative product-rule error, iterative residuals, pressure/area coupling and physical-time error."
     ],
-    "next_action": "Diagnose the coarse-grid failure and obtain a successful sequence before estimating discretization uncertainty.",
+    "next_action": "Retain the failed 50-cell tightened study and original 400-cell 30-state attempt. A longer native initialization resolves the latter numerical budget limit only; complete a predeclared successful mesh/time-step study and independent reference comparison.",
     "selectors": []
   },
   {
@@ -1228,9 +1287,12 @@
     "experimental": "not_run",
     "evidence": [
       "outputs/fourfield-transient-audited/verification.json",
-      "docs/fourfield_notes.md"
+      "docs/fourfield_notes.md",
+      "docs/MATCHED_DIAGNOSTIC_REPLAY.md",
+      "outputs/verification/matched-replay-01/native-after/report.json",
+      "outputs/validation/lecorre-2025-01/common_domain_diagnostic.json"
     ],
-    "gap": "No successful FourField mesh/time-step sensitivity sequence is recorded. Saturated enthalpy, wave bounds and frequency changes require separate checks.",
+    "gap": "No accepted FourField mesh/time-step uncertainty assessment is established. Saturated enthalpy, wave bounds and frequency changes require separate checks. The frozen Le Corre campaign records selected mesh/tighter-iteration comparisons, but source AFFNC changes with grid and no asymptotic order or complete time-step uncertainty is established. The matched source correction does not close this requirement; The corrected, separately stored Sawai entry 1, intended tau=0.2 s, 100-cell replay still fails the final wave-flow-per-perimeter point criterion at nodes 24-26: maximum 7.675963972049171e-4 kg/(s m) versus unchanged ERRORWF=1e-4 kg/(s m), with a two-cycle at node 24. The confirmed handle error is therefore not a sufficient explanation of this failure. Other original 69 cases were not recomputed with the correction.",
     "priority": "P0",
     "acceptance_criteria": [
       "Require point/nested convergence and common physical domains before comparing grids/times.",
@@ -1346,7 +1408,8 @@
       "src/openstream/fields.py",
       "src/openstream/tf_fields.py",
       "src/openstream/annular.py",
-      "src/openstream/ff_fields.py"
+      "src/openstream/ff_fields.py",
+      "src/openstream/fourfield.py"
     ],
     "implementation": "implemented",
     "native_tests": "partial",
@@ -1359,15 +1422,26 @@
       "tests/test_mixture_mrm_semantics.py",
       "tests/test_twofluid.py",
       "tests/test_fourfield.py",
-      "docs/mixture_translation_audit.md"
+      "docs/mixture_translation_audit.md",
+      "docs/MATCHED_DIAGNOSTIC_REPLAY.md",
+      "outputs/verification/matched-replay-01/native-before-02/report.json",
+      "outputs/verification/matched-replay-01/native-after/report.json",
+      "outputs/verification/matched-replay-01/final_comparison.json",
+      "outputs/verification/matched-replay-01/precursor_handle_audit.json",
+      "outputs/verification/matched-replay-01/precursor_change_audit.json",
+      "docs/replay_sawai_source_audit.md",
+      "outputs/verification/matched-replay-01/native-before-02/independent_arithmetic_audit_02.json",
+      "outputs/verification/matched-replay-01/native-after/independent_arithmetic_audit.json",
+      "tests/test_matched_replay.py",
+      "tests/test_matched_replay_audit.py"
     ],
-    "gap": "Selected tests and archived cases support specific semantics, but no complete cross-language boundary fixture set exists. Ambiguous interpolation cubic is explicitly unsupported.",
+    "gap": "Selected tests and archived cases support specific semantics, but no complete cross-language boundary fixture set exists. Ambiguous interpolation cubic is explicitly unsupported. The 2026-11-15 source audit confirms and corrects a FourField translation error: the outer sweep must use the physical mixture precursor, while aggregate and base/wave objects retain their distinct source handles. Only precursor selection changed; closures, governing equations, clipping, relaxation and tolerances did not. Source/MCOS topology evidence and focused tests support this correction; no new MATLAB execution was available. Both ordered matched cases reproduced their frozen native arrays exactly before the correction. The repeated TwoFluid case is unchanged afterward; Sawai arrays change but its point failure remains. Independent read-only arithmetic audits pass 22,694 exact checks in each before/after replay, with all 400 original/replay dtype pairs identical and complete declared trace-node/time coverage. These checks do not independently validate raw closure returns or supply MATLAB iterates.",
     "priority": "P1",
     "acceptance_criteria": [
       "Assert shapes and mutability/alias relationships as well as numerical values.",
       "Distinguish elementwise and matrix operations and preserve source NaN policy; flag invalid physical states rather than coercing them to plausible results."
     ],
-    "next_action": "Generate independent MATLAB fixtures for singleton/multiwall arrays, subsets/duplicates, exact ties, NaNs and boundaries without changing expression order.",
+    "next_action": "Keep the explicit outer-sweep precursor and distinct field handles. Extend independent MATLAB fixtures beyond archived TUTORIAL1; resolve remaining scalar/array, interpolation, closure-return and expression-order gaps without changing equations.",
     "selectors": [
       "AXIALINTERP",
       "TIMEINTERP"

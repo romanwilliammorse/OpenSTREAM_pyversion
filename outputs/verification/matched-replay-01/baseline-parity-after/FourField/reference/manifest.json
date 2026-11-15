@@ -1,0 +1,664 @@
+{
+  "schema": "openstream-recovered-mcos-annular-v1",
+  "complete": true,
+  "created_utc": "2026-11-15T07:09:16.405752+00:00",
+  "source_kind": "original_approved_archive_decoded_without_matlab",
+  "framework": "FourField",
+  "state": "INITIALSTEPCONVERGED",
+  "archive": {
+    "file": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\upstream\\tests\\integration\\references\\TUTORIAL1-TUTORIAL1-DEFAULT\\tutorial1_FourFieldSolver.mat",
+    "sha256": "fd28edab74cad654721572c4644461dc20fef27ed4a3d617458b9717e13eacf1",
+    "bytes": 632002,
+    "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:24 2026"
+  },
+  "decoder": {
+    "package": "mat-io",
+    "version": "1.0.2",
+    "warnings": []
+  },
+  "producer_metadata": {
+    "matlab_version": null,
+    "coolprop_version": null,
+    "source_commit": null
+  },
+  "effective_inputs": {
+    "model": {
+      "ID": "TUTORIAL1",
+      "NNODES": 100.0,
+      "FLUID": "WATER",
+      "PROPERTIES": "SATURATED",
+      "KLOC": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "WBOILINGXSUB": -0.2,
+      "WBOILINGN": 2.0,
+      "WBOILINGXSAT": 0.0,
+      "OAF": "WALLIS",
+      "OAFTRANSITION": [
+        [
+          0.1,
+          0.0
+        ]
+      ],
+      "CBT": "NONE",
+      "CBTMULT": {
+        "serialized_matlab_value": "ndarray",
+        "shape": [
+          2,
+          1
+        ],
+        "not_evaluated": true
+      },
+      "CBTKEFFECT": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "CBTELEVATION": 1.0,
+      "MFBT": "NONE",
+      "DTMFB": 100.0,
+      "SPMTM": "BLASIUS",
+      "FRICTION": [
+        [
+          0.2,
+          -0.2,
+          0.0
+        ]
+      ],
+      "TPFM": "HOMOGENEOUS",
+      "KLOSS": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "TPKM": "HOMOGENEOUS",
+      "BTMTM": "TPFM",
+      "SPHTM": "DITTUSBOELTER",
+      "DITTUSBOELTERCOEF": [
+        [
+          0.023,
+          0.8,
+          0.4
+        ]
+      ],
+      "TPHTM": "THOM",
+      "BTHTM": "VAPOR",
+      "MOECKCOEF": [
+        [
+          0.00109,
+          0.989,
+          1.41,
+          -1.15
+        ]
+      ],
+      "VOID": "HOMOGENEOUS",
+      "SLIP": 1.0,
+      "THERMALNONEQ": "EQUILIBRIUM",
+      "THERMALRELAX": "TIMEX",
+      "RELAXX": [
+        [
+          -0.5,
+          1.0
+        ]
+      ],
+      "RELAXCONDFO": [
+        [
+          0.0001,
+          0.0001,
+          0.0001,
+          0.0001,
+          0.0001
+        ]
+      ],
+      "RELAXEVAPFO": [
+        [
+          5e-05,
+          5e-05,
+          5e-05,
+          5e-05,
+          5e-05
+        ]
+      ],
+      "RELAXCONDT": [
+        [
+          0.5,
+          0.5
+        ]
+      ],
+      "RELAXEVAPT": [
+        [
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ]
+      ],
+      "RELAXCONDCOEF": [
+        [
+          0.0001,
+          0.3333333333333333,
+          0.05,
+          0.0
+        ]
+      ],
+      "RELAXEVAPCOEF": [
+        [
+          0.0001,
+          0.3333333333333333,
+          1e-05,
+          0.0
+        ]
+      ],
+      "RELAXCONDFOCOEF": [
+        [
+          5e-05,
+          500000.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "RELAXEVAPFOCOEF": [
+        [
+          0.0001,
+          500000.0,
+          2.0,
+          2.0,
+          0.01,
+          1.0
+        ]
+      ],
+      "KTRELAX": "NaN",
+      "NEARWALLRATIO": 0.5,
+      "NEARWALLEQOAF": false,
+      "NEARWALLH": "RATIO",
+      "NEARWALLHRATIO": 1.0,
+      "NEARWALLRELAX": "QUALITY",
+      "NEARWALLRELAXX": [
+        [
+          -0.5,
+          -0.25,
+          -0.1,
+          0.0,
+          1.0
+        ]
+      ],
+      "NEARWALLRELAXT": [
+        [
+          1.0,
+          0.5,
+          0.3,
+          0.1,
+          0.1
+        ]
+      ],
+      "NEARWALLRELAXCOEF": [
+        [
+          0.0001,
+          0.3333333333333333,
+          0.05
+        ]
+      ],
+      "INTLENGTH": "CONSTANT",
+      "INTAREA": "DISPGAS2DISPLIQ",
+      "INTLENGTHVCST": 0.002,
+      "INTLENGTHLCST": 0.002,
+      "LOCRELVEL": "AREAMEAN",
+      "RELVELCST": 1.0,
+      "MOMENTLIQUID": "FULL",
+      "MOMENTGAS": "FULL",
+      "DROPDRAG": "VISCOUS",
+      "DROPDRAGCOEF": 0.45,
+      "BUBBLEDRAG": "STOKES",
+      "BUBBLEDRAGCOEF": 0.45,
+      "INTNU": "RELAXATION",
+      "INTNUVCST": 2.0,
+      "INTNULCST": 2.0,
+      "RANZMARSHALLVCST": [
+        [
+          2.0,
+          0.6,
+          0.5,
+          0.3333333333333333
+        ]
+      ],
+      "RANZMARSHALLLCST": [
+        [
+          2.0,
+          0.6,
+          0.5,
+          0.3333333333333333
+        ]
+      ],
+      "INTTRANSH": "BULK",
+      "POSFILM": true,
+      "OAFENTRAINED": "EQUILIBRIUM",
+      "OAFDROPRATIO": 0.7,
+      "DEPOSITION": "OKAWA",
+      "DEPENHANCEMENT": "NONE",
+      "KBLOCKRATIO": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "KTUNING": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "ENTRAINMENT": "OKAWA2003",
+      "OKAWACOEFS": [
+        [
+          320.0,
+          0.111,
+          0.000479,
+          1.0
+        ]
+      ],
+      "MOMENTFILM": "FULL",
+      "VAPORFRIC": "CONSTANT",
+      "VAPORFRICCST": 0.005,
+      "THINFILMFRIC": "TURBULENT",
+      "THINFILMTHICK": 0.0001,
+      "MOMENTDROP": "FULL",
+      "DROPSLIP": 1.0,
+      "DROPDIAM": 0.001,
+      "OAFFILMSPLIT": "EQUILIBRIUM",
+      "OAFBASERATIO": 0.5,
+      "BASEEQTHICK": "RISO",
+      "BASEEQTHICKCOEF": [
+        [
+          5.37e-05
+        ],
+        [
+          -0.64
+        ],
+        [
+          1.21
+        ]
+      ],
+      "BASEYPLUS": 15.0,
+      "RELAXTB": 0.2,
+      "WAVEMIXCOEF": 2.0,
+      "WAVEFREQUENCY": "RELAXATION",
+      "EQSTROUHAL": "RISO",
+      "EQSTROUHALCOEF": [
+        [
+          0.00011236
+        ],
+        [
+          0.5
+        ],
+        [
+          0.0
+        ]
+      ],
+      "RELAXTW": 0.2,
+      "CSTWAVEFREQ": 100.0,
+      "MOMENTBASE": "FULLNOP",
+      "MOMENTWAVE": "FULL",
+      "WAVEBASEINT": "VAPORSHEAR",
+      "SHAPEFACTORCOEF": [
+        [
+          132500.0
+        ],
+        [
+          2.0
+        ],
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "WAVEDRAGCOEF": [
+        [
+          0.02
+        ],
+        [
+          135000.0
+        ],
+        [
+          0.437
+        ]
+      ],
+      "THINWAVETHICK": 1e-05
+    },
+    "options": {
+      "ID": "DEFAULT",
+      "AXIALINTERP": "next",
+      "TIMEINTERP": "linear",
+      "TSTEP": 0.1,
+      "MAXITER": 100,
+      "SSTSTEP": 1.0,
+      "SSMAXITER": 30,
+      "MRMTIMEINT": "EXPONENTIAL",
+      "ERRORW": 0.001,
+      "ERRORP": 0.1,
+      "ERRORH": 0.1,
+      "SSCONVW": 0.001,
+      "SSCONVP": 1.0,
+      "SSCONVH": 1.0,
+      "RELAXWM": 1.0,
+      "RELAXPM": 1.0,
+      "RELAXHM": 1.0,
+      "RELAXWV": 0.7,
+      "RELAXHV": 0.7,
+      "ERRORU": 0.0001,
+      "SSCONVU": 0.001,
+      "RELAXWL": 1.0,
+      "RELAXUL": 0.5,
+      "RELAXUV": 0.5,
+      "RELAXHL": 1.0,
+      "OAFEQUILMAXITER": 100,
+      "OAFEQUILTOL": 0.0001,
+      "UDEQUILMAXITER": 100,
+      "UDEQUILTOL": 0.001,
+      "UFEQUILMAXITER": 100,
+      "UFEQUILTOL": 0.001,
+      "ENTNUMMAXITER": 100,
+      "ENTNUMTOL": 0.01,
+      "ERRORWF": 0.0001,
+      "ERRORUF": 0.01,
+      "ERRORUD": 0.01,
+      "SSCONVWF": 0.0001,
+      "SSCONVUF": 0.01,
+      "SSCONVUD": 0.01,
+      "RELAXWF": 0.5,
+      "RELAXUF": 0.2,
+      "RELAXUD": 0.2,
+      "ERRORFW": 0.1,
+      "SSCONVFW": 0.1,
+      "RELAXWB": 0.5,
+      "RELAXUB": 0.2,
+      "RELAXWW": 0.5,
+      "RELAXUW": 0.2,
+      "RELAXFW": 0.5
+    },
+    "geometry": {
+      "ID": "TUTORIAL1",
+      "LENGTH": 5.5,
+      "AREA": 6.0821e-05,
+      "PERIM": 0.0276,
+      "ANGLE": 0.0
+    },
+    "bc": {
+      "TIME": 0.0,
+      "PRESSURE": 6000000.0,
+      "HIN": 1139400.0,
+      "MFLOW": 0.07,
+      "POWER": 87500.0,
+      "WMESH": [
+        [
+          3.5,
+          2.0
+        ]
+      ],
+      "WPOWER": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ]
+    }
+  },
+  "fluid_constants": {
+    "FLUID": "WATER",
+    "PROPERTIES": "SATURATED",
+    "PRESSURE": 6000000.0,
+    "TSAT": 548.7349899923428,
+    "RHOF": 757.9981336355239,
+    "RHOG": 30.818445364018633,
+    "MUF": 9.531105175649382e-05,
+    "MUG": 1.8439878365062773e-05,
+    "HF": 1213922.7722144986,
+    "HG": 2784589.4972654083,
+    "HFG": 1570666.7250509097,
+    "SIGMA": 0.019837286476609435,
+    "KF": 0.5867902543591159,
+    "KG": 0.05906605053410767,
+    "CPF": 5211.628632519848,
+    "CPG": 4879.351369943661,
+    "ALPHAF": 1.4853927319734037e-07,
+    "ALPHAG": 3.92794241435533e-07,
+    "PRANDTLF": 0.8465133881138522,
+    "PRANDTLG": 1.5232886734183742,
+    "PCRIT": 22064000.0,
+    "PTRIPLE": 611.6548008968684,
+    "UC": 0.6212878914638054,
+    "QK": 30073755.162476473,
+    "TMIN": 274.16,
+    "HMIN": 10274.50562053138,
+    "TMAX": 1999.0,
+    "HMAX": 6582047.372226559,
+    "QKMAX": 30148141.829655178
+  },
+  "convergence": {
+    "source_formula": "Strict maximum < original threshold; final pseudo state, not copied physical ITR",
+    "final_point": {
+      "film.base.ITR.DWL": {
+        "max": 8.942691836799632e-05,
+        "threshold": 0.0001,
+        "unit": "kg/s/m",
+        "passed": true
+      },
+      "film.base.ITR.DU": {
+        "max": 0.0001986587854174715,
+        "threshold": 0.01,
+        "unit": "m/s",
+        "passed": true
+      },
+      "film.wave.ITR.DWL": {
+        "max": 8.727609529179947e-05,
+        "threshold": 0.0001,
+        "unit": "kg/s/m",
+        "passed": true
+      },
+      "film.wave.ITR.DU": {
+        "max": 0.0032314329943670117,
+        "threshold": 0.01,
+        "unit": "m/s",
+        "passed": true
+      },
+      "drop.ITR.DU": {
+        "max": 0.00555284127835165,
+        "threshold": 0.01,
+        "unit": "m/s",
+        "passed": true
+      },
+      "film.wave.ITR.DF": {
+        "max": 0.06036543035457953,
+        "threshold": 0.1,
+        "unit": "Hz",
+        "passed": true
+      }
+    },
+    "final_temporal": {
+      "film.base.WL": {
+        "max": 7.54809934515599e-05,
+        "threshold": 0.0001,
+        "unit": "kg/s/m",
+        "passed": true
+      },
+      "film.base.U": {
+        "max": 0.0001986587854174715,
+        "threshold": 0.01,
+        "unit": "m/s",
+        "passed": true
+      },
+      "film.wave.WL": {
+        "max": 5.118474401344386e-05,
+        "threshold": 0.0001,
+        "unit": "kg/s/m",
+        "passed": true
+      },
+      "film.wave.U": {
+        "max": 0.0032314329943670117,
+        "threshold": 0.01,
+        "unit": "m/s",
+        "passed": true
+      },
+      "drop.U": {
+        "max": 0.00555284127835165,
+        "threshold": 0.01,
+        "unit": "m/s",
+        "passed": true
+      }
+    },
+    "point_passed": true,
+    "temporal_passed": true,
+    "additional_wave_frequency_temporal": {
+      "max": 0.06036543035457953,
+      "threshold": 0.1,
+      "unit": "Hz",
+      "passed": true,
+      "source_stopping_predicate_includes_this": false
+    },
+    "max_point_iterations_by_state": {
+      "film.base": [
+        0,
+        100,
+        13,
+        9,
+        9,
+        7,
+        5,
+        4,
+        4
+      ],
+      "film.wave": [
+        0,
+        100,
+        13,
+        9,
+        9,
+        7,
+        5,
+        4,
+        4
+      ],
+      "drop": [
+        0,
+        100,
+        13,
+        9,
+        9,
+        7,
+        5,
+        4,
+        4
+      ]
+    }
+  },
+  "physical_checks": {
+    "area_closure_relative_tolerance": null,
+    "phase_volume_closure_role": "informational",
+    "phase_volume_closure_status": "reported",
+    "max_unblended_annular_area_closure_relative": 0.11241051742104902,
+    "physical_consistency": null,
+    "records": [
+      {
+        "time_s": 0.0,
+        "annular_node_count": 72,
+        "onset_index_matlab": 14,
+        "first_fully_annular_z_m": 1.595,
+        "max_unblended_annular_area_closure_relative": 0.11241051742104902,
+        "outlet_area_closure_relative": 0.010737048682143424,
+        "nonfinite_annular_nodes": 0,
+        "common_annular_mass_residual_kg_s": 7.240893162840933e-10,
+        "common_annular_cell_count": 71,
+        "common_annular_inventory_kg": 0.015819340343430608,
+        "phase_partition_max_error_kg_s": 1.3877787807814457e-17
+      }
+    ],
+    "interpretation": "Independent saved-state occupied area sum(W/U/rho); reporting domain is stored sigmoid >=1-1e-12. Phase-volume closure is informational: the original MATLAB ThreeField/FourField frameworks do not impose an acceptance or convergence gate on this diagnostic. No residual threshold is applied; indeterminate NaN/Inf values are retained without adding a failure criterion. Steady mass flux differences only, no transient storage evaluated. This report does not establish physical or experimental validation."
+  },
+  "array_layout": "time,node,wall for films including single wall; time,node for droplets and ITR.N; raw MATLAB dimensions retained separately",
+  "physical_states": 1,
+  "initialization_states": 9,
+  "units": {
+    "Z": "m",
+    "TIME": "s",
+    "drop.ITR.N": "1",
+    "film.wave.ITR.N": "1",
+    "film.base.U": "m/s",
+    "film.W": "kg/s",
+    "film.wave.ITR.DWL": "kg/s/m",
+    "film.wave.H": "J/kg",
+    "film.base.W": "kg/s",
+    "drop.H": "J/kg",
+    "film.base.ITR.DFW": "Hz",
+    "film.wave.U": "m/s",
+    "drop.W": "kg/s",
+    "film.wave.FREQUENCY": "Hz",
+    "film.base.ITR.N": "1",
+    "film.wave.ITR.DU": "m/s",
+    "drop.ITR.DU": "m/s",
+    "film.base.ITR.DWL": "kg/s/m",
+    "film.U": "m/s",
+    "film.base.H": "J/kg",
+    "film.wave.ITR.DFW": "Hz",
+    "film.base.ITR.DU": "m/s",
+    "drop.U": "m/s",
+    "film.H": "J/kg",
+    "film.wave.ITR.DF": "Hz",
+    "film.wave.W": "kg/s"
+  },
+  "missing_iteration_fields": {
+    "physical": {},
+    "initialization": {
+      "film.wave.ITR.DF": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  },
+  "iteration_note": "Absent actual DF is NaN, never substituted by initialized DFW. Final pseudo DF is authoritative for convergence.",
+  "reconstructed_methods": {
+    "film.W": "FourField.Film dependent getter evaluated using archived base/wave values, no native field method or solver execution",
+    "film.U": "FourField.Film dependent getter evaluated using archived base/wave values, no native field method or solver execution",
+    "film.H": "FourField.Film dependent getter evaluated using archived base/wave values, no native field method or solver execution"
+  },
+  "original_regression_fields": [
+    "film",
+    "drop",
+    "film.wave"
+  ],
+  "supplementary_regression_fields": [
+    "film.base",
+    "film.wave.FREQUENCY"
+  ],
+  "regression_note": "Upstream misspelled film.basefilm path skips actual base field; actual base and frequency are required supplementary checks here.",
+  "limitations": [
+    "No fresh MATLAB execution",
+    "Unknown producer source/CoolProp version",
+    "No experimental validation",
+    "Recovery does not itself compare native results"
+  ],
+  "files": {
+    "initialization.npz": "c5df9a64d17bdc3c4e5634e2bbab29dd446f8e131d749b56e701eadf9f31cf14",
+    "mixture/initialization.npz": "758adaa8e3db0813e5a53e2f01f16ed3a08f3129fe7c9fd27e5f968bd8e2f65b",
+    "mixture/manifest.json": "f475a78b30a4b95d167ac55b5cd363c3be27ee42f158e0341767a83a2aae7e0b",
+    "mixture/results.npz": "42d8eef4b7e2c3bbed40173cd7d459a2ffa83e3b7dfe8d1fa5079c92286a7a74",
+    "object_graph.json": "ada5c62a31a7739e8ad67914ab6d766a1010ce2c706d9ebf7ccd7b52b60167e4",
+    "raw_arrays.npz": "96776a656aa7ed467638e156d5fd07d0a746cd49a93466c9eb63bbcf339a9996",
+    "results.npz": "8dcbcee584221a31f17c96ee8bc04ba4044f66ea2f376795ec0036d2b0bd0803"
+  }
+}

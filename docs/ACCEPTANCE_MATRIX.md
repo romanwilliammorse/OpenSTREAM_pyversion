@@ -132,7 +132,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** TUTORIAL1/DEFAULT/TUTORIAL1/tutorial1.inp; 100 cells and 101 nodes; 9 original W/U/H profiles. The common case is 6 MPa, 0.07 kg/s, 87.5 kW and 5.5 m.
 
-**Missing or unverified:** Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy.
+**Missing or unverified:** Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy. After the scoped FourField precursor correction, all four original steady archive and initialization gates were rerun and pass with unchanged rtol=1e-8, atol=0. This is an archived-reference check, not a new MATLAB run.
 
 **Acceptance evidence required:**
 
@@ -141,7 +141,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Retain this immutable regression gate while extending reference cases.
 
-**Evidence:** `docs/ALL_BASELINES_VERIFICATION.md`; `outputs/baseline-parity-02/Mixture/comparison/comparison.json`; `outputs/baseline-parity-02/summary.json`; `tests/test_solver.py`; `outputs/verification/native-sensitivity-01/verification.json`
+**Evidence:** `docs/ALL_BASELINES_VERIFICATION.md`; `outputs/baseline-parity-02/Mixture/comparison/comparison.json`; `outputs/baseline-parity-02/summary.json`; `tests/test_solver.py`; `outputs/verification/native-sensitivity-01/verification.json`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/baseline-parity-after/summary.json`
 
 **Dependencies:** API-022, API-023
 
@@ -149,7 +149,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** TUTORIAL1/DEFAULT/TUTORIAL1/tutorial1.inp; 100 cells and 101 nodes; 6 original W/U/H profiles. The common case is 6 MPa, 0.07 kg/s, 87.5 kW and 5.5 m.
 
-**Missing or unverified:** Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy.
+**Missing or unverified:** Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy. After the scoped FourField precursor correction, all four original steady archive and initialization gates were rerun and pass with unchanged rtol=1e-8, atol=0. This is an archived-reference check, not a new MATLAB run.
 
 **Acceptance evidence required:**
 
@@ -158,7 +158,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Retain this immutable regression gate while extending reference cases.
 
-**Evidence:** `docs/ALL_BASELINES_VERIFICATION.md`; `outputs/baseline-parity-02/TwoFluid/comparison/comparison.json`; `outputs/baseline-parity-02/summary.json`
+**Evidence:** `docs/ALL_BASELINES_VERIFICATION.md`; `outputs/baseline-parity-02/TwoFluid/comparison/comparison.json`; `outputs/baseline-parity-02/summary.json`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/baseline-parity-after/summary.json`
 
 **Dependencies:** API-022, API-023
 
@@ -166,7 +166,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** TUTORIAL1/DEFAULT/TUTORIAL1/tutorial1.inp; 100 cells and 101 nodes; 6 original W/U/H profiles. The common case is 6 MPa, 0.07 kg/s, 87.5 kW and 5.5 m.
 
-**Missing or unverified:** Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. Its retained physical failure concerns separately recorded clipped-cell mass residuals (CORE-027), not area alone.
+**Missing or unverified:** Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. Its retained physical failure concerns separately recorded clipped-cell mass residuals (CORE-027), not area alone. After the scoped FourField precursor correction, all four original steady archive and initialization gates were rerun and pass with unchanged rtol=1e-8, atol=0. This is an archived-reference check, not a new MATLAB run.
 
 **Acceptance evidence required:**
 
@@ -175,7 +175,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Retain this immutable regression gate while extending reference cases.
 
-**Evidence:** `docs/ALL_BASELINES_VERIFICATION.md`; `outputs/baseline-parity-02/ThreeField/comparison/comparison.json`; `outputs/baseline-parity-02/summary.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `outputs/verification/annular-policy-01/reassessment.json`
+**Evidence:** `docs/ALL_BASELINES_VERIFICATION.md`; `outputs/baseline-parity-02/ThreeField/comparison/comparison.json`; `outputs/baseline-parity-02/summary.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `outputs/verification/annular-policy-01/reassessment.json`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/baseline-parity-after/summary.json`
 
 **Dependencies:** API-022, API-023
 
@@ -183,7 +183,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** TUTORIAL1/DEFAULT/TUTORIAL1/tutorial1.inp; 100 cells and 101 nodes; 9 original W/U/H profiles. The common case is 6 MPa, 0.07 kg/s, 87.5 kW and 5.5 m.
 
-**Missing or unverified:** Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. Its retained physical failure concerns separately recorded base/wave mass residuals (CORE-028), not area alone.
+**Missing or unverified:** Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. Its retained physical failure concerns separately recorded base/wave mass residuals (CORE-028), not area alone. After the scoped FourField precursor correction, all four original steady archive and initialization gates were rerun and pass with unchanged rtol=1e-8, atol=0. This is an archived-reference check, not a new MATLAB run. FourField maximum physical-state core relative error is 2.5396096926761515e-9 after the correction. Previously recorded separate residual failures remain open.
 
 **Acceptance evidence required:**
 
@@ -192,7 +192,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Retain this immutable regression gate while extending reference cases.
 
-**Evidence:** `docs/ALL_BASELINES_VERIFICATION.md`; `outputs/baseline-parity-02/FourField/comparison/comparison.json`; `outputs/baseline-parity-02/summary.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `outputs/verification/annular-policy-01/reassessment.json`
+**Evidence:** `docs/ALL_BASELINES_VERIFICATION.md`; `outputs/baseline-parity-02/FourField/comparison/comparison.json`; `outputs/baseline-parity-02/summary.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `outputs/verification/annular-policy-01/reassessment.json`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/baseline-parity-after/summary.json`; `outputs/verification/matched-replay-01/precursor_handle_audit.json`; `outputs/verification/matched-replay-01/precursor_change_audit.json`; `docs/replay_sawai_source_audit.md`
 
 **Dependencies:** API-022, API-023
 
@@ -200,16 +200,16 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** All 10/15/6/9 archived initialization states for Mixture/TwoFluid/ThreeField/FourField, including embedded mixture precursors; physical time is separate.
 
-**Missing or unverified:** Agreement is limited to stored TUTORIAL1 histories; the archive does not preserve every point iteration.
+**Missing or unverified:** Agreement is limited to stored TUTORIAL1 histories; the archive does not preserve every point iteration. The 2026-11-15 source audit confirms and corrects a FourField translation error: the outer sweep must use the physical mixture precursor, while aggregate and base/wave objects retain their distinct source handles. Only precursor selection changed; closures, governing equations, clipping, relaxation and tolerances did not. Source/MCOS topology evidence and focused tests support this correction; no new MATLAB execution was available. All archived initialization core gates still pass. Both ordered matched cases reproduced their frozen native arrays exactly before the correction. The repeated TwoFluid case is unchanged afterward; Sawai arrays change but its point failure remains. Independent read-only arithmetic audits pass 22,694 exact checks in each before/after replay, with all 400 original/replay dtype pairs identical and complete declared trace-node/time coverage. These checks do not independently validate raw closure returns or supply MATLAB iterates.
 
 **Acceptance evidence required:**
 
 - Continue exact matching of archived state counts, axes and core profiles at rtol=1e-8, atol=0.
 - Verify boundary-node exclusion, shallow aggregate handles and final initialization-to-physical transfer on additional cases.
 
-**Next action:** Extend reference export to retain point iterates where needed and branch-specific initialization cases.
+**Next action:** Retain archived histories and the corrected outer-sweep handle selection; obtain independent point traces for unresolved clipping/iteration behavior and other initialization branches.
 
-**Evidence:** `docs/ALL_BASELINES_VERIFICATION.md`; `outputs/baseline-parity-02/summary.json`; `docs/annular_reference_audit.md`
+**Evidence:** `docs/ALL_BASELINES_VERIFICATION.md`; `outputs/baseline-parity-02/summary.json`; `docs/annular_reference_audit.md`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/native-before-02/report.json`; `outputs/verification/matched-replay-01/native-after/report.json`; `outputs/verification/matched-replay-01/baseline-parity-after/summary.json`; `outputs/verification/matched-replay-01/precursor_handle_audit.json`; `outputs/verification/matched-replay-01/precursor_change_audit.json`; `docs/replay_sawai_source_audit.md`; `outputs/verification/matched-replay-01/native-before-02/independent_arithmetic_audit_02.json`; `outputs/verification/matched-replay-01/native-after/independent_arithmetic_audit.json`
 
 **Dependencies:** API-022, API-023, API-007
 
@@ -217,7 +217,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Strict relative-only physical-state failures: 14 Mixture, 6 TwoFluid, 2 ThreeField and 1 FourField; additional annular initialization iteration differences remain.
 
-**Missing or unverified:** Eleven mixture failures are accounted for by stored-state differences; three point-increment differences lack archived intermediate iterates. Other failures must retain their recorded status.
+**Missing or unverified:** Eleven mixture failures are accounted for by stored-state differences; three point-increment differences lack archived intermediate iterates. Other failures must retain their recorded status. The matched native replay and corrected archived baseline rerun do not close the 23 original supplementary physical-state diagnostic comparisons. Their failed status and original tolerances remain unchanged; native repeatability is not an independent MATLAB comparison.
 
 **Acceptance evidence required:**
 
@@ -227,7 +227,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Capture missing point iterates/property versions and perform quantity-by-quantity attribution before deciding any separately justified diagnostic acceptance policy.
 
-**Evidence:** `docs/ALL_BASELINES_VERIFICATION.md`; `docs/mixture_followup.md`; `outputs/mixture-followup/diagnostic-audit.json`; `outputs/baseline-parity-02`
+**Evidence:** `docs/ALL_BASELINES_VERIFICATION.md`; `docs/mixture_followup.md`; `outputs/mixture-followup/diagnostic-audit.json`; `outputs/baseline-parity-02`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/native-before-02/report.json`; `outputs/verification/matched-replay-01/native-after/report.json`; `outputs/verification/matched-replay-01/baseline-parity-after/summary.json`
 
 **Dependencies:** API-023, API-010
 
@@ -422,7 +422,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** OAF=WALLIS/WALLIS_SIMP/LEVITAN; OAFENTRAINED=RATIO/EQUILIBRIUM; transition width and node-dependent caching.
 
-**Missing or unverified:** WALLIS/cached sigmoid and selected split cases tested; alternative onset and wall-enhancement interactions lack references. Mesh changes alter the source sigmoid's physical width.
+**Missing or unverified:** WALLIS/cached sigmoid and selected split cases tested; alternative onset and wall-enhancement interactions lack references. Mesh changes alter the source sigmoid's physical width. The scoped FourField precursor correction preserves constructor/field handle identities and the source AFFNC scaling. Sawai entry 1 onset remains node 23,z 0.37904 m; its transition-region point failure remains.
 
 **Acceptance evidence required:**
 
@@ -431,7 +431,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Export onset location, cached transition function, split equations and closure convergence for alternative branches and meshes.
 
-**Evidence:** `tests/test_fields.py`; `outputs/threefield_variant_checks.json`; `docs/threefield_transient.md`; `docs/fourfield_notes.md`
+**Evidence:** `tests/test_fields.py`; `outputs/threefield_variant_checks.json`; `docs/threefield_transient.md`; `docs/fourfield_notes.md`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/native-after/report.json`; `outputs/verification/matched-replay-01/precursor_handle_audit.json`; `outputs/verification/matched-replay-01/precursor_change_audit.json`; `docs/replay_sawai_source_audit.md`
 
 **Dependencies:** API-006, API-007, CORE-037
 
@@ -507,7 +507,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** OAFFILMSPLIT=RATIO/EQUILIBRIUM; BASEEQTHICK=RISO/COEFS/YPLUS/MFVAL; WAVEFREQUENCY=EQUILIBRIUM/RELAXATION; EQSTROUHAL=RISO/SAWAI/MFVAL/CUSTOM/CSTFREQ.
 
-**Missing or unverified:** Actual base/frequency pass TUTORIAL1 additional comparisons; alternative cases run natively but branch-wide MATLAB equivalence is not established.
+**Missing or unverified:** Actual base/frequency pass TUTORIAL1 additional comparisons; alternative cases run natively but branch-wide MATLAB equivalence is not established. The 2026-11-15 source audit confirms and corrects a FourField translation error: the outer sweep must use the physical mixture precursor, while aggregate and base/wave objects retain their distinct source handles. Only precursor selection changed; closures, governing equations, clipping, relaxation and tolerances did not. Source/MCOS topology evidence and focused tests support this correction; no new MATLAB execution was available. The corrected, separately stored Sawai entry 1, intended tau=0.2 s, 100-cell replay still fails the final wave-flow-per-perimeter point criterion at nodes 24-26: maximum 7.675963972049171e-4 kg/(s m) versus unchanged ERRORWF=1e-4 kg/(s m), with a two-cycle at node 24. The confirmed handle error is therefore not a sufficient explanation of this failure. Other original 69 cases were not recomputed with the correction.
 
 **Acceptance evidence required:**
 
@@ -516,7 +516,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Create branch-isolating base thickness, wave geometry/frequency and zero-film references.
 
-**Evidence:** `tests/test_fourfield.py`; `outputs/fourfield_tutorials/verification.json`; `docs/fourfield_notes.md`; `docs/annular_reference_audit.md`
+**Evidence:** `tests/test_fourfield.py`; `outputs/fourfield_tutorials/verification.json`; `docs/fourfield_notes.md`; `docs/annular_reference_audit.md`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/native-after/report.json`; `outputs/verification/matched-replay-01/final_comparison.json`; `outputs/verification/matched-replay-01/precursor_handle_audit.json`; `outputs/verification/matched-replay-01/precursor_change_audit.json`; `docs/replay_sawai_source_audit.md`
 
 **Dependencies:** No additional matrix-row prerequisite.
 
@@ -524,7 +524,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** MOMENTBASE=ALGEBRAIC/EQUILIBRIUM/EQUILIBRIUMS/FULL/FULLNOP; MOMENTWAVE=ALGEBRAIC/EQUILIBRIUM/FULL; WAVEBASEINT=VAPORSHEAR/VAPORSHEARDROPMASS.
 
-**Missing or unverified:** Selected tutorials and cancellation tests exist; all branch combinations and source-order momentum residuals lack independent reference coverage. Exact zero-slip evaluates infinity times zero upstream.
+**Missing or unverified:** Selected tutorials and cancellation tests exist; all branch combinations and source-order momentum residuals lack independent reference coverage. Exact zero-slip evaluates infinity times zero upstream. The source-confirmed outer-sweep precursor correction affects the physical precursor used by velocity bounds/blending, without replacing the force laws. Broader branch equivalence and raw force-component order remain unverified.
 
 **Acceptance evidence required:**
 
@@ -533,7 +533,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Add source-equivalent boundary fixtures and reference traces for base/wave/drop source-order and constrained momentum branches.
 
-**Evidence:** `tests/test_fourfield.py`; `outputs/fourfield_tutorials/verification.json`; `docs/fourfield_notes.md`; `docs/fourfield_review.md`
+**Evidence:** `tests/test_fourfield.py`; `outputs/fourfield_tutorials/verification.json`; `docs/fourfield_notes.md`; `docs/fourfield_review.md`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/native-after/report.json`; `outputs/verification/matched-replay-01/precursor_handle_audit.json`; `outputs/verification/matched-replay-01/precursor_change_audit.json`; `docs/replay_sawai_source_audit.md`
 
 **Dependencies:** No additional matrix-row prerequisite.
 
@@ -592,7 +592,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Original steady sample, fully annular nodes; base/wave/drop inventories with source film aggregation.
 
-**Missing or unverified:** Archived fully annular phase-volume discrepancy is 11.241052%, reproduced natively, and is now supplemental information. The retained physical failure is the separately documented base/wave raw pseudo-time mass residuals of about 4.31e-4 and 4.24e-4 kg/s near clipping. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged.
+**Missing or unverified:** Archived fully annular phase-volume discrepancy is 11.241052%, reproduced natively, and is now supplemental information. The retained physical failure is the separately documented base/wave raw pseudo-time mass residuals of about 4.31e-4 and 4.24e-4 kg/s near clipping. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. Independent before/after trace arithmetic verifies observed mass proposals, relaxation and the source compensating-clip sequence for the selected Sawai nodes. This does not resolve the archived raw residual attribution or supply independent MATLAB source values. The corrected, separately stored Sawai entry 1, intended tau=0.2 s, 100-cell replay still fails the final wave-flow-per-perimeter point criterion at nodes 24-26: maximum 7.675963972049171e-4 kg/(s m) versus unchanged ERRORWF=1e-4 kg/(s m), with a two-cycle at node 24. The confirmed handle error is therefore not a sufficient explanation of this failure. Other original 69 cases were not recomputed with the correction.
 
 **Acceptance evidence required:**
 
@@ -601,7 +601,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Trace base-compensation mass residuals against the source update and independent arrays; retain reported inventories without imposing another closure model.
 
-**Evidence:** `docs/ALL_BASELINES_VERIFICATION.md`; `docs/annular_reference_audit.md`; `docs/fourfield_notes.md`; `tests/test_fourfield.py`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `outputs/verification/annular-policy-01/reassessment.json`
+**Evidence:** `docs/ALL_BASELINES_VERIFICATION.md`; `docs/annular_reference_audit.md`; `docs/fourfield_notes.md`; `tests/test_fourfield.py`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `outputs/verification/annular-policy-01/reassessment.json`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/native-after/report.json`; `outputs/verification/matched-replay-01/native-before-02/independent_arithmetic_audit_02.json`; `outputs/verification/matched-replay-01/native-after/independent_arithmetic_audit.json`
 
 **Dependencies:** CORE-018, CORE-029, CORE-037
 
@@ -609,7 +609,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** All frameworks; point, pseudo-time and physical-time semantics; FourField frequency criterion and source STATE versus enhanced native .converged.
 
-**Missing or unverified:** Some temporally steady iterates fail point convergence. Source FourField stopping omits SSCONVFW; native STATE preserves it while .converged additionally checks frequency/nested failures. Source initializes DFW but writes DF.
+**Missing or unverified:** Some temporally steady iterates fail point convergence. Source FourField stopping omits SSCONVFW; native STATE preserves it while .converged additionally checks frequency/nested failures. Source initializes DFW but writes DF. A separate preregistered TwoFluid 400-cell diagnostic changes only SSMAXITER from 30 to 60, retains the complete original 30-state prefix exactly, and converges at 39 s (40 states) with temporal liquid-enthalpy change 0.9414000483229756 J/kg < 1 J/kg. The matched original 30-state attempt still fails at 29 s with 2.0752344205975533 J/kg; its failure remains recorded. This establishes an insufficient initialization budget for the native case under its stated criteria, not fresh MATLAB equivalence, mesh independence or physical validation. Retained TwoFluid area checks still fail. The corrected, separately stored Sawai entry 1, intended tau=0.2 s, 100-cell replay still fails the final wave-flow-per-perimeter point criterion at nodes 24-26: maximum 7.675963972049171e-4 kg/(s m) versus unchanged ERRORWF=1e-4 kg/(s m), with a two-cycle at node 24. The confirmed handle error is therefore not a sufficient explanation of this failure. Other original 69 cases were not recomputed with the correction. Both ordered matched cases reproduced their frozen native arrays exactly before the correction. The repeated TwoFluid case is unchanged afterward; Sawai arrays change but its point failure remains. Independent read-only arithmetic audits pass 22,694 exact checks in each before/after replay, with all 400 original/replay dtype pairs identical and complete declared trace-node/time coverage. These checks do not independently validate raw closure returns or supply MATLAB iterates.
 
 **Acceptance evidence required:**
 
@@ -617,9 +617,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Require all applicable nested and point criteria plus independently calculated residuals for a numerically accepted solution.
 - Never use unused DFW zeros as frequency evidence or convert failure to pass by loosening controls.
 
-**Next action:** Create acceptance tests for exhaustion, false temporal convergence, inner failure, actual DF and each source stop branch with MATLAB traces.
+**Next action:** Preserve original failed attempts. Diagnose the remaining Sawai wave-flow two-cycle using matched native/source update traces and independent MATLAB iterates when available; retain point, temporal, nested and supplemental-diagnostic distinctions.
 
-**Evidence:** `tests/test_solver.py`; `tests/test_fourfield.py`; `docs/fourfield_notes.md`; `docs/threefield_transient.md`; `outputs/twofluid_mesh_checks.json`
+**Evidence:** `tests/test_solver.py`; `tests/test_fourfield.py`; `docs/fourfield_notes.md`; `docs/threefield_transient.md`; `outputs/twofluid_mesh_checks.json`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/native-before-02/report.json`; `outputs/verification/matched-replay-01/native-after/report.json`; `outputs/verification/matched-replay-01/twofluid-budget-60/report.json`; `outputs/verification/matched-replay-01/final_comparison.json`; `docs/replay_twofluid_source_audit.md`; `outputs/verification/matched-replay-01/native-before-02/independent_arithmetic_audit_02.json`; `outputs/verification/matched-replay-01/native-after/independent_arithmetic_audit.json`
 
 **Dependencies:** No additional matrix-row prerequisite.
 
@@ -645,16 +645,16 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Existing tightened 50/100/200-cell steady study and original transient; one wall.
 
-**Missing or unverified:** The 50-cell tightened run failed point convergence; 100/200-cell energy defects decrease but two successful grids do not establish an order. Transient time-step sensitivity is missing.
+**Missing or unverified:** The 50-cell tightened run failed point convergence; 100/200-cell energy defects decrease but two successful grids do not establish an order. Transient time-step sensitivity is missing. A separate preregistered TwoFluid 400-cell diagnostic changes only SSMAXITER from 30 to 60, retains the complete original 30-state prefix exactly, and converges at 39 s (40 states) with temporal liquid-enthalpy change 0.9414000483229756 J/kg < 1 J/kg. The matched original 30-state attempt still fails at 29 s with 2.0752344205975533 J/kg; its failure remains recorded. This establishes an insufficient initialization budget for the native case under its stated criteria, not fresh MATLAB equivalence, mesh independence or physical validation. Retained TwoFluid area checks still fail.
 
 **Acceptance evidence required:**
 
 - Exclude failed iterates from convergence-order estimates while retaining them in evidence.
 - Separate conservative product-rule error, iterative residuals, pressure/area coupling and physical-time error.
 
-**Next action:** Diagnose the coarse-grid failure and obtain a successful sequence before estimating discretization uncertainty.
+**Next action:** Retain the failed 50-cell tightened study and original 400-cell 30-state attempt. A longer native initialization resolves the latter numerical budget limit only; complete a predeclared successful mesh/time-step study and independent reference comparison.
 
-**Evidence:** `outputs/twofluid_mesh_checks.json`; `outputs/twofluid-transient-02/verification.json`; `docs/twofluid_notes.md`
+**Evidence:** `outputs/twofluid_mesh_checks.json`; `outputs/twofluid-transient-02/verification.json`; `docs/twofluid_notes.md`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/native-before-02/report.json`; `outputs/verification/matched-replay-01/native-after/report.json`; `outputs/verification/matched-replay-01/twofluid-budget-60/report.json`; `docs/replay_twofluid_source_audit.md`; `outputs/verification/matched-replay-01/native-before-02/independent_arithmetic_audit_02.json`; `outputs/verification/matched-replay-01/native-after/independent_arithmetic_audit.json`
 
 **Dependencies:** CORE-026, CORE-029
 
@@ -679,7 +679,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Physical transient and pseudo-time frequency relaxation, within one-wall fully annular applicability.
 
-**Missing or unverified:** No successful FourField mesh/time-step sensitivity sequence is recorded. Saturated enthalpy, wave bounds and frequency changes require separate checks.
+**Missing or unverified:** No accepted FourField mesh/time-step uncertainty assessment is established. Saturated enthalpy, wave bounds and frequency changes require separate checks. The frozen Le Corre campaign records selected mesh/tighter-iteration comparisons, but source AFFNC changes with grid and no asymptotic order or complete time-step uncertainty is established. The matched source correction does not close this requirement; The corrected, separately stored Sawai entry 1, intended tau=0.2 s, 100-cell replay still fails the final wave-flow-per-perimeter point criterion at nodes 24-26: maximum 7.675963972049171e-4 kg/(s m) versus unchanged ERRORWF=1e-4 kg/(s m), with a two-cycle at node 24. The confirmed handle error is therefore not a sufficient explanation of this failure. Other original 69 cases were not recomputed with the correction.
 
 **Acceptance evidence required:**
 
@@ -688,7 +688,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Run predeclared refinements after diagnosing the applicable balance and nested-convergence failures.
 
-**Evidence:** `outputs/fourfield-transient-audited/verification.json`; `docs/fourfield_notes.md`
+**Evidence:** `outputs/fourfield-transient-audited/verification.json`; `docs/fourfield_notes.md`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/native-after/report.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`
 
 **Dependencies:** CORE-028, CORE-029
 
@@ -730,16 +730,16 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Node/wall indices and slices, column-major copy, cache update order, shared handles, NaN min/max and fallback order, colon endpoints and interpolation tie/extrapolation rules.
 
-**Missing or unverified:** Selected tests and archived cases support specific semantics, but no complete cross-language boundary fixture set exists. Ambiguous interpolation cubic is explicitly unsupported.
+**Missing or unverified:** Selected tests and archived cases support specific semantics, but no complete cross-language boundary fixture set exists. Ambiguous interpolation cubic is explicitly unsupported. The 2026-11-15 source audit confirms and corrects a FourField translation error: the outer sweep must use the physical mixture precursor, while aggregate and base/wave objects retain their distinct source handles. Only precursor selection changed; closures, governing equations, clipping, relaxation and tolerances did not. Source/MCOS topology evidence and focused tests support this correction; no new MATLAB execution was available. Both ordered matched cases reproduced their frozen native arrays exactly before the correction. The repeated TwoFluid case is unchanged afterward; Sawai arrays change but its point failure remains. Independent read-only arithmetic audits pass 22,694 exact checks in each before/after replay, with all 400 original/replay dtype pairs identical and complete declared trace-node/time coverage. These checks do not independently validate raw closure returns or supply MATLAB iterates.
 
 **Acceptance evidence required:**
 
 - Assert shapes and mutability/alias relationships as well as numerical values.
 - Distinguish elementwise and matrix operations and preserve source NaN policy; flag invalid physical states rather than coercing them to plausible results.
 
-**Next action:** Generate independent MATLAB fixtures for singleton/multiwall arrays, subsets/duplicates, exact ties, NaNs and boundaries without changing expression order.
+**Next action:** Keep the explicit outer-sweep precursor and distinct field handles. Extend independent MATLAB fixtures beyond archived TUTORIAL1; resolve remaining scalar/array, interpolation, closure-return and expression-order gaps without changing equations.
 
-**Evidence:** `tests/test_solver.py`; `tests/test_fields.py`; `tests/test_mixture_mrm_semantics.py`; `tests/test_twofluid.py`; `tests/test_fourfield.py`; `docs/mixture_translation_audit.md`
+**Evidence:** `tests/test_solver.py`; `tests/test_fields.py`; `tests/test_mixture_mrm_semantics.py`; `tests/test_twofluid.py`; `tests/test_fourfield.py`; `docs/mixture_translation_audit.md`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/native-before-02/report.json`; `outputs/verification/matched-replay-01/native-after/report.json`; `outputs/verification/matched-replay-01/final_comparison.json`; `outputs/verification/matched-replay-01/precursor_handle_audit.json`; `outputs/verification/matched-replay-01/precursor_change_audit.json`; `docs/replay_sawai_source_audit.md`; `outputs/verification/matched-replay-01/native-before-02/independent_arithmetic_audit_02.json`; `outputs/verification/matched-replay-01/native-after/independent_arithmetic_audit.json`; `tests/test_matched_replay.py`; `tests/test_matched_replay_audit.py`
 
 **Dependencies:** API-006, API-007
 
@@ -1233,7 +1233,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** 2025 ICMF abstracts, 2025 NURETH paper, 2026 pinned solver and database revisions
 
-**Missing or unverified:** The 33 source-default and 36 diagnostic cases were frozen before predictions in commit 03fb5eaebc7b020f441c1b47544cd836978f8469, with paper/MLX/XML hashes and exact effective inputs. Historical March-2025 NURETH21.m is recovered, but it differs from the September-2026 companion and contains literal CONST and scalar RELAXTCOND incompatibilities. The selected historical solver revision is a date-based audit target, not established publication-producing provenance. Current-companion reconstruction is distinct from exact historical replay. R. W. Morse subsequently confirms 0.2 s as the intended Sawai setting; the actual historical plot-producing runtime is still unverified.
+**Missing or unverified:** The 33 source-default and 36 diagnostic cases were frozen before predictions in commit 03fb5eaebc7b020f441c1b47544cd836978f8469, with paper/MLX/XML hashes and exact effective inputs. Historical March-2025 NURETH21.m is recovered, but it differs from the September-2026 companion and contains literal CONST and scalar RELAXTCOND incompatibilities. The selected historical solver revision is a date-based audit target, not established publication-producing provenance. Current-companion reconstruction is distinct from exact historical replay. R. W. Morse subsequently confirms 0.2 s as the intended Sawai setting; the actual historical plot-producing runtime is still unverified. The later matched replay records a source-confirmed FourField handle correction against the pinned 2026 source. It does not identify the 2025 paper-producing runtime or convert the historical graphical comparison into numerical MATLAB equivalence.
 
 **Acceptance evidence required:**
 
@@ -1243,7 +1243,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Obtain the actual plot-producing generated inputs, solver/property versions and numerical reference arrays; reconcile the recovered script inconsistencies without inferring a constant-relaxation repair.
 
-**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:Chan2025.pdf#page=1`; `local-paper:LeCorre2025ICMF.pdf#page=2`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=8`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `references/paper/lecorre2025/source_history.json`; `references/paper/lecorre2025/NURETH21_2025_original.m`
+**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:Chan2025.pdf#page=1`; `local-paper:LeCorre2025ICMF.pdf#page=2`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=8`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `references/paper/lecorre2025/source_history.json`; `references/paper/lecorre2025/NURETH21_2025_original.m`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/precursor_handle_audit.json`; `outputs/verification/matched-replay-01/precursor_change_audit.json`; `docs/replay_sawai_source_audit.md`
 
 **Dependencies:** No additional matrix-row prerequisite.
 
@@ -1251,7 +1251,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Water; 6 MPa; 0.07 kg/s; 87.5 kW; 3.5 m heated plus 2 m adiabatic; explicit companion closure selections
 
-**Missing or unverified:** All four frozen companion demonstration frameworks executed and converged at 100 cells. Sampled readings from 21 of 22 Figure 3/4 series intersect graphical reading envelopes; three of five sampled FourField wave-velocity points do not (RMSE 0.499978 m/s). The 100-cell onset 0.715 m agrees graphically with the marker but differs from the paper-text 0.77 m. Across all 16 demonstration variants 15 converge natively and 12 were physically rejected under the original policy; annular area-only rejections are now superseded, while TwoFluid area policy is unchanged; the 400-cell TwoFluid run fails temporal liquid enthalpy (2.07523442 J/kg versus SSCONVH=1 at 29 s). Original numerical arrays and exact publication runtime remain absent; graphical agreement is not MATLAB equivalence. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged.
+**Missing or unverified:** All four frozen companion demonstration frameworks executed and converged at 100 cells. Sampled readings from 21 of 22 Figure 3/4 series intersect graphical reading envelopes; three of five sampled FourField wave-velocity points do not (RMSE 0.499978 m/s). The 100-cell onset 0.715 m agrees graphically with the marker but differs from the paper-text 0.77 m. Across all 16 demonstration variants 15 converge natively and 12 were physically rejected under the original policy; annular area-only rejections are now superseded, while TwoFluid area policy is unchanged; the 400-cell TwoFluid run fails temporal liquid enthalpy (2.07523442 J/kg versus SSCONVH=1 at 29 s). Original numerical arrays and exact publication runtime remain absent; graphical agreement is not MATLAB equivalence. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. A separate preregistered TwoFluid 400-cell diagnostic changes only SSMAXITER from 30 to 60, retains the complete original 30-state prefix exactly, and converges at 39 s (40 states) with temporal liquid-enthalpy change 0.9414000483229756 J/kg < 1 J/kg. The matched original 30-state attempt still fails at 29 s with 2.0752344205975533 J/kg; its failure remains recorded. This establishes an insufficient initialization budget for the native case under its stated criteria, not fresh MATLAB equivalence, mesh independence or physical validation. Retained TwoFluid area checks still fail. Original Figure 3/4 comparisons remain tied to the immutable pre-correction69-case campaign; this follow-up did not regenerate those paper figures.
 
 **Acceptance evidence required:**
 
@@ -1259,9 +1259,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Obtain independent numerical reference arrays for all plotted quantities and compare on matched coordinates with predeclared justified criteria.
 - Check convergence and applicable balances; retain source-shared physical failures separately from equivalence results.
 
-**Next action:** Recover independent demonstration arrays and original inputs; investigate the TwoFluid 400-cell temporal limit and its retained physical criteria. Preserve annular area diagnostics as information and all original attempts.
+**Next action:** Obtain independent demonstration arrays and original inputs. Preserve the corrected archive gates and separately resolved native400-cell initialization budget; investigate retained physical criteria and regenerate the affected publication cohort under a new manifest.
 
-**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=8`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=9`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `references/paper/lecorre2025/source_history.json`; `references/paper/lecorre2025/NURETH21_2025_original.m`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `references/paper/lecorre2025/physical_scope_review.json`; `outputs/validation/lecorre-2025-01/physical_scope_audit.json`; `references/paper/lecorre2025/metadata.json`; `references/paper/lecorre2025/digitized_curves.csv`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `outputs/verification/annular-policy-01/reassessment.json`
+**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=8`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=9`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `references/paper/lecorre2025/source_history.json`; `references/paper/lecorre2025/NURETH21_2025_original.m`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `references/paper/lecorre2025/physical_scope_review.json`; `outputs/validation/lecorre-2025-01/physical_scope_audit.json`; `references/paper/lecorre2025/metadata.json`; `references/paper/lecorre2025/digitized_curves.csv`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `outputs/verification/annular-policy-01/reassessment.json`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/twofluid-budget-60/report.json`; `outputs/verification/matched-replay-01/native-after/report.json`; `outputs/verification/matched-replay-01/baseline-parity-after/summary.json`
 
 **Dependencies:** EXP-001, EXP-013, API-023
 
@@ -1343,7 +1343,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Measurement, digitization/transcription, input and numerical uncertainty for each compared quantity
 
-**Missing or unverified:** NUREG/IA-0025 section 3.1, printed p.9 reports an absolute void-fraction error below 0.04 for its tests, without a stated confidence level or distribution; example input-error bounds apply to its 1982 reference. The pilot freezes descriptive-only comparisons and numerical sensitivity screens before predictions. Digitization/coordinate uncertainty, group-specific input propagation, correlations and a combined uncertainty budget remain unresolved. The 0.04 bound is not a total experimental acceptance tolerance; three mesh screens failed and no asymptotic numerical uncertainty was estimated. The Le Corre campaign adds descriptive measurement errors, pixel-bounded paper comparisons and 31/36 available convergence-qualified numerical sensitivity pairs. Pixel reading envelopes are not confidence intervals or experimental acceptance bands. No experimental threshold was fitted or adopted from plot guides, and no asymptotic numerical uncertainty is established. Source AFFNC scaling makes physical transition length proportional to dz^2/w, so refinement also changes blending and eligible domains. A labeled posthoc common-coordinate diagnostic covers 9/12 fully natively converged four-configuration sentinels; original pairwise metrics are retained and no convergence order or pure discretization uncertainty is claimed.
+**Missing or unverified:** NUREG/IA-0025 section 3.1, printed p.9 reports an absolute void-fraction error below 0.04 for its tests, without a stated confidence level or distribution; example input-error bounds apply to its 1982 reference. The pilot freezes descriptive-only comparisons and numerical sensitivity screens before predictions. Digitization/coordinate uncertainty, group-specific input propagation, correlations and a combined uncertainty budget remain unresolved. The 0.04 bound is not a total experimental acceptance tolerance; three mesh screens failed and no asymptotic numerical uncertainty was estimated. The Le Corre campaign adds descriptive measurement errors, pixel-bounded paper comparisons and 31/36 available convergence-qualified numerical sensitivity pairs. Pixel reading envelopes are not confidence intervals or experimental acceptance bands. No experimental threshold was fitted or adopted from plot guides, and no asymptotic numerical uncertainty is established. Source AFFNC scaling makes physical transition length proportional to dz^2/w, so refinement also changes blending and eligible domains. A labeled posthoc common-coordinate diagnostic covers 9/12 fully natively converged four-configuration sentinels; original pairwise metrics are retained and no convergence order or pure discretization uncertainty is claimed. The budget-only TwoFluid follow-up resolves one native iteration-budget failure but does not estimate spatial/time-step or experimental uncertainty. The scoped FourField correction requires separately versioned reruns before replacing any campaign-level estimate.
 
 **Acceptance evidence required:**
 
@@ -1354,7 +1354,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Next action:** Recover original dataset uncertainty and source digitization records, propagate input/property and coordinate uncertainty, and resolve failed numerical/physical gates before declaring uncertainty-qualified validation.
 
-**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `examples/bartolomey_pilot.json`; `tests/test_bartolomey_pilot_policy.py`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `outputs/validation/bartolomey-pilot-01/summary/summary.json`; `docs/BARTOLOMEY_PILOT.md`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `references/paper/lecorre2025/metadata.json`; `references/paper/lecorre2025/figures6_7/metadata.json`
+**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `examples/bartolomey_pilot.json`; `tests/test_bartolomey_pilot_policy.py`; `docs/BARTOLOMEY_SOURCE_REVIEW.md`; `outputs/validation/bartolomey-pilot-01/summary/summary.json`; `docs/BARTOLOMEY_PILOT.md`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `references/paper/lecorre2025/metadata.json`; `references/paper/lecorre2025/figures6_7/metadata.json`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/twofluid-budget-60/report.json`; `outputs/verification/matched-replay-01/native-after/report.json`
 
 **Dependencies:** No additional matrix-row prerequisite.
 
@@ -1362,7 +1362,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** All attempted cases, including nonconvergence, physical inconsistency and excluded measurements
 
-**Missing or unverified:** The existing Bartolomey 40-run accounting and its 29/32 sensitivity-screen result remain unchanged. The new frozen Le Corre campaign accounts for all 69 attempts: 69 executed, 63 natively converged, and 65 physically rejected under the original policy. The other runs remain not fully assessed, not full physical passes. The independent saved-array/XML/CSV audit passed 4708/4708 arithmetic/accounting checks. All failed convergence gates, unit conversions, missing/out-of-domain targets, graphical exclusions and source versions remain visible. Arithmetic-audit success does not establish experimental/MATLAB acceptance. The subsequent policy supersedes annular area-only rejection, while numerical failures, Bartolomey evidence and independent source-equation failures remain intact. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged.
+**Missing or unverified:** The existing Bartolomey 40-run accounting and its 29/32 sensitivity-screen result remain unchanged. The new frozen Le Corre campaign accounts for all 69 attempts: 69 executed, 63 natively converged, and 65 physically rejected under the original policy. The other runs remain not fully assessed, not full physical passes. The independent saved-array/XML/CSV audit passed 4708/4708 arithmetic/accounting checks. All failed convergence gates, unit conversions, missing/out-of-domain targets, graphical exclusions and source versions remain visible. Arithmetic-audit success does not establish experimental/MATLAB acceptance. The subsequent policy supersedes annular area-only rejection, while numerical failures, Bartolomey evidence and independent source-equation failures remain intact. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. Follow-up evidence is stored separately: a preserved failed observer attempt, two ordered matched cases before and after the source correction, one preregistered TwoFluid budget-only diagnostic, and four repeated archived-baseline gates. None replaces or is pooled into the original 69-case or Bartolomey campaigns. Both ordered matched cases reproduced their frozen native arrays exactly before the correction. The repeated TwoFluid case is unchanged afterward; Sawai arrays change but its point failure remains. Independent read-only arithmetic audits pass 22,694 exact checks in each before/after replay, with all 400 original/replay dtype pairs identical and complete declared trace-node/time coverage. These checks do not independently validate raw closure returns or supply MATLAB iterates.
 
 **Acceptance evidence required:**
 
@@ -1371,9 +1371,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Archive inputs, code/property/data versions, settings, sensitivity and comparison scripts.
 - Limit conclusions to measured quantities and tested fluid/geometry/regime/model configurations.
 
-**Next action:** Retain complete reporting while resolving the explicitly diagnosed native/physical failures; improve uncertainty and independent-reference evidence without filtering failed cases or counting repeated predictions as independent measurements.
+**Next action:** Keep original and corrected attempts separately versioned, including observer failures; resolve the remaining Sawai point-cycle and independent-reference/uncertainty gaps before promoting any broader validation claim.
 
-**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `outputs/validation/bartolomey-pilot-01/report.json`; `outputs/validation/bartolomey-pilot-01/summary/summary.json`; `outputs/validation/bartolomey-pilot-01/summary/all_runs.csv`; `tests/test_experimental_comparison.py`; `tests/test_bartolomey_pilot_policy.py`; `docs/BARTOLOMEY_PILOT.md`; `outputs/validation/bartolomey-pilot-01/independent_output_audit.json`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `references/paper/lecorre2025/physical_scope_review.json`; `outputs/validation/lecorre-2025-01/physical_scope_audit.json`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `outputs/verification/annular-policy-01/reassessment.json`
+**Evidence:** `docs/PARITY_COMPLETION.md`; `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `outputs/validation/bartolomey-pilot-01/report.json`; `outputs/validation/bartolomey-pilot-01/summary/summary.json`; `outputs/validation/bartolomey-pilot-01/summary/all_runs.csv`; `tests/test_experimental_comparison.py`; `tests/test_bartolomey_pilot_policy.py`; `docs/BARTOLOMEY_PILOT.md`; `outputs/validation/bartolomey-pilot-01/independent_output_audit.json`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `references/paper/lecorre2025/physical_scope_review.json`; `outputs/validation/lecorre-2025-01/physical_scope_audit.json`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `outputs/verification/annular-policy-01/reassessment.json`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/native-before-02/report.json`; `outputs/verification/matched-replay-01/native-after/report.json`; `outputs/verification/matched-replay-01/twofluid-budget-60/report.json`; `outputs/verification/matched-replay-01/final_comparison.json`; `outputs/verification/matched-replay-01/baseline-parity-after/summary.json`; `outputs/verification/matched-replay-01/native-before/instrumentation_failure.json`; `outputs/verification/matched-replay-01/native-before-02/independent_arithmetic_audit_02.json`; `outputs/verification/matched-replay-01/native-after/independent_arithmetic_audit.json`
 
 **Dependencies:** EXP-005, EXP-006, EXP-007, EXP-014
 
@@ -1400,7 +1400,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Pinned companion TS 20 cases: base-film thickness, wave velocity and wave number density
 
-**Missing or unverified:** All 21 source-selected TS 20 cases executed; all 52 present measured targets were paired and 11 missing targets retained. Source-default RMSE: base thickness 3.75347e-5 m, wave velocity 0.750053 m/s, number density 2.35742 m^-1. All 39 identifiable published solver dots and 15 distinct measured-film-flow correlation stars intersect their graphical envelopes. Across 33 base/sensitivity variants 33 converge natively and 33 recorded area-based failures under the original policy; these are now supplemental residuals, not acceptance failures. CONST-to-CONSTANT is an explicit runner-level spelling migration, never a global alias. This is calibration-associated descriptive reproduction; uncertainty, adequate adiabatic-development qualification and independent MATLAB execution remain unestablished. Source AFFNC scaling makes physical transition length proportional to dz^2/w, so refinement also changes blending and eligible domains. A labeled posthoc common-coordinate diagnostic covers 9/12 fully natively converged four-configuration sentinels; original pairwise metrics are retained and no convergence order or pure discretization uncertainty is claimed. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged.
+**Missing or unverified:** All 21 source-selected TS 20 cases executed; all 52 present measured targets were paired and 11 missing targets retained. Source-default RMSE: base thickness 3.75347e-5 m, wave velocity 0.750053 m/s, number density 2.35742 m^-1. All 39 identifiable published solver dots and 15 distinct measured-film-flow correlation stars intersect their graphical envelopes. Across 33 base/sensitivity variants 33 converge natively and 33 recorded area-based failures under the original policy; these are now supplemental residuals, not acceptance failures. CONST-to-CONSTANT is an explicit runner-level spelling migration, never a global alias. This is calibration-associated descriptive reproduction; uncertainty, adequate adiabatic-development qualification and independent MATLAB execution remain unestablished. Source AFFNC scaling makes physical transition length proportional to dz^2/w, so refinement also changes blending and eligible domains. A labeled posthoc common-coordinate diagnostic covers 9/12 fully natively converged four-configuration sentinels; original pairwise metrics are retained and no convergence order or pure discretization uncertainty is claimed. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. The later FourField outer-sweep precursor correction has not been rerun across the Wurtz cohort. The existing metrics and passed-scoped native evidence describe the frozen original source revision, not a new corrected-cohort assessment.
 
 **Acceptance evidence required:**
 
@@ -1409,9 +1409,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Establish adequate adiabatic development and numerical/physical eligibility at the observation location.
 - Label this as publication/calibration-associated reproduction; do not infer coverage of all 3-9 MPa or annular-geometry measurements from the selected 7 MPa plot groups.
 
-**Next action:** Clarify the preserved source AFFNC transition scaling and establish numerical uncertainty on matched domains, physical eligibility, adequate development and experimental uncertainty; compare independent MATLAB arrays and holdout groups separately from this calibrated 7 MPa pipe subset.
+**Next action:** Rerun the affected Wurtz cohort under a new versioned manifest after resolving source semantics; preserve original metrics. Establish numerical/experimental uncertainty, development eligibility and independent MATLAB/holdout evidence separately.
 
-**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=11`; `docs/PARITY_COMPLETION.md`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `references/paper/lecorre2025/physical_scope_review.json`; `outputs/validation/lecorre-2025-01/physical_scope_audit.json`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`; `references/paper/lecorre2025/figures6_7/digitized_figure6.csv`; `references/paper/lecorre2025/figures6_7/metadata.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `outputs/verification/annular-policy-01/reassessment.json`
+**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=11`; `docs/PARITY_COMPLETION.md`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `references/paper/lecorre2025/physical_scope_review.json`; `outputs/validation/lecorre-2025-01/physical_scope_audit.json`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`; `references/paper/lecorre2025/figures6_7/digitized_figure6.csv`; `references/paper/lecorre2025/figures6_7/metadata.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `outputs/verification/annular-policy-01/reassessment.json`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/precursor_handle_audit.json`; `outputs/verification/matched-replay-01/precursor_change_audit.json`; `docs/replay_sawai_source_audit.md`
 
 **Dependencies:** EXP-005, EXP-006, EXP-007, EXP-013, EXP-014, CORE-028, CORE-033
 
@@ -1419,7 +1419,7 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 
 **Scope:** Companion indices 1,2,5,6; 2.95 MPa; 4 mm tube; heated/adiabatic developing-wave measurements
 
-**Missing or unverified:** All four selected rows execute under the frozen paper 0.2 s and companion 0.1 s settings. Each variant compares 12/16 targets for each quantity, excluding four out-of-domain points per quantity. Velocity/period RMSE are 0.703085 m/s and 0.0252651 s (0.2 s), versus 0.764504 m/s and 0.0101516 s (0.1 s). Graphical envelopes intersect at 2/24 retained paper-curve readings for 0.2 s and 24/24 for 0.1 s; this records a code/text/graphic discrepancy, not an exact-runtime claim. R. W. Morse now confirms 0.2 s as the intended setting; the main Figure 7 uses it and a separate appendix preserves both branches. Source-default entries 1 and 5 fail final wave-flow-per-perimeter point changes despite temporal stopping; only six of 12 measurement pairs per quantity are natively converged. Across 20 base/sensitivity variants 15 converge and 20 recorded area-based physical rejection under the original policy; annular area-only rejection is now superseded. Measurement uncertainty, source coordinates, calibration independence and exact MATLAB reference remain unresolved. Source AFFNC scaling makes physical transition length proportional to dz^2/w, so refinement also changes blending and eligible domains. A labeled posthoc common-coordinate diagnostic covers 9/12 fully natively converged four-configuration sentinels; original pairwise metrics are retained and no convergence order or pure discretization uncertainty is claimed. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged.
+**Missing or unverified:** All four selected rows execute under the frozen paper 0.2 s and companion 0.1 s settings. Each variant compares 12/16 targets for each quantity, excluding four out-of-domain points per quantity. Velocity/period RMSE are 0.703085 m/s and 0.0252651 s (0.2 s), versus 0.764504 m/s and 0.0101516 s (0.1 s). Graphical envelopes intersect at 2/24 retained paper-curve readings for 0.2 s and 24/24 for 0.1 s; this records a code/text/graphic discrepancy, not an exact-runtime claim. R. W. Morse now confirms 0.2 s as the intended setting; the main Figure 7 uses it and a separate appendix preserves both branches. Source-default entries 1 and 5 fail final wave-flow-per-perimeter point changes despite temporal stopping; only six of 12 measurement pairs per quantity are natively converged. Across 20 base/sensitivity variants 15 converge and 20 recorded area-based physical rejection under the original policy; annular area-only rejection is now superseded. Measurement uncertainty, source coordinates, calibration independence and exact MATLAB reference remain unresolved. Source AFFNC scaling makes physical transition length proportional to dz^2/w, so refinement also changes blending and eligible domains. A labeled posthoc common-coordinate diagnostic covers 9/12 fully natively converged four-configuration sentinels; original pairwise metrics are retained and no convergence order or pure discretization uncertainty is claimed. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. The 2026-11-15 source audit confirms and corrects a FourField translation error: the outer sweep must use the physical mixture precursor, while aggregate and base/wave objects retain their distinct source handles. Only precursor selection changed; closures, governing equations, clipping, relaxation and tolerances did not. Source/MCOS topology evidence and focused tests support this correction; no new MATLAB execution was available. The corrected, separately stored Sawai entry 1, intended tau=0.2 s, 100-cell replay still fails the final wave-flow-per-perimeter point criterion at nodes 24-26: maximum 7.675963972049171e-4 kg/(s m) versus unchanged ERRORWF=1e-4 kg/(s m), with a two-cycle at node 24. The confirmed handle error is therefore not a sufficient explanation of this failure. Other original 69 cases were not recomputed with the correction. Existing Figure 7 errors and graphical comparisons still describe the original frozen campaign; no new experimental acceptance is inferred from this correction.
 
 **Acceptance evidence required:**
 
@@ -1428,9 +1428,9 @@ P0: establish trustworthy inputs/references and investigate blocking inconsisten
 - Check downstream-domain eligibility, annular masks, iterative convergence and spatial/temporal sensitivity where applicable.
 - Report the source-associated calibration status and all rejected/out-of-domain points.
 
-**Next action:** Retain author-confirmed intended 0.2 s and recover the historical plot-producing inputs to explain the preserved graphical discrepancy. Investigate transition-region point failures and numerical sensitivity, and obtain uncertainty/independent-reference evidence; do not impose annular volume closure.
+**Next action:** Retain intended 0.2 s, the original campaign and the corrected failed attempt. Diagnose the node 24-26 wave-flow two-cycle before a new cohort rerun; recover actual publication inputs, independent numerical references and measurement uncertainty.
 
-**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=11`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=12`; `docs/PARITY_COMPLETION.md`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `references/paper/lecorre2025/physical_scope_review.json`; `outputs/validation/lecorre-2025-01/physical_scope_audit.json`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`; `references/paper/lecorre2025/figures6_7/digitized_figure7.csv`; `references/paper/lecorre2025/figures6_7/metadata.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `outputs/verification/annular-policy-01/reassessment.json`
+**Evidence:** `docs/LITERATURE_ACCEPTANCE_REVIEW.md`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=11`; `local-paper:LeCorre2025OpenSTREAM.pdf#page=12`; `docs/PARITY_COMPLETION.md`; `docs/LECORRE_REPRODUCTION.md`; `examples/lecorre_reproduction.json`; `outputs/validation/lecorre-2025-01/report.json`; `outputs/validation/lecorre-2025-01/analysis/analysis.json`; `outputs/validation/lecorre-2025-01/independent_output_audit.json`; `outputs/validation/lecorre-2025-01/common_domain_diagnostic.json`; `outputs/verification/lecorre-paper-extraction-replay.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `references/paper/lecorre2025/physical_scope_review.json`; `outputs/validation/lecorre-2025-01/physical_scope_audit.json`; `tests/test_lecorre_database.py`; `tests/test_lecorre_runner.py`; `tests/test_lecorre_comparison.py`; `tests/test_lecorre_output_audit.py`; `tests/test_lecorre_common_domain.py`; `references/paper/lecorre2025/figures6_7/digitized_figure7.csv`; `references/paper/lecorre2025/figures6_7/metadata.json`; `docs/LECORRE_PHYSICAL_REVIEW.md`; `outputs/verification/annular-policy-01/reassessment.json`; `docs/MATCHED_DIAGNOSTIC_REPLAY.md`; `outputs/verification/matched-replay-01/native-before-02/report.json`; `outputs/verification/matched-replay-01/native-after/report.json`; `outputs/verification/matched-replay-01/final_comparison.json`; `outputs/verification/matched-replay-01/precursor_handle_audit.json`; `outputs/verification/matched-replay-01/precursor_change_audit.json`; `docs/replay_sawai_source_audit.md`; `outputs/verification/matched-replay-01/native-before-02/independent_arithmetic_audit_02.json`; `outputs/verification/matched-replay-01/native-after/independent_arithmetic_audit.json`
 
 **Dependencies:** EXP-005, EXP-006, EXP-007, EXP-012, EXP-013, EXP-014, CORE-028, CORE-033
 

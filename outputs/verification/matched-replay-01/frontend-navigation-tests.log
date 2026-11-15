@@ -1,0 +1,10 @@
+✔ Run validates and submits the same captured model and case despite subsequent editor changes (4.2153ms)
+✔ a stale history model load cannot overwrite a newer selection or unlock Run early (1.4554ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 92.4699

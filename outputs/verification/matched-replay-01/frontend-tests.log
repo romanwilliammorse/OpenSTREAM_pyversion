@@ -1,0 +1,17 @@
+✔ historical annular area flags display as informational without rewriting evidence (1.8831ms)
+✔ annular display preserves unrelated failures and never invents a physical pass (0.1741ms)
+✔ case labels use the original name tag without case normalization (0.1882ms)
+✔ case labels preserve Unicode and literal text, with explicit missing-name fallbacks (0.1417ms)
+✔ enthalpy and velocity groups exclude derivatives and diagnostic copies (0.8122ms)
+✔ reference overlays choose the matching time rather than the native array index (0.3556ms)
+✔ missing reference states are omitted without clamping to a different state (0.1475ms)
+✔ individual derivative profiles keep their derivative units (0.2249ms)
+✔ input import rejects unknown explicit schema versions (0.6006ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 94.2641

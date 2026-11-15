@@ -1,0 +1,26 @@
+{
+  "schema": "openstream-matched-reference-availability-v1",
+  "checked_date": "2026-11-15",
+  "matched_arrays_found": false,
+  "matlab_execution": "not run; user confirmed no current MATLAB access",
+  "local_probe": {
+    "commands": ["Get-Command matlab", "Get-ChildItem C:/Program Files/MATLAB", "Get-ChildItem C:/Program Files (x86)/MATLAB", "Get-ChildItem C:/MATLAB", "Get-ChildItem HKLM:/SOFTWARE/MathWorks", "Get-ChildItem HKLM:/SOFTWARE/WOW6432Node/MathWorks"],
+    "result": "No executable, default installation directory, or listed MathWorks registry key returned. This bounded probe does not establish availability on other computers or online accounts."
+  },
+  "local_reference_search": {
+    "roots": ["reference_exports", "references", "upstream/tests"],
+    "history": "Both upstream and database clones report is-shallow-repository=false. Inspected all available local Git refs for MAT/NPZ/H5 file history.",
+    "found": "Four TUTORIAL1 regression MATLAB object archives and their existing recovered portable arrays; upstream archive introduction 1ca3733f5128b0bdb509ec29d15db8d721b63aec. Database binary history comprises measurement/lookup data, not these matched solver results.",
+    "limit": "TUTORIAL1 100-cell archives do not match Sawai case1 tau0.2 or the 400-cell demo. No remote private archives, user MATLAB Online account, or unpublished producer files were searched."
+  },
+  "reuse_search": [
+    {"url":"https://github.com/OpenSTREAM-solvers/openstream","query":"GitHub repository search OpenSTREAM MATLAB","license":"MIT","maintained":"Not archived; API pushed_at 2026-09-25","compatibility":"Exact governing source and framework solver reused at frozen pin; existing local portable exporter reused with explicit adaptation. No external equivalent-output arrays found."},
+    {"url":"https://github.com/OpenSTREAM-solvers/openstream-database","query":"GitHub repository search OpenSTREAM MATLAB","license":"MIT","compatibility":"Exact case/measurement source at frozen database pin; not a runtime MATLAB-reference export service."},
+    {"url":"https://github.com/romanwilliammorse/OpenSTREAM_pyversion","query":"GitHub repository search OpenSTREAM MATLAB","compatibility":"This same project; not independent verification or an external port to substitute."},
+    {"url":"https://huggingface.co/api/models?search=OpenSTREAM&limit=100","query":"OpenSTREAM","result":"empty"},
+    {"url":"https://huggingface.co/api/datasets?search=OpenSTREAM&limit=100","query":"OpenSTREAM","result":"empty"},
+    {"url":"https://huggingface.co/spaces/yashm/OpenStream","license":"MIT in card","last_modified":"2024-03-11","compatibility":"Inspected app.py: generic Streamlit dataset summaries and plots, no OpenSTREAM thermal-hydraulic solver/reference arrays. Not reused."},
+    {"url":"https://huggingface.co/spaces/cyEdward/open_streamlit","license":"other in card, no compatible reuse license established","last_modified":"2026-04-22","compatibility":"Inspected app.py: Taiwan MOPS financial-data query application, unrelated physics and data format. Not reused."}
+  ],
+  "search_limit": "Scoped repository/code/web and Hugging Face exact-name API searches are not proof that no reusable project exists anywhere. No unrelated simulation data or graphics were substituted for matched MATLAB results."
+}

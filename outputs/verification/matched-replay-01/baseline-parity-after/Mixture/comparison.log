@@ -1,0 +1,37 @@
+{
+  "upstream_regression_passed": true,
+  "initialization_core_passed": true,
+  "physical_supplemental_failures": [
+    "DP.Acc_s",
+    "DP.Acc_t",
+    "DP.Acc_z",
+    "DPSUM.Acc_s",
+    "DPSUM.Acc_t",
+    "ITR.DH",
+    "ITR.DP",
+    "ITR.DW",
+    "MDER.H",
+    "MDER.H_t",
+    "MDER.H_z",
+    "MDER.U",
+    "MDER.U_t",
+    "MDER.U_z"
+  ],
+  "initialization_supplemental_failures": [
+    "DP.Acc_s",
+    "DP.Acc_t",
+    "DP.Acc_z",
+    "DPSUM.Acc_s",
+    "DPSUM.Acc_t",
+    "ITR.DH",
+    "ITR.DP",
+    "ITR.DW",
+    "MDER.H",
+    "MDER.H_t",
+    "MDER.H_z",
+    "MDER.U",
+    "MDER.U_t",
+    "MDER.U_z"
+  ],
+  "output": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\verification\\matched-replay-01\\baseline-parity-after\\Mixture\\comparison"
+}

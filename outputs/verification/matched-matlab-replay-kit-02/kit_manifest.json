@@ -1,0 +1,629 @@
+{
+  "schema": "openstream-matched-matlab-kit-v1",
+  "status": "static-tested; MATLAB execution not established",
+  "frozen_manifest_sha256": "c4516d07d8e1d0c06bb6df35376de57a714460beb59cc804c2fba7c46771e4c4",
+  "pins": {
+    "upstream_commit": "a614c7173822a93c1e64ac28d1541cbac028cbd8",
+    "wrapper_commit": "a7c40902ff66faf6ed668986398bb1b9faa16e13",
+    "database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+    "baseline_commit": "787839a27e2ffebdbc1e3a73eaa8ec5273cbe580"
+  },
+  "source_files": [
+    {
+      "path": "+InputEnums/BASEEQTHICK.m",
+      "pristine_sha256": "666d7bb1c241e5ce273bd131fa0292fbbb272ec3925bdf84b779c4225b0d0afe",
+      "executable_sha256": "666d7bb1c241e5ce273bd131fa0292fbbb272ec3925bdf84b779c4225b0d0afe"
+    },
+    {
+      "path": "+InputEnums/BTHTM.m",
+      "pristine_sha256": "75c04c3a1cd126a1d7246187fa25bc2c314496d1c12ac0f3ebc5d5d2d999110b",
+      "executable_sha256": "75c04c3a1cd126a1d7246187fa25bc2c314496d1c12ac0f3ebc5d5d2d999110b"
+    },
+    {
+      "path": "+InputEnums/BTMTM.m",
+      "pristine_sha256": "6f8c9a35347f578a87130f408a8691ee3b7c741d82201d396745bcf79c7f2b64",
+      "executable_sha256": "6f8c9a35347f578a87130f408a8691ee3b7c741d82201d396745bcf79c7f2b64"
+    },
+    {
+      "path": "+InputEnums/BUBBLEDRAG.m",
+      "pristine_sha256": "d96d944e906f64f70bb26900d469b2126493d67a137914bef73b4ee4f6c3fb71",
+      "executable_sha256": "d96d944e906f64f70bb26900d469b2126493d67a137914bef73b4ee4f6c3fb71"
+    },
+    {
+      "path": "+InputEnums/CBT.m",
+      "pristine_sha256": "7040d2856c893efd0570ed0eb3bd11758a1204fce280386133d71e87927f9e3f",
+      "executable_sha256": "7040d2856c893efd0570ed0eb3bd11758a1204fce280386133d71e87927f9e3f"
+    },
+    {
+      "path": "+InputEnums/DEPENHANCEMENT.m",
+      "pristine_sha256": "b3ff26621e7960d7ef710ec2327cdddb2062ec55d87ad3b89e21a911cb9f12db",
+      "executable_sha256": "b3ff26621e7960d7ef710ec2327cdddb2062ec55d87ad3b89e21a911cb9f12db"
+    },
+    {
+      "path": "+InputEnums/DEPOSITION.m",
+      "pristine_sha256": "820bf2bf081e7314e9e106a515b1df0e12eb40b3d829accc796ef7a5f65d8bf4",
+      "executable_sha256": "820bf2bf081e7314e9e106a515b1df0e12eb40b3d829accc796ef7a5f65d8bf4"
+    },
+    {
+      "path": "+InputEnums/DROPDRAG.m",
+      "pristine_sha256": "5f1906f01564d2c642198e9b0cc529a756f63075cbb5f2ec15606d5d79847ce8",
+      "executable_sha256": "5f1906f01564d2c642198e9b0cc529a756f63075cbb5f2ec15606d5d79847ce8"
+    },
+    {
+      "path": "+InputEnums/ENTRAINMENT.m",
+      "pristine_sha256": "98762fa92768cce2da9afd9cd84318c60ca14f3465406cd19179e70371caa1f2",
+      "executable_sha256": "98762fa92768cce2da9afd9cd84318c60ca14f3465406cd19179e70371caa1f2"
+    },
+    {
+      "path": "+InputEnums/EQSTROUHAL.m",
+      "pristine_sha256": "52fb301d12538613aa2468ea98842852a53c96ef9b094d0b5e3359a6dd780c04",
+      "executable_sha256": "52fb301d12538613aa2468ea98842852a53c96ef9b094d0b5e3359a6dd780c04"
+    },
+    {
+      "path": "+InputEnums/FLUIDPROPERTIES.m",
+      "pristine_sha256": "c0c74a5ea28e916ffd2e9fbd02c04eb8dacbb0952f31214635da4fdd7e4d2075",
+      "executable_sha256": "c0c74a5ea28e916ffd2e9fbd02c04eb8dacbb0952f31214635da4fdd7e4d2075"
+    },
+    {
+      "path": "+InputEnums/INTAREA.m",
+      "pristine_sha256": "7f150cdb0c17453d4da6f98677ea9bcbdbf32a7bcf1a3a452564e8c2d1cfc637",
+      "executable_sha256": "7f150cdb0c17453d4da6f98677ea9bcbdbf32a7bcf1a3a452564e8c2d1cfc637"
+    },
+    {
+      "path": "+InputEnums/INTLENGTH.m",
+      "pristine_sha256": "19013c084d226d50a41b4f09340ca20831610b0b9aa60f578b892d717dbf7ebd",
+      "executable_sha256": "19013c084d226d50a41b4f09340ca20831610b0b9aa60f578b892d717dbf7ebd"
+    },
+    {
+      "path": "+InputEnums/INTNU.m",
+      "pristine_sha256": "0b6a9e4be4b86caa698c2b60636fda2254d2ec421f7447fbe72a971aa9abe8ae",
+      "executable_sha256": "0b6a9e4be4b86caa698c2b60636fda2254d2ec421f7447fbe72a971aa9abe8ae"
+    },
+    {
+      "path": "+InputEnums/INTTRANSH.m",
+      "pristine_sha256": "d19fffa5c9ab3224695c678d818f461bfcf84dc162daaaa2585d13ca32f28662",
+      "executable_sha256": "d19fffa5c9ab3224695c678d818f461bfcf84dc162daaaa2585d13ca32f28662"
+    },
+    {
+      "path": "+InputEnums/LOCRELVEL.m",
+      "pristine_sha256": "6a998e45b0639de9d01283412dc69b14175d18dcb03c458a75c6b06e51b60861",
+      "executable_sha256": "6a998e45b0639de9d01283412dc69b14175d18dcb03c458a75c6b06e51b60861"
+    },
+    {
+      "path": "+InputEnums/MFBT.m",
+      "pristine_sha256": "af200aa68d7e886aa8b4cfd7ed1d84c9fefdec19976388a80e0645f19a1fab2e",
+      "executable_sha256": "af200aa68d7e886aa8b4cfd7ed1d84c9fefdec19976388a80e0645f19a1fab2e"
+    },
+    {
+      "path": "+InputEnums/MOMENTBASE.m",
+      "pristine_sha256": "083c7b32014c902f98aa62d1c0228a1ca72233bb8ae24452f72f5a8c5af58238",
+      "executable_sha256": "083c7b32014c902f98aa62d1c0228a1ca72233bb8ae24452f72f5a8c5af58238"
+    },
+    {
+      "path": "+InputEnums/MOMENTDROP.m",
+      "pristine_sha256": "80d1c371e6b446f0b5d5d2c96558d4c5a61adffe6aa7b28e6e7f5fb4c3955322",
+      "executable_sha256": "80d1c371e6b446f0b5d5d2c96558d4c5a61adffe6aa7b28e6e7f5fb4c3955322"
+    },
+    {
+      "path": "+InputEnums/MOMENTFILM.m",
+      "pristine_sha256": "14cd50953c0eacee19755502537aa14ab9d682c780f458794461d608f1b9c031",
+      "executable_sha256": "14cd50953c0eacee19755502537aa14ab9d682c780f458794461d608f1b9c031"
+    },
+    {
+      "path": "+InputEnums/MOMENTGAS.m",
+      "pristine_sha256": "25206de8b406ca1541614d33ce9fb203eea4b205d4bbb973845251d5285d8214",
+      "executable_sha256": "25206de8b406ca1541614d33ce9fb203eea4b205d4bbb973845251d5285d8214"
+    },
+    {
+      "path": "+InputEnums/MOMENTLIQUID.m",
+      "pristine_sha256": "c4bf2b3e715d75423d4f0b17c5ab0d88f9b9dca218a64531affd55b4c9b370b3",
+      "executable_sha256": "c4bf2b3e715d75423d4f0b17c5ab0d88f9b9dca218a64531affd55b4c9b370b3"
+    },
+    {
+      "path": "+InputEnums/MOMENTWAVE.m",
+      "pristine_sha256": "39dba3d48748d3f39e25ca6094d9eb1ca4980db0fa01eb134c91dd529ed9ec11",
+      "executable_sha256": "39dba3d48748d3f39e25ca6094d9eb1ca4980db0fa01eb134c91dd529ed9ec11"
+    },
+    {
+      "path": "+InputEnums/MRMTIMEINT.m",
+      "pristine_sha256": "00af1c11af263b1ec85bbc96d0367882fec79447dfe304c48e1740209365658f",
+      "executable_sha256": "00af1c11af263b1ec85bbc96d0367882fec79447dfe304c48e1740209365658f"
+    },
+    {
+      "path": "+InputEnums/NEARWALLH.m",
+      "pristine_sha256": "dcb8594a2a82e474c3e19c9977616a39bddffcf015d386836ddeed45b3f6976f",
+      "executable_sha256": "dcb8594a2a82e474c3e19c9977616a39bddffcf015d386836ddeed45b3f6976f"
+    },
+    {
+      "path": "+InputEnums/NEARWALLRELAX.m",
+      "pristine_sha256": "59dc73715faf659ce6981696ab4a54e25ed43b091e0ae682d11617bb914aeeeb",
+      "executable_sha256": "59dc73715faf659ce6981696ab4a54e25ed43b091e0ae682d11617bb914aeeeb"
+    },
+    {
+      "path": "+InputEnums/OAF.m",
+      "pristine_sha256": "55e32c1b94efffe10e4fe53a74761dd418aab9fd5660adf733f9f90852c7416e",
+      "executable_sha256": "55e32c1b94efffe10e4fe53a74761dd418aab9fd5660adf733f9f90852c7416e"
+    },
+    {
+      "path": "+InputEnums/OAFENTRAINED.m",
+      "pristine_sha256": "ffb440fe87abb91242b9443bffa941b13d849bc72f4f354f87efc1d250bd2a05",
+      "executable_sha256": "ffb440fe87abb91242b9443bffa941b13d849bc72f4f354f87efc1d250bd2a05"
+    },
+    {
+      "path": "+InputEnums/OAFFILMSPLIT.m",
+      "pristine_sha256": "79ee0e5dc49a71e536958f73f13156dd22a486f0e66e65b546e5a21227bc882c",
+      "executable_sha256": "79ee0e5dc49a71e536958f73f13156dd22a486f0e66e65b546e5a21227bc882c"
+    },
+    {
+      "path": "+InputEnums/SPHTM.m",
+      "pristine_sha256": "d3291a67799f673b3dcda196ae8e5025358c082565de604301d70994f45b9462",
+      "executable_sha256": "d3291a67799f673b3dcda196ae8e5025358c082565de604301d70994f45b9462"
+    },
+    {
+      "path": "+InputEnums/SPMTM.m",
+      "pristine_sha256": "501f9cd9a3dc938e28723c914d7c936e31fa2c96f0f42ef59df676f68e87d808",
+      "executable_sha256": "501f9cd9a3dc938e28723c914d7c936e31fa2c96f0f42ef59df676f68e87d808"
+    },
+    {
+      "path": "+InputEnums/THERMALNONEQ.m",
+      "pristine_sha256": "40098f8cde91282954d58c2924c47d061f7bbba67526b01e417fabbb1daa09ce",
+      "executable_sha256": "40098f8cde91282954d58c2924c47d061f7bbba67526b01e417fabbb1daa09ce"
+    },
+    {
+      "path": "+InputEnums/THERMALRELAX.m",
+      "pristine_sha256": "5d64b99acfd99dc79c5f65581265f589aaa865b3072d97ef3ff8b366c70c9540",
+      "executable_sha256": "5d64b99acfd99dc79c5f65581265f589aaa865b3072d97ef3ff8b366c70c9540"
+    },
+    {
+      "path": "+InputEnums/THINFILMFRIC.m",
+      "pristine_sha256": "b22e471569731fa9d5554910a63a3d5497455d9ca04503d8c902cfe1cfc164bf",
+      "executable_sha256": "b22e471569731fa9d5554910a63a3d5497455d9ca04503d8c902cfe1cfc164bf"
+    },
+    {
+      "path": "+InputEnums/TPFM.m",
+      "pristine_sha256": "2ceba0011ce4f384b1ff26a347cb1fa3050e117db3b0aa995eca83a74a42524e",
+      "executable_sha256": "2ceba0011ce4f384b1ff26a347cb1fa3050e117db3b0aa995eca83a74a42524e"
+    },
+    {
+      "path": "+InputEnums/TPHTM.m",
+      "pristine_sha256": "0ccbd68f7f55431b00aa02db50092005677d0082641d583a5fd565cdd9650438",
+      "executable_sha256": "0ccbd68f7f55431b00aa02db50092005677d0082641d583a5fd565cdd9650438"
+    },
+    {
+      "path": "+InputEnums/TPKM.m",
+      "pristine_sha256": "d93fbc1f039b4f0903dfe424291f91bedade243844a57e330af62d051b2daf67",
+      "executable_sha256": "d93fbc1f039b4f0903dfe424291f91bedade243844a57e330af62d051b2daf67"
+    },
+    {
+      "path": "+InputEnums/VAPORFRIC.m",
+      "pristine_sha256": "8827c8b3944ad964e1ca7c5893f8e6a01b2e9a5d3bd80f84bec716bc33a8fa8b",
+      "executable_sha256": "8827c8b3944ad964e1ca7c5893f8e6a01b2e9a5d3bd80f84bec716bc33a8fa8b"
+    },
+    {
+      "path": "+InputEnums/VOID.m",
+      "pristine_sha256": "69e0b7c956c1fea80e25c63d8324e007ae1500bb934a3ecc61f113db0080116b",
+      "executable_sha256": "69e0b7c956c1fea80e25c63d8324e007ae1500bb934a3ecc61f113db0080116b"
+    },
+    {
+      "path": "+InputEnums/WAVEBASEINT.m",
+      "pristine_sha256": "8b0a0bc639785aef8b096131ecbe5a0c4dc0f37a00c63d809c35a2da632faa72",
+      "executable_sha256": "8b0a0bc639785aef8b096131ecbe5a0c4dc0f37a00c63d809c35a2da632faa72"
+    },
+    {
+      "path": "+InputEnums/WAVEFREQUENCY.m",
+      "pristine_sha256": "503c28c00eb4009322a6280589abfd61be71321681e7d26951bead5032187d0d",
+      "executable_sha256": "503c28c00eb4009322a6280589abfd61be71321681e7d26951bead5032187d0d"
+    },
+    {
+      "path": "+Inputs/BoundaryConditions.m",
+      "pristine_sha256": "38646932a9b5ba757d3cf37719aba4526fca5a0ef0e4802953efcc2182103cc1",
+      "executable_sha256": "38646932a9b5ba757d3cf37719aba4526fca5a0ef0e4802953efcc2182103cc1"
+    },
+    {
+      "path": "+Inputs/FluidProperties.m",
+      "pristine_sha256": "17e5c08940bbf0ea80fc31960306ca2428d34ea37c0cfb91b488cd5a5523afea",
+      "executable_sha256": "17e5c08940bbf0ea80fc31960306ca2428d34ea37c0cfb91b488cd5a5523afea"
+    },
+    {
+      "path": "+Inputs/Geometry.m",
+      "pristine_sha256": "743a5d24b29fa816a40c79f83142813e106df2074ebc867539a54a2c026cebab",
+      "executable_sha256": "743a5d24b29fa816a40c79f83142813e106df2074ebc867539a54a2c026cebab"
+    },
+    {
+      "path": "+Inputs/Input.m",
+      "pristine_sha256": "79f169ec5c6167d0df28133c3fa943bb8cb79ffe16e9c974eb90e666daa20eb7",
+      "executable_sha256": "79f169ec5c6167d0df28133c3fa943bb8cb79ffe16e9c974eb90e666daa20eb7"
+    },
+    {
+      "path": "+Inputs/InputSet.m",
+      "pristine_sha256": "89d9d7cbe7bc222ce058efe5dbd8caa13e386bceec83d083b6d4aded9f734e22",
+      "executable_sha256": "89d9d7cbe7bc222ce058efe5dbd8caa13e386bceec83d083b6d4aded9f734e22"
+    },
+    {
+      "path": "+Inputs/Model.m",
+      "pristine_sha256": "63ab0b3754ef47620439489fe5c667c5cd1648a682295b9cfc511f4d47027354",
+      "executable_sha256": "63ab0b3754ef47620439489fe5c667c5cd1648a682295b9cfc511f4d47027354"
+    },
+    {
+      "path": "+Inputs/Options.m",
+      "pristine_sha256": "0216c291d08b89e93d057faf24562b78aeca27a96cdca019cc1166d2a7ac553f",
+      "executable_sha256": "0216c291d08b89e93d057faf24562b78aeca27a96cdca019cc1166d2a7ac553f"
+    },
+    {
+      "path": "+Session/Log.m",
+      "pristine_sha256": "23ef4e0b28df6bce232ba2c349014281343230defe6f76d3692499d7afa34979",
+      "executable_sha256": "23ef4e0b28df6bce232ba2c349014281343230defe6f76d3692499d7afa34979"
+    },
+    {
+      "path": "+Session/LogMode.m",
+      "pristine_sha256": "289a667ba32ab8500d05390f137224a3b4bec2ece6f496353d688fc09303a088",
+      "executable_sha256": "289a667ba32ab8500d05390f137224a3b4bec2ece6f496353d688fc09303a088"
+    },
+    {
+      "path": "+Session/Session.m",
+      "pristine_sha256": "46fabb6f52e4665ac766d0079633004509107d77b710ed228e4a5aa04af0d8cf",
+      "executable_sha256": "46fabb6f52e4665ac766d0079633004509107d77b710ed228e4a5aa04af0d8cf"
+    },
+    {
+      "path": "+Session/isLegalPath.m",
+      "pristine_sha256": "7851c9628b8abf4256b1e94d071654a137229fdf4a8d362d7270a7fca4e68e7b",
+      "executable_sha256": "7851c9628b8abf4256b1e94d071654a137229fdf4a8d362d7270a7fca4e68e7b"
+    },
+    {
+      "path": "+Solvers/+FourField/@FourFieldSolver/FourFieldSolver.m",
+      "pristine_sha256": "795be0c408253ddadf53422aacf1a46b510032e387d33cee18dda8e4ac89ecdb",
+      "executable_sha256": "795be0c408253ddadf53422aacf1a46b510032e387d33cee18dda8e4ac89ecdb"
+    },
+    {
+      "path": "+Solvers/+FourField/@FourFieldSolver/solve.m",
+      "pristine_sha256": "a950b27b85f5ece3a09de686d8ffe6fe8ea5fe1700bcc2c6e86243f3f17425b9",
+      "executable_sha256": "c6b2371b84964c7c3ce11b900c6f67a1932890b58226b6ee4a0ecc7a919c3033",
+      "instrumentation": [
+        {
+          "anchor": "if all([dWLb < options.ERRORWF, dUb < options.ERRORUF, dWLw < options.ERRORWF, dUw < options.ERRORUF, dFw < options.ERRORFW, dUd < options.ERRORUD])",
+          "inserted_text": "                % MATCHED_REPLAY_OBSERVATION_BEGIN point\n                if ismember(zIdx,[21 22 23 24 25 26 27 28 29])\n                    matched_replay_trace('point',struct('time_s',film(tIdx).TIME, ...\n                    'dt_s',DT, ...\n                    'temporal_index_one_based',tIdx, ...\n                    'solveINIT',solveINIT, ...\n                    'node_zero_based',zIdx-1, ...\n                    'node_one_based',zIdx, ...\n                    'z_m',ffSolver.Z(zIdx), ...\n                    'iteration',itr, ...\n                    'base_W',base(tIdx).W(zIdx,:), ...\n                    'base_U',base(tIdx).U(zIdx,:), ...\n                    'base_H',base(tIdx).H(zIdx,:), ...\n                    'wave_W',wave(tIdx).W(zIdx,:), ...\n                    'wave_U',wave(tIdx).U(zIdx,:), ...\n                    'wave_H',wave(tIdx).H(zIdx,:), ...\n                    'wave_F',wave(tIdx).FREQUENCY(zIdx,:), ...\n                    'drop_W',drop(tIdx).W(zIdx), ...\n                    'drop_U',drop(tIdx).U(zIdx), ...\n                    'drop_H',drop(tIdx).H(zIdx), ...\n                    'dWLb',dWLb, ...\n                    'dUb',dUb, ...\n                    'dWLw',dWLw, ...\n                    'dUw',dUw, ...\n                    'dFw',dFw, ...\n                    'dUd',dUd, ...\n                    'threshold_dWLb',options.ERRORWF, ...\n                    'threshold_dUb',options.ERRORUF, ...\n                    'threshold_dWLw',options.ERRORWF, ...\n                    'threshold_dUw',options.ERRORUF, ...\n                    'threshold_dFw',options.ERRORFW, ...\n                    'threshold_dUd',options.ERRORUD, ...\n                    'all_point_criteria_pass',all([dWLb<options.ERRORWF,dUb<options.ERRORUF,dWLw<options.ERRORWF,dUw<options.ERRORUF,dFw<options.ERRORFW,dUd<options.ERRORUD]), ...\n                    'source_state_code',double(ffSolver.STATE)));\n                end\n                % MATCHED_REPLAY_OBSERVATION_END point\n"
+        },
+        {
+          "anchor": "if all([timeDWLb < options.SSCONVWF , timeDUb < options.SSCONVUF,timeDWLw < options.SSCONVWF , timeDUw < options.SSCONVUF, timeDUd < options.SSCONVUD] )",
+          "inserted_text": "            % MATCHED_REPLAY_OBSERVATION_BEGIN temporal\n            matched_replay_trace('temporal',struct('time_s',film(tIdx).TIME, ...\n                    'dt_s',DT, ...\n                    'temporal_index_one_based',tIdx, ...\n                    'solveINIT',solveINIT, ...\n                    'time_dWLb',timeDWLb, ...\n                    'time_dUb',timeDUb, ...\n                    'time_dWLw',timeDWLw, ...\n                    'time_dUw',timeDUw, ...\n                    'time_dFw',timeDFw, ...\n                    'time_dUd',timeDUd, ...\n                    'threshold_time_dWLb',options.SSCONVWF, ...\n                    'threshold_time_dUb',options.SSCONVUF, ...\n                    'threshold_time_dWLw',options.SSCONVWF, ...\n                    'threshold_time_dUw',options.SSCONVUF, ...\n                    'threshold_time_dFw',options.SSCONVFW, ...\n                    'threshold_time_dUd',options.SSCONVUD, ...\n                    'active_time_dWLb',true, ...\n                    'active_time_dUb',true, ...\n                    'active_time_dWLw',true, ...\n                    'active_time_dUw',true, ...\n                    'active_time_dFw',false, ...\n                    'active_time_dUd',true, ...\n                    'all_temporal_criteria_pass',all([timeDWLb<options.SSCONVWF,timeDUb<options.SSCONVUF,timeDWLw<options.SSCONVWF,timeDUw<options.SSCONVUF,timeDUd<options.SSCONVUD]), ...\n                    'all_point_criteria_pass',timestepconverged, ...\n                    'source_state_code',double(ffSolver.STATE)));\n            % MATCHED_REPLAY_OBSERVATION_END temporal\n"
+        }
+      ]
+    },
+    {
+      "path": "+Solvers/+FourField/Base.m",
+      "pristine_sha256": "c3f11a315073053f3bc01851022bcb9f8f9392cd0b1e8b862e83de2de95971c0",
+      "executable_sha256": "c3f11a315073053f3bc01851022bcb9f8f9392cd0b1e8b862e83de2de95971c0"
+    },
+    {
+      "path": "+Solvers/+FourField/Drop.m",
+      "pristine_sha256": "0836589e20cf4018484908f013270e941b2f44b6bac266ec60888790cd438339",
+      "executable_sha256": "0836589e20cf4018484908f013270e941b2f44b6bac266ec60888790cd438339"
+    },
+    {
+      "path": "+Solvers/+FourField/Film.m",
+      "pristine_sha256": "26c96b30e4313f9a7a42e113b24b2aa362c967971341cb65da8da3921ce3502c",
+      "executable_sha256": "26c96b30e4313f9a7a42e113b24b2aa362c967971341cb65da8da3921ce3502c"
+    },
+    {
+      "path": "+Solvers/+FourField/Wave.m",
+      "pristine_sha256": "a5b654855ebf62d4cf1527bac4aa97e792793292ce6f7a9f9cc1cfeacbb08208",
+      "executable_sha256": "a5b654855ebf62d4cf1527bac4aa97e792793292ce6f7a9f9cc1cfeacbb08208"
+    },
+    {
+      "path": "+Solvers/+Mixture/@MixtureSolver/MixtureSolver.m",
+      "pristine_sha256": "9c229be5dbcbb8d88c32d7205bdc422bdbc454abab4d4a967b4658181f045c1c",
+      "executable_sha256": "9c229be5dbcbb8d88c32d7205bdc422bdbc454abab4d4a967b4658181f045c1c"
+    },
+    {
+      "path": "+Solvers/+Mixture/@MixtureSolver/solve.m",
+      "pristine_sha256": "1eb5335422be0d5b2bf05193a49d2f6e9cba9e550b069df70f78a53948d6a21f",
+      "executable_sha256": "1eb5335422be0d5b2bf05193a49d2f6e9cba9e550b069df70f78a53948d6a21f"
+    },
+    {
+      "path": "+Solvers/+Mixture/Liquid.m",
+      "pristine_sha256": "25d433e0dee978d34d2707752b796c643991fc8f9e9b5348f970c804d51d7744",
+      "executable_sha256": "25d433e0dee978d34d2707752b796c643991fc8f9e9b5348f970c804d51d7744"
+    },
+    {
+      "path": "+Solvers/+Mixture/Mixture.m",
+      "pristine_sha256": "f1e9f9983faebbd9c02c4942f82fb3bb10d1f326b88cef9c2b7e9513bc476eef",
+      "executable_sha256": "f1e9f9983faebbd9c02c4942f82fb3bb10d1f326b88cef9c2b7e9513bc476eef"
+    },
+    {
+      "path": "+Solvers/+Mixture/Vapor.m",
+      "pristine_sha256": "a8863cc9425894a3d383c0135cd3a7f706ee4f7a09bfc73dd8733e99ccd1078b",
+      "executable_sha256": "a8863cc9425894a3d383c0135cd3a7f706ee4f7a09bfc73dd8733e99ccd1078b"
+    },
+    {
+      "path": "+Solvers/+ThreeField/@ThreeFieldSolver/ThreeFieldSolver.m",
+      "pristine_sha256": "b8ff4f25566dec89ae219395f2fe1ca7df665ab0432db22e6422ad28e862b05a",
+      "executable_sha256": "b8ff4f25566dec89ae219395f2fe1ca7df665ab0432db22e6422ad28e862b05a"
+    },
+    {
+      "path": "+Solvers/+ThreeField/@ThreeFieldSolver/solve.m",
+      "pristine_sha256": "6f60787f4183ac57a77bf37666e217caaf67eae948ac9d9f5c69a0edf28cc08b",
+      "executable_sha256": "6f60787f4183ac57a77bf37666e217caaf67eae948ac9d9f5c69a0edf28cc08b"
+    },
+    {
+      "path": "+Solvers/+ThreeField/Drop.m",
+      "pristine_sha256": "5cb68fcfff38bd9271789595f04100dc80112b894c2a6fb98e18629f359e2e72",
+      "executable_sha256": "5cb68fcfff38bd9271789595f04100dc80112b894c2a6fb98e18629f359e2e72"
+    },
+    {
+      "path": "+Solvers/+ThreeField/Film.m",
+      "pristine_sha256": "e42fe44ff2ff64d46822c3a20e9d0b6fefc5237852e4f9a8501ef112e58391c2",
+      "executable_sha256": "e42fe44ff2ff64d46822c3a20e9d0b6fefc5237852e4f9a8501ef112e58391c2"
+    },
+    {
+      "path": "+Solvers/+TwoFluid/@TwoFluidSolver/TwoFluidSolver.m",
+      "pristine_sha256": "79742aaaeecf78c693faabdf28414049ea92de7b00719c739156231a48f73b1f",
+      "executable_sha256": "79742aaaeecf78c693faabdf28414049ea92de7b00719c739156231a48f73b1f"
+    },
+    {
+      "path": "+Solvers/+TwoFluid/@TwoFluidSolver/solve.m",
+      "pristine_sha256": "c618c72f8afe072c8d4906629d55ad684c65c83b62b4c424bcfe378a93e99d8a",
+      "executable_sha256": "fabe6c678e454b90dc7512654747c3fda230b1cb64d1badbb464bca68764960c",
+      "instrumentation": [
+        {
+          "anchor": "if all([dWl < options.ERRORW, dWv < options.ERRORW, dUl < options.ERRORU, dUv < options.ERRORU, dHl < options.ERRORH, dHv < options.ERRORH])",
+          "inserted_text": "                % MATCHED_REPLAY_OBSERVATION_BEGIN point\n                if ismember(zIdx,[398 399 400 401])\n                    matched_replay_trace('point',struct('time_s',liquid(tIdx).TIME, ...\n                    'dt_s',DT, ...\n                    'temporal_index_one_based',tIdx, ...\n                    'solveINIT',solveINIT, ...\n                    'node_zero_based',zIdx-1, ...\n                    'node_one_based',zIdx, ...\n                    'z_m',twfSolver.Z(zIdx), ...\n                    'iteration',itr, ...\n                    'liquid_W',liquid(tIdx).W(zIdx), ...\n                    'liquid_U',liquid(tIdx).U(zIdx), ...\n                    'liquid_H',liquid(tIdx).H(zIdx), ...\n                    'vapor_W',vapor(tIdx).W(zIdx), ...\n                    'vapor_U',vapor(tIdx).U(zIdx), ...\n                    'vapor_H',vapor(tIdx).H(zIdx), ...\n                    'dWl',dWl, ...\n                    'dWv',dWv, ...\n                    'dUl',dUl, ...\n                    'dUv',dUv, ...\n                    'dHl',dHl, ...\n                    'dHv',dHv, ...\n                    'threshold_dWl',options.ERRORW, ...\n                    'threshold_dWv',options.ERRORW, ...\n                    'threshold_dUl',options.ERRORU, ...\n                    'threshold_dUv',options.ERRORU, ...\n                    'threshold_dHl',options.ERRORH, ...\n                    'threshold_dHv',options.ERRORH, ...\n                    'all_point_criteria_pass',all([dWl<options.ERRORW,dWv<options.ERRORW,dUl<options.ERRORU,dUv<options.ERRORU,dHl<options.ERRORH,dHv<options.ERRORH]), ...\n                    'source_state_code',double(twfSolver.STATE)));\n                end\n                % MATCHED_REPLAY_OBSERVATION_END point\n"
+        },
+        {
+          "anchor": "if all([timeDWl < options.SSCONVW, timeDWv < options.SSCONVW,timeDUl < options.SSCONVU, timeDUv < options.SSCONVU, timeDHl < options.SSCONVH, timeDHv < options.SSCONVH]) % [,timeDU < options.SSCONVU]",
+          "inserted_text": "            % MATCHED_REPLAY_OBSERVATION_BEGIN temporal\n            matched_replay_trace('temporal',struct('time_s',liquid(tIdx).TIME, ...\n                    'dt_s',DT, ...\n                    'temporal_index_one_based',tIdx, ...\n                    'solveINIT',solveINIT, ...\n                    'time_dWl',timeDWl, ...\n                    'time_dWv',timeDWv, ...\n                    'time_dUl',timeDUl, ...\n                    'time_dUv',timeDUv, ...\n                    'time_dHl',timeDHl, ...\n                    'time_dHv',timeDHv, ...\n                    'threshold_time_dWl',options.SSCONVW, ...\n                    'threshold_time_dWv',options.SSCONVW, ...\n                    'threshold_time_dUl',options.SSCONVU, ...\n                    'threshold_time_dUv',options.SSCONVU, ...\n                    'threshold_time_dHl',options.SSCONVH, ...\n                    'threshold_time_dHv',options.SSCONVH, ...\n                    'active_time_dWl',true, ...\n                    'active_time_dWv',true, ...\n                    'active_time_dUl',true, ...\n                    'active_time_dUv',true, ...\n                    'active_time_dHl',true, ...\n                    'active_time_dHv',true, ...\n                    'all_temporal_criteria_pass',all([timeDWl<options.SSCONVW,timeDWv<options.SSCONVW,timeDUl<options.SSCONVU,timeDUv<options.SSCONVU,timeDHl<options.SSCONVH,timeDHv<options.SSCONVH]), ...\n                    'all_point_criteria_pass',timestepconverged, ...\n                    'source_state_code',double(twfSolver.STATE)));\n            % MATCHED_REPLAY_OBSERVATION_END temporal\n"
+        }
+      ]
+    },
+    {
+      "path": "+Solvers/+TwoFluid/Liquid.m",
+      "pristine_sha256": "370f5882f2eb5e07e5a8664f4ed11705562790c573317e903d328a43975d6317",
+      "executable_sha256": "370f5882f2eb5e07e5a8664f4ed11705562790c573317e903d328a43975d6317"
+    },
+    {
+      "path": "+Solvers/+TwoFluid/Mixture.m",
+      "pristine_sha256": "6838554b83d544bb2c2d837568fc06fe9fa7ae06ccd7c0eaad672f9f92b4f3ba",
+      "executable_sha256": "6838554b83d544bb2c2d837568fc06fe9fa7ae06ccd7c0eaad672f9f92b4f3ba"
+    },
+    {
+      "path": "+Solvers/+TwoFluid/REGIMES.m",
+      "pristine_sha256": "0e1d3de0fba4fc685d5445eabe996c63ca45693ffd9c31569fcc2b2016448200",
+      "executable_sha256": "0e1d3de0fba4fc685d5445eabe996c63ca45693ffd9c31569fcc2b2016448200"
+    },
+    {
+      "path": "+Solvers/+TwoFluid/Vapor.m",
+      "pristine_sha256": "825ea0ac5b9c092ab3a64bd1853a11963d77b717480bb0d741608aaebb9d664c",
+      "executable_sha256": "825ea0ac5b9c092ab3a64bd1853a11963d77b717480bb0d741608aaebb9d664c"
+    },
+    {
+      "path": "+Solvers/AbstractField.m",
+      "pristine_sha256": "c1d1a6d49128ee177b8287a9e61f7a5ad623b28d1b997e78a76ca6a1c543c17b",
+      "executable_sha256": "c1d1a6d49128ee177b8287a9e61f7a5ad623b28d1b997e78a76ca6a1c543c17b"
+    },
+    {
+      "path": "+Solvers/AbstractFilm.m",
+      "pristine_sha256": "70ef168294006e1925149ee7116f14465ac0bce7e79996ac64cbf64d9e886db2",
+      "executable_sha256": "70ef168294006e1925149ee7116f14465ac0bce7e79996ac64cbf64d9e886db2"
+    },
+    {
+      "path": "+Solvers/AbstractPhase.m",
+      "pristine_sha256": "676fd39fd29c5729e1d65055f0dcc218a77aa4300405fdf0ad16c4ab35143d7e",
+      "executable_sha256": "676fd39fd29c5729e1d65055f0dcc218a77aa4300405fdf0ad16c4ab35143d7e"
+    },
+    {
+      "path": "+Solvers/AbstractSolver.m",
+      "pristine_sha256": "51387a6174599c59495cef9d110929a50ade209767dee029700987b848ad790c",
+      "executable_sha256": "51387a6174599c59495cef9d110929a50ade209767dee029700987b848ad790c"
+    },
+    {
+      "path": "+Solvers/SolverPlotter.m",
+      "pristine_sha256": "c7ab4477824ab6c309c482bae53ca180c4296a0c94992eb7c1a9c1acb236e053",
+      "executable_sha256": "c7ab4477824ab6c309c482bae53ca180c4296a0c94992eb7c1a9c1acb236e053"
+    },
+    {
+      "path": "+Solvers/SolverState.m",
+      "pristine_sha256": "28d30b99ebc37fcea542e51de79308aa3f532070bde7076633df3137d68eee75",
+      "executable_sha256": "28d30b99ebc37fcea542e51de79308aa3f532070bde7076633df3137d68eee75"
+    },
+    {
+      "path": "LICENSE",
+      "pristine_sha256": "277df1b11be4ec7262dc6e5eb29a0e3b3115336648c90fcbad668eac10b299f6",
+      "executable_sha256": "277df1b11be4ec7262dc6e5eb29a0e3b3115336648c90fcbad668eac10b299f6"
+    },
+    {
+      "path": "docs/requirements.txt",
+      "pristine_sha256": "97ce123dec24d861f661819e11eda57d9a919690edab94345436a4885be8516e",
+      "executable_sha256": "97ce123dec24d861f661819e11eda57d9a919690edab94345436a4885be8516e"
+    },
+    {
+      "path": "openstreamVersion.m",
+      "pristine_sha256": "9b4b8dffd3854b5f8d1b4ed6e1e286ec5c59e67f3d6c944884ded703fc4591ef",
+      "executable_sha256": "9b4b8dffd3854b5f8d1b4ed6e1e286ec5c59e67f3d6c944884ded703fc4591ef"
+    },
+    {
+      "path": "sandbox/example_default.m",
+      "pristine_sha256": "ba6e71424125d0e5020d0f9e73eda2f72cac8cc8bc6583c34e972443f312f3df",
+      "executable_sha256": "ba6e71424125d0e5020d0f9e73eda2f72cac8cc8bc6583c34e972443f312f3df"
+    },
+    {
+      "path": "tests/environment/PythonSetupTest.m",
+      "pristine_sha256": "f82bd61eb17d7bcb41612f9d706a8c335ba0e1f43b71373a45023cac20f91474",
+      "executable_sha256": "f82bd61eb17d7bcb41612f9d706a8c335ba0e1f43b71373a45023cac20f91474"
+    },
+    {
+      "path": "tests/integration/SolverIntegrationTest.m",
+      "pristine_sha256": "b1d1b1c78343bdbcd498e7730b53339237704e7418a588c3d07da08588b7dc50",
+      "executable_sha256": "b1d1b1c78343bdbcd498e7730b53339237704e7418a588c3d07da08588b7dc50"
+    },
+    {
+      "path": "tests/runOpenSTREAMTests.m",
+      "pristine_sha256": "96ee50c3bea92ea8438a7cf7d89850a79e1a6a7fe41e3a706847362d4cee2da0",
+      "executable_sha256": "96ee50c3bea92ea8438a7cf7d89850a79e1a6a7fe41e3a706847362d4cee2da0"
+    },
+    {
+      "path": "tests/unit/InputUnitTest.m",
+      "pristine_sha256": "8253fc389f5bd11c022ddf3fea53c1ff4e00d88e320facb02731e13fbba122f2",
+      "executable_sha256": "8253fc389f5bd11c022ddf3fea53c1ff4e00d88e320facb02731e13fbba122f2"
+    },
+    {
+      "path": "utilities/generateFncSignatures_Inputs.m",
+      "pristine_sha256": "c50331893cfc1f0ec9c6f85278aa90e13314a943b19677acaaa6f4962150fa20",
+      "executable_sha256": "c50331893cfc1f0ec9c6f85278aa90e13314a943b19677acaaa6f4962150fa20"
+    },
+    {
+      "path": "+CoolPropWrapper/+convertUnits/Stack.m",
+      "pristine_sha256": "ae1450a7b9ccb27a1fab3cd13048698b57d86ad98763f549783bbf9d81788f2d",
+      "executable_sha256": "ae1450a7b9ccb27a1fab3cd13048698b57d86ad98763f549783bbf9d81788f2d"
+    },
+    {
+      "path": "+CoolPropWrapper/+convertUnits/Stack_cell.m",
+      "pristine_sha256": "884ec9e74d25bcbfdf2a5e0ee35ac39131c556cc141885586d3ef70287a1db1b",
+      "executable_sha256": "884ec9e74d25bcbfdf2a5e0ee35ac39131c556cc141885586d3ef70287a1db1b"
+    },
+    {
+      "path": "+CoolPropWrapper/+convertUnits/Stack_char.m",
+      "pristine_sha256": "3fee464d7ba756746b9262a72eddb36f180e37007e794adbb343592635926d33",
+      "executable_sha256": "3fee464d7ba756746b9262a72eddb36f180e37007e794adbb343592635926d33"
+    },
+    {
+      "path": "+CoolPropWrapper/+convertUnits/Stack_double.m",
+      "pristine_sha256": "fc0003fa1240a26a5b294119f4d5381e27a00d1f45f9c58745e57ef694fa143f",
+      "executable_sha256": "fc0003fa1240a26a5b294119f4d5381e27a00d1f45f9c58745e57ef694fa143f"
+    },
+    {
+      "path": "+CoolPropWrapper/+convertUnits/UnitDims.m",
+      "pristine_sha256": "ad8b602e98833e4af67cac7e64dc6695003d842c3778278d6b64ec00ca8e0a7c",
+      "executable_sha256": "ad8b602e98833e4af67cac7e64dc6695003d842c3778278d6b64ec00ca8e0a7c"
+    },
+    {
+      "path": "+CoolPropWrapper/+convertUnits/convert.m",
+      "pristine_sha256": "04b30b692af2112513b2de1d50c32cd4b2074889429e4025e4f179b0fe0ae2b9",
+      "executable_sha256": "04b30b692af2112513b2de1d50c32cd4b2074889429e4025e4f179b0fe0ae2b9"
+    },
+    {
+      "path": "+CoolPropWrapper/+convertUnits/parseUnit.m",
+      "pristine_sha256": "f05a7c2d3711d2c9af139a360d01be1eb3b9da46df98812df8f11d643e11959a",
+      "executable_sha256": "f05a7c2d3711d2c9af139a360d01be1eb3b9da46df98812df8f11d643e11959a"
+    },
+    {
+      "path": "+CoolPropWrapper/+convertUnits/parseUnit_old.m",
+      "pristine_sha256": "0fe052a957f4d25e65af4d0bcdf0887bab642c9b9f7c365e312016f89b36f64a",
+      "executable_sha256": "0fe052a957f4d25e65af4d0bcdf0887bab642c9b9f7c365e312016f89b36f64a"
+    },
+    {
+      "path": "+CoolPropWrapper/+convertUnits/readUnitDef.m",
+      "pristine_sha256": "a287f56d3a2cf918918848e4f6ea4a5200f7997e61daa45887c020384cf5d34e",
+      "executable_sha256": "a287f56d3a2cf918918848e4f6ea4a5200f7997e61daa45887c020384cf5d34e"
+    },
+    {
+      "path": "+CoolPropWrapper/+convertUnits/units.txt",
+      "pristine_sha256": "b7af0df96058279d2f889acd4c9c1c3397fc02b9b3ca935bd4aad1c8262b377f",
+      "executable_sha256": "b7af0df96058279d2f889acd4c9c1c3397fc02b9b3ca935bd4aad1c8262b377f"
+    },
+    {
+      "path": "+CoolPropWrapper/+convertUnits/units_LUT.mat",
+      "pristine_sha256": "bd35c1d001f03daa9f4981c6167e9bcca7517f657fdbc8e2cf40944051557382",
+      "executable_sha256": "bd35c1d001f03daa9f4981c6167e9bcca7517f657fdbc8e2cf40944051557382"
+    },
+    {
+      "path": "+CoolPropWrapper/CoolPropWrapper.m",
+      "pristine_sha256": "8906ce1f1f53c3c11763aa08fd6911c14ead37c6a837397c71bf410e7045401f",
+      "executable_sha256": "8906ce1f1f53c3c11763aa08fd6911c14ead37c6a837397c71bf410e7045401f"
+    },
+    {
+      "path": "+CoolPropWrapper/CoolPropWrapperHA.m",
+      "pristine_sha256": "7ea1b6570dd2d9867b34a986ca1dfd025976eb13fcfdc1c0a9ae5a8f5c24b1dd",
+      "executable_sha256": "7ea1b6570dd2d9867b34a986ca1dfd025976eb13fcfdc1c0a9ae5a8f5c24b1dd"
+    },
+    {
+      "path": "+CoolPropWrapper/LICENSE",
+      "pristine_sha256": "21352fa651cfff5240feedb3303d1cf5e26c09341927e278e7197516e07ed55c",
+      "executable_sha256": "21352fa651cfff5240feedb3303d1cf5e26c09341927e278e7197516e07ed55c"
+    },
+    {
+      "path": "+CoolPropWrapper/convertTemp.m",
+      "pristine_sha256": "8e7d299a450a8e237e6fe129f32cf83330e21c15cb98d64de39ba753dcd5d651",
+      "executable_sha256": "8e7d299a450a8e237e6fe129f32cf83330e21c15cb98d64de39ba753dcd5d651"
+    },
+    {
+      "path": "+CoolPropWrapper/requirements.txt",
+      "pristine_sha256": "a4e31c8f0a3b14af87c4301193a07c765287b5524de59d7bd0affddd93c04fdf",
+      "executable_sha256": "a4e31c8f0a3b14af87c4301193a07c765287b5524de59d7bd0affddd93c04fdf"
+    },
+    {
+      "path": "+CoolPropWrapper/sample.m",
+      "pristine_sha256": "d130f36edba16499a74df147c08b1561ddb0c8bdb4114f3e2752d6e94bce2385",
+      "executable_sha256": "d130f36edba16499a74df147c08b1561ddb0c8bdb4114f3e2752d6e94bce2385"
+    }
+  ],
+  "cases": [
+    {
+      "run_id": "sawai-01-paper-tw020-n100-base",
+      "framework": "FourField",
+      "model_id": "DEFAULT",
+      "options_id": "DEFAULT",
+      "geometry_id": "SAWAI1989",
+      "trace_nodes_zero_based": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "input_sha256": {
+        "models.inp": "08ef9ce2d35cdb94989fccfc10cf317ca6b9d2a916a53b7a4c806a23034849c7",
+        "options.inp": "620c009bfdf7f4ac93ade25380f70090ff9cea38281139f585090a9e44e7234c",
+        "geom.inp": "2f4a039b81a2aa10c0ae0a7b6f9dd9bf798112a591115ee719cc883662598421",
+        "boundary.inp": "715d3e5a9219c97090c31f54e51938f601f9f942eda8466a062d3d5077594877"
+      },
+      "effective_inputs_sha256": "f60b6bd005de5febbb7aa225adbd5728a5db3f4b1cca129142113e86a151c859",
+      "expected_native_versions": {
+        "openstream-python": "0.2.1",
+        "numpy": "2.5.4",
+        "scipy": "1.18.1",
+        "CoolProp": "8.0.0",
+        "matplotlib": "3.11.2"
+      }
+    },
+    {
+      "run_id": "demo-twofluid-n400-mesh",
+      "framework": "TwoFluid",
+      "model_id": "DEFAULT",
+      "options_id": "DEFAULT",
+      "geometry_id": "GENERICDATASET",
+      "trace_nodes_zero_based": [
+        397,
+        398,
+        399,
+        400
+      ],
+      "input_sha256": {
+        "models.inp": "19d2cdd599cecf10bef058b38e45851bb464fc9fab558d4478da84c40d1bba38",
+        "options.inp": "620c009bfdf7f4ac93ade25380f70090ff9cea38281139f585090a9e44e7234c",
+        "geom.inp": "b2a9f28c4b64f59e832147e08d0982f66d9e1b53d40ac9d518d0cafc540410b3",
+        "boundary.inp": "f17865bb1311a70834ef2dc8780aa747b58f3eb4a3c16c42569d3cd49070060f"
+      },
+      "effective_inputs_sha256": "d40b569151d34cfba9a685c6f3ab9a4f904128e232a4278269a13a86445a8f35",
+      "expected_native_versions": {
+        "openstream-python": "0.2.1",
+        "numpy": "2.5.4",
+        "scipy": "1.18.1",
+        "CoolProp": "8.0.0",
+        "matplotlib": "3.11.2"
+      }
+    }
+  ],
+  "runtime": {
+    "required_coolprop": "8.0.0",
+    "required_backend": "BICUBIC&HEOS",
+    "surface_tension_backend": "HEOS, temporary source-wrapper fallback restored afterward",
+    "matlab": "record actual compatible release at execution; no producer release established",
+    "python": "record actual pyenv; native reference used 3.12.14"
+  },
+  "callable_recovery": "CBTMULT=@(z)1: original metadata all node samples equal one; run_lecorre_reproduction.py explicitly rejects a nonconstant multiplier; upstream Model.m26 default. No arbitrary callable translation.",
+  "source_policy": "Exact pinned Git blobs retained under pristine/; executable copy under source/ differs only by registered observation calls. No original checkout edits. All input numbers use binary64 round-trip precision; no source numerical writer rounding.",
+  "exporter_original_sha256": "0419bda394d06c3b163a6007071f8445b53a9795089d8a25c6b335fa23368030"
+}

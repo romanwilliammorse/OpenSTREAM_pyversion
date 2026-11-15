@@ -1,0 +1,103 @@
+ID ! frozen effective input > DEFAULT
+NNODES ! frozen effective input > 400
+FLUID ! frozen effective input > WATER
+PROPERTIES ! frozen effective input > SATURATED
+KLOC ! frozen effective input > 0
+WBOILINGXSUB ! frozen effective input > -0.20000000000000001
+WBOILINGN ! frozen effective input > 2
+WBOILINGXSAT ! frozen effective input > 0
+OAF ! frozen effective input > WALLIS
+OAFTRANSITION ! frozen effective input > 0.10000000000000001 0
+CBT ! frozen effective input > NONE
+CBTMULT ! frozen effective input > @(z) 1
+CBTKEFFECT ! frozen effective input > 0 0
+CBTELEVATION ! frozen effective input > 1
+MFBT ! frozen effective input > NONE
+DTMFB ! frozen effective input > 100
+SPMTM ! frozen effective input > BLASIUS
+FRICTION ! frozen effective input > 0.20000000000000001 -0.20000000000000001 0
+TPFM ! frozen effective input > HOMOGENEOUS
+KLOSS ! frozen effective input > 0
+TPKM ! frozen effective input > HOMOGENEOUS
+BTMTM ! frozen effective input > TPFM
+SPHTM ! frozen effective input > DITTUSBOELTER
+DITTUSBOELTERCOEF ! frozen effective input > 0.023 0.80000000000000004 0.40000000000000002
+TPHTM ! frozen effective input > THOM
+BTHTM ! frozen effective input > VAPOR
+MOECKCOEF ! frozen effective input > 0.00109 0.98899999999999999 1.4099999999999999 -1.1499999999999999
+VOID ! frozen effective input > HOMOGENEOUS
+SLIP ! frozen effective input > 1
+THERMALNONEQ ! frozen effective input > EQUILIBRIUM
+THERMALRELAX ! frozen effective input > TIMEX
+RELAXX ! frozen effective input > -0.5 1
+RELAXCONDFO ! frozen effective input > 0.0001 0.0001 0.0001 0.0001 0.0001
+RELAXEVAPFO ! frozen effective input > 5.0000000000000002e-05 5.0000000000000002e-05 5.0000000000000002e-05 5.0000000000000002e-05 5.0000000000000002e-05
+RELAXCONDT ! frozen effective input > 0.5 0.5 0.01
+RELAXEVAPT ! frozen effective input > 0.29999999999999999 0.29999999999999999 0.29999999999999999 0.29999999999999999 0.29999999999999999
+RELAXCONDCOEF ! frozen effective input > 0.0001 0.33333333332999998 0.050000000000000003 0
+RELAXEVAPCOEF ! frozen effective input > 0.0001 0.33333333332999998 1.0000000000000001e-05 0
+RELAXCONDFOCOEF ! frozen effective input > 5.0000000000000002e-05 500000 0 0
+RELAXEVAPFOCOEF ! frozen effective input > 0.0001 500000 2 2 0.01 1
+KTRELAX ! frozen effective input > NaN
+NEARWALLRATIO ! frozen effective input > 0.5
+NEARWALLEQOAF ! frozen effective input > false
+NEARWALLH ! frozen effective input > RATIO
+NEARWALLHRATIO ! frozen effective input > 1
+NEARWALLRELAX ! frozen effective input > QUALITY
+NEARWALLRELAXX ! frozen effective input > -0.5 -0.25 -0.10000000000000001 0 1
+NEARWALLRELAXT ! frozen effective input > 1 0.5 0.29999999999999999 0.10000000000000001 0.10000000000000001
+NEARWALLRELAXCOEF ! frozen effective input > 0.0001 0.33333333332999998 0.050000000000000003
+INTLENGTH ! frozen effective input > CONSTANT
+INTAREA ! frozen effective input > DISPGAS2DISPLIQ
+INTLENGTHVCST ! frozen effective input > 0.002
+INTLENGTHLCST ! frozen effective input > 0.002
+LOCRELVEL ! frozen effective input > AREAMEAN
+RELVELCST ! frozen effective input > 1
+MOMENTLIQUID ! frozen effective input > FULL
+MOMENTGAS ! frozen effective input > FULL
+DROPDRAG ! frozen effective input > VISCOUS
+DROPDRAGCOEF ! frozen effective input > 0.45000000000000001
+BUBBLEDRAG ! frozen effective input > STOKES
+BUBBLEDRAGCOEF ! frozen effective input > 0.45000000000000001
+INTNU ! frozen effective input > RELAXATION
+INTNUVCST ! frozen effective input > 2
+INTNULCST ! frozen effective input > 2
+RANZMARSHALLVCST ! frozen effective input > 2 0.59999999999999998 0.5 0.33333333332999998
+RANZMARSHALLLCST ! frozen effective input > 2 0.59999999999999998 0.5 0.33333333332999998
+INTTRANSH ! frozen effective input > BULK
+POSFILM ! frozen effective input > true
+OAFENTRAINED ! frozen effective input > EQUILIBRIUM
+OAFDROPRATIO ! frozen effective input > 0.69999999999999996
+DEPOSITION ! frozen effective input > OKAWA
+DEPENHANCEMENT ! frozen effective input > NONE
+KBLOCKRATIO ! frozen effective input > 0
+KTUNING ! frozen effective input > 0
+ENTRAINMENT ! frozen effective input > OKAWA2003
+OKAWACOEFS ! frozen effective input > 320 0.111 0.00047899999999999999 1
+MOMENTFILM ! frozen effective input > ALGEBRAIC
+VAPORFRIC ! frozen effective input > WALLIS
+VAPORFRICCST ! frozen effective input > 0.0050000000000000001
+THINFILMFRIC ! frozen effective input > TURBULENT
+THINFILMTHICK ! frozen effective input > 0.0001
+MOMENTDROP ! frozen effective input > SLIP
+DROPSLIP ! frozen effective input > 1
+DROPDIAM ! frozen effective input > 0.001
+OAFFILMSPLIT ! frozen effective input > EQUILIBRIUM
+OAFBASERATIO ! frozen effective input > 0.5
+BASEEQTHICK ! frozen effective input > RISO
+BASEEQTHICKCOEF ! frozen effective input > 5.3699999999999997e-05 -0.64000000000000001 1.21
+BASEYPLUS ! frozen effective input > 15
+RELAXTB ! frozen effective input > 0.20000000000000001
+WAVEMIXCOEF ! frozen effective input > 2
+WAVEFREQUENCY ! frozen effective input > RELAXATION
+EQSTROUHAL ! frozen effective input > RISO
+EQSTROUHALCOEF ! frozen effective input > 0.00011236 0.5 0
+RELAXTW ! frozen effective input > 0.20000000000000001
+CSTWAVEFREQ ! frozen effective input > 100
+MOMENTBASE ! frozen effective input > FULLNOP
+MOMENTWAVE ! frozen effective input > FULL
+WAVEBASEINT ! frozen effective input > VAPORSHEAR
+SHAPEFACTORCOEF ! frozen effective input > 132500 2 1 0
+WAVEDRAGCOEF ! frozen effective input > 0.02 135000 0.437
+THINWAVETHICK ! frozen effective input > 1.0000000000000001e-05
+END

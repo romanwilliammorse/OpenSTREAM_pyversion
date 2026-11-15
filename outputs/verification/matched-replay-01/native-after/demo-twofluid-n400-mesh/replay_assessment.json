@@ -1,0 +1,2281 @@
+{
+  "run_id": "demo-twofluid-n400-mesh",
+  "source_state": "INITIALSTEPNOTCONVERGED",
+  "native_converged": false,
+  "elapsed_seconds": 139.08605580002768,
+  "onset": {
+    "annular_onset_index_zero_based": 53,
+    "annular_onset_z_m": 0.72875
+  },
+  "warnings": [],
+  "native_exact_reproducibility": true,
+  "comparisons": [
+    {
+      "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\demo-twofluid-n400-mesh\\comparison_profiles.npz",
+      "replay": "outputs\\verification\\matched-replay-01\\native-after\\demo-twofluid-n400-mesh\\comparison_profiles.npz",
+      "passed": true,
+      "arrays": [
+        {
+          "key": "Z",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "HFLUX",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "mixture.W",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "mixture.liquid.W",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "mixture.VF",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "mixture.X",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "mixture.XEQ",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "mixture.vapor.U",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "AFFNC",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.W",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.U",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.VF",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.X",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        }
+      ]
+    },
+    {
+      "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\demo-twofluid-n400-mesh\\numerical\\results.npz",
+      "replay": "outputs\\verification\\matched-replay-01\\native-after\\demo-twofluid-n400-mesh\\numerical\\results.npz",
+      "passed": true,
+      "arrays": [
+        {
+          "key": "Z",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "TIME",
+          "shape": [
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.W",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.U",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.H",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.ITR.DH",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.ITR.DU",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.ITR.DW",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.ITR.N",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.W",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.U",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.H",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.ITR.DH",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.ITR.DU",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.ITR.DW",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.ITR.N",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        }
+      ]
+    },
+    {
+      "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\demo-twofluid-n400-mesh\\numerical\\initialization.npz",
+      "replay": "outputs\\verification\\matched-replay-01\\native-after\\demo-twofluid-n400-mesh\\numerical\\initialization.npz",
+      "passed": true,
+      "arrays": [
+        {
+          "key": "Z",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "TIME",
+          "shape": [
+            30
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.W",
+          "shape": [
+            30,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.U",
+          "shape": [
+            30,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.H",
+          "shape": [
+            30,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.ITR.DH",
+          "shape": [
+            30,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.ITR.DU",
+          "shape": [
+            30,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.ITR.DW",
+          "shape": [
+            30,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.ITR.N",
+          "shape": [
+            30,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.W",
+          "shape": [
+            30,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.U",
+          "shape": [
+            30,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.H",
+          "shape": [
+            30,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.ITR.DH",
+          "shape": [
+            30,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.ITR.DU",
+          "shape": [
+            30,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.ITR.DW",
+          "shape": [
+            30,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.ITR.N",
+          "shape": [
+            30,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        }
+      ]
+    },
+    {
+      "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\demo-twofluid-n400-mesh\\numerical\\mixture\\results.npz",
+      "replay": "outputs\\verification\\matched-replay-01\\native-after\\demo-twofluid-n400-mesh\\numerical\\mixture\\results.npz",
+      "passed": true,
+      "arrays": [
+        {
+          "key": "Z",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "TIME",
+          "shape": [
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "W",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "P",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "H",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "U",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "UP",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "RHO",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "X",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "XEQ",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "VF",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "T",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "HFLUX",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "LHGR",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "TWALL",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MCT",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ECT",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.W",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.H",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.U",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.T",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.X",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.VF",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.W",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.H",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.U",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.T",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.X",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.VF",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Grav",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Wall",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Acc_z",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Acc_t",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Acc_s",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.K",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Tot",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Grav",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Wall",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Acc_z",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Acc_t",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Acc_s",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.K",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Tot",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.U_z",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.U_t",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.U",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.H_z",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.H_t",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.H",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.WV",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.X",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.HV",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.TV",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.TCOND",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.TEVAP",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.TRELAX",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.W",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.H",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.HFLUX",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.XEQ",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.WBULK",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.HBULK",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.XBULK",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.N",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DW",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DP",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DPSUM",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DH",
+          "shape": [
+            1,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DWV",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DHV",
+          "shape": [
+            1,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        }
+      ]
+    },
+    {
+      "original": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM\\outputs\\validation\\lecorre-2025-01\\demo-twofluid-n400-mesh\\numerical\\mixture\\initialization.npz",
+      "replay": "outputs\\verification\\matched-replay-01\\native-after\\demo-twofluid-n400-mesh\\numerical\\mixture\\initialization.npz",
+      "passed": true,
+      "arrays": [
+        {
+          "key": "Z",
+          "shape": [
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "TIME",
+          "shape": [
+            10
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "W",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "P",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "H",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "U",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "UP",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "RHO",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "X",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "XEQ",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "VF",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "T",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "HFLUX",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "LHGR",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "TWALL",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MCT",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ECT",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.W",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.H",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.U",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.T",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.X",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "liquid.VF",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.W",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.H",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.U",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.T",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.X",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "vapor.VF",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Grav",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Wall",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Acc_z",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Acc_t",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Acc_s",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.K",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DP.Tot",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Grav",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Wall",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Acc_z",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Acc_t",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Acc_s",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.K",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "DPSUM.Tot",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.U_z",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.U_t",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.U",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.H_z",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.H_t",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MDER.H",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.WV",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.X",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.HV",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.TV",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.TCOND",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "MRM.TEVAP",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.TRELAX",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.W",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.H",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.HFLUX",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.XEQ",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.WBULK",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.HBULK",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "NEARWALL.XBULK",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.N",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DW",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DP",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DPSUM",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DH",
+          "shape": [
+            10,
+            401
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DWV",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        },
+        {
+          "key": "ITR.DHV",
+          "shape": [
+            10,
+            401,
+            1
+          ],
+          "dtype": "float64",
+          "replay_dtype": "float64",
+          "dtype_equal": true,
+          "exact_equal": true,
+          "max_abs_difference": 0.0
+        }
+      ]
+    }
+  ],
+  "matlab_equivalence": "not_run; native reproducibility is not a MATLAB comparison"
+}

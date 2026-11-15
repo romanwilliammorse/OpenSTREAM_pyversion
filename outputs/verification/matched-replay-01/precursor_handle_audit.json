@@ -1,0 +1,3150 @@
+{
+  "schema": "openstream-precursor-handle-audit-v1",
+  "created_utc": "2026-11-15T07:05:53.012680+00:00",
+  "scope": "Read-only saved-native array and independent MCOS topology audit; no solver or MATLAB execution, no acceptance decision.",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4"
+  },
+  "source_commits": {
+    "python_checkout": "178ac2b4152b31016dc8847aebab139de0d88d2d",
+    "upstream": "a614c7173822a93c1e64ac28d1541cbac028cbd8",
+    "database": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22"
+  },
+  "inputs": {
+    "path": "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/effective_inputs.json",
+    "sha256": "f60b6bd005de5febbb7aa225adbd5728a5db3f4b1cca129142113e86a151c859",
+    "bytes": 6093
+  },
+  "case_metadata": {
+    "path": "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/metadata.json",
+    "sha256": "af3d4e35eaa010302fe9b45efa44f1c9f61b0c2653eb084e44376f96c5a885d7",
+    "bytes": 16388
+  },
+  "source_evidence": {
+    "matlab_outer_sweep": {
+      "file": {
+        "path": "upstream/+Solvers/+FourField/@FourFieldSolver/solve.m",
+        "sha256": "0567ebfa88fee6f768a01bf6eaeb2fa5898cb54e43807668ce746db531371ef9",
+        "bytes": 22921
+      },
+      "lines": [
+        {
+          "number": 83,
+          "text": "        mix = copy(repmat(ffSolver.mixSolver.mixture(1),1,ffSolver.inputSet.options.SSMAXITER));"
+        },
+        {
+          "number": 94,
+          "text": "        mix = ffSolver.mixSolver.mixture;"
+        },
+        {
+          "number": 189,
+          "text": "                drop(tIdx).W(zIdx) = mix(tIdx).liquid.W(zIdx)-sum(film(tIdx).W(zIdx,:)); % [kg/s] Drop flowrate"
+        },
+        {
+          "number": 229,
+          "text": "                            Unew = min(max(Unew,0),mix(tIdx).liquid.U(zIdx));                              % [m/s] Keep within realistic bounds to help convergence"
+        },
+        {
+          "number": 231,
+          "text": "                            base(tIdx).U(zIdx,:) = mix(tIdx).AFDISTR(mix(tIdx).liquid.U(zIdx),base(tIdx).U(zIdx,:),zIdx);"
+        },
+        {
+          "number": 258,
+          "text": "                            Unew = min(max(Unew,0),mix(tIdx).vapor.U(zIdx));                               % [m/s] Keep within realistic bounds to help convergence"
+        },
+        {
+          "number": 260,
+          "text": "                            wave(tIdx).U(zIdx,:) = mix(tIdx).AFDISTR(mix(tIdx).liquid.U(zIdx),wave(tIdx).U(zIdx,:),zIdx);"
+        },
+        {
+          "number": 290,
+          "text": "                        drop(tIdx).U(zIdx) = mix(tIdx).AFDISTR(mix(tIdx).liquid.U(zIdx),drop(tIdx).U(zIdx),zIdx);"
+        }
+      ]
+    },
+    "matlab_initialization": {
+      "file": {
+        "path": "upstream/+Solvers/+FourField/@FourFieldSolver/FourFieldSolver.m",
+        "sha256": "2e5cc49d1c7a483d9f62bf13415482fe115b8c93c50416284e03349c7c275faa",
+        "bytes": 71902
+      },
+      "lines": [
+        {
+          "number": 181,
+          "text": "                flm.initializeBaseAndWave();"
+        },
+        {
+          "number": 246,
+          "text": "                ffSolver.filmInit(i).mix       = copy(ffSolver.mixSolver.mixtureInit(end));"
+        },
+        {
+          "number": 247,
+          "text": "                ffSolver.filmInit(i).mix.TIME  = initTIME(i);"
+        },
+        {
+          "number": 248,
+          "text": "                ffSolver.filmInit(i).mix.DT    = initTIMEDT;"
+        },
+        {
+          "number": 249,
+          "text": "                ffSolver.filmInit(i).mix.NTIME = initNTIME;"
+        },
+        {
+          "number": 250,
+          "text": "                ffSolver.filmInit(i).mix.TIDX  = initTIDX(i);"
+        },
+        {
+          "number": 253,
+          "text": "                ffSolver.filmInit(i).initializeBaseAndWave();"
+        },
+        {
+          "number": 255,
+          "text": "                ffSolver.dropInit(i).mix    = ffSolver.filmInit(i).mix;"
+        }
+      ]
+    },
+    "matlab_film_copy": {
+      "file": {
+        "path": "upstream/+Solvers/+FourField/Film.m",
+        "sha256": "cbfed021341c7eff194fedaa15171fe92fd4c2aecb886f15967be40cc7ec0a21",
+        "bytes": 13767
+      },
+      "lines": [
+        {
+          "number": 202,
+          "text": "            if nargin == 1"
+        },
+        {
+          "number": 304,
+          "text": "            cp = copyElement@matlab.mixin.Copyable(film);"
+        },
+        {
+          "number": 310,
+          "text": "                cp.(propNames{j}) = copy(cp.(propNames{j}));"
+        },
+        {
+          "number": 312,
+          "text": "                cp.(propNames{j}).film = cp;"
+        }
+      ]
+    },
+    "matlab_mixture_copy": {
+      "file": {
+        "path": "upstream/+Solvers/+Mixture/Mixture.m",
+        "sha256": "c2a892f351446af5fc0213d9f6127d4b85e0a6205a35c969955b5a7cc5164f5b",
+        "bytes": 133390
+      },
+      "lines": [
+        {
+          "number": 2859,
+          "text": "            cpObj = copyElement@matlab.mixin.Copyable(obj);"
+        },
+        {
+          "number": 2862,
+          "text": "            cpObj.liquid = Liquid(cpObj);"
+        },
+        {
+          "number": 2863,
+          "text": "            cpObj.vapor = Vapor(cpObj);"
+        }
+      ]
+    },
+    "native_outer_sweep": {
+      "file": {
+        "path": "src/openstream/fourfield.py",
+        "sha256": "6a73a107f776882bce97c187806e6563048f7a55a5b908b627afdf923cfef9a0",
+        "bytes": 17648
+      },
+      "lines": [
+        {
+          "number": 41,
+          "text": "            film.base.mix = film.wave.mix = self.film[0].mix"
+        },
+        {
+          "number": 194,
+          "text": "        mix = film.mix"
+        },
+        {
+          "number": 219,
+          "text": "                drop.W[j] = mix.liquid.W(j)-np.sum(film.W[j])"
+        },
+        {
+          "number": 232,
+          "text": "                        new = np.fmin(np.fmax(new,0),mix.liquid.U(j))"
+        },
+        {
+          "number": 233,
+          "text": "                        base.U[j] = blend(mix,mix.liquid.U(j),(1-o.RELAXUB)*ub+o.RELAXUB*new,j)"
+        },
+        {
+          "number": 241,
+          "text": "                    new = np.fmin(np.fmax(new,0),mix.vapor.U(j))"
+        },
+        {
+          "number": 242,
+          "text": "                    wave.U[j] = blend(mix,mix.liquid.U(j),(1-o.RELAXUW)*uw+o.RELAXUW*new,j)"
+        },
+        {
+          "number": 250,
+          "text": "                    drop.U[j]=blend(mix,mix.liquid.U(j),(1-o.RELAXUD)*ud+o.RELAXUD*new,j)"
+        }
+      ]
+    },
+    "native_initialization": {
+      "file": {
+        "path": "src/openstream/threefield.py",
+        "sha256": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+        "bytes": 19833
+      },
+      "lines": [
+        {
+          "number": 44,
+          "text": "            mix = deepcopy(self.mixSolver.mixtureInit[-1])"
+        },
+        {
+          "number": 47,
+          "text": "            film.mix = drop.mix = mix"
+        }
+      ]
+    }
+  },
+  "sawai_saved_precursors": {
+    "files": [
+      {
+        "path": "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/mixture/results.npz",
+        "sha256": "62305ec2f2f4d63b5f8bfe208e72c31563c67f42d7b52e8e91bc352da729722b",
+        "bytes": 45772
+      },
+      {
+        "path": "outputs/validation/lecorre-2025-01/sawai-01-paper-tw020-n100-base/numerical/mixture/initialization.npz",
+        "sha256": "cc4c1f543c5c83dcc61d404bfcd03dff306fcf0b081ba5f14c7d55c8c2d804af",
+        "bytes": 353859
+      }
+    ],
+    "physical_time_s": 0.0,
+    "final_init_time_s": 11.0,
+    "quantities": {
+      "W": {
+        "unit": "kg/s",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0,
+        "sample_nodes": [
+          {
+            "python_index": 23,
+            "matlab_row": 24,
+            "z_m": 0.37903999999999993,
+            "physical": 0.0037698999863320488,
+            "final_init": 0.0037698999863320488,
+            "physical_minus_final_init": 0.0
+          },
+          {
+            "python_index": 24,
+            "matlab_row": 25,
+            "z_m": 0.39552,
+            "physical": 0.003769899989505903,
+            "final_init": 0.003769899989505903,
+            "physical_minus_final_init": 0.0
+          },
+          {
+            "python_index": 25,
+            "matlab_row": 26,
+            "z_m": 0.412,
+            "physical": 0.003769899992750457,
+            "final_init": 0.003769899992750457,
+            "physical_minus_final_init": 0.0
+          },
+          {
+            "python_index": 26,
+            "matlab_row": 27,
+            "z_m": 0.42847999999999997,
+            "physical": 0.0037698999960572507,
+            "final_init": 0.0037698999960572507,
+            "physical_minus_final_init": 0.0
+          }
+        ]
+      },
+      "P": {
+        "unit": "Pa",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0,
+        "sample_nodes": [
+          {
+            "python_index": 23,
+            "matlab_row": 24,
+            "z_m": 0.37903999999999993,
+            "physical": 2946651.736475569,
+            "final_init": 2946651.736475569,
+            "physical_minus_final_init": 0.0
+          },
+          {
+            "python_index": 24,
+            "matlab_row": 25,
+            "z_m": 0.39552,
+            "physical": 2946463.245258246,
+            "final_init": 2946463.245258246,
+            "physical_minus_final_init": 0.0
+          },
+          {
+            "python_index": 25,
+            "matlab_row": 26,
+            "z_m": 0.412,
+            "physical": 2946264.2202438824,
+            "final_init": 2946264.2202438824,
+            "physical_minus_final_init": 0.0
+          },
+          {
+            "python_index": 26,
+            "matlab_row": 27,
+            "z_m": 0.42847999999999997,
+            "physical": 2946054.592926721,
+            "final_init": 2946054.592926721,
+            "physical_minus_final_init": 0.0
+          }
+        ]
+      },
+      "H": {
+        "unit": "J/kg",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0,
+        "sample_nodes": [
+          {
+            "python_index": 23,
+            "matlab_row": 24,
+            "z_m": 0.37903999999999993,
+            "physical": 1159219.1729122172,
+            "final_init": 1159219.1729122172,
+            "physical_minus_final_init": 0.0
+          },
+          {
+            "python_index": 24,
+            "matlab_row": 25,
+            "z_m": 0.39552,
+            "physical": 1187552.590171386,
+            "final_init": 1187552.590171386,
+            "physical_minus_final_init": 0.0
+          },
+          {
+            "python_index": 25,
+            "matlab_row": 26,
+            "z_m": 0.412,
+            "physical": 1215886.007389041,
+            "final_init": 1215886.007389041,
+            "physical_minus_final_init": 0.0
+          },
+          {
+            "python_index": 26,
+            "matlab_row": 27,
+            "z_m": 0.42847999999999997,
+            "physical": 1244219.4245601492,
+            "final_init": 1244219.4245601492,
+            "physical_minus_final_init": 0.0
+          }
+        ]
+      },
+      "U": {
+        "unit": "m/s",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": false,
+        "unequal_element_count": 87,
+        "unequal_indices_zero_based": [
+          [
+            14
+          ],
+          [
+            15
+          ],
+          [
+            16
+          ],
+          [
+            17
+          ],
+          [
+            18
+          ],
+          [
+            19
+          ],
+          [
+            20
+          ],
+          [
+            21
+          ],
+          [
+            22
+          ],
+          [
+            23
+          ],
+          [
+            24
+          ],
+          [
+            25
+          ],
+          [
+            26
+          ],
+          [
+            27
+          ],
+          [
+            28
+          ],
+          [
+            29
+          ],
+          [
+            30
+          ],
+          [
+            31
+          ],
+          [
+            32
+          ],
+          [
+            33
+          ],
+          [
+            34
+          ],
+          [
+            35
+          ],
+          [
+            36
+          ],
+          [
+            37
+          ],
+          [
+            38
+          ],
+          [
+            39
+          ],
+          [
+            40
+          ],
+          [
+            41
+          ],
+          [
+            42
+          ],
+          [
+            43
+          ],
+          [
+            44
+          ],
+          [
+            45
+          ],
+          [
+            46
+          ],
+          [
+            47
+          ],
+          [
+            48
+          ],
+          [
+            49
+          ],
+          [
+            50
+          ],
+          [
+            51
+          ],
+          [
+            52
+          ],
+          [
+            53
+          ],
+          [
+            54
+          ],
+          [
+            55
+          ],
+          [
+            56
+          ],
+          [
+            57
+          ],
+          [
+            58
+          ],
+          [
+            59
+          ],
+          [
+            60
+          ],
+          [
+            61
+          ],
+          [
+            62
+          ],
+          [
+            63
+          ],
+          [
+            64
+          ],
+          [
+            65
+          ],
+          [
+            66
+          ],
+          [
+            67
+          ],
+          [
+            68
+          ],
+          [
+            69
+          ],
+          [
+            70
+          ],
+          [
+            71
+          ],
+          [
+            72
+          ],
+          [
+            73
+          ],
+          [
+            74
+          ],
+          [
+            75
+          ],
+          [
+            76
+          ],
+          [
+            77
+          ],
+          [
+            78
+          ],
+          [
+            79
+          ],
+          [
+            80
+          ],
+          [
+            81
+          ],
+          [
+            82
+          ],
+          [
+            83
+          ],
+          [
+            84
+          ],
+          [
+            85
+          ],
+          [
+            86
+          ],
+          [
+            87
+          ],
+          [
+            88
+          ],
+          [
+            89
+          ],
+          [
+            90
+          ],
+          [
+            91
+          ],
+          [
+            92
+          ],
+          [
+            93
+          ],
+          [
+            94
+          ],
+          [
+            95
+          ],
+          [
+            96
+          ],
+          [
+            97
+          ],
+          [
+            98
+          ],
+          [
+            99
+          ],
+          [
+            100
+          ]
+        ],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.03740221387781073,
+        "sample_nodes": [
+          {
+            "python_index": 23,
+            "matlab_row": 24,
+            "z_m": 0.37903999999999993,
+            "physical": 1.081556112809681,
+            "final_init": 1.0829565309214413,
+            "physical_minus_final_init": -0.001400418111760393
+          },
+          {
+            "python_index": 24,
+            "matlab_row": 25,
+            "z_m": 0.39552,
+            "physical": 1.1978881600178946,
+            "final_init": 1.1985913545555318,
+            "physical_minus_final_init": -0.0007031945376372306
+          },
+          {
+            "python_index": 25,
+            "matlab_row": 26,
+            "z_m": 0.412,
+            "physical": 1.3164836889661673,
+            "final_init": 1.317646799732511,
+            "physical_minus_final_init": -0.001163110766343678
+          },
+          {
+            "python_index": 26,
+            "matlab_row": 27,
+            "z_m": 0.42847999999999997,
+            "physical": 1.437301843045538,
+            "final_init": 1.4390621723900439,
+            "physical_minus_final_init": -0.0017603293445058732
+          }
+        ]
+      },
+      "X": {
+        "unit": "1",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": false,
+        "unequal_element_count": 87,
+        "unequal_indices_zero_based": [
+          [
+            14
+          ],
+          [
+            15
+          ],
+          [
+            16
+          ],
+          [
+            17
+          ],
+          [
+            18
+          ],
+          [
+            19
+          ],
+          [
+            20
+          ],
+          [
+            21
+          ],
+          [
+            22
+          ],
+          [
+            23
+          ],
+          [
+            24
+          ],
+          [
+            25
+          ],
+          [
+            26
+          ],
+          [
+            27
+          ],
+          [
+            28
+          ],
+          [
+            29
+          ],
+          [
+            30
+          ],
+          [
+            31
+          ],
+          [
+            32
+          ],
+          [
+            33
+          ],
+          [
+            34
+          ],
+          [
+            35
+          ],
+          [
+            36
+          ],
+          [
+            37
+          ],
+          [
+            38
+          ],
+          [
+            39
+          ],
+          [
+            40
+          ],
+          [
+            41
+          ],
+          [
+            42
+          ],
+          [
+            43
+          ],
+          [
+            44
+          ],
+          [
+            45
+          ],
+          [
+            46
+          ],
+          [
+            47
+          ],
+          [
+            48
+          ],
+          [
+            49
+          ],
+          [
+            50
+          ],
+          [
+            51
+          ],
+          [
+            52
+          ],
+          [
+            53
+          ],
+          [
+            54
+          ],
+          [
+            55
+          ],
+          [
+            56
+          ],
+          [
+            57
+          ],
+          [
+            58
+          ],
+          [
+            59
+          ],
+          [
+            60
+          ],
+          [
+            61
+          ],
+          [
+            62
+          ],
+          [
+            63
+          ],
+          [
+            64
+          ],
+          [
+            65
+          ],
+          [
+            66
+          ],
+          [
+            67
+          ],
+          [
+            68
+          ],
+          [
+            69
+          ],
+          [
+            70
+          ],
+          [
+            71
+          ],
+          [
+            72
+          ],
+          [
+            73
+          ],
+          [
+            74
+          ],
+          [
+            75
+          ],
+          [
+            76
+          ],
+          [
+            77
+          ],
+          [
+            78
+          ],
+          [
+            79
+          ],
+          [
+            80
+          ],
+          [
+            81
+          ],
+          [
+            82
+          ],
+          [
+            83
+          ],
+          [
+            84
+          ],
+          [
+            85
+          ],
+          [
+            86
+          ],
+          [
+            87
+          ],
+          [
+            88
+          ],
+          [
+            89
+          ],
+          [
+            90
+          ],
+          [
+            91
+          ],
+          [
+            92
+          ],
+          [
+            93
+          ],
+          [
+            94
+          ],
+          [
+            95
+          ],
+          [
+            96
+          ],
+          [
+            97
+          ],
+          [
+            98
+          ],
+          [
+            99
+          ],
+          [
+            100
+          ]
+        ],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 1.6735045526398984e-06,
+        "sample_nodes": [
+          {
+            "python_index": 23,
+            "matlab_row": 24,
+            "z_m": 0.37903999999999993,
+            "physical": 0.08762754124393872,
+            "final_init": 0.087628043294412,
+            "physical_minus_final_init": -5.02050473277782e-07
+          },
+          {
+            "python_index": 24,
+            "matlab_row": 25,
+            "z_m": 0.39552,
+            "physical": 0.10287409559587014,
+            "final_init": 0.10287444989668355,
+            "physical_minus_final_init": -3.543008134099246e-07
+          },
+          {
+            "python_index": 25,
+            "matlab_row": 26,
+            "z_m": 0.412,
+            "physical": 0.11830916380524245,
+            "final_init": 0.11830940975548825,
+            "physical_minus_final_init": -2.459502457946572e-07
+          },
+          {
+            "python_index": 26,
+            "matlab_row": 27,
+            "z_m": 0.42847999999999997,
+            "physical": 0.13386245947059497,
+            "final_init": 0.13386262801940613,
+            "physical_minus_final_init": -1.6854881115802023e-07
+          }
+        ]
+      },
+      "VF": {
+        "unit": "1",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": false,
+        "unequal_element_count": 87,
+        "unequal_indices_zero_based": [
+          [
+            14
+          ],
+          [
+            15
+          ],
+          [
+            16
+          ],
+          [
+            17
+          ],
+          [
+            18
+          ],
+          [
+            19
+          ],
+          [
+            20
+          ],
+          [
+            21
+          ],
+          [
+            22
+          ],
+          [
+            23
+          ],
+          [
+            24
+          ],
+          [
+            25
+          ],
+          [
+            26
+          ],
+          [
+            27
+          ],
+          [
+            28
+          ],
+          [
+            29
+          ],
+          [
+            30
+          ],
+          [
+            31
+          ],
+          [
+            32
+          ],
+          [
+            33
+          ],
+          [
+            34
+          ],
+          [
+            35
+          ],
+          [
+            36
+          ],
+          [
+            37
+          ],
+          [
+            38
+          ],
+          [
+            39
+          ],
+          [
+            40
+          ],
+          [
+            41
+          ],
+          [
+            42
+          ],
+          [
+            43
+          ],
+          [
+            44
+          ],
+          [
+            45
+          ],
+          [
+            46
+          ],
+          [
+            47
+          ],
+          [
+            48
+          ],
+          [
+            49
+          ],
+          [
+            50
+          ],
+          [
+            51
+          ],
+          [
+            52
+          ],
+          [
+            53
+          ],
+          [
+            54
+          ],
+          [
+            55
+          ],
+          [
+            56
+          ],
+          [
+            57
+          ],
+          [
+            58
+          ],
+          [
+            59
+          ],
+          [
+            60
+          ],
+          [
+            61
+          ],
+          [
+            62
+          ],
+          [
+            63
+          ],
+          [
+            64
+          ],
+          [
+            65
+          ],
+          [
+            66
+          ],
+          [
+            67
+          ],
+          [
+            68
+          ],
+          [
+            69
+          ],
+          [
+            70
+          ],
+          [
+            71
+          ],
+          [
+            72
+          ],
+          [
+            73
+          ],
+          [
+            74
+          ],
+          [
+            75
+          ],
+          [
+            76
+          ],
+          [
+            77
+          ],
+          [
+            78
+          ],
+          [
+            79
+          ],
+          [
+            80
+          ],
+          [
+            81
+          ],
+          [
+            82
+          ],
+          [
+            83
+          ],
+          [
+            84
+          ],
+          [
+            85
+          ],
+          [
+            86
+          ],
+          [
+            87
+          ],
+          [
+            88
+          ],
+          [
+            89
+          ],
+          [
+            90
+          ],
+          [
+            91
+          ],
+          [
+            92
+          ],
+          [
+            93
+          ],
+          [
+            94
+          ],
+          [
+            95
+          ],
+          [
+            96
+          ],
+          [
+            97
+          ],
+          [
+            98
+          ],
+          [
+            99
+          ],
+          [
+            100
+          ]
+        ],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0006077633093461987,
+        "sample_nodes": [
+          {
+            "python_index": 23,
+            "matlab_row": 24,
+            "z_m": 0.37903999999999993,
+            "physical": 0.675124702150222,
+            "final_init": 0.6755684063186725,
+            "physical_minus_final_init": -0.0004437041684505205
+          },
+          {
+            "python_index": 24,
+            "matlab_row": 25,
+            "z_m": 0.39552,
+            "physical": 0.7084466138884233,
+            "final_init": 0.7086283678754748,
+            "physical_minus_final_init": -0.0001817539870514473
+          },
+          {
+            "python_index": 25,
+            "matlab_row": 26,
+            "z_m": 0.412,
+            "physical": 0.7363548525890785,
+            "final_init": 0.7366036824249887,
+            "physical_minus_final_init": -0.0002488298359102359
+          },
+          {
+            "python_index": 26,
+            "matlab_row": 27,
+            "z_m": 0.42847999999999997,
+            "physical": 0.7600502828155467,
+            "final_init": 0.7603661192737333,
+            "physical_minus_final_init": -0.00031583645818666906
+          }
+        ]
+      },
+      "liquid.W": {
+        "unit": "kg/s",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": false,
+        "unequal_element_count": 87,
+        "unequal_indices_zero_based": [
+          [
+            14
+          ],
+          [
+            15
+          ],
+          [
+            16
+          ],
+          [
+            17
+          ],
+          [
+            18
+          ],
+          [
+            19
+          ],
+          [
+            20
+          ],
+          [
+            21
+          ],
+          [
+            22
+          ],
+          [
+            23
+          ],
+          [
+            24
+          ],
+          [
+            25
+          ],
+          [
+            26
+          ],
+          [
+            27
+          ],
+          [
+            28
+          ],
+          [
+            29
+          ],
+          [
+            30
+          ],
+          [
+            31
+          ],
+          [
+            32
+          ],
+          [
+            33
+          ],
+          [
+            34
+          ],
+          [
+            35
+          ],
+          [
+            36
+          ],
+          [
+            37
+          ],
+          [
+            38
+          ],
+          [
+            39
+          ],
+          [
+            40
+          ],
+          [
+            41
+          ],
+          [
+            42
+          ],
+          [
+            43
+          ],
+          [
+            44
+          ],
+          [
+            45
+          ],
+          [
+            46
+          ],
+          [
+            47
+          ],
+          [
+            48
+          ],
+          [
+            49
+          ],
+          [
+            50
+          ],
+          [
+            51
+          ],
+          [
+            52
+          ],
+          [
+            53
+          ],
+          [
+            54
+          ],
+          [
+            55
+          ],
+          [
+            56
+          ],
+          [
+            57
+          ],
+          [
+            58
+          ],
+          [
+            59
+          ],
+          [
+            60
+          ],
+          [
+            61
+          ],
+          [
+            62
+          ],
+          [
+            63
+          ],
+          [
+            64
+          ],
+          [
+            65
+          ],
+          [
+            66
+          ],
+          [
+            67
+          ],
+          [
+            68
+          ],
+          [
+            69
+          ],
+          [
+            70
+          ],
+          [
+            71
+          ],
+          [
+            72
+          ],
+          [
+            73
+          ],
+          [
+            74
+          ],
+          [
+            75
+          ],
+          [
+            76
+          ],
+          [
+            77
+          ],
+          [
+            78
+          ],
+          [
+            79
+          ],
+          [
+            80
+          ],
+          [
+            81
+          ],
+          [
+            82
+          ],
+          [
+            83
+          ],
+          [
+            84
+          ],
+          [
+            85
+          ],
+          [
+            86
+          ],
+          [
+            87
+          ],
+          [
+            88
+          ],
+          [
+            89
+          ],
+          [
+            90
+          ],
+          [
+            91
+          ],
+          [
+            92
+          ],
+          [
+            93
+          ],
+          [
+            94
+          ],
+          [
+            95
+          ],
+          [
+            96
+          ],
+          [
+            97
+          ],
+          [
+            98
+          ],
+          [
+            99
+          ],
+          [
+            100
+          ]
+        ],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 6.308944770685304e-09,
+        "sample_nodes": [
+          {
+            "python_index": 23,
+            "matlab_row": 24,
+            "z_m": 0.37903999999999993,
+            "physical": 0.0034395529197942133,
+            "final_init": 0.0034395510271141407,
+            "physical_minus_final_init": 1.8926800725641013e-09
+          },
+          {
+            "python_index": 24,
+            "matlab_row": 25,
+            "z_m": 0.39552,
+            "physical": 0.003382074937598603,
+            "final_init": 0.0033820736019199702,
+            "physical_minus_final_init": 1.335678632800874e-09
+          },
+          {
+            "python_index": 25,
+            "matlab_row": 26,
+            "z_m": 0.412,
+            "physical": 0.003323886276978761,
+            "final_init": 0.0033238853497709313,
+            "physical_minus_final_init": 9.272078296124198e-10
+          },
+          {
+            "python_index": 26,
+            "matlab_row": 27,
+            "z_m": 0.42847999999999997,
+            "physical": 0.003265251910626841,
+            "final_init": 0.003265251275214678,
+            "physical_minus_final_init": 6.354121629900678e-10
+          }
+        ]
+      },
+      "liquid.U": {
+        "unit": "m/s",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": false,
+        "unequal_element_count": 87,
+        "unequal_indices_zero_based": [
+          [
+            14
+          ],
+          [
+            15
+          ],
+          [
+            16
+          ],
+          [
+            17
+          ],
+          [
+            18
+          ],
+          [
+            19
+          ],
+          [
+            20
+          ],
+          [
+            21
+          ],
+          [
+            22
+          ],
+          [
+            23
+          ],
+          [
+            24
+          ],
+          [
+            25
+          ],
+          [
+            26
+          ],
+          [
+            27
+          ],
+          [
+            28
+          ],
+          [
+            29
+          ],
+          [
+            30
+          ],
+          [
+            31
+          ],
+          [
+            32
+          ],
+          [
+            33
+          ],
+          [
+            34
+          ],
+          [
+            35
+          ],
+          [
+            36
+          ],
+          [
+            37
+          ],
+          [
+            38
+          ],
+          [
+            39
+          ],
+          [
+            40
+          ],
+          [
+            41
+          ],
+          [
+            42
+          ],
+          [
+            43
+          ],
+          [
+            44
+          ],
+          [
+            45
+          ],
+          [
+            46
+          ],
+          [
+            47
+          ],
+          [
+            48
+          ],
+          [
+            49
+          ],
+          [
+            50
+          ],
+          [
+            51
+          ],
+          [
+            52
+          ],
+          [
+            53
+          ],
+          [
+            54
+          ],
+          [
+            55
+          ],
+          [
+            56
+          ],
+          [
+            57
+          ],
+          [
+            58
+          ],
+          [
+            59
+          ],
+          [
+            60
+          ],
+          [
+            61
+          ],
+          [
+            62
+          ],
+          [
+            63
+          ],
+          [
+            64
+          ],
+          [
+            65
+          ],
+          [
+            66
+          ],
+          [
+            67
+          ],
+          [
+            68
+          ],
+          [
+            69
+          ],
+          [
+            70
+          ],
+          [
+            71
+          ],
+          [
+            72
+          ],
+          [
+            73
+          ],
+          [
+            74
+          ],
+          [
+            75
+          ],
+          [
+            76
+          ],
+          [
+            77
+          ],
+          [
+            78
+          ],
+          [
+            79
+          ],
+          [
+            80
+          ],
+          [
+            81
+          ],
+          [
+            82
+          ],
+          [
+            83
+          ],
+          [
+            84
+          ],
+          [
+            85
+          ],
+          [
+            86
+          ],
+          [
+            87
+          ],
+          [
+            88
+          ],
+          [
+            89
+          ],
+          [
+            90
+          ],
+          [
+            91
+          ],
+          [
+            92
+          ],
+          [
+            93
+          ],
+          [
+            94
+          ],
+          [
+            95
+          ],
+          [
+            96
+          ],
+          [
+            97
+          ],
+          [
+            98
+          ],
+          [
+            99
+          ],
+          [
+            100
+          ]
+        ],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.033404397288609555,
+        "sample_nodes": [
+          {
+            "python_index": 23,
+            "matlab_row": 24,
+            "z_m": 0.37903999999999993,
+            "physical": 1.0235261071096533,
+            "final_init": 1.0249253537751266,
+            "physical_minus_final_init": -0.0013992466654733082
+          },
+          {
+            "python_index": 24,
+            "matlab_row": 25,
+            "z_m": 0.39552,
+            "physical": 1.1214470067230262,
+            "final_init": 1.1221461081993387,
+            "physical_minus_final_init": -0.0006991014763124692
+          },
+          {
+            "python_index": 25,
+            "matlab_row": 26,
+            "z_m": 0.412,
+            "physical": 1.2188211837503427,
+            "final_init": 1.2199722607291201,
+            "physical_minus_final_init": -0.0011510769787774766
+          },
+          {
+            "python_index": 26,
+            "matlab_row": 27,
+            "z_m": 0.42847999999999997,
+            "physical": 1.3155582107704613,
+            "final_init": 1.3172918546783159,
+            "physical_minus_final_init": -0.0017336439078545762
+          }
+        ]
+      },
+      "vapor.W": {
+        "unit": "kg/s",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": false,
+        "unequal_element_count": 87,
+        "unequal_indices_zero_based": [
+          [
+            14
+          ],
+          [
+            15
+          ],
+          [
+            16
+          ],
+          [
+            17
+          ],
+          [
+            18
+          ],
+          [
+            19
+          ],
+          [
+            20
+          ],
+          [
+            21
+          ],
+          [
+            22
+          ],
+          [
+            23
+          ],
+          [
+            24
+          ],
+          [
+            25
+          ],
+          [
+            26
+          ],
+          [
+            27
+          ],
+          [
+            28
+          ],
+          [
+            29
+          ],
+          [
+            30
+          ],
+          [
+            31
+          ],
+          [
+            32
+          ],
+          [
+            33
+          ],
+          [
+            34
+          ],
+          [
+            35
+          ],
+          [
+            36
+          ],
+          [
+            37
+          ],
+          [
+            38
+          ],
+          [
+            39
+          ],
+          [
+            40
+          ],
+          [
+            41
+          ],
+          [
+            42
+          ],
+          [
+            43
+          ],
+          [
+            44
+          ],
+          [
+            45
+          ],
+          [
+            46
+          ],
+          [
+            47
+          ],
+          [
+            48
+          ],
+          [
+            49
+          ],
+          [
+            50
+          ],
+          [
+            51
+          ],
+          [
+            52
+          ],
+          [
+            53
+          ],
+          [
+            54
+          ],
+          [
+            55
+          ],
+          [
+            56
+          ],
+          [
+            57
+          ],
+          [
+            58
+          ],
+          [
+            59
+          ],
+          [
+            60
+          ],
+          [
+            61
+          ],
+          [
+            62
+          ],
+          [
+            63
+          ],
+          [
+            64
+          ],
+          [
+            65
+          ],
+          [
+            66
+          ],
+          [
+            67
+          ],
+          [
+            68
+          ],
+          [
+            69
+          ],
+          [
+            70
+          ],
+          [
+            71
+          ],
+          [
+            72
+          ],
+          [
+            73
+          ],
+          [
+            74
+          ],
+          [
+            75
+          ],
+          [
+            76
+          ],
+          [
+            77
+          ],
+          [
+            78
+          ],
+          [
+            79
+          ],
+          [
+            80
+          ],
+          [
+            81
+          ],
+          [
+            82
+          ],
+          [
+            83
+          ],
+          [
+            84
+          ],
+          [
+            85
+          ],
+          [
+            86
+          ],
+          [
+            87
+          ],
+          [
+            88
+          ],
+          [
+            89
+          ],
+          [
+            90
+          ],
+          [
+            91
+          ],
+          [
+            92
+          ],
+          [
+            93
+          ],
+          [
+            94
+          ],
+          [
+            95
+          ],
+          [
+            96
+          ],
+          [
+            97
+          ],
+          [
+            98
+          ],
+          [
+            99
+          ],
+          [
+            100
+          ]
+        ],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 6.308944770278728e-09,
+        "sample_nodes": [
+          {
+            "python_index": 23,
+            "matlab_row": 24,
+            "z_m": 0.37903999999999993,
+            "physical": 0.0003303470665378356,
+            "final_init": 0.00033034895921790796,
+            "physical_minus_final_init": -1.892680072347261e-09
+          },
+          {
+            "python_index": 24,
+            "matlab_row": 25,
+            "z_m": 0.39552,
+            "physical": 0.00038782505190730013,
+            "final_init": 0.0003878263875859329,
+            "physical_minus_final_init": -1.335678632746664e-09
+          },
+          {
+            "python_index": 25,
+            "matlab_row": 26,
+            "z_m": 0.412,
+            "physical": 0.00044601371577169613,
+            "final_init": 0.000446014642979526,
+            "physical_minus_final_init": -9.272078298834703e-10
+          },
+          {
+            "python_index": 26,
+            "matlab_row": 27,
+            "z_m": 0.42847999999999997,
+            "physical": 0.0005046480854304098,
+            "final_init": 0.0005046487208425724,
+            "physical_minus_final_init": -6.354121625563869e-10
+          }
+        ]
+      },
+      "vapor.U": {
+        "unit": "m/s",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": false,
+        "unequal_element_count": 87,
+        "unequal_indices_zero_based": [
+          [
+            14
+          ],
+          [
+            15
+          ],
+          [
+            16
+          ],
+          [
+            17
+          ],
+          [
+            18
+          ],
+          [
+            19
+          ],
+          [
+            20
+          ],
+          [
+            21
+          ],
+          [
+            22
+          ],
+          [
+            23
+          ],
+          [
+            24
+          ],
+          [
+            25
+          ],
+          [
+            26
+          ],
+          [
+            27
+          ],
+          [
+            28
+          ],
+          [
+            29
+          ],
+          [
+            30
+          ],
+          [
+            31
+          ],
+          [
+            32
+          ],
+          [
+            33
+          ],
+          [
+            34
+          ],
+          [
+            35
+          ],
+          [
+            36
+          ],
+          [
+            37
+          ],
+          [
+            38
+          ],
+          [
+            39
+          ],
+          [
+            40
+          ],
+          [
+            41
+          ],
+          [
+            42
+          ],
+          [
+            43
+          ],
+          [
+            44
+          ],
+          [
+            45
+          ],
+          [
+            46
+          ],
+          [
+            47
+          ],
+          [
+            48
+          ],
+          [
+            49
+          ],
+          [
+            50
+          ],
+          [
+            51
+          ],
+          [
+            52
+          ],
+          [
+            53
+          ],
+          [
+            54
+          ],
+          [
+            55
+          ],
+          [
+            56
+          ],
+          [
+            57
+          ],
+          [
+            58
+          ],
+          [
+            59
+          ],
+          [
+            60
+          ],
+          [
+            61
+          ],
+          [
+            62
+          ],
+          [
+            63
+          ],
+          [
+            64
+          ],
+          [
+            65
+          ],
+          [
+            66
+          ],
+          [
+            67
+          ],
+          [
+            68
+          ],
+          [
+            69
+          ],
+          [
+            70
+          ],
+          [
+            71
+          ],
+          [
+            72
+          ],
+          [
+            73
+          ],
+          [
+            74
+          ],
+          [
+            75
+          ],
+          [
+            76
+          ],
+          [
+            77
+          ],
+          [
+            78
+          ],
+          [
+            79
+          ],
+          [
+            80
+          ],
+          [
+            81
+          ],
+          [
+            82
+          ],
+          [
+            83
+          ],
+          [
+            84
+          ],
+          [
+            85
+          ],
+          [
+            86
+          ],
+          [
+            87
+          ],
+          [
+            88
+          ],
+          [
+            89
+          ],
+          [
+            90
+          ],
+          [
+            91
+          ],
+          [
+            92
+          ],
+          [
+            93
+          ],
+          [
+            94
+          ],
+          [
+            95
+          ],
+          [
+            96
+          ],
+          [
+            97
+          ],
+          [
+            98
+          ],
+          [
+            99
+          ],
+          [
+            100
+          ]
+        ],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.006191593750180857,
+        "sample_nodes": [
+          {
+            "python_index": 23,
+            "matlab_row": 24,
+            "z_m": 0.37903999999999993,
+            "physical": 2.639982364944842,
+            "final_init": 2.6382635758237303,
+            "physical_minus_final_init": 0.0017187891211118966
+          },
+          {
+            "python_index": 24,
+            "matlab_row": 25,
+            "z_m": 0.39552,
+            "physical": 2.9535430150439983,
+            "final_init": 2.952795639024271,
+            "physical_minus_final_init": 0.0007473760197274082
+          },
+          {
+            "python_index": 25,
+            "matlab_row": 26,
+            "z_m": 0.412,
+            "physical": 3.267951714165838,
+            "final_init": 3.2668545687733808,
+            "physical_minus_final_init": 0.0010971453924573105
+          },
+          {
+            "python_index": 26,
+            "matlab_row": 27,
+            "z_m": 0.42847999999999997,
+            "physical": 3.5822911060776885,
+            "final_init": 3.5808076234823676,
+            "physical_minus_final_init": 0.0014834825953209396
+          }
+        ]
+      },
+      "DP.Tot": {
+        "unit": "Pa",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0,
+        "sample_nodes": [
+          {
+            "python_index": 23,
+            "matlab_row": 24,
+            "z_m": 0.37903999999999993,
+            "physical": 178.97492908997296,
+            "final_init": 178.97492908997296,
+            "physical_minus_final_init": 0.0
+          },
+          {
+            "python_index": 24,
+            "matlab_row": 25,
+            "z_m": 0.39552,
+            "physical": 188.49121189344484,
+            "final_init": 188.49121189344484,
+            "physical_minus_final_init": 0.0
+          },
+          {
+            "python_index": 25,
+            "matlab_row": 26,
+            "z_m": 0.412,
+            "physical": 199.02500617205348,
+            "final_init": 199.02500617205348,
+            "physical_minus_final_init": 0.0
+          },
+          {
+            "python_index": 26,
+            "matlab_row": 27,
+            "z_m": 0.42847999999999997,
+            "physical": 209.62730627196478,
+            "final_init": 209.62730627196478,
+            "physical_minus_final_init": 0.0
+          }
+        ]
+      },
+      "HFLUX": {
+        "unit": "W/m^2",
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0,
+        "sample_nodes": [
+          {
+            "python_index": 23,
+            "matlab_row": 24,
+            "z_m": 0.37903999999999993,
+            "physical": [
+              515791.909977455
+            ],
+            "final_init": [
+              515791.909977455
+            ],
+            "physical_minus_final_init": [
+              0.0
+            ]
+          },
+          {
+            "python_index": 24,
+            "matlab_row": 25,
+            "z_m": 0.39552,
+            "physical": [
+              515791.909977455
+            ],
+            "final_init": [
+              515791.909977455
+            ],
+            "physical_minus_final_init": [
+              0.0
+            ]
+          },
+          {
+            "python_index": 25,
+            "matlab_row": 26,
+            "z_m": 0.412,
+            "physical": [
+              515791.909977455
+            ],
+            "final_init": [
+              515791.909977455
+            ],
+            "physical_minus_final_init": [
+              0.0
+            ]
+          },
+          {
+            "python_index": 26,
+            "matlab_row": 27,
+            "z_m": 0.42847999999999997,
+            "physical": [
+              515791.909977455
+            ],
+            "final_init": [
+              515791.909977455
+            ],
+            "physical_minus_final_init": [
+              0.0
+            ]
+          }
+        ]
+      },
+      "MRM.WV": {
+        "unit": "kg/s",
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0,
+        "sample_nodes": [
+          {
+            "python_index": 23,
+            "matlab_row": 24,
+            "z_m": 0.37903999999999993,
+            "physical": [
+              0.0
+            ],
+            "final_init": [
+              0.0
+            ],
+            "physical_minus_final_init": [
+              0.0
+            ]
+          },
+          {
+            "python_index": 24,
+            "matlab_row": 25,
+            "z_m": 0.39552,
+            "physical": [
+              0.0
+            ],
+            "final_init": [
+              0.0
+            ],
+            "physical_minus_final_init": [
+              0.0
+            ]
+          },
+          {
+            "python_index": 25,
+            "matlab_row": 26,
+            "z_m": 0.412,
+            "physical": [
+              0.0
+            ],
+            "final_init": [
+              0.0
+            ],
+            "physical_minus_final_init": [
+              0.0
+            ]
+          },
+          {
+            "python_index": 26,
+            "matlab_row": 27,
+            "z_m": 0.42847999999999997,
+            "physical": [
+              0.0
+            ],
+            "final_init": [
+              0.0
+            ],
+            "physical_minus_final_init": [
+              0.0
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "original_baseline_archive": {
+    "archive": {
+      "path": "upstream/tests/integration/references/TUTORIAL1-TUTORIAL1-DEFAULT/tutorial1_FourFieldSolver.mat",
+      "sha256": "fd28edab74cad654721572c4644461dc20fef27ed4a3d617458b9717e13eacf1",
+      "bytes": 632002
+    },
+    "framework": "FourField",
+    "case": "Original TUTORIAL1 archive; not Sawai",
+    "physical_film_mix_is_physical_mixture": true,
+    "initialization_handles": [
+      {
+        "initialization_index_zero_based": 0,
+        "film_mix_distinct_from_physical": true,
+        "film_mix_distinct_from_original_final_init": true,
+        "drop_mix_is_film_mix": true,
+        "base_mix_is_physical": true,
+        "base_film_is_parent": true,
+        "wave_mix_is_physical": true,
+        "wave_film_is_parent": true
+      },
+      {
+        "initialization_index_zero_based": 1,
+        "film_mix_distinct_from_physical": true,
+        "film_mix_distinct_from_original_final_init": true,
+        "drop_mix_is_film_mix": true,
+        "base_mix_is_physical": true,
+        "base_film_is_parent": true,
+        "wave_mix_is_physical": true,
+        "wave_film_is_parent": true
+      },
+      {
+        "initialization_index_zero_based": 2,
+        "film_mix_distinct_from_physical": true,
+        "film_mix_distinct_from_original_final_init": true,
+        "drop_mix_is_film_mix": true,
+        "base_mix_is_physical": true,
+        "base_film_is_parent": true,
+        "wave_mix_is_physical": true,
+        "wave_film_is_parent": true
+      },
+      {
+        "initialization_index_zero_based": 3,
+        "film_mix_distinct_from_physical": true,
+        "film_mix_distinct_from_original_final_init": true,
+        "drop_mix_is_film_mix": true,
+        "base_mix_is_physical": true,
+        "base_film_is_parent": true,
+        "wave_mix_is_physical": true,
+        "wave_film_is_parent": true
+      },
+      {
+        "initialization_index_zero_based": 4,
+        "film_mix_distinct_from_physical": true,
+        "film_mix_distinct_from_original_final_init": true,
+        "drop_mix_is_film_mix": true,
+        "base_mix_is_physical": true,
+        "base_film_is_parent": true,
+        "wave_mix_is_physical": true,
+        "wave_film_is_parent": true
+      },
+      {
+        "initialization_index_zero_based": 5,
+        "film_mix_distinct_from_physical": true,
+        "film_mix_distinct_from_original_final_init": true,
+        "drop_mix_is_film_mix": true,
+        "base_mix_is_physical": true,
+        "base_film_is_parent": true,
+        "wave_mix_is_physical": true,
+        "wave_film_is_parent": true
+      },
+      {
+        "initialization_index_zero_based": 6,
+        "film_mix_distinct_from_physical": true,
+        "film_mix_distinct_from_original_final_init": true,
+        "drop_mix_is_film_mix": true,
+        "base_mix_is_physical": true,
+        "base_film_is_parent": true,
+        "wave_mix_is_physical": true,
+        "wave_film_is_parent": true
+      },
+      {
+        "initialization_index_zero_based": 7,
+        "film_mix_distinct_from_physical": true,
+        "film_mix_distinct_from_original_final_init": true,
+        "drop_mix_is_film_mix": true,
+        "base_mix_is_physical": true,
+        "base_film_is_parent": true,
+        "wave_mix_is_physical": true,
+        "wave_film_is_parent": true
+      },
+      {
+        "initialization_index_zero_based": 8,
+        "film_mix_distinct_from_physical": true,
+        "film_mix_distinct_from_original_final_init": true,
+        "drop_mix_is_film_mix": true,
+        "base_mix_is_physical": true,
+        "base_film_is_parent": true,
+        "wave_mix_is_physical": true,
+        "wave_film_is_parent": true
+      }
+    ],
+    "physical_vs_final_init_cached_arrays": {
+      "W": {
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "P": {
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "H": {
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "x": {
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "vf": {
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "rho": {
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      }
+    },
+    "last_film_mix_vs_final_init_cached_arrays": {
+      "W": {
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "P": {
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "H": {
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "x": {
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "vf": {
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "rho": {
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      }
+    },
+    "scope": "Recovered object identity and stored arrays only. The local MATLAB solve variable is not stored; its origin is established separately from source."
+  },
+  "native_original_baseline_precursors": {
+    "files": [
+      {
+        "path": "outputs/baseline-parity-02/FourField/native/mixture/results.npz",
+        "sha256": "adc535980b95482a7b16135203ad713bef1a147d53edf4da39250cf28f645514",
+        "bytes": 45589
+      },
+      {
+        "path": "outputs/baseline-parity-02/FourField/native/mixture/initialization.npz",
+        "sha256": "d6382c7b5b3c21ef7d91bb49e9672a29a092f553d3d2c7fe0730c52e9ad1f4fe",
+        "bytes": 289988
+      }
+    ],
+    "physical_time_s": 0.0,
+    "final_init_time_s": 9.0,
+    "quantities": {
+      "W": {
+        "unit": "kg/s",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "P": {
+        "unit": "Pa",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "H": {
+        "unit": "J/kg",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "U": {
+        "unit": "m/s",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "X": {
+        "unit": "1",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "VF": {
+        "unit": "1",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "liquid.W": {
+        "unit": "kg/s",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "liquid.U": {
+        "unit": "m/s",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "vapor.W": {
+        "unit": "kg/s",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "vapor.U": {
+        "unit": "m/s",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "DP.Tot": {
+        "unit": "Pa",
+        "shape": [
+          101
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "HFLUX": {
+        "unit": "W/m^2",
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      },
+      "MRM.WV": {
+        "unit": "kg/s",
+        "shape": [
+          101,
+          1
+        ],
+        "exact_equal_including_nan_locations": true,
+        "unequal_element_count": 0,
+        "unequal_indices_zero_based": [],
+        "nonfinite_physical_count": 0,
+        "nonfinite_final_init_count": 0,
+        "max_abs_difference_on_finite_pairs": 0.0
+      }
+    }
+  },
+  "interpretation": [
+    "MATLAB initialization creates its outer local mixture from physical-time-zero precursor P. Aggregate film/drop own copies of final-init precursor S, while base/wave retain P.",
+    "Saved Sawai P and S have equal primary W/P/H but unequal cached/derived quantities; do not infer equal getters from equal primary arrays.",
+    "Original TUTORIAL1 topology and equal precursor caches explain why its established profile agreement does not test the unequal-cache case.",
+    "This does not identify a causal explanation for Sawai nonconvergence or establish matched MATLAB Sawai outputs. Those require a separate controlled replay/reference."
+  ],
+  "audit_script": {
+    "path": "tools/audit_replay_precursor_handles.py",
+    "sha256": "a3bf0d83de75ca01edcbf7522bd3dc7e3032a2441a373d10f47fa9f7e8bd33d2",
+    "bytes": 10183
+  }
+}

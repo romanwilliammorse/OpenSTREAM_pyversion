@@ -1,0 +1,8 @@
+TIME ! frozen effective input > 0
+PRESSURE ! frozen effective input > 6000000
+HIN ! frozen effective input > 1139400
+MFLOW ! frozen effective input > 0.070000000000000007
+POWER ! frozen effective input > 87500
+WMESH ! frozen effective input > 1.75 1.75 2
+WPOWER ! frozen effective input > 1 1 0
+END

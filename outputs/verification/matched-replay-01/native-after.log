@@ -1,0 +1,41 @@
+sawai-01-paper-tw020-n100-base: constructing identical precursor and tracing selected nodes
+  t=1s point=True maxiter=15
+  t=2s point=False maxiter=100
+  t=3s point=False maxiter=100
+  t=4s point=False maxiter=100
+  t=5s point=False maxiter=100
+  t=6s point=False maxiter=100
+  t=7s point=False maxiter=100
+  t=8s point=False maxiter=100
+sawai-01-paper-tw020-n100-base: native exact equality=False; convergence=False
+demo-twofluid-n400-mesh: constructing identical precursor and tracing selected nodes
+  t=1s point=True maxiter=17
+  t=2s point=True maxiter=13
+  t=3s point=True maxiter=12
+  t=4s point=True maxiter=10
+  t=5s point=True maxiter=7
+  t=6s point=True maxiter=3
+  t=7s point=True maxiter=2
+  t=8s point=True maxiter=2
+  t=9s point=True maxiter=2
+  t=10s point=True maxiter=2
+  t=11s point=True maxiter=2
+  t=12s point=True maxiter=2
+  t=13s point=True maxiter=2
+  t=14s point=True maxiter=2
+  t=15s point=True maxiter=2
+  t=16s point=True maxiter=2
+  t=17s point=True maxiter=2
+  t=18s point=True maxiter=2
+  t=19s point=True maxiter=2
+  t=20s point=True maxiter=2
+  t=21s point=True maxiter=2
+  t=22s point=True maxiter=2
+  t=23s point=True maxiter=2
+  t=24s point=True maxiter=2
+  t=25s point=True maxiter=2
+  t=26s point=True maxiter=2
+  t=27s point=True maxiter=2
+  t=28s point=True maxiter=2
+  t=29s point=True maxiter=2
+demo-twofluid-n400-mesh: native exact equality=True; convergence=False

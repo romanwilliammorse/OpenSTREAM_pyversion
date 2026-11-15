@@ -1,5 +1,12 @@
 # Le Corre NURETH-21 reproduction and verification report
 
+**Source-revision note, 2026-11-15:** the 69-case campaign below is preserved
+pre-correction evidence. A later [matched diagnostic replay](MATCHED_DIAGNOSTIC_REPLAY.md)
+identified and corrected a FourField outer-sweep precursor-selection translation
+error. Only the two requested cases and a separately labeled TwoFluid budget
+diagnostic were replayed; these figures and campaign statistics have not been
+silently recomputed. The corrected Sawai case still fails point convergence.
+
 Target: J.-M. Le Corre, J. Chan, E. Walter, E. T. Hurlburt and R. W. Morse,
 *OpenSTREAM: An Open-Source Platform for Two-Phase Flow Modeling and
 Simulation*, NURETH-21 (2025), supplied as `LeCorre2025OpenSTREAM.pdf`.

@@ -2,6 +2,54 @@
 
 The user's requested full native port is **not yet complete**. Continue implementation and verification without replacing the preserved source or changing equations to obtain passing tests.
 
+## Matched diagnostic replay — 2026-11-15
+
+The user authorized Sawai entry 1 at tau=0.2 s/100 cells, then the TwoFluid
+demonstration at 400 cells, with corrections restricted to confirmed translation
+errors. Preregistration `178ac2b4152b31016dc8847aebab139de0d88d2d` freezes both
+cases and 45 original artifact hashes in `examples/matched_diagnostic_replay.json`.
+The user confirmed that no MATLAB access is currently available; continue native
+verification and source audit, preserving fresh-MATLAB equivalence as unverified.
+
+`outputs/verification/matched-replay-01/native-before-02/` contains completed
+read-only traces in the requested order. Both cases reproduce all original
+compared arrays exactly (shape/value/NaN), with original convergence failures
+intact. An earlier trace attempt failed only at NumPy JSON serialization; its
+failed instrumentation record remains under `native-before/`.
+
+The source audit confirms one FourField object-selection translation error:
+the outer initialization sweep must use the physical mixture precursor, while
+film/drop and base/wave closures retain their distinct original mixture handles.
+The tutorial baseline did not expose this because its two precursor states
+coincide. See `docs/replay_sawai_source_audit.md` and the hash-bound precursor
+handle receipt. The isolated correction and corrected replay are complete.
+TwoFluid's 29
+advances for SSMAXITER=30 agree with source; no causal translation error has
+been confirmed there. Do not loosen tolerances or change equations.
+
+Sawai still fails final point convergence at nodes 24-26 after the correction;
+late wave-flow iterates alternate. TwoFluid's unchanged case reproduces the
+original 29 s failure. A separately preregistered 60-state budget variant converges
+at 39 s with dHl=0.9414000483 J/kg below the unchanged 1 J/kg limit, an exact original
+30-state prefix and an unchanged precursor. Its area diagnostic still fails.
+All four archived baselines pass again. Local full collection: 529 passed with
+two existing warnings; final observer/auditor check: 30 passed; frontend: 11 passed.
+The independent before/after arithmetic audits each pass 13,368 Sawai + 9,326 TwoFluid
+checks. Source/inputs and the original 45 files remain hash-bound and preserved.
+
+The final portable MATLAB kit is `matched-matlab-replay-kit-02.zip`; 230 files,
+105 pinned source files, insertion-only hooks, and 7 static tests are verified.
+It has not been run in MATLAB. `_01` is a retained local draft. The acceptance
+matrix records the corrected source semantics without closing unresolved
+new-case MATLAB, physical or experimental criteria. See
+`docs/MATCHED_DIAGNOSTIC_REPLAY.md` and `final_comparison.json`.
+
+Remaining delivery: publish source/evidence and record clean Windows CI. Next
+scientific work: diagnose Sawai's alternating point iterations, scope the same
+ThreeField precursor-selection pattern, and replay affected Wurtz/Sawai cohorts
+before replacing their pre-correction plots/statistics. No original 69-case
+result is silently upgraded to the corrected implementation.
+
 ## Current presentation and diagnostic policy revision
 
 The project owner confirmed tau=0.2 s as the intended paper setting, requested

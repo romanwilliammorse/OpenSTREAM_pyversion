@@ -1,0 +1,6 @@
+{
+  "framework": "TwoFluid",
+  "upstream_regression_passed": true,
+  "initialization_core_passed": true,
+  "expanded_profiles_passed": true
+}

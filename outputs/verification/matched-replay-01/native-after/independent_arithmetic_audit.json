@@ -1,0 +1,380 @@
+{
+  "schema": "openstream-independent-replay-arithmetic-v1",
+  "report_sha256": "a21a51a218865977ff0248d564f146195d0fdeebcc8c1e36b796d54fc7e4588b",
+  "audit_script_sha256": "153a656755af72fdb2e8d10b9c2c2600adf2e8f70c2245d9f2c43cc3dab78588",
+  "frozen_manifest_sha256": "c4516d07d8e1d0c06bb6df35376de57a714460beb59cc804c2fba7c46771e4c4",
+  "comparison_rule": "Exact numeric equality, including matching NaN locations; no acceptance tolerance.",
+  "scope": "Recorded scalar-update arithmetic and saved temporal differences only; no solver or property recomputation, MATLAB execution, or physical-validation claim.",
+  "limitations": [
+    "Closure-return values are observed inputs, not independent closure validation.",
+    "Raw HTOT and force constituents were not captured in this trace; source-order force addition is not resolved.",
+    "Only selected axial nodes are traced; temporal maxima use all saved nodes."
+  ],
+  "cases": [
+    {
+      "run_id": "sawai-01-paper-tw020-n100-base",
+      "point_iterations_audited": 2220,
+      "selected_node_time_pairs_complete": 72,
+      "dtype_pairs_identical": 215,
+      "dtype_read_files_sha256": {
+        "comparison_profiles.npz": {
+          "original_sha256": "7a1cdb7701c833857543d81fdbab80c427147905cf3c136500cc4116d693230f",
+          "replay_sha256": "046fe83f222f6892bcd5e43f0d638f7b5dd0950fbba2a1206096c2db9e4b8c0d"
+        },
+        "numerical/results.npz": {
+          "original_sha256": "8fed4058a2535925fcab040b4c07a7fb1a7d832f9cb5b2db3eb98ff2b276eebb",
+          "replay_sha256": "037044c4825729b17d32f65934aeb037838940c0bb991ba85557a313b31d7d8f"
+        },
+        "numerical/initialization.npz": {
+          "original_sha256": "2538243681aa03fee6606ce402622783ee536887c3c81ea2a1f4ab6f49deab5e",
+          "replay_sha256": "266b6acabc747f8349c5636a2acb52ac38b7767ad6d159a32ee285c3ab0e83c9"
+        },
+        "numerical/mixture/results.npz": {
+          "original_sha256": "62305ec2f2f4d63b5f8bfe208e72c31563c67f42d7b52e8e91bc352da729722b",
+          "replay_sha256": "62305ec2f2f4d63b5f8bfe208e72c31563c67f42d7b52e8e91bc352da729722b"
+        },
+        "numerical/mixture/initialization.npz": {
+          "original_sha256": "cc4c1f543c5c83dcc61d404bfcd03dff306fcf0b081ba5f14c7d55c8c2d804af",
+          "replay_sha256": "cc4c1f543c5c83dcc61d404bfcd03dff306fcf0b081ba5f14c7d55c8c2d804af"
+        }
+      },
+      "read_file_sha256": {
+        "update_trace.jsonl": "a74f74e0eed9994fd8e05e1dfd43f421c374fb0a8767b980bca0be483c1b5098",
+        "temporal_trace.json": "8e719820716375c701028c24fba2b9781ad2737c748eed9532277e1d5020de54",
+        "trace_schema.json": "ae12d7cb2f39313153193ca31a4b8bbc18938ba6e5459e1fe6451b67cfd8ab44",
+        "effective_inputs.json": "f60b6bd005de5febbb7aa225adbd5728a5db3f4b1cca129142113e86a151c859",
+        "numerical/initialization.npz": "266b6acabc747f8349c5636a2acb52ac38b7767ad6d159a32ee285c3ab0e83c9",
+        "numerical/mixture/results.npz": "62305ec2f2f4d63b5f8bfe208e72c31563c67f42d7b52e8e91bc352da729722b"
+      },
+      "checks": 13368,
+      "mismatches": 0,
+      "exact_arithmetic_match": true,
+      "groups": {
+        "base.mass_proposal": {
+          "unit": "kg/s",
+          "checks": 2220,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "base.mass_relaxation": {
+          "unit": "kg/s",
+          "checks": 2220,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "wave.mass_proposal": {
+          "unit": "kg/s",
+          "checks": 2220,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "wave.mass_relaxation": {
+          "unit": "kg/s",
+          "checks": 2220,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "base.source_clipping": {
+          "unit": "kg/s",
+          "checks": 2220,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "wave.source_clipping": {
+          "unit": "kg/s",
+          "checks": 2220,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "temporal.dWLb": {
+          "unit": "kg/(s m)",
+          "checks": 8,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "temporal.dUb": {
+          "unit": "m/s",
+          "checks": 8,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "temporal.dWLw": {
+          "unit": "kg/(s m)",
+          "checks": 8,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "temporal.dUw": {
+          "unit": "m/s",
+          "checks": 8,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "temporal.dFw": {
+          "unit": "Hz",
+          "checks": 8,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "temporal.dUd": {
+          "unit": "m/s",
+          "checks": 8,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        }
+      },
+      "first_mismatches": []
+    },
+    {
+      "run_id": "demo-twofluid-n400-mesh",
+      "point_iterations_audited": 416,
+      "selected_node_time_pairs_complete": 116,
+      "dtype_pairs_identical": 185,
+      "dtype_read_files_sha256": {
+        "comparison_profiles.npz": {
+          "original_sha256": "621c49b519d60cfcdbb50f1b4160f65a83f51d8145b49afa70ec0271cb17ac78",
+          "replay_sha256": "621c49b519d60cfcdbb50f1b4160f65a83f51d8145b49afa70ec0271cb17ac78"
+        },
+        "numerical/results.npz": {
+          "original_sha256": "6f1fb75de59818b80ceebcddc759df93e054033c0cff9c88a80a71abc50485eb",
+          "replay_sha256": "6f1fb75de59818b80ceebcddc759df93e054033c0cff9c88a80a71abc50485eb"
+        },
+        "numerical/initialization.npz": {
+          "original_sha256": "7f0ac20aa0236e1035d6c84d6c13efb861c94f8173cd736943e553422dd89151",
+          "replay_sha256": "7f0ac20aa0236e1035d6c84d6c13efb861c94f8173cd736943e553422dd89151"
+        },
+        "numerical/mixture/results.npz": {
+          "original_sha256": "ad06b872d5a67fede69cfba05b84732cde97a8e4abdf24a4a421986e3c713f14",
+          "replay_sha256": "ad06b872d5a67fede69cfba05b84732cde97a8e4abdf24a4a421986e3c713f14"
+        },
+        "numerical/mixture/initialization.npz": {
+          "original_sha256": "21608d53a20a708b58046af17c9dd201703c840e460f78542e1c78300288807d",
+          "replay_sha256": "21608d53a20a708b58046af17c9dd201703c840e460f78542e1c78300288807d"
+        }
+      },
+      "read_file_sha256": {
+        "update_trace.jsonl": "8ae519a9a87dcea22e997dbfd3b08eb999130531cd17e491ecdc33b89483a216",
+        "temporal_trace.json": "5d5da118925ba53a7a673e8cc7ee0ec4c51f64a263a053a3168ed97931a3baac",
+        "trace_schema.json": "eb976a2ba7bcc9d3bd18ec0309cf94cfe05ba8daed31fd482bb291158606808c",
+        "effective_inputs.json": "d40b569151d34cfba9a685c6f3ab9a4f904128e232a4278269a13a86445a8f35",
+        "numerical/initialization.npz": "7f0ac20aa0236e1035d6c84d6c13efb861c94f8173cd736943e553422dd89151",
+        "numerical/mixture/results.npz": "ad06b872d5a67fede69cfba05b84732cde97a8e4abdf24a4a421986e3c713f14"
+      },
+      "checks": 9326,
+      "mismatches": 0,
+      "exact_arithmetic_match": true,
+      "groups": {
+        "liquid.mass_source_snapshot": {
+          "unit": "kg/(s m)",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "liquid.mass_proposal": {
+          "unit": "kg/s",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "liquid.mass_relaxation": {
+          "unit": "kg/s",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "liquid.force_normalization": {
+          "unit": "m/s^2",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "liquid.momentum_proposal": {
+          "unit": "m/s",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "liquid.momentum_relaxation": {
+          "unit": "m/s",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "liquid.enthalpy_proposal": {
+          "unit": "J/kg",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "liquid.enthalpy_relaxation": {
+          "unit": "J/kg",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "vapor.mass_source_snapshot": {
+          "unit": "kg/(s m)",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "vapor.mass_proposal": {
+          "unit": "kg/s",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "vapor.mass_relaxation": {
+          "unit": "kg/s",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "vapor.force_normalization": {
+          "unit": "m/s^2",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "vapor.momentum_proposal": {
+          "unit": "m/s",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "vapor.momentum_relaxation": {
+          "unit": "m/s",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "vapor.enthalpy_proposal": {
+          "unit": "J/kg",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "vapor.enthalpy_relaxation": {
+          "unit": "J/kg",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "liquid.point_dW": {
+          "unit": "kg/s",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "vapor.point_dW": {
+          "unit": "kg/s",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "liquid.point_dU": {
+          "unit": "m/s",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "vapor.point_dU": {
+          "unit": "m/s",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "liquid.point_dH": {
+          "unit": "J/kg",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "vapor.point_dH": {
+          "unit": "J/kg",
+          "checks": 416,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "temporal.dWl": {
+          "unit": "kg/s",
+          "checks": 29,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "temporal.dWv": {
+          "unit": "kg/s",
+          "checks": 29,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "temporal.dUl": {
+          "unit": "m/s",
+          "checks": 29,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "temporal.dUv": {
+          "unit": "m/s",
+          "checks": 29,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "temporal.dHl": {
+          "unit": "J/kg",
+          "checks": 29,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        },
+        "temporal.dHv": {
+          "unit": "J/kg",
+          "checks": 29,
+          "mismatches": 0,
+          "nonfinite_pairs": 0,
+          "max_abs_difference": 0.0
+        }
+      },
+      "first_mismatches": []
+    }
+  ],
+  "all_exact_arithmetic_checks_passed": true
+}

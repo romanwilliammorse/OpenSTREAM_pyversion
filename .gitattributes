@@ -10,4 +10,7 @@ output/pdf/LeCorre_2025_Reports_02/** -text
 output/pdf/LeCorre_2025_Reports_03/** -text
 outputs/verification/annular-policy-01/** -text
 outputs/verification/matched-replay-01/** -text
+outputs/verification/matched-matlab-replay-kit-01/** -text
+outputs/verification/matched-matlab-replay-kit-02/** -text
+outputs/verification/matched-matlab-replay-kit-02-static-verification.json -text
 examples/matched_diagnostic_replay.json -text

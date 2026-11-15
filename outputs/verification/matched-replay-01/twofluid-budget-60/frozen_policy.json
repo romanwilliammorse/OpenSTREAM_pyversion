@@ -1,0 +1,16 @@
+{
+  "schema": "openstream-twofluid-initialization-budget-diagnostic-v1",
+  "original_run_id": "demo-twofluid-n400-mesh",
+  "original_case": "outputs/validation/lecorre-2025-01/demo-twofluid-n400-mesh",
+  "matched_manifest": "examples/matched_diagnostic_replay.json",
+  "only_input_change": {"options.SSMAXITER": {"from": 30, "to": 60}},
+  "reason": "Test whether additional existing pseudo-time steps meet the unchanged source temporal criterion; not a correction to the frozen matched case.",
+  "criteria": [
+    "Every effective model, geometry and boundary value and every other option must match the frozen case.",
+    "The first 30 stored initialization states must reproduce the original arrays exactly, including shape and NaN locations.",
+    "The mixture precursor physical and initialization arrays must reproduce the original arrays exactly.",
+    "Report source state, all point and temporal criteria, required step count and physical diagnostics without changing any tolerance.",
+    "Retain the original 30-state failure; a longer-budget run is a separate diagnostic variant.",
+    "Do not claim MATLAB equivalence or experimental validation from this native extension."
+  ]
+}
