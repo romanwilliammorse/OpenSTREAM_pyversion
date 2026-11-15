@@ -1,0 +1,397 @@
+{
+  "scope": "Document content and PDF rendering checks only; no new scientific acceptance claim.",
+  "pdf_count": 52,
+  "combined_pages": 387,
+  "source_documents": 50,
+  "source_hashes_matched": true,
+  "source_text_fragments_checked": 19063,
+  "numeric_tokens_checked_per_document_sum": 2488,
+  "missing_source_text_fragments": 0,
+  "missing_numeric_tokens": 0,
+  "geometry": [
+    {
+      "pdf": "01-start-and-use/README.pdf",
+      "pages_checked": 3,
+      "issues": []
+    },
+    {
+      "pdf": "01-start-and-use/GETTING_STARTED.pdf",
+      "pages_checked": 2,
+      "issues": []
+    },
+    {
+      "pdf": "01-start-and-use/GUI.pdf",
+      "pages_checked": 2,
+      "issues": []
+    },
+    {
+      "pdf": "01-start-and-use/API.pdf",
+      "pages_checked": 2,
+      "issues": []
+    },
+    {
+      "pdf": "01-start-and-use/PLOTTING.pdf",
+      "pages_checked": 3,
+      "issues": []
+    },
+    {
+      "pdf": "01-start-and-use/BARTOLOMEY.pdf",
+      "pages_checked": 2,
+      "issues": []
+    },
+    {
+      "pdf": "02-current-status-and-acceptance/PARITY_STATUS.pdf",
+      "pages_checked": 4,
+      "issues": []
+    },
+    {
+      "pdf": "02-current-status-and-acceptance/FEATURE_MAP.pdf",
+      "pages_checked": 5,
+      "issues": []
+    },
+    {
+      "pdf": "02-current-status-and-acceptance/ACCEPTANCE_PLAN.pdf",
+      "pages_checked": 4,
+      "issues": []
+    },
+    {
+      "pdf": "02-current-status-and-acceptance/ACCEPTANCE_MATRIX.pdf",
+      "pages_checked": 48,
+      "issues": []
+    },
+    {
+      "pdf": "02-current-status-and-acceptance/METHOD_COVERAGE.pdf",
+      "pages_checked": 1,
+      "issues": []
+    },
+    {
+      "pdf": "02-current-status-and-acceptance/PARITY_COMPLETION.pdf",
+      "pages_checked": 6,
+      "issues": []
+    },
+    {
+      "pdf": "02-current-status-and-acceptance/LITERATURE_ACCEPTANCE_REVIEW.pdf",
+      "pages_checked": 5,
+      "issues": []
+    },
+    {
+      "pdf": "02-current-status-and-acceptance/PROGRESS.pdf",
+      "pages_checked": 5,
+      "issues": []
+    },
+    {
+      "pdf": "03-bartolomey-experimental-pilot/BARTOLOMEY_PILOT.pdf",
+      "pages_checked": 5,
+      "issues": []
+    },
+    {
+      "pdf": "03-bartolomey-experimental-pilot/BARTOLOMEY_SOURCE_REVIEW.pdf",
+      "pages_checked": 3,
+      "issues": []
+    },
+    {
+      "pdf": "03-bartolomey-experimental-pilot/BARTOLOMEY_PILOT_SUMMARY.pdf",
+      "pages_checked": 3,
+      "issues": []
+    },
+    {
+      "pdf": "03-bartolomey-experimental-pilot/BARTOLOMEY_COMPARISON_FIGURE.pdf",
+      "pages_checked": 1,
+      "issues": []
+    },
+    {
+      "pdf": "04-baselines-and-reference-evidence/ALL_BASELINES_VERIFICATION.pdf",
+      "pages_checked": 3,
+      "issues": []
+    },
+    {
+      "pdf": "04-baselines-and-reference-evidence/MIXTURE_BASELINE_VERIFICATION.pdf",
+      "pages_checked": 3,
+      "issues": []
+    },
+    {
+      "pdf": "04-baselines-and-reference-evidence/twofluid_baseline_audit.pdf",
+      "pages_checked": 2,
+      "issues": []
+    },
+    {
+      "pdf": "04-baselines-and-reference-evidence/annular_reference_audit.pdf",
+      "pages_checked": 3,
+      "issues": []
+    },
+    {
+      "pdf": "04-baselines-and-reference-evidence/framework_comparator_review.pdf",
+      "pages_checked": 2,
+      "issues": []
+    },
+    {
+      "pdf": "04-baselines-and-reference-evidence/REFERENCE_COMPARISON.pdf",
+      "pages_checked": 3,
+      "issues": []
+    },
+    {
+      "pdf": "04-baselines-and-reference-evidence/REFERENCE_READER.pdf",
+      "pages_checked": 2,
+      "issues": []
+    },
+    {
+      "pdf": "04-baselines-and-reference-evidence/UPSTREAM_AUDIT.pdf",
+      "pages_checked": 5,
+      "issues": []
+    },
+    {
+      "pdf": "05-translation-and-numerical-reviews/VERIFICATION.pdf",
+      "pages_checked": 5,
+      "issues": []
+    },
+    {
+      "pdf": "05-translation-and-numerical-reviews/SOLVER_REVIEW.pdf",
+      "pages_checked": 2,
+      "issues": []
+    },
+    {
+      "pdf": "05-translation-and-numerical-reviews/input_properties_notes.pdf",
+      "pages_checked": 3,
+      "issues": []
+    },
+    {
+      "pdf": "05-translation-and-numerical-reviews/field_notes.pdf",
+      "pages_checked": 4,
+      "issues": []
+    },
+    {
+      "pdf": "05-translation-and-numerical-reviews/mixture_documentation_review.pdf",
+      "pages_checked": 3,
+      "issues": []
+    },
+    {
+      "pdf": "05-translation-and-numerical-reviews/mixture_translation_audit.pdf",
+      "pages_checked": 3,
+      "issues": []
+    },
+    {
+      "pdf": "05-translation-and-numerical-reviews/mixture_followup.pdf",
+      "pages_checked": 2,
+      "issues": []
+    },
+    {
+      "pdf": "05-translation-and-numerical-reviews/twofluid_notes.pdf",
+      "pages_checked": 4,
+      "issues": []
+    },
+    {
+      "pdf": "05-translation-and-numerical-reviews/threefield_review.pdf",
+      "pages_checked": 5,
+      "issues": []
+    },
+    {
+      "pdf": "05-translation-and-numerical-reviews/threefield_transient.pdf",
+      "pages_checked": 4,
+      "issues": []
+    },
+    {
+      "pdf": "05-translation-and-numerical-reviews/fourfield_notes.pdf",
+      "pages_checked": 3,
+      "issues": []
+    },
+    {
+      "pdf": "05-translation-and-numerical-reviews/fourfield_review.pdf",
+      "pages_checked": 2,
+      "issues": []
+    },
+    {
+      "pdf": "06-gui-and-release-records/GUI_USABILITY_VERIFICATION.pdf",
+      "pages_checked": 2,
+      "issues": []
+    },
+    {
+      "pdf": "06-gui-and-release-records/GUI_STYLE.pdf",
+      "pages_checked": 1,
+      "issues": []
+    },
+    {
+      "pdf": "06-gui-and-release-records/GUI_VERIFICATION.pdf",
+      "pages_checked": 2,
+      "issues": []
+    },
+    {
+      "pdf": "06-gui-and-release-records/GUI_COMPONENT_REVIEW.pdf",
+      "pages_checked": 1,
+      "issues": []
+    },
+    {
+      "pdf": "06-gui-and-release-records/PUBLICATION.pdf",
+      "pages_checked": 1,
+      "issues": []
+    },
+    {
+      "pdf": "06-gui-and-release-records/REPOSITORY_CONTENTS.pdf",
+      "pages_checked": 3,
+      "issues": []
+    },
+    {
+      "pdf": "06-gui-and-release-records/THIRD_PARTY.pdf",
+      "pages_checked": 1,
+      "issues": []
+    },
+    {
+      "pdf": "06-gui-and-release-records/CHANGELOG.pdf",
+      "pages_checked": 1,
+      "issues": []
+    },
+    {
+      "pdf": "07-complete-tabular-annexes/ACCEPTANCE_MATRIX_FULL_LEDGER.pdf",
+      "pages_checked": 37,
+      "issues": []
+    },
+    {
+      "pdf": "07-complete-tabular-annexes/ACCEPTANCE_OPTIONS.pdf",
+      "pages_checked": 32,
+      "issues": []
+    },
+    {
+      "pdf": "07-complete-tabular-annexes/ACCEPTANCE_METHODS.pdf",
+      "pages_checked": 118,
+      "issues": []
+    },
+    {
+      "pdf": "07-complete-tabular-annexes/BARTOLOMEY_ALL_RUNS.pdf",
+      "pages_checked": 17,
+      "issues": []
+    },
+    {
+      "pdf": "00_INDEX.pdf",
+      "pages_checked": 4,
+      "issues": []
+    }
+  ],
+  "font_and_link_audit": {
+    "missing_glyphs": {
+      "Body": [],
+      "BodyBold": [],
+      "Mono": []
+    },
+    "internal_links_checked": 117,
+    "external_source_links": 87,
+    "combined_pages": 387
+  },
+  "independent_content_and_visual_review": {
+    "schema": "openstream-pdf-independent-content-review-v1",
+    "source_commit": "bc4cfdaf5215ac61fd5fa6254780750bc0e932ec",
+    "combined_pages": 387,
+    "requirement_detail_headings_checked": 81,
+    "csv_checks": [
+      {
+        "source": "docs/ACCEPTANCE_MATRIX.csv",
+        "records": 81,
+        "fields_checked": 1458,
+        "missing": []
+      },
+      {
+        "source": "docs/ACCEPTANCE_OPTIONS.csv",
+        "records": 143,
+        "fields_checked": 1287,
+        "missing": []
+      },
+      {
+        "source": "docs/ACCEPTANCE_METHODS.csv",
+        "records": 585,
+        "fields_checked": 5265,
+        "missing": []
+      },
+      {
+        "source": "outputs/validation/bartolomey-pilot-01/summary/all_runs.csv",
+        "records": 40,
+        "fields_checked": 880,
+        "missing": []
+      }
+    ],
+    "field_total": 8890,
+    "normalization": "Whitespace and typographic dashes normalized for source-to-extracted-text comparison; source field values otherwise retained.",
+    "pilot_critical_values_checked": [
+      "34/34",
+      "85/85",
+      "40/40",
+      "29/32",
+      "59",
+      "118",
+      "590",
+      "0.0034520131",
+      "0.0043236369",
+      "0.0050731955",
+      "0.002",
+      "298 Python tests and 9 JavaScript tests"
+    ],
+    "EXP-009_statuses": {
+      "implementation": "implemented",
+      "native_tests": "failed",
+      "matlab": "not_run",
+      "physical": "passed_scoped",
+      "experimental": "partial"
+    },
+    "rendered_pages": {
+      "docs/ACCEPTANCE_MATRIX.md": [
+        1,
+        24,
+        48
+      ],
+      "docs/PARITY_COMPLETION.md": [
+        2,
+        3,
+        4
+      ]
+    },
+    "visual_review": "passed_scoped",
+    "findings": [],
+    "visual_findings": [
+      "Visually inspected final Acceptance Matrix pages 1, 24 and 48 and final Parity Completion pages 2, 3 and 4.",
+      "Inspected pages show readable type, intact margins and headers/footers, and no observed clipping or overlap.",
+      "Parity Completion table entries stay intact across page boundaries; continued table headers repeat correctly.",
+      "No scientific content or final PDF was edited during this audit."
+    ],
+    "limits": "Automated record-value checks cover all four complete CSV annexes. Visual review is limited to the six final rendered pages listed, not every page of the 387-page bundle."
+  },
+  "root_visual_review": {
+    "pages_rendered": [
+      {
+        "source": "00_INDEX.pdf",
+        "page": 1
+      },
+      {
+        "source": "00_INDEX.pdf",
+        "page": 2
+      },
+      {
+        "source": "01-start-and-use/API.pdf",
+        "page": 2
+      },
+      {
+        "source": "02-parity-and-acceptance/FEATURE_MAP.pdf",
+        "page": 1
+      },
+      {
+        "source": "03-bartolomey-experimental-pilot/BARTOLOMEY_PILOT.pdf",
+        "page": 2
+      },
+      {
+        "source": "03-bartolomey-experimental-pilot/BARTOLOMEY_PILOT.pdf",
+        "page": 3
+      },
+      {
+        "source": "05-translation-and-numerical-reviews/twofluid_notes.pdf",
+        "page": 2
+      },
+      {
+        "source": "05-translation-and-numerical-reviews/threefield_transient.pdf",
+        "page": 2
+      },
+      {
+        "source": "01-start-and-use/GETTING_STARTED.pdf",
+        "page": 2
+      }
+    ],
+    "inspection": "Contact sheet of nine representative pages reviewed; final index and pilot figure/failure-table page also inspected at full resolution. No clipping, overlap or missing glyph observed."
+  },
+  "copied_figure_policy": "Existing scientific figure PDF copied byte-for-byte; its original 0-to-8-point edge positions are accepted if within the page. Newly typeset documents retain wider margins.",
+  "limits": "Geometry and content checks cover every individual document page plus the index. Visual inspection is sampled; no claim is made of manual reading of every page."
+}

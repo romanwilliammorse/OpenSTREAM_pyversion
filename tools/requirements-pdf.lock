@@ -1,0 +1,8 @@
+# Documentation export only; keep separate from numerical solver dependencies.
+reportlab==4.4.9
+pypdf==6.10.0
+Pillow==12.3.0
+markdown-it-py==4.0.0
+mdurl==0.1.2
+# Optional rendered-layout/text geometry review:
+pdfplumber==0.11.9

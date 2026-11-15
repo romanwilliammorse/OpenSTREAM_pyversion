@@ -1,0 +1,2416 @@
+{
+  "schema": "openstream-document-pdf-inventory-v1",
+  "root": "C:\\Users\\Roman\\Documents\\ChatGPT\\OpenSTREAM",
+  "source_commit": "bc4cfdaf5215ac61fd5fa6254780750bc0e932ec",
+  "scope": "Maintained native-port human-readable documentation and complete acceptance/pilot summary tables. Does not alter scientific content.",
+  "counts": {
+    "markdown": 45,
+    "csv": 4,
+    "existing_pdf": 1,
+    "total": 50
+  },
+  "documents": [
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "title": "OpenSTREAM_pyversion",
+      "category": "01-start-and-use",
+      "order": 1,
+      "pdf_relative_path": "01-start-and-use/README.pdf",
+      "status_label": "Current project guide/status",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "cff0794581c5695337ea0e5e33f17c519d763adcf1c88cde4c7490f17b163337",
+      "source_bytes": 9164,
+      "headings": [
+        {
+          "title": "OpenSTREAM_pyversion",
+          "page": 1
+        },
+        {
+          "title": "Install and run on Windows",
+          "page": 1
+        },
+        {
+          "title": "Existing local installation",
+          "page": 1
+        },
+        {
+          "title": "Recreate the environment",
+          "page": 2
+        },
+        {
+          "title": "Python API",
+          "page": 2
+        },
+        {
+          "title": "Reference comparisons and provenance",
+          "page": 3
+        }
+      ],
+      "pages": 3,
+      "pdf_sha256": "d3c62ed67a13c8ab9c81694a2367088b2d07e275c7c5b6a62249efb5bf8af123",
+      "numeric_tokens_checked": 18,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 195,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/GETTING_STARTED.md",
+      "kind": "markdown",
+      "title": "Start OpenSTREAM on this computer",
+      "category": "01-start-and-use",
+      "order": 2,
+      "pdf_relative_path": "01-start-and-use/GETTING_STARTED.pdf",
+      "status_label": "Current project guide/status",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "8c7232e7af12364e670f9e80948e57ab079e836b499d3756d508a8f0ccab6d41",
+      "source_bytes": 3682,
+      "headings": [
+        {
+          "title": "Start OpenSTREAM on this computer",
+          "page": 1
+        },
+        {
+          "title": "Python console",
+          "page": 1
+        }
+      ],
+      "pages": 2,
+      "pdf_sha256": "0f9867a30764321cb00aaf718c4c479de9d329af2e97f10276c28de4c9a06fec",
+      "numeric_tokens_checked": 7,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 111,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/GUI.md",
+      "kind": "markdown",
+      "title": "Local graphical interface — 0.2.1",
+      "category": "01-start-and-use",
+      "order": 3,
+      "pdf_relative_path": "01-start-and-use/GUI.pdf",
+      "status_label": "Current project guide/status",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "bd5605cb92bd24c4c45b1dd7c24c9523ce20fc859396e53f3daaeaf9dbb096f2",
+      "source_bytes": 5829,
+      "headings": [
+        {
+          "title": "Local graphical interface - 0.2.1",
+          "page": 1
+        },
+        {
+          "title": "Install or launch from PowerShell",
+          "page": 2
+        }
+      ],
+      "pages": 2,
+      "pdf_sha256": "4344cfcd4492833b3ca199763101b7523e36f7d1bf58946d3f1e44d3aad85f1f",
+      "numeric_tokens_checked": 18,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 171,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/API.md",
+      "kind": "markdown",
+      "title": "Python API and operating conventions",
+      "category": "01-start-and-use",
+      "order": 4,
+      "pdf_relative_path": "01-start-and-use/API.pdf",
+      "status_label": "Current project guide/status",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "e658bc77d54ee72c050779c58159af483d4f24a9245e3f8b32d871d652ac4d19",
+      "source_bytes": 7268,
+      "headings": [
+        {
+          "title": "Python API and operating conventions",
+          "page": 1
+        },
+        {
+          "title": "Inputs",
+          "page": 1
+        },
+        {
+          "title": "Solver classes",
+          "page": 1
+        },
+        {
+          "title": "Physical transient from original input",
+          "page": 2
+        },
+        {
+          "title": "Outputs and plotting",
+          "page": 2
+        },
+        {
+          "title": "Limits",
+          "page": 2
+        }
+      ],
+      "pages": 2,
+      "pdf_sha256": "8f4b7b61ea30be1884b9b39ea8fe2fddc4c102fc13f18ba76a27b6a32bc97992",
+      "numeric_tokens_checked": 5,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 160,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/PLOTTING.md",
+      "kind": "markdown",
+      "title": "Plot saved OpenSTREAM results",
+      "category": "01-start-and-use",
+      "order": 5,
+      "pdf_relative_path": "01-start-and-use/PLOTTING.pdf",
+      "status_label": "Current project guide/status",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "b0562630faae037be049d55bfc83fe5168f5a8f5a7be9e5418fd9296c5eeb5de",
+      "source_bytes": 8609,
+      "headings": [
+        {
+          "title": "Plot saved OpenSTREAM results",
+          "page": 1
+        },
+        {
+          "title": "Python API",
+          "page": 1
+        },
+        {
+          "title": "Relationship to upstream plotting",
+          "page": 2
+        },
+        {
+          "title": "Verification evidence",
+          "page": 3
+        }
+      ],
+      "pages": 3,
+      "pdf_sha256": "94c414c543d02aa47641627f12d8deddc0cf78bc91229c9fe69966b08c1c1370",
+      "numeric_tokens_checked": 19,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 196,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/BARTOLOMEY.md",
+      "kind": "markdown",
+      "title": "Bartolomey database adapter and pilot",
+      "category": "01-start-and-use",
+      "order": 6,
+      "pdf_relative_path": "01-start-and-use/BARTOLOMEY.pdf",
+      "status_label": "Current project guide/status",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "22be0ead772f449094e5fd3ed63fc6b73f7a73ca3568e674aedefd40e8c3d89a",
+      "source_bytes": 5450,
+      "headings": [
+        {
+          "title": "Bartolomey database adapter and pilot",
+          "page": 1
+        },
+        {
+          "title": "Python API",
+          "page": 1
+        },
+        {
+          "title": "Frozen pilot and reproduction",
+          "page": 2
+        }
+      ],
+      "pages": 2,
+      "pdf_sha256": "e09bb2feeb90f3fdba8f75c887e77502557140fa618e18dffff2fe7a317d4d9f",
+      "numeric_tokens_checked": 22,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 108,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/PARITY_STATUS.md",
+      "kind": "markdown",
+      "title": "Capability and parity status",
+      "category": "02-current-status-and-acceptance",
+      "order": 7,
+      "pdf_relative_path": "02-current-status-and-acceptance/PARITY_STATUS.pdf",
+      "status_label": "Current project guide/status",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "d2d8c48dfdbf1c4b017f4a711d9935bc7417eb874983fdecb6441a7235cad814",
+      "source_bytes": 10441,
+      "headings": [
+        {
+          "title": "Capability and parity status",
+          "page": 1
+        },
+        {
+          "title": "Progress measures",
+          "page": 1
+        },
+        {
+          "title": "Operational capabilities",
+          "page": 2
+        },
+        {
+          "title": "Scientific limitations measured in native runs",
+          "page": 2
+        },
+        {
+          "title": "Next acceptance steps",
+          "page": 3
+        },
+        {
+          "title": "Evidence",
+          "page": 3
+        }
+      ],
+      "pages": 4,
+      "pdf_sha256": "3a727d1bca86c043cc5969b2ea2e0ae3404d37fc7451cfd03e8e4a14919dd2d6",
+      "numeric_tokens_checked": 48,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 174,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/FEATURE_MAP.md",
+      "kind": "markdown",
+      "title": "Feature map",
+      "category": "02-current-status-and-acceptance",
+      "order": 8,
+      "pdf_relative_path": "02-current-status-and-acceptance/FEATURE_MAP.pdf",
+      "status_label": "Current project guide/status",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "9c343fbcd37772e639064b7259da51b5c31ac5b1337c625e0186e2d19a43bc33",
+      "source_bytes": 12575,
+      "headings": [
+        {
+          "title": "Feature map",
+          "page": 1
+        },
+        {
+          "title": "Mixture selections",
+          "page": 3
+        },
+        {
+          "title": "Two-fluid selections",
+          "page": 4
+        },
+        {
+          "title": "Annular selections",
+          "page": 4
+        },
+        {
+          "title": "Explicit unsupported scope",
+          "page": 5
+        },
+        {
+          "title": "Remaining verification",
+          "page": 5
+        }
+      ],
+      "pages": 5,
+      "pdf_sha256": "41a63b8fc8ba4caa5aba37c1ef56faa389f963a682aeb8cf24dc48e725dbedf6",
+      "numeric_tokens_checked": 23,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 183,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/ACCEPTANCE_PLAN.md",
+      "kind": "markdown",
+      "title": "Full parity and experimental validation: acceptance plan",
+      "category": "02-current-status-and-acceptance",
+      "order": 9,
+      "pdf_relative_path": "02-current-status-and-acceptance/ACCEPTANCE_PLAN.pdf",
+      "status_label": "Current project guide/status",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "fbe8a39c1cd7efbfd2198fb26ab0459518e0555fc940b66618633d4ab24a2358",
+      "source_bytes": 13384,
+      "headings": [
+        {
+          "title": "Full parity and experimental validation: acceptance plan",
+          "page": 1
+        },
+        {
+          "title": "Deliverables and interpretation",
+          "page": 1
+        },
+        {
+          "title": "Existing evidence that remains valid",
+          "page": 1
+        },
+        {
+          "title": "Ordered work",
+          "page": 2
+        },
+        {
+          "title": "1. Establish trustworthy case and data contracts (P0)",
+          "page": 2
+        },
+        {
+          "title": "2. Implement the native database adapter and first mixture campaign (P0/P1)",
+          "page": 2
+        },
+        {
+          "title": "3. Expand MATLAB equivalence in parallel (P0/P1)",
+          "page": 3
+        },
+        {
+          "title": "4. Investigate physical failures and numerical uncertainty (P0/P1)",
+          "page": 3
+        },
+        {
+          "title": "5. Reproduce published comparisons, then evaluate independent measurements (P1)",
+          "page": 3
+        },
+        {
+          "title": "6. Close full interface and workflow parity (P1/P2)",
+          "page": 4
+        },
+        {
+          "title": "Rebuild and integrity check",
+          "page": 4
+        }
+      ],
+      "pages": 4,
+      "pdf_sha256": "465d790a5261db9893185d9527f49546017290e8d4da0155faa087f6abd42ad6",
+      "numeric_tokens_checked": 24,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 116,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/ACCEPTANCE_MATRIX.md",
+      "kind": "markdown",
+      "title": "Acceptance matrix",
+      "category": "02-current-status-and-acceptance",
+      "order": 10,
+      "pdf_relative_path": "02-current-status-and-acceptance/ACCEPTANCE_MATRIX.pdf",
+      "status_label": "Current project guide/status",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "f0e17fb6b5dd499d0a6f3c9868966cdb667eb2272530c73d25772defef1cfcd9",
+      "source_bytes": 105481,
+      "headings": [
+        {
+          "title": "Acceptance matrix",
+          "page": 1
+        },
+        {
+          "title": "Experimental Validation",
+          "page": 1
+        },
+        {
+          "title": "Interface Parity",
+          "page": 2
+        },
+        {
+          "title": "Literature Scope",
+          "page": 4
+        },
+        {
+          "title": "Matlab Equivalence",
+          "page": 4
+        },
+        {
+          "title": "Numerical Verification",
+          "page": 6
+        },
+        {
+          "title": "Reference Infrastructure",
+          "page": 7
+        },
+        {
+          "title": "Release",
+          "page": 8
+        },
+        {
+          "title": "Requirement details",
+          "page": 8
+        },
+        {
+          "title": "CORE-001: Mixture",
+          "page": 8
+        },
+        {
+          "title": "CORE-002: TwoFluid",
+          "page": 9
+        },
+        {
+          "title": "CORE-003: ThreeField",
+          "page": 9
+        },
+        {
+          "title": "CORE-004: FourField",
+          "page": 10
+        },
+        {
+          "title": "CORE-005: All frameworks",
+          "page": 10
+        },
+        {
+          "title": "CORE-006: All frameworks",
+          "page": 10
+        },
+        {
+          "title": "CORE-007: Mixture",
+          "page": 11
+        },
+        {
+          "title": "CORE-008: TwoFluid",
+          "page": 11
+        },
+        {
+          "title": "CORE-009: ThreeField",
+          "page": 12
+        },
+        {
+          "title": "CORE-010: FourField",
+          "page": 12
+        },
+        {
+          "title": "CORE-011: Mixture closures",
+          "page": 13
+        },
+        {
+          "title": "CORE-012: Mixture closures",
+          "page": 13
+        },
+        {
+          "title": "CORE-013: Mixture MRM",
+          "page": 13
+        },
+        {
+          "title": "CORE-014: Mixture relaxation",
+          "page": 14
+        },
+        {
+          "title": "CORE-015: Mixture momentum",
+          "page": 14
+        },
+        {
+          "title": "CORE-016: Mixture heat transfer",
+          "page": 15
+        },
+        {
+          "title": "CORE-017: Mixture transitions",
+          "page": 15
+        },
+        {
+          "title": "CORE-018: Annular onset",
+          "page": 16
+        },
+        {
+          "title": "CORE-019: TwoFluid momentum",
+          "page": 16
+        },
+        {
+          "title": "CORE-020: TwoFluid exchanges",
+          "page": 17
+        },
+        {
+          "title": "CORE-021: ThreeField exchange",
+          "page": 17
+        },
+        {
+          "title": "CORE-022: ThreeField momentum",
+          "page": 18
+        },
+        {
+          "title": "CORE-023: FourField structure",
+          "page": 18
+        },
+        {
+          "title": "CORE-024: FourField momentum",
+          "page": 19
+        },
+        {
+          "title": "CORE-025: Mixture physical checks",
+          "page": 19
+        },
+        {
+          "title": "CORE-026: TwoFluid physical checks",
+          "page": 19
+        },
+        {
+          "title": "CORE-027: ThreeField physical checks",
+          "page": 20
+        },
+        {
+          "title": "CORE-028: FourField physical checks",
+          "page": 20
+        },
+        {
+          "title": "CORE-029: Convergence contracts",
+          "page": 21
+        },
+        {
+          "title": "CORE-030: Mixture discretization",
+          "page": 21
+        },
+        {
+          "title": "CORE-031: TwoFluid discretization",
+          "page": 22
+        },
+        {
+          "title": "CORE-032: ThreeField discretization",
+          "page": 22
+        },
+        {
+          "title": "CORE-033: FourField discretization",
+          "page": 23
+        },
+        {
+          "title": "CORE-034: Multiwall numerical behavior",
+          "page": 23
+        },
+        {
+          "title": "CORE-035: Source-defective scientific options",
+          "page": 24
+        },
+        {
+          "title": "CORE-036: Numerical language semantics",
+          "page": 24
+        },
+        {
+          "title": "CORE-037: Operating domain",
+          "page": 25
+        },
+        {
+          "title": "API-001: Input readers",
+          "page": 25
+        },
+        {
+          "title": "API-002: Defaults and enums",
+          "page": 26
+        },
+        {
+          "title": "API-003: Input writers and default reporting",
+          "page": 26
+        },
+        {
+          "title": "API-004: Function-valued inputs",
+          "page": 27
+        },
+        {
+          "title": "API-005: Geometry and boundary dimensions",
+          "page": 27
+        },
+        {
+          "title": "API-006: Colon and interpolation semantics",
+          "page": 28
+        },
+        {
+          "title": "API-007: Copy, caches and array indexing",
+          "page": 28
+        },
+        {
+          "title": "API-008: Thermophysical properties",
+          "page": 29
+        },
+        {
+          "title": "API-009: Property optimization and helper scope",
+          "page": 29
+        },
+        {
+          "title": "API-010: Public diagnostics and subsets",
+          "page": 30
+        },
+        {
+          "title": "API-011: Live-field extraction and public interpolation API",
+          "page": 30
+        },
+        {
+          "title": "API-012: Session and runtime behavior",
+          "page": 31
+        },
+        {
+          "title": "API-013: Portable results and serialization",
+          "page": 31
+        },
+        {
+          "title": "API-014: Saved-array post-processing",
+          "page": 32
+        },
+        {
+          "title": "API-015: Complete plotting API",
+          "page": 32
+        },
+        {
+          "title": "API-016: Tutorial 01: quick start",
+          "page": 33
+        },
+        {
+          "title": "API-017: Tutorials 02-05: model capabilities",
+          "page": 33
+        },
+        {
+          "title": "API-018: Tutorial 06: input workflows",
+          "page": 34
+        },
+        {
+          "title": "API-019: Tutorials 07-08: convergence and sensitivity",
+          "page": 34
+        },
+        {
+          "title": "API-020: Tutorial 09: advanced visualization",
+          "page": 35
+        },
+        {
+          "title": "API-021: MATLAB reference export",
+          "page": 35
+        },
+        {
+          "title": "API-022: Archive recovery",
+          "page": 36
+        },
+        {
+          "title": "API-023: Comparison acceptance machinery",
+          "page": 36
+        },
+        {
+          "title": "API-024: GUI and command interfaces",
+          "page": 37
+        },
+        {
+          "title": "API-025: Reproducible installation and release",
+          "page": 37
+        },
+        {
+          "title": "API-026: Evidence provenance and status consistency",
+          "page": 38
+        },
+        {
+          "title": "EXP-001: Publication/version provenance",
+          "page": 38
+        },
+        {
+          "title": "EXP-002: NURETH demonstration",
+          "page": 39
+        },
+        {
+          "title": "EXP-003: ICMF annular transient",
+          "page": 39
+        },
+        {
+          "title": "EXP-004: TRACE benchmark",
+          "page": 40
+        },
+        {
+          "title": "EXP-005: Native database adapter",
+          "page": 40
+        },
+        {
+          "title": "EXP-006: Units and observable definitions",
+          "page": 41
+        },
+        {
+          "title": "EXP-007: Uncertainty and acceptance",
+          "page": 41
+        },
+        {
+          "title": "EXP-008: Evaluation report and case accounting",
+          "page": 42
+        },
+        {
+          "title": "EXP-009: Bartolomey pilot",
+          "page": 43
+        },
+        {
+          "title": "EXP-010: Wurtz publication reproduction",
+          "page": 43
+        },
+        {
+          "title": "EXP-011: Sawai publication reproduction",
+          "page": 44
+        },
+        {
+          "title": "EXP-012: Sawai unit/domain integrity",
+          "page": 45
+        },
+        {
+          "title": "EXP-013: Companion configuration compatibility",
+          "page": 45
+        },
+        {
+          "title": "EXP-014: Independent validation partition",
+          "page": 46
+        },
+        {
+          "title": "EXP-015: Adamsson film-flow validation",
+          "page": 46
+        },
+        {
+          "title": "EXP-016: Bennett thermal/dryout validation",
+          "page": 47
+        },
+        {
+          "title": "EXP-017: Groeneveld CHF/dryout validation",
+          "page": 47
+        },
+        {
+          "title": "EXP-018: Model applicability versus promised future features",
+          "page": 48
+        }
+      ],
+      "pages": 48,
+      "pdf_sha256": "aa2d90c96a15f8e64e295e9a5d68f9290f1991482fbb879fd26f9e6ce8236a3b",
+      "numeric_tokens_checked": 131,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 2999,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/METHOD_COVERAGE.md",
+      "kind": "markdown",
+      "title": "Public numerical-method inventory",
+      "category": "02-current-status-and-acceptance",
+      "order": 11,
+      "pdf_relative_path": "02-current-status-and-acceptance/METHOD_COVERAGE.pdf",
+      "status_label": "Current project guide/status",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "b179a37a0badfc55d4d7a45b791a92d32fab482639ba898de892529a533ddf67",
+      "source_bytes": 3731,
+      "headings": [
+        {
+          "title": "Public numerical-method inventory",
+          "page": 1
+        }
+      ],
+      "pages": 1,
+      "pdf_sha256": "d5b48a9b5bcdb092bd798aea5fdc682d4203dbd59622cf66d4308d5fc92db134",
+      "numeric_tokens_checked": 1,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 81,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/PARITY_COMPLETION.md",
+      "kind": "markdown",
+      "title": "Completing the native port and its verification",
+      "category": "02-current-status-and-acceptance",
+      "order": 12,
+      "pdf_relative_path": "02-current-status-and-acceptance/PARITY_COMPLETION.pdf",
+      "status_label": "Current project guide/status",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "9d97396c3f7110c0df67450896384d6c8676a19087fdec94288e8cb1e6d0a21e",
+      "source_bytes": 18353,
+      "headings": [
+        {
+          "title": "Completing the native port and its verification",
+          "page": 1
+        },
+        {
+          "title": "Next concrete milestone",
+          "page": 1
+        },
+        {
+          "title": "Completion work and acceptance evidence",
+          "page": 1
+        },
+        {
+          "title": "All nine tutorial workflows need acceptance",
+          "page": 2
+        },
+        {
+          "title": "External experimental datasets inspected",
+          "page": 3
+        },
+        {
+          "title": "Two Sawai data issues already identified",
+          "page": 4
+        },
+        {
+          "title": "Required native validation adapter",
+          "page": 5
+        },
+        {
+          "title": "Retained source defects and physical findings",
+          "page": 5
+        },
+        {
+          "title": "Existing evidence",
+          "page": 5
+        }
+      ],
+      "pages": 6,
+      "pdf_sha256": "30a1fd6e93cc2a57c2ac8c46d6c905d34dedb952c75aad6c8f2144490d2ebdd3",
+      "numeric_tokens_checked": 41,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 269,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/LITERATURE_ACCEPTANCE_REVIEW.md",
+      "kind": "markdown",
+      "title": "Literature evidence and acceptance implications",
+      "category": "02-current-status-and-acceptance",
+      "order": 13,
+      "pdf_relative_path": "02-current-status-and-acceptance/LITERATURE_ACCEPTANCE_REVIEW.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "43fcac1124c7d1d40ab31323d4d448622fdeb613f2a5601f8b195df5ced1f41c",
+      "source_bytes": 14444,
+      "headings": [
+        {
+          "title": "Literature evidence and acceptance implications",
+          "page": 1
+        },
+        {
+          "title": "Supplied sources",
+          "page": 1
+        },
+        {
+          "title": "Separate evidence types",
+          "page": 1
+        },
+        {
+          "title": "Equation and operating-domain gates",
+          "page": 2
+        },
+        {
+          "title": "Publication cases are not interchangeable",
+          "page": 3
+        },
+        {
+          "title": "Companion-file inspection and discrepancies requiring resolution",
+          "page": 3
+        },
+        {
+          "title": "Prioritized experimental work",
+          "page": 4
+        }
+      ],
+      "pages": 5,
+      "pdf_sha256": "c59d0ceafe0f3474bf2e22436e776d716dba1f5b2dc87f6d1a22af0f0188e9a0",
+      "numeric_tokens_checked": 60,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 256,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/PROGRESS.md",
+      "kind": "markdown",
+      "title": "Progress and resume record",
+      "category": "02-current-status-and-acceptance",
+      "order": 14,
+      "pdf_relative_path": "02-current-status-and-acceptance/PROGRESS.pdf",
+      "status_label": "Current project guide/status",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "3228986a186eec0cfaa5a6c416103aea821d2bc4737a10e243511cc0d53131a3",
+      "source_bytes": 19369,
+      "headings": [
+        {
+          "title": "Progress and resume record",
+          "page": 1
+        },
+        {
+          "title": "Current checkpoint - 0.2.1, 2026-11-14",
+          "page": 1
+        },
+        {
+          "title": "Earlier baseline checkpoint - 0.1.1",
+          "page": 2
+        },
+        {
+          "title": "Anchors and environment",
+          "page": 3
+        },
+        {
+          "title": "Implemented work",
+          "page": 3
+        },
+        {
+          "title": "Required next work",
+          "page": 3
+        },
+        {
+          "title": "Important retained observations",
+          "page": 4
+        },
+        {
+          "title": "Resume from these artifacts",
+          "page": 4
+        },
+        {
+          "title": "Local interactive installation",
+          "page": 5
+        },
+        {
+          "title": "GUI milestone - 0.2.0, 2026-11-14",
+          "page": 5
+        }
+      ],
+      "pages": 5,
+      "pdf_sha256": "754c8564a6de0d78b79432aefc45653cce9dcfeba78789ed12f8a9eb38116f59",
+      "numeric_tokens_checked": 58,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 262,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/BARTOLOMEY_PILOT.md",
+      "kind": "markdown",
+      "title": "Bartolomey pilot: executed evidence and remaining gates",
+      "category": "03-bartolomey-experimental-pilot",
+      "order": 15,
+      "pdf_relative_path": "03-bartolomey-experimental-pilot/BARTOLOMEY_PILOT.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "788cdfcd363994059e3ca0614ab74eab54686817fdec40edd145c538d55b239a",
+      "source_bytes": 10831,
+      "headings": [
+        {
+          "title": "Bartolomey pilot: executed evidence and remaining gates",
+          "page": 1
+        },
+        {
+          "title": "Scope fixed before calculation",
+          "page": 1
+        },
+        {
+          "title": "Execution and verification",
+          "page": 1
+        },
+        {
+          "title": "Measured-versus-predicted results",
+          "page": 2
+        },
+        {
+          "title": "Retained numerical failures",
+          "page": 3
+        },
+        {
+          "title": "Sources, uncertainty and next gates",
+          "page": 4
+        },
+        {
+          "title": "Reproducible artifacts",
+          "page": 4
+        }
+      ],
+      "pages": 5,
+      "pdf_sha256": "fa673038761af2a254d31ebbd13b0870af3ab706189b810b7c03d61c738f4854",
+      "numeric_tokens_checked": 69,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 263,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/BARTOLOMEY_SOURCE_REVIEW.md",
+      "kind": "markdown",
+      "title": "Bartolomey source review and pilot rationale",
+      "category": "03-bartolomey-experimental-pilot",
+      "order": 16,
+      "pdf_relative_path": "03-bartolomey-experimental-pilot/BARTOLOMEY_SOURCE_REVIEW.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "0dc402582ea47fad1edd4565bd763b00fde06b3183dde5e9dc7288b3b44fc962",
+      "source_bytes": 9107,
+      "headings": [
+        {
+          "title": "Bartolomey source review and pilot rationale",
+          "page": 1
+        },
+        {
+          "title": "Preserved sources and reuse decision",
+          "page": 1
+        },
+        {
+          "title": "Data contract and independent arithmetic",
+          "page": 1
+        },
+        {
+          "title": "Immediate experimental source and uncertainty",
+          "page": 2
+        },
+        {
+          "title": "Pilot selection and fixed closures",
+          "page": 2
+        },
+        {
+          "title": "Keep the calibrated MRM companion separate",
+          "page": 3
+        }
+      ],
+      "pages": 3,
+      "pdf_sha256": "9f96f9459ad983b5b3cadb6e69805da54b40d726d69b8ca706462399f966dcfd",
+      "numeric_tokens_checked": 64,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 202,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "outputs/validation/bartolomey-pilot-01/summary/summary.md",
+      "kind": "markdown",
+      "title": "Bartolomey pilot results",
+      "category": "03-bartolomey-experimental-pilot",
+      "order": 17,
+      "pdf_relative_path": "03-bartolomey-experimental-pilot/BARTOLOMEY_PILOT_SUMMARY.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "856976f42d1a58ce06bb4133e9be9579f80dbf6ad5075c33c710379bb1721692",
+      "source_bytes": 3736,
+      "headings": [
+        {
+          "title": "Bartolomey pilot results",
+          "page": 1
+        },
+        {
+          "title": "Finest-mesh measured-versus-predicted errors",
+          "page": 1
+        },
+        {
+          "title": "Predeclared numerical sensitivity checks",
+          "page": 1
+        }
+      ],
+      "pages": 3,
+      "pdf_sha256": "2dd704f0b221dbe6fbac86e7e3cd62ea99b8a7a64185c8a3a7c778e217d97f40",
+      "numeric_tokens_checked": 63,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 268,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "outputs/validation/bartolomey-pilot-01/pilot_comparison.pdf",
+      "kind": "existing_pdf",
+      "title": "Bartolomey pilot comparison figure",
+      "category": "03-bartolomey-experimental-pilot",
+      "order": 50,
+      "pdf_relative_path": "03-bartolomey-experimental-pilot/BARTOLOMEY_COMPARISON_FIGURE.pdf",
+      "status_label": "Existing saved scientific figure",
+      "status_note": "Copy without recomputing or altering the existing plot. Descriptive comparison only.",
+      "source_sha256": "15d6a24023d06efd640c65e787ea3efdde4f82bf9eac7feaf03831ea4263ac3d",
+      "source_bytes": 27399,
+      "copied_unchanged": true,
+      "headings": [],
+      "pages": 1,
+      "pdf_sha256": "15d6a24023d06efd640c65e787ea3efdde4f82bf9eac7feaf03831ea4263ac3d",
+      "numeric_tokens_checked": 0,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 0,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/ALL_BASELINES_VERIFICATION.md",
+      "kind": "markdown",
+      "title": "Four archived OpenSTREAM baseline cases verified",
+      "category": "04-baselines-and-reference-evidence",
+      "order": 18,
+      "pdf_relative_path": "04-baselines-and-reference-evidence/ALL_BASELINES_VERIFICATION.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "bb63381bf1c65cc2123dc8a95124ef3995d5c9c7aeda5a26cea0ab23fc0d1dd3",
+      "source_bytes": 9471,
+      "headings": [
+        {
+          "title": "Four archived OpenSTREAM baseline cases verified",
+          "page": 1
+        },
+        {
+          "title": "Results",
+          "page": 1
+        },
+        {
+          "title": "What was recovered and what was calculated",
+          "page": 1
+        },
+        {
+          "title": "Physical findings shared with the MATLAB archives",
+          "page": 2
+        },
+        {
+          "title": "Correction and diagnostic limitations",
+          "page": 2
+        },
+        {
+          "title": "Reproduce",
+          "page": 3
+        },
+        {
+          "title": "Remaining parity work",
+          "page": 3
+        }
+      ],
+      "pages": 3,
+      "pdf_sha256": "aeb5b8233849691a6327be1ba647ef503b6656e07fcd34f57520530e40613667",
+      "numeric_tokens_checked": 47,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 197,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/MIXTURE_BASELINE_VERIFICATION.md",
+      "kind": "markdown",
+      "title": "Mixture comparison with the recovered MATLAB baseline",
+      "category": "04-baselines-and-reference-evidence",
+      "order": 19,
+      "pdf_relative_path": "04-baselines-and-reference-evidence/MIXTURE_BASELINE_VERIFICATION.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "57a7a992c4a1cb946b1639029bd6f3bf6e5aaed12f7f5037db755012223e0fbf",
+      "source_bytes": 9512,
+      "headings": [
+        {
+          "title": "Mixture comparison with the recovered MATLAB baseline",
+          "page": 1
+        },
+        {
+          "title": "Evidence and provenance",
+          "page": 1
+        },
+        {
+          "title": "Case, convergence, and physical checks",
+          "page": 2
+        },
+        {
+          "title": "Numerical agreement and remaining differences",
+          "page": 2
+        },
+        {
+          "title": "Reproduce on this Windows machine",
+          "page": 3
+        }
+      ],
+      "pages": 3,
+      "pdf_sha256": "d59634432e98b974788e4840eb0da718ff75438595ef55b613a52e0cd3753db4",
+      "numeric_tokens_checked": 79,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 195,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/twofluid_baseline_audit.md",
+      "kind": "markdown",
+      "title": "Two-fluid archived baseline verification",
+      "category": "04-baselines-and-reference-evidence",
+      "order": 20,
+      "pdf_relative_path": "04-baselines-and-reference-evidence/twofluid_baseline_audit.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "fe4fef2a4e695e5584398ed050c417ed236ad81384e0e326c74403a8e85cefd8",
+      "source_bytes": 6239,
+      "headings": [
+        {
+          "title": "Two-fluid archived baseline verification",
+          "page": 1
+        },
+        {
+          "title": "Preserved reference and executed evidence",
+          "page": 1
+        },
+        {
+          "title": "Numerical comparison",
+          "page": 1
+        },
+        {
+          "title": "Physical inconsistency reproduced from the MATLAB archive",
+          "page": 2
+        },
+        {
+          "title": "Reproduce",
+          "page": 2
+        }
+      ],
+      "pages": 2,
+      "pdf_sha256": "ad236a80fdbfc9d6d14a37bc084d4b6b91f80e53e80446669f7bbf12822e4a88",
+      "numeric_tokens_checked": 55,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 129,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/annular_reference_audit.md",
+      "kind": "markdown",
+      "title": "Annular archived-baseline recovery and independent audit",
+      "category": "04-baselines-and-reference-evidence",
+      "order": 21,
+      "pdf_relative_path": "04-baselines-and-reference-evidence/annular_reference_audit.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "03c94b092074974c19f9b545c3c2ae0477c49a3754aba14e7265b3b19c098a1b",
+      "source_bytes": 8985,
+      "headings": [
+        {
+          "title": "Annular archived-baseline recovery and independent audit",
+          "page": 1
+        },
+        {
+          "title": "Preserved evidence",
+          "page": 1
+        },
+        {
+          "title": "Source mapping and dimensional checks",
+          "page": 1
+        },
+        {
+          "title": "Convergence and upstream coverage gaps",
+          "page": 2
+        },
+        {
+          "title": "Independent native comparisons",
+          "page": 2
+        },
+        {
+          "title": "Physical inconsistency exists in the MATLAB archives",
+          "page": 2
+        },
+        {
+          "title": "Executed checks and reproduction",
+          "page": 3
+        }
+      ],
+      "pages": 3,
+      "pdf_sha256": "fb23fe0713c115d71ab85b8a97cf7fb9d1ecc1e304f1971dcc5128fa4006af21",
+      "numeric_tokens_checked": 32,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 195,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/framework_comparator_review.md",
+      "kind": "markdown",
+      "title": "Independent review of recovered-framework comparisons",
+      "category": "04-baselines-and-reference-evidence",
+      "order": 22,
+      "pdf_relative_path": "04-baselines-and-reference-evidence/framework_comparator_review.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "233405438a64c596555f7fc4216e4e0bb02c4dbdd4d44140c13b355d4d87948d",
+      "source_bytes": 5390,
+      "headings": [
+        {
+          "title": "Independent review of recovered-framework comparisons",
+          "page": 1
+        },
+        {
+          "title": "Correct acceptance scope",
+          "page": 1
+        },
+        {
+          "title": "Convergence and units",
+          "page": 1
+        },
+        {
+          "title": "Issues identified and corrected during review",
+          "page": 1
+        },
+        {
+          "title": "Executed tests",
+          "page": 2
+        }
+      ],
+      "pages": 2,
+      "pdf_sha256": "2bcc98106cf6ee30f1c104e97f2c422178d15945592bd3ee39a82fcdcb84442b",
+      "numeric_tokens_checked": 9,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 114,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/REFERENCE_COMPARISON.md",
+      "kind": "markdown",
+      "title": "Portable MATLAB reference comparison",
+      "category": "04-baselines-and-reference-evidence",
+      "order": 23,
+      "pdf_relative_path": "04-baselines-and-reference-evidence/REFERENCE_COMPARISON.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "20fb2ff671f3e995af79d1eb004d90d5968d79a4d505996872b9c6dfd7f52f7b",
+      "source_bytes": 10538,
+      "headings": [
+        {
+          "title": "Portable MATLAB reference comparison",
+          "page": 1
+        },
+        {
+          "title": "Supported framework and array paths",
+          "page": 1
+        },
+        {
+          "title": "Execution",
+          "page": 1
+        },
+        {
+          "title": "Provenance and convergence gates",
+          "page": 2
+        },
+        {
+          "title": "Exporter source review and limitations",
+          "page": 3
+        },
+        {
+          "title": "Tool verification",
+          "page": 3
+        }
+      ],
+      "pages": 3,
+      "pdf_sha256": "83dfa8309578c8136d18db9b283dc0b0b9095e9c144e04e55d9877bad380edbf",
+      "numeric_tokens_checked": 8,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 129,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "tools/REFERENCE_READER.md",
+      "kind": "markdown",
+      "title": "Reading the stored mixture reference without MATLAB",
+      "category": "04-baselines-and-reference-evidence",
+      "order": 24,
+      "pdf_relative_path": "04-baselines-and-reference-evidence/REFERENCE_READER.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "265d9b9a1c216bbb80614f2b5a250ba014f6446fb73e66f20786bcdad11259ac",
+      "source_bytes": 4122,
+      "headings": [
+        {
+          "title": "Reading the stored mixture reference without MATLAB",
+          "page": 1
+        }
+      ],
+      "pages": 2,
+      "pdf_sha256": "2fab4582a545fe74c2c772733783a7dbf105127021d3c07d035193dc58fca117",
+      "numeric_tokens_checked": 11,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 71,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/UPSTREAM_AUDIT.md",
+      "kind": "markdown",
+      "title": "Upstream audit and reference procedure",
+      "category": "04-baselines-and-reference-evidence",
+      "order": 25,
+      "pdf_relative_path": "04-baselines-and-reference-evidence/UPSTREAM_AUDIT.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "5c6fa83530a90ca7a71f2ce6f9b8044e684eb05b77f4fec5ae07cf850b7cbb5d",
+      "source_bytes": 14671,
+      "headings": [
+        {
+          "title": "Upstream audit and reference procedure",
+          "page": 1
+        },
+        {
+          "title": "Preserved source",
+          "page": 1
+        },
+        {
+          "title": "Applicability retained from upstream",
+          "page": 2
+        },
+        {
+          "title": "Regression archives: actual inspection",
+          "page": 2
+        },
+        {
+          "title": "MATLAB availability and export",
+          "page": 2
+        },
+        {
+          "title": "Reuse search",
+          "page": 3
+        },
+        {
+          "title": "Suspected upstream defects and consequences",
+          "page": 4
+        }
+      ],
+      "pages": 5,
+      "pdf_sha256": "081a1655571c372cf14f3b65a9a2ffdd07339e0d917d6df2c379cce9f8bc7f71",
+      "numeric_tokens_checked": 55,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 195,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/VERIFICATION.md",
+      "kind": "markdown",
+      "title": "Verification report — native Windows port",
+      "category": "05-translation-and-numerical-reviews",
+      "order": 26,
+      "pdf_relative_path": "05-translation-and-numerical-reviews/VERIFICATION.pdf",
+      "status_label": "Historical or cumulative checkpoint",
+      "status_note": "Cumulative scientific verification record with earlier release test counts; latest test counts are in the Bartolomey report and progress record.",
+      "source_sha256": "841a3a1cafff132b9a65ce1d0f78c3bea98722de255a0360bc2e5cb544d321a7",
+      "source_bytes": 18751,
+      "headings": [
+        {
+          "title": "Verification report - native Windows port",
+          "page": 1
+        },
+        {
+          "title": "Environment and source",
+          "page": 1
+        },
+        {
+          "title": "Official mixture milestone",
+          "page": 2
+        },
+        {
+          "title": "Sensitivity and boundary evidence",
+          "page": 2
+        },
+        {
+          "title": "Extended frameworks: successes and failures",
+          "page": 3
+        },
+        {
+          "title": "Language and reference verification",
+          "page": 4
+        },
+        {
+          "title": "Post-processing and diagnostic API",
+          "page": 5
+        },
+        {
+          "title": "Remaining requirements",
+          "page": 5
+        }
+      ],
+      "pages": 5,
+      "pdf_sha256": "b7fd677492506fa35571f2ad4b15919ccf482d74d77c3c658b5de9bc5cc71a9a",
+      "numeric_tokens_checked": 140,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 170,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/SOLVER_REVIEW.md",
+      "kind": "markdown",
+      "title": "Source review of solver translations",
+      "category": "05-translation-and-numerical-reviews",
+      "order": 27,
+      "pdf_relative_path": "05-translation-and-numerical-reviews/SOLVER_REVIEW.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "03d14346b7a3b5b3f6e9f70e6374eacc3ec109b3459eda61661e231fcf6892f1",
+      "source_bytes": 5075,
+      "headings": [
+        {
+          "title": "Source review of solver translations",
+          "page": 1
+        },
+        {
+          "title": "Mixture",
+          "page": 1
+        },
+        {
+          "title": "Two-fluid",
+          "page": 1
+        },
+        {
+          "title": "Annular and four-field",
+          "page": 1
+        },
+        {
+          "title": "Pending evidence",
+          "page": 2
+        }
+      ],
+      "pages": 2,
+      "pdf_sha256": "92e90832a8307416c1d5f0845c8d8a9016704f42cd638d9c39b40171a4c663a6",
+      "numeric_tokens_checked": 7,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 82,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/input_properties_notes.md",
+      "kind": "markdown",
+      "title": "Input and thermophysical property port record",
+      "category": "05-translation-and-numerical-reviews",
+      "order": 28,
+      "pdf_relative_path": "05-translation-and-numerical-reviews/input_properties_notes.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "928937bbca96ea22ff537371810fe6085e6081c4206e461662c73a54d324d872",
+      "source_bytes": 7495,
+      "headings": [
+        {
+          "title": "Input and thermophysical property port record",
+          "page": 1
+        },
+        {
+          "title": "Scope and mapping",
+          "page": 1
+        },
+        {
+          "title": "Translation decisions",
+          "page": 1
+        },
+        {
+          "title": "Verification performed",
+          "page": 2
+        }
+      ],
+      "pages": 3,
+      "pdf_sha256": "17d539bb2342fea8e63851f340b6666e90700970b860be3e4d13616bb674319c",
+      "numeric_tokens_checked": 38,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 206,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/field_notes.md",
+      "kind": "markdown",
+      "title": "Mixture-field translation record",
+      "category": "05-translation-and-numerical-reviews",
+      "order": 29,
+      "pdf_relative_path": "05-translation-and-numerical-reviews/field_notes.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "1a728f569749b6cc638ec160763a309142d701df11ccdb78549a4b961c5b5594",
+      "source_bytes": 10548,
+      "headings": [
+        {
+          "title": "Mixture-field translation record",
+          "page": 1
+        },
+        {
+          "title": "Implemented field equations",
+          "page": 1
+        },
+        {
+          "title": "MATLAB semantics preserved",
+          "page": 2
+        },
+        {
+          "title": "Suspected upstream defects and limits",
+          "page": 2
+        },
+        {
+          "title": "Reproduction",
+          "page": 3
+        },
+        {
+          "title": "Full MRM transient executions",
+          "page": 3
+        }
+      ],
+      "pages": 4,
+      "pdf_sha256": "38696f61bc53d0d8988db5e192a12161b5585447127ca8072ceac1d0d1c44006",
+      "numeric_tokens_checked": 29,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 199,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/mixture_documentation_review.md",
+      "kind": "markdown",
+      "title": "Supplied documentation review: mixture baseline",
+      "category": "05-translation-and-numerical-reviews",
+      "order": 30,
+      "pdf_relative_path": "05-translation-and-numerical-reviews/mixture_documentation_review.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "b01e525d10ceb419d471bff0a4ece2ff5e83b08ba08557c7e3d8c1e72c6bc7c3",
+      "source_bytes": 7576,
+      "headings": [
+        {
+          "title": "Supplied documentation review: mixture baseline",
+          "page": 1
+        },
+        {
+          "title": "Document identity and review",
+          "page": 1
+        },
+        {
+          "title": "Correct baseline and numerical meaning",
+          "page": 1
+        },
+        {
+          "title": "Governing-equation and unit checks",
+          "page": 2
+        },
+        {
+          "title": "Discrepancies and limitations relevant to interpretation",
+          "page": 2
+        },
+        {
+          "title": "Source anchors and comparison policy",
+          "page": 3
+        }
+      ],
+      "pages": 3,
+      "pdf_sha256": "7a75f58ae0ff49f006dd9db3bf8d55ceb9a95a446754a67c9898bc8c9ca2be2b",
+      "numeric_tokens_checked": 51,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 222,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/mixture_translation_audit.md",
+      "kind": "markdown",
+      "title": "Mixture translation audit, 2026-11-14",
+      "category": "05-translation-and-numerical-reviews",
+      "order": 31,
+      "pdf_relative_path": "05-translation-and-numerical-reviews/mixture_translation_audit.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "b3471292d8e4e63ab61bee5588f2f15fc64ac18b1ec07b20f60a5528b44a7ce6",
+      "source_bytes": 8209,
+      "headings": [
+        {
+          "title": "Mixture translation audit, 2026-11-14",
+          "page": 1
+        },
+        {
+          "title": "Executed independent verification",
+          "page": 1
+        },
+        {
+          "title": "Authoritative regression policy",
+          "page": 2
+        },
+        {
+          "title": "Stored-state method reconstruction",
+          "page": 2
+        },
+        {
+          "title": "Findings outside the active baseline",
+          "page": 2
+        },
+        {
+          "title": "Floating-point evaluation order",
+          "page": 3
+        },
+        {
+          "title": "Archive/source history",
+          "page": 3
+        }
+      ],
+      "pages": 3,
+      "pdf_sha256": "827a9c0fe0cf1d56e20530b5a4ff3e0e99bbf2931ef2edbbc24d982d203bfa6e",
+      "numeric_tokens_checked": 49,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 214,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/mixture_followup.md",
+      "kind": "markdown",
+      "title": "Mixture follow-up: source semantics and diagnostic differences",
+      "category": "05-translation-and-numerical-reviews",
+      "order": 32,
+      "pdf_relative_path": "05-translation-and-numerical-reviews/mixture_followup.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "70343bfc86b6a0845bb63f9aa66f1393bac763bc77be03c37148ee485478d6ca",
+      "source_bytes": 6559,
+      "headings": [
+        {
+          "title": "Mixture follow-up: source semantics and diagnostic differences",
+          "page": 1
+        },
+        {
+          "title": "Corrected MRM vapor-enthalpy fallback",
+          "page": 1
+        },
+        {
+          "title": "Preserved baseline",
+          "page": 1
+        },
+        {
+          "title": "Investigation of the 14 supplementary failures",
+          "page": 2
+        },
+        {
+          "title": "Reproduce",
+          "page": 2
+        }
+      ],
+      "pages": 2,
+      "pdf_sha256": "dd19b728a0f633ab9f712a64927eadfbd9bd203416b1db75d03924b974f0e112",
+      "numeric_tokens_checked": 25,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 115,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/twofluid_notes.md",
+      "kind": "markdown",
+      "title": "Two-fluid implementation and verification record",
+      "category": "05-translation-and-numerical-reviews",
+      "order": 33,
+      "pdf_relative_path": "05-translation-and-numerical-reviews/twofluid_notes.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "f77b347fc579264f717d53c2a3953763a499b4fd857958adbb3cf0826b061f6b",
+      "source_bytes": 11015,
+      "headings": [
+        {
+          "title": "Two-fluid implementation and verification record",
+          "page": 1
+        },
+        {
+          "title": "Equations and numerical algorithm",
+          "page": 1
+        },
+        {
+          "title": "Actual executed original-input runs",
+          "page": 2
+        },
+        {
+          "title": "Physical area closure fails in TUTORIAL3B",
+          "page": 2
+        },
+        {
+          "title": "Independent energy-defect diagnosis",
+          "page": 2
+        },
+        {
+          "title": "Source semantics and explicit unsupported paths",
+          "page": 3
+        },
+        {
+          "title": "Automated checks",
+          "page": 4
+        }
+      ],
+      "pages": 4,
+      "pdf_sha256": "31daf919f97328375f912535f9cb28fe7bbb4062c8ff3bd66fbd2c753560eb19",
+      "numeric_tokens_checked": 53,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 181,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/threefield_review.md",
+      "kind": "markdown",
+      "title": "Independent three-field port review",
+      "category": "05-translation-and-numerical-reviews",
+      "order": 34,
+      "pdf_relative_path": "05-translation-and-numerical-reviews/threefield_review.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "3f7f7280c26e75507ad8b76cd16cc6c4bebbf343ef3afb7c02752c6efb6ee952",
+      "source_bytes": 13662,
+      "headings": [
+        {
+          "title": "Independent three-field port review",
+          "page": 1
+        },
+        {
+          "title": "Archived TUTORIAL1 comparison, 2026-11-14",
+          "page": 1
+        },
+        {
+          "title": "Findings affecting conservation claims",
+          "page": 1
+        },
+        {
+          "title": "Film positivity clipping leaves a real mass-equation residual",
+          "page": 1
+        },
+        {
+          "title": "Vector and pointwise closure evaluations have different stopping histories",
+          "page": 2
+        },
+        {
+          "title": "Equation, units, indexing and state audit",
+          "page": 3
+        },
+        {
+          "title": "Original TUTORIAL4A-F checks",
+          "page": 4
+        },
+        {
+          "title": "MATLAB missing-value semantics audit",
+          "page": 5
+        }
+      ],
+      "pages": 5,
+      "pdf_sha256": "25e5e6caf3204976e5d71c5e178a4920a26d6554bae44aa1cbe2c2fe9eaacf76",
+      "numeric_tokens_checked": 47,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 338,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/threefield_transient.md",
+      "kind": "markdown",
+      "title": "Three-field transient verification",
+      "category": "05-translation-and-numerical-reviews",
+      "order": 35,
+      "pdf_relative_path": "05-translation-and-numerical-reviews/threefield_transient.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "e4ebf143dafc6aa5c765f9c2907373309dc1e9281ae28ccca120864669ba0af2",
+      "source_bytes": 13083,
+      "headings": [
+        {
+          "title": "Three-field transient verification",
+          "page": 1
+        },
+        {
+          "title": "Exact source workflow and reproduction",
+          "page": 1
+        },
+        {
+          "title": "What passed, and what did not",
+          "page": 1
+        },
+        {
+          "title": "Independent physical failure in the annular domain",
+          "page": 2
+        },
+        {
+          "title": "Attempted time-step study: convergence not established",
+          "page": 3
+        },
+        {
+          "title": "Verification coverage and remaining work",
+          "page": 4
+        }
+      ],
+      "pages": 4,
+      "pdf_sha256": "1e5f3f7d38ded0299e873aec1dcb899e4719b8b292e9079359e2a1bd8937fd07",
+      "numeric_tokens_checked": 73,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 324,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/fourfield_notes.md",
+      "kind": "markdown",
+      "title": "Four-field translation and verification status",
+      "category": "05-translation-and-numerical-reviews",
+      "order": 36,
+      "pdf_relative_path": "05-translation-and-numerical-reviews/fourfield_notes.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "03c7620571e07fbf0c1c5506c0f39a884fcf9cb66b4c605496a8a0e21f8c5050",
+      "source_bytes": 11802,
+      "headings": [
+        {
+          "title": "Four-field translation and verification status",
+          "page": 1
+        },
+        {
+          "title": "Implemented and tested scope",
+          "page": 1
+        },
+        {
+          "title": "Source issues retained and exposed",
+          "page": 2
+        },
+        {
+          "title": "Unsupported and unverified",
+          "page": 3
+        }
+      ],
+      "pages": 3,
+      "pdf_sha256": "c67199e97bdde52191a373d33df3f2c343e34e181a0c5cd4ce8f02549e7fbb0d",
+      "numeric_tokens_checked": 35,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 139,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/fourfield_review.md",
+      "kind": "markdown",
+      "title": "Independent four-field review",
+      "category": "05-translation-and-numerical-reviews",
+      "order": 37,
+      "pdf_relative_path": "05-translation-and-numerical-reviews/fourfield_review.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "46bd4db1865f4a63e7526b6ff480de5a1539611e52aea6dd8d56510769924248",
+      "source_bytes": 6643,
+      "headings": [
+        {
+          "title": "Independent four-field review",
+          "page": 1
+        },
+        {
+          "title": "Actionable findings",
+          "page": 1
+        },
+        {
+          "title": "Source behavior confirmed",
+          "page": 1
+        },
+        {
+          "title": "Saved native evidence and limits",
+          "page": 2
+        }
+      ],
+      "pages": 2,
+      "pdf_sha256": "d3cc3e966ebba99d481131e2d27cd9d2899e2b8d0a1e30233e1e474dc726c567",
+      "numeric_tokens_checked": 17,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 171,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/GUI_USABILITY_VERIFICATION.md",
+      "kind": "markdown",
+      "title": "GUI usability verification — 2026-11-14",
+      "category": "06-gui-and-release-records",
+      "order": 38,
+      "pdf_relative_path": "06-gui-and-release-records/GUI_USABILITY_VERIFICATION.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "cc282dd7ebca621553c64702838bf72b68343c4fcd777f675ab246da0743ca25",
+      "source_bytes": 4501,
+      "headings": [
+        {
+          "title": "GUI usability verification - 2026-11-14",
+          "page": 1
+        },
+        {
+          "title": "Delivered behavior",
+          "page": 1
+        },
+        {
+          "title": "Checks actually performed",
+          "page": 1
+        },
+        {
+          "title": "Reproduce the automated checks",
+          "page": 2
+        }
+      ],
+      "pages": 2,
+      "pdf_sha256": "4e7975ed59d9e4c7e34edf425339e96cc1b1624f4e21228e3e14b3576dd7b846",
+      "numeric_tokens_checked": 13,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 89,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/GUI_STYLE.md",
+      "kind": "markdown",
+      "title": "GUI style and simplification",
+      "category": "06-gui-and-release-records",
+      "order": 39,
+      "pdf_relative_path": "06-gui-and-release-records/GUI_STYLE.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "0cddf459b471be55fd33180590810d4f562ec35530504aec34afb239f1e0dc7e",
+      "source_bytes": 2560,
+      "headings": [
+        {
+          "title": "GUI style and simplification",
+          "page": 1
+        },
+        {
+          "title": "Verification on 2026-11-14",
+          "page": 1
+        }
+      ],
+      "pages": 1,
+      "pdf_sha256": "48989388ef822235757fe1901a611f6a07f4cad362944d3de80f222fa0f2339f",
+      "numeric_tokens_checked": 12,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 56,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/GUI_VERIFICATION.md",
+      "kind": "markdown",
+      "title": "GUI verification — 0.2.0",
+      "category": "06-gui-and-release-records",
+      "order": 40,
+      "pdf_relative_path": "06-gui-and-release-records/GUI_VERIFICATION.pdf",
+      "status_label": "Historical or cumulative checkpoint",
+      "status_note": "Release 0.2.0 verification checkpoint; later GUI changes are recorded separately.",
+      "source_sha256": "58c4c2a2ac184d5ac5ba2fd776b89b62779cadf082d7ea0ef8d4d125e56f87f6",
+      "source_bytes": 5173,
+      "headings": [
+        {
+          "title": "GUI verification - 0.2.0",
+          "page": 1
+        },
+        {
+          "title": "Executed automated checks",
+          "page": 1
+        },
+        {
+          "title": "Actual local app runs and browser checks",
+          "page": 1
+        },
+        {
+          "title": "Failures corrected during development and remaining limits",
+          "page": 2
+        }
+      ],
+      "pages": 2,
+      "pdf_sha256": "aa88fff935ccf546bcab66fe0fbfd20114c6b78f3e95f9cce9543b7acc9add06",
+      "numeric_tokens_checked": 17,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 98,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/GUI_COMPONENT_REVIEW.md",
+      "kind": "markdown",
+      "title": "GUI component and reuse review",
+      "category": "06-gui-and-release-records",
+      "order": 41,
+      "pdf_relative_path": "06-gui-and-release-records/GUI_COMPONENT_REVIEW.pdf",
+      "status_label": "Scoped technical evidence",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "70caabe801534ec8ebb85185fab2df17e6e62156ed575fcee7cc67f7702d7b40",
+      "source_bytes": 2456,
+      "headings": [
+        {
+          "title": "GUI component and reuse review",
+          "page": 1
+        }
+      ],
+      "pages": 1,
+      "pdf_sha256": "300c8137f12757e0df86f035cc91c1e1f32fd3ee2b015c188fa5ac6fb681bf13",
+      "numeric_tokens_checked": 17,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 57,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/PUBLICATION.md",
+      "kind": "markdown",
+      "title": "Public repository and GUI release",
+      "category": "06-gui-and-release-records",
+      "order": 42,
+      "pdf_relative_path": "06-gui-and-release-records/PUBLICATION.pdf",
+      "status_label": "Historical or cumulative checkpoint",
+      "status_note": "Initial public release checkpoint; later work is recorded in current status and progress.",
+      "source_sha256": "e5d39f4f6139db23acacadc85ae257af67010e3a2289e35e6fb4e6c7676ca55e",
+      "source_bytes": 2905,
+      "headings": [
+        {
+          "title": "Public repository and GUI release",
+          "page": 1
+        }
+      ],
+      "pages": 1,
+      "pdf_sha256": "1fe7d4ad142b90b0b930d1c6665f331a44a7062c869c2867220b9880cb677c06",
+      "numeric_tokens_checked": 9,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 55,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/REPOSITORY_CONTENTS.md",
+      "kind": "markdown",
+      "title": "Repository contents and publication audit",
+      "category": "06-gui-and-release-records",
+      "order": 43,
+      "pdf_relative_path": "06-gui-and-release-records/REPOSITORY_CONTENTS.pdf",
+      "status_label": "Current project guide/status",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "ca21d60a50bd89363e16fd1e3fbbe4286c8602ba29861ae64bad344e77c5abe8",
+      "source_bytes": 6804,
+      "headings": [
+        {
+          "title": "Repository contents and publication audit",
+          "page": 1
+        },
+        {
+          "title": "Included project files",
+          "page": 1
+        },
+        {
+          "title": "Which results are authoritative",
+          "page": 2
+        },
+        {
+          "title": "Excluded local machinery",
+          "page": 2
+        },
+        {
+          "title": "Publication audit",
+          "page": 2
+        }
+      ],
+      "pages": 3,
+      "pdf_sha256": "49a62a978a0bb8377c8283321214928137fe858aee8595f3da2358c7976a5f76",
+      "numeric_tokens_checked": 10,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 148,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/THIRD_PARTY.md",
+      "kind": "markdown",
+      "title": "Licenses and reused components",
+      "category": "06-gui-and-release-records",
+      "order": 44,
+      "pdf_relative_path": "06-gui-and-release-records/THIRD_PARTY.pdf",
+      "status_label": "Current project guide/status",
+      "status_note": "Read the document's own date, version, case and acceptance scope. Do not reinterpret a scoped pass as full parity or experimental validation.",
+      "source_sha256": "3edfbeffb93bb7bd4eab307b624db9e60ed124f6f52b62418fd91ee690231425",
+      "source_bytes": 3069,
+      "headings": [
+        {
+          "title": "Licenses and reused components",
+          "page": 1
+        }
+      ],
+      "pages": 1,
+      "pdf_sha256": "efa2a76e304c923f5dd3b9842d4b1dfabe02d6cf09575b695ac37f81c9ac6df4",
+      "numeric_tokens_checked": 10,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 36,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "CHANGELOG.md",
+      "kind": "markdown",
+      "title": "Changes",
+      "category": "06-gui-and-release-records",
+      "order": 45,
+      "pdf_relative_path": "06-gui-and-release-records/CHANGELOG.pdf",
+      "status_label": "Historical or cumulative checkpoint",
+      "status_note": "Version history; preserve dated entries.",
+      "source_sha256": "6efeb3adeeba6f3ffb6553031013fb94800086d9a0a588a4c360191694c5fc7c",
+      "source_bytes": 2188,
+      "headings": [
+        {
+          "title": "Changes",
+          "page": 1
+        },
+        {
+          "title": "0.2.1 - 2026-11-14",
+          "page": 1
+        },
+        {
+          "title": "0.2.0 - Local browser GUI",
+          "page": 1
+        },
+        {
+          "title": "0.1.1 - 2026-11-14",
+          "page": 1
+        }
+      ],
+      "pages": 1,
+      "pdf_sha256": "1cedec1f8b6c81f96744c12ca496ac32694da9beda262d2662a31b6fef307f53",
+      "numeric_tokens_checked": 8,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 34,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/ACCEPTANCE_MATRIX.csv",
+      "kind": "csv",
+      "title": "Acceptance matrix: complete evidence ledger fields",
+      "category": "07-complete-tabular-annexes",
+      "order": 46,
+      "pdf_relative_path": "07-complete-tabular-annexes/ACCEPTANCE_MATRIX_FULL_LEDGER.pdf",
+      "status_label": "Complete source table, unchanged values",
+      "status_note": "All rows and columns must be preserved. Use field records or split column panels if a full-width table would be illegible. Empty fields remain empty. Evidence inventory is not a completion score.",
+      "row_count": 81,
+      "columns": [
+        "id",
+        "priority",
+        "track",
+        "component",
+        "requirement",
+        "scope",
+        "implementation",
+        "native_tests",
+        "matlab",
+        "physical",
+        "experimental",
+        "gap",
+        "acceptance_criteria",
+        "next_action",
+        "depends_on",
+        "upstream",
+        "python",
+        "evidence"
+      ],
+      "source_sha256": "be5be78fa928645e9d58e62e6e4d9d1cea1747aa703de50773ee108c5f7447d3",
+      "source_bytes": 108262,
+      "csv_records": 81,
+      "csv_fields": 18,
+      "headings": [
+        {
+          "title": "Acceptance matrix: complete evidence ledger fields",
+          "page": 1
+        }
+      ],
+      "pages": 37,
+      "pdf_sha256": "1d490d7c9205a19e8e31801eed515690fdcb079e552a3b1db3588ac3d2c2e2a3",
+      "numeric_tokens_checked": 151,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 1458,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/ACCEPTANCE_OPTIONS.csv",
+      "kind": "csv",
+      "title": "Acceptance options annex: all declared choices",
+      "category": "07-complete-tabular-annexes",
+      "order": 47,
+      "pdf_relative_path": "07-complete-tabular-annexes/ACCEPTANCE_OPTIONS.pdf",
+      "status_label": "Complete source table, unchanged values",
+      "status_note": "All rows and columns must be preserved. Use field records or split column panels if a full-width table would be illegible. Empty fields remain empty. Evidence inventory is not a completion score.",
+      "row_count": 143,
+      "columns": [
+        "id",
+        "selector",
+        "choice",
+        "source",
+        "requirement_ids",
+        "declaration_status",
+        "case_coverage",
+        "known_limit",
+        "required_case_axes"
+      ],
+      "source_sha256": "e56890e841904ad32e0bb50d3954907dfe83a683f4aad0665e834eb6e79b5b18",
+      "source_bytes": 40390,
+      "csv_records": 143,
+      "csv_fields": 9,
+      "headings": [
+        {
+          "title": "Acceptance options annex: all declared choices",
+          "page": 1
+        }
+      ],
+      "pages": 32,
+      "pdf_sha256": "cf968f2a227ab4d07b1be654847cdce347913494260afffa9528b24a95a95a0b",
+      "numeric_tokens_checked": 18,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 1287,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "docs/ACCEPTANCE_METHODS.csv",
+      "kind": "csv",
+      "title": "Acceptance methods annex: public and inherited entries",
+      "category": "07-complete-tabular-annexes",
+      "order": 48,
+      "pdf_relative_path": "07-complete-tabular-annexes/ACCEPTANCE_METHODS.pdf",
+      "status_label": "Complete source table, unchanged values",
+      "status_note": "All rows and columns must be preserved. Use field records or split column panels if a full-width table would be illegible. Empty fields remain empty. Evidence inventory is not a completion score.",
+      "row_count": 585,
+      "columns": [
+        "id",
+        "upstream_class",
+        "method",
+        "source",
+        "native_candidate",
+        "declaration_classification",
+        "requirement_ids",
+        "semantic_acceptance",
+        "review_note"
+      ],
+      "source_sha256": "a770d820864e2366b84d3c97f73bdc66f554e93e7f6950842fc5afc99ebb73b6",
+      "source_bytes": 143186,
+      "csv_records": 585,
+      "csv_fields": 9,
+      "headings": [
+        {
+          "title": "Acceptance methods annex: public and inherited entries",
+          "page": 1
+        }
+      ],
+      "pages": 118,
+      "pdf_sha256": "dd9da3909421fde4bea5a1aa5fe1f9034e3b5fe33bba66e3fe05c1423a6b8901",
+      "numeric_tokens_checked": 486,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 5265,
+      "missing_text_fragments": []
+    },
+    {
+      "source": "outputs/validation/bartolomey-pilot-01/summary/all_runs.csv",
+      "kind": "csv",
+      "title": "Bartolomey pilot: every executed run",
+      "category": "07-complete-tabular-annexes",
+      "order": 49,
+      "pdf_relative_path": "07-complete-tabular-annexes/BARTOLOMEY_ALL_RUNS.pdf",
+      "status_label": "Complete source table, unchanged values",
+      "status_note": "All rows and columns must be preserved. Use field records or split column panels if a full-width table would be illegible. Empty fields remain empty. Evidence inventory is not a completion score.",
+      "row_count": 40,
+      "columns": [
+        "run_id",
+        "entry_id",
+        "test_id",
+        "model",
+        "cells",
+        "variant",
+        "execution",
+        "converged",
+        "physical_passed",
+        "failed_checks",
+        "coordinate",
+        "n_total",
+        "n_compared",
+        "n_excluded",
+        "bias [1]",
+        "MAE [1]",
+        "RMSE [1]",
+        "bias [percentage points]",
+        "MAE [percentage points]",
+        "RMSE [percentage points]",
+        "error",
+        "warnings"
+      ],
+      "source_sha256": "5211649cd8407c370ce62021e60f281fe8e66b8dfc921077b8ec6083a95aa8c2",
+      "source_bytes": 8606,
+      "csv_records": 40,
+      "csv_fields": 22,
+      "headings": [
+        {
+          "title": "Bartolomey pilot: every executed run",
+          "page": 1
+        }
+      ],
+      "pages": 17,
+      "pdf_sha256": "51edf71a923642fa902e7a559d38191f7956da55e4b6fb2be6ce335f0a7d0fba",
+      "numeric_tokens_checked": 206,
+      "missing_numeric_tokens": [],
+      "source_text_fragments_checked": 880,
+      "missing_text_fragments": []
+    }
+  ],
+  "exclusions": [
+    {
+      "pattern": "upstream/**, database/**",
+      "reason": "Preserved third-party source repositories and their own documentation; not newly authored native-port reports."
+    },
+    {
+      "pattern": "outputs/gui/**",
+      "reason": "User-owned run artifacts, not documentation; leave untouched."
+    },
+    {
+      "pattern": "outputs/**/*.json, *.npz, raw profile/convergence/paired-measurement CSV, *.log, *-exit.txt",
+      "reason": "Machine-readable evidence, raw numerical arrays and execution logs remain authoritative source files; interpreted reports link them rather than printing thousands of raw rows."
+    },
+    {
+      "pattern": "original user literature/documentation PDFs outside the repository",
+      "reason": "Original source literature, not new native-port documentation; excluded from redistribution."
+    },
+    {
+      "pattern": "src/openstream/gui_static/index.html",
+      "reason": "Application interface, not an authored documentation page."
+    },
+    {
+      "pattern": "LICENSE and licenses/**",
+      "reason": "License notices are retained as source files and discussed in THIRD_PARTY; may be optionally packaged as a separate legal-notices appendix."
+    }
+  ],
+  "layout_flags": [
+    "Acceptance matrix Markdown is approximately 105 kB, with 81 requirement details plus summary tables; preserve every stable ID and failed status.",
+    "Full CSV ledger has 18 columns, options/methods have 9 columns, pilot table has 22 columns; do not squeeze to tiny text.",
+    "Methods annex has 585 rows; count includes inherited/public repetitions and is not a unique-function completion denominator.",
+    "Options annex has 143 rows: 127 enum choices plus 16 interpolation selections; these counts are not additive with requirement/method counts.",
+    "GUI_VERIFICATION is the 0.2.0 checkpoint; GUI_USABILITY_VERIFICATION describes later changes.",
+    "VERIFICATION and PROGRESS retain historical tests/failures; keep them intact and identify the most recent checkpoint in the index.",
+    "Several Markdown documents contain Unicode math, Greek letters, superscripts, long hashes, code, tables and local relative links; font coverage and wrapping need visual checks.",
+    "No other native authored RST/HTML report was found. The only non-Markdown narrative-like outputs are raw exit-code text, intentionally excluded."
+  ],
+  "created_utc": "2026-11-15T02:51:52.911375+00:00",
+  "exporter": "tools/export_documentation_pdf.py",
+  "exporter_sha256": "8fad2fb54de8b35e8814289bfe6c2919d54bb98035441f2164f7762fb5a58668",
+  "reportlab_version": "4.4.9",
+  "index_pages": 4,
+  "combined_pages": 387,
+  "combined_sha256": "f4b0d193abc95b7576ddf3ba5bb67fdf5f8b2c9704933ee5b6b6ff0157ba7a6a",
+  "verification": {
+    "source_hashes_matched": true,
+    "all_numeric_tokens_retained": true,
+    "rendered_layout_review": "passed_sampled_visual_review; see PDF_VERIFICATION.json",
+    "all_source_text_fragments_retained": true,
+    "all_pages_geometry_checked": true,
+    "all_csv_fields_independently_checked": 8890,
+    "pdf_count": 52
+  }
+}
