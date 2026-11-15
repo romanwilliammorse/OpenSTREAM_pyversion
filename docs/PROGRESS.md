@@ -44,8 +44,17 @@ matrix records the corrected source semantics without closing unresolved
 new-case MATLAB, physical or experimental criteria. See
 `docs/MATCHED_DIAGNOSTIC_REPLAY.md` and `final_comparison.json`.
 
-Remaining delivery: publish source/evidence and record clean Windows CI. Next
-scientific work: diagnose Sawai's alternating point iterations, scope the same
+Code/evidence commit `d4741187d7dab82a0390d70786182171d8079bd3` is published.
+Clean Windows CI run `43689588237` passed all 530 current Python tests with the
+two existing warnings, 11 frontend tests, dependency consistency and distribution
+build. The extra test relative to the 529-test local collection is the final
+observer/auditor guard; CI includes it. Receipts and decoded log are under the
+replay evidence directory. Two finalized PDFs are under
+`output/pdf/Matched_Diagnostic_Replay_01/`, bound to the same source commit:
+5-page replay report (including A3 plate) and 55-page acceptance matrix.
+All 60 pages passed the recorded layout/retention review.
+
+Next scientific work: diagnose Sawai's alternating point iterations, scope the same
 ThreeField precursor-selection pattern, and replay affected Wurtz/Sawai cohorts
 before replacing their pre-correction plots/statistics. No original 69-case
 result is silently upgraded to the corrected implementation.

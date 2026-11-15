@@ -1,0 +1,74 @@
+{
+  "schema": "openstream-pdf-rendered-qa-v1",
+  "source_commit": "d4741187d7dab82a0390d70786182171d8079bd3",
+  "artifact_marker": {
+    "operation": "create",
+    "expected_output_count": 2,
+    "success": true,
+    "calls": 1
+  },
+  "documents": [
+    {
+      "pdf": "MATCHED_DIAGNOSTIC_REPLAY.pdf",
+      "sha256": "f4d9a4a9debd3d0d98e9b787dc11083d79cfaea77f735e56211394befb2d2a70",
+      "pages": 5,
+      "numeric_tokens_retained": 50,
+      "source_text_fragments_retained": 189,
+      "out_of_page_characters": 0,
+      "replacement_characters": 0,
+      "fonts": [
+        "AAAAAA+Consolas",
+        "AAAAAA+SegoeUI",
+        "AAAAAA+SegoeUI-Bold",
+        "AAAAAA+SegoeUI-Italic",
+        "Helvetica"
+      ]
+    },
+    {
+      "pdf": "ACCEPTANCE_MATRIX.pdf",
+      "sha256": "bf7dc2a5a71201ff2c96505c113f634ba861d96801a6aa044de0df0cce632672",
+      "pages": 55,
+      "numeric_tokens_retained": 165,
+      "source_text_fragments_retained": 3575,
+      "out_of_page_characters": 0,
+      "replacement_characters": 0,
+      "fonts": [
+        "AAAAAA+Consolas",
+        "AAAAAA+SegoeUI",
+        "AAAAAA+SegoeUI-Bold",
+        "AAAAAA+SegoeUI-Italic",
+        "Helvetica"
+      ]
+    }
+  ],
+  "source_modified": false,
+  "numerical_runs_performed": false,
+  "visual_review": {
+    "all_60_pages_rendered": true,
+    "all_pages_reviewed_via_contact_sheets": true,
+    "full_resolution_pages_reviewed": {
+      "MATCHED_DIAGNOSTIC_REPLAY.pdf": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "ACCEPTANCE_MATRIX.pdf": [
+        1,
+        23,
+        50
+      ]
+    },
+    "matrix_revised_export_content_streams_identical_to_reviewed_render": true,
+    "observed_defects_remaining": [],
+    "pagination_adjustment": "Results heading now stays with its table; source text unchanged.",
+    "figure": "Unchanged committed final_comparison.png; no added plot title; A3 landscape supplement includes footer caption only."
+  },
+  "renderer": "Poppler pdftoppm 100 dpi",
+  "render_warning": "Poppler emitted global fallback-font configuration warnings for unused system font names; PDFs use embedded Segoe UI/Consolas fonts, rendering and character bounds were inspected.",
+  "source_inventory_sha256": "c131a7ed2491b10bac921b29b5d9a175f51cf43a2e422c255af398657e6d7ca9",
+  "renderer_source_sha256": "62b7f857878b209f837bbf376c315e6f1a53045906ba9774506c9f23c34fcd65",
+  "document_manifest_sha256_at_review_before_status_update": "af754fc86a9bd7581a6570787e080e0b39f1007d472b60327c88d1d25953bb5c",
+  "root_review": "Final A3 diagnostic plate independently inspected; axes/units/legends readable, no plot titles or clipping."
+}

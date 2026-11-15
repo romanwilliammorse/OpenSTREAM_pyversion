@@ -23,6 +23,7 @@ the archived results.
 | `outputs/verification/matched-replay-01/` | Ordered before/after diagnostic replays, unchanged-input comparisons, source/handle audits, separate TwoFluid budget study and archived-baseline recheck |
 | `outputs/verification/matched-matlab-replay-kit-02.zip` | Portable source/input/trace bundle for later MATLAB reference execution; statically checked, not executed in MATLAB |
 | `output/pdf/LeCorre_2025_Reports_03/` | Current three source-linked PDFs: clean figure plates with main Figure 7 at 0.2 s, OpenSTREAM convergence/supplemental diagnostics review, and amended acceptance matrix |
+| `output/pdf/Matched_Diagnostic_Replay_01/` | Later replay report and updated acceptance matrix; source-bound PDFs with retained text/numbers, A3 diagnostic plot and layout receipts |
 | `output/pdf/LeCorre_2025_Reports/` | Preserved earlier PDF snapshot under the original diagnostic policy |
 | `provenance/` | Source, environment and dependency fingerprints |
 | `upstream/` | Original OpenSTREAM source as a pinned Git submodule, including its CoolPropWrapper submodule |

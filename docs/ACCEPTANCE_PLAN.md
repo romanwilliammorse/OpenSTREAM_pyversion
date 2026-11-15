@@ -1,6 +1,16 @@
 # Full parity and experimental validation: acceptance plan
 
-Snapshot: 2026-11-14. Numerical target: OpenSTREAM `a614c7173822a93c1e64ac28d1541cbac028cbd8` and CoolPropWrapper `a7c40902ff66faf6ed668986398bb1b9faa16e13`. Database target: `b48541e6438a92b4c0ddc83cf0ceda3f71a59b22`. Python implementation: 0.2.1. The supplied 2025 papers are additional model and benchmark evidence, not replacements for the pinned implementation.
+Snapshot: 2026-11-15. Numerical target: OpenSTREAM `a614c7173822a93c1e64ac28d1541cbac028cbd8` and CoolPropWrapper `a7c40902ff66faf6ed668986398bb1b9faa16e13`. Database target: `b48541e6438a92b4c0ddc83cf0ceda3f71a59b22`. Python implementation: 0.2.1, with source-hash-tracked corrections. The supplied 2025 papers are additional model and benchmark evidence, not replacements for the pinned implementation.
+
+Current execution update: the [matched diagnostic replay](MATCHED_DIAGNOSTIC_REPLAY.md)
+corrected a confirmed FourField precursor-selection translation error and
+rechecked all four archived baselines successfully. Sawai point oscillation
+persists. A separate longer TwoFluid initialization budget converges without
+changing tolerances; its original failed case and area diagnostic remain.
+Next: diagnose the Sawai exchange/equilibrium iteration sequence, scope the
+analogous ThreeField precursor selection, and replay affected cohorts before
+replacing their pre-correction comparisons. Fresh MATLAB references remain
+unavailable. The 81-row matrix retains all original acceptance criteria.
 
 ## Deliverables and interpretation
 
@@ -23,7 +33,7 @@ The GUI Windows CI checkpoint passed 213 Python and nine JavaScript tests, with 
 
 ## Ordered work
 
-Latest clean Windows code checkpoint `dfbcaa1` passes 298 Python and nine
+The historical Bartolomey Windows checkpoint `dfbcaa1` passed 298 Python and nine
 JavaScript tests, with two retained FourField warnings, and builds both
 distributions. The separate wheel-install smoke also passes. These are
 functional/reproducibility checks; the pilot still fails three frozen mesh
@@ -36,7 +46,7 @@ Create a case registry with exact source/data revision, dataset/record ID, geome
 Resolve the paper/companion differences before labeling a run as a reproduction:
 
 - The ICMF demonstrations use a 5 m channel; the longer paper and current TUTORIAL1 use 5.5 m. Chan's droplet no-slip choice differs from the longer paper's full momentum choice. The current baseline is not a substitute for either paper case.
-- The longer paper's Sawai wave-relaxation time is 0.2 s; the pinned NURETH21 companion uses 0.1 s. Preserve both as distinctly named candidate configurations until provenance establishes the intended reproduction target. A sensitivity run is not permission to choose the best-fitting value and call it independent validation.
+- The longer paper's Sawai wave-relaxation time is 0.2 s; the pinned NURETH21 companion uses 0.1 s. R. W. Morse confirmed 0.2 s as intended, so the main figure and matched replay use 0.2 s. Preserve the separately labeled 0.1 s comparison and unresolved historical plot-producing provenance. A sensitivity run is not permission to choose the best-fitting value and call it independent validation.
 - The companion uses `VAPORFRIC='CONST'`, but the pinned solver declares `CONSTANT`. Establish a source-version or explicit input-migration record before executing the intended model; do not silently replace an invalid selection.
 - The Wurtz coefficient reduction and Sawai relaxation choice are associated with fitting those measurements. Preserve these settings for reproduction and keep them separate from independent evaluation cases.
 - Sawai period data require milliseconds-to-seconds conversion. Some stored measurement coordinates exceed the stored length; resolve the coordinate convention from source evidence or explicitly exclude those points. Do not clamp or extrapolate silently.

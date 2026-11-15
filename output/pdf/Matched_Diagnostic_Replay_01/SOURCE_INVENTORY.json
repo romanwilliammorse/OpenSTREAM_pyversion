@@ -1,0 +1,54 @@
+{
+  "schema": "openstream-matched-replay-pdf-inventory-v1",
+  "source_commit": "d4741187d7dab82a0390d70786182171d8079bd3",
+  "scope": "Exactly the matched diagnostic replay report and acceptance matrix; source text unchanged.",
+  "source_identity_policy": "Working source must equal the recorded commit after CRLF-to-LF normalization only; raw hashes also retained.",
+  "counts": {
+    "markdown": 2,
+    "total": 2
+  },
+  "documents": [
+    {
+      "source": "docs/MATCHED_DIAGNOSTIC_REPLAY.md",
+      "kind": "markdown",
+      "title": "Matched diagnostic replay: Sawai 1 and TwoFluid 400 cells",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "MATCHED_DIAGNOSTIC_REPLAY.pdf",
+      "source_sha256": "6fdd085aaf70e7d78c9eca874682f9c779c7eed487dae00064afd4245f5e7ce6",
+      "source_sha256_lf": "6fdd085aaf70e7d78c9eca874682f9c779c7eed487dae00064afd4245f5e7ce6",
+      "source_bytes": 10241,
+      "source_git_blob": "4daf66dc7ce492c88e71e15354269f2258b01ca6",
+      "committed_source_sha256": "6fdd085aaf70e7d78c9eca874682f9c779c7eed487dae00064afd4245f5e7ce6",
+      "figure_assets": [
+        {
+          "source": "outputs/verification/matched-replay-01/final_comparison.png",
+          "caption": "Saved iteration and initialization histories",
+          "source_sha256": "35fd16a2df0d277336d252f39d70511f1f1253ccdce41e4183209c97ea042b6d",
+          "source_bytes": 234735,
+          "source_git_blob": "8728e48fda0748948aa11a55618b444439ba0d51",
+          "pixels": [
+            2880,
+            864
+          ],
+          "dpi": [
+            180.00979999999998,
+            180.00979999999998
+          ]
+        }
+      ]
+    },
+    {
+      "source": "docs/ACCEPTANCE_MATRIX.md",
+      "kind": "markdown",
+      "title": "Acceptance matrix",
+      "status_label": "Preserved scientific status; see stated evidence and limitations",
+      "pdf_relative_path": "ACCEPTANCE_MATRIX.pdf",
+      "source_sha256": "3768036e21e1fb840b39f3bd5d6b878641678a7a4da0003036d43b0d89a5ea6a",
+      "source_sha256_lf": "3768036e21e1fb840b39f3bd5d6b878641678a7a4da0003036d43b0d89a5ea6a",
+      "source_bytes": 144118,
+      "source_git_blob": "046f5687ccdf05004bb21a1975152ce7adcf959e",
+      "committed_source_sha256": "3768036e21e1fb840b39f3bd5d6b878641678a7a4da0003036d43b0d89a5ea6a"
+    }
+  ],
+  "figure_plate_policy": "Append unchanged referenced PNGs on A3 landscape pages; preserve pixel aspect ratio without cropping; never exceed native DPI size when recorded (otherwise one point per pixel maximum)."
+}

@@ -8,6 +8,7 @@ outputs/validation/lecorre-2025-01/** -text
 output/pdf/LeCorre_2025_Reports/** -text
 output/pdf/LeCorre_2025_Reports_02/** -text
 output/pdf/LeCorre_2025_Reports_03/** -text
+output/pdf/Matched_Diagnostic_Replay_01/** -text
 outputs/verification/annular-policy-01/** -text
 outputs/verification/matched-replay-01/** -text
 outputs/verification/matched-matlab-replay-kit-01/** -text

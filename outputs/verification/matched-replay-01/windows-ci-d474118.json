@@ -1,0 +1,32 @@
+{
+  "schema": "openstream-clean-windows-ci-v1",
+  "source_commit": "d4741187d7dab82a0390d70786182171d8079bd3",
+  "run_id": 43689588237,
+  "job_id": 132737194649,
+  "url": "https://github.com/romanwilliammorse/OpenSTREAM_pyversion/actions/runs/43689588237",
+  "status": "completed",
+  "conclusion": "success",
+  "python": "3.12.10",
+  "platform": "windows",
+  "python_tests": {
+    "passed": 530,
+    "warnings": 2,
+    "seconds": 152.93
+  },
+  "javascript_tests": {
+    "passed": 11,
+    "failed": 0
+  },
+  "dependency_consistency": "No broken requirements found.",
+  "distribution_build": [
+    "openstream_python-0.2.1.tar.gz",
+    "openstream_python-0.2.1-py3-none-any.whl"
+  ],
+  "scope": "Fresh Windows install, full current software tests, frontend checks and distribution build. Scientific replay and archived baseline results are separately recorded local executions, not CI reruns.",
+  "decoded_log": "windows-ci-d474118.log",
+  "log_serialization": "Decoded GitHub job log, LF line endings",
+  "source_tools": [
+    "GitHub fetch run metadata",
+    "GitHub fetch_workflow_job_logs"
+  ]
+}
