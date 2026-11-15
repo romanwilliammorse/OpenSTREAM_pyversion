@@ -2,6 +2,23 @@
 
 The user's requested full native port is **not yet complete**. Continue implementation and verification without replacing the preserved source or changing equations to obtain passing tests.
 
+## Password-protected hosted GUI — 2026-11-15 (in progress)
+
+The user authorized publication at `https://openstream-py.vercel.app` and a
+shared password. The GitHub Login Connection is now configured. Vercel project
+`openstream-py` and its connected private Blob store are provisioned. Secrets
+are deployment environment variables, never repository files.
+
+The separate `openstream.cloud` adapter retains the native GUI/solver worker,
+uses isolated Linux Sandbox jobs and durable private result manifests, and
+provides server-side login, CSRF, expiry and authenticated downloads. No existing
+top-level scientific module, governing equation, tolerance or default changed.
+`docs/HOSTED_GUI.md` documents architecture and reproducible setup. Focused tests
+include a real 100-cell Mixture child matching the nine physical and initialization
+profiles at rtol=1e-8, atol=0. Hosted deployment and all-four live baseline runs
+remain to be verified; local test doubles are not evidence of live compatibility.
+This infrastructure work does not advance scientific acceptance claims.
+
 ## Sawai relaxation and iteration controls — 2026-11-15
 
 The user authorized a separate control study and reinforced the project-wide

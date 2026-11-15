@@ -24,7 +24,7 @@ jobs:
           node-version: '22'
       - name: Install pinned dependencies and package
         run: |
-          python -m pip install -r requirements.lock -r requirements-gui.lock
+          python -m pip install -r requirements-cloud.lock
           python -m pip install --no-build-isolation -e ".[gui]"
           python -m pip check
       - name: Numerical and GUI tests

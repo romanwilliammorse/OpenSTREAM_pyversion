@@ -1,0 +1,2 @@
+# Vercel's Python runtime uses the same pinned scientific dependencies.
+-r requirements-cloud.lock

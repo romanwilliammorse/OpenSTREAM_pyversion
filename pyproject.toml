@@ -15,6 +15,7 @@ dependencies = ["numpy==2.5.4", "scipy==1.18.1", "CoolProp==8.0.0", "matplotlib=
 [project.optional-dependencies]
 test = ["pytest==9.2.0", "build==1.6.1"]
 gui = ["Flask==3.1.3", "plotly==7.1.0", "waitress==3.0.2"]
+cloud = ["Flask==3.1.3", "plotly==7.1.0", "vercel-sandbox==0.10.0", "vercel-blob==0.5.0"]
 
 [project.scripts]
 openstream = "openstream.cli:main"
@@ -25,6 +26,7 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 openstream = ["data/*.inp", "data/*.json", "data/gui_baselines/**/*", "gui_static/*"]
+"openstream.cloud" = ["static/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
