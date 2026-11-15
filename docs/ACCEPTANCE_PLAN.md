@@ -7,7 +7,11 @@ corrected a confirmed FourField precursor-selection translation error and
 rechecked all four archived baselines successfully. Sawai point oscillation
 persists. A separate longer TwoFluid initialization budget converges without
 changing tolerances; its original failed case and area diagnostic remain.
-Next: diagnose the Sawai exchange/equilibrium iteration sequence, scope the
+The [Sawai constituent trace](SAWAI_OSCILLATION_DIAGNOSTIC.md) now identifies
+signed deposition as the dominant varying term in its retained point cycle;
+no additional active translation error was confirmed. Next: preregister a
+separate study of source-exposed numerical controls with unchanged tolerances,
+obtain a matched runtime comparison when available, scope the
 analogous ThreeField precursor selection, and replay affected cohorts before
 replacing their pre-correction comparisons. Fresh MATLAB references remain
 unavailable. The 81-row matrix retains all original acceptance criteria.

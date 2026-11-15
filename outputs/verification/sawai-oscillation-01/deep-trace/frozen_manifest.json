@@ -1,0 +1,89 @@
+{
+  "schema": "openstream-sawai-oscillation-diagnostic-v1",
+  "baseline_commit": "bf5083ce2db9c2ac5c1279b3d7858ca1dd39bf9e",
+  "run_id": "sawai-01-paper-tw020-n100-base",
+  "purpose": "Observe actual exchange and secant operations without altering source, inputs, tolerance, relaxation or iteration budget. Native trace does not establish MATLAB equivalence.",
+  "corrected_reference_directory": "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base",
+  "numeric_files": [
+    "comparison_profiles.npz",
+    "numerical/results.npz",
+    "numerical/initialization.npz",
+    "numerical/mixture/results.npz",
+    "numerical/mixture/initialization.npz"
+  ],
+  "corrected_reference_sha256": {
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/comparison_profiles.npz": "046fe83f222f6892bcd5e43f0d638f7b5dd0950fbba2a1206096c2db9e4b8c0d",
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/numerical/results.npz": "037044c4825729b17d32f65934aeb037838940c0bb991ba85557a313b31d7d8f",
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/numerical/initialization.npz": "266b6acabc747f8349c5636a2acb52ac38b7767ad6d159a32ee285c3ab0e83c9",
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/numerical/mixture/results.npz": "62305ec2f2f4d63b5f8bfe208e72c31563c67f42d7b52e8e91bc352da729722b",
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/numerical/mixture/initialization.npz": "cc4c1f543c5c83dcc61d404bfcd03dff306fcf0b081ba5f14c7d55c8c2d804af",
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/effective_inputs.json": "f60b6bd005de5febbb7aa225adbd5728a5db3f4b1cca129142113e86a151c859",
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/update_trace.jsonl": "a74f74e0eed9994fd8e05e1dfd43f421c374fb0a8767b980bca0be483c1b5098",
+    "outputs/verification/matched-replay-01/native-after/sawai-01-paper-tw020-n100-base/point_trace.csv": "ce16490d753ed3e0ba55c80ba04245394ece75c30a92a303b99c817d76a8c439"
+  },
+  "native_source_sha256": {
+    "__init__.py": "3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "annular.py": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+    "cli.py": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+    "database.py": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
+    "experimental_comparison.py": "03c12bcfe1e8de115092d0ea1a19e21ec177c5983c575b63183a67453b3fd1f4",
+    "ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+    "fields.py": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+    "fourfield.py": "5dafef4ee0d26f71e9e9083a61304b6d06f36e5a852f6981f0092269064692c8",
+    "gui.py": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
+    "gui_launcher.py": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+    "gui_lock.py": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+    "gui_reference.py": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+    "gui_schema.py": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+    "gui_worker.py": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
+    "inputs.py": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+    "multifield_output.py": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+    "numerics.py": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+    "output.py": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+    "plotting.py": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+    "properties.py": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+    "solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+    "tf_fields.py": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+    "threefield.py": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+    "twofluid.py": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c"
+  },
+  "stage_nodes_zero_based": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "deep_window": {
+    "time_s": 8.0,
+    "nodes_zero_based": [
+      24,
+      25,
+      26
+    ],
+    "iteration_min": 90,
+    "iteration_max": 100
+  },
+  "prohibited_changes": [
+    "governing equations",
+    "closure models",
+    "input values",
+    "tolerances",
+    "relaxation factors",
+    "iteration limits",
+    "original evidence"
+  ],
+  "units": {
+    "RELAXTW": "s",
+    "cells": "1"
+  },
+  "settings": {
+    "RELAXTW": 0.2,
+    "NNODES": 100
+  }
+}

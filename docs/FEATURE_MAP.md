@@ -23,6 +23,13 @@ TwoFluid's original 400-cell attempt still reaches its iteration cap. A separate
 exact original 30-state prefix. These are native/source-audit results, not fresh
 MATLAB equivalence. The original 69-case campaign remains a pre-correction record.
 
+The [Sawai follow-up](SAWAI_OSCILLATION_DIAGNOSTIC.md) adds read-only constituent
+tracing and exact proposal/source-sum audits for the 0.2 s/100-cell case. Signed
+deposition dominates the observed late cycle; no further active translation
+error was confirmed. All 215 reference arrays and coarse histories are
+reproduced, with the original failed point criterion intact. This adds evidence
+without promoting any framework or closure to broader equivalence or validation.
+
 Implemented means native code exists. Tested identifies an actual check/run, not full branch coverage. Unsupported means explicit rejection or an unavailable API. Unverified means no executed reference comparison for that scope. Tests that expose a physical defect do not establish that physical criterion passed.
 
 | Upstream component | Python equivalent | Implementation | Actual test evidence | Equivalence |

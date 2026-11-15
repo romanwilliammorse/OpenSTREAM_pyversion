@@ -2,6 +2,51 @@
 
 The user's requested full native port is **not yet complete**. Continue implementation and verification without replacing the preserved source or changing equations to obtain passing tests.
 
+## Sawai oscillation diagnosis — 2026-11-15
+
+Completed the requested source-unchanged diagnosis of Sawai entry 1 at
+RELAXTW=0.2 s and 100 cells, based on `bf5083ce2db9c2ac5c1279b3d7858ca1dd39bf9e`.
+`examples/sawai_oscillation_diagnostic.json` freezes the corrected reference,
+all 25 native modules and the detailed observation window. No numerical source,
+equation, closure, input, tolerance, relaxation or iteration limit changed.
+
+The run in `outputs/verification/sawai-oscillation-01/deep-trace/` reproduces all
+215 saved arrays exactly. Its coarse update/point/temporal histories are
+byte-identical to the prior corrected replay. All 33 detailed windows at t=8 s,
+nodes 24-26, iterations 90-100 contain 22,770 recorded events. The independent
+audits reconstruct 60 mass proposals and 66 constituent source sums exactly.
+
+Signed droplet deposition accounts for 99.7525%, 99.5389% and 98.8739% of the
+observed wave-source alternation at nodes 24, 25 and 26. Wave clipping is inactive
+and the thin-base secants pass their original tolerance in the late cycle.
+No additional active translation error was confirmed. The unchanged maximum
+wave-flow point increment is 7.675963972e-4 kg/(s m), exceeding the fixed
+1e-4 kg/(s m) limit. Source temporal STATE and failed native point status remain
+distinct. Source agreement does not prove the same cycle occurs in MATLAB.
+
+Report: `docs/SAWAI_OSCILLATION_DIAGNOSTIC.md`; source audit:
+`docs/sawai_oscillation_exchange_audit.md`. Exact trace provenance and source
+decomposition receipts are in the new study directory. All acceptance criteria
+and status axes remain unchanged. Original campaign comparisons remain
+pre-correction evidence. MATLAB access is still unavailable; do not ask the
+user again merely to continue native work.
+
+Verification: full collected suite 549 passed with two retained warnings; final
+focused suite 20 passed after the added checkout-byte guard; frontend 11 passed.
+The acceptance integrity receipt verifies all 81 criteria/status sets, all 25
+native modules and 45 original files are unchanged. Git line-ending rules now
+preserve the already traced mixed-LF/CRLF native bytes on a fresh checkout, with
+no change to source content or current bytes.
+
+Next: preregister a separate source-exposed numerical-control study with the
+same equations/closures and fixed acceptance tolerances, or analyze the complete
+local sequential iteration map. Keep alternative numerical configurations
+separate from the frozen failed attempt. Obtain matched MATLAB traces when an
+environment becomes available; audit analogous ThreeField precursor selection
+and rerun affected publication cohorts under new manifests afterward. Do not
+clamp droplet flow or deposition, add closures, relax pass thresholds or claim
+experimental validation from this diagnosis.
+
 ## Matched diagnostic replay — 2026-11-15
 
 The user authorized Sawai entry 1 at tau=0.2 s/100 cells, then the TwoFluid

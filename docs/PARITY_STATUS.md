@@ -17,6 +17,13 @@ TwoFluid 60-state initialization budget converges at 39 s with unchanged
 tolerances and an exact original 30-state prefix. The original 69-case campaign
 is retained as pre-correction evidence, and fresh MATLAB comparison is not run.
 
+The [Sawai oscillation diagnostic](SAWAI_OSCILLATION_DIAGNOSTIC.md) preserves
+that corrected result exactly (215 arrays) and identifies signed deposition
+as the dominant varying source term in the remaining point cycle. No further
+translation correction is justified by the reviewed evidence. Acceptance
+statuses are unchanged; the diagnosis is neither a convergence pass nor a new
+MATLAB or experimental-validation result.
+
 ## Progress measures
 
 | Measure | Numerator / denominator | Interpretation |

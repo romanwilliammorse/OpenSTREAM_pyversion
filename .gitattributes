@@ -15,3 +15,24 @@ outputs/verification/matched-matlab-replay-kit-01/** -text
 outputs/verification/matched-matlab-replay-kit-02/** -text
 outputs/verification/matched-matlab-replay-kit-02-static-verification.json -text
 examples/matched_diagnostic_replay.json -text
+outputs/verification/sawai-oscillation-01/** -text
+output/pdf/Sawai_Oscillation_01/** -text
+examples/sawai_oscillation_diagnostic.json -text
+# Match the exact runtime bytes bound by scientific source receipts on checkout.
+# These rules preserve the existing normalized Git blobs and all current bytes.
+src/openstream/*.py text eol=lf
+src/openstream/ff_fields.py text eol=crlf
+src/openstream/fields.py text eol=crlf
+src/openstream/fourfield.py text eol=crlf
+src/openstream/inputs.py text eol=crlf
+src/openstream/tf_fields.py text eol=crlf
+src/openstream/threefield.py text eol=crlf
+src/openstream/twofluid.py text eol=crlf
+tools/trace_sawai_oscillation.py text eol=lf
+tools/audit_sawai_trace_provenance.py text eol=lf
+tools/analyze_sawai_saved_cycle.py text eol=lf
+tools/analyze_sawai_deposition_cycle.py text eol=lf
+tools/audit_sawai_oscillation_acceptance.py text eol=lf
+tools/export_sawai_oscillation_pdf.py text eol=lf
+tools/replay_matched_diagnostics.py text eol=lf
+tools/run_lecorre_reproduction.py text eol=lf

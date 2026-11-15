@@ -14,6 +14,12 @@ baselines still pass. Sawai point nonconvergence remains; the 400-cell TwoFluid
 case converges with a separately tested longer initialization budget. Equations
 and tolerances are unchanged; fresh MATLAB comparison remains unavailable.
 
+The [Sawai oscillation diagnostic](docs/SAWAI_OSCILLATION_DIAGNOSTIC.md) traces
+the remaining 0.2 s/100-cell failure to a cycle dominated by signed deposition.
+All 215 reference arrays are reproduced exactly. No additional translation
+error was confirmed or numerical setting changed; the failed point criterion
+and unresolved matched MATLAB comparison remain in the acceptance matrix.
+
 ## Install and run on Windows
 
 Install 64-bit Python 3.12 and Git, then run in PowerShell:

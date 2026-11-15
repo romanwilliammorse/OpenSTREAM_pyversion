@@ -1,0 +1,2023 @@
+{
+  "schema": "openstream-sawai-saved-cycle-analysis-v1",
+  "evidence_type": "read-only saved native observations and independently reconstructed update arithmetic",
+  "solver_executed": false,
+  "governing_equations_changed": false,
+  "input_sha256": {
+    "outputs\\verification\\matched-replay-01\\native-after\\sawai-01-paper-tw020-n100-base\\effective_inputs.json": "f60b6bd005de5febbb7aa225adbd5728a5db3f4b1cca129142113e86a151c859",
+    "outputs\\verification\\matched-replay-01\\native-after\\sawai-01-paper-tw020-n100-base\\point_trace.csv": "ce16490d753ed3e0ba55c80ba04245394ece75c30a92a303b99c817d76a8c439",
+    "outputs\\verification\\matched-replay-01\\native-after\\sawai-01-paper-tw020-n100-base\\update_trace.jsonl": "a74f74e0eed9994fd8e05e1dfd43f421c374fb0a8767b980bca0be483c1b5098",
+    "outputs\\verification\\matched-replay-01\\native-after\\sawai-01-paper-tw020-n100-base\\temporal_trace.json": "8e719820716375c701028c24fba2b9781ad2737c748eed9532277e1d5020de54"
+  },
+  "analysis_tool_sha256": "1924059a3f57df548cb3dff74c9a13581a92e505c01ef4451901ebee5017e58e",
+  "source_for_formula_sha256": {
+    "src\\openstream\\fourfield.py": "5dafef4ee0d26f71e9e9083a61304b6d06f36e5a852f6981f0092269064692c8",
+    "src\\openstream\\annular.py": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+    "src\\openstream\\ff_fields.py": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857"
+  },
+  "final_time_s": 8.0,
+  "wetted_perimeter_m": 0.012566,
+  "point_thresholds": {
+    "ERRORWF": 0.0001,
+    "ERRORUF": 0.01,
+    "ERRORUD": 0.01,
+    "ERRORFW": 0.1
+  },
+  "state_units": {
+    "base_W": "kg/s",
+    "base_U": "m/s",
+    "wave_W": "kg/s",
+    "wave_U": "m/s",
+    "wave_F": "Hz",
+    "drop_W": "kg/s",
+    "drop_U": "m/s"
+  },
+  "point_increment_units": {
+    "dWLb": "kg/(s m)",
+    "dUb": "m/s",
+    "dWLw": "kg/(s m)",
+    "dUw": "m/s",
+    "dFw": "Hz",
+    "dUd": "m/s"
+  },
+  "selected_trace_nodes_at_final_time": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "selected_nodes_failing_final_point_predicate": [
+    24,
+    25,
+    26
+  ],
+  "all_60_mass_proposals_exactly_reconstructed": true,
+  "nodes": [
+    {
+      "node_zero_based": 24,
+      "node_one_based": 25,
+      "z_m": 0.39552,
+      "late_iteration_window": [
+        91,
+        100
+      ],
+      "period_two_max_return_difference": {
+        "base_W": 0.0,
+        "base_U": 1.1102230246251565e-16,
+        "wave_W": 4.336808689942018e-19,
+        "wave_U": 1.5543122344752192e-15,
+        "wave_F": 3.552713678800501e-15,
+        "drop_W": 4.336808689942018e-19,
+        "drop_U": 0.0
+      },
+      "last_pair_absolute_state_difference": {
+        "base_W": 1.5483784237841497e-08,
+        "base_U": 5.364399846075063e-05,
+        "wave_W": 9.645616327276941e-06,
+        "wave_U": 0.0019539326594757433,
+        "wave_F": 0.0009226923302527723,
+        "drop_W": 9.6301325430391e-06,
+        "drop_U": 0.0
+      },
+      "wave_flow_increment_over_threshold": 7.675963972049171,
+      "drop_flow_crosses_zero_in_last_pair": true,
+      "all_late_thin_base": true,
+      "all_late_secant_within_source_tolerance": true,
+      "max_late_clipping_change_base_kg_s": 1.0842021724855044e-19,
+      "max_late_clipping_change_wave_kg_s": 0.0,
+      "proposal_contrast": {
+        "base_proposal_delta_100_minus_99": {
+          "recorded_kg_s": -4.645135271314502e-08,
+          "transport_and_old_state_kg_s": -1.188857672409279e-09,
+          "source_kg_s": -4.5262495040668825e-08,
+          "MTOT_change_at_iteration99_coefficient_kg_s": -4.529254107197229e-08,
+          "coefficient_and_transport_change_kg_s": -1.158811641099617e-09,
+          "iteration99_relaxed_source_coefficient_m2": 9.97906617235493e-05,
+          "relaxed_MTOT_change_at_iteration99_coefficient_kg_s": -2.2646270535986143e-08,
+          "interpretation": "An exact algebraic decomposition up to floating-point rounding, holding the iteration-99 source coefficient for the first term; not a perturbation experiment or a full-map Jacobian."
+        },
+        "wave_proposal_delta_100_minus_99": {
+          "recorded_kg_s": 2.8936848981831256e-05,
+          "transport_and_old_state_kg_s": 7.017892379073201e-08,
+          "source_kg_s": 2.8866670058040213e-05,
+          "MTOT_change_at_iteration99_coefficient_kg_s": 2.8867552680083282e-05,
+          "coefficient_and_transport_change_kg_s": 6.929630174757131e-08,
+          "iteration99_relaxed_source_coefficient_m2": 0.00010213802764526275,
+          "relaxed_MTOT_change_at_iteration99_coefficient_kg_s": 1.4433776340041641e-05,
+          "interpretation": "An exact algebraic decomposition up to floating-point rounding, holding the iteration-99 source coefficient for the first term; not a perturbation experiment or a full-map Jacobian."
+        }
+      },
+      "iterations": [
+        {
+          "iteration": 91,
+          "state": {
+            "base_W": 0.0002611337650339075,
+            "base_U": 0.43812167943949537,
+            "wave_W": 0.0031134378650534648,
+            "wave_U": 1.1992934566164568,
+            "wave_F": 24.2138271992402,
+            "drop_W": 7.503307511230739e-06,
+            "drop_U": 2.948565851588894
+          },
+          "base_MTOT_kg_m2_s": -0.033693997657441827,
+          "wave_MTOT_kg_m2_s": -0.33664257220459093,
+          "base_proposal": {
+            "recorded_kg_s": 0.0002611492488181451,
+            "reconstructed_kg_s": 0.0002611492488181451,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0002678739414628408,
+            "source_kg_s": -6.72469264469568e-06,
+            "source_to_proposal_factor_m2": 0.0001995813234470986
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0031037922487261883,
+            "reconstructed_kg_s": 0.0031037922487261883,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003172560265418998,
+            "source_kg_s": -6.876801669280974e-05,
+            "source_to_proposal_factor_m2": 0.00020427605529052547
+          },
+          "wave_FTOT_Pa": 2.5251961686571827,
+          "wave_deltafreq_Hz_m": -4.294032949390869,
+          "clipping_change_base_kg_s": 1.0842021724855044e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.761409364567854e-05,
+            "thickness_reconstructed_m": 5.761409364567854e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 0.0003360985520934546,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.4365391730665327,
+            "returned_blended_U_m_s": 0.43812167943949537
+          },
+          "point_increments": {
+            "dWLb": 1.232196740239e-06,
+            "dUb": 5.364399846075063e-05,
+            "dWLw": 0.0007675963972048616,
+            "dUw": 0.0019539326594766315,
+            "dFw": 0.0009226923302527723,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 92,
+          "state": {
+            "base_W": 0.0002611182812496697,
+            "base_U": 0.4381753234379562,
+            "wave_W": 0.0031230834813807413,
+            "wave_U": 1.1973395239569822,
+            "wave_F": 24.214749891570452,
+            "drop_W": -2.1268250318079267e-06,
+            "drop_U": 2.948565851588894
+          },
+          "base_MTOT_kg_m2_s": -0.03392093543042429,
+          "wave_MTOT_kg_m2_s": -0.19532619207855875,
+          "base_proposal": {
+            "recorded_kg_s": 0.000261102797465432,
+            "reconstructed_kg_s": 0.000261102797465432,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.00026787275260516834,
+            "source_kg_s": -6.769955139736354e-06,
+            "source_to_proposal_factor_m2": 0.0001995804376805087
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0031327290977080182,
+            "reconstructed_kg_s": 0.0031327290977080182,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0031726304443427888,
+            "source_kg_s": -3.9901346634770525e-05,
+            "source_to_proposal_factor_m2": 0.00020428057399860894
+          },
+          "wave_FTOT_Pa": 2.293980385497694,
+          "wave_deltafreq_Hz_m": -4.1567058575849565,
+          "clipping_change_base_kg_s": -1.0842021724855044e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.761773135072361e-05,
+            "thickness_reconstructed_m": 5.761773135072361e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 0.00031370201532000266,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.43659294129859944,
+            "returned_blended_U_m_s": 0.4381753234379562
+          },
+          "point_increments": {
+            "dWLb": 1.232196740239e-06,
+            "dUb": 5.364399846080614e-05,
+            "dWLw": 0.0007675963972048616,
+            "dUw": 0.001953932659474633,
+            "dFw": 0.0009226923302527723,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 93,
+          "state": {
+            "base_W": 0.0002611337650339075,
+            "base_U": 0.4381216794394955,
+            "wave_W": 0.0031134378650534648,
+            "wave_U": 1.1992934566164584,
+            "wave_F": 24.2138271992402,
+            "drop_W": 7.503307511230739e-06,
+            "drop_U": 2.948565851588894
+          },
+          "base_MTOT_kg_m2_s": -0.0336939976574418,
+          "wave_MTOT_kg_m2_s": -0.33664257220459093,
+          "base_proposal": {
+            "recorded_kg_s": 0.00026114924881814514,
+            "reconstructed_kg_s": 0.00026114924881814514,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.00026787394146284075,
+            "source_kg_s": -6.724692644695674e-06,
+            "source_to_proposal_factor_m2": 0.00019958132344709858
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0031037922487261883,
+            "reconstructed_kg_s": 0.0031037922487261883,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0031725602654189985,
+            "source_kg_s": -6.876801669280974e-05,
+            "source_to_proposal_factor_m2": 0.0002042760552905255
+          },
+          "wave_FTOT_Pa": 2.5251961686571813,
+          "wave_deltafreq_Hz_m": -4.2940329493908616,
+          "clipping_change_base_kg_s": 1.0842021724855044e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.761409364567854e-05,
+            "thickness_reconstructed_m": 5.761409364567854e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 0.0003360985520935934,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.43653917306653284,
+            "returned_blended_U_m_s": 0.4381216794394955
+          },
+          "point_increments": {
+            "dWLb": 1.232196740239e-06,
+            "dUb": 5.364399846069512e-05,
+            "dWLw": 0.0007675963972048616,
+            "dUw": 0.0019539326594761874,
+            "dFw": 0.0009226923302527723,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 94,
+          "state": {
+            "base_W": 0.0002611182812496697,
+            "base_U": 0.4381753234379563,
+            "wave_W": 0.0031230834813807413,
+            "wave_U": 1.197339523956983,
+            "wave_F": 24.214749891570456,
+            "drop_W": -2.1268250318079267e-06,
+            "drop_U": 2.948565851588894
+          },
+          "base_MTOT_kg_m2_s": -0.03392093543042424,
+          "wave_MTOT_kg_m2_s": -0.19532619207855875,
+          "base_proposal": {
+            "recorded_kg_s": 0.000261102797465432,
+            "reconstructed_kg_s": 0.000261102797465432,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.00026787275260516834,
+            "source_kg_s": -6.769955139736344e-06,
+            "source_to_proposal_factor_m2": 0.00019958043768050868
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0031327290977080182,
+            "reconstructed_kg_s": 0.0031327290977080182,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0031726304443427888,
+            "source_kg_s": -3.9901346634770525e-05,
+            "source_to_proposal_factor_m2": 0.00020428057399860894
+          },
+          "wave_FTOT_Pa": 2.2939803854976946,
+          "wave_deltafreq_Hz_m": -4.15670585758495,
+          "clipping_change_base_kg_s": -1.0842021724855044e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.76177313507236e-05,
+            "thickness_reconstructed_m": 5.76177313507236e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 0.0003137020153201137,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.43659294129859955,
+            "returned_blended_U_m_s": 0.4381753234379563
+          },
+          "point_increments": {
+            "dWLb": 1.232196740239e-06,
+            "dUb": 5.364399846080614e-05,
+            "dWLw": 0.0007675963972048616,
+            "dUw": 0.0019539326594752993,
+            "dFw": 0.000922692330256325,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 95,
+          "state": {
+            "base_W": 0.0002611337650339075,
+            "base_U": 0.4381216794394955,
+            "wave_W": 0.0031134378650534648,
+            "wave_U": 1.199293456616459,
+            "wave_F": 24.213827199240203,
+            "drop_W": 7.503307511230739e-06,
+            "drop_U": 2.948565851588894
+          },
+          "base_MTOT_kg_m2_s": -0.0336939976574418,
+          "wave_MTOT_kg_m2_s": -0.33664257220459093,
+          "base_proposal": {
+            "recorded_kg_s": 0.00026114924881814514,
+            "reconstructed_kg_s": 0.00026114924881814514,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.00026787394146284075,
+            "source_kg_s": -6.724692644695675e-06,
+            "source_to_proposal_factor_m2": 0.0001995813234470986
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0031037922487261887,
+            "reconstructed_kg_s": 0.0031037922487261887,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003172560265418998,
+            "source_kg_s": -6.876801669280974e-05,
+            "source_to_proposal_factor_m2": 0.00020427605529052547
+          },
+          "wave_FTOT_Pa": 2.5251961686571796,
+          "wave_deltafreq_Hz_m": -4.294032949390872,
+          "clipping_change_base_kg_s": 1.0842021724855044e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.761409364567852e-05,
+            "thickness_reconstructed_m": 5.761409364567852e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 0.00033609855209351013,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.43653917306653284,
+            "returned_blended_U_m_s": 0.4381216794394955
+          },
+          "point_increments": {
+            "dWLb": 1.232196740239e-06,
+            "dUb": 5.364399846080614e-05,
+            "dWLw": 0.0007675963972048616,
+            "dUw": 0.0019539326594759654,
+            "dFw": 0.0009226923302527723,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 96,
+          "state": {
+            "base_W": 0.0002611182812496697,
+            "base_U": 0.4381753234379563,
+            "wave_W": 0.0031230834813807413,
+            "wave_U": 1.1973395239569835,
+            "wave_F": 24.214749891570456,
+            "drop_W": -2.1268250318079267e-06,
+            "drop_U": 2.948565851588894
+          },
+          "base_MTOT_kg_m2_s": -0.03392093543042424,
+          "wave_MTOT_kg_m2_s": -0.19532619207855875,
+          "base_proposal": {
+            "recorded_kg_s": 0.000261102797465432,
+            "reconstructed_kg_s": 0.000261102797465432,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.00026787275260516834,
+            "source_kg_s": -6.769955139736344e-06,
+            "source_to_proposal_factor_m2": 0.00019958043768050868
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0031327290977080182,
+            "reconstructed_kg_s": 0.0031327290977080182,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0031726304443427888,
+            "source_kg_s": -3.9901346634770525e-05,
+            "source_to_proposal_factor_m2": 0.00020428057399860897
+          },
+          "wave_FTOT_Pa": 2.2939803854976946,
+          "wave_deltafreq_Hz_m": -4.156705857584963,
+          "clipping_change_base_kg_s": -1.0842021724855044e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.76177313507236e-05,
+            "thickness_reconstructed_m": 5.76177313507236e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 0.0003137020153200859,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.43659294129859955,
+            "returned_blended_U_m_s": 0.4381753234379563
+          },
+          "point_increments": {
+            "dWLb": 1.232196740239e-06,
+            "dUb": 5.364399846080614e-05,
+            "dWLw": 0.0007675963972048616,
+            "dUw": 0.0019539326594755213,
+            "dFw": 0.0009226923302527723,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 97,
+          "state": {
+            "base_W": 0.0002611337650339075,
+            "base_U": 0.43812167943949554,
+            "wave_W": 0.0031134378650534648,
+            "wave_U": 1.1992934566164593,
+            "wave_F": 24.213827199240203,
+            "drop_W": 7.503307511230739e-06,
+            "drop_U": 2.948565851588894
+          },
+          "base_MTOT_kg_m2_s": -0.0336939976574418,
+          "wave_MTOT_kg_m2_s": -0.33664257220459093,
+          "base_proposal": {
+            "recorded_kg_s": 0.00026114924881814514,
+            "reconstructed_kg_s": 0.00026114924881814514,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.00026787394146284075,
+            "source_kg_s": -6.724692644695675e-06,
+            "source_to_proposal_factor_m2": 0.0001995813234470986
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0031037922487261883,
+            "reconstructed_kg_s": 0.0031037922487261883,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0031725602654189985,
+            "source_kg_s": -6.876801669280974e-05,
+            "source_to_proposal_factor_m2": 0.0002042760552905255
+          },
+          "wave_FTOT_Pa": 2.5251961686571813,
+          "wave_deltafreq_Hz_m": -4.294032949390871,
+          "clipping_change_base_kg_s": 1.0842021724855044e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.761409364567852e-05,
+            "thickness_reconstructed_m": 5.761409364567852e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 0.00033609855209351013,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.4365391730665329,
+            "returned_blended_U_m_s": 0.43812167943949554
+          },
+          "point_increments": {
+            "dWLb": 1.232196740239e-06,
+            "dUb": 5.364399846075063e-05,
+            "dWLw": 0.0007675963972048616,
+            "dUw": 0.0019539326594757433,
+            "dFw": 0.0009226923302527723,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 98,
+          "state": {
+            "base_W": 0.0002611182812496697,
+            "base_U": 0.4381753234379563,
+            "wave_W": 0.0031230834813807417,
+            "wave_U": 1.1973395239569835,
+            "wave_F": 24.214749891570456,
+            "drop_W": -2.1268250318083604e-06,
+            "drop_U": 2.948565851588894
+          },
+          "base_MTOT_kg_m2_s": -0.03392093543042424,
+          "wave_MTOT_kg_m2_s": -0.19532619207855878,
+          "base_proposal": {
+            "recorded_kg_s": 0.000261102797465432,
+            "reconstructed_kg_s": 0.000261102797465432,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.00026787275260516834,
+            "source_kg_s": -6.769955139736344e-06,
+            "source_to_proposal_factor_m2": 0.00019958043768050868
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0031327290977080187,
+            "reconstructed_kg_s": 0.0031327290977080187,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003172630444342789,
+            "source_kg_s": -3.990134663477054e-05,
+            "source_to_proposal_factor_m2": 0.00020428057399860897
+          },
+          "wave_FTOT_Pa": 2.2939803854976866,
+          "wave_deltafreq_Hz_m": -4.156705857584962,
+          "clipping_change_base_kg_s": -1.0842021724855044e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.7617731350723594e-05,
+            "thickness_reconstructed_m": 5.7617731350723594e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 0.00031370201532005833,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.43659294129859955,
+            "returned_blended_U_m_s": 0.4381753234379563
+          },
+          "point_increments": {
+            "dWLb": 1.232196740239e-06,
+            "dUb": 5.364399846075063e-05,
+            "dWLw": 0.0007675963972049171,
+            "dUw": 0.0019539326594757433,
+            "dFw": 0.0009226923302527723,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 99,
+          "state": {
+            "base_W": 0.0002611337650339075,
+            "base_U": 0.43812167943949554,
+            "wave_W": 0.0031134378650534648,
+            "wave_U": 1.1992934566164593,
+            "wave_F": 24.213827199240203,
+            "drop_W": 7.503307511230739e-06,
+            "drop_U": 2.948565851588894
+          },
+          "base_MTOT_kg_m2_s": -0.0336939976574418,
+          "wave_MTOT_kg_m2_s": -0.3366425722045959,
+          "base_proposal": {
+            "recorded_kg_s": 0.00026114924881814514,
+            "reconstructed_kg_s": 0.00026114924881814514,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.00026787394146284075,
+            "source_kg_s": -6.724692644695675e-06,
+            "source_to_proposal_factor_m2": 0.0001995813234470986
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0031037922487261874,
+            "reconstructed_kg_s": 0.0031037922487261874,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0031725602654189985,
+            "source_kg_s": -6.876801669281075e-05,
+            "source_to_proposal_factor_m2": 0.0002042760552905255
+          },
+          "wave_FTOT_Pa": 2.5251961686571813,
+          "wave_deltafreq_Hz_m": -4.294032949390871,
+          "clipping_change_base_kg_s": 1.0842021724855044e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.761409364567852e-05,
+            "thickness_reconstructed_m": 5.761409364567852e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 0.00033609855209351013,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.4365391730665329,
+            "returned_blended_U_m_s": 0.43812167943949554
+          },
+          "point_increments": {
+            "dWLb": 1.232196740239e-06,
+            "dUb": 5.364399846075063e-05,
+            "dWLw": 0.0007675963972049171,
+            "dUw": 0.0019539326594757433,
+            "dFw": 0.0009226923302527723,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 100,
+          "state": {
+            "base_W": 0.0002611182812496697,
+            "base_U": 0.4381753234379563,
+            "wave_W": 0.0031230834813807417,
+            "wave_U": 1.1973395239569835,
+            "wave_F": 24.214749891570456,
+            "drop_W": -2.1268250318083604e-06,
+            "drop_U": 2.948565851588894
+          },
+          "base_MTOT_kg_m2_s": -0.03392093543042424,
+          "wave_MTOT_kg_m2_s": -0.19532619207855878,
+          "base_proposal": {
+            "recorded_kg_s": 0.000261102797465432,
+            "reconstructed_kg_s": 0.000261102797465432,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.00026787275260516834,
+            "source_kg_s": -6.769955139736344e-06,
+            "source_to_proposal_factor_m2": 0.00019958043768050868
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0031327290977080187,
+            "reconstructed_kg_s": 0.0031327290977080187,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003172630444342789,
+            "source_kg_s": -3.990134663477054e-05,
+            "source_to_proposal_factor_m2": 0.00020428057399860897
+          },
+          "wave_FTOT_Pa": 2.2939803854976866,
+          "wave_deltafreq_Hz_m": -4.156705857584962,
+          "clipping_change_base_kg_s": -1.0842021724855044e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.7617731350723594e-05,
+            "thickness_reconstructed_m": 5.7617731350723594e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 0.00031370201532005833,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.43659294129859955,
+            "returned_blended_U_m_s": 0.4381753234379563
+          },
+          "point_increments": {
+            "dWLb": 1.232196740239e-06,
+            "dUb": 5.364399846075063e-05,
+            "dWLw": 0.0007675963972049171,
+            "dUw": 0.0019539326594757433,
+            "dFw": 0.0009226923302527723,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        }
+      ]
+    },
+    {
+      "node_zero_based": 25,
+      "node_one_based": 26,
+      "z_m": 0.412,
+      "late_iteration_window": [
+        91,
+        100
+      ],
+      "period_two_max_return_difference": {
+        "base_W": 4.336808689942018e-19,
+        "base_U": 6.106226635438361e-16,
+        "wave_W": 8.673617379884035e-19,
+        "wave_U": 5.551115123125783e-15,
+        "wave_F": 3.552713678800501e-15,
+        "drop_W": 8.673617379884035e-19,
+        "drop_U": 0.0
+      },
+      "last_pair_absolute_state_difference": {
+        "base_W": 9.761871423187574e-09,
+        "base_U": 9.444620262311076e-05,
+        "wave_W": 8.304875222607706e-06,
+        "wave_U": 0.0017098061727307545,
+        "wave_F": 0.0006927347476128887,
+        "drop_W": 8.295113351184519e-06,
+        "drop_U": 0.0
+      },
+      "wave_flow_increment_over_threshold": 6.609004633620629,
+      "drop_flow_crosses_zero_in_last_pair": true,
+      "all_late_thin_base": true,
+      "all_late_secant_within_source_tolerance": true,
+      "max_late_clipping_change_base_kg_s": 2.168404344971009e-19,
+      "max_late_clipping_change_wave_kg_s": 0.0,
+      "proposal_contrast": {
+        "base_proposal_delta_100_minus_99": {
+          "recorded_kg_s": -2.928561426858694e-08,
+          "transport_and_old_state_kg_s": 1.7789258467443454e-09,
+          "source_kg_s": -3.106454011526776e-08,
+          "MTOT_change_at_iteration99_coefficient_kg_s": -3.102296870299933e-08,
+          "coefficient_and_transport_change_kg_s": 1.7373544344704075e-09,
+          "iteration99_relaxed_source_coefficient_m2": 0.00010003313555227058,
+          "relaxed_MTOT_change_at_iteration99_coefficient_kg_s": -1.5511484351499666e-08,
+          "interpretation": "An exact algebraic decomposition up to floating-point rounding, holding the iteration-99 source coefficient for the first term; not a perturbation experiment or a full-map Jacobian."
+        },
+        "wave_proposal_delta_100_minus_99": {
+          "recorded_kg_s": 2.4914625667823986e-05,
+          "transport_and_old_state_kg_s": 4.716224972101807e-08,
+          "source_kg_s": 2.486746341810324e-05,
+          "MTOT_change_at_iteration99_coefficient_kg_s": 2.4868120267078045e-05,
+          "coefficient_and_transport_change_kg_s": 4.6505400746067044e-08,
+          "iteration99_relaxed_source_coefficient_m2": 0.00010230125337993843,
+          "relaxed_MTOT_change_at_iteration99_coefficient_kg_s": 1.2434060133539022e-05,
+          "interpretation": "An exact algebraic decomposition up to floating-point rounding, holding the iteration-99 source coefficient for the first term; not a perturbation experiment or a full-map Jacobian."
+        }
+      },
+      "iterations": [
+        {
+          "iteration": 91,
+          "state": {
+            "base_W": 0.0002548363396443587,
+            "base_U": 0.4696714494640719,
+            "wave_W": 0.0030624104770216433,
+            "wave_U": 1.3584962293339862,
+            "wave_F": 24.106770653757305,
+            "drop_W": 6.639460312758954e-06,
+            "drop_U": 3.2668435906920927
+          },
+          "base_MTOT_kg_m2_s": -0.030320910750417512,
+          "wave_MTOT_kg_m2_s": -0.3340916464394667,
+          "base_proposal": {
+            "recorded_kg_s": 0.0002548461015157817,
+            "reconstructed_kg_s": 0.0002548461015157817,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.00026091229306611133,
+            "source_kg_s": -6.066191550329626e-06,
+            "source_to_proposal_factor_m2": 0.00020006627110454115
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0030541056017990348,
+            "reconstructed_kg_s": 0.0030541056017990348,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003122461590148084,
+            "source_kg_s": -6.835598834904936e-05,
+            "source_to_proposal_factor_m2": 0.00020460250675987684
+          },
+          "wave_FTOT_Pa": 2.4859651561731306,
+          "wave_deltafreq_Hz_m": -6.605255126201119,
+          "clipping_change_base_kg_s": -1.0842021724855044e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.2464816491678485e-05,
+            "thickness_reconstructed_m": 5.2464816491678485e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 1.8259470943066407e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.4696674315140623,
+            "returned_blended_U_m_s": 0.4696714494640719
+          },
+          "point_increments": {
+            "dWLb": 7.768479566086506e-07,
+            "dUb": 9.444620262333281e-05,
+            "dWLw": 0.000660900463362174,
+            "dUw": 0.0017098061727354175,
+            "dFw": 0.0006927347476128887,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 92,
+          "state": {
+            "base_W": 0.00025482657777293593,
+            "base_U": 0.46957700326144935,
+            "wave_W": 0.0030707153522442528,
+            "wave_U": 1.3567864231612579,
+            "wave_F": 24.107463388504918,
+            "drop_W": -1.6556530384277332e-06,
+            "drop_U": 3.2668435906920927
+          },
+          "base_MTOT_kg_m2_s": -0.03047597421279774,
+          "wave_MTOT_kg_m2_s": -0.21254807074776616,
+          "base_proposal": {
+            "recorded_kg_s": 0.0002548168159015132,
+            "reconstructed_kg_s": 0.0002548168159015132,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0002609140719919581,
+            "source_kg_s": -6.097256090444867e-06,
+            "source_to_proposal_factor_m2": 0.00020006763517618583
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0030790202274668618,
+            "reconstructed_kg_s": 0.0030790202274668618,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003122508752397805,
+            "source_kg_s": -4.34885249309434e-05,
+            "source_to_proposal_factor_m2": 0.0002046055971147903
+          },
+          "wave_FTOT_Pa": 2.2617576540640294,
+          "wave_deltafreq_Hz_m": -6.499982349684187,
+          "clipping_change_base_kg_s": 0.0,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.2452257009095096e-05,
+            "thickness_reconstructed_m": 5.2452257009095096e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 1.9919789826974518e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.46957298480489196,
+            "returned_blended_U_m_s": 0.46957700326144935
+          },
+          "point_increments": {
+            "dWLb": 7.768479566086506e-07,
+            "dUb": 9.444620262255565e-05,
+            "dWLw": 0.0006609004633622018,
+            "dUw": 0.001709806172728312,
+            "dFw": 0.0006927347476128887,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 93,
+          "state": {
+            "base_W": 0.0002548363396443587,
+            "base_U": 0.4696714494640725,
+            "wave_W": 0.0030624104770216433,
+            "wave_U": 1.3584962293339917,
+            "wave_F": 24.10677065375731,
+            "drop_W": 6.639460312758954e-06,
+            "drop_U": 3.2668435906920927
+          },
+          "base_MTOT_kg_m2_s": -0.030320910750417346,
+          "wave_MTOT_kg_m2_s": -0.3340916464394721,
+          "base_proposal": {
+            "recorded_kg_s": 0.00025484610151578176,
+            "reconstructed_kg_s": 0.00025484610151578176,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0002609122930661114,
+            "source_kg_s": -6.066191550329594e-06,
+            "source_to_proposal_factor_m2": 0.00020006627110454118
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0030541056017990335,
+            "reconstructed_kg_s": 0.0030541056017990335,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0031224615901480845,
+            "source_kg_s": -6.835598834905046e-05,
+            "source_to_proposal_factor_m2": 0.00020460250675987684
+          },
+          "wave_FTOT_Pa": 2.4859651561731146,
+          "wave_deltafreq_Hz_m": -6.605255126201085,
+          "clipping_change_base_kg_s": -1.6263032587282567e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.2464816491678404e-05,
+            "thickness_reconstructed_m": 5.2464816491678404e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 1.8259470943031496e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.4696674315140629,
+            "returned_blended_U_m_s": 0.4696714494640725
+          },
+          "point_increments": {
+            "dWLb": 7.768479566086506e-07,
+            "dUb": 9.444620262316628e-05,
+            "dWLw": 0.0006609004633622018,
+            "dUw": 0.0017098061727338631,
+            "dFw": 0.000692734747609336,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 94,
+          "state": {
+            "base_W": 0.00025482657777293593,
+            "base_U": 0.46957700326144974,
+            "wave_W": 0.0030707153522442523,
+            "wave_U": 1.3567864231612623,
+            "wave_F": 24.10746338850492,
+            "drop_W": -1.6556530384272995e-06,
+            "drop_U": 3.2668435906920927
+          },
+          "base_MTOT_kg_m2_s": -0.03047597421279763,
+          "wave_MTOT_kg_m2_s": -0.21254807074776624,
+          "base_proposal": {
+            "recorded_kg_s": 0.00025481681590151323,
+            "reconstructed_kg_s": 0.00025481681590151323,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0002609140719919581,
+            "source_kg_s": -6.097256090444844e-06,
+            "source_to_proposal_factor_m2": 0.00020006763517618585
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0030790202274668613,
+            "reconstructed_kg_s": 0.0030790202274668613,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003122508752397805,
+            "source_kg_s": -4.3488524930943413e-05,
+            "source_to_proposal_factor_m2": 0.0002046055971147903
+          },
+          "wave_FTOT_Pa": 2.261757654064029,
+          "wave_deltafreq_Hz_m": -6.499982349684173,
+          "clipping_change_base_kg_s": 0.0,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.245225700909503e-05,
+            "thickness_reconstructed_m": 5.245225700909503e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 1.9919789826877156e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.46957298480489235,
+            "returned_blended_U_m_s": 0.46957700326144974
+          },
+          "point_increments": {
+            "dWLb": 7.768479566086506e-07,
+            "dUb": 9.44462026227777e-05,
+            "dWLw": 0.000660900463362174,
+            "dUw": 0.0017098061727294223,
+            "dFw": 0.0006927347476128887,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 95,
+          "state": {
+            "base_W": 0.0002548363396443591,
+            "base_U": 0.469671449464073,
+            "wave_W": 0.0030624104770216433,
+            "wave_U": 1.358496229333995,
+            "wave_F": 24.10677065375731,
+            "drop_W": 6.63946031275852e-06,
+            "drop_U": 3.2668435906920927
+          },
+          "base_MTOT_kg_m2_s": -0.03032091075041729,
+          "wave_MTOT_kg_m2_s": -0.33409164643946687,
+          "base_proposal": {
+            "recorded_kg_s": 0.0002548461015157818,
+            "reconstructed_kg_s": 0.0002548461015157818,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0002609122930661114,
+            "source_kg_s": -6.066191550329583e-06,
+            "source_to_proposal_factor_m2": 0.00020006627110454118
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0030541056017990348,
+            "reconstructed_kg_s": 0.0030541056017990348,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0031224615901480845,
+            "source_kg_s": -6.835598834904939e-05,
+            "source_to_proposal_factor_m2": 0.00020460250675987686
+          },
+          "wave_FTOT_Pa": 2.485965156173101,
+          "wave_deltafreq_Hz_m": -6.6052551262010635,
+          "clipping_change_base_kg_s": 2.168404344971009e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.2464816491678445e-05,
+            "thickness_reconstructed_m": 5.2464816491678445e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 1.8259470943083646e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.4696674315140634,
+            "returned_blended_U_m_s": 0.469671449464073
+          },
+          "point_increments": {
+            "dWLb": 7.76847956643345e-07,
+            "dUb": 9.44462026232773e-05,
+            "dWLw": 0.000660900463362174,
+            "dUw": 0.001709806172732753,
+            "dFw": 0.0006927347476128887,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 96,
+          "state": {
+            "base_W": 0.00025482657777293593,
+            "base_U": 0.4695770032614501,
+            "wave_W": 0.003070715352244252,
+            "wave_U": 1.356786423161265,
+            "wave_F": 24.107463388504925,
+            "drop_W": -1.6556530384268658e-06,
+            "drop_U": 3.2668435906920927
+          },
+          "base_MTOT_kg_m2_s": -0.030475974212797657,
+          "wave_MTOT_kg_m2_s": -0.21254807074776888,
+          "base_proposal": {
+            "recorded_kg_s": 0.00025481681590151323,
+            "reconstructed_kg_s": 0.00025481681590151323,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0002609140719919581,
+            "source_kg_s": -6.09725609044485e-06,
+            "source_to_proposal_factor_m2": 0.00020006763517618585
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.003079020227466861,
+            "reconstructed_kg_s": 0.003079020227466861,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003122508752397805,
+            "source_kg_s": -4.348852493094395e-05,
+            "source_to_proposal_factor_m2": 0.00020460559711479032
+          },
+          "wave_FTOT_Pa": 2.2617576540640316,
+          "wave_deltafreq_Hz_m": -6.4999823496841715,
+          "clipping_change_base_kg_s": -2.168404344971009e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.2452257009094974e-05,
+            "thickness_reconstructed_m": 5.2452257009094974e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 1.9919789827001135e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.4695729848048927,
+            "returned_blended_U_m_s": 0.4695770032614501
+          },
+          "point_increments": {
+            "dWLb": 7.76847956643345e-07,
+            "dUb": 9.444620262294423e-05,
+            "dWLw": 0.0006609004633621463,
+            "dUw": 0.0017098061727300884,
+            "dFw": 0.0006927347476164414,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 97,
+          "state": {
+            "base_W": 0.0002548363396443591,
+            "base_U": 0.4696714494640733,
+            "wave_W": 0.003062410477021644,
+            "wave_U": 1.358496229333997,
+            "wave_F": 24.10677065375731,
+            "drop_W": 6.639460312757653e-06,
+            "drop_U": 3.2668435906920927
+          },
+          "base_MTOT_kg_m2_s": -0.030320910750417207,
+          "wave_MTOT_kg_m2_s": -0.33409164643946165,
+          "base_proposal": {
+            "recorded_kg_s": 0.00025484610151578187,
+            "reconstructed_kg_s": 0.00025484610151578187,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0002609122930661114,
+            "source_kg_s": -6.066191550329567e-06,
+            "source_to_proposal_factor_m2": 0.00020006627110454118
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.003054105601799036,
+            "reconstructed_kg_s": 0.003054105601799036,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003122461590148084,
+            "source_kg_s": -6.835598834904833e-05,
+            "source_to_proposal_factor_m2": 0.0002046025067598768
+          },
+          "wave_FTOT_Pa": 2.4859651561730876,
+          "wave_deltafreq_Hz_m": -6.6052551262010635,
+          "clipping_change_base_kg_s": 2.168404344971009e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.246481649167841e-05,
+            "thickness_reconstructed_m": 5.246481649167841e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 1.8259470943032688e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.4696674315140637,
+            "returned_blended_U_m_s": 0.4696714494640733
+          },
+          "point_increments": {
+            "dWLb": 7.76847956643345e-07,
+            "dUb": 9.444620262322179e-05,
+            "dWLw": 0.000660900463362063,
+            "dUw": 0.0017098061727320868,
+            "dFw": 0.0006927347476164414,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 98,
+          "state": {
+            "base_W": 0.00025482657777293593,
+            "base_U": 0.4695770032614502,
+            "wave_W": 0.003070715352244252,
+            "wave_U": 1.3567864231612665,
+            "wave_F": 24.107463388504925,
+            "drop_W": -1.6556530384268658e-06,
+            "drop_U": 3.2668435906920927
+          },
+          "base_MTOT_kg_m2_s": -0.030475974212797574,
+          "wave_MTOT_kg_m2_s": -0.21254807074777438,
+          "base_proposal": {
+            "recorded_kg_s": 0.00025481681590151323,
+            "reconstructed_kg_s": 0.00025481681590151323,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0002609140719919581,
+            "source_kg_s": -6.097256090444834e-06,
+            "source_to_proposal_factor_m2": 0.00020006763517618588
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.00307902022746686,
+            "reconstructed_kg_s": 0.00307902022746686,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003122508752397805,
+            "source_kg_s": -4.348852493094509e-05,
+            "source_to_proposal_factor_m2": 0.00020460559711479038
+          },
+          "wave_FTOT_Pa": 2.261757654064028,
+          "wave_deltafreq_Hz_m": -6.499982349684162,
+          "clipping_change_base_kg_s": -2.168404344971009e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.245225700909495e-05,
+            "thickness_reconstructed_m": 5.245225700909495e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 1.9919789826874825e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.4695729848048928,
+            "returned_blended_U_m_s": 0.4695770032614502
+          },
+          "point_increments": {
+            "dWLb": 7.76847956643345e-07,
+            "dUb": 9.444620262311076e-05,
+            "dWLw": 0.000660900463362063,
+            "dUw": 0.0017098061727305325,
+            "dFw": 0.0006927347476164414,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 99,
+          "state": {
+            "base_W": 0.0002548363396443591,
+            "base_U": 0.4696714494640734,
+            "wave_W": 0.003062410477021644,
+            "wave_U": 1.3584962293339982,
+            "wave_F": 24.106770653757312,
+            "drop_W": 6.639460312757653e-06,
+            "drop_U": 3.2668435906920927
+          },
+          "base_MTOT_kg_m2_s": -0.030320910750417207,
+          "wave_MTOT_kg_m2_s": -0.33409164643946165,
+          "base_proposal": {
+            "recorded_kg_s": 0.0002548461015157818,
+            "reconstructed_kg_s": 0.0002548461015157818,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0002609122930661114,
+            "source_kg_s": -6.066191550329566e-06,
+            "source_to_proposal_factor_m2": 0.00020006627110454115
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.003054105601799036,
+            "reconstructed_kg_s": 0.003054105601799036,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003122461590148084,
+            "source_kg_s": -6.835598834904832e-05,
+            "source_to_proposal_factor_m2": 0.00020460250675987686
+          },
+          "wave_FTOT_Pa": 2.485965156173084,
+          "wave_deltafreq_Hz_m": -6.605255126201056,
+          "clipping_change_base_kg_s": 2.168404344971009e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.246481649167839e-05,
+            "thickness_reconstructed_m": 5.246481649167839e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 1.825947094294942e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.4696674315140638,
+            "returned_blended_U_m_s": 0.4696714494640734
+          },
+          "point_increments": {
+            "dWLb": 7.76847956643345e-07,
+            "dUb": 9.444620262322179e-05,
+            "dWLw": 0.000660900463362063,
+            "dUw": 0.0017098061727316427,
+            "dFw": 0.0006927347476128887,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 100,
+          "state": {
+            "base_W": 0.00025482657777293593,
+            "base_U": 0.4695770032614503,
+            "wave_W": 0.003070715352244252,
+            "wave_U": 1.3567864231612674,
+            "wave_F": 24.107463388504925,
+            "drop_W": -1.6556530384268658e-06,
+            "drop_U": 3.2668435906920927
+          },
+          "base_MTOT_kg_m2_s": -0.030475974212797574,
+          "wave_MTOT_kg_m2_s": -0.2125480707477744,
+          "base_proposal": {
+            "recorded_kg_s": 0.00025481681590151323,
+            "reconstructed_kg_s": 0.00025481681590151323,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.00026091407199195813,
+            "source_kg_s": -6.0972560904448335e-06,
+            "source_to_proposal_factor_m2": 0.00020006763517618588
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.00307902022746686,
+            "reconstructed_kg_s": 0.00307902022746686,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003122508752397805,
+            "source_kg_s": -4.348852493094508e-05,
+            "source_to_proposal_factor_m2": 0.00020460559711479038
+          },
+          "wave_FTOT_Pa": 2.2617576540640263,
+          "wave_deltafreq_Hz_m": -6.499982349684169,
+          "clipping_change_base_kg_s": -2.168404344971009e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 5.2452257009094926e-05,
+            "thickness_reconstructed_m": 5.2452257009094926e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 1.9919789827022006e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.4695729848048929,
+            "returned_blended_U_m_s": 0.4695770032614503
+          },
+          "point_increments": {
+            "dWLb": 7.76847956643345e-07,
+            "dUb": 9.444620262311076e-05,
+            "dWLw": 0.000660900463362063,
+            "dUw": 0.0017098061727307545,
+            "dFw": 0.0006927347476128887,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        }
+      ]
+    },
+    {
+      "node_zero_based": 26,
+      "node_one_based": 27,
+      "z_m": 0.42847999999999997,
+      "late_iteration_window": [
+        91,
+        100
+      ],
+      "period_two_max_return_difference": {
+        "base_W": 4.336808689942018e-19,
+        "base_U": 1.9984014443252818e-15,
+        "wave_W": 8.673617379884035e-19,
+        "wave_U": 8.881784197001252e-15,
+        "wave_F": 3.552713678800501e-15,
+        "drop_W": 8.673617379884035e-19,
+        "drop_U": 0.0
+      },
+      "last_pair_absolute_state_difference": {
+        "base_W": 4.7818147228331775e-09,
+        "base_U": 0.0002609466770077118,
+        "wave_W": 6.774420724030023e-06,
+        "wave_U": 0.001539035619827489,
+        "wave_F": 0.0005132263669800352,
+        "drop_W": 6.76963890930719e-06,
+        "drop_U": 0.0
+      },
+      "wave_flow_increment_over_threshold": 5.391071720539375,
+      "drop_flow_crosses_zero_in_last_pair": true,
+      "all_late_thin_base": true,
+      "all_late_secant_within_source_tolerance": true,
+      "max_late_clipping_change_base_kg_s": 2.168404344971009e-19,
+      "max_late_clipping_change_wave_kg_s": 0.0,
+      "proposal_contrast": {
+        "base_proposal_delta_100_minus_99": {
+          "recorded_kg_s": -1.4345444167794801e-08,
+          "transport_and_old_state_kg_s": 4.07245684348528e-09,
+          "source_kg_s": -1.841790101128008e-08,
+          "MTOT_change_at_iteration99_coefficient_kg_s": -1.8333925061117235e-08,
+          "coefficient_and_transport_change_kg_s": 3.988480893322467e-09,
+          "iteration99_relaxed_source_coefficient_m2": 0.00010030437057689811,
+          "relaxed_MTOT_change_at_iteration99_coefficient_kg_s": -9.166962530558618e-09,
+          "interpretation": "An exact algebraic decomposition up to floating-point rounding, holding the iteration-99 source coefficient for the first term; not a perturbation experiment or a full-map Jacobian."
+        },
+        "wave_proposal_delta_100_minus_99": {
+          "recorded_kg_s": 2.0323262172090503e-05,
+          "transport_and_old_state_kg_s": 3.393956747328036e-08,
+          "source_kg_s": 2.0289322604617514e-05,
+          "MTOT_change_at_iteration99_coefficient_kg_s": 2.0289839234275046e-05,
+          "coefficient_and_transport_change_kg_s": 3.342293781582323e-08,
+          "iteration99_relaxed_source_coefficient_m2": 0.00010242283242202143,
+          "relaxed_MTOT_change_at_iteration99_coefficient_kg_s": 1.0144919617137523e-05,
+          "interpretation": "An exact algebraic decomposition up to floating-point rounding, holding the iteration-99 source coefficient for the first term; not a perturbation experiment or a full-map Jacobian."
+        }
+      },
+      "iterations": [
+        {
+          "iteration": 91,
+          "state": {
+            "base_W": 0.00024942960201202336,
+            "base_U": 0.5105346400537666,
+            "wave_W": 0.003009887191431121,
+            "wave_U": 1.5072632710961245,
+            "wave_F": 23.97455530538217,
+            "drop_W": 5.935117183696655e-06,
+            "drop_U": 3.5808075953674137
+          },
+          "base_MTOT_kg_m2_s": -0.02608573401899031,
+          "wave_MTOT_kg_m2_s": -0.32719069896497477,
+          "base_proposal": {
+            "recorded_kg_s": 0.00024943438382674625,
+            "reconstructed_kg_s": 0.00024943438382674625,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0002546674100903686,
+            "source_kg_s": -5.233026263622402e-06,
+            "source_to_proposal_factor_m2": 0.00020060874115379617
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0030031127707070933,
+            "reconstructed_kg_s": 0.0030031127707070933,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0030701363669673604,
+            "source_kg_s": -6.702359626026734e-05,
+            "source_to_proposal_factor_m2": 0.00020484566484404282
+          },
+          "wave_FTOT_Pa": 2.277845979663707,
+          "wave_deltafreq_Hz_m": -8.106187818196542,
+          "clipping_change_base_kg_s": -2.168404344971009e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 4.725616063013819e-05,
+            "thickness_reconstructed_m": 4.725616063013819e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 6.23842713211079e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.5105346300546312,
+            "returned_blended_U_m_s": 0.5105346400537666
+          },
+          "point_increments": {
+            "dWLb": 3.805359479885917e-07,
+            "dUb": 0.00026094667700904406,
+            "dWLw": 0.000539107172053771,
+            "dUw": 0.0015390356198348165,
+            "dFw": 0.0005132263669764825,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 92,
+          "state": {
+            "base_W": 0.00024942482019730096,
+            "base_U": 0.5102736933767599,
+            "wave_W": 0.0030166616121551494,
+            "wave_U": 1.5057242354763012,
+            "wave_F": 23.97506853174915,
+            "drop_W": -8.345217256092337e-07,
+            "drop_U": 3.5808075953674137
+          },
+          "base_MTOT_kg_m2_s": -0.026177125475592034,
+          "wave_MTOT_kg_m2_s": -0.228141303656968,
+          "base_proposal": {
+            "recorded_kg_s": 0.00024942003838257845,
+            "reconstructed_kg_s": 0.00024942003838257845,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0002546714825472121,
+            "source_kg_s": -5.25144416463365e-06,
+            "source_to_proposal_factor_m2": 0.0002006119491435444
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0030234360328791777,
+            "reconstructed_kg_s": 0.0030234360328791777,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0030701703065348336,
+            "source_kg_s": -4.6734273655655804e-05,
+            "source_to_proposal_factor_m2": 0.00020484792936015304
+          },
+          "wave_FTOT_Pa": 2.078992113974474,
+          "wave_deltafreq_Hz_m": -8.027996742321255,
+          "clipping_change_base_kg_s": 5.421010862427522e-20,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 4.7231101371819666e-05,
+            "thickness_reconstructed_m": 4.7231101371819666e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 6.272116678678735e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.5102736833743833,
+            "returned_blended_U_m_s": 0.5102736933767599
+          },
+          "point_increments": {
+            "dWLb": 3.805359479885917e-07,
+            "dUb": 0.0002609466770067126,
+            "dWLw": 0.0005391071720537988,
+            "dUw": 0.0015390356198232702,
+            "dFw": 0.0005132263669800352,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 93,
+          "state": {
+            "base_W": 0.0002494296020120238,
+            "base_U": 0.5105346400537686,
+            "wave_W": 0.0030098871914311202,
+            "wave_U": 1.5072632710961333,
+            "wave_F": 23.974555305382175,
+            "drop_W": 5.935117183697089e-06,
+            "drop_U": 3.5808075953674137
+          },
+          "base_MTOT_kg_m2_s": -0.02608573401898992,
+          "wave_MTOT_kg_m2_s": -0.3271906989649822,
+          "base_proposal": {
+            "recorded_kg_s": 0.0002494343838267463,
+            "reconstructed_kg_s": 0.0002494343838267463,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.00025466741009036865,
+            "source_kg_s": -5.233026263622325e-06,
+            "source_to_proposal_factor_m2": 0.0002006087411537962
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0030031127707070915,
+            "reconstructed_kg_s": 0.0030031127707070915,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0030701363669673604,
+            "source_kg_s": -6.702359626026886e-05,
+            "source_to_proposal_factor_m2": 0.00020484566484404288
+          },
+          "wave_FTOT_Pa": 2.277845979663688,
+          "wave_deltafreq_Hz_m": -8.10618781819649,
+          "clipping_change_base_kg_s": 1.6263032587282567e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 4.725616063013805e-05,
+            "thickness_reconstructed_m": 4.725616063013805e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 6.238427132076313e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.5105346300546332,
+            "returned_blended_U_m_s": 0.5105346400537686
+          },
+          "point_increments": {
+            "dWLb": 3.8053594802328616e-07,
+            "dUb": 0.000260946677008711,
+            "dWLw": 0.000539107172053882,
+            "dUw": 0.001539035619832152,
+            "dFw": 0.0005132263669764825,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 94,
+          "state": {
+            "base_W": 0.00024942482019730096,
+            "base_U": 0.5102736933767612,
+            "wave_W": 0.0030166616121551494,
+            "wave_U": 1.505724235476308,
+            "wave_F": 23.975068531749155,
+            "drop_W": -8.345217256092337e-07,
+            "drop_U": 3.5808075953674137
+          },
+          "base_MTOT_kg_m2_s": -0.026177125475591867,
+          "wave_MTOT_kg_m2_s": -0.22814130365696558,
+          "base_proposal": {
+            "recorded_kg_s": 0.0002494200383825785,
+            "reconstructed_kg_s": 0.0002494200383825785,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0002546714825472122,
+            "source_kg_s": -5.251444164633617e-06,
+            "source_to_proposal_factor_m2": 0.00020061194914354442
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0030234360328791786,
+            "reconstructed_kg_s": 0.0030234360328791786,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003070170306534833,
+            "source_kg_s": -4.6734273655655316e-05,
+            "source_to_proposal_factor_m2": 0.00020484792936015307
+          },
+          "wave_FTOT_Pa": 2.0789921139744583,
+          "wave_deltafreq_Hz_m": -8.02799674232122,
+          "clipping_change_base_kg_s": -2.168404344971009e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 4.723110137181948e-05,
+            "thickness_reconstructed_m": 4.723110137181948e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 6.272116678661171e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.5102736833743846,
+            "returned_blended_U_m_s": 0.5102736933767612
+          },
+          "point_increments": {
+            "dWLb": 3.8053594802328616e-07,
+            "dUb": 0.0002609466770073787,
+            "dWLw": 0.000539107172053882,
+            "dUw": 0.0015390356198252686,
+            "dFw": 0.0005132263669800352,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 95,
+          "state": {
+            "base_W": 0.0002494296020120238,
+            "base_U": 0.5105346400537696,
+            "wave_W": 0.0030098871914311207,
+            "wave_U": 1.5072632710961387,
+            "wave_F": 23.974555305382175,
+            "drop_W": 5.935117183696655e-06,
+            "drop_U": 3.5808075953674137
+          },
+          "base_MTOT_kg_m2_s": -0.026085734018989726,
+          "wave_MTOT_kg_m2_s": -0.3271906989649823,
+          "base_proposal": {
+            "recorded_kg_s": 0.0002494343838267464,
+            "reconstructed_kg_s": 0.0002494343838267464,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.00025466741009036865,
+            "source_kg_s": -5.233026263622286e-06,
+            "source_to_proposal_factor_m2": 0.00020060874115379623
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.003003112770707092,
+            "reconstructed_kg_s": 0.003003112770707092,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003070136366967361,
+            "source_kg_s": -6.702359626026889e-05,
+            "source_to_proposal_factor_m2": 0.00020484566484404288
+          },
+          "wave_FTOT_Pa": 2.277845979663672,
+          "wave_deltafreq_Hz_m": -8.106187818196465,
+          "clipping_change_base_kg_s": 1.0842021724855044e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 4.725616063013793e-05,
+            "thickness_reconstructed_m": 4.725616063013793e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 6.238427132084553e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.5105346300546342,
+            "returned_blended_U_m_s": 0.5105346400537696
+          },
+          "point_increments": {
+            "dWLb": 3.8053594802328616e-07,
+            "dUb": 0.0002609466770083779,
+            "dWLw": 0.0005391071720538543,
+            "dUw": 0.0015390356198305977,
+            "dFw": 0.0005132263669800352,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 96,
+          "state": {
+            "base_W": 0.0002494248201973014,
+            "base_U": 0.5102736933767621,
+            "wave_W": 0.003016661612155149,
+            "wave_U": 1.5057242354763123,
+            "wave_F": 23.97506853174916,
+            "drop_W": -8.345217256092337e-07,
+            "drop_U": 3.5808075953674137
+          },
+          "base_MTOT_kg_m2_s": -0.0261771254755917,
+          "wave_MTOT_kg_m2_s": -0.22814130365696836,
+          "base_proposal": {
+            "recorded_kg_s": 0.0002494200383825786,
+            "reconstructed_kg_s": 0.0002494200383825786,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.00025467148254721214,
+            "source_kg_s": -5.251444164633584e-06,
+            "source_to_proposal_factor_m2": 0.00020061194914354445
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0030234360328791777,
+            "reconstructed_kg_s": 0.0030234360328791777,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003070170306534834,
+            "source_kg_s": -4.6734273655655885e-05,
+            "source_to_proposal_factor_m2": 0.0002048479293601531
+          },
+          "wave_FTOT_Pa": 2.078992113974449,
+          "wave_deltafreq_Hz_m": -8.027996742321193,
+          "clipping_change_base_kg_s": 2.168404344971009e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 4.7231101371819476e-05,
+            "thickness_reconstructed_m": 4.7231101371819476e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 6.27211667866385e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.5102736833743855,
+            "returned_blended_U_m_s": 0.5102736933767621
+          },
+          "point_increments": {
+            "dWLb": 3.805359479885917e-07,
+            "dUb": 0.00026094667700748975,
+            "dWLw": 0.0005391071720538265,
+            "dUw": 0.0015390356198263788,
+            "dFw": 0.0005132263669835879,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 97,
+          "state": {
+            "base_W": 0.0002494296020120238,
+            "base_U": 0.5105346400537704,
+            "wave_W": 0.0030098871914311202,
+            "wave_U": 1.507263271096142,
+            "wave_F": 23.97455530538218,
+            "drop_W": 5.935117183697089e-06,
+            "drop_U": 3.5808075953674137
+          },
+          "base_MTOT_kg_m2_s": -0.026085734018989698,
+          "wave_MTOT_kg_m2_s": -0.32719069896498243,
+          "base_proposal": {
+            "recorded_kg_s": 0.0002494343838267464,
+            "reconstructed_kg_s": 0.0002494343838267464,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.00025466741009036865,
+            "source_kg_s": -5.23302626362228e-06,
+            "source_to_proposal_factor_m2": 0.00020060874115379623
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0030031127707070915,
+            "reconstructed_kg_s": 0.0030031127707070915,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003070136366967361,
+            "source_kg_s": -6.702359626026891e-05,
+            "source_to_proposal_factor_m2": 0.00020484566484404288
+          },
+          "wave_FTOT_Pa": 2.27784597966367,
+          "wave_deltafreq_Hz_m": -8.106187818196455,
+          "clipping_change_base_kg_s": -1.0842021724855044e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 4.725616063013785e-05,
+            "thickness_reconstructed_m": 4.725616063013785e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 6.238427132050986e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.510534630054635,
+            "returned_blended_U_m_s": 0.5105346400537704
+          },
+          "point_increments": {
+            "dWLb": 3.805359479885917e-07,
+            "dUb": 0.0002609466770082669,
+            "dWLw": 0.0005391071720538543,
+            "dUw": 0.0015390356198297095,
+            "dFw": 0.0005132263669800352,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 98,
+          "state": {
+            "base_W": 0.0002494248201973014,
+            "base_U": 0.5102736933767625,
+            "wave_W": 0.00301666161215515,
+            "wave_U": 1.5057242354763145,
+            "wave_F": 23.97506853174916,
+            "drop_W": -8.34521725610101e-07,
+            "drop_U": 3.5808075953674137
+          },
+          "base_MTOT_kg_m2_s": -0.02617712547559159,
+          "wave_MTOT_kg_m2_s": -0.22814130365696583,
+          "base_proposal": {
+            "recorded_kg_s": 0.0002494200383825786,
+            "reconstructed_kg_s": 0.0002494200383825786,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0002546714825472122,
+            "source_kg_s": -5.251444164633562e-06,
+            "source_to_proposal_factor_m2": 0.00020061194914354445
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.003023436032879179,
+            "reconstructed_kg_s": 0.003023436032879179,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0030701703065348336,
+            "source_kg_s": -4.673427365565537e-05,
+            "source_to_proposal_factor_m2": 0.0002048479293601531
+          },
+          "wave_FTOT_Pa": 2.0789921139744147,
+          "wave_deltafreq_Hz_m": -8.027996742321175,
+          "clipping_change_base_kg_s": 2.168404344971009e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 4.723110137181941e-05,
+            "thickness_reconstructed_m": 4.723110137181941e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 6.272116678689296e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.510273683374386,
+            "returned_blended_U_m_s": 0.5102736933767625
+          },
+          "point_increments": {
+            "dWLb": 3.805359479885917e-07,
+            "dUb": 0.0002609466770078228,
+            "dWLw": 0.0005391071720539375,
+            "dUw": 0.001539035619827489,
+            "dFw": 0.0005132263669800352,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 99,
+          "state": {
+            "base_W": 0.0002494296020120238,
+            "base_U": 0.5105346400537706,
+            "wave_W": 0.0030098871914311194,
+            "wave_U": 1.5072632710961438,
+            "wave_F": 23.97455530538218,
+            "drop_W": 5.935117183697956e-06,
+            "drop_U": 3.5808075953674137
+          },
+          "base_MTOT_kg_m2_s": -0.02608573401898967,
+          "wave_MTOT_kg_m2_s": -0.32719069896499653,
+          "base_proposal": {
+            "recorded_kg_s": 0.0002494343838267464,
+            "reconstructed_kg_s": 0.0002494343838267464,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0002546674100903687,
+            "source_kg_s": -5.233026263622276e-06,
+            "source_to_proposal_factor_m2": 0.00020060874115379623
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.003003112770707089,
+            "reconstructed_kg_s": 0.003003112770707089,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003070136366967361,
+            "source_kg_s": -6.70235962602718e-05,
+            "source_to_proposal_factor_m2": 0.00020484566484404285
+          },
+          "wave_FTOT_Pa": 2.2778459796636747,
+          "wave_deltafreq_Hz_m": -8.106187818196455,
+          "clipping_change_base_kg_s": -1.0842021724855044e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 4.725616063013781e-05,
+            "thickness_reconstructed_m": 4.725616063013781e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 6.238427132089237e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.5105346300546352,
+            "returned_blended_U_m_s": 0.5105346400537706
+          },
+          "point_increments": {
+            "dWLb": 3.805359479885917e-07,
+            "dUb": 0.00026094667700804486,
+            "dWLw": 0.0005391071720539931,
+            "dUw": 0.0015390356198292654,
+            "dFw": 0.0005132263669800352,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        },
+        {
+          "iteration": 100,
+          "state": {
+            "base_W": 0.00024942482019730096,
+            "base_U": 0.5102736933767629,
+            "wave_W": 0.0030166616121551494,
+            "wave_U": 1.5057242354763163,
+            "wave_F": 23.97506853174916,
+            "drop_W": -8.345217256092337e-07,
+            "drop_U": 3.5808075953674137
+          },
+          "base_MTOT_kg_m2_s": -0.02617712547559156,
+          "wave_MTOT_kg_m2_s": -0.22814130365696056,
+          "base_proposal": {
+            "recorded_kg_s": 0.0002494200383825786,
+            "reconstructed_kg_s": 0.0002494200383825786,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.0002546714825472122,
+            "source_kg_s": -5.251444164633556e-06,
+            "source_to_proposal_factor_m2": 0.00020061194914354447
+          },
+          "wave_proposal": {
+            "recorded_kg_s": 0.0030234360328791794,
+            "reconstructed_kg_s": 0.0030234360328791794,
+            "reconstruction_difference_kg_s": 0.0,
+            "exact_reconstruction": true,
+            "transport_and_old_state_kg_s": 0.003070170306534834,
+            "source_kg_s": -4.6734273655654286e-05,
+            "source_to_proposal_factor_m2": 0.00020484792936015307
+          },
+          "wave_FTOT_Pa": 2.0789921139744387,
+          "wave_deltafreq_Hz_m": -8.027996742321177,
+          "clipping_change_base_kg_s": -2.168404344971009e-19,
+          "clipping_change_wave_kg_s": 0.0,
+          "thin_base_momentum": {
+            "thickness_m": 4.7231101371819293e-05,
+            "thickness_reconstructed_m": 4.7231101371819293e-05,
+            "threshold_m": 0.0001,
+            "thin_branch": true,
+            "secant_final_force_abs_Pa": 6.272116678687875e-05,
+            "secant_tolerance_Pa": 0.001,
+            "secant_reported_loop_index": 2,
+            "secant_trial_U_m_s": 0.5102736833743863,
+            "returned_blended_U_m_s": 0.5102736933767629
+          },
+          "point_increments": {
+            "dWLb": 3.8053594802328616e-07,
+            "dUb": 0.0002609466770077118,
+            "dWLw": 0.0005391071720539375,
+            "dUw": 0.001539035619827489,
+            "dFw": 0.0005132263669800352,
+            "dUd": 0.0
+          },
+          "failed_point_criteria": [
+            "dWLw"
+          ],
+          "wave_relaxation_exact": true
+        }
+      ]
+    }
+  ],
+  "interpretation": [
+    "All three failed nodes exhibit a persistent late period-two waveform; reported differences are descriptive, not a new convergence criterion.",
+    "The wave mass proposal alternates chiefly through its total source contribution; positive-film clipping leaves wave flow unchanged in these late iterations.",
+    "Signed droplet flow alternates across zero at every failed node, while both iterations use a successful thin-base secant solve.",
+    "Individual evaporation, entrainment, deposition and internal exchange terms were not present in this saved trace. Their responsibility cannot be uniquely assigned from these totals."
+  ],
+  "next_trace_requirements": [
+    "Capture actual Drop.CONC and Drop.MDEP returns, film MENT/MEVAP, and Base/Wave MDEP, MWAVE, MBASE returns at each wave-mass proposal.",
+    "Capture actual branch/cap operands and nested force constituents without calling extra lazy property getters.",
+    "Confirm observer invariance by comparing every saved numerical array with this retained native replay."
+  ],
+  "limits": [
+    "No matched MATLAB Sawai execution is available; this receipt establishes neither MATLAB equivalence nor that MATLAB exhibits the same cycle.",
+    "Same-state cancellation of internal exchange does not imply exact cancellation across the sequential base and wave proposals.",
+    "Point increments and their tolerances are the source iteration controls, not physical balance residuals or experimental validation."
+  ],
+  "plot": {
+    "path": "outputs\\verification\\sawai-oscillation-01\\cycle_diagnostics.png",
+    "sha256": "f104c9c072399e7e43004e7b1cf4fced06bd35ed91011a03e01fa4a97feac650"
+  }
+}

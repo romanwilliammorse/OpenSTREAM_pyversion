@@ -103,6 +103,17 @@ commits, license and recovery workaround are documented in
 optional reader from `tools/requirements-reference.lock` to reproduce recovery.
 The standalone license notice is retained in `licenses/mat_io_LICENSE`.
 
+## Sawai oscillation diagnostic
+
+`docs/SAWAI_OSCILLATION_DIAGNOSTIC.md` records the source-unchanged 0.2 s/100-cell
+follow-up. Its frozen manifest, observer, independent source-term analysis and
+tests are retained in `examples/`, `tools/` and `tests/`. The complete replay,
+hash-bound trace, numerical arrays and clean diagnostic plot are under
+`outputs/verification/sawai-oscillation-01/`. The corresponding report and
+acceptance-matrix PDF snapshot are under `output/pdf/Sawai_Oscillation_01/`.
+The negative droplet iterates and failed point criterion remain available;
+no matching MATLAB execution or experimental-validation pass is implied.
+
 ## Publication audit
 
 `tools/audit_publication.py` performs a read-only inventory and a bounded
