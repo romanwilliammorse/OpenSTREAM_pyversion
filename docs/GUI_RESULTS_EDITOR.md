@@ -119,4 +119,33 @@ The installable wheel and source distribution built successfully. Logs are
 `pytest-final.txt`, `frontend-tests.txt` and `build.txt` under the evidence folder.
 The acceptance integrity receipt preserves all 81 requirement criteria/status
 axes and all 585 method classifications; only interface evidence and the GUI
-source fingerprints changed. Production verification follows publication.
+source fingerprints changed.
+
+Release commit `30f50efc36a0a3ee9e970d733c1fac13e8a6f190` was deployed as
+`dpl_B7xFfaLN7SvkQppUResRyo7Pmiun`, READY at
+<https://openstream-py.vercel.app>. Its
+[GitHub Windows CI run](https://github.com/romanwilliammorse/OpenSTREAM_pyversion/actions/runs/43776224587)
+passed. All four historical baseline CSV/vector checks also passed over HTTPS;
+see `live/20261115T234316Z-71bbf5df/receipt.json` within the evidence folder.
+Anonymous CSV access returned HTTP 401; login/logout succeeded. The FourField
+results CSV was 10,521,009 bytes and streamed successfully. A browser download
+had the same SHA-256 as the independently checked response:
+`befc9c93238bb5fac90c20936eb5a0500a679385d19ad98b4e9d4255a64db05f`.
+
+Fresh hosted FourField run `06d391c5a3f24635aef52631864dccf3` completed and
+passed the unchanged archive comparison at rtol 1e-8, atol 0 (maximum reported
+relative error 2.539607937805446e-9). Authentication, original downloads, array
+shape checks and all four datasets passed. Numerical evidence is retained under
+`fresh/20261115T234316Z-7f724d3d/`; its separate exact CSV/vector comparison is
+`fresh-exports/20261115T234554Z-432d0204/receipt.json`. To repeat the latter,
+run `tools/verify_results_editor.py` with its `CASES` tuple set to this one
+FourField run and `--reference-root` pointing to that fresh evidence directory.
+The same independent checks and no modified tolerances apply.
+
+The hosted browser rendered precursor `vapor.X` against final `film.U`, with
+the legend inside the upper-left plot bounds and all four CSV links visible.
+`hosted-results-editor.png` records the interface; `cross-stage-plot.png` is
+the downloaded PNG. The local browser also verified two independent added
+figures, two series, per-run restoration, length rejection and PNG/CSV download.
+No browser-console error was observed. The temporary local preview was stopped;
+the hosted result tab remains open for use.

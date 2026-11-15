@@ -1,0 +1,34 @@
+{
+  "schema": "openstream-results-editor-release-v1",
+  "source_commit": "30f50efc36a0a3ee9e970d733c1fac13e8a6f190",
+  "deployment_id": "dpl_B7xFfaLN7SvkQppUResRyo7Pmiun",
+  "deployment_state": "READY",
+  "origin": "https://openstream-py.vercel.app",
+  "github_ci_run": 43776224587,
+  "github_ci_conclusion": "success",
+  "local_pytest": {"passed": 829, "warnings": 2, "seconds": 200.44},
+  "frontend_tests_passed": 24,
+  "wheel_and_sdist_built": true,
+  "local_exports_receipt": "local/20261115T233351Z-de26ad5e/receipt.json",
+  "live_exports_receipt": "live/20261115T234316Z-71bbf5df/receipt.json",
+  "fresh_run_receipt": "fresh/20261115T234316Z-7f724d3d/summary.json",
+  "fresh_exports_receipt": "fresh-exports/20261115T234554Z-432d0204/receipt.json",
+  "browser_download": {
+    "filename": "OpenSTREAM-FourField-results.csv",
+    "bytes": 10521009,
+    "sha256": "befc9c93238bb5fac90c20936eb5a0500a679385d19ad98b4e9d4255a64db05f",
+    "matches_verified_http_response": true
+  },
+  "browser_checks": [
+    "precursor vapor.X versus final film.U, explicit singleton wall selection",
+    "upper-left legend inside plot",
+    "two added figures retain independent selections",
+    "multiple series with recorded units",
+    "1-versus-101 length mismatch rejected",
+    "plot settings restored after switching runs",
+    "PNG and CSV downloads completed",
+    "no browser console errors observed"
+  ],
+  "screenshot": "hosted-results-editor.png",
+  "scope": "GUI/export fidelity and retained baseline regression; no new physical-validation or full MATLAB-parity claim."
+}

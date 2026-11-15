@@ -2,7 +2,7 @@
 
 The user's requested full native port is **not yet complete**. Continue implementation and verification without replacing the preserved source or changing equations to obtain passing tests.
 
-## Results editor and CSV downloads — 2026-11-15 (in progress)
+## Results editor and CSV downloads — 2026-11-15 (deployed and verified)
 
 Requested: separate completed-run CSV downloads for inputs, boundary conditions,
 geometry and results; multiple figures through Add a plot; optional legends
@@ -28,7 +28,16 @@ retries. Historical full-source replay guards remain strict; the current-release
 test explicitly separates the two changed presentation modules from the 24
 unchanged modules. See `docs/GUI_RESULTS_EDITOR.md`. Interface evidence was added
 to API-012/013/014 without changing any scientific criterion or status.
-Production publication and authenticated live export verification are next.
+Production commit `30f50efc36a0a3ee9e970d733c1fac13e8a6f190` deployed READY
+as `dpl_B7xFfaLN7SvkQppUResRyo7Pmiun`; GitHub Windows CI 43776224587 passed.
+All four historical runs passed the same exact CSV/vector checks over HTTPS.
+Fresh FourField run `06d391c5a3f24635aef52631864dccf3` converged, passed unchanged
+archive comparisons, and passed every CSV/vector check. Evidence and screenshots
+are under `outputs/verification/gui-results-editor-01/`. Browser download of the
+10.5 MB FourField results CSV matched the verified hash. The hosted comparison
+figure remains open; the temporary local preview was stopped. Plot settings are
+kept per run within the current page session, not across reloads. All original
+scientific limitations remain; this GUI work adds no experimental validation.
 
 ## Password-protected hosted GUI — 2026-11-15 (deployed and tested)
 
