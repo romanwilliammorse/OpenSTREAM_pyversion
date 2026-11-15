@@ -1,0 +1,393 @@
+{
+  "schema": "openstream-lecorre-reproduction-v1",
+  "title": "NURETH-21 current-companion reconstruction and paper-informed Sawai variant",
+  "scope": "2026 pinned companion replay; exact publication-producing runtime/defaults remain unverified. No tuning to prediction errors.",
+  "frozen_before_predictions": true,
+  "sources": {
+    "paper": {
+      "file_name": "LeCorre2025OpenSTREAM.pdf",
+      "sha256": "f72e78c41036f84db849fb080187562777e6b6696b407b6bcce2b8ca9d11ada1",
+      "year": 2025,
+      "figures": [
+        3,
+        4,
+        6,
+        7
+      ]
+    },
+    "upstream_commit": "a614c7173822a93c1e64ac28d1541cbac028cbd8",
+    "wrapper_commit": "a7c40902ff66faf6ed668986398bb1b9faa16e13",
+    "database_commit": "b48541e6438a92b4c0ddc83cf0ceda3f71a59b22",
+    "companion": {
+      "path": "database/projects/NURETH21.mlx",
+      "sha256": "f43f99a7a9dbfc0894748b97e05a1043379254d2cde39f59be5f3688ab8b960c",
+      "introduced_commit": "2ce844e90900db14a959881ad953b4d6852314f3",
+      "introduced_date": "2026-09-09"
+    },
+    "xml": {
+      "wurtz": {
+        "path": "database/+Wurtz1978/+src/Wurtz1978.xml",
+        "sha256_lf": "f45798013aa3516c5fa37700e76000d40742bc0b46b2b39a3d117c7f66740f8f"
+      },
+      "sawai": {
+        "path": "database/+Sawai1989/+src/Sawai1989.xml",
+        "sha256_lf": "9653bd5910e06c38bcd57b408274f24b2828fc28a12bd6731a46bf9273f598fa"
+      }
+    },
+    "publication_runtime_status": "unresolved; publication-era and pinned defaults differ, including mixture relaxation factors and numerical controls"
+  },
+  "base": {
+    "nnodes": 100,
+    "options": {},
+    "defaults": "Pinned source defaults through Dataset.inputOptions/makeInputFiles; %.11f numeric round-trip retained.",
+    "MAXITER": 100,
+    "SSMAXITER": 30,
+    "SSTSTEP_s": 1.0,
+    "PROPERTIES": "SATURATED"
+  },
+  "demo": {
+    "entry": {
+      "Pressure": 6000000.0,
+      "MassFlow": 0.07,
+      "InletEnthalpy": 1139400.0,
+      "Power": 87500.0,
+      "WallMesh": [
+        1.75,
+        1.75,
+        2.0
+      ],
+      "WallPower": [
+        1.0,
+        1.0,
+        0.0
+      ],
+      "Perimeter": 0.0276,
+      "Area": 6.0821e-05,
+      "Length": 5.5,
+      "Fluid": "water"
+    },
+    "options": {
+      "AXIALINTERP": "NEXT"
+    },
+    "frameworks": [
+      {
+        "case_id": "demo-mixture",
+        "framework": "Mixture",
+        "model": {}
+      },
+      {
+        "case_id": "demo-twofluid",
+        "framework": "TwoFluid",
+        "model": {
+          "INTNU": "RELAXATION",
+          "RELAXX": [
+            -0.5,
+            1.0
+          ],
+          "RELAXCONDT": [
+            0.5,
+            0.5,
+            0.01
+          ],
+          "MOMENTLIQUID": "FULL",
+          "MOMENTGAS": "FULL",
+          "DROPDRAG": "VISCOUS"
+        }
+      },
+      {
+        "case_id": "demo-threefield",
+        "framework": "ThreeField",
+        "model": {
+          "INTNU": "RELAXATION",
+          "RELAXX": [
+            -0.5,
+            1.0
+          ],
+          "RELAXCONDT": [
+            0.5,
+            0.5,
+            0.01
+          ],
+          "MOMENTLIQUID": "FULL",
+          "MOMENTGAS": "FULL",
+          "DROPDRAG": "VISCOUS",
+          "MOMENTFILM": "FULL",
+          "MOMENTDROP": "FULL",
+          "DROPDIAM": 0.001
+        }
+      },
+      {
+        "case_id": "demo-fourfield",
+        "framework": "FourField",
+        "model": {
+          "INTNU": "RELAXATION",
+          "RELAXX": [
+            -0.5,
+            1.0
+          ],
+          "RELAXCONDT": [
+            0.5,
+            0.5,
+            0.01
+          ],
+          "MOMENTLIQUID": "FULL",
+          "MOMENTGAS": "FULL",
+          "DROPDRAG": "VISCOUS",
+          "MOMENTFILM": "FULL",
+          "MOMENTDROP": "FULL",
+          "DROPDIAM": 0.001,
+          "MOMENTBASE": "FULLNOP",
+          "MOMENTWAVE": "FULL",
+          "WAVEBASEINT": "VAPORSHEARDROPMASS",
+          "OAFFILMSPLIT": "RATIO",
+          "OAFBASERATIO": 0.3,
+          "BASEEQTHICK": "YPLUS"
+        }
+      }
+    ],
+    "inheritance": "Cumulative opts within demo; independent solver instances and copied native inputs."
+  },
+  "wurtz": {
+    "entry_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "selection": "All TestName exactly TS 20, source order",
+    "framework": "FourField",
+    "model": {
+      "VOID": "BESTION",
+      "OAFENTRAINED": "EQUILIBRIUM",
+      "DEPOSITION": "OKAWA",
+      "ENTRAINMENT": "OKAWAGEN",
+      "OKAWACOEFS": [
+        320,
+        0.111,
+        0.00035,
+        1
+      ],
+      "OAFFILMSPLIT": "EQUILIBRIUM",
+      "MOMENTBASE": "FULLNOP",
+      "MOMENTWAVE": "FULL",
+      "VAPORFRIC": "CONSTANT",
+      "VAPORFRICCST": 0.005,
+      "WAVEBASEINT": "VAPORSHEAR"
+    },
+    "targets": [
+      "BaseThickness",
+      "WaveVelocity",
+      "WaveNumberDensity"
+    ],
+    "target_location": "outlet",
+    "calibration_association": "OKAWACOEFS reduction explicitly measurement-informed"
+  },
+  "sawai": {
+    "entry_ids": [
+      1,
+      2,
+      5,
+      6
+    ],
+    "selection": "Literal one-based source companion selection",
+    "framework": "FourField",
+    "model": {
+      "THERMALNONEQ": "EPRI",
+      "VOID": "EPRI",
+      "TPFM": "EPRI",
+      "OAFENTRAINED": "EQUILIBRIUM",
+      "DEPOSITION": "OKAWA",
+      "ENTRAINMENT": "OKAWA2003",
+      "OAFFILMSPLIT": "EQUILIBRIUM",
+      "MOMENTWAVE": "FULL",
+      "MOMENTBASE": "FULLNOP",
+      "VAPORFRIC": "CONSTANT",
+      "VAPORFRICCST": 0.005,
+      "WAVEMIXCOEF": 2,
+      "THINFILMTHICK": 0.0001,
+      "THINWAVETHICK": 1e-05,
+      "SHAPEFACTORCOEF": [
+        132500.0,
+        2,
+        1,
+        0
+      ],
+      "EQSTROUHAL": "SAWAI",
+      "RELAXTB": 0.5,
+      "WAVEFREQUENCY": "RELAXATION"
+    },
+    "variants": [
+      {
+        "variant_id": "paper-tw020",
+        "RELAXTW": 0.2,
+        "origin": "Paper PDF p12; other inputs remain current-companion reconstruction"
+      },
+      {
+        "variant_id": "companion-tw010",
+        "RELAXTW": 0.1,
+        "origin": "Pinned companion code and prose"
+      }
+    ],
+    "targets": [
+      "WaveVelocity",
+      "WaveTimePeriod"
+    ],
+    "raw_period_unit": "ms",
+    "comparison_period_unit": "s",
+    "raw_period_to_s": 0.001,
+    "coordinate": "(Elevation-HeatedLength)/Diameter",
+    "coordinate_policy": "Keep raw SI elevation; within-domain only; retain all out-of-domain measurements as explicit exclusions.",
+    "calibration_association": "Paper relaxation-time selection measurement-informed; no independent holdout claim"
+  },
+  "input_migrations": [
+    {
+      "family": [
+        "wurtz",
+        "sawai"
+      ],
+      "parameter": "VAPORFRIC",
+      "original": "CONST",
+      "effective": "CONSTANT",
+      "reason": "Pinned enum declares CONSTANT, fixed coefficient0.005; CONST is not a declared option.",
+      "scope": "Publication runner only; no global alias; literal CONST rejection remains tested."
+    }
+  ],
+  "study": {
+    "purpose": "Numerical sensitivity only; never replace a failed source-default attempt.",
+    "meshes": [
+      200,
+      400
+    ],
+    "sentinels": [
+      {
+        "family": "demo",
+        "framework": "Mixture",
+        "case_id": "demo-mixture"
+      },
+      {
+        "family": "demo",
+        "framework": "TwoFluid",
+        "case_id": "demo-twofluid"
+      },
+      {
+        "family": "demo",
+        "framework": "ThreeField",
+        "case_id": "demo-threefield"
+      },
+      {
+        "family": "demo",
+        "framework": "FourField",
+        "case_id": "demo-fourfield"
+      },
+      {
+        "family": "wurtz",
+        "entry_id": 1,
+        "case_id": "wurtz-01",
+        "MassFlux_kg_m2_s": 500.0
+      },
+      {
+        "family": "wurtz",
+        "entry_id": 7,
+        "case_id": "wurtz-07",
+        "MassFlux_kg_m2_s": 750.0
+      },
+      {
+        "family": "wurtz",
+        "entry_id": 13,
+        "case_id": "wurtz-13",
+        "MassFlux_kg_m2_s": 1000.0
+      },
+      {
+        "family": "wurtz",
+        "entry_id": 19,
+        "case_id": "wurtz-19",
+        "MassFlux_kg_m2_s": 2000.0
+      },
+      {
+        "family": "sawai",
+        "entry_id": 1,
+        "variant_id": "paper-tw020",
+        "case_id": "sawai-01-paper-tw020"
+      },
+      {
+        "family": "sawai",
+        "entry_id": 2,
+        "variant_id": "paper-tw020",
+        "case_id": "sawai-02-paper-tw020"
+      },
+      {
+        "family": "sawai",
+        "entry_id": 5,
+        "variant_id": "paper-tw020",
+        "case_id": "sawai-05-paper-tw020"
+      },
+      {
+        "family": "sawai",
+        "entry_id": 6,
+        "variant_id": "paper-tw020",
+        "case_id": "sawai-06-paper-tw020"
+      }
+    ],
+    "tightening": {
+      "prefixes": [
+        "ERROR",
+        "SSCONV"
+      ],
+      "factor": 0.1,
+      "MAXITER": 200,
+      "SSMAXITER": 60,
+      "nnodes": 100
+    },
+    "sensitivity_policy": "Matched quantities/coordinates; differences reported only when both runs satisfy relevant convergence/domain gates. No asymptotic error estimate or experimental pass threshold inferred."
+  },
+  "expected_attempts": {
+    "base": 33,
+    "mesh": 24,
+    "tight": 12,
+    "total": 69
+  },
+  "acceptance_policy": {
+    "equations": "No governing-equation/closure changes or coefficient fitting.",
+    "matlab_equivalence": "not established; published raster curves are not numerical arrays.",
+    "experimental_accuracy": "descriptive only until applicable uncertainty/calibration independence established; no numerical acceptance threshold inferred from plot guide bands.",
+    "convergence": "Record source STATE, stricter native converged, precursor, wave-frequency, onset, nested closures, warnings and failures independently.",
+    "physical": "Retain existing diagnostics and annular area relative tolerance1e-6 on AFFNC>=1-1e-12; None/absent-domain is unknown, not pass. Record mass/enthalpy and phase-bounds/partitions separately.",
+    "case_accounting": "All attempted cases, missing measurements, domain exclusions, execution/export failures remain in results.",
+    "reference_tolerances": "Existing MATLAB archive tolerances unchanged. No new full-precision reference equivalence claim from digitized figures."
+  },
+  "blocked_figures": [
+    {
+      "figure": 5,
+      "status": "not_reproduced",
+      "reason": "Companion explicitly omits TRACE because original reference case/results absent; exact original numerical/closure settings incomplete."
+    }
+  ],
+  "discrepancy_ids": [
+    "LC-001",
+    "LC-002",
+    "LC-003",
+    "LC-004",
+    "LC-005",
+    "LC-006",
+    "LC-007",
+    "LC-008",
+    "LC-009"
+  ]
+}
