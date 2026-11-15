@@ -195,7 +195,6 @@ def make_plots(campaign,output,report,paper,experimental,extra):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
-    from matplotlib.lines import Line2D
     colors={'mixture':'#0072bd','twofluid':'#d95319','threefield':'#b59a00','fourfield':'#7e2f8e'}
     figures={
       3:[('HFLUX','Heat flux [W/m²]',1),('mass','Liquid-field flow [kg/s]',1),('void','Void fraction / quality [1]',1)],
@@ -221,7 +220,6 @@ def make_plots(campaign,output,report,paper,experimental,extra):
                 if points:ax.scatter([float(q['coordinate']) for q in points],[float(q['value'])*scale for q in points],
                     s=14,facecolors='none',edgecolors=color,linewidths=.65)
             ax.set(xlabel='Elevation [m]',ylabel=label);ax.grid(alpha=.2);ax.legend(fontsize=6.5)
-        fig.suptitle(f'Le Corre Figure {figure}: Python companion reconstruction\nLines: native 100-cell results; open markers: digitized paper. Physical checks remain failed.',fontsize=11)
         fig.savefig(output/f'figure{figure}_paper_comparison.png',dpi=190);plt.close(fig)
     fig,axes=plt.subplots(1,3,figsize=(13,4.6),layout='constrained')
     wurtz=load_wurtz(ROOT/'database');markers={500:'o',750:'s',1000:'^',2000:'D'}
@@ -252,7 +250,6 @@ def make_plots(campaign,output,report,paper,experimental,extra):
         ax.plot([0,bound],[0,bound],'k-',lw=.8)
         ax.plot([0,bound],[0,1.2*bound],'k:',lw=.7);ax.plot([0,bound],[0,bound/1.2],'k:',lw=.7)
         ax.set(xlabel='Measured '+label,ylabel='Calculated '+label,xlim=(0,bound),ylim=(0,bound));ax.grid(alpha=.2);ax.legend(fontsize=7)
-    fig.suptitle('Le Corre Figure 6 targets: all 21 TS20 cases\nDescriptive comparisons; dotted factor-1.2 guides are not acceptance limits.',fontsize=11)
     fig.savefig(output/'figure6_measurement_comparison.png',dpi=190);plt.close(fig)
     dump(output/'figure6_measured_film_correlation.json',corr)
     fig,axes=plt.subplots(1,3,figsize=(13,4.5),layout='constrained')
@@ -266,13 +263,26 @@ def make_plots(campaign,output,report,paper,experimental,extra):
                 [p['error']*scale for p in selected],yerr=[float(p['value_reading_bound'])*scale for p in selected],
                 fmt=marker,ms=5,capsize=2,lw=.8,label=title)
         ax.axhline(0,color='black',lw=.8);ax.set(xlabel='Measured '+label,ylabel='Python − paper '+label)
-        ax.grid(alpha=.2);ax.legend(fontsize=8)
-    fig.suptitle('Figure 6: difference from identifiable published markers\nBars: estimated ±3-pixel ordinate-reading bounds; not experimental uncertainty.',fontsize=11)
+        ax.grid(alpha=.2);ax.legend(fontsize=8,loc='upper center',bbox_to_anchor=(.5,1.13))
     fig.savefig(output/'figure6_paper_comparison.png',dpi=190);plt.close(fig)
+    make_sawai_plot(campaign,output,report,extra)
+    make_sawai_plot(campaign,output,report,extra,compare_relaxation=True)
+
+def make_sawai_plot(campaign,output,report,extra,*,compare_relaxation=False):
+    """Use the author-confirmed 0.2 s setting in the main figure.
+
+    The separately named comparison preserves both frozen configurations.
+    This changes presentation only; saved arrays and comparison metrics remain.
+    """
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    from matplotlib.lines import Line2D
+    variants=[('paper-tw020','-',0.2)]
+    if compare_relaxation:variants.append(('companion-tw010','--',0.1))
     sawai=load_sawai(ROOT/'database')
     fig,axes=plt.subplots(2,2,figsize=(12,9),layout='constrained')
     for col,entries in enumerate(([1,2],[5,6])):
-        axes[0,col].set_title(f"Outlet quality {sawai.select(entries[0]).values['Xout']:g}; source entries {entries[0]}, {entries[1]}",fontsize=10)
         for entry,color in zip(entries,('#0072bd','#388d39')):
             record=sawai.select(entry);v=record.values;dh=v['Diameter']
             heated=sum(length for length,power in zip(v['WallMesh'],v['WallPower']) if power>0)
@@ -288,23 +298,23 @@ def make_plots(campaign,output,report,paper,experimental,extra):
                 if readings:ax.scatter([float(p['coordinate']) for p in readings],
                     [float(p['value'])*factor for p in readings],marker='v',facecolors='none',edgecolors=color,s=35,
                     label=f'Entry{entry} paper curve')
-                for variant,style in [('paper-tw020','-'),('companion-tw010','--')]:
+                for variant,style,tau in variants:
                     run_id=f'sawai-{entry:02d}-{variant}-n100-base';run=report['runs'].get(run_id)
                     if not run or run['execution']!='completed':continue
                     p=profiles(campaign,run_id);start=run['onset']['annular_onset_index_zero_based']
-                    ax.plot((p['Z'][start:]-heated)/dh,p[key][start:]*factor,style,color=color,lw=1.5,label=f'Entry{entry} τ={.2 if variant=="paper-tw020" else .1:g}s')
+                    ax.plot((p['Z'][start:]-heated)/dh,p[key][start:]*factor,style,color=color,lw=1.5,label=f'Entry{entry} τ={tau:g}s')
                     if row==1 and variant=='paper-tw020':
                         ax.plot((p['Z'][start:]-heated)/dh,1000/p['wave.EQFREQUENCY'][start:],':',color=color,lw=.8)
                 ax.axvline(0,color='#aaa',lw=.7);ax.set(xlabel='(z - heated length) / hydraulic diameter [1]',ylabel=label);ax.grid(alpha=.2)
     handles=[Line2D([],[],color=color,label=f'G={flux} kg/(m² s)')
         for color,flux in [('#0072bd',300),('#388d39',500)]]
-    handles.extend([Line2D([],[],color='black',ls=style,label=label) for style,label in
-        [('-','Python τ=0.2 s'),('--','Python τ=0.1 s'),(':','Equilibrium period')]])
+    handles.extend([Line2D([],[],color='black',ls=style,label=f'Python τ={tau:g} s') for _,style,tau in variants])
+    handles.append(Line2D([],[],color='black',ls=':',label='Equilibrium period'))
     handles.extend([Line2D([],[],color='black',ls='none',marker=marker,markerfacecolor=face,label=label)
         for marker,face,label in [('o','black','Measurement'),('s','none','Measurement outside channel'),('v','none','Digitized paper curve')]])
     fig.legend(handles=handles,loc='outside lower center',ncols=4,fontsize=8)
-    fig.suptitle('Le Corre Figure 7: paper τ=0.2 s and companion τ=0.1 s\nOpen squares: out-of-domain measurements. Open triangles: digitized paper curves.\nPhysical failures and some point nonconvergence remain; comparisons are descriptive.',fontsize=11)
-    fig.savefig(output/'figure7_measurement_comparison.png',dpi=190);plt.close(fig)
+    filename='figure7_relaxation_comparison.png' if compare_relaxation else 'figure7_measurement_comparison.png'
+    fig.savefig(output/filename,dpi=190);plt.close(fig)
 
 def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__)

@@ -1,0 +1,2323 @@
+{
+  "schema": "openstream-annular-diagnostic-policy-v1",
+  "authority": "User instruction on2026-11-14: phase-volume closure is not an annular convergence/acceptance criterion; preserve OpenSTREAM governing equations and closure models. Mixture/TwoFluid checks remain.",
+  "source_report_sha256": "e552db63e4549d5c0724fc27387f0723925c797374f656f6761444e6acb5193c",
+  "policy_script_sha256": "6eacb69bff7da5e0952af18ea7626fd108434f90439687f50145f7ac749165e7",
+  "scope": "Criterion-specific classification of existing evidence only; no solver execution, equations, numerical tolerances, saved arrays, comparison metrics or historical flags changed.",
+  "counts": {
+    "runs": 69,
+    "native_converged_unchanged": 63,
+    "annular_area_rejections_now_informational": 61,
+    "twofluid_area_rejections_retained": 4,
+    "mixture_original_assessment_unchanged": 4
+  },
+  "runs": [
+    {
+      "run_id": "demo-mixture-n100-base",
+      "framework": "Mixture",
+      "native_converged": true,
+      "recorded_physical_status": "not_fully_assessed",
+      "phase_volume_role": "existing_policy_unchanged",
+      "recorded_area_rejection_superseded": false,
+      "recorded_area_diagnostic_rejected": false,
+      "relative_area_residual": null,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "demo-twofluid-n100-base",
+      "framework": "TwoFluid",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "existing_policy_unchanged",
+      "recorded_area_rejection_superseded": false,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.4105610706900207,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true,
+          "vapor.VF": true,
+          "vapor.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "liquid.W": true,
+          "liquid.U": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "demo-threefield-n100-base",
+      "framework": "ThreeField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.07485259436858827,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "demo-fourfield-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.07488843041579019,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-01-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.033275626002109204,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-02-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.015153188197999379,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-03-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.002759578017296649,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-04-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.0064457443565115735,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-05-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.011676358663511133,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-06-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.015048939774882197,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-07-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.03330946470354257,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-08-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.01485787940939387,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-09-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.002622038194145304,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-10-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.004305639890386015,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-11-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.008085146207622906,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-12-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.010185142261880054,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-13-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.02950001329993257,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-14-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.011811437086550525,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-15-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.0016244243826795124,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-16-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.004105425497538229,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-17-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.006653584458315653,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-18-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.008261754997346382,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-19-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.015389896316450491,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-20-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.0040862233248712965,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-21-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.0018844194120691826,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-01-paper-tw020-n100-base",
+      "framework": "FourField",
+      "native_converged": false,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.012148155897654167,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": false,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-01-companion-tw010-n100-base",
+      "framework": "FourField",
+      "native_converged": false,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.01233814616453821,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": false,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-02-paper-tw020-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.017500071941185302,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-02-companion-tw010-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.017583344603550044,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-05-paper-tw020-n100-base",
+      "framework": "FourField",
+      "native_converged": false,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.009581245180569464,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": false,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-05-companion-tw010-n100-base",
+      "framework": "FourField",
+      "native_converged": false,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.00963546520502745,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": false,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-06-paper-tw020-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.025425403424371718,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-06-companion-tw010-n100-base",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.025499049120243145,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "demo-mixture-n200-mesh",
+      "framework": "Mixture",
+      "native_converged": true,
+      "recorded_physical_status": "not_fully_assessed",
+      "phase_volume_role": "existing_policy_unchanged",
+      "recorded_area_rejection_superseded": false,
+      "recorded_area_diagnostic_rejected": false,
+      "relative_area_residual": null,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "demo-mixture-n400-mesh",
+      "framework": "Mixture",
+      "native_converged": true,
+      "recorded_physical_status": "not_fully_assessed",
+      "phase_volume_role": "existing_policy_unchanged",
+      "recorded_area_rejection_superseded": false,
+      "recorded_area_diagnostic_rejected": false,
+      "relative_area_residual": null,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "demo-mixture-n100-tight",
+      "framework": "Mixture",
+      "native_converged": true,
+      "recorded_physical_status": "not_fully_assessed",
+      "phase_volume_role": "existing_policy_unchanged",
+      "recorded_area_rejection_superseded": false,
+      "recorded_area_diagnostic_rejected": false,
+      "relative_area_residual": null,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "demo-twofluid-n200-mesh",
+      "framework": "TwoFluid",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "existing_policy_unchanged",
+      "recorded_area_rejection_superseded": false,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.3930405825864711,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true,
+          "vapor.VF": true,
+          "vapor.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "liquid.W": true,
+          "liquid.U": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "demo-twofluid-n400-mesh",
+      "framework": "TwoFluid",
+      "native_converged": false,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "existing_policy_unchanged",
+      "recorded_area_rejection_superseded": false,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.4094880852179532,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true,
+          "vapor.VF": true,
+          "vapor.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "liquid.W": true,
+          "liquid.U": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "demo-twofluid-n100-tight",
+      "framework": "TwoFluid",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "existing_policy_unchanged",
+      "recorded_area_rejection_superseded": false,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.4105610651970133,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true,
+          "vapor.VF": true,
+          "vapor.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "liquid.W": true,
+          "liquid.U": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "demo-threefield-n200-mesh",
+      "framework": "ThreeField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.12964737442284768,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "demo-threefield-n400-mesh",
+      "framework": "ThreeField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.1296829194682807,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "demo-threefield-n100-tight",
+      "framework": "ThreeField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.07481501053964235,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "demo-fourfield-n200-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.12250137458175425,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "demo-fourfield-n400-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.12381117923610208,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "demo-fourfield-n100-tight",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.07453657769934718,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-01-n200-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.03925485357371117,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-01-n400-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.03974056182646457,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-01-n100-tight",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.033298688130670495,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-07-n200-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.0420165113349813,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-07-n400-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.042617511275570674,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-07-n100-tight",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.03334928873480214,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-13-n200-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.03978624112691409,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-13-n400-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.040266722709463076,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-13-n100-tight",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.029577110847200494,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-19-n200-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.023688493060913585,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-19-n400-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.025825977551699575,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "wurtz-19-n100-tight",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.015447037973995714,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-01-paper-tw020-n200-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.016767224548961845,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": false,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-01-paper-tw020-n400-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.03258276617928568,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": false,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-01-paper-tw020-n100-tight",
+      "framework": "FourField",
+      "native_converged": false,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.011285693429650023,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": false,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-02-paper-tw020-n200-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.029015100884302925,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": false,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-02-paper-tw020-n400-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.04038659970371383,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": false,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-02-paper-tw020-n100-tight",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.016427960581193668,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-05-paper-tw020-n200-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.019950283136283442,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": false,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-05-paper-tw020-n400-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.03291445428278039,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": false,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-05-paper-tw020-n100-tight",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.009271375160225581,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-06-paper-tw020-n200-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.032260657452263475,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": false,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-06-paper-tw020-n400-mesh",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.03829259567629917,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": false,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    },
+    {
+      "run_id": "sawai-06-paper-tw020-n100-tight",
+      "framework": "FourField",
+      "native_converged": true,
+      "recorded_physical_status": "failed",
+      "phase_volume_role": "informational",
+      "recorded_area_rejection_superseded": true,
+      "recorded_area_diagnostic_rejected": true,
+      "relative_area_residual": 0.024336588039944873,
+      "other_recorded_bounds": {
+        "finite_primary_curves": true,
+        "fraction_bounds": {
+          "mixture.VF": true,
+          "mixture.X": true
+        },
+        "nonnegative_flows_speeds_thickness_frequency": {
+          "mixture.W": true,
+          "mixture.liquid.W": true,
+          "mixture.vapor.U": true,
+          "film.W": true,
+          "film.U": true,
+          "film.THICK": true,
+          "drop.W": true,
+          "drop.U": true,
+          "base.W": true,
+          "base.U": true,
+          "base.THICK": true,
+          "wave.W": true,
+          "wave.U": true,
+          "wave.AMPLITUDE": true,
+          "wave.FREQUENCY": true
+        }
+      },
+      "current_overall_physical_acceptance": "not_reassessed; no physical-validation pass inferred"
+    }
+  ]
+}

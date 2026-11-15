@@ -1,0 +1,3 @@
+Browser tab: 210134664, Title: "OpenSTREAM", URL: "http://127.0.0.1:8765/".
+There has been no change in the accessibility tree.
+The focused UI element is 0 AXWebArea OpenSTREAM, URL: 127.0.0.1:8765/

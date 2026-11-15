@@ -1,0 +1,143 @@
+{
+  "schema": "openstream-annular-source-scope-audit-v1",
+  "baseline_commit": "039afe6a723e542927dd7cc11610d610ded27c3e",
+  "numerical_and_closure_module_ast_unchanged_except_diagnostic_metadata": true,
+  "all_solver_convergence_methods_ast_unchanged": true,
+  "annular_diagnostic_arithmetic_ast_unchanged": true,
+  "archive_recovery_array_functions_and_area_arithmetic_ast_unchanged": true,
+  "gui_solver_calls_ast_unchanged": true,
+  "files": [
+    {
+      "file": "src/openstream/__init__.py",
+      "current_sha256": "3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/__main__.py",
+      "current_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/annular.py",
+      "current_sha256": "f64c9c66b8d461c84d4a918a95b2732dcbcd6725411cd26d080aa3ee6d038d6e",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/cli.py",
+      "current_sha256": "1abab67b5194210df0ab179a481b52219761b2a1897e843958a62ffa4dcbd234",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/database.py",
+      "current_sha256": "69205db9ea6aca60ac07bf25b1affd263849cabee670ee9c8f6dc713a6fe94a4",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/experimental_comparison.py",
+      "current_sha256": "03c12bcfe1e8de115092d0ea1a19e21ec177c5983c575b63183a67453b3fd1f4",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/ff_fields.py",
+      "current_sha256": "d524b8aaa4a2ca75774666b0441315f474f16331be9346bd7e9dd1224fe1b857",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/fields.py",
+      "current_sha256": "32f39c91ab4b339813ed018e00a5cfe9b360da924eb1cccf70236ed851d863be",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/fourfield.py",
+      "current_sha256": "6a73a107f776882bce97c187806e6563048f7a55a5b908b627afdf923cfef9a0",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/gui.py",
+      "current_sha256": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/gui_launcher.py",
+      "current_sha256": "32f48c43224581b8f01f0386324c3ce456e046a51f0d91d03c1911f7f69afb86",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/gui_lock.py",
+      "current_sha256": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/gui_reference.py",
+      "current_sha256": "a54facdcd881e3ff109fbca65a2632ee9a2b8fa91b012b7a6b85bd5a5cf17201",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/gui_schema.py",
+      "current_sha256": "070b70d4d206cc6c9d9493b828b8c3be26239e4f3d972ba65512a86dd9c2c356",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/gui_worker.py",
+      "current_sha256": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
+      "ast_identical": false
+    },
+    {
+      "file": "src/openstream/inputs.py",
+      "current_sha256": "07e0e324fdb5f32da062f1fe69c2b66ef42b20383e3ba2369001b47179908c99",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/multifield_output.py",
+      "current_sha256": "3f274266aa8cb52dd3dec51fb0aa8c9515a59543f4c82843dc53a326b3960e70",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/numerics.py",
+      "current_sha256": "eeacc2ead5caa8aa8007db06355732efebfdfeb253253996d12c7027fd11ed93",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/output.py",
+      "current_sha256": "834d11936f45da2f7bf7a08705cabb8949e6cbb2d69365b1a105b29aafd7451e",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/plotting.py",
+      "current_sha256": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/properties.py",
+      "current_sha256": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/solver.py",
+      "current_sha256": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/tf_fields.py",
+      "current_sha256": "0722c8637ace7d3918fc7cdacee2b703babba3d0f770e57cb3b4dc3a11ef7418",
+      "ast_identical": true
+    },
+    {
+      "file": "src/openstream/threefield.py",
+      "current_sha256": "f022b041711e38ab782317cb26aada7034f55d42976109191fa81172bb856a00",
+      "ast_identical": false
+    },
+    {
+      "file": "src/openstream/twofluid.py",
+      "current_sha256": "54a3f3888835fc13afd0b3a4e7524253f040302a3cc74d5f1c72e2d86967819c",
+      "ast_identical": true
+    }
+  ],
+  "permitted_changes": [
+    "annular diagnostic classification, explanatory text and indeterminate flag",
+    "GUI report status/presentation",
+    "bounded PermissionError retry for Windows progress JSON replacement",
+    "archive diagnostic metadata"
+  ],
+  "scope": "Compared current source with the recorded pre-revision commit. This verifies change scope, not original MATLAB numerical equivalence or model validation."
+}

@@ -40,13 +40,14 @@ as a separate Git submodule.
 The [Le Corre NURETH-21 reconstruction](docs/LECORRE_REPRODUCTION.md) adds native
 Wurtz and Sawai input adapters, frozen paper/companion variants, comparisons with
 digitized published curves, and separate numerical-sensitivity studies.
-All 69 planned runs completed: 63 met the native convergence checks and 65
-retained physical-consistency failures; four mixture runs remain partially
-assessed. These counts describe this campaign, not full-software parity.
+All 69 planned runs completed: 63 met the native convergence checks.
+Phase-volume residuals are informational for ThreeField and FourField, following
+the original OpenSTREAM convergence logic. Original diagnostic assessments are
+preserved separately; no physical-validation pass is inferred from this policy.
 Original publication-time settings remain partly unresolved. Graphical agreement,
 native convergence, physical consistency and experimental accuracy are reported
 separately; no governing equation is adjusted to improve the comparison.
-The [reconstruction report with figure plates](output/pdf/LeCorre_2025_Reports/LECORRE_REPRODUCTION.pdf)
+The [reconstruction report with figure plates](output/pdf/LeCorre_2025_Reports_02/LECORRE_REPRODUCTION.pdf)
 contains the native Python counterparts to Figures 3, 4, 6 and 7. Figures 1 and
 2 are model schematics; Figure 5 still lacks the original TRACE reference data.
 
@@ -74,7 +75,12 @@ The current isolated environment uses CPython 3.12.14 from the Codex-managed loc
 
 ## Recreate the environment
 
-Choose a framework with `--framework mixture`, `twofluid`, `threefield` or `fourfield`. The tested two-fluid, three-field and four-field cases numerically converge but **fail independent physical area consistency checks**; their outputs are flagged and the CLI returns exit code 3. For annular frameworks this acceptance check applies inside the fully annular region, excluding upstream initialization fields. Exit code 2 means numerical nonconvergence. Read the verification report before using predictions.
+Choose a framework with `--framework mixture`, `twofluid`, `threefield` or `fourfield`.
+For ThreeField and FourField, phase-volume closure is an informational diagnostic:
+it does not cause a failure exit or change numerical convergence. The TwoFluid
+area check remains active and can return exit code 3. Exit code 2 means numerical
+nonconvergence; exit code 0 does not establish experimental validation. See the
+[OpenSTREAM convergence and diagnostics review](docs/LECORRE_PHYSICAL_REVIEW.md).
 
 Install 64-bit Python 3.12, then:
 

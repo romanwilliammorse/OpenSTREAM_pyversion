@@ -2,6 +2,46 @@
 
 The user's requested full native port is **not yet complete**. Continue implementation and verification without replacing the preserved source or changing equations to obtain passing tests.
 
+## Current presentation and diagnostic policy revision
+
+The project owner confirmed tau=0.2 s as the intended paper setting, requested
+all figure/subplot titles removed, and directed that ThreeField/FourField
+phase-volume closure be informational rather than a convergence or acceptance
+criterion. The original MATLAB OpenSTREAM solver convergence checks contain
+no such gate. No governing equations, closure models or numerical stopping
+criteria are changed; Mixture/TwoFluid checks are retained.
+
+`figures-clean-02/` within the Le Corre campaign contains the current six clean
+plots: five primary figures and a separate two-relaxation comparison. Main
+Figure 7 uses only the already-computed 0.2 s branch. `PRESENTATION.json`
+records hashes and unchanged original evidence. The numerical analysis and
+all 69 original run records remain immutable. The former clean-01 presentation
+is retained as a draft with subplot headings, superseded by clean-02.
+
+`outputs/verification/annular-policy-01/reassessment.json` binds the revised
+criterion scope to the original campaign: 61 annular area flags become
+informational, four TwoFluid area rejections remain, and four Mixture assessments
+are unchanged. Native convergence remains 63/69. This is not 61 new physical
+validation passes. Other recorded bounds and source-equation residuals remain
+separate evidence. Current GUI display applies this policy to historical
+area-only badges while retaining the original assessment in details/downloads.
+
+Final revision checks passed: 490 Python tests (two existing FourField warnings),
+11 JavaScript tests and 13 archive-reader tests (one existing reader warning).
+The 25-module AST audit confirms unchanged numerical equations, closure code,
+stopping predicates and diagnostic arithmetic. A real Windows progress-file
+PermissionError exposed during testing was fixed with a bounded permission-only
+retry; the original trace and successful checks remain in annular-policy-01.
+The method fingerprints and 81-row matrix have been regenerated and checked.
+Live GUI inspection confirmed neutral annular information and retained TwoFluid
+rejection without editing saved results.
+
+Three revised PDFs are prepared for publication under
+`output/pdf/LeCorre_2025_Reports_02/`; the original report snapshot remains
+intact. Remaining delivery steps: commit source documents, export and visually
+check PDFs, record final clean Windows CI, and publish. Do not rerun the69-case
+campaign or modify calculations to improve a comparison.
+
 ## Completed Le Corre campaign — 2026-11-14
 
 Native Wurtz/Sawai adapters, frozen case execution, paper digitization and

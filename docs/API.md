@@ -2,6 +2,13 @@
 
 All solver implementations are independent of plotting. Importing the numerical core does not import pyplot. Matplotlib is loaded only by plotting/output operations. Native CoolProp supplies thermophysical properties at one prescribed system pressure per time step, matching upstream; the calculated axial pressure is not fed back into the equation of state.
 
+ThreeField/FourField `diagnostics()` reports `phase_volume_closure_role` as
+`informational` and leaves `physical_consistency` as `None` for this diagnostic.
+Finite residuals or indeterminate inventory/area values do not alter solver
+acceptance. Numerical convergence, source equations and all closure models are
+unchanged. Mixture/TwoFluid retain their existing checks. Historical saved
+assessments retain the earlier policy and are not rewritten.
+
 ## Inputs
 
 `Model`, `Options`, `Geometry` accept `file_path`, `identifier` and uppercase overrides. `InputSet.from_files` parses the original four input sources. `InputSet.official_sample(input_directory=None)` selects model TUTORIAL1, options DEFAULT, geometry TUTORIAL1 and tutorial1.inp. This is the documentation's sample; the upstream sandbox uses TUTORIAL2A instead.

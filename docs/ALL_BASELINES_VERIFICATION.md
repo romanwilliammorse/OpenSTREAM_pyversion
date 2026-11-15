@@ -67,6 +67,14 @@ is only a runtime hint. Experimental validation was not performed.
 
 ## Physical findings shared with the MATLAB archives
 
+Current policy amendment: ThreeField/FourField phase-volume residuals are
+informational only, following the original MATLAB OpenSTREAM convergence
+logic and the project owner's instruction. The area-only rejection and CLI
+exit descriptions below document the historical audit policy. Current annular
+CLI acceptance follows numerical convergence; the TwoFluid area criterion
+remains active. All archived states, residual values and comparison results
+are preserved. See [the current diagnostics review](LECORRE_PHYSICAL_REVIEW.md).
+
 Occupied area was independently evaluated from saved phase flow, velocity and
 density as `sum(W/(rho*U))` [m2], and compared with the specified channel area.
 For annular frameworks, acceptance is restricted to the stored fully annular

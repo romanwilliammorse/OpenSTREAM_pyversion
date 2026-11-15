@@ -71,10 +71,13 @@ def test_raw_residuals_report_clamping(solver):
     assert diagnostics["wave_unclamped_annular_mass_residual_max_kg_s"]<bound
 
 
-def test_physical_area_failure_is_separate_from_numerical_convergence(solver):
+def test_informational_area_residual_is_separate_from_numerical_convergence(solver):
     diagnostics = solver.diagnostics()
     assert solver.converged
-    assert diagnostics["physical_consistency"] is False
+    assert diagnostics["physical_consistency"] is None
+    assert diagnostics["phase_volume_closure_role"] == "informational"
+    assert diagnostics["area_closure_relative_tolerance"] is None
+    assert diagnostics["phase_volume_closure_status"] == "reported"
     assert diagnostics["max_unblended_annular_area_closure_relative"] > 0.01
     f, d, m = solver.film[0], solver.drop[0], solver.mixSolver.mixture[0]
     # Independent four-field inventory, including both base and wave storage.
@@ -94,6 +97,21 @@ def test_frequency_and_nested_failure_flags_are_not_hidden(solver):
     failures.append({"model":"synthetic failure"})
     assert not solver.converged
     failures.pop()
+    assert solver.converged
+
+
+def test_indeterminate_area_inventory_remains_informational(solver,monkeypatch):
+    drop=solver.drop[0]
+    flow,speed=drop.W.copy(),drop.U.copy()
+    flow[-1]=speed[-1]=0.
+    monkeypatch.setattr(drop,'W',flow)
+    monkeypatch.setattr(drop,'U',speed)
+    diagnostics=solver.diagnostics()
+    assert diagnostics['physical_consistency'] is None
+    assert diagnostics['phase_volume_closure_role']=='informational'
+    assert diagnostics['phase_volume_closure_status']=='indeterminate'
+    assert diagnostics['inventory_by_time'][0]['nonfinite_unblended_annular_node_count']==1
+    assert np.isinf(diagnostics['max_unblended_annular_area_closure_relative'])
     assert solver.converged
 
 

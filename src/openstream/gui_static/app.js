@@ -32,6 +32,21 @@ function runCaseName(run, submission) {
   return inputCaseName(submission?.inputs, run.is_reference ? "TUTORIAL1" : "Unnamed case");
 }
 
+function physicalDisplay(run) {
+  const physical = run.physical || {};
+  if (!["ThreeField", "FourField"].includes(run.framework)) return physical;
+  const d = physical.diagnostics || {};
+  const historicalAreaOnly = d.phase_volume_closure_role === undefined &&
+    physical.status === "failed" && d.physical_consistency === false &&
+    d.area_closure_relative_tolerance === 1e-6 && Array.isArray(d.inventory_by_time);
+  if (historicalAreaOnly || (d.phase_volume_closure_role === "informational" && physical.status !== "failed")) {
+    return {...physical, status: "informational", historicalAreaOnly,
+      message: "Phase-volume closure is an informational diagnostic for this model, not a convergence or acceptance criterion." +
+        (historicalAreaOnly ? " The original recorded assessment is preserved in Run details and the saved files." : "")};
+  }
+  return physical;
+}
+
 async function loadSavedInputs(run) {
   if (savedInputs.has(run.id)) return savedInputs.get(run.id);
   if (!pendingInputs.has(run.id)) {
@@ -492,15 +507,17 @@ function renderRun(run) {
   if (reference.status === "passed") setStatusCard("reference", "Archived profiles agree", reference.message || "The original archived MATLAB baseline comparison passed.", "good");
   else if (reference.status === "failed") setStatusCard("reference", "Comparison failed", reference.message || "The run did not meet the baseline comparison tolerances.", "error");
   else setStatusCard("reference", run.is_reference ? "Not yet compared" : "Unverified", reference.message || (run.is_reference ? "A reference result is reported only after the numerical comparison." : "Modified inputs are outside the four verified steady baseline cases."), run.is_reference ? "" : "warning");
-  const physical = run.physical || {};
+  const physical = physicalDisplay(run);
   if (physical.status === "passed") setStatusCard("physical", "Reported checks passed", physical.message || "Available consistency checks passed. This is not experimental validation.", "good");
   else if (physical.status === "failed") setStatusCard("physical", "Consistency checks failed", physical.message || "Inspect the diagnostics. Numerical convergence does not establish physical consistency.", "error");
+  else if (physical.status === "informational") setStatusCard("physical", "Informational diagnostics", physical.message);
   else setStatusCard("physical", "Not assessed", physical.message || "No complete physical-consistency assessment is available for this run.");
   $("run-error").hidden = !run.error; $("run-error").textContent = typeof run.error === "object" ? JSON.stringify(run.error, null, 2) : run.error || "";
   $("plots-panel").hidden = !state.data;
   renderDownloads(run.files || []);
   const diagnostics = $("diagnostic-details"); diagnostics.replaceChildren();
   const details = {run_id: run.id, case_name: runCaseName(run, savedInputs.get(run.id)), created_at: run.created_at, framework: run.framework, input_case: run.is_reference ? "Unchanged reference inputs" : "Custom inputs", ...(run.reference ? {reference: run.reference} : {}), ...(physical.diagnostics ? {physical_diagnostics: physical.diagnostics} : {})};
+  if (physical.historicalAreaOnly) details.recorded_physical_assessment = run.physical;
   diagnostics.append(element("pre", "diagnostic-json", JSON.stringify(details, null, 2)));
   updateRunControls();
 }
@@ -655,7 +672,7 @@ function bindEvents() {
 }
 
 // These pure adapters are exported only to the dependency-free Node checks.
-if (typeof module !== "undefined" && module.exports) module.exports = {inputCaseName, runCaseName, primaryQuantityFields, referenceIndexForTime, assertInputDocumentVersion, makeTraces};
+if (typeof module !== "undefined" && module.exports) module.exports = {inputCaseName, runCaseName, physicalDisplay, primaryQuantityFields, referenceIndexForTime, assertInputDocumentVersion, makeTraces};
 if (typeof document !== "undefined") {
   bindEvents();
   let collapsed = false;

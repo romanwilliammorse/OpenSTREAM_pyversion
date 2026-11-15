@@ -20,7 +20,8 @@ the archived results.
 | `reference_exports/` | Preserved portable arrays and metadata recovered from the original MATLAB archives |
 | `references/paper/` | Digitized published curve/marker readings, image-resolution bounds, source hashes and explicit extraction exclusions; not MATLAB output arrays |
 | `outputs/` | Saved numerical outputs, plots, verification reports, logs and retained failed/development runs |
-| `output/pdf/LeCorre_2025_Reports/` | Three source-linked PDFs: paper reconstruction with figure plates, physical-consistency review and updated acceptance matrix; manifests record source and PDF hashes |
+| `output/pdf/LeCorre_2025_Reports_02/` | Current three source-linked PDFs: clean figure plates with main Figure 7 at 0.2 s, OpenSTREAM convergence/supplemental diagnostics review, and amended acceptance matrix |
+| `output/pdf/LeCorre_2025_Reports/` | Preserved earlier PDF snapshot under the original diagnostic policy |
 | `provenance/` | Source, environment and dependency fingerprints |
 | `upstream/` | Original OpenSTREAM source as a pinned Git submodule, including its CoolPropWrapper submodule |
 | `database/` | OpenSTREAM-database pinned at b48541e; includes the preserved experimental XML and MATLAB adapters |

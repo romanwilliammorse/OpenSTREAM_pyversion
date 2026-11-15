@@ -224,10 +224,12 @@ def physical_checks(solver, arrays):
                         "common_annular_inventory_kg": float(np.sum((film_inventory + drop_inventory + vapor_inventory)[first+1:]) * dz),
                         "phase_partition_max_error_kg_s": float(np.max(abs(flux - mix["W"][0])))})
     errors = [r["max_unblended_annular_area_closure_relative"] for r in records]
-    return {"area_closure_relative_tolerance": 1e-6,
+    return {"area_closure_relative_tolerance": None,
+            "phase_volume_closure_role": "informational",
+            "phase_volume_closure_status": "indeterminate" if any(r["nonfinite_annular_nodes"] for r in records) else "reported" if any(r["annular_node_count"] for r in records) else "no_applicable_region",
             "max_unblended_annular_area_closure_relative": max(errors) if all(v is not None for v in errors) else None,
-            "physical_consistency": all(v is not None and v <= 1e-6 for v in errors), "records": records,
-            "interpretation": "Independent saved-state occupied area sum(W/U/rho); accepted domain is stored sigmoid >=1-1e-12. Steady mass flux differences only, no transient storage evaluated. Agreement is not experimental validation."}
+            "physical_consistency": None, "records": records,
+            "interpretation": "Independent saved-state occupied area sum(W/U/rho); reporting domain is stored sigmoid >=1-1e-12. Phase-volume closure is informational: the original MATLAB ThreeField/FourField frameworks do not impose an acceptance or convergence gate on this diagnostic. No residual threshold is applied; indeterminate NaN/Inf values are retained without adding a failure criterion. Steady mass flux differences only, no transient storage evaluated. This report does not establish physical or experimental validation."}
 
 
 def export_reference(archive, output):

@@ -24,7 +24,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = (
     ('docs/LECORRE_REPRODUCTION.md', 'Le Corre reconstruction and discrepancies'),
-    ('docs/LECORRE_PHYSICAL_REVIEW.md', 'Physical consistency review'),
+    ('docs/LECORRE_PHYSICAL_REVIEW.md', 'OpenSTREAM convergence and supplemental diagnostics review'),
     ('docs/ACCEPTANCE_MATRIX.md', 'Acceptance matrix'),
 )
 
@@ -138,15 +138,10 @@ def append_figure_plates(output, stats, assets, source_commit):
         path = ROOT/asset['source']
         if sha(path.read_bytes()) != asset['source_sha256']:
             raise ValueError(f'Figure changed after inventory: {asset["source"]}')
-        canvas.setFillColor(BLUE); canvas.setFont('BodyBold', 14)
-        canvas.drawString(margin, height-36, f'Le Corre reconstruction | Figure plate {index}')
-        canvas.setFillColor(MUTED); canvas.setFont('Body', 9)
-        canvas.drawString(margin, height-53, 'Unchanged source figure - additional print layout; scientific status remains as reported.')
-        canvas.setStrokeColor(BLUE); canvas.line(margin, height-65, width-margin, height-65)
         caption = Paragraph(escape(asset['caption'])+'<br/><font size="8">'+escape(asset['source'])+'</font>', S['body'])
         _, caption_height = caption.wrap(width-2*margin, height)
         caption.drawOn(canvas, margin, 32)
-        bottom, top = 48+caption_height, height-76
+        bottom, top = 48+caption_height, height-margin
         pixel_width, pixel_height = asset['pixels']
         # A common scale preserves pixel aspect ratio even with unequal DPI axes;
         # the maximum DPI conservatively respects both recorded native extents.

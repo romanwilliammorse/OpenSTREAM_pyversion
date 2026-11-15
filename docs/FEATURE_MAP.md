@@ -8,6 +8,12 @@ to separate implementation, native-test, MATLAB, physical-check and experimental
 evidence, including the supplied 2025 literature. Declaration annexes enumerate
 options and public methods without treating presence as correctness.
 
+Current diagnostic scope: ThreeField/FourField phase-volume closure is
+informational only, as directed by the project owner after inspecting the
+original MATLAB OpenSTREAM convergence logic. Raw residuals remain available;
+they do not change solver acceptance. Mixture/TwoFluid checks and all governing
+equations, closure models and numerical convergence tolerances are unchanged.
+
 Implemented means native code exists. Tested identifies an actual check/run, not full branch coverage. Unsupported means explicit rejection or an unavailable API. Unverified means no executed reference comparison for that scope. Tests that expose a physical defect do not establish that physical criterion passed.
 
 | Upstream component | Python equivalent | Implementation | Actual test evidence | Equivalence |
@@ -21,8 +27,8 @@ Implemented means native code exists. Tested identifies an actual check/run, not
 | Public diagnostic method inventory | tools/audit_method_coverage.py, METHOD_COVERAGE.json | Source/AST declarations, inheritance and explicit alternatives | Source-reviewed, no correctness or completeness score; added missing diagnostic APIs tested | Unverified |
 | Mixture fields and solver | fields.py, solver.py | Initialization, axial iteration, pseudo/physical time, closures and both MRM integrators | Original nine W/U/H profiles and ten initialization states pass recovered MATLAB baseline; 81 focused tests pass; native tutorials/sensitivity | TUTORIAL1 core verified; 14 supplementary diagnostics fail strict relative-only policy; other cases unverified |
 | TwoFluid fields, REGIMES and solver | tf_fields.py, twofluid.py | Six equations, precursor pressure, source shallow-copy semantics | All 6 original W/U/H and 15 initialization states pass; native tutorials/transient checks; steady area defect confirmed in archive | TUTORIAL1 core verified; other cases unverified |
-| AbstractFilm and ThreeField fields/solver | annular.py, threefield.py | Onset, film/drop equations, exchange/drag/friction and time loops | All 6 original W/U/H and 6 initialization states pass; native tutorials/transient checks; steady annular area defect confirmed in archive | TUTORIAL1 core verified; transient mass/area and other cases unverified |
-| FourField Base/Wave/Film/Drop and solver | ff_fields.py, fourfield.py | Base/wave transport, frequency, aggregate film/drop; one wall | All 9 original profiles plus actual base/frequency and 9 initialization states pass; steady annular area defect confirmed in archive | TUTORIAL1 core and additional base/frequency verified; other cases unverified |
+| AbstractFilm and ThreeField fields/solver | annular.py, threefield.py | Onset, film/drop equations, exchange/drag/friction and time loops | All 6 original W/U/H and 6 initialization states pass; native tutorials/transient checks; supplemental annular volume residual confirmed in archive | TUTORIAL1 core verified; transient mass and other cases unverified; volume diagnostic informational |
+| FourField Base/Wave/Film/Drop and solver | ff_fields.py, fourfield.py | Base/wave transport, frequency, aggregate film/drop; one wall | All 9 original profiles plus actual base/frequency and 9 initialization states pass; supplemental annular volume residual confirmed in archive | TUTORIAL1 core and additional base/frequency verified; other cases unverified; volume diagnostic informational |
 | SolverPlotter | output.py, multifield_output.py, plotting.py | Axial/frequency plots, saved-array time histories, space–time maps, GIF animation, slicing, physical/pseudo-time | All four schemas rendered; five PNGs/two GIFs inspected, decoded frame counts checked; dedicated tests | Full plot-option parity unsupported |
 | Approved MATLAB objects/export | tools/export_matlab_reference.m | Portable export for all frameworks, fresh/approved sources | Actual archives inspected as MatlabOpaque; script source-reviewed, **not MATLAB-executed** | Unverified |
 | Native MCOS recovery | tools/recover_mcos_reference.py, recover_twofluid_reference.py, recover_annular_reference.py | Named stored properties, object links, units, inputs, convergence and source-method reconstructions | All 4 actual archives recovered ; 6 + 7 + 11 extraction/audit tests; hashes unchanged | All 4 baseline exports; producing source/CoolProp version unknown |

@@ -177,9 +177,11 @@ native numerical API. A runnable implementation must:
 
 The steady MATLAB archives themselves contain occupied-area discrepancies:
 41.056107% for TwoFluid, 7.485259% for ThreeField, and 11.241052% for FourField;
-the annular figures apply only in the fully annular region. These shared
-failures are not evidence of a new Python translation error. Native transient
-area/mass failures have not yet been checked against transient MATLAB outputs.
+the annular figures apply only in the fully annular region. The ThreeField and
+FourField volume residuals are supplemental diagnostics, not convergence or
+acceptance failures under the current source-aligned policy. The TwoFluid area
+criterion remains active. Native transient mass residuals and supplemental
+volume residuals have not yet been checked against transient MATLAB outputs.
 Full physical validation cannot be inferred from either result. See
 [the baseline report](ALL_BASELINES_VERIFICATION.md).
 

@@ -59,13 +59,15 @@ Three statuses are reported separately:
   `rtol=1e-8`, `atol=0`. Reference zeros must match exactly. The GUI comparison
   excludes supplementary diagnostics and embedded precursor histories; the
   broader earlier audit is documented in ALL_BASELINES_VERIFICATION.md.
-- **Physical consistency:** implemented conservation, area, and bound checks.
-  The original TwoFluid, ThreeField, and FourField steady cases have known area
-  discrepancies, also reproduced by Python. Their failed checks remain visible.
-  Pre-onset annular fields are initialization quantities. No experimental
-  validation is claimed. Planned experimental comparisons will use
-  [OpenSTREAM-database](https://github.com/OpenSTREAM-solvers/openstream-database);
-  they have not yet been executed.
+- **Physical consistency:** Mixture and TwoFluid retain their implemented checks.
+  ThreeField and FourField display **Informational diagnostics** for phase-volume
+  closure, because the original MATLAB OpenSTREAM frameworks do not impose it
+  as a convergence or acceptance criterion. Historical area-only rejection
+  labels are displayed under this current policy; their original assessments
+  remain unchanged in Run details and downloaded files. Pre-onset annular fields
+  are initialization quantities. No experimental-validation pass is claimed.
+  Executed database comparisons are documented in BARTOLOMEY_PILOT.md and
+  LECORRE_REPRODUCTION.md; they do not automatically validate a GUI run.
 
 Results on this machine are saved in `outputs/gui/<unique-run-id>/`, with
 submitted inputs outside the numerical `output/` subdirectory. New runs never

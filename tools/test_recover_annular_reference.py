@@ -69,15 +69,30 @@ def test_convergence_uses_final_initialization(archive):
         assert not result["additional_wave_frequency_temporal"]["source_stopping_predicate_includes_this"]
 
 
-def test_archive_physical_area_failure_is_not_hidden(archive):
+def test_archive_area_residual_is_reported_without_an_acceptance_gate(archive):
     framework, _, solver = archive
     arrays, _ = annular_arrays(solver)
     result = physical_checks(solver, arrays)
-    assert result["physical_consistency"] is False
+    assert result["physical_consistency"] is None
+    assert result["phase_volume_closure_role"] == "informational"
+    assert result["phase_volume_closure_status"] == "reported"
+    assert result["area_closure_relative_tolerance"] is None
     assert result["records"][0]["annular_node_count"] == 72
     expected = 0.07485259436858871 if framework == "ThreeField" else 0.11241051742104902
     assert result["max_unblended_annular_area_closure_relative"] == pytest.approx(expected, rel=1e-12)
     assert result["records"][0]["phase_partition_max_error_kg_s"] < 1e-15
+
+
+def test_archive_indeterminate_inventory_remains_descriptive(archive):
+    _, _, solver = archive
+    arrays, _ = annular_arrays(solver)
+    arrays["drop.W"][0,-1] = arrays["drop.U"][0,-1] = 0.
+    result = physical_checks(solver,arrays)
+    assert result["physical_consistency"] is None
+    assert result["phase_volume_closure_role"] == "informational"
+    assert result["phase_volume_closure_status"] == "indeterminate"
+    assert result["records"][0]["nonfinite_annular_nodes"] == 1
+    assert result["max_unblended_annular_area_closure_relative"] is None
 
 
 def test_export_is_complete_immutable_and_nonoverwriting(archive, tmp_path):

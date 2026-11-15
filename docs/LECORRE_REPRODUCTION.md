@@ -11,10 +11,20 @@ All 69 frozen calculations are complete: 33 source-default cases and 36
 diagnostic refinements. They reproduce much of the published graphical
 evidence. Exact publication-runtime equivalence and experimental validation
 remain unestablished: historical input inconsistencies, six native
-convergence failures and retained physical failures are documented below.
+convergence failures and independent-reference/uncertainty gaps are documented below.
 The paper's Sawai graphics agree more closely
 with the code's 0.1 s relaxation than with the paper-text 0.2 s value; both
-predeclared configurations remain in the comparison.
+predeclared configurations remain in the comparison. Coauthor R. W. Morse
+subsequently confirmed **0.2 s as the intended setting**; the main Figure 7
+therefore uses that setting. The separate two-setting comparison preserves
+the observed graphical discrepancy without inferring the historical runtime.
+
+At the user's explicit direction on 2026-11-14, ThreeField/FourField
+phase-volume closure is now **supplemental information, not a convergence
+or acceptance criterion**. The upstream solvers do not impose that check.
+Mixture/TwoFluid policy is unchanged. Original campaign receipts, including
+their earlier area-based failure classifications, remain immutable; the
+updated policy does not change any calculated field or numerical result.
 
 ## Immutable targets and evidence levels
 
@@ -76,7 +86,8 @@ would be an inferred repair, so no such calculation is included here.
 The historical string `OAFBASERATIO='0.2'`, by contrast, is unambiguously
 written as `0.2` and read numerically by the source input writer/parser.
 Further historical replay requires the actual plot-producing input files
-or author clarification of the intended relaxation configuration. No
+and compatible generating version. Author clarification now establishes
+the intended Sawai relaxation as 0.2 s; it does not establish those historical files. No
 governing equation or global input alias was changed to resolve these gaps.
 
 ## Figure-to-case contract
@@ -225,13 +236,13 @@ coordinate inconsistency or authorizing extrapolation.
 |---|---|---|---|
 | LC-001 | Current companion and pinned 2026 implementation are not a documented publication-producing runtime/source bundle | Identify them as the current-companion reconstruction; retain paper and source hashes, complete inputs and actual property versions | EXP-001, EXP-013 |
 | LC-002 | Companion uses `VAPORFRIC='CONST'`; pinned enum accepts `CONSTANT`, `WALLIS`, `WALLISTHICK`, `SOLVER_DEPENDENT` | Keep literal input rejection. At the publication runner only, explicitly map this one documented spelling to the intended fixed coefficient 0.005; log original/effective selections. Do not add a global alias or choose a different friction law | EXP-001, EXP-010, EXP-011 |
-| LC-003 | Paper Figure 7 selects 0.2 s relaxation; companion code and prose select 0.1 s | Execute separately labeled paper-value and companion-value branches. Do not select the better-fitting result after inspection | EXP-001, EXP-011, EXP-014 |
+| LC-003 | Paper Figure 7 selects 0.2 s relaxation; companion code and prose select 0.1 s | Both predeclared branches remain recorded. R. W. Morse confirms 0.2 s as intended; use it for the main figure and preserve the separate comparison. Historical plot-producing runtime remains unverified | EXP-001, EXP-011, EXP-014 |
 | LC-004 | Each selected Sawai record contains a measured elevation outside the stored 1.648 m channel | Retain every raw measurement; mark out-of-domain exclusions explicitly. No clamping, extrapolation, coordinate shifting or length extension to obtain agreement | EXP-006, EXP-012 |
 | LC-005 | Sawai measurement period comment conflicts with numerical values and plot units | Record raw milliseconds; convert by 0.001 to seconds for calculation/error accounting, and use explicit plot units | EXP-006, EXP-012 |
 | LC-006 | Wurtz `OKAWACOEFS` reduction and Sawai relaxation selection are measurement-informed | Call these calibration-associated reproduction cases, not independent holdout validation | EXP-014 |
 | LC-007 | Original TRACE case/results are absent from the companion | Mark Figure 5 not reproduced. Rounded paper conditions alone do not define the exact TRACE or OpenSTREAM closure/numerical configuration | EXP-004 |
 | LC-008 | Numerical arrays for the published predictions are absent; plot panels are raster images | Report digitized/visual comparisons at their stated resolution. Do not apply archived-array tolerances or claim MATLAB equivalence from graphical similarity | EXP-002, EXP-010, EXP-011, EXP-013 |
-| LC-009 | Existing annular physical-consistency failures and frequency stopping limitations may occur in these new cases | Save original output and diagnostics, require separate numerical/frequency/onset/nested-closure checks, and retain failed physical criteria even if curves agree | CORE-028, CORE-033, EXP-008 |
+| LC-009 | Annular phase-volume residuals and frequency stopping limitations occur in these new cases | Preserve original receipts. Under the explicit current user policy, ThreeField/FourField area residuals are informational only; retain independent numerical/frequency/onset/nested-closure failures and separately demonstrated source-equation residuals | CORE-028, CORE-033, EXP-008 |
 | LC-010 | Recovered 2025 `.m` workflow differs materially from the 2026 MLX and does not resolve the paper's Sawai relaxation conflict | Preserve a separate historical configuration/default audit. Do not edit the frozen current-companion campaign to improve agreement or claim either runtime is established as the publication-producing one | EXP-001, EXP-002, EXP-011, EXP-013 |
 | LC-011 | Figure 6 base-thickness panel includes both the solver prediction and a separate correlation using measured film flow | Label and compare the two calculated series separately; do not assign the correlation's agreement to native `base.THICK` | EXP-006, EXP-010, EXP-014 |
 | LC-012 | Historical script sets scalar `RELAXTCOND=0.5`; the inspected 2025 source indexes it using five inherited `RELAXX` knots with no scalar expansion | Preserve the literal source inconsistency; obtain the actual generated input before any claimed historical replay. Do not silently broadcast a constant or classify this as a native port defect | EXP-001, EXP-002, EXP-013 |
@@ -258,9 +269,11 @@ This protocol is established before evaluating the newly calculated errors.
   errors. A source `SOLVEDCONVERGED` state alone does not close all these gates.
 - **Physical consistency:** use the existing source-equation and integrated
   diagnostics, including mass/transported enthalpy, phase partitions, positivity,
-  finite state, frequency and occupied-area geometry. The existing relative
-  annular area criterion is 1e-6. Apply it only to numerically unblended annular
-  nodes (`AFFNC >= 1 - 1e-12`). No eligible region means unknown, not pass.
+  finite state and frequency. Originally the campaign also used a 1e-6 relative
+  annular-area rejection on `AFFNC >= 1 - 1e-12` nodes. The explicit user policy
+  now removes every area pass/fail role for ThreeField/FourField, including
+  nonfinite or absent-domain area results. Keep the residual, masks and counts
+  as supplemental information; Mixture/TwoFluid policy is unchanged.
   Retain the source's clipping and one-way mixture pressure/energy coupling.
   Do not invent a total-energy or independent multifield-pressure validation
   claim from the transported-enthalpy/precursor equations.
@@ -282,8 +295,27 @@ This protocol is established before evaluating the newly calculated errors.
 - **Status axes:** implementation, native checks, MATLAB equivalence,
   physical consistency and experimental comparison remain independent in
   `docs/acceptance/experimental.json`. New evidence changes only the rows
-  and scopes it supports; all 81 existing requirement IDs and criteria stay
-  stable. Figure 5 and unverified publication-time metadata remain open.
+  and scopes it supports. All 81 existing requirement IDs remain stable.
+  The current user instruction narrowly supersedes annular area acceptance
+  criteria, as recorded below; all unrelated criteria and original evidence
+  remain intact. Figure 5 and unverified publication-time metadata remain open.
+
+The source audit is detailed in `docs/LECORRE_PHYSICAL_REVIEW.md`.
+ThreeField `solve.m:210–214,242–248` and FourField
+`solve.m:293–300,344–353` check iterative field changes, not phase-volume
+closure. Their droplet-flow subtractions (lines 182 and 189 respectively)
+enforce mass partition only. `Drop.m:515–518` contains an optional
+area-prescribed droplet velocity, which is a selected existing model, not
+a general convergence check. Native `threefield.py:111–114` and
+`fourfield.py:105–109` convergence predicates were already independent of
+the area diagnostic. The policy changes reporting/acceptance only; it adds
+no closure model and changes no governing equation or solver stopping rule. The
+independent syntax-tree audit against commit
+`039afe6a723e542927dd7cc11610d610ded27c3e`, saved as
+`outputs/verification/annular-policy-01/source_scope_audit.json`, confirms
+unchanged numerical/closure expressions, convergence predicates and diagnostic
+arithmetic within its recorded scope. Reporting metadata and GUI progress-file
+handling are separate from those governing calculations.
 
 An independent saved-output audit is implemented in
 `tools/audit_lecorre_outputs.py`. It imports no solver, native database
@@ -351,7 +383,7 @@ The source-coupling and inventory audit is documented separately in
 `references/paper/lecorre2025/physical_scope_review.json`. It reproduces
 the 31 base-run annular area maxima directly from saved arrays. It also
 distinguishes transition-region negative drop-flow diagnostics from the
-applicable unblended annular area failures; no original flag is erased.
+unblended annular area residuals; no original saved flag is erased.
 
 ## Reproducible Windows commands
 
@@ -412,7 +444,31 @@ part of this frozen reproduction campaign.
 
 ## Completed campaign and independent checks
 
-| Cohort | Attempts completed | Natively converged | Physical rejection | Not fully physically assessed |
+The current, criterion-specific reassessment is saved in
+`outputs/verification/annular-policy-01/reassessment.json`, bound to the
+original campaign report and its classification script by SHA256:
+
+| Current policy item | Runs |
+|---|---:|
+| Completed calculations | 69 |
+| Native convergence, unchanged | 63 |
+| ThreeField/FourField area rejections superseded by informational reporting | 61 |
+| TwoFluid area rejections retained | 4 |
+| Mixture assessments unchanged | 4 |
+
+These are counts of the named criterion, not overall physical pass counts.
+All other saved checks remain intact, including the 13 runs with at least
+one negative-value flag. Their domain/applicability must be read separately;
+the 33-base-run review locates its four affected cases in the transition
+region. No solver was rerun and no measurement statistic changed for this
+policy reassessment.
+
+The table preserves the **original campaign policy**, under which annular area
+was a rejecting diagnostic. It is an execution-history table, not the current
+ThreeField/FourField acceptance classification. Current annular area-only
+rejections are superseded, without turning those runs into validated cases.
+
+| Cohort | Attempts completed | Natively converged | Original-policy physical rejection | Original-policy not fully assessed |
 |---|---:|---:|---:|---:|
 | Four demonstration frameworks and diagnostics | 16 | 15 | 12 | 4 |
 | Wurtz source cases and diagnostics | 33 | 33 | 33 | 0 |
@@ -424,23 +480,43 @@ the four Sawai entry-1/entry-5 source-default variants, the entry-1
 paper-value tightened run, and the 400-cell TwoFluid demonstration.
 The separately tightened entry-5 calculation converges, while its
 original source-default failures remain unchanged. The runner's final
-exit code 3 reflects these retained native/physical rejections.
+exit code 3 records the original native/physical reporting policy. The six
+numerical failures remain failures under the current policy.
 
 The independent output audit passes all **4,708 arithmetic, provenance,
 unit, domain, population and saved-output checks** across the 69 runs.
 It also independently reconstructs all seven aggregate measured-error
 groups from the raw XML and saved profiles. This is verification of
 reported calculations and accounting, not a physical-validation score.
-The audit preserves every original native and physical rejection.
+The audit preserves every original native and physical classification; it
+does not apply the subsequent annular diagnostic policy retroactively.
 
-The final local automated suite completed with **476 tests passed and
+The campaign-checkpoint automated suite completed with **476 tests passed and
 two retained FourField runtime warnings in 176.12 s**. The warnings are
 the existing divide-by-zero and invalid-multiply evaluations in the
 original-input FourField test; they were not suppressed or removed to
 obtain this result. The complete log is
 `outputs/verification/lecorre-native-tests-final.log`. Passing software
-tests does not clear the separately reported physical failures or
-establish experimental validity.
+tests does not establish experimental validity or close independent-reference
+and numerical-uncertainty gaps.
+
+For the subsequent reporting-policy and figure revision, **490 Python tests
+passed with the same two FourField warnings in 173.91 s**, and **11 frontend
+JavaScript tests passed**. The separate archive-reader suite passed **13 tests**
+with one existing pandas-option deprecation warning. Logs are
+`outputs/verification/annular-policy-01/native-tests-final.log`,
+`frontend-tests-final.log` and `archive-recovery-tests.log`. The source-scope
+AST audit covers 25 native modules and preserves numerical equations,
+convergence predicates and diagnostic arithmetic in its documented scope.
+
+A focused GUI check initially encountered a real Windows `PermissionError`
+while replacing the progress-status file. The original worker trace/status
+and isolated rerun are retained in `gui-write-race-receipt.json` and its named
+files. A bounded retry now handles only this file-replacement permission
+error (10 attempts, 20 ms between attempts); other errors still propagate.
+Its three targeted tests and the subsequent full suite passed. This change
+is confined to GUI file I/O and does not modify solver equations or controls.
+
 
 Of the 36 preregistered pairwise numerical-sensitivity comparisons,
 31 have two natively converged configurations and five remain unavailable.
@@ -459,7 +535,8 @@ All 33 frozen source-default cases executed. All four demonstration cases
 and all 21 selected Wurtz cases passed the native convergence check. Four
 of the eight Sawai case/relaxation variants passed; entries 1 and 5 failed
 point convergence under both relaxation settings. All 32 field-resolved
-source-default runs retain a physical-consistency rejection. The Mixture
+source-default runs were physically rejected by the original area-based
+policy; the ThreeField/FourField area-only rejection is now superseded. The Mixture
 demonstration is marked `not_fully_assessed`, not given a complete physical
 pass from the limited checks. Diagnostic mesh/tighter-control runs are
 accounted separately from these source-default results.
@@ -475,10 +552,10 @@ The demo precursor integrates to 87,500 W prescribed wall power, with
 These are checks of the implemented transported-enthalpy formulation, not
 a general total-energy validation. The demonstration's maximum relative
 occupied-area discrepancies are 0.410561 for TwoFluid, 0.0748526 for
-ThreeField and 0.0748884 for FourField, against the unchanged 1e-6
-geometry-identity criterion. The ThreeField/FourField values use only
-unblended annular nodes. Agreement with the paper's curves does not clear
-these failures. A fresh MATLAB comparison for these exact new cases has
+ThreeField and 0.0748884 for FourField. The 1e-6 area criterion remains
+unchanged for TwoFluid. The ThreeField/FourField values use only unblended
+annular nodes and are now supplemental diagnostics without a pass/fail role.
+A fresh MATLAB comparison for these exact new cases has
 not established whether each discrepancy is shared with upstream.
 
 ### Comparison with the published curves
@@ -504,8 +581,9 @@ The comparison retains the source calibration and extraction exclusions.
   for the companion's 0.1 s configuration; only two intersect for the
   paper-text 0.2 s configuration. This supports the interpretation that
   the plotted curves are more consistent with the code's 0.1 s setting.
-  It does not establish the original plot-producing inputs or resolve
-  the text/code discrepancy by changing the requested parameter.
+  It does not establish the original plot-producing inputs. Author
+  clarification confirms 0.2 s as intended, so the main figure uses 0.2 s;
+  the observed text/code/graphic discrepancy remains documented.
   The dotted equilibrium-period curves use the 0.2 s branch and are
   plotted as model references; they
   are not measured targets and have no separate digitized comparison in
@@ -518,17 +596,17 @@ The original script incompatibilities, changed historical defaults and
 missing full-precision reference arrays prevent a claim of exact
 publication-runtime replay or MATLAB numerical equivalence.
 
-![Figures 3 targets: native profiles and bounded paper readings](../outputs/validation/lecorre-2025-01/analysis/figure3_paper_comparison.png)
+![Figures 3 targets: native profiles and bounded paper readings](../outputs/validation/lecorre-2025-01/figures-clean-02/figure3_paper_comparison.png)
 
-![Figure 4 targets: native field dimensions, velocities and frequencies against bounded paper readings](../outputs/validation/lecorre-2025-01/analysis/figure4_paper_comparison.png)
+![Figure 4 targets: native field dimensions, velocities and frequencies against bounded paper readings](../outputs/validation/lecorre-2025-01/figures-clean-02/figure4_paper_comparison.png)
 
-![Figure 6 graphical residuals against the published prediction dots and separate measured-film-flow correlation stars](../outputs/validation/lecorre-2025-01/analysis/figure6_paper_comparison.png)
+![Figure 6 graphical residuals against the published prediction dots and separate measured-film-flow correlation stars](../outputs/validation/lecorre-2025-01/figures-clean-02/figure6_paper_comparison.png)
 
 ### Comparison with the stored measurements
 
 The following source-default RMSE values are descriptive prediction-minus-
-measurement errors. They include predictions from physically rejected
-runs, and the Sawai populations include nonconverged cases explicitly.
+measurement errors. They retain every original classification in the saved
+receipts, and the Sawai populations include nonconverged cases explicitly.
 No uncertainty-qualified experimental acceptance threshold has been
 established.
 
@@ -546,7 +624,8 @@ The 11 Wurtz exclusions are absent source measurements. Each Sawai
 variant excludes eight quantity/location targets outside the stored
 channel, four for each quantity. Only six of the 12 compared Sawai points
 per quantity come from natively converged cases. All compared targets
-come from cases with retained physical-consistency failures. The source
+were associated with area-based failures in the original receipts; these
+annular area-only flags no longer reject a case under the current policy. The source
 records contain 84 present measurement targets in total across these
 selected populations; running two relaxation variants or additional
 meshes does not create independent experimental observations. Both
@@ -554,9 +633,20 @@ datasets remain calibration-associated reproduction evidence, with
 measurement/digitization/input uncertainty and independent holdout
 status unresolved.
 
-![Figure 6 targets: Wurtz measurements and native outputs, with the measured-film-flow correlation shown separately](../outputs/validation/lecorre-2025-01/analysis/figure6_measurement_comparison.png)
+![Figure 6 targets: Wurtz measurements and native outputs, with the measured-film-flow correlation shown separately](../outputs/validation/lecorre-2025-01/figures-clean-02/figure6_measurement_comparison.png)
 
-![Figure 7 targets: Sawai measurements and both frozen relaxation settings, retaining out-of-domain points](../outputs/validation/lecorre-2025-01/analysis/figure7_measurement_comparison.png)
+![Figure 7 targets: Sawai measurements and native outputs at the author-confirmed 0.2 s setting, retaining out-of-domain points](../outputs/validation/lecorre-2025-01/figures-clean-02/figure7_measurement_comparison.png)
+
+Figure 7 left-column panels show quality 0.48 (entries 1 and 2);
+right-column panels show quality 0.88 (entries 5 and 6). Titles are omitted
+from the figures at the user's request; axes and legends retain quantities
+and units.
+
+The separate [relaxation-setting comparison](../outputs/validation/lecorre-2025-01/figures-clean-02/figure7_relaxation_comparison.png)
+retains both frozen branches for the discrepancy audit. Figure 7
+equilibrium-period reference curves use the 0.2 s branch only. No numerical
+output, comparison statistic or digitized reference changed when the plots
+were restyled.
 
 ## Mesh dependence of the source transition
 

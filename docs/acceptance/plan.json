@@ -9,13 +9,14 @@
     "Preserve governing equations and original core tolerances. Diagnose translation errors separately from intentional approximations, source defects and calibration choices.",
     "The initial 2026-11-14 acceptance audit performed no new numerical calculation or MATLAB execution. Subsequent Bartolomey evidence is tracked explicitly: 40 native pilot runs and descriptive experimental comparisons are complete, three mesh screens failed, and no uncertainty-qualified experimental acceptance or fresh MATLAB equivalence is claimed.",
     "Original PDFs and raw extracted text remain local; source hashes and analytical citations identify them without redistributing the files.",
-    "The frozen Le Corre reconstruction executed all 69 attempts: 63 natively converge and 65 retain physical rejection. Paper raster comparisons, measured-data errors and independent arithmetic audits are separate evidence; none establishes fresh MATLAB equivalence or uncertainty-qualified validation. Historical script/version inconsistencies and the Sawai 0.1/0.2 s discrepancy remain explicit."
+    "The frozen Le Corre reconstruction executed all 69 attempts: 63 natively converge and 65 were physically rejected under the original area-blocking policy. Original receipts remain unchanged. The explicit subsequent user instruction makes ThreeField/FourField phase-volume closure supplemental only, with no acceptance or convergence role; Mixture/TwoFluid and independent source-equation/numerical criteria remain unchanged. No numerical output, closure model or governing equation is changed. Paper comparisons and audits do not establish fresh MATLAB equivalence or uncertainty-qualified validation. The author confirms intended Sawai relaxation 0.2 s; historical plot-producing execution remains unverified.",
+    "Policy amendment on 2026-11-14, authorized explicitly by R. W. Morse: narrow criterion changes in CORE-019, CORE-027 and CORE-028 remove annular phase-volume pass/fail requirements. All 81 IDs are retained. EXP-010 and EXP-011 physical status changes from failed to partial reflect removal of area-only rejection, not experimental validation; all numerical/MATLAB statuses and Bartolomey evidence are unchanged. Source audit: docs/LECORRE_PHYSICAL_REVIEW.md. Criterion-specific reassessment: outputs/verification/annular-policy-01/reassessment.json (61 annular rejections become informational; four TwoFluid and four Mixture assessments unchanged; no overall physical pass inferred)."
   ],
   "prioritized_work": [
     {
       "id": "W0",
       "priority": "P0",
-      "work": "Recover publication-producing inputs/versions and resolve historical script, Sawai relaxation and measurement-coordinate discrepancies; preserve the completed immutable reconstruction",
+      "work": "Recover publication-producing inputs/versions and resolve historical script, plot-setting and measurement-coordinate discrepancies; preserve immutable reconstruction and author-confirmed intended Sawai 0.2 s",
       "requirements": [
         "EXP-001",
         "EXP-006",
@@ -30,7 +31,7 @@
     {
       "id": "W1",
       "priority": "P0/P1",
-      "work": "Extend the three implemented steady database families and resolve uncertainty/independence gaps; retain Bartolomey mesh failures and Le Corre native/physical rejections",
+      "work": "Extend the three implemented steady database families and resolve uncertainty/independence gaps; retain Bartolomey mesh failures, Le Corre numerical failures and separate source-equation evidence",
       "requirements": [
         "EXP-005",
         "EXP-007",
@@ -60,7 +61,7 @@
     {
       "id": "W3",
       "priority": "P0/P1",
-      "work": "Diagnose Sawai point failures, TwoFluid temporal refinement failure, source mesh-dependent AFFNC blending and retained area identities against source/MATLAB before changing models; establish numerical uncertainty",
+      "work": "Diagnose Sawai point failures, TwoFluid temporal refinement failure, source mesh-dependent AFFNC blending and source-equation mass residuals; establish numerical uncertainty without adding annular volume-closure criteria or changing models",
       "requirements": [
         "CORE-018",
         "CORE-025",

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\gui_worker.py", line 110, in _run_job_locked
+    solver = constructors[framework](inputs, mix_solver=precursor).solve(progress)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\twofluid.py", line 111, in solve
+    self._record("initialization",l,v,okay,delta,progress)
+  File "C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\twofluid.py", line 204, in _record
+    if progress is not None: progress(record)
+                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\gui_worker.py", line 103, in progress
+    update(phase=f"{record.get('framework', framework)}: {record.get('phase', 'solving')}")
+  File "C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\gui_worker.py", line 88, in update
+    write_json(state_path, state)
+  File "C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\gui_worker.py", line 27, in write_json
+    os.replace(tmp, path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\Roman\\AppData\\Local\\Temp\\pytest-of-Roman\\pytest-69\\test_real_baseline_run_TwoFlui0\\runs\\699981c07af5404a8db624a1a295e42d\\status.json.tmp' -> 'C:\\Users\\Roman\\AppData\\Local\\Temp\\pytest-of-Roman\\pytest-69\\test_real_baseline_run_TwoFlui0\\runs\\699981c07af5404a8db624a1a295e42d\\status.json'

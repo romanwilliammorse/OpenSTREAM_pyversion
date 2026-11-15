@@ -49,3 +49,25 @@ def test_cli_reports_failed_numerics_or_physical_check(monkeypatch, tmp_path, co
     monkeypatch.setattr(cli, "balances", lambda solver: {})
     assert cli.main(["sample", "--framework", "twofluid", "--quiet", "--output", str(tmp_path/"run")]) == expected
     assert (tmp_path/"run").is_dir()
+
+
+@pytest.mark.parametrize('framework', ['threefield','fourfield'])
+@pytest.mark.parametrize('converged,expected', [(True,0),(False,2)])
+@pytest.mark.parametrize('area_residual', [.2,float('inf')])
+def test_cli_annular_informational_area_preserves_solver_acceptance(monkeypatch,tmp_path,capsys,framework,converged,expected,area_residual):
+    class Solver:
+        def __init__(self, inputs):
+            self.STATE=SimpleNamespace(name='SOLVEDCONVERGED' if converged else 'SOLVEDNOTCONVERGED')
+            self.converged=converged
+            self.mixSolver=self
+        def solve(self, progress): return self
+        def save(self, output): output.mkdir()
+        def diagnostics(self):
+            return {'physical_consistency':None,'phase_volume_closure_role':'informational',
+                'area_closure_relative_tolerance':None,'max_unblended_annular_area_closure_relative':area_residual}
+    name={'threefield':'ThreeFieldSolver','fourfield':'FourFieldSolver'}[framework]
+    monkeypatch.setattr(__import__('openstream'),name,Solver)
+    monkeypatch.setattr(cli,'balances',lambda solver:{})
+    assert cli.main(['sample','--framework',framework,'--quiet','--output',str(tmp_path/'run')])==expected
+    output=capsys.readouterr().out
+    assert 'informational' in output and 'max_unblended_annular_area_closure_relative' in output

@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import sys
+import time
 import traceback
 import zipfile
 
@@ -24,7 +25,16 @@ def write_json(path, value):
         if isinstance(obj, np.generic): return obj.item()
         raise TypeError(f'Cannot serialize {type(obj).__name__}')
     tmp.write_text(json.dumps(portable_json(value), indent=2, allow_nan=False, default=scalar) + '\n', encoding='utf-8')
-    os.replace(tmp, path)
+    # A Windows reader can briefly hold the destination open during polling.
+    # Retry only that replace failure, preserving the final error if it persists.
+    for attempt in range(10):
+        try:
+            os.replace(tmp, path)
+            break
+        except PermissionError:
+            if attempt == 9:
+                raise
+            time.sleep(.02)
 
 
 def mixture_checks(solver):
@@ -49,6 +59,23 @@ def mixture_checks(solver):
                            'enthalpy': 'relative error <= 1e-6 (denominator max(abs(Q),1 W))',
                            'momentum': 'max(1e-6 Pa, input ERRORP)', 'void_fraction': '[-1e-12, 1+1e-12]'},
             'scope': 'Steady integral enthalpy/mass balance, discrete momentum and basic bounds; not experimental validation.'}
+
+
+def physical_report(diagnostics):
+    """Display descriptive annular closure without a physical-pass claim."""
+    ok = diagnostics.get('physical_consistency')
+    informational = diagnostics.get('phase_volume_closure_role') == 'informational'
+    if ok is False:
+        message = 'Physical consistency checks failed. Inspect diagnostics; numerical agreement does not establish physical validity.'
+    elif ok is True:
+        message = 'Implemented consistency checks passed; experimental validation not performed.'
+    elif informational:
+        message = ('Phase-volume closure is informational for this annular framework and does not change solver acceptance. '
+                   'Residual values remain available; physical validation is not established.')
+    else:
+        message = 'Consistency cannot be assessed on an applicable physical domain; inspect diagnostics.'
+    return {'status': ('informational' if informational else 'not_checked') if ok is None else 'passed' if ok else 'failed',
+            'diagnostics': diagnostics, 'message': message}
 
 
 def run_job(directory):
@@ -99,11 +126,7 @@ def _run_job_locked(directory):
         reference = (compare_reference(framework, output) if assess_payload(payload)['is_reference'] else
                      {'status': 'not_compared', 'message': 'Custom inputs differ from the archived baseline; no equivalence claim.'})
         diagnostics = mixture_checks(solver) if framework == 'Mixture' else solver.diagnostics()
-        ok = diagnostics.get('physical_consistency')
-        physical = {'status': 'not_checked' if ok is None else 'passed' if ok else 'failed', 'diagnostics': diagnostics,
-                    'message': 'Implemented consistency checks passed; experimental validation not performed.' if ok else
-                    'Consistency cannot be assessed on an applicable physical domain; inspect diagnostics.' if ok is None else
-                    'Physical consistency checks failed. Inspect diagnostics; numerical agreement does not establish physical validity.'}
+        physical = physical_report(diagnostics)
         report = {'reference': reference, 'physical': physical, 'converged': bool(solver.converged),
                   'baseline': assess_payload(payload), 'experimental_validation': 'not performed',
                   'framework': framework, 'submitted_inputs': payload}

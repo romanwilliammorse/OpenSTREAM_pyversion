@@ -203,8 +203,9 @@ class ThreeFieldSolver:
         """Independent field inventory/area closure, also used by FourField.
 
         Film/drop enthalpies are prescribed saturated liquid in the annular
-        source. Their actual W/U inventories must still fit the channel along
-        with precursor vapor. No normalized volume fraction is used here.
+        source. Actual W/U inventories are reported with precursor vapor;
+        upstream Three/FourField does not impose phase-volume closure as a
+        convergence or acceptance gate. No normalized volume fraction is used.
         Zero flow with zero velocity is indeterminate, not silently zeroed.
         The all-node result includes the blended pre-annular region; a separate
         mask AFFNC >= 1-1e-12 identifies the numerically unblended annular region.
@@ -246,8 +247,11 @@ class ThreeFieldSolver:
         maximum = max(x["max_area_closure_relative"] for x in records)
         annular_errors = [x["max_unblended_annular_area_closure_relative"] for x in records
                           if x["max_unblended_annular_area_closure_relative"] is not None]
-        return {"physical_consistency": False if annular_errors and max(annular_errors) > 1e-6 else None,
-                "area_closure_relative_tolerance": 1e-6,
+        indeterminate = any(x["nonfinite_unblended_annular_node_count"] for x in records)
+        return {"physical_consistency": None,
+                "phase_volume_closure_role": "informational",
+                "phase_volume_closure_status": "indeterminate" if indeterminate else "reported" if annular_errors else "no_applicable_region",
+                "area_closure_relative_tolerance": None,
                 "max_area_closure_relative": maximum,
                 "max_unblended_annular_area_closure_relative": max(annular_errors) if annular_errors else None,
                 "outlet_area_closure_relative": records[-1]["outlet_area_closure_relative"],
@@ -257,7 +261,7 @@ class ThreeFieldSolver:
                 "max_common_annular_cell_mass_residual_kg_s": max(x["max_common_annular_cell_mass_residual_kg_s"] for x in records) if common_cells else None,
                 "max_abs_common_annular_mass_residual_kg_s": max(abs(x["common_annular_mass_residual_kg_s"]) for x in records) if common_cells else None,
                 "inventory_by_time": records,
-                "inventory_interpretation": "W/U is kg/m; occupied area = sum(Wfilm/Ufilm)/rhoF + Wdrop/(Udrop*rhoF) + Wvapor/(Uvapor*rhoV). The 1e-6 tolerance tests an algebraic geometry identity, not measurement uncertainty. Physical-consistency rejection applies only where AFFNC >= 1-1e-12 (numerically unblended annular flow); absence of such nodes leaves status unknown. Common-annular mass diagnostics use a fixed downstream control volume whose upstream face and all cells satisfy this mask at every time; its residual is outflow minus inflow plus backward-Euler storage, with no storage for the initial steady state. Pre-annular values are source initialization quantities and all-region area/mass diagnostics there are descriptive, not physical-domain acceptance checks. Zero/zero inventory is indeterminate and fails if in the applicable region. Any four-field film-thickness caps do not independently enforce this inventory identity. Numerical convergence and algebraic flow partition do not establish mass-storage conservation. Whether a discrepancy is shared with upstream is established by a separate reference comparison; see the baseline verification report."}
+                "inventory_interpretation": "W/U is kg/m; occupied area = sum(Wfilm/Ufilm)/rhoF + Wdrop/(Udrop*rhoF) + Wvapor/(Uvapor*rhoV). Phase-volume closure is informational for ThreeField/FourField: the original MATLAB frameworks do not impose this residual as a convergence or acceptance gate. No area-residual acceptance threshold is applied. Finite residuals and indeterminate NaN/Inf inventory or area values do not change solver acceptance; existing solver convergence and exceptions remain unchanged. AFFNC >= 1-1e-12 identifies the numerically unblended annular region for reporting, and absence of such nodes leaves that result unavailable. Common-annular mass diagnostics use a fixed downstream control volume whose upstream face and all cells satisfy this mask at every time; its residual is outflow minus inflow plus backward-Euler storage, with no storage for the initial steady state. Pre-annular values are source initialization quantities and all-region area/mass diagnostics there are descriptive. Zero/zero inventory is indeterminate and is not silently zeroed. Any four-field film-thickness caps do not independently enforce this inventory identity. Numerical convergence and algebraic flow partition do not establish mass-storage conservation or physical validation. Whether a discrepancy is shared with upstream is established by a separate reference comparison; see the baseline verification report."}
 
     def diagnostics(self):
         """Report raw balances and clipping; numerical convergence is separate."""

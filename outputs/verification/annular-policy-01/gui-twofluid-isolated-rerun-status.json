@@ -1,0 +1,705 @@
+{
+  "id": "1c323b6de67e4da59b5f634cfc01b2e8",
+  "framework": "TwoFluid",
+  "status": "completed",
+  "phase": "Completed",
+  "created_at": "2026-11-15T05:41:55.516638+00:00",
+  "progress": [
+    {
+      "phase": "initialization",
+      "time_s": 1.0,
+      "point_converged": true,
+      "max_iterations": 6,
+      "time_dW_kg_s": 0.2037700777076566,
+      "time_dP_Pa": 642899.3201571647,
+      "time_dH_J_kg": 695941.5584840125,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 6.721030681999807e-08,
+      "point_dP_Pa": 0.09969304781407118,
+      "point_dH_J_kg": 0.06733244191855192,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 2.0,
+      "point_converged": true,
+      "max_iterations": 5,
+      "time_dW_kg_s": 0.19347140495515536,
+      "time_dP_Pa": 473253.6242906945,
+      "time_dH_J_kg": 461381.9084677971,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 1.0925341853429416e-07,
+      "point_dP_Pa": 0.09928233083337545,
+      "point_dH_J_kg": 0.020149533404037356,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 3.0,
+      "point_converged": true,
+      "max_iterations": 4,
+      "time_dW_kg_s": 0.009188801813519956,
+      "time_dP_Pa": 11735.726564452052,
+      "time_dH_J_kg": 106242.71409007348,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 1.3141807087002633e-08,
+      "point_dP_Pa": 0.09878094028681517,
+      "point_dH_J_kg": 0.0030030561611056328,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 4.0,
+      "point_converged": true,
+      "max_iterations": 3,
+      "time_dW_kg_s": 0.0009777397550650574,
+      "time_dP_Pa": 1250.4378940146416,
+      "time_dH_J_kg": 16403.016713690013,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 6.286328199656133e-08,
+      "point_dP_Pa": 0.03837671224027872,
+      "point_dH_J_kg": 0.01408441737294197,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 5.0,
+      "point_converged": true,
+      "max_iterations": 3,
+      "time_dW_kg_s": 0.00011758703018602268,
+      "time_dP_Pa": 145.12801650259644,
+      "time_dH_J_kg": 2087.2687418600544,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 2.5972526324080647e-08,
+      "point_dP_Pa": 0.08429548237472773,
+      "point_dH_J_kg": 0.028592251474037766,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 6.0,
+      "point_converged": true,
+      "max_iterations": 3,
+      "time_dW_kg_s": 1.3094324281329173e-05,
+      "time_dP_Pa": 15.219901426695287,
+      "time_dH_J_kg": 234.1283517680131,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 5.654947708710889e-08,
+      "point_dP_Pa": 0.09800112899392843,
+      "point_dH_J_kg": 0.09929798869416118,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 7.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dW_kg_s": 1.3188051576629167e-06,
+      "time_dP_Pa": 1.4369400311261415,
+      "time_dH_J_kg": 23.58867635484785,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 3.2700509314254056e-08,
+      "point_dP_Pa": 0.027247940190136433,
+      "point_dH_J_kg": 0.09093839535489678,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 8.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dW_kg_s": 1.202897006030712e-07,
+      "time_dP_Pa": 0.12310620956122875,
+      "time_dH_J_kg": 2.1507741985842586,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 1.3100487819550644e-08,
+      "point_dP_Pa": 0.0024630604311823845,
+      "point_dH_J_kg": 0.0918365940451622,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 9.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dW_kg_s": 9.944415846341315e-09,
+      "time_dP_Pa": 0.011389153078198433,
+      "time_dH_J_kg": 0.17784100491553545,
+      "time_dWV_kg_s": 0.0,
+      "time_dHV_J_kg": 0.0,
+      "point_dW_kg_s": 5.508473524540314e-09,
+      "point_dP_Pa": 0.00605646800249815,
+      "point_dH_J_kg": 0.09913064446300268,
+      "framework": "Mixture precursor"
+    },
+    {
+      "phase": "initialization",
+      "time_s": 1.0,
+      "point_converged": true,
+      "max_iterations": 37,
+      "time_dWL_kg_s": 0.0031645648064718354,
+      "time_dWV_kg_s": 0.001986895171472925,
+      "time_dUL_m_s": 3.032264214733427,
+      "time_dUV_m_s": 2.22426686479011,
+      "time_dHL_J_kg": 44950.98032497289,
+      "time_dHV_J_kg": 1.3969838619232178e-09,
+      "point_DWL_kg_s": 4.0034715070857985e-08,
+      "point_DUL_m_s": 9.941634350951745e-05,
+      "point_DHL_J_kg": 0.06269634142518044,
+      "point_DWV_kg_s": 2.4340324533038762e-08,
+      "point_DUV_m_s": 9.11422740648149e-05,
+      "point_DHV_J_kg": 4.656612873077393e-10
+    },
+    {
+      "phase": "initialization",
+      "time_s": 2.0,
+      "point_converged": true,
+      "max_iterations": 28,
+      "time_dWL_kg_s": 0.0014611356535892406,
+      "time_dWV_kg_s": 0.00041354651505268875,
+      "time_dUL_m_s": 0.6028516134938222,
+      "time_dUV_m_s": 0.6012458306602966,
+      "time_dHL_J_kg": 18551.192119715502,
+      "time_dHV_J_kg": 9.313225746154785e-10,
+      "point_DWL_kg_s": 1.1129034382939551e-07,
+      "point_DUL_m_s": 9.901555330671385e-05,
+      "point_DHL_J_kg": 0.09770766412839293,
+      "point_DWV_kg_s": 1.006749439261094e-07,
+      "point_DUV_m_s": 9.713301007518993e-05,
+      "point_DHV_J_kg": 4.656612873077393e-10
+    },
+    {
+      "phase": "initialization",
+      "time_s": 3.0,
+      "point_converged": true,
+      "max_iterations": 19,
+      "time_dWL_kg_s": 0.0007672147720348584,
+      "time_dWV_kg_s": 1.8952791524324414e-05,
+      "time_dUL_m_s": 0.2891229324825346,
+      "time_dUV_m_s": 0.29593796294889785,
+      "time_dHL_J_kg": 3846.4828121478204,
+      "time_dHV_J_kg": 0.0,
+      "point_DWL_kg_s": 1.1058276543074452e-07,
+      "point_DUL_m_s": 9.876706416989123e-05,
+      "point_DHL_J_kg": 0.07864890596829355,
+      "point_DWV_kg_s": 1.2411201813933986e-07,
+      "point_DUV_m_s": 9.758285604810624e-05,
+      "point_DHV_J_kg": 4.656612873077393e-10
+    },
+    {
+      "phase": "initialization",
+      "time_s": 4.0,
+      "point_converged": true,
+      "max_iterations": 10,
+      "time_dWL_kg_s": 0.00023239238303403298,
+      "time_dWV_kg_s": 4.031222792605371e-05,
+      "time_dUL_m_s": 0.07632769484535729,
+      "time_dUV_m_s": 0.07815177662624251,
+      "time_dHL_J_kg": 370.0180197437294,
+      "time_dHV_J_kg": 9.313225746154785e-10,
+      "point_DWL_kg_s": 4.6854007063057423e-08,
+      "point_DUL_m_s": 9.86705057099968e-05,
+      "point_DHL_J_kg": 0.09290614305064082,
+      "point_DWV_kg_s": 9.829895542511069e-08,
+      "point_DUV_m_s": 9.768742094617977e-05,
+      "point_DHV_J_kg": 4.656612873077393e-10
+    },
+    {
+      "phase": "initialization",
+      "time_s": 5.0,
+      "point_converged": true,
+      "max_iterations": 8,
+      "time_dWL_kg_s": 4.6719801449761345e-05,
+      "time_dWV_kg_s": 1.30272102248849e-05,
+      "time_dUL_m_s": 0.013480629933944499,
+      "time_dUV_m_s": 0.013785823240844763,
+      "time_dHL_J_kg": 55.23119831527583,
+      "time_dHV_J_kg": 9.313225746154785e-10,
+      "point_DWL_kg_s": 2.931733585065377e-08,
+      "point_DUL_m_s": 9.99284722915661e-05,
+      "point_DHL_J_kg": 0.047559305327013135,
+      "point_DWV_kg_s": 3.535696372226199e-08,
+      "point_DUV_m_s": 9.744279965318015e-05,
+      "point_DHV_J_kg": 0.0
+    },
+    {
+      "phase": "initialization",
+      "time_s": 6.0,
+      "point_converged": true,
+      "max_iterations": 4,
+      "time_dWL_kg_s": 7.051804315032217e-06,
+      "time_dWV_kg_s": 1.919639280589802e-06,
+      "time_dUL_m_s": 0.0014335495798256659,
+      "time_dUV_m_s": 0.0014561249310212077,
+      "time_dHL_J_kg": 11.256136577343568,
+      "time_dHV_J_kg": 4.656612873077393e-10,
+      "point_DWL_kg_s": 1.5566961393542744e-08,
+      "point_DUL_m_s": 9.957925321657513e-05,
+      "point_DHL_J_kg": 0.06547066872008145,
+      "point_DWV_kg_s": 5.295471926930473e-08,
+      "point_DUV_m_s": 9.925051242021254e-05,
+      "point_DHV_J_kg": 4.656612873077393e-10
+    },
+    {
+      "phase": "initialization",
+      "time_s": 7.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dWL_kg_s": 9.186482678447128e-07,
+      "time_dWV_kg_s": 1.858837254606338e-07,
+      "time_dUL_m_s": 0.0002820386336424008,
+      "time_dUV_m_s": 0.00028617516197826376,
+      "time_dHL_J_kg": 1.8446629950776696,
+      "time_dHV_J_kg": 9.313225746154785e-10,
+      "point_DWL_kg_s": 5.234966635493665e-07,
+      "point_DUL_m_s": 9.419019792034078e-05,
+      "point_DHL_J_kg": 0.09612295450642705,
+      "point_DWV_kg_s": 5.148562161327863e-08,
+      "point_DUV_m_s": 9.622820476806737e-05,
+      "point_DHV_J_kg": 9.313225746154785e-10
+    },
+    {
+      "phase": "initialization",
+      "time_s": 8.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dWL_kg_s": 1.0328641200652022e-07,
+      "time_dWV_kg_s": 1.5537986303160167e-07,
+      "time_dUL_m_s": 0.0002797639036131727,
+      "time_dUV_m_s": 0.000286114774123547,
+      "time_dHL_J_kg": 2.8786727697588503,
+      "time_dHV_J_kg": 9.313225746154785e-10,
+      "point_DWL_kg_s": 2.4394359074420002e-08,
+      "point_DUL_m_s": 9.397377950648433e-05,
+      "point_DHL_J_kg": 0.09753133519552648,
+      "point_DWV_kg_s": 3.5330389475118906e-08,
+      "point_DUV_m_s": 9.172292990200503e-05,
+      "point_DHV_J_kg": 4.656612873077393e-10
+    },
+    {
+      "phase": "initialization",
+      "time_s": 9.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dWL_kg_s": 4.32333582822686e-08,
+      "time_dWV_kg_s": 1.3425190409366294e-07,
+      "time_dUL_m_s": 0.00027237495820031654,
+      "time_dUV_m_s": 0.0002762290795494948,
+      "time_dHL_J_kg": 2.7333885992411524,
+      "time_dHV_J_kg": 9.313225746154785e-10,
+      "point_DWL_kg_s": 5.242179690334581e-09,
+      "point_DUL_m_s": 9.12949234894711e-05,
+      "point_DHL_J_kg": 0.09618190722540021,
+      "point_DWV_kg_s": 3.0388927901858764e-08,
+      "point_DUV_m_s": 8.819263539905364e-05,
+      "point_DHV_J_kg": 9.313225746154785e-10
+    },
+    {
+      "phase": "initialization",
+      "time_s": 10.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dWL_kg_s": 3.806731808247976e-08,
+      "time_dWV_kg_s": 1.2206797188329954e-07,
+      "time_dUL_m_s": 0.00026589753095862534,
+      "time_dUV_m_s": 0.00026888767376931355,
+      "time_dHL_J_kg": 2.308826304739341,
+      "time_dHV_J_kg": 9.313225746154785e-10,
+      "point_DWL_kg_s": 9.562932404283409e-09,
+      "point_DUL_m_s": 8.902219578743598e-05,
+      "point_DHL_J_kg": 0.09872290166094899,
+      "point_DWV_kg_s": 2.7613783856739182e-08,
+      "point_DUV_m_s": 8.578126323754987e-05,
+      "point_DHV_J_kg": 9.313225746154785e-10
+    },
+    {
+      "phase": "initialization",
+      "time_s": 11.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dWL_kg_s": 3.318889220393917e-08,
+      "time_dWV_kg_s": 1.1292219086189714e-07,
+      "time_dUL_m_s": 0.0002590033273044412,
+      "time_dUV_m_s": 0.00026188894791800976,
+      "time_dHL_J_kg": 1.8474537525326014,
+      "time_dHV_J_kg": 4.656612873077393e-10,
+      "point_DWL_kg_s": 1.1717084136275702e-08,
+      "point_DUL_m_s": 8.664798626512038e-05,
+      "point_DHL_J_kg": 0.09778510732576251,
+      "point_DWV_kg_s": 2.5532122194249496e-08,
+      "point_DUV_m_s": 8.444877307312026e-05,
+      "point_DHV_J_kg": 4.656612873077393e-10
+    },
+    {
+      "phase": "initialization",
+      "time_s": 12.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dWL_kg_s": 2.279454479336973e-08,
+      "time_dWV_kg_s": 1.028519050205734e-07,
+      "time_dUL_m_s": 0.00025457572239773185,
+      "time_dUV_m_s": 0.0002571986003196969,
+      "time_dHL_J_kg": 1.435926522128284,
+      "time_dHV_J_kg": 4.656612873077393e-10,
+      "point_DWL_kg_s": 5.6607446993761634e-09,
+      "point_DUL_m_s": 8.502891894934805e-05,
+      "point_DHL_J_kg": 0.09871057723648846,
+      "point_DWV_kg_s": 2.323403409942859e-08,
+      "point_DUV_m_s": 8.412315958139516e-05,
+      "point_DHV_J_kg": 4.656612873077393e-10
+    },
+    {
+      "phase": "initialization",
+      "time_s": 13.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dWL_kg_s": 1.7878782204716615e-08,
+      "time_dWV_kg_s": 8.964124292853981e-08,
+      "time_dUL_m_s": 0.00025168422772736676,
+      "time_dUV_m_s": 0.0002521802265711415,
+      "time_dHL_J_kg": 1.0501685740891844,
+      "time_dHV_J_kg": 4.656612873077393e-10,
+      "point_DWL_kg_s": 6.258464840119826e-09,
+      "point_DUL_m_s": 8.394917808729474e-05,
+      "point_DHL_J_kg": 0.09786630840972066,
+      "point_DWV_kg_s": 2.0211724349739058e-08,
+      "point_DUV_m_s": 8.308483525709676e-05,
+      "point_DHV_J_kg": 4.656612873077393e-10
+    },
+    {
+      "phase": "initialization",
+      "time_s": 14.0,
+      "point_converged": true,
+      "max_iterations": 2,
+      "time_dWL_kg_s": 1.1178591177718467e-08,
+      "time_dWV_kg_s": 7.341076674327596e-08,
+      "time_dUL_m_s": 0.0002476066281325018,
+      "time_dUV_m_s": 0.0002476028580851164,
+      "time_dHL_J_kg": 0.7512369658797979,
+      "time_dHV_J_kg": 4.656612873077393e-10,
+      "point_DWL_kg_s": 2.6711660106037982e-09,
+      "point_DUL_m_s": 8.255870592321912e-05,
+      "point_DHL_J_kg": 0.09898276650346816,
+      "point_DWV_kg_s": 1.649387794400159e-08,
+      "point_DUV_m_s": 8.175793832521094e-05,
+      "point_DHV_J_kg": 4.656612873077393e-10
+    }
+  ],
+  "files": [
+    {
+      "name": "submitted_inputs.json",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/submitted_inputs.json"
+    },
+    {
+      "name": "results.zip",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/results.zip"
+    },
+    {
+      "name": "output/axial.png",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/output/axial.png"
+    },
+    {
+      "name": "output/convergence.csv",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/output/convergence.csv"
+    },
+    {
+      "name": "output/gui_verification.json",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/output/gui_verification.json"
+    },
+    {
+      "name": "output/initialization.npz",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/output/initialization.npz"
+    },
+    {
+      "name": "output/metadata.json",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/output/metadata.json"
+    },
+    {
+      "name": "output/mixture/axial.png",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/output/mixture/axial.png"
+    },
+    {
+      "name": "output/mixture/convergence.csv",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/output/mixture/convergence.csv"
+    },
+    {
+      "name": "output/mixture/initialization.npz",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/output/mixture/initialization.npz"
+    },
+    {
+      "name": "output/mixture/inputs/00-submitted_inputs.json",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/output/mixture/inputs/00-submitted_inputs.json"
+    },
+    {
+      "name": "output/mixture/metadata.json",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/output/mixture/metadata.json"
+    },
+    {
+      "name": "output/mixture/profiles.csv",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/output/mixture/profiles.csv"
+    },
+    {
+      "name": "output/mixture/results.npz",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/output/mixture/results.npz"
+    },
+    {
+      "name": "output/mixture/wall_profiles.csv",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/output/mixture/wall_profiles.csv"
+    },
+    {
+      "name": "output/profiles.csv",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/output/profiles.csv"
+    },
+    {
+      "name": "output/results.npz",
+      "url": "/files/1c323b6de67e4da59b5f634cfc01b2e8/output/results.npz"
+    }
+  ],
+  "converged": true,
+  "error": null,
+  "is_reference": true,
+  "changes": [],
+  "change_count": 0,
+  "reference": {
+    "status": "passed",
+    "message": "Archived steady and initialization profiles agree at rtol 1e-8, atol 0.",
+    "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+    "rtol": 1e-08,
+    "atol": 0.0,
+    "coordinate_atol": 1e-12,
+    "records": [
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 1.249000902703301e-16,
+        "max_relative_error": 2.6055683547198504e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "liquid.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 3.872457909892546e-13,
+        "max_relative_error": 2.2890765215091135e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "liquid.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 3.958120942115784e-09,
+        "max_relative_error": 3.3309649660241674e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "liquid.H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 7.45931094670027e-17,
+        "max_relative_error": 5.752390237678239e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "vapor.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 5.364597654988756e-13,
+        "max_relative_error": 4.14420493481828e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "vapor.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          1,
+          101
+        ],
+        "max_absolute_error": 9.313225746154785e-10,
+        "max_relative_error": 3.3445596757801435e-16,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "physical",
+        "key": "vapor.H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          15,
+          101
+        ],
+        "max_absolute_error": 1.942890293094024e-16,
+        "max_relative_error": 5.002782586890433e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "liquid.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          15,
+          101
+        ],
+        "max_absolute_error": 8.419931418757187e-13,
+        "max_relative_error": 4.157837187883256e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "liquid.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          15,
+          101
+        ],
+        "max_absolute_error": 3.958120942115784e-09,
+        "max_relative_error": 3.3309649660241674e-15,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "liquid.H",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "kg/s",
+        "shape": [
+          15,
+          101
+        ],
+        "max_absolute_error": 1.3877787807814457e-16,
+        "max_relative_error": 6.222142509110722e-13,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "vapor.W",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "m/s",
+        "shape": [
+          15,
+          101
+        ],
+        "max_absolute_error": 5.790923296444817e-13,
+        "max_relative_error": 4.144289250588881e-14,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "vapor.U",
+        "group": "core"
+      },
+      {
+        "passed": true,
+        "unit": "J/kg",
+        "shape": [
+          15,
+          101
+        ],
+        "max_absolute_error": 9.313225746154785e-10,
+        "max_relative_error": 3.3445596757801435e-16,
+        "nonmatching_reference_zeros": 0,
+        "failed_values": 0,
+        "dataset": "initialization",
+        "key": "vapor.H",
+        "group": "core"
+      }
+    ],
+    "max_relative_error": 6.222142509110722e-13,
+    "experimental_validation": "not performed",
+    "limitations": [
+      "The archive producer's MATLAB, CoolProp and source versions are unknown.",
+      "Agreement does not establish physical consistency or full OpenSTREAM parity.",
+      "Supplementary iteration/diagnostic disagreements remain documented separately."
+    ],
+    "archive": {
+      "file": "tutorial1_TwoFluidSolver.mat",
+      "sha256": "40f0c9a8f080d6ffe3887947dc5794eb756b5fa0e2ce650ff37a88003e69798d",
+      "bytes": 418905,
+      "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:23 2026"
+    },
+    "producer_metadata": {
+      "matlab_version": null,
+      "coolprop_version": null,
+      "source_commit": null
+    }
+  },
+  "physical": {
+    "status": "failed",
+    "diagnostics": {
+      "physical_consistency": false,
+      "area_closure_relative_tolerance": 1e-06,
+      "max_area_closure_relative": 0.4105610706900207,
+      "outlet_area_closure_relative": 0.03467311857853006,
+      "mass_balance_residual_kg_s": -3.0761341615614946e-07,
+      "energy_balance_residual_W": 30.049663123339997,
+      "max_source_energy_identity_residual_W_m": 7.275957614183426e-12,
+      "by_time": [
+        {
+          "time_s": 0.0,
+          "mass_balance_residual_kg_s": -3.0761341615614946e-07,
+          "energy_balance_residual_W": 30.049663123339997,
+          "max_area_closure_relative": 0.4105610706900207,
+          "outlet_area_closure_relative": 0.03467311857853006,
+          "max_source_energy_identity_residual_W_m": 7.275957614183426e-12,
+          "steady_discrete_product_term_W": 30.886881821306385
+        }
+      ],
+      "limitation": "Numerical convergence does not establish physical area closure. Agreement with an upstream reference is a separate case-specific check; see the baseline verification report."
+    },
+    "message": "Physical consistency checks failed. Inspect diagnostics; numerical agreement does not establish physical validity."
+  },
+  "finished_at": "2026-11-15T05:42:07.667361+00:00"
+}

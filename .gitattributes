@@ -6,3 +6,5 @@ references/paper/lecorre2025/NURETH21_2025_original.m -text
 references/paper/lecorre2025/** -text
 outputs/validation/lecorre-2025-01/** -text
 output/pdf/LeCorre_2025_Reports/** -text
+output/pdf/LeCorre_2025_Reports_02/** -text
+outputs/verification/annular-policy-01/** -text

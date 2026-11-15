@@ -1,0 +1,191 @@
+[
+  {
+    "entry_id": 1,
+    "measured_base_thickness_m": 0.00025,
+    "correlation_base_thickness_m": 0.00022567676026633823,
+    "measured_film_flow_kg_s": 0.062989,
+    "vapor_Re": 140921.36089924682,
+    "measured_film_Re": 43937.24609657675,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 2,
+    "measured_base_thickness_m": 0.00015,
+    "correlation_base_thickness_m": 0.00015635791978922274,
+    "measured_film_flow_kg_s": 0.054664,
+    "vapor_Re": 191246.97304684707,
+    "measured_film_Re": 38130.238940501855,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 3,
+    "measured_base_thickness_m": 0.0001,
+    "correlation_base_thickness_m": 0.00011160431008409829,
+    "measured_film_flow_kg_s": 0.04681,
+    "vapor_Re": 241572.58522788543,
+    "measured_film_Re": 32651.772369473365,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 4,
+    "measured_base_thickness_m": 8e-05,
+    "correlation_base_thickness_m": 8.383014272319373e-05,
+    "measured_film_flow_kg_s": 0.040841,
+    "vapor_Re": 291898.1973754864,
+    "measured_film_Re": 28488.165677027595,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 5,
+    "measured_base_thickness_m": 6e-05,
+    "correlation_base_thickness_m": 6.016125235556035e-05,
+    "measured_film_flow_kg_s": 0.033772,
+    "vapor_Re": 342223.8095230847,
+    "measured_film_Re": 23557.266747743102,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 6,
+    "measured_base_thickness_m": 5e-05,
+    "correlation_base_thickness_m": 4.65441031267054e-05,
+    "measured_film_flow_kg_s": 0.029374,
+    "vapor_Re": 392549.42167068634,
+    "measured_film_Re": 20489.492877182453,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 7,
+    "measured_base_thickness_m": 0.00025,
+    "correlation_base_thickness_m": 0.00024140018748912092,
+    "measured_film_flow_kg_s": 0.081053,
+    "vapor_Re": 204316.8706029278,
+    "measured_film_Re": 56537.57970226286,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 8,
+    "measured_base_thickness_m": 0.00017,
+    "correlation_base_thickness_m": 0.00016727357500790664,
+    "measured_film_flow_kg_s": 0.070686,
+    "vapor_Re": 279805.2888243266,
+    "measured_film_Re": 49306.199139256445,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 9,
+    "measured_base_thickness_m": 0.00011,
+    "correlation_base_thickness_m": 0.00011625588038062026,
+    "measured_film_flow_kg_s": 0.059376,
+    "vapor_Re": 355293.7070958858,
+    "measured_film_Re": 41417.039867760104,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 10,
+    "measured_base_thickness_m": 9e-05,
+    "correlation_base_thickness_m": 6.702308677567538e-05,
+    "measured_film_flow_kg_s": 0.041705,
+    "vapor_Re": 430782.1253172848,
+    "measured_film_Re": 29090.838852144556,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 11,
+    "measured_base_thickness_m": 5e-05,
+    "correlation_base_thickness_m": 4.669339102010156e-05,
+    "measured_film_flow_kg_s": 0.033694,
+    "vapor_Re": 506270.5435386861,
+    "measured_film_Re": 23502.858752767264,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 12,
+    "measured_base_thickness_m": 4.5e-05,
+    "correlation_base_thickness_m": 2.8720957190932188e-05,
+    "measured_film_flow_kg_s": 0.024269,
+    "vapor_Re": 581758.9617600911,
+    "measured_film_Re": 16928.559359853643,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 13,
+    "measured_base_thickness_m": 0.00027,
+    "correlation_base_thickness_m": 0.00023782993156053827,
+    "measured_film_flow_kg_s": 0.092363,
+    "vapor_Re": 267712.3803066062,
+    "measured_film_Re": 64426.73897375921,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 14,
+    "measured_base_thickness_m": 0.00017,
+    "correlation_base_thickness_m": 0.00014785806753652778,
+    "measured_film_flow_kg_s": 0.073827,
+    "vapor_Re": 368363.6046018062,
+    "measured_film_Re": 51497.16724462957,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 15,
+    "measured_base_thickness_m": 0.0001,
+    "correlation_base_thickness_m": 8.136938866704459e-05,
+    "measured_film_flow_kg_s": 0.051208,
+    "vapor_Re": 469014.82896388706,
+    "measured_film_Re": 35719.54624003401,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 16,
+    "measured_base_thickness_m": 5e-05,
+    "correlation_base_thickness_m": 4.8602229547442706e-05,
+    "measured_film_flow_kg_s": 0.037071,
+    "vapor_Re": 569666.0532590853,
+    "measured_film_Re": 25858.445919862148,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 17,
+    "measured_base_thickness_m": 3.5e-05,
+    "correlation_base_thickness_m": 2.6127727711674163e-05,
+    "measured_film_flow_kg_s": 0.02419,
+    "vapor_Re": 670317.277554285,
+    "measured_film_Re": 16873.453826480683,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 18,
+    "measured_base_thickness_m": 2.5e-05,
+    "correlation_base_thickness_m": 1.3145912430427116e-05,
+    "measured_film_flow_kg_s": 0.014765,
+    "vapor_Re": 770968.5018494852,
+    "measured_film_Re": 10299.154433567064,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 19,
+    "measured_base_thickness_m": 0.00016,
+    "correlation_base_thickness_m": 0.0001759357556337446,
+    "measured_film_flow_kg_s": 0.10242,
+    "vapor_Re": 521294.41912132484,
+    "measured_film_Re": 71441.88263365653,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 20,
+    "measured_base_thickness_m": 8e-05,
+    "correlation_base_thickness_m": 6.770949891826967e-05,
+    "measured_film_flow_kg_s": 0.055292,
+    "vapor_Re": 722596.8677117247,
+    "measured_film_Re": 38568.29305389706,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  },
+  {
+    "entry_id": 21,
+    "measured_base_thickness_m": 3e-05,
+    "correlation_base_thickness_m": 2.848810230899444e-05,
+    "measured_film_flow_kg_s": 0.030788,
+    "vapor_Re": 923899.3164358702,
+    "measured_film_Re": 21475.81217071878,
+    "note": "Le Corre2022 eq55 correlation with measured film flow; not an independent native solver prediction."
+  }
+]

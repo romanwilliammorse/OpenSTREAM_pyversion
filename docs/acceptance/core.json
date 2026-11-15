@@ -95,9 +95,11 @@
     "evidence": [
       "docs/ALL_BASELINES_VERIFICATION.md",
       "outputs/baseline-parity-02/ThreeField/comparison/comparison.json",
-      "outputs/baseline-parity-02/summary.json"
+      "outputs/baseline-parity-02/summary.json",
+      "docs/LECORRE_PHYSICAL_REVIEW.md",
+      "outputs/verification/annular-policy-01/reassessment.json"
     ],
-    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy.",
+    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. Its retained physical failure concerns separately recorded clipped-cell mass residuals (CORE-027), not area alone.",
     "priority": "P1",
     "acceptance_criteria": [
       "Compare every original core value at all matching nodes using unchanged rtol=1e-8, atol=0 and exact reference zeros.",
@@ -130,9 +132,11 @@
     "evidence": [
       "docs/ALL_BASELINES_VERIFICATION.md",
       "outputs/baseline-parity-02/FourField/comparison/comparison.json",
-      "outputs/baseline-parity-02/summary.json"
+      "outputs/baseline-parity-02/summary.json",
+      "docs/LECORRE_PHYSICAL_REVIEW.md",
+      "outputs/verification/annular-policy-01/reassessment.json"
     ],
-    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy.",
+    "gap": "Selected-case agreement only. Archive producer source, MATLAB and CoolProp versions remain unknown; the result does not cover other closures or establish physical accuracy. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged. Its retained physical failure concerns separately recorded base/wave mass residuals (CORE-028), not area alone.",
     "priority": "P1",
     "acceptance_criteria": [
       "Compare every original core value at all matching nodes using unchanged rtol=1e-8, atol=0 and exact reference zeros.",
@@ -306,9 +310,11 @@
     "evidence": [
       "tools/verify_threefield_transient.py",
       "outputs/threefield_transient_audited/verification.json",
-      "docs/threefield_transient.md"
+      "docs/threefield_transient.md",
+      "docs/LECORRE_PHYSICAL_REVIEW.md",
+      "outputs/verification/annular-policy-01/reassessment.json"
     ],
-    "gap": "No MATLAB transient reference. Maximum fully annular area discrepancy is 11.2004%; fixed-annular-domain mass residual is 0.00746082 kg/s.",
+    "gap": "No MATLAB transient reference. Fully annular area discrepancy 11.2004% is now supplemental only; the separate fixed-annular-domain mass residual 0.00746082 kg/s remains the physical failure evidence. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged.",
     "priority": "P0",
     "acceptance_criteria": [
       "Compare film/drop W/U/H, mixture precursor and source terms over every state.",
@@ -339,9 +345,11 @@
     "evidence": [
       "tools/verify_fourfield.py",
       "outputs/fourfield-transient-audited/verification.json",
-      "docs/fourfield_notes.md"
+      "docs/fourfield_notes.md",
+      "docs/LECORRE_PHYSICAL_REVIEW.md",
+      "outputs/verification/annular-policy-01/reassessment.json"
     ],
-    "gap": "No MATLAB transient reference. Fully annular area discrepancy reaches 15.5181%; fixed-annular mass residual is 0.00642295 kg/s.",
+    "gap": "No MATLAB transient reference. Fully annular area discrepancy 15.5181% is now supplemental only; the separate fixed-annular mass residual 0.00642295 kg/s remains the physical failure evidence. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged.",
     "priority": "P0",
     "acceptance_criteria": [
       "Compare actual film.base, film.wave and drop W/U/H plus frequency, not the erroneous upstream basefilm traversal alone.",
@@ -688,13 +696,15 @@
     "evidence": [
       "tests/test_twofluid.py",
       "outputs/twofluid_variant_checks.json",
-      "docs/twofluid_baseline_audit.md"
+      "docs/twofluid_baseline_audit.md",
+      "docs/LECORRE_PHYSICAL_REVIEW.md",
+      "outputs/verification/annular-policy-01/reassessment.json"
     ],
-    "gap": "Selected original momentum tutorials and slip identities tested. Other option combinations, regime transitions and dimensional balance at clipped bounds lack MATLAB references.",
+    "gap": "Selected original momentum tutorials and slip identities tested. Other option combinations, regime transitions and dimensional balance at clipped bounds lack MATLAB references. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged.",
     "priority": "P1",
     "acceptance_criteria": [
       "Verify phase velocities, material acceleration and conservative force sums in their proper units.",
-      "Report reconstruction masks and clamp effects; normalized void summing to one cannot substitute for occupied-area closure."
+      "Report reconstruction masks and clamp effects. Occupied-area acceptance for Mixture/TwoFluid is unchanged; for ThreeField/FourField the phase-volume residual is supplemental information only, not a required closure or acceptance criterion."
     ],
     "next_action": "Construct legal pairwise momentum/relative-velocity cases with unclipped and constrained states.",
     "selectors": [
@@ -985,7 +995,7 @@
     "id": "CORE-027",
     "track": "numerical_verification",
     "component": "ThreeField physical checks",
-    "requirement": "Resolve annular occupied-area and dryout mass residuals",
+    "requirement": "Assess source-equation dryout mass residuals; report annular volume diagnostics",
     "scope": "Original steady sample, fully annular nodes only; separately inspect wet, clipped and dry-film cells.",
     "upstream": [
       "upstream/+Solvers/+ThreeField/@ThreeFieldSolver/solve.m",
@@ -1005,22 +1015,24 @@
       "docs/ALL_BASELINES_VERIFICATION.md",
       "docs/annular_reference_audit.md",
       "docs/threefield_review.md",
-      "tests/test_threefield.py"
+      "tests/test_threefield.py",
+      "docs/LECORRE_PHYSICAL_REVIEW.md",
+      "outputs/verification/annular-policy-01/reassessment.json"
     ],
-    "gap": "Archived fully annular area discrepancy is 7.485259%, also reproduced natively. POSFILM clipping leaves raw mass residuals; bookkeeping partitions do not prove equation balance.",
+    "gap": "Archived fully annular phase-volume discrepancy is 7.485259%, also reproduced natively, and is now supplemental information. The retained physical failure is the separately documented POSFILM-clipped raw mass residual; bookkeeping partitions do not prove equation balance. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged.",
     "priority": "P0",
     "acceptance_criteria": [
-      "Keep failed area acceptance and raw clipped/unclipped residuals visible.",
-      "Do not alter velocity/area algebra to enforce a pass; separately approve and verify any changed formulation."
+      "Report phase-volume residuals without an annular acceptance threshold; retain raw clipped/unclipped source mass residuals as separate evidence.",
+      "Do not alter velocity/area algebra or select an additional closure to enforce volume equality; preserve the requested governing equations and model settings."
     ],
-    "next_action": "Attribute area mismatch and clipped-cell mass defects using independent inventories and a source-equivalent trace.",
+    "next_action": "Trace clipped-cell mass residuals against the source update and independent reference arrays; keep phase-volume diagnostics informational and preserve source equations.",
     "selectors": []
   },
   {
     "id": "CORE-028",
     "track": "numerical_verification",
     "component": "FourField physical checks",
-    "requirement": "Resolve annular occupied-area and compensating clip residuals",
+    "requirement": "Assess source-equation compensating-clip residuals; report annular volume diagnostics",
     "scope": "Original steady sample, fully annular nodes; base/wave/drop inventories with source film aggregation.",
     "upstream": [
       "upstream/+Solvers/+FourField/Film.m",
@@ -1041,15 +1053,17 @@
       "docs/ALL_BASELINES_VERIFICATION.md",
       "docs/annular_reference_audit.md",
       "docs/fourfield_notes.md",
-      "tests/test_fourfield.py"
+      "tests/test_fourfield.py",
+      "docs/LECORRE_PHYSICAL_REVIEW.md",
+      "outputs/verification/annular-policy-01/reassessment.json"
     ],
-    "gap": "Archived fully annular area discrepancy is 11.241052%, reproduced natively. Base and wave raw pseudo-time mass residuals reach about 4.31e-4 and 4.24e-4 kg/s near clipping.",
+    "gap": "Archived fully annular phase-volume discrepancy is 11.241052%, reproduced natively, and is now supplemental information. The retained physical failure is the separately documented base/wave raw pseudo-time mass residuals of about 4.31e-4 and 4.24e-4 kg/s near clipping. Current policy, explicitly directed by R. W. Morse on 2026-11-14: ThreeField/FourField phase-volume closure is supplemental only, with no pass/fail role; original receipts remain immutable. Mixture/TwoFluid policy and other source-equation/numerical criteria are unchanged.",
     "priority": "P0",
     "acceptance_criteria": [
-      "Check actual sum of phase occupied areas, not normalized fractions or mass partitions alone.",
-      "Report both-fields-positive annular residuals separately from wet-but-compensated and dryout cells; preserve failed compatibility outcomes."
+      "Report phase-volume residuals as supplemental information, without an annular acceptance threshold or additional model constraint.",
+      "Report both-fields-positive annular source-equation residuals separately from wet-but-compensated and dryout cells; preserve separate numerical and MATLAB compatibility outcomes."
     ],
-    "next_action": "Trace field inventories and base-compensation updates; define acceptable configuration limits before experimental claims.",
+    "next_action": "Trace base-compensation mass residuals against the source update and independent arrays; retain reported inventories without imposing another closure model.",
     "selectors": []
   },
   {

@@ -5,7 +5,31 @@
 // state misalignment, and silent interpretation of unknown input schemas.
 const test = require("node:test");
 const assert = require("node:assert/strict");
-const {inputCaseName, runCaseName, primaryQuantityFields, referenceIndexForTime, assertInputDocumentVersion, makeTraces} = require("../src/openstream/gui_static/app.js");
+const {inputCaseName, runCaseName, physicalDisplay, primaryQuantityFields, referenceIndexForTime, assertInputDocumentVersion, makeTraces} = require("../src/openstream/gui_static/app.js");
+
+test("historical annular area flags display as informational without rewriting evidence", () => {
+  const physical = {status: "failed", diagnostics: {physical_consistency: false,
+    area_closure_relative_tolerance: 1e-6, max_unblended_annular_area_closure_relative: .1124,
+    inventory_by_time: [{time_s: 0}]}};
+  const original = JSON.stringify(physical);
+  for (const framework of ["ThreeField", "FourField"]) {
+    const shown = physicalDisplay({framework, physical});
+    assert.equal(shown.status, "informational");
+    assert.equal(shown.historicalAreaOnly, true);
+    assert.strictEqual(shown.diagnostics, physical.diagnostics);
+  }
+  assert.equal(JSON.stringify(physical), original);
+  for (const framework of ["Mixture", "TwoFluid"]) assert.strictEqual(physicalDisplay({framework, physical}), physical);
+});
+
+test("annular display preserves unrelated failures and never invents a physical pass", () => {
+  const unknown = {status: "failed", diagnostics: {physical_consistency: false}};
+  assert.strictEqual(physicalDisplay({framework: "FourField", physical: unknown}), unknown);
+  const current = {status: "not_checked", diagnostics: {phase_volume_closure_role: "informational", physical_consistency: null}};
+  assert.equal(physicalDisplay({framework: "FourField", physical: current}).status, "informational");
+  const independent = {...current, status: "failed"};
+  assert.strictEqual(physicalDisplay({framework: "FourField", physical: independent}), independent);
+});
 
 test("case labels use the original name tag without case normalization", () => {
   const submission = {inputs: {model: {ID: "Run0001"}}};

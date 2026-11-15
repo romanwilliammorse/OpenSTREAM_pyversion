@@ -55,10 +55,13 @@ def test_explicit_broken_drag_option():
         ThreeFieldSolver(inputs)
 
 
-def test_annular_area_failure_is_reported_independently_of_convergence(solver):
+def test_annular_area_residual_is_informational_independently_of_convergence(solver):
     diagnostic = solver._physical_inventory_diagnostics()
     assert solver.converged
-    assert diagnostic["physical_consistency"] is False
+    assert diagnostic["physical_consistency"] is None
+    assert diagnostic["phase_volume_closure_role"] == "informational"
+    assert diagnostic["area_closure_relative_tolerance"] is None
+    assert diagnostic["phase_volume_closure_status"] == "reported"
     assert diagnostic["max_unblended_annular_area_closure_relative"] > .01
     film, drop, mix = solver.film[0], solver.drop[0], solver.mixSolver.mixture[0]
     occupied = (film.W/film.U).sum(axis=1)/film.fluid.RHOF+drop.W/(drop.U*film.fluid.RHOF)+mix.vapor.W()/(mix.vapor.U()*film.fluid.RHOV(mix.vapor.H()))
@@ -66,11 +69,13 @@ def test_annular_area_failure_is_reported_independently_of_convergence(solver):
     assert diagnostic["inventory_by_time"][0]["nonfinite_inventory_or_area_node_count"] == 0
 
 
-def test_area_acceptance_respects_annular_applicability(solver, monkeypatch):
+def test_informational_area_diagnostic_respects_annular_applicability(solver, monkeypatch):
     mix = solver.mixSolver.mixture[0]
     monkeypatch.setattr(mix, "sigm_const", np.zeros(solver.NZ))
     diagnostic = solver._physical_inventory_diagnostics()
     assert diagnostic["physical_consistency"] is None
+    assert diagnostic["phase_volume_closure_role"] == "informational"
+    assert diagnostic["phase_volume_closure_status"] == "no_applicable_region"
     assert diagnostic["max_unblended_annular_area_closure_relative"] is None
     assert diagnostic["common_annular_cell_count"] == 0
     assert diagnostic["max_common_annular_cell_mass_residual_kg_s"] is None
@@ -83,9 +88,12 @@ def test_zero_over_zero_annular_inventory_remains_indeterminate(solver, monkeypa
     monkeypatch.setattr(drop, "W", w)
     monkeypatch.setattr(drop, "U", u)
     diagnostic = solver._physical_inventory_diagnostics()
-    assert diagnostic["physical_consistency"] is False
+    assert diagnostic["physical_consistency"] is None
+    assert diagnostic["phase_volume_closure_status"] == "indeterminate"
+    assert diagnostic["phase_volume_closure_role"] == "informational"
     assert diagnostic["inventory_by_time"][0]["nonfinite_unblended_annular_node_count"] == 1
     assert np.isinf(diagnostic["max_unblended_annular_area_closure_relative"])
+    assert solver.converged  # Reporting an indeterminate diagnostic adds no gate.
 
 
 def test_annular_portable_output(solver, tmp_path):

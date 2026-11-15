@@ -37,7 +37,7 @@
     "Solvers.ThreeField.ThreeFieldSolver": "threefield.ThreeFieldSolver",
     "Solvers.FourField.FourFieldSolver": "fourfield.FourFieldSolver"
   },
-  "feature_map_sha256": "cad7d29b89a6440f240ec3f2b7d50745ef627dcdc879de313c3324000369dfbd",
+  "feature_map_sha256": "9a9ec7a2a0ff1cd6c800e21af35348e1de3ca299255f8d247893867c849afd05",
   "upstream_files": {
     "upstream/+Solvers/AbstractField.m": "c1d1a6d49128ee177b8287a9e61f7a5ad623b28d1b997e78a76ca6a1c543c17b",
     "upstream/+Solvers/AbstractFilm.m": "70ef168294006e1925149ee7116f14465ac0bce7e79996ac64cbf64d9e886db2",
@@ -82,13 +82,13 @@
     "src/openstream/fourfield.py": "a648abffacba304f15e83df009e3266dc415b5d13152ebc81ff22a0b4e17f176",
     "src/openstream/gui.py": "3859341e3e223981464d5fb61f93218cde5517f4aaa86b3f84f9abf8384a6ca0",
     "src/openstream/gui_lock.py": "3c097d13ceab0d4b7652ffde80e7bac8b2b7cb32b83927b22e86807238f520a6",
-    "src/openstream/gui_worker.py": "192221ff67f7fc9cbb87138d2a74f1dd063f5d1fd2d063a214a14a8069c45311",
+    "src/openstream/gui_worker.py": "d1e9e27ce0be5b72119ad67ba86df0e8ed9a5cc49fce68ed3ce7b6a5fe441c84",
     "src/openstream/inputs.py": "6ab96551232660bf0bb91254c09624a9e827674fb68bb538fca671798f9e4905",
     "src/openstream/plotting.py": "c20476a4fbded86462479f7bcbe0981e4d9aab3959353c618ff746b25487aafe",
     "src/openstream/properties.py": "3f5fc108e9ac2dee8284d07c78d985941bc76514c432fc84981c57ec9699ba0d",
     "src/openstream/solver.py": "02e7d47fe192b95bef2e9f699b51feb42c2495375ec324cf65d8c2f955ad33b2",
     "src/openstream/tf_fields.py": "29c15747369335b400f05c9810bed052c30fb20f741d52ec745f1adbe2f8677e",
-    "src/openstream/threefield.py": "d2d424579f2c2d481818f470763aa80b6fd649c167f7d11cd442a2e64e59e5c5",
+    "src/openstream/threefield.py": "5943c244bc278f04095b114a0fc792c1c3744576548869f424d0eec449d15942",
     "src/openstream/twofluid.py": "a4bbf3e2d861c7439bfc873e35c7613be36e2d396c2523ac1fb92b490605d112"
   },
   "summary_counts_not_coverage_scores": {

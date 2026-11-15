@@ -26,7 +26,7 @@ remain separate, unfinished requirements.
 | Bartolomey numerical sensitivity | 29 / 32 passed | Three frozen mesh criteria failed and remain open |
 | Wurtz / Sawai native data adapters | 50 / 50 and 8 / 8 records | Source mapping, immutable measurements, missing values, units and domain flags; this is adapter coverage, not validated solver applicability |
 | Le Corre source-default reconstruction | 33 completed runs; 29 natively converged | Four demonstrations, 21 Wurtz cases, four Sawai cases under both stated relaxation settings; physical failures remain |
-| Le Corre complete frozen campaign | 69 / 69 executed; 63 natively converged | Includes 36 mesh/control studies; 65 physical failures and four partially assessed mixture runs retained |
+| Le Corre complete frozen campaign | 69 / 69 executed; 63 natively converged | Original-policy 65 rejection flags preserved; current scope makes 61 annular area flags informational, retains four TwoFluid area rejections and leaves four Mixture assessments unchanged |
 | Le Corre numerical sensitivity | 31 / 36 pairwise comparisons eligible; 9 / 12 common-domain sentinels eligible | Descriptive differences only; source blending changes with mesh, so mesh independence is not established |
 | Published Le Corre curves | Graphical comparisons executed | Figures 3/4, 6 and 7 sampled with explicit reading bounds; original publication runtime and full-precision equivalence remain unresolved; Figure 5 TRACE references unavailable |
 | Experimental comparison against OpenSTREAM-database | Bartolomey, Wurtz and Sawai comparisons executed | Bartolomey: 59 unique measurements. Le Corre selections: 84 present targets, including eight outside the stored channel. Uncertainty-qualified validation and independent holdout status remain unresolved |
@@ -79,6 +79,11 @@ METHOD_COVERAGE.md/json for the scope and limitations.
   object graph, units, inputs and convergence; passing archived core comparison.
 
 ## Scientific limitations measured in native runs
+
+The ThreeField/FourField area numbers below are supplemental diagnostics,
+not convergence or acceptance failures under the current policy. Source-equation
+mass/storage residuals retain their separate scope and evidence. No original
+solver equation, closure model or numerical convergence tolerance was changed.
 
 | Framework | Actual finding |
 |---|---|

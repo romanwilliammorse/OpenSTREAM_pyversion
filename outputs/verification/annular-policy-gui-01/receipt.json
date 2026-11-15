@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-15T05:42:42.876Z",
+  "url": "http://127.0.0.1:8765/",
+  "browser": "Chrome",
+  "tab_id": "210134664",
+  "fourfield_run_id": "a442ccb8e2784dc19223fcfe9c07881c",
+  "fourfield_timestamp_display": "Nov 14, 10:56 PM",
+  "fourfield_display": "Informational diagnostics",
+  "fourfield_original_assessment_observed_in_run_details": {
+    "status": "failed",
+    "physical_consistency": false,
+    "max_unblended_annular_area_closure_relative": 0.11241051742329389
+  },
+  "twofluid_run_id": "6cf0892962294226b2819aad2fbfc832",
+  "twofluid_display": "Consistency checks failed",
+  "actions": [
+    "Opened independent QA tab",
+    "Selected existing Four-field saved run",
+    "Expanded physical diagnostic and Run details",
+    "Selected existing Two-fluid saved run",
+    "Saved screenshots and visible text"
+  ],
+  "no_solver_jobs_started": true,
+  "no_inputs_edited": true,
+  "no_saved_results_edited": true,
+  "scope": "Observed display behavior for these two existing runs only. Numerical correctness, physical validation, other inputs and all possible display branches were not tested by this UI check."
+}

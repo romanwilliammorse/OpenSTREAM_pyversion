@@ -1,0 +1,33 @@
+{
+  "scope": "Observed GUI progress-file replacement failure; no numerical failure or baseline discrepancy was inferred.",
+  "failed_test": "tests/test_gui.py::test_real_baseline_run[TwoFluid]",
+  "failure": "PermissionError: [WinError 5] Access is denied in os.replace(status.json.tmp,status.json)",
+  "original_focused_command": ".\\.venv\\Scripts\\python.exe -m pytest -q tests/test_threefield.py tests/test_fourfield.py tests/test_twofluid.py tests/test_gui.py tests/test_cli.py tests/test_threefield_transient_audit.py",
+  "original_focused_collection_count": 60,
+  "isolated_rerun_command": ".\\.venv\\Scripts\\python.exe -m pytest -q tests/test_gui.py::test_real_baseline_run[TwoFluid] tools/test_recover_annular_reference.py",
+  "isolated_rerun_result": "14 passed, 1 existing Pandas warning in 15.79 s; before bounded retry fix",
+  "fix": "Only PermissionError from os.replace is retried, up to 10 attempts with 20 ms between attempts (at most 180 ms explicit sleep). Other errors and exhausted PermissionError propagate.",
+  "files": [
+    {
+      "source": "C:\\Users\\Roman\\AppData\\Local\\Temp\\pytest-of-Roman\\pytest-69\\test_real_baseline_run_TwoFlui0\\runs\\699981c07af5404a8db624a1a295e42d\\worker.log",
+      "preserved_as": "gui-twofluid-failed-worker.log",
+      "sha256": "7466c672fe64e6eac158131a1118ddf00abd143d360efc964f21c688f11e59b7"
+    },
+    {
+      "source": "C:\\Users\\Roman\\AppData\\Local\\Temp\\pytest-of-Roman\\pytest-69\\test_real_baseline_run_TwoFlui0\\runs\\699981c07af5404a8db624a1a295e42d\\status.json",
+      "preserved_as": "gui-twofluid-failed-status.json",
+      "sha256": "9fd1a0d1cc4dd736ff6908a79b3ee8255bb0959a2cd0f79a7df7c0cd01be388a"
+    },
+    {
+      "source": "C:\\Users\\Roman\\AppData\\Local\\Temp\\pytest-of-Roman\\pytest-70\\test_real_baseline_run_TwoFlui0\\runs\\1c323b6de67e4da59b5f634cfc01b2e8\\status.json",
+      "preserved_as": "gui-twofluid-isolated-rerun-status.json",
+      "sha256": "9980f76d265ece7fea33489154e0733be9f957c44f30c3410d1673ffd0c78c64"
+    }
+  ],
+  "retry_unit_tests": {
+    "command": ".\\.venv\\Scripts\\python.exe -m pytest -q tests/test_gui.py -k status_replace",
+    "result": "3 passed, 10 deselected in 1.72 s",
+    "log": "gui-write-retry-tests.log",
+    "sha256": "8809bd2294570dad90b9356651a0e3bdbda06e88a39a2f578bd9601cf722d882"
+  }
+}
