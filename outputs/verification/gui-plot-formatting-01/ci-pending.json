@@ -1,0 +1,79 @@
+{
+  "schema": "openstream-plot-formatting-ci-observation-v1",
+  "observed_at": "2026-11-16T00:57:31.617Z",
+  "run_id": 43782808772,
+  "job_id": 133023620944,
+  "source_commit": "2a10aa3ee39fae31cb04b0a2e3082610864a894b",
+  "status": "in_progress",
+  "conclusion": null,
+  "url": "https://github.com/romanwilliammorse/OpenSTREAM_pyversion/actions/runs/43782808772",
+  "steps": [
+    {
+      "name": "Set up job",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 1
+    },
+    {
+      "name": "Run actions/checkout@v7.0.1",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 2
+    },
+    {
+      "name": "Run actions/setup-python@v7.1.0",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 3
+    },
+    {
+      "name": "Run actions/setup-node@v7.1.0",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 4
+    },
+    {
+      "name": "Install pinned dependencies and package",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 5
+    },
+    {
+      "name": "Numerical and GUI tests",
+      "status": "in_progress",
+      "conclusion": null,
+      "number": 6
+    },
+    {
+      "name": "Frontend logic",
+      "status": "pending",
+      "conclusion": null,
+      "number": 7
+    },
+    {
+      "name": "Build installable distributions",
+      "status": "pending",
+      "conclusion": null,
+      "number": 8
+    },
+    {
+      "name": "Post Run actions/setup-node@v7.1.0",
+      "status": "pending",
+      "conclusion": null,
+      "number": 14
+    },
+    {
+      "name": "Post Run actions/setup-python@v7.1.0",
+      "status": "pending",
+      "conclusion": null,
+      "number": 15
+    },
+    {
+      "name": "Post Run actions/checkout@v7.0.1",
+      "status": "pending",
+      "conclusion": null,
+      "number": 16
+    }
+  ],
+  "scope": "Observed pending remote CI only. No completed test counts inferred; focused local checks are recorded separately."
+}

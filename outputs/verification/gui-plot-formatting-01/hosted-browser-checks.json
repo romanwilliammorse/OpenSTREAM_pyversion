@@ -1,0 +1,33 @@
+{
+  "date_local": "2026-11-15",
+  "origin": "https://openstream-py.vercel.app",
+  "source_commit": "2a10aa3ee39fae31cb04b0a2e3082610864a894b",
+  "deployment_id": "dpl_6iqY9Bw79YnEA1RW2XyDir1UvZyX",
+  "deployment_state": "READY",
+  "fresh_run_id": "4d0bb0a72b1d44e68d5424caa9bf0707",
+  "framework": "FourField",
+  "inputs": "Unedited TUTORIAL1 reference preset",
+  "observed_ui_status": {
+    "run": "completed",
+    "numerical": "Converged",
+    "reference": "Archived profiles agree",
+    "physical": "Informational diagnostics"
+  },
+  "formatting_checks": {
+    "computed_tick_font": "\"Times New Roman\", Times, serif",
+    "x": "Mixture precursor X (1)",
+    "y": ["Physical film.base.W (kg/s)", "Physical film.wave.W (kg/s)"],
+    "labels": ["Quality, X (1)", "Mass flow rate (kg/s)"],
+    "x_range_and_spacing": [0, 0.8, 0.2],
+    "y_range_and_spacing": [0, 0.04, 0.01],
+    "base_film": {"color": "#0057b8", "line": "dash", "marker": "square"},
+    "wave": {"color": "#b31b1b", "mode": "markers", "marker": "triangle-up"},
+    "legend_inside_upper_left": true,
+    "console_errors": []
+  },
+  "screenshot": "hosted-formatting-ui.png",
+  "png": "hosted-formatted-figure.png",
+  "png_sha256": "22e4f6db27ec87e2cc5c1e4b1b9130f941d5fdca7cf70df235ab5e71a36b2687",
+  "png_byte_identical_to_local_export": true,
+  "scope": "Live GUI and exported-figure verification. Native statuses are reported as displayed, not promoted to general model validation or full MATLAB equivalence."
+}

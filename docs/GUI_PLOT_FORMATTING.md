@@ -70,5 +70,24 @@ Evidence is retained under `outputs/verification/gui-plot-formatting-01/`.
   timed out, but the actual completed file was recovered from Downloads and
   inspected; this was an automation limitation, not an export failure.
 
-Hosted publication and verification are pending. These interface checks do not
-establish additional MATLAB equivalence or experimental validation.
+Published source commit: `2a10aa3ee39fae31cb04b0a2e3082610864a894b`.
+Vercel production deployment `dpl_6iqY9Bw79YnEA1RW2XyDir1UvZyX` is READY
+at https://openstream-py.vercel.app. `hosted-assets.json` records authenticated
+JavaScript/CSS equality against that Git commit, anonymous asset denial, and
+successful API access.
+These interface checks do not establish additional MATLAB equivalence or
+experimental validation.
+
+The live browser check also passed. Fresh default FourField run
+`4d0bb0a72b1d44e68d5424caa9bf0707` completed and displayed Converged,
+Archived profiles agree, and Informational diagnostics. The two-series
+formatting example rendered with the requested font, labels, ranges, ticks,
+line pattern, markers and independent colors. The live PNG is byte-identical
+to the inspected local example; see `hosted-browser-checks.json`,
+`hosted-formatting-ui.png` and `hosted-formatted-figure.png`.
+
+The broader GitHub Actions run
+[43782808772](https://github.com/romanwilliammorse/OpenSTREAM_pyversion/actions/runs/43782808772)
+is tracked separately. It was still running its numerical/GUI tests during
+hosted verification; the local 61/36 counts above are completed checks, not a
+claim that this broader CI run had finished.

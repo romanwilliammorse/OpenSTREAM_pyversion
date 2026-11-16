@@ -1,0 +1,57 @@
+{
+  "schema": "openstream-gui-plot-formatting-hosted-acceptance-integrity-v1",
+  "checked_at": "2026-11-16T00:57:22.986184+00:00",
+  "baseline_commit": "ce67394295ac5b5de4a2cbb54b9c533e387dcd7d",
+  "published_source_commit": "2a10aa3ee39fae31cb04b0a2e3082610864a894b",
+  "production_deployment": "dpl_6iqY9Bw79YnEA1RW2XyDir1UvZyX",
+  "deployment_state": "READY",
+  "requirements": 81,
+  "changed_rows_and_fields": {
+    "API-014": [
+      "evidence",
+      "gap"
+    ]
+  },
+  "all_criteria_status_axes_scopes_priorities_and_dependencies_unchanged": true,
+  "scientific_rows_unchanged": true,
+  "status_counts_unchanged": true,
+  "method_inventory_unchanged": true,
+  "python_modules_unchanged": 32,
+  "python_fingerprint_policy": "Baseline Git blobs versus current files, normalizing CRLF to LF only.",
+  "previous_local_integrity_receipt_preserved": true,
+  "previous_local_integrity_receipt_sha256": "e924dc2845e264dc0b5eb8d162a6cef5a7c54f8b0a310082f8b965dc30753fdc",
+  "hosted_png_identical_to_local": true,
+  "hosted_png_sha256": "22e4f6db27ec87e2cc5c1e4b1b9130f941d5fdca7cf70df235ab5e71a36b2687",
+  "frontend_tests_passed": 36,
+  "integration_tests_passed": 61,
+  "fresh_hosted_run": "4d0bb0a72b1d44e68d5424caa9bf0707",
+  "fresh_hosted_run_observed_statuses": [
+    "Completed",
+    "Converged",
+    "Archived profiles agree",
+    "Informational diagnostics"
+  ],
+  "browser_observer": "Parent agent /root; rendered screenshots, exported PNG and hosted-browser-checks.json retained.",
+  "evidence_sha256": {
+    "acceptance-integrity.json": "e924dc2845e264dc0b5eb8d162a6cef5a7c54f8b0a310082f8b965dc30753fdc",
+    "browser-checks.json": "d4d730339dd495bbb8b356fa63ec61934eadc7844649472bee54d80ca5991899",
+    "formatted-figure.png": "22e4f6db27ec87e2cc5c1e4b1b9130f941d5fdca7cf70df235ab5e71a36b2687",
+    "frontend-tests.txt": "d611c6f560560a9ecbd4937fe038d6baaf1ecff444692094021395650b95b3f6",
+    "hosted-assets.json": "c1b64d9fb4b9a744f10d5f483a9d614d4d9958104272ffdcfb164d44e10951d2",
+    "hosted-browser-checks.json": "bd739321281bedbaea879d8a3a43a6813bef5bc89bb5f39119f7a1a8bcf9da36",
+    "hosted-formatted-figure.png": "22e4f6db27ec87e2cc5c1e4b1b9130f941d5fdca7cf70df235ab5e71a36b2687",
+    "hosted-formatting-ui.png": "44f264b9535668fe25a1ccb049d9ef39cb31cd6dca05ee5eb3731daa7e1b567a",
+    "integration-tests.txt": "e0e760fef6380254fb6aaee69c7ff40c36e33ade9e1aad6818a91aadc6b3ff49",
+    "local-formatting-ui.png": "cc27980c1a963a67051b70baefe54057555d29990b5590a86198de5e0211ff10",
+    "real-vector-invariance.json": "613a35a827ef1a29163dc337c273099e172cd5b583fb0f37a34edd1b2716f62b",
+    "verify_hosted_assets.py": "ae92e831b06e01553488c05de6ba5f7f9227278387ad21b089bd8963f27b0fbf",
+    "verify_saved_vectors.cjs": "1e1fbe4b2c0872050fcd72085689548458d4c50557f9a1deb97af8bc6460e90d"
+  },
+  "generated_artifact_sha256_lf": {
+    "docs/ACCEPTANCE_MATRIX.json": "c5797832081584e6efedb39c3f77c3970250389ac8719ec0eb7d36cb4a6b4b11",
+    "docs/ACCEPTANCE_MATRIX.csv": "7061cc277252199821c7e134d30889e1611eac9635647bcebda4cf7648538c1d",
+    "docs/ACCEPTANCE_MATRIX.md": "1c3923f1eddd368d5df9608ac4b052902986566466ff21c4002b0cf8eac3bc28"
+  },
+  "matrix_check_stdout": "{\n  \"requirements\": 81,\n  \"tracks\": {\n    \"matlab_equivalence\": 27,\n    \"numerical_verification\": 10,\n    \"interface_parity\": 19,\n    \"reference_infrastructure\": 5,\n    \"release\": 2,\n    \"literature_scope\": 6,\n    \"experimental_validation\": 12\n  },\n  \"priorities\": {\n    \"P1\": 41,\n    \"P0\": 31,\n    \"P2\": 9\n  },\n  \"implementation\": {\n    \"implemented\": 46,\n    \"partial\": 31,\n    \"unsupported_source_defect\": 1,\n    \"missing\": 3\n  },\n  \"status_axes\": {\n    \"native_tests\": {\n      \"passed_scoped\": 35,\n      \"partial\": 35,\n      \"failed\": 5,\n      \"not_run\": 6\n    },\n    \"matlab\": {\n      \"passed_scoped\": 13,\n      \"failed\": 1,\n      \"not_run\": 51,\n      \"not_applicable\": 12,\n      \"partial\": 4\n    },\n    \"physical\": {\n      \"passed_scoped\": 4,\n      \"failed\": 14,\n      \"not_applicable\": 32,\n      \"partial\": 22,\n      \"not_run\": 9\n    },\n    \"experimental\": {\n      \"not_run\": 37,\n      \"not_applicable\": 35,\n      \"partial\": 9\n    }\n  },\n  \"enum_types\": 41,\n  \"enum_choices\": 127,\n  \"interpolation_choices\": 16,\n  \"public_method_entries_with_inheritance\": 585\n}\nAcceptance ledger integrity and generated files: PASS\n",
+  "limitation": "Interface fidelity and ledger integrity only; no new scientific status, MATLAB visual-equivalence or experimental-validation claim."
+}

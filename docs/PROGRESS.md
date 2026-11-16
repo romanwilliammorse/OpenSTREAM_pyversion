@@ -2,7 +2,7 @@
 
 The user's requested full native port is **not yet complete**. Continue implementation and verification without replacing the preserved source or changing equations to obtain passing tests.
 
-## GUI plot formatting — 2026-11-15 (locally verified; publication pending)
+## GUI plot formatting — 2026-11-15 (deployed and verified)
 
 Requested: Times New Roman as the default plot font; editable X/Y axis labels,
 limits and ticks; independent line/point styles and colors for each plotted
@@ -18,6 +18,12 @@ Implemented and locally checked: 36 frontend tests, 61 focused Python tests,
 404 unchanged saved vector pairs, browser labels/limits/ticks/reset after zoom,
 independent colors/line/marker styles, and inspected 2100 by 1275 PNG export.
 See `GUI_PLOT_FORMATTING.md` and `outputs/verification/gui-plot-formatting-01/`.
+Published source commit `2a10aa3ee39fae31cb04b0a2e3082610864a894b`, Vercel
+production deployment `dpl_6iqY9Bw79YnEA1RW2XyDir1UvZyX`. Authenticated hosted
+assets match that commit. Fresh hosted FourField run
+`4d0bb0a72b1d44e68d5424caa9bf0707` completed; customized live PNG is identical
+to the inspected local PNG. The app remains open with that figure. All scientific
+acceptance criteria/statuses and all 32 tracked Python modules are unchanged.
 
 ## Results editor and CSV downloads — 2026-11-15 (deployed and verified)
 

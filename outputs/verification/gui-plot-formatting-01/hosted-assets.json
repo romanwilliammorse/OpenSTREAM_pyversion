@@ -1,0 +1,22 @@
+{
+  "verified_at_utc": "2026-11-16T00:52:38.016277+00:00",
+  "commit": "2a10aa3ee39fae31cb04b0a2e3082610864a894b",
+  "origin": "https://openstream-py.vercel.app",
+  "anonymous_assets_denied": true,
+  "authenticated_api_available": true,
+  "asset_checks": [
+    {
+      "asset": "app.js",
+      "http_status": 200,
+      "matches_commit": true,
+      "served_sha256": "dbab48883975c8585da70453a58589b43d7da39962ca9cda0d2757dbe000cf7f"
+    },
+    {
+      "asset": "style.css",
+      "http_status": 200,
+      "matches_commit": true,
+      "served_sha256": "43e7b1015356ca14740cb1ce17e472d8f0dc1eb868eecb0c71be161d6ea83e83"
+    }
+  ],
+  "scope": "Authenticated source-asset equality and API availability; no new numerical calculation."
+}
