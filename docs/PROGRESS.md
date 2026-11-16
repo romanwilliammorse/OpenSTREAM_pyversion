@@ -24,6 +24,10 @@ assets match that commit. Fresh hosted FourField run
 `4d0bb0a72b1d44e68d5424caa9bf0707` completed; customized live PNG is identical
 to the inspected local PNG. The app remains open with that figure. All scientific
 acceptance criteria/statuses and all 32 tracked Python modules are unchanged.
+Windows GitHub Actions run `43782808772` subsequently passed: 829 Python tests
+(two warnings), 35 frontend tests, wheel and source-distribution builds.
+The local 36 frontend tests also include the cloud frontend check omitted
+from that CI command. Pending and completed CI observations are retained.
 
 ## Results editor and CSV downloads — 2026-11-15 (deployed and verified)
 

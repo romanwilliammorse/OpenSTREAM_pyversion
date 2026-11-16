@@ -1,0 +1,28 @@
+{
+  "schema": "openstream-plot-formatting-ci-observation-v1",
+  "observed_at": "2026-11-16T00:58:48.317Z",
+  "run_id": 43782808772,
+  "job_id": 133023620944,
+  "source_commit": "2a10aa3ee39fae31cb04b0a2e3082610864a894b",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/romanwilliammorse/OpenSTREAM_pyversion/actions/runs/43782808772",
+  "python_tests": {
+    "passed": 829,
+    "warnings": 2,
+    "seconds": 259.9
+  },
+  "frontend_tests": {
+    "tests": 35,
+    "passed": 35,
+    "failed": 0,
+    "note": "CI runs frontend logic and navigation. Local combined checks additionally include the cloud frontend test."
+  },
+  "retained_warnings": [
+    "ff_fields.py:178 divide by zero encountered in divide",
+    "ff_fields.py:140 invalid value encountered in multiply"
+  ],
+  "wheel_and_sdist_build": "success",
+  "log_summary": "ci-test-summary.txt",
+  "scope": "Observed full remote Windows regression success. Scientific limitations and governing equations unchanged; no new experimental validation claim."
+}

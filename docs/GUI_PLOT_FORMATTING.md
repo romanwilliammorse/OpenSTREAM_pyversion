@@ -88,6 +88,9 @@ to the inspected local example; see `hosted-browser-checks.json`,
 
 The broader GitHub Actions run
 [43782808772](https://github.com/romanwilliammorse/OpenSTREAM_pyversion/actions/runs/43782808772)
-is tracked separately. It was still running its numerical/GUI tests during
-hosted verification; the local 61/36 counts above are completed checks, not a
-claim that this broader CI run had finished.
+completed successfully after hosted verification: 829 Python tests passed
+with two warnings; 35 frontend tests passed; wheel and source distribution
+builds passed. The CI frontend command excludes the separate cloud frontend
+test, which is included in the local 36-test command. See `ci-completed.json`
+and the retained CI summary in the evidence directory. The earlier pending
+receipt is preserved as a timestamped observation.

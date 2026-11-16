@@ -1,0 +1,7 @@
+2026-11-16T00:57:02.9379296Z   D:\a\OpenSTREAM_pyversion\OpenSTREAM_pyversion\src\openstream\ff_fields.py:178: RuntimeWarning: divide by zero encountered in divide
+2026-11-16T00:57:02.9383988Z   D:\a\OpenSTREAM_pyversion\OpenSTREAM_pyversion\src\openstream\ff_fields.py:140: RuntimeWarning: invalid value encountered in multiply
+2026-11-16T00:57:02.9387744Z 829 passed, 2 warnings in 259.90s (0:04:19)
+2026-11-16T00:57:07.5619998Z # tests 35
+2026-11-16T00:57:07.5620568Z # pass 35
+2026-11-16T00:57:07.5620835Z # fail 0
+2026-11-16T00:57:12.2439907Z Successfully built openstream_python-0.2.1.tar.gz and openstream_python-0.2.1-py3-none-any.whl
