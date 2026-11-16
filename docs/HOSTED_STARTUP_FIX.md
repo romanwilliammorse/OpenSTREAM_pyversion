@@ -1,8 +1,8 @@
 # Hosted Python startup repair
 
-Date: 2026-11-15 (America/Chicago). The local repair and verification are complete;
-deployment verification is pending. This report does not yet claim that the
-deployed service has recovered.
+Date: 2026-11-15 (America/Chicago). Production recovered on commit
+`af84aa138f7993fe897c70dbaf1b864b4f1c7190`, deployment
+`dpl_5A7Jm7sBwcbgF3HPb15V2ydJSGDZ`, within the tested scope below.
 
 ## Confirmed failure
 
@@ -107,12 +107,46 @@ Local packaging checks completed so far:
   81 acceptance criteria/status sets match the retained formatting release.
   The generated acceptance matrix check passed.
 
-Remaining deployment verification is to check the live page and failed request
-path on a new deployment, inspect startup logs, and run a calculation through
-the unchanged worker. Repeated requests in one process are not evidence of
-independent cold starts or an exhaustive concurrency/performance guarantee.
+## Production verification
+
+The two live HTTP campaigns passed 22 and 26 requests respectively, including
+the page, authentication, all four baseline loading/validation paths, matching
+JavaScript/CSS (after newline normalization), byte-identical renderer delivery,
+and six concurrent reads in each campaign. The
+second campaign also passed all four CSV download routes. Receipts are
+`live-startup.json` and `live-with-exports.json`.
+
+A fresh FourField baseline, run `afa655391ef8460caadf7c735b3f1db7`, completed and
+converged through the unchanged scientific worker. Independent comparison of
+downloaded archived steady/initialization profiles passed the retained
+`rtol=1e-8, atol=0` criteria, with maximum relative error
+`2.539607937805446e-9`. Its checksummed artifacts and comparison are retained in
+`live/20261116T020421Z-7f7fd114/summary.json`. Supplementary nonfinite diagnostic
+entries remain: this does not claim that all arrays are finite, all operating
+conditions work, or experimental validation has been established. No new MATLAB
+execution was performed; archive-producer version uncertainties remain.
+
+Runtime-log queries over the recorded post-deployment window found no disk-full
+or dependency-installation failure, and no error/fatal records. The HTTP and
+worker checks provide the positive service evidence; absence of log matches
+alone is not a health test. GitHub CI run `43789798181` independently verified
+the deployed commit: 832 Python tests, 36 frontend tests, isolated web-runtime
+probe, and source/wheel builds passed, retaining the same two FourField warnings.
+See `deployment-runtime-checks.json` and `github-ci.json`.
+
+Browser inspection confirmed the retained plot controls and usable completed
+results. Opening the job before durable publication left a stale “Could not
+open run: Durable results are not ready” banner after completion. Refreshing
+and reopening cleared it. The original and refreshed screenshots are retained
+as `live-fourfield-result.png` and `live-fourfield-after-refresh.png`; this
+pre-existing warning-lifecycle limitation is separate from the startup 500 and
+was not changed by this packaging repair. `live-plot-controls.png` records the
+retained presentation controls.
+
+These observations cover one deployment and one new FourField calculation.
+Concurrent requests do not establish independent cold starts, long-term
+availability, or an exhaustive concurrency/performance guarantee.
 
 Evidence is retained under `outputs/verification/hosted-startup-fix-01/`.
-Results and any remaining limitations will be recorded here as observed.
 This infrastructure work adds no MATLAB-equivalence or experimental-validation
 claim and changes no scientific acceptance criterion or status axis.

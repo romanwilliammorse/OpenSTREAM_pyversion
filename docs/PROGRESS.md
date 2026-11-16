@@ -1,6 +1,6 @@
 # Progress and resume record
 
-## Hosted startup repair — 2026-11-15 (deployment verification pending)
+## Hosted startup repair — 2026-11-15 (production recovered in tested scope)
 
 The current task is to repair the supplied `GET /` failure
 `zf9lf-1794793633089-328672dd1e5c` without removing the plotting controls or
@@ -15,9 +15,15 @@ The first full suite passed 831 tests and failed one historical-source guard
 because it included the nonnumerical package import wrapper. Its current-release
 scope was corrected explicitly; historical replay provenance and numerical
 hashes remain frozen. The final full suite passed all 832 tests with two retained
-FourField warnings; source and wheel packaging also passed. Deployed startup
-verification remains pending. See `HOSTED_STARTUP_FIX.md`. No service-recovery
-claim is made yet.
+FourField warnings; source and wheel packaging also passed. Production commit
+`af84aa138f7993fe897c70dbaf1b864b4f1c7190` passed 22-request and 26-request
+HTTP campaigns, including all four validation paths and CSV downloads. A new
+FourField baseline completed, converged and independently passed the unchanged
+archived-profile comparison. CI also passed 832 Python and 36 frontend tests.
+No startup disk/install failure appeared in the bounded runtime-log checks.
+A stale premature-result warning cleared after refresh; its screenshots and
+other limitations remain recorded in `HOSTED_STARTUP_FIX.md`. This confirms the
+tested recovery, not universal cold-start reliability or new physical validation.
 
 Pre-repair operational observation: the user's instruction to retain the plotting
 controls was completed in commit `935c03ed4b95aa5ee8457a957110c6db74d6ff86`,

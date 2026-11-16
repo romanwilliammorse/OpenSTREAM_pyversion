@@ -1,0 +1,50 @@
+{
+  "deployment_id": "dpl_5A7Jm7sBwcbgF3HPb15V2ydJSGDZ",
+  "commit": "af84aa138f7993fe897c70dbaf1b864b4f1c7190",
+  "state": "READY",
+  "url": "openstream-2ew1uhgkz-rwmorse-8427.vercel.app",
+  "aliases": [
+    "openstream-py.vercel.app",
+    "openstream-py-rwmorse-8427.vercel.app",
+    "openstream-py-git-main-rwmorse-8427.vercel.app"
+  ],
+  "runtime_checks": [
+    {
+      "filter": {
+        "query": "No space left on device"
+      },
+      "result": [
+        "## Runtime Logs\n\n**Project:** prj_tWK9pFywBrkziKMK9VXOK9Co6IEE\n**Deployment:** dpl_5A7Jm7sBwcbgF3HPb15V2ydJSGDZ\n**Time range:** 2026-11-16T01:58:24.889Z → 2026-11-16T02:08:24.889Z\n\nNo logs found for the specified criteria."
+      ]
+    },
+    {
+      "filter": {
+        "query": "Runtime dependency installation failed"
+      },
+      "result": [
+        "## Runtime Logs\n\n**Project:** prj_tWK9pFywBrkziKMK9VXOK9Co6IEE\n**Deployment:** dpl_5A7Jm7sBwcbgF3HPb15V2ydJSGDZ\n**Time range:** 2026-11-16T01:58:24.942Z → 2026-11-16T02:08:24.942Z\n\nNo logs found for the specified criteria."
+      ]
+    },
+    {
+      "filter": {
+        "query": "Installing runtime dependencies"
+      },
+      "result": [
+        "## Runtime Logs\n\n**Project:** prj_tWK9pFywBrkziKMK9VXOK9Co6IEE\n**Deployment:** dpl_5A7Jm7sBwcbgF3HPb15V2ydJSGDZ\n**Time range:** 2026-11-16T01:58:24.793Z → 2026-11-16T02:08:24.793Z\n\nNo logs found for the specified criteria."
+      ]
+    },
+    {
+      "filter": {
+        "level": [
+          "error",
+          "fatal"
+        ],
+        "group_by": "level"
+      },
+      "result": [
+        "## Runtime Log Counts\n\n**Project:** prj_tWK9pFywBrkziKMK9VXOK9Co6IEE\n**Grouped by:** level\n**Showing:** Top 25 groups by log count; this may omit other groups.\n\n| level | count |\n|---|---|"
+      ]
+    }
+  ],
+  "limitation": "Bounded post-deployment observations; missing log records alone do not establish service health. Authenticated HTTP, artifact and worker checks are retained separately."
+}

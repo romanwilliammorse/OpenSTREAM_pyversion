@@ -1,0 +1,573 @@
+{
+  "framework": "FourField",
+  "started_at": "2026-11-16T02:04:25.015567+00:00",
+  "kind": "baseline",
+  "passed": true,
+  "run_id": "afa655391ef8460caadf7c735b3f1db7",
+  "terminal_observed": true,
+  "failures": [],
+  "downloads": [
+    {
+      "name": "output/gui_verification.json",
+      "sha256": "4e38910d8e32253261f064934c3673fed849e5bd1342c38a41ac1e62f5d24537",
+      "size": 23697
+    },
+    {
+      "name": "output/metadata.json",
+      "sha256": "ce8ddfd01134e17bebd000146142bdd2c7ee469b7c7108b8a7fee6c92791cf5e",
+      "size": 53798
+    },
+    {
+      "name": "output/mixture/metadata.json",
+      "sha256": "62b2e99bd285845c73de2c50354f845a0c6b2a9fb833c6585bac96ed837a476e",
+      "size": 13164
+    },
+    {
+      "name": "results.zip",
+      "sha256": "f40fe931a42c4ee133db5f9b2e88fc0fe2498e204ffa622bb617400ff8945d71",
+      "size": 989055
+    },
+    {
+      "name": "submitted_inputs.json",
+      "sha256": "f195929d415a6c9b533d9304b3a10771260304ae68349b4d73552c75773cf606",
+      "size": 6834
+    },
+    {
+      "name": "worker.log",
+      "sha256": "f79c1df516e20fbc28c8c9d0c5e0258f307217415afce0d8a1ae3a170f50ea0b",
+      "size": 327
+    }
+  ],
+  "submission_attempted": true,
+  "status": "completed",
+  "converged": true,
+  "reference": {
+    "archive": {
+      "bytes": 632002,
+      "file": "tutorial1_FourFieldSolver.mat",
+      "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:24 2026",
+      "sha256": "fd28edab74cad654721572c4644461dc20fef27ed4a3d617458b9717e13eacf1"
+    },
+    "atol": 0.0,
+    "coordinate_atol": 1e-12,
+    "experimental_validation": "not performed",
+    "limitations": [
+      "The archive producer's MATLAB, CoolProp and source versions are unknown.",
+      "Agreement does not establish physical consistency or full OpenSTREAM parity.",
+      "Supplementary iteration/diagnostic disagreements remain documented separately."
+    ],
+    "max_relative_error": 2.539607937805446e-09,
+    "message": "Archived steady and initialization profiles agree at rtol 1e-8, atol 0.",
+    "producer_metadata": {
+      "coolprop_version": null,
+      "matlab_version": null,
+      "source_commit": null
+    },
+    "records": [
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "film.W",
+        "max_absolute_error": 1.0443035325380379e-12,
+        "max_relative_error": 2.4588864203303287e-11,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "film.U",
+        "max_absolute_error": 2.05971639744007e-09,
+        "max_relative_error": 1.3565352365373606e-09,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "film.H",
+        "max_absolute_error": 1.1641532182693481e-09,
+        "max_relative_error": 9.590010541985647e-16,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "drop.W",
+        "max_absolute_error": 1.0443451659014613e-12,
+        "max_relative_error": 5.466465415696367e-11,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "drop.U",
+        "max_absolute_error": 2.0405011014190677e-11,
+        "max_relative_error": 2.532781821014723e-12,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "drop.H",
+        "max_absolute_error": 1.1641532182693481e-09,
+        "max_relative_error": 9.590010541985647e-16,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "film.wave.W",
+        "max_absolute_error": 7.644024302422281e-13,
+        "max_relative_error": 2.8132834344812793e-11,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "film.wave.U",
+        "max_absolute_error": 3.856053254480685e-09,
+        "max_relative_error": 2.539607937805446e-09,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "core",
+        "key": "film.wave.H",
+        "max_absolute_error": 1.1641532182693481e-09,
+        "max_relative_error": 9.590010541985647e-16,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "expanded",
+        "key": "film.base.W",
+        "max_absolute_error": 7.661406231651569e-13,
+        "max_relative_error": 3.412412014389077e-11,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "expanded",
+        "key": "film.base.U",
+        "max_absolute_error": 2.389510811440232e-11,
+        "max_relative_error": 6.2328115352146006e-12,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "expanded",
+        "key": "film.base.H",
+        "max_absolute_error": 1.1641532182693481e-09,
+        "max_relative_error": 9.590010541985647e-16,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "physical",
+        "failed_values": 0,
+        "group": "expanded",
+        "key": "film.wave.FREQUENCY",
+        "max_absolute_error": 8.639950976885302e-10,
+        "max_relative_error": 4.106416827799521e-11,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          1,
+          101,
+          1
+        ],
+        "unit": "Hz"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "film.W",
+        "max_absolute_error": 1.451776199257182e-12,
+        "max_relative_error": 8.079847032937751e-11,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "film.U",
+        "max_absolute_error": 2.05971639744007e-09,
+        "max_relative_error": 1.3565352365373606e-09,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "film.H",
+        "max_absolute_error": 1.1641532182693481e-09,
+        "max_relative_error": 9.590010541985647e-16,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "drop.W",
+        "max_absolute_error": 1.451776199257182e-12,
+        "max_relative_error": 7.588726372092501e-11,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          9,
+          101
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "drop.U",
+        "max_absolute_error": 2.149747047042183e-11,
+        "max_relative_error": 2.7473054091887077e-12,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          9,
+          101
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "drop.H",
+        "max_absolute_error": 1.1641532182693481e-09,
+        "max_relative_error": 9.590010541985647e-16,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          9,
+          101
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "film.wave.W",
+        "max_absolute_error": 1.8060553053089734e-12,
+        "max_relative_error": 7.353976812687964e-11,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "film.wave.U",
+        "max_absolute_error": 3.856053254480685e-09,
+        "max_relative_error": 2.539607937805446e-09,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "core",
+        "key": "film.wave.H",
+        "max_absolute_error": 1.1641532182693481e-09,
+        "max_relative_error": 9.590010541985647e-16,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "expanded",
+        "key": "film.base.W",
+        "max_absolute_error": 9.291248326270818e-13,
+        "max_relative_error": 8.079847032937751e-11,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "unit": "kg/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "expanded",
+        "key": "film.base.U",
+        "max_absolute_error": 3.9678482721683395e-11,
+        "max_relative_error": 1.2939371620607496e-11,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "unit": "m/s"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "expanded",
+        "key": "film.base.H",
+        "max_absolute_error": 1.1641532182693481e-09,
+        "max_relative_error": 9.590010541985647e-16,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "unit": "J/kg"
+      },
+      {
+        "dataset": "initialization",
+        "failed_values": 0,
+        "group": "expanded",
+        "key": "film.wave.FREQUENCY",
+        "max_absolute_error": 1.3198757642385317e-09,
+        "max_relative_error": 6.262423875344607e-11,
+        "nonmatching_reference_zeros": 0,
+        "passed": true,
+        "shape": [
+          9,
+          101,
+          1
+        ],
+        "unit": "Hz"
+      }
+    ],
+    "rtol": 1e-08,
+    "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+    "status": "passed"
+  },
+  "physical": {
+    "diagnostics": {
+      "all_fields_minus_mixture_max_kg_s": 1.3877787807814457e-17,
+      "area_closure_relative_tolerance": null,
+      "balance_note": "Raw final pseudo-time mass residuals; POSFILM clipping and sequential source updates are retained.",
+      "base_mass_residual_max_kg_s": 0.0004305856934339355,
+      "base_min_kg_s": 0.0,
+      "base_min_m_s": 1.518365569478776,
+      "base_plus_wave_minus_film_max_kg_s": 0.0,
+      "base_unclamped_annular_mass_residual_max_kg_s": 2.449339099779299e-06,
+      "base_wet_annular_mass_residual_max_kg_s": 0.0004305856934339355,
+      "base_zero_mass_node_count": 1,
+      "common_annular_cell_count": 71,
+      "common_annular_downstream_face_z_m": 5.5,
+      "common_annular_upstream_face_z_m": 1.595,
+      "drop_min_kg_s": 0.011727573305285646,
+      "drop_min_m_s": 1.5183655701646686,
+      "film_plus_drop_minus_liquid_max_kg_s": 0.0,
+      "frequency_min_Hz": 21.040121691372303,
+      "frequency_temporally_converged": true,
+      "inventory_by_time": [
+        {
+          "common_annular_mass_inventory_kg": 0.015819340343491757,
+          "common_annular_mass_residual_kg_s": 7.240893301618812e-10,
+          "global_all_phase_mass_residual_kg_s": 7.901748005911813e-10,
+          "integrated_phase_mass_inventory_kg": 0.047911647938455794,
+          "max_all_phase_cell_mass_residual_kg_s": 1.94576021961268e-11,
+          "max_area_closure_relative": 0.4413082218380737,
+          "max_common_annular_cell_mass_residual_kg_s": 1.94576021961268e-11,
+          "max_unblended_annular_area_closure_relative": 0.11241051742329433,
+          "nonfinite_inventory_or_area_node_count": 0,
+          "nonfinite_unblended_annular_node_count": 0,
+          "outlet_area_closure_relative": 0.010737048682143202,
+          "time_s": 0.0,
+          "unblended_annular_node_count": 72
+        }
+      ],
+      "inventory_interpretation": "W/U is kg/m; occupied area = sum(Wfilm/Ufilm)/rhoF + Wdrop/(Udrop*rhoF) + Wvapor/(Uvapor*rhoV). Phase-volume closure is informational for ThreeField/FourField: the original MATLAB frameworks do not impose this residual as a convergence or acceptance gate. No area-residual acceptance threshold is applied. Finite residuals and indeterminate NaN/Inf inventory or area values do not change solver acceptance; existing solver convergence and exceptions remain unchanged. AFFNC >= 1-1e-12 identifies the numerically unblended annular region for reporting, and absence of such nodes leaves that result unavailable. Common-annular mass diagnostics use a fixed downstream control volume whose upstream face and all cells satisfy this mask at every time; its residual is outflow minus inflow plus backward-Euler storage, with no storage for the initial steady state. Pre-annular values are source initialization quantities and all-region area/mass diagnostics there are descriptive. Zero/zero inventory is indeterminate and is not silently zeroed. Any four-field film-thickness caps do not independently enforce this inventory identity. Numerical convergence and algebraic flow partition do not establish mass-storage conservation or physical validation. Whether a discrepancy is shared with upstream is established by a separate reference comparison; see the baseline verification report.",
+      "max_abs_common_annular_mass_residual_kg_s": 7.240893301618812e-10,
+      "max_area_closure_relative": 0.4413082218380737,
+      "max_common_annular_cell_mass_residual_kg_s": 1.94576021961268e-11,
+      "max_unblended_annular_area_closure_relative": 0.11241051742329433,
+      "nested_closure_failures": [],
+      "nonfinite_state_count": 0,
+      "onset_equilibrium_converged": true,
+      "outlet_area_closure_relative": 0.010737048682143202,
+      "phase_volume_closure_role": "informational",
+      "phase_volume_closure_status": "reported",
+      "physical_consistency": null,
+      "wave_mass_residual_max_kg_s": 0.00042413696674146475,
+      "wave_min_kg_s": 0.0,
+      "wave_min_m_s": 0.7591827850823343,
+      "wave_unclamped_annular_mass_residual_max_kg_s": 2.3578316819993428e-06,
+      "wave_wet_annular_mass_residual_max_kg_s": 2.3578316819993428e-06,
+      "wave_zero_mass_node_count": 7
+    },
+    "message": "Phase-volume closure is informational for this annular framework and does not change solver acceptance. Residual values remain available; physical validation is not established.",
+    "status": "informational"
+  },
+  "array_checks": {
+    "shape_and_core_finite_passed": true,
+    "all_arrays_finite": false,
+    "scope": "All array shapes and numeric types; finite primary/archive profiles and coordinates. Nonfinite diagnostic entries are reported, not silently removed or made a new solver criterion."
+  },
+  "independent_archive_comparison": {
+    "status": "passed",
+    "message": "Archived steady and initialization profiles agree at rtol 1e-8, atol 0.",
+    "scope": "Archived TUTORIAL1 steady W/U/H profiles and their initialization histories; FourField additionally includes actual base-film W/U/H and wave frequency. Supplementary diagnostics and mixture precursor histories are outside this GUI comparison.",
+    "rtol": 1e-08,
+    "atol": 0.0,
+    "coordinate_atol": 1e-12,
+    "max_relative_error": 2.539607937805446e-09,
+    "experimental_validation": "not performed",
+    "limitations": [
+      "The archive producer's MATLAB, CoolProp and source versions are unknown.",
+      "Agreement does not establish physical consistency or full OpenSTREAM parity.",
+      "Supplementary iteration/diagnostic disagreements remain documented separately."
+    ],
+    "archive": {
+      "file": "tutorial1_FourFieldSolver.mat",
+      "sha256": "fd28edab74cad654721572c4644461dc20fef27ed4a3d617458b9717e13eacf1",
+      "bytes": 632002,
+      "header": "MATLAB 5.0 MAT-file, Platform: GLNXA64, Created on: Sun Aug 23 23:00:24 2026"
+    },
+    "producer_metadata": {
+      "matlab_version": null,
+      "coolprop_version": null,
+      "source_commit": null
+    }
+  },
+  "finished_at": "2026-11-16T02:05:37.714755+00:00"
+}

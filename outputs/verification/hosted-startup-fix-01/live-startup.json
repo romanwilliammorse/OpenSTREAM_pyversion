@@ -1,0 +1,161 @@
+{
+  "origin": "https://openstream-py.vercel.app",
+  "started_at": "2026-11-16T02:04:12.101992+00:00",
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/",
+      "http_status": 200,
+      "elapsed_seconds": 0.6137778999982402
+    },
+    {
+      "method": "GET",
+      "path": "/auth/session",
+      "http_status": 200,
+      "elapsed_seconds": 0.26483629998983815
+    },
+    {
+      "method": "POST",
+      "path": "/auth/login",
+      "http_status": 200,
+      "elapsed_seconds": 0.8604146999423392
+    },
+    {
+      "method": "GET",
+      "path": "/",
+      "http_status": 200,
+      "elapsed_seconds": 0.1761955000110902
+    },
+    {
+      "method": "GET",
+      "path": "/assets/app.js",
+      "http_status": 200,
+      "elapsed_seconds": 0.21803280001040548
+    },
+    {
+      "method": "GET",
+      "path": "/assets/style.css",
+      "http_status": 200,
+      "elapsed_seconds": 0.1912233000039123
+    },
+    {
+      "method": "GET",
+      "path": "/assets/plotly.min.js",
+      "http_status": 200,
+      "elapsed_seconds": 0.4589995000278577
+    },
+    {
+      "method": "GET",
+      "path": "/api/baseline/Mixture",
+      "http_status": 200,
+      "elapsed_seconds": 0.2041630000458099
+    },
+    {
+      "method": "POST",
+      "path": "/api/validate",
+      "http_status": 200,
+      "elapsed_seconds": 0.1946277999668382
+    },
+    {
+      "method": "GET",
+      "path": "/api/baseline/TwoFluid",
+      "http_status": 200,
+      "elapsed_seconds": 0.1820579000050202
+    },
+    {
+      "method": "POST",
+      "path": "/api/validate",
+      "http_status": 200,
+      "elapsed_seconds": 0.18749270000262186
+    },
+    {
+      "method": "GET",
+      "path": "/api/baseline/ThreeField",
+      "http_status": 200,
+      "elapsed_seconds": 0.19842239998979494
+    },
+    {
+      "method": "POST",
+      "path": "/api/validate",
+      "http_status": 200,
+      "elapsed_seconds": 0.20490109996171668
+    },
+    {
+      "method": "GET",
+      "path": "/api/baseline/FourField",
+      "http_status": 200,
+      "elapsed_seconds": 0.17646540002897382
+    },
+    {
+      "method": "POST",
+      "path": "/api/validate",
+      "http_status": 200,
+      "elapsed_seconds": 0.2041109999991022
+    },
+    {
+      "method": "GET",
+      "path": "/api/health",
+      "http_status": 200,
+      "elapsed_seconds": 0.1984942999552004
+    },
+    {
+      "method": "GET",
+      "path": "/api/health",
+      "http_status": 200,
+      "elapsed_seconds": 0.21762310003396124
+    },
+    {
+      "method": "GET",
+      "path": "/api/health",
+      "http_status": 200,
+      "elapsed_seconds": 0.23115700000198558
+    },
+    {
+      "method": "GET",
+      "path": "/api/schema?framework=FourField",
+      "http_status": 200,
+      "elapsed_seconds": 0.2519750000210479
+    },
+    {
+      "method": "GET",
+      "path": "/api/schema?framework=FourField",
+      "http_status": 200,
+      "elapsed_seconds": 0.283387900039088
+    },
+    {
+      "method": "GET",
+      "path": "/api/schema?framework=FourField",
+      "http_status": 200,
+      "elapsed_seconds": 0.2671742000384256
+    },
+    {
+      "method": "POST",
+      "path": "/auth/logout",
+      "http_status": 200,
+      "elapsed_seconds": 0.1798856999957934
+    }
+  ],
+  "limitation": "Observed requests only; concurrency does not establish independent cold starts.",
+  "assets": [
+    {
+      "file": "app.js",
+      "sha256": "dbab48883975c8585da70453a58589b43d7da39962ca9cda0d2757dbe000cf7f",
+      "bytes": 79992,
+      "matches_local_source": true
+    },
+    {
+      "file": "style.css",
+      "sha256": "43e7b1015356ca14740cb1ce17e472d8f0dc1eb868eecb0c71be161d6ea83e83",
+      "bytes": 26935,
+      "matches_local_source": true
+    },
+    {
+      "file": "plotly.min.js",
+      "sha256": "3b6e15d45dbb7fca5bd2094291e961ddc5472cd887009e6009a56dab668d721f",
+      "bytes": 4815814,
+      "matches_local_source": true
+    }
+  ],
+  "passed": true,
+  "finished_at": "2026-11-16T02:04:17.166172+00:00"
+}
