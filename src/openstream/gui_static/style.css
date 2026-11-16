@@ -62,3 +62,5 @@
 @media(max-width:1250px){.axis-controls{grid-template-columns:repeat(3,minmax(0,1fr))}.axis-controls label:nth-child(1),.axis-controls label:nth-child(2){grid-column:span 1}}
 @media(max-width:850px){.axis-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.custom-plot-canvas{height:400px}.series-heading{flex-wrap:wrap;gap:8px}.series-name{max-width:none}.plot-actions{gap:7px}}
 @media(max-width:620px){.custom-plot-canvas{height:360px}.plot-series{padding:10px}.plot-axis{grid-template-columns:12px minmax(0,1fr);gap:7px}.axis-controls{gap:8px}.axis-controls select{font-size:11px}.series-name{flex-basis:70%}.custom-plot-card>.panel-heading{align-items:flex-start}.plot-actions{justify-content:flex-end}.plot-actions .text-button{font-size:11px}.profile-figure h3,.custom-plot-card h3{font-size:16px}}
+
+@media(min-width:851px){.status-grid:has(#reference-card[hidden]){grid-template-columns:repeat(2,minmax(0,1fr))}}

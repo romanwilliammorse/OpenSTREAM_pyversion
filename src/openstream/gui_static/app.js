@@ -39,6 +39,39 @@ function runCaseName(run, submission) {
   return inputCaseName(submission?.inputs, run.is_reference ? "TUTORIAL1" : "Unnamed case");
 }
 
+function referenceEnabled(run) {
+  // Use the selected run's server-assessed inputs, never the editable form.
+  return run?.is_reference === true && !(run.change_count > 0) && !(run.changes?.length > 0);
+}
+
+function referenceSource(run) {
+  // Manuscript association supplied by coauthor R. W. Morse. The comparator
+  // remains the immutable TUTORIAL1 archive; no paper curves are substituted.
+  const manuscript = ["ThreeField", "FourField"].includes(run?.framework);
+  return {
+    label: manuscript ? "Le Corre 2025" : "OpenSTREAM TUTORIAL1",
+    citation: manuscript ? "J.-M. Le Corre, J. Chan, E. Walter, E. T. Hurlburt and R. W. Morse, OpenSTREAM: An Open-Source Platform for Two-Phase Flow Modeling and Simulation, NURETH-21 (2025), Figures 3–4." : null,
+    archive: run?.reference?.archive?.file || `tutorial1_${run?.framework || "Unknown"}Solver.mat`,
+  };
+}
+
+function referencePresentation(run) {
+  const enabled = referenceEnabled(run), source = referenceSource(run), reference = run?.reference || {};
+  const result = reference.status === "passed" ? "Profiles agree" : reference.status === "failed" ? "Comparison failed" : "Not yet compared";
+  const provenance = `Numerical target: OpenSTREAM TUTORIAL1 archive (${source.archive}).` +
+    (source.citation ? ` Associated manuscript: ${source.citation} The manuscript association was supplied by R. W. Morse; direct provenance of the archive to the published curves remains unverified.` : " No manuscript association has been established for this archive.");
+  return {enabled, source, label: `Referenced against “${source.label}”`, result,
+    detail: `${provenance} ${reference.message || "The comparison is reported after the calculation finishes."}`,
+    kind: reference.status === "passed" ? "good" : reference.status === "failed" ? "error" : ""};
+}
+
+function referenceOverlay(dataset, run, physicalTime) {
+  if (!referenceEnabled(run) || !dataset.reference_fields) return null;
+  const timeIndex = referenceIndexForTime(dataset.reference_time, physicalTime);
+  return {fields: dataset.reference_fields, z: dataset.reference_z || dataset.z,
+    timeIndex, label: referenceSource(run).label};
+}
+
 function physicalDisplay(run) {
   const physical = run.physical || {};
   if (!["ThreeField", "FourField"].includes(run.framework)) return physical;
@@ -510,10 +543,10 @@ function renderRun(run) {
   if (run.converged === true) setStatusCard("numerical", "Converged", run.convergence_message || "The solver satisfied its configured convergence criteria.", "good");
   else if (run.converged === false) setStatusCard("numerical", "Not converged", run.convergence_message || "The solver did not satisfy its configured convergence criteria.", "error");
   else setStatusCard("numerical", busy ? "In progress" : "Not established", busy ? "Convergence will be reported by the native solver." : "No completed convergence result is available.");
-  const reference = run.reference || {};
-  if (reference.status === "passed") setStatusCard("reference", "Archived profiles agree", reference.message || "The original archived MATLAB baseline comparison passed.", "good");
-  else if (reference.status === "failed") setStatusCard("reference", "Comparison failed", reference.message || "The run did not meet the baseline comparison tolerances.", "error");
-  else setStatusCard("reference", run.is_reference ? "Not yet compared" : "Unverified", reference.message || (run.is_reference ? "A reference result is reported only after the numerical comparison." : "Modified inputs are outside the four verified steady baseline cases."), run.is_reference ? "" : "warning");
+  const reference = referencePresentation(run);
+  $("reference-card").hidden = !reference.enabled;
+  $("reference-label").textContent = reference.label;
+  if (reference.enabled) setStatusCard("reference", reference.result, reference.detail, reference.kind);
   const physical = physicalDisplay(run);
   if (physical.status === "passed") setStatusCard("physical", "Reported checks passed", physical.message || "Available consistency checks passed. This is not experimental validation.", "good");
   else if (physical.status === "failed") setStatusCard("physical", "Consistency checks failed", physical.message || "Inspect the diagnostics. Numerical convergence does not establish physical consistency.", "error");
@@ -523,7 +556,7 @@ function renderRun(run) {
   $("plots-panel").hidden = !state.data;
   renderDownloads(run.files || []);
   const diagnostics = $("diagnostic-details"); diagnostics.replaceChildren();
-  const details = {run_id: run.id, case_name: runCaseName(run, savedInputs.get(run.id)), created_at: run.created_at, framework: run.framework, input_case: run.is_reference ? "Unchanged reference inputs" : "Custom inputs", ...(run.reference ? {reference: run.reference} : {}), ...(physical.diagnostics ? {physical_diagnostics: physical.diagnostics} : {})};
+  const details = {run_id: run.id, case_name: runCaseName(run, savedInputs.get(run.id)), created_at: run.created_at, framework: run.framework, input_case: reference.enabled ? "Unchanged reference inputs" : "Custom inputs", ...(reference.enabled && run.reference ? {reference: run.reference, reference_source: reference.source} : {}), ...(physical.diagnostics ? {physical_diagnostics: physical.diagnostics} : {})};
   if (physical.historicalAreaOnly) details.recorded_physical_assessment = run.physical;
   diagnostics.append(element("pre", "diagnostic-json", JSON.stringify(details, null, 2)));
   updateRunControls();
@@ -608,7 +641,7 @@ function traceName(key) {
   return parts.length ? parts.map((part) => ({film: "Film", base: "Base film", wave: "Wave", drop: "Droplets", vapor: "Vapor", liquid: "Liquid", mixture: "Mixture"}[part] || part)).join(" · ") : "Mixture";
 }
 
-function makeTraces(field, key, z, timeIndex, color, reference = false) {
+function makeTraces(field, key, z, timeIndex, color, reference = false, referenceLabel = "OpenSTREAM TUTORIAL1") {
   const values = field.values;
   if (!Array.isArray(values) || !values.length) return [];
   const slice = values[timeIndex];
@@ -618,7 +651,7 @@ function makeTraces(field, key, z, timeIndex, color, reference = false) {
   for (let wall = 0; wall < wallCount; wall++) {
     const y = slice.map((value) => Array.isArray(value) ? value[wall] : value);
     const component = key.startsWith("film.") || ["HFLUX", "LHGR", "TWALL"].includes(key) ? "wall" : "component";
-    traces.push({x: z, y, type: "scatter", mode: "lines", name: `${traceName(key)}${wallCount > 1 ? ` · ${component} ${wall + 1}` : ""}${reference ? " · MATLAB archive" : ""}`, line: {color, width: reference ? 1.6 : 2.2, dash: reference ? "dot" : "solid"}, connectgaps: false,
+    traces.push({x: z, y, type: "scatter", mode: "lines", name: `${traceName(key)}${wallCount > 1 ? ` · ${component} ${wall + 1}` : ""}${reference ? ` · ${referenceLabel}` : ""}`, line: {color, width: reference ? 1.6 : 2.2, dash: reference ? "dot" : "solid"}, connectgaps: false,
       hovertemplate: `z = %{x:.5g} m<br>%{y:.7g} ${field.unit || field.units || ""}<extra>%{fullData.name}</extra>`});
   }
   return traces;
@@ -631,16 +664,16 @@ function renderPlot() {
   const z = dataset.z || [], timeIndex = Number($("time-select").value || 0);
   const colors = plotColors;
   const physicalTime = dataset.time?.[timeIndex];
-  const referenceIndex = referenceIndexForTime(dataset.reference_time, physicalTime);
+  const overlay = referenceOverlay(dataset, state.selectedRun, physicalTime);
   const traces = []; let unit = "";
   quantity.names.forEach((key, index) => {
     const field = dataset.fields[key]; unit ||= field.unit || field.units || "";
     traces.push(...makeTraces(field, key, z, timeIndex, colors[index % colors.length]));
-    const reference = dataset.reference_fields?.[key];
-    if (reference && referenceIndex >= 0) traces.push(...makeTraces(reference, key, dataset.reference_z || z, referenceIndex, colors[index % colors.length], true));
+    const reference = overlay?.fields[key];
+    if (reference && overlay.timeIndex >= 0) traces.push(...makeTraces(reference, key, overlay.z || z, overlay.timeIndex, colors[index % colors.length], true, overlay.label));
   });
   const annularNote = ["ThreeField", "FourField"].includes(state.selectedRun.framework) && !state.dataset.startsWith("precursor") ? "Before annular onset, fields are initialization quantities." : "";
-  const referenceNote = dataset.reference_fields ? referenceIndex >= 0 ? "MATLAB archive at matching time." : "No archived state at this time; reference omitted." : "";
+  const referenceNote = overlay ? overlay.timeIndex >= 0 ? `Referenced against “${overlay.label}” · TUTORIAL1 archive, matching time.` : "No reference state at this time; comparison omitted." : "";
   $("plot-context").textContent = [pseudoTime(state.dataset, dataset) ? "Pseudo-time, not physical time." : "", annularNote, referenceNote].filter(Boolean).join(" ");
   $("plot-context").hidden = !$("plot-context").textContent;
   const legend = plotWorkspace()?.primaryLegend ?? true;
@@ -1160,7 +1193,7 @@ function bindEvents() {
 }
 
 // These pure adapters are exported only to the dependency-free Node checks.
-if (typeof module !== "undefined" && module.exports) module.exports = {inputCaseName, runCaseName, physicalDisplay, primaryQuantityFields, referenceIndexForTime, assertInputDocumentVersion, makeTraces, insideLegend, rectangularShape, componentIndices, defaultAxis, normalizeAxis, outputVector, pairOutputVectors, buildCustomFigure, plotLayout, plotConfig, newPlotSeries, escapePlotText, defaultAxisFormat, defaultPlotFormat, axisLayoutSettings, seriesStyle, applyTraceStyle};
+if (typeof module !== "undefined" && module.exports) module.exports = {inputCaseName, runCaseName, referenceEnabled, referenceSource, referencePresentation, referenceOverlay, physicalDisplay, primaryQuantityFields, referenceIndexForTime, assertInputDocumentVersion, makeTraces, insideLegend, rectangularShape, componentIndices, defaultAxis, normalizeAxis, outputVector, pairOutputVectors, buildCustomFigure, plotLayout, plotConfig, newPlotSeries, escapePlotText, defaultAxisFormat, defaultPlotFormat, axisLayoutSettings, seriesStyle, applyTraceStyle};
 if (typeof document !== "undefined") {
   bindEvents();
   let collapsed = false;

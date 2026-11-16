@@ -6,6 +6,48 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
 const {inputCaseName, runCaseName, physicalDisplay, primaryQuantityFields, referenceIndexForTime, assertInputDocumentVersion, makeTraces} = require("../src/openstream/gui_static/app.js");
+const {referenceEnabled, referenceSource, referencePresentation, referenceOverlay} = require("../src/openstream/gui_static/app.js");
+
+test("manuscript labels distinguish author attribution from the actual immutable archive", () => {
+  for (const framework of ["ThreeField", "FourField"]) {
+    const run = {framework, is_reference: true, changes: [], change_count: 0,
+      reference: {status: "passed", archive: {file: `tutorial1_${framework}Solver.mat`}}};
+    const original = JSON.stringify(run);
+    const shown = referencePresentation(run);
+    assert.equal(shown.label, 'Referenced against “Le Corre 2025”');
+    assert.equal(shown.result, "Profiles agree");
+    assert.equal(shown.enabled, true);
+    assert.match(shown.detail, /NURETH-21 \(2025\), Figures 3–4/);
+    assert.match(shown.detail, /Numerical target: OpenSTREAM TUTORIAL1 archive/);
+    assert.match(shown.detail, /published curves remains unverified/);
+    assert.equal(JSON.stringify(run), original);
+  }
+  for (const framework of ["Mixture", "TwoFluid"]) {
+    assert.equal(referenceSource({framework}).label, "OpenSTREAM TUTORIAL1");
+    assert.equal(referenceSource({framework}).citation, null);
+  }
+});
+
+test("changed or unassessed saved inputs suppress comparison cards and legacy reference overlays", () => {
+  const dataset = {z: [0, 1], reference_time: [0], reference_fields: {W: {values: [[1, 2]]}}};
+  const original = JSON.stringify(dataset);
+  for (const run of [undefined, {}, {is_reference: false, reference: {status: "passed"}},
+    {is_reference: true, changes: [{key: "POWER", value: 1}]}, {is_reference: true, change_count: 1}]) {
+    assert.equal(referenceEnabled(run), false);
+    assert.equal(referencePresentation(run).enabled, false);
+    assert.equal(referenceOverlay(dataset, run, 0), null);
+  }
+  const run = {framework: "FourField", is_reference: true};
+  const overlay = referenceOverlay(dataset, run, 0);
+  assert.equal(overlay.label, "Le Corre 2025");
+  assert.strictEqual(overlay.fields, dataset.reference_fields);
+  assert.equal(overlay.timeIndex, 0);
+  assert.equal(referenceOverlay(dataset, run, 2).timeIndex, -1);
+  assert.equal(JSON.stringify(dataset), original);
+  const trace = makeTraces({values: [[1, 2]], unit: "kg/s"}, "film.W", [0, 1], 0, "#000", true, overlay.label)[0];
+  assert.equal(trace.name, "Film · Le Corre 2025");
+  assert.deepEqual(trace.y, [1, 2]);
+});
 
 test("historical annular area flags display as informational without rewriting evidence", () => {
   const physical = {status: "failed", diagnostics: {physical_consistency: false,

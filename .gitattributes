@@ -52,6 +52,7 @@ outputs/verification/hosted-git/** -text
 outputs/verification/gui-results-editor-01/** -text
 outputs/verification/gui-plot-formatting-01/** -text
 outputs/verification/hosted-startup-fix-01/** -text
+outputs/verification/gui-reference-labels-01/** -text
 src/openstream/gui_static/plotly.min.js -text
 tools/verify_hosted_gui.py text eol=lf
 tools/prepare_cloud_deployment.py text eol=lf

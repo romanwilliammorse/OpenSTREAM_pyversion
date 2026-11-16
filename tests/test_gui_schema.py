@@ -71,6 +71,40 @@ def test_input_copy_isolation_and_changed_case_detection():
     assert first["inputs"]["model"]["RELAXX"][0] == -0.6
 
 
+@pytest.mark.parametrize("framework", FRAMEWORKS)
+@pytest.mark.parametrize("group,key,value", [
+    ("model", "NNODES", 200),
+    ("options", "ERRORW", 0.002),
+    ("geometry", "AREA", 0.00007),
+    ("bc", "POWER", 80000),
+])
+def test_changed_calculation_settings_disable_reference_despite_baseline_badges(framework, group, key, value):
+    """Imported reference metadata cannot authorize a changed calculation.
+
+    Exercise mesh, convergence, geometry and boundary changes separately: all
+    are valid inputs, but none is eligible for a default-case comparison.
+    Restoring the exact original setting restores eligibility without a stale
+    custom-case flag. The baseline's own verification metadata stays present
+    throughout, as it does in an edited/exported GUI payload.
+    """
+    payload = baseline(framework)
+    record = payload["inputs"][group][0] if group == "bc" else payload["inputs"][group]
+    original = record[key]
+    record[key] = value
+    assert payload["verification"]["archive_agreement"] is True
+    assert assess_payload(payload)["is_reference"] is False
+    record[key] = original
+    assert assess_payload(payload)["is_reference"] is True
+
+
+def test_client_cannot_forge_reference_eligibility():
+    payload = baseline("FourField")
+    payload["inputs"]["model"]["NNODES"] = 200
+    payload["is_reference"] = True
+    with pytest.raises(InputError, match="Unknown payload fields: is_reference"):
+        assess_payload(payload)
+
+
 def test_constant_multiplier_and_nan_sentinel_are_safe_adapters():
     payload = baseline()
     payload["inputs"]["model"]["CBTMULT"] = 1.25

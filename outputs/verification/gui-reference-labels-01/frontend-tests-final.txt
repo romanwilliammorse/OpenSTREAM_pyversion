@@ -1,0 +1,46 @@
+✔ tests\cloud_frontend.test.cjs (91.1144ms)
+✔ manuscript labels distinguish author attribution from the actual immutable archive (1.4047ms)
+✔ changed or unassessed saved inputs suppress comparison cards and legacy reference overlays (1.0359ms)
+✔ historical annular area flags display as informational without rewriting evidence (0.2295ms)
+✔ annular display preserves unrelated failures and never invents a physical pass (0.1348ms)
+✔ case labels use the original name tag without case normalization (0.2068ms)
+✔ case labels preserve Unicode and literal text, with explicit missing-name fallbacks (0.1347ms)
+✔ enthalpy and velocity groups exclude derivatives and diagnostic copies (0.178ms)
+✔ reference overlays choose the matching time rather than the native array index (0.1689ms)
+✔ missing reference states are omitted without clamping to a different state (0.2565ms)
+✔ individual derivative profiles keep their derivative units (0.3361ms)
+✔ input import rejects unknown explicit schema versions (0.5526ms)
+✔ cross-dataset quality versus film velocity uses exact components and does not mutate output (0.6661ms)
+✔ time histories preserve the selected node and component rather than flattening cells (0.1951ms)
+✔ vector-length mismatches reject without truncation or interpolation (0.1673ms)
+✔ equal-length but different coordinates or dimensions are explicitly paired by index (0.2212ms)
+✔ different states and initialization pseudo-time remain disclosed (0.1579ms)
+✔ null diagnostics remain gaps and cannot be presented as zero or joined (0.6988ms)
+✔ multi-series axes require matching recorded units without implicit unit conversion (0.2842ms)
+✔ unknown units are labeled unavailable rather than invented or declared dimensionless (0.1577ms)
+✔ malformed arrays and out-of-range selection fail explicitly (0.3177ms)
+✔ arbitrary trailing component dimensions remain explicit (0.1893ms)
+✔ new figures and axis defaults have independent selections (0.4218ms)
+✔ legend is inside the upper-left plot area and cloud upload is disabled (0.4697ms)
+✔ all GUI figures inherit Times New Roman without adding a figure title (0.1775ms)
+✔ blank axis formatting restores automatic limits and quantity-based labels (0.1024ms)
+✔ manual limits preserve zero, negative values and scientific notation exactly (0.1474ms)
+✔ invalid or incomplete limits fail instead of coercing to a plausible view (0.2207ms)
+✔ regular ticks use an explicit origin and positive spacing in recorded axis units (0.2321ms)
+✔ explicit tick positions and labels remain paired without resampling data (0.3559ms)
+✔ user axis and tick labels remain literal text rather than Plotly markup (0.1127ms)
+✔ formatting is independent between axes and figures and resets the zoom revision (0.2356ms)
+✔ each series has its own line, marker and color styles (0.1394ms)
+✔ unknown line and marker styles, invalid colors and invalid sizes reject (0.1956ms)
+✔ style overrides preserve native and reference trace data, hover units and gaps (0.1987ms)
+✔ cross-stage multi-series formatting leaves stored numerical arrays and units unchanged (0.3805ms)
+✔ Run validates and submits the same captured model and case despite subsequent editor changes (4.1298ms)
+✔ a stale history model load cannot overwrite a newer selection or unlock Run early (2.4255ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 117.8839

@@ -1,5 +1,21 @@
 # Progress and resume record
 
+## GUI manuscript labels - 2026-11-15 (verification in progress)
+
+The user requests concise author-year reference labels and no comparison for
+changed calculation settings. ThreeField/FourField use the coauthor-associated
+label “Le Corre 2025”; expanded details identify the NURETH-21 manuscript and
+the actual TUTORIAL1 numerical archive, whose direct publication provenance
+remains unverified. Mixture/TwoFluid retain OpenSTREAM TUTORIAL1; Chan/Dunbar
+are label examples, not unsupported source assignments. Custom/ambiguous runs
+hide the reference card and curves. The selected saved run determines the
+comparison, independently of unsent editor changes. Numerical source, defaults,
+reference bytes, tolerances and stored results are unchanged. Thirty-eight
+frontend and 100 focused Python checks passed. Local browser inspection confirmed
+the default reference label/legend and a hidden comparison for a saved custom
+case. Production verification is pending.
+See GUI_REFERENCE_LABELS.md and outputs/verification/gui-reference-labels-01/.
+
 ## Hosted startup repair — 2026-11-15 (production recovered in tested scope)
 
 The current task is to repair the supplied `GET /` failure

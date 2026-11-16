@@ -5,6 +5,15 @@ worker, reference comparisons and plotting data as the Windows application.
 Hosting does not establish additional MATLAB equivalence or experimental
 validation. The scientific acceptance matrix remains authoritative.
 
+## Reference display
+
+Unchanged ThreeField/FourField cases use the short label “Le Corre 2025”.
+Expanded details identify the NURETH-21 manuscript and the actual TUTORIAL1
+archive; the author-supplied association does not establish direct provenance
+to published curves. Custom or ambiguous inputs hide reference status and
+overlays. Mixture/TwoFluid remain labeled OpenSTREAM TUTORIAL1 until a source
+association is established. See `GUI_REFERENCE_LABELS.md` for scope and checks.
+
 ## Architecture and access
 
 The Vercel Flask application authenticates a shared password on the server.
