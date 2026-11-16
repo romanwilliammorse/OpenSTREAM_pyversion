@@ -1,5 +1,6 @@
 """The transferred worker must be a real installed distribution for exports."""
 import hashlib
+from importlib import import_module
 import io
 import json
 from pathlib import Path
@@ -8,6 +9,36 @@ import sys
 import zipfile
 
 from openstream.cloud.gateway import PACKAGE, source_bundle
+
+
+def test_lazy_public_api_returns_original_class_objects():
+    import openstream
+    exports = {
+        "InputSet": "inputs", "Model": "inputs", "Options": "inputs",
+        "Geometry": "inputs", "BoundaryConditions": "inputs",
+        "FluidProperties": "properties", "MixtureSolver": "solver", "SolverState": "solver",
+        "TwoFluidSolver": "twofluid", "ThreeFieldSolver": "threefield",
+        "FourFieldSolver": "fourfield", "SavedResults": "plotting",
+    }
+    assert set(openstream.__all__) == set(exports)
+    assert set(exports) <= set(dir(openstream))
+    for name, module in exports.items():
+        expected = getattr(import_module("openstream." + module), name)
+        assert getattr(openstream, name) is expected
+        assert vars(openstream)[name] is expected
+    try:
+        getattr(openstream, "unknown_public_export")
+    except AttributeError:
+        pass
+    else:
+        raise AssertionError("Unknown public names must still raise AttributeError")
+
+
+def test_hosted_plotly_asset_matches_pinned_worker_plotly():
+    import plotly
+    source = Path(plotly.__file__).parent / "package_data" / "plotly.min.js"
+    hosted = PACKAGE / "gui_static" / "plotly.min.js"
+    assert hashlib.sha256(hosted.read_bytes()).digest() == hashlib.sha256(source.read_bytes()).digest()
 
 
 def test_transferred_package_installs_metadata_without_changing_source(tmp_path):

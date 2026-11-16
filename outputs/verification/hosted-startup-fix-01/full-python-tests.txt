@@ -1,0 +1,51 @@
+........................................................................ [  8%]
+........................................................................ [ 17%]
+........................................................................ [ 25%]
+........................................................................ [ 34%]
+........................................................................ [ 43%]
+........................................................................ [ 51%]
+........................................................................ [ 60%]
+........................................................................ [ 69%]
+........................................................................ [ 77%]
+........................................................................ [ 86%]
+........................................F............................... [ 95%]
+........................................                                 [100%]
+================================== FAILURES ===================================
+_________ test_current_numerical_source_bytes_match_registered_replay _________
+
+    def test_current_numerical_source_bytes_match_registered_replay():
+        """Keep the traced numerical bytes frozen while the results GUI evolves.
+    
+        The historical manifest and replay command retain their strict full-source
+        guard. Only these explicitly named presentation files are outside this
+        current-release comparison; new or removed numerical files still fail.
+        """
+        manifest = json.loads((ROOT/'examples/sawai_oscillation_diagnostic.json').read_text())
+        current = tool.source_hashes()
+        frozen = manifest['native_source_sha256']
+        assert current.keys() - frozen.keys() == {'gui_exports.py'}
+        assert not frozen.keys() - current.keys()
+>       assert {name: digest for name, digest in current.items()
+                if name not in {'gui.py', 'gui_exports.py'}} == {
+                    name: digest for name, digest in frozen.items() if name != 'gui.py'}
+E       AssertionError: assert {'__init__.py...dcbd234', ...} == {'__init__.py...dcbd234', ...}
+E         
+E         Omitting 23 identical items, use -vv to show
+E         Differing items:
+E         {'__init__.py': 'bf6f1e89073a80efc4cfebe96987b7a198d3b3402354b53aaa62c464654060db'} != {'__init__.py': '3efb57883ed6ced13dec86065616bca78356b4b8c92a34bc52470a4aa49c080b'}
+E         Use -v to get more diff
+
+tests\test_sawai_oscillation_trace.py:78: AssertionError
+============================== warnings summary ===============================
+tests/test_fourfield.py::test_original_inputs_converge_with_bounded_primary_fields
+  C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\ff_fields.py:178: RuntimeWarning: divide by zero encountered in divide
+    return (c[1]/self.REV(i))**2+c[2]
+
+tests/test_fourfield.py::test_original_inputs_converge_with_bounded_primary_fields
+  C:\Users\Roman\Documents\ChatGPT\OpenSTREAM\src\openstream\ff_fields.py:140: RuntimeWarning: invalid value encountered in multiply
+    force = .5*self.SHAPEFACTOR(i)*self.DRAGCOEF(i)*self.fluid.RHOG*difference**2
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_sawai_oscillation_trace.py::test_current_numerical_source_bytes_match_registered_replay
+1 failed, 831 passed, 2 warnings in 192.67s (0:03:12)

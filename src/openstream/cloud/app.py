@@ -210,9 +210,8 @@ def create_app(manager, config=None, *, limiter=None):
 
     @app.get("/assets/<path:filename>")
     def asset(filename):
-        if filename == "plotly.min.js":
-            import plotly
-            return send_from_directory(Path(plotly.__file__).parent / "package_data", filename)
+        # The exact renderer shipped with the pinned Plotly distribution is
+        # bundled as a static asset; the web/API process needs no Python Plotly.
         return send_from_directory(GUI_STATIC, filename)
 
     @app.get("/api/health")

@@ -1,5 +1,33 @@
 # Progress and resume record
 
+## Hosted startup repair — 2026-11-15 (deployment verification pending)
+
+The current task is to repair the supplied `GET /` failure
+`zf9lf-1794793633089-328672dd1e5c` without removing the plotting controls or
+changing equations. Runtime logs confirm temporary-disk exhaustion while
+extracting CoolProp during dependency installation, before application startup.
+The implemented repair narrows web/API dependencies to 25 unchanged pins, keeps
+the full 48-package scientific Sandbox environment, makes package exports lazy,
+and serves the pinned Plotly JavaScript directly. A clean web-only environment
+passed import/authentication/schema/validation/export probes without importing
+the removed scientific packages; 51 focused and 36 frontend checks passed.
+The first full suite passed 831 tests and failed one historical-source guard
+because it included the nonnumerical package import wrapper. Its current-release
+scope was corrected explicitly; historical replay provenance and numerical
+hashes remain frozen. The final full suite passed all 832 tests with two retained
+FourField warnings; source and wheel packaging also passed. Deployed startup
+verification remains pending. See `HOSTED_STARTUP_FIX.md`. No service-recovery
+claim is made yet.
+
+Pre-repair operational observation: the user's instruction to retain the plotting
+controls was completed in commit `935c03ed4b95aa5ee8457a957110c6db74d6ff86`,
+production deployment `dpl_9wBZ7zBHTU6kPxzGvpraxQCcN5U2` (READY). Its application,
+tests and dependency manifests exactly match `e09e11f`. Both re-promoting the
+existing formatting deployment and rebuilding that source failed the anonymous
+asset startup check; therefore READY is not a service-health claim. The hosting
+temporary-disk/dependency-install issue remains unresolved. Do not roll back the
+plotting controls; address runtime packaging separately, without equation changes.
+
 The user's requested full native port is **not yet complete**. Continue implementation and verification without replacing the preserved source or changing equations to obtain passing tests.
 
 ## Hosted failure and rollback reversal — 2026-11-15

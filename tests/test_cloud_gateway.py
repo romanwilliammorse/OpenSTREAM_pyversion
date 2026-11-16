@@ -133,12 +133,21 @@ def test_provenance_matches_source_lock_and_pinned_image(monkeypatch):
     assert "@sha256:" in gateway.IMAGE
 
 
-def test_function_requirements_are_exact_flattened_worker_lock():
+def test_function_requirements_are_exact_flattened_web_subset_of_worker_lock():
     def pins(name):
         return [line.strip() for line in (gateway.ROOT / name).read_text().splitlines()
                 if line.strip() and not line.lstrip().startswith("#")]
-    assert pins("requirements.txt") == pins("requirements-cloud.lock")
-    assert all("==" in line and not line.startswith("-") for line in pins("requirements.txt"))
+    web = pins("requirements-web.lock")
+    worker = pins("requirements-cloud.lock")
+    assert pins("requirements.txt") == web
+    assert set(web) < set(worker)
+    assert all("==" in line and not line.startswith("-") for line in web)
+    names = {line.split("==", 1)[0].lower() for line in web}
+    worker_names = {line.split("==", 1)[0].lower() for line in worker}
+    assert "numpy" in names  # Original input validation and saved-array exports.
+    scientific = {"coolprop", "scipy", "matplotlib", "plotly"}
+    assert not names & scientific
+    assert scientific <= worker_names
 
 
 def test_create_pins_private_nonpersistent_environment(monkeypatch):

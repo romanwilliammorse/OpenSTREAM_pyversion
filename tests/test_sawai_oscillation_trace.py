@@ -64,20 +64,26 @@ def test_manifest_fixes_current_case_and_complete_numeric_reference():
 
 
 def test_current_numerical_source_bytes_match_registered_replay():
-    """Keep the traced numerical bytes frozen while the results GUI evolves.
+    """Keep traced numerical bytes frozen while GUI/import packaging evolves.
 
     The historical manifest and replay command retain their strict full-source
-    guard. Only these explicitly named presentation files are outside this
-    current-release comparison; new or removed numerical files still fail.
+    guard. Only the explicitly named GUI files and package import wrapper are
+    outside this current-release comparison. The wrapper now lazily exports the
+    original classes to keep scientific dependencies out of hosted API startup;
+    it contains no equations or numerical controls. Public export identity is
+    checked in test_cloud_packaging.py. New or removed source files still fail
+    the exact key-set checks, and every remaining file keeps its frozen hash.
     """
     manifest = json.loads((ROOT/'examples/sawai_oscillation_diagnostic.json').read_text())
     current = tool.source_hashes()
     frozen = manifest['native_source_sha256']
     assert current.keys() - frozen.keys() == {'gui_exports.py'}
     assert not frozen.keys() - current.keys()
+    packaging_and_gui = {'__init__.py', 'gui.py', 'gui_exports.py'}
     assert {name: digest for name, digest in current.items()
-            if name not in {'gui.py', 'gui_exports.py'}} == {
-                name: digest for name, digest in frozen.items() if name != 'gui.py'}
+            if name not in packaging_and_gui} == {
+                name: digest for name, digest in frozen.items()
+                if name not in packaging_and_gui}
 
 
 def provenance_fixture(tmp_path, monkeypatch):

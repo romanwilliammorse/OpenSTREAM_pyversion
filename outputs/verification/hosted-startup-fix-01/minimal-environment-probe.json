@@ -1,0 +1,1 @@
+{"blocked_modules": ["CoolProp", "matplotlib", "plotly", "scipy"], "four_baselines_validated": true, "csv_types_checked": ["boundary-conditions", "geometry", "inputs", "results"], "saved_artifacts_unchanged": true, "legacy_nonfinite_gap_preserved": true, "actual_entrypoint_imported": true}

@@ -29,7 +29,13 @@ jobs:
           python -m pip check
       - name: Numerical and GUI tests
         run: python -m pytest -q
+      - name: Isolated web runtime
+        run: |
+          python -m venv .venv-web
+          .\.venv-web\Scripts\python.exe -m pip install -r requirements-web.lock
+          .\.venv-web\Scripts\python.exe -m pip check
+          .\.venv-web\Scripts\python.exe tools/verify_web_runtime.py
       - name: Frontend logic
-        run: node --test tests/gui_frontend_logic.test.cjs tests/gui_navigation.test.cjs
+        run: node --test tests/gui_frontend_logic.test.cjs tests/gui_navigation.test.cjs tests/cloud_frontend.test.cjs
       - name: Build installable distributions
         run: python -m build --no-isolation

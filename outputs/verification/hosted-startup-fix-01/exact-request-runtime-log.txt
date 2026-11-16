@@ -1,0 +1,36 @@
+## Runtime Logs
+
+**Project:** prj_tWK9pFywBrkziKMK9VXOK9Co6IEE
+**Time range:** 2026-11-16T01:19:41.393Z → 2026-11-16T01:49:41.393Z
+
+### 2026-11-16T01:47:16.532Z GET / [info/function]
+dep=dpl_9wBZ7zBHTU6kPxzGvpraxQCcN5U2 branch=main request=zf9lf-1794793633089-328672dd1e5c domain=openstream-py.vercel.app environment=production region=cle1 runtime=python3.12 stream=stderr
+    Runtime dependency installation failed.
+    Command: /var/task/_uv/uv sync --inexact --active --frozen --no-dev --no-editable --no-install-project --no-build --no-cache --no-progress --link-mode hardlink
+    Exit code: 1
+    Installing runtime dependencies...
+    Downloading plotly (9.2MiB)
+    Downloading kiwisolver (1.4MiB)
+    Downloading pygments (1.2MiB)
+    Downloading numpy (16.0MiB)
+    Downloading pydantic-core (2.2MiB)
+    Downloading scipy (33.7MiB)
+    Downloading pillow (6.8MiB)
+    Downloading fonttools (5.2MiB)
+    Downloading matplotlib (9.4MiB)
+    Downloading coolprop (10.3MiB)
+    Downloaded pygments
+    Downloaded kiwisolver
+    Downloaded pydantic-core
+    Downloaded fonttools
+    Downloaded pillow
+    error: Failed to download `coolprop==8.0.0`
+    cause: Failed to extract archive: coolprop-8.0.0-cp312-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+    cause: I/O operation failed during extraction
+    cause: failed to write to file `/tmp/[temporary-cache-path]`: No space left on device (os error 28)
+    hint: `coolprop` (v8.0.0) was included because `app` (v0.1.0) depends on `coolprop`
+    Runtime dependency installation failed.
+    Command: /var/task/_uv/uv sync --inexact --active --frozen --no-dev --no-editable --no-install-project --no-build --no-cache --no-progress --link-mode hardlink
+    Exit code: 1
+    Python process exited with exit status: 1. The logs above can help with debugging the issue.
+

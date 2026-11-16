@@ -1,0 +1,402 @@
+{
+  "platform": "CPython 3.12 x86_64 Linux-compatible wheels",
+  "scope": "Downloaded wheel entries, not installed function size or measured peak temporary storage.",
+  "original_web_equal_worker": {
+    "packages": 48,
+    "archive_bytes": 104937518,
+    "uncompressed_bytes": 349270602
+  },
+  "reduced_web": {
+    "packages": 25,
+    "archive_bytes": 20884230,
+    "uncompressed_bytes": 69020004
+  },
+  "uncompressed_reduction_fraction": 0.8023881666399166,
+  "renderer_static_bytes": 4815814,
+  "packages": [
+    {
+      "name": "scipy",
+      "version": "1.18.1",
+      "wheel": "scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "archive_bytes": 35344199,
+      "uncompressed_bytes": 111939552,
+      "required_by_web": false
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.4",
+      "wheel": "numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "archive_bytes": 16727283,
+      "uncompressed_bytes": 56387772,
+      "required_by_web": true
+    },
+    {
+      "name": "plotly",
+      "version": "7.1.0",
+      "wheel": "plotly-7.1.0-py3-none-any.whl",
+      "archive_bytes": 9692368,
+      "uncompressed_bytes": 40383304,
+      "required_by_web": false
+    },
+    {
+      "name": "coolprop",
+      "version": "8.0.0",
+      "wheel": "coolprop-8.0.0-cp312-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "archive_bytes": 10814565,
+      "uncompressed_bytes": 39009306,
+      "required_by_web": false
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.11.2",
+      "wheel": "matplotlib-3.11.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "archive_bytes": 9860353,
+      "uncompressed_bytes": 25016062,
+      "required_by_web": false
+    },
+    {
+      "name": "fonttools",
+      "version": "4.68.0",
+      "wheel": "fonttools-4.68.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "archive_bytes": 5443448,
+      "uncompressed_bytes": 23060662,
+      "required_by_web": false
+    },
+    {
+      "name": "pillow",
+      "version": "13.0.0",
+      "wheel": "pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "archive_bytes": 7144542,
+      "uncompressed_bytes": 20409333,
+      "required_by_web": false
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.5.1",
+      "wheel": "kiwisolver-1.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "archive_bytes": 1477929,
+      "uncompressed_bytes": 5759906,
+      "required_by_web": false
+    },
+    {
+      "name": "pydantic-core",
+      "version": "2.50.4",
+      "wheel": "pydantic_core-2.50.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "archive_bytes": 2261727,
+      "uncompressed_bytes": 5401583,
+      "required_by_web": true
+    },
+    {
+      "name": "pygments",
+      "version": "2.21.0",
+      "wheel": "pygments-2.21.0-py3-none-any.whl",
+      "archive_bytes": 1250147,
+      "uncompressed_bytes": 4621166,
+      "required_by_web": false
+    },
+    {
+      "name": "setuptools",
+      "version": "84.2.1",
+      "wheel": "setuptools-84.2.1-py3-none-any.whl",
+      "archive_bytes": 876263,
+      "uncompressed_bytes": 3002768,
+      "required_by_web": false
+    },
+    {
+      "name": "narwhals",
+      "version": "2.28.0",
+      "wheel": "narwhals-2.28.0-py3-none-any.whl",
+      "archive_bytes": 490591,
+      "uncompressed_bytes": 2079651,
+      "required_by_web": false
+    },
+    {
+      "name": "pydantic",
+      "version": "2.14.3",
+      "wheel": "pydantic-2.14.3-py3-none-any.whl",
+      "archive_bytes": 494071,
+      "uncompressed_bytes": 1987038,
+      "required_by_web": true
+    },
+    {
+      "name": "pytest",
+      "version": "9.2.0",
+      "wheel": "pytest-9.2.0-py3-none-any.whl",
+      "archive_bytes": 411776,
+      "uncompressed_bytes": 1448730,
+      "required_by_web": false
+    },
+    {
+      "name": "contourpy",
+      "version": "1.4.0",
+      "wheel": "contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "archive_bytes": 383243,
+      "uncompressed_bytes": 1128226,
+      "required_by_web": false
+    },
+    {
+      "name": "werkzeug",
+      "version": "3.1.9",
+      "wheel": "werkzeug-3.1.9-py3-none-any.whl",
+      "archive_bytes": 228700,
+      "uncompressed_bytes": 774089,
+      "required_by_web": true
+    },
+    {
+      "name": "vercel-sandbox",
+      "version": "0.10.0",
+      "wheel": "vercel_sandbox-0.10.0-py3-none-any.whl",
+      "archive_bytes": 136530,
+      "uncompressed_bytes": 635184,
+      "required_by_web": true
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.6",
+      "wheel": "tzdata-2026.6-py2.py3-none-any.whl",
+      "archive_bytes": 348210,
+      "uncompressed_bytes": 582438,
+      "required_by_web": false
+    },
+    {
+      "name": "anyio",
+      "version": "4.16.0",
+      "wheel": "anyio-4.16.0-py3-none-any.whl",
+      "archive_bytes": 134521,
+      "uncompressed_bytes": 553035,
+      "required_by_web": true
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "wheel": "packaging-26.3-py3-none-any.whl",
+      "archive_bytes": 129956,
+      "uncompressed_bytes": 499179,
+      "required_by_web": false
+    },
+    {
+      "name": "jinja2",
+      "version": "3.1.6",
+      "wheel": "jinja2-3.1.6-py3-none-any.whl",
+      "archive_bytes": 134899,
+      "uncompressed_bytes": 496892,
+      "required_by_web": true
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "wheel": "pyparsing-3.3.3-py3-none-any.whl",
+      "archive_bytes": 126420,
+      "uncompressed_bytes": 489016,
+      "required_by_web": false
+    },
+    {
+      "name": "click",
+      "version": "8.5.1",
+      "wheel": "click-8.5.1-py3-none-any.whl",
+      "archive_bytes": 126163,
+      "uncompressed_bytes": 449840,
+      "required_by_web": true
+    },
+    {
+      "name": "httpx2",
+      "version": "2.16.0",
+      "wheel": "httpx2-2.16.0-py3-none-any.whl",
+      "archive_bytes": 97880,
+      "uncompressed_bytes": 412425,
+      "required_by_web": true
+    },
+    {
+      "name": "flask",
+      "version": "3.1.3",
+      "wheel": "flask-3.1.3-py3-none-any.whl",
+      "archive_bytes": 103424,
+      "uncompressed_bytes": 344768,
+      "required_by_web": true
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "wheel": "idna-3.20-py3-none-any.whl",
+      "archive_bytes": 69583,
+      "uncompressed_bytes": 342091,
+      "required_by_web": true
+    },
+    {
+      "name": "python-dateutil",
+      "version": "4.0.0",
+      "wheel": "python_dateutil-4.0.0-py3-none-any.whl",
+      "archive_bytes": 92853,
+      "uncompressed_bytes": 324297,
+      "required_by_web": false
+    },
+    {
+      "name": "httpcore2",
+      "version": "2.16.0",
+      "wheel": "httpcore2-2.16.0-py3-none-any.whl",
+      "archive_bytes": 85070,
+      "uncompressed_bytes": 307028,
+      "required_by_web": true
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "wheel": "typing_extensions-4.16.0-py3-none-any.whl",
+      "archive_bytes": 45571,
+      "uncompressed_bytes": 182767,
+      "required_by_web": true
+    },
+    {
+      "name": "waitress",
+      "version": "3.0.2",
+      "wheel": "waitress-3.0.2-py3-none-any.whl",
+      "archive_bytes": 56232,
+      "uncompressed_bytes": 171375,
+      "required_by_web": false
+    },
+    {
+      "name": "vercel-blob",
+      "version": "0.5.0",
+      "wheel": "vercel_blob-0.5.0-py3-none-any.whl",
+      "archive_bytes": 36162,
+      "uncompressed_bytes": 126174,
+      "required_by_web": true
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "wheel": "h11-0.16.0-py3-none-any.whl",
+      "archive_bytes": 37515,
+      "uncompressed_bytes": 103935,
+      "required_by_web": true
+    },
+    {
+      "name": "build",
+      "version": "1.6.1",
+      "wheel": "build-1.6.1-py3-none-any.whl",
+      "archive_bytes": 31179,
+      "uncompressed_bytes": 91710,
+      "required_by_web": false
+    },
+    {
+      "name": "wsproto",
+      "version": "1.3.2",
+      "wheel": "wsproto-1.3.2-py3-none-any.whl",
+      "archive_bytes": 24405,
+      "uncompressed_bytes": 82431,
+      "required_by_web": true
+    },
+    {
+      "name": "pluggy",
+      "version": "1.7.0",
+      "wheel": "pluggy-1.7.0-py3-none-any.whl",
+      "archive_bytes": 27082,
+      "uncompressed_bytes": 82101,
+      "required_by_web": false
+    },
+    {
+      "name": "vercel-internal-core",
+      "version": "0.2.2",
+      "wheel": "vercel_internal_core-0.2.2-py3-none-any.whl",
+      "archive_bytes": 24767,
+      "uncompressed_bytes": 79932,
+      "required_by_web": true
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "wheel": "colorama-0.4.6-py2.py3-none-any.whl",
+      "archive_bytes": 25335,
+      "uncompressed_bytes": 77669,
+      "required_by_web": false
+    },
+    {
+      "name": "markupsafe",
+      "version": "3.0.4",
+      "wheel": "markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "archive_bytes": 22985,
+      "uncompressed_bytes": 67294,
+      "required_by_web": true
+    },
+    {
+      "name": "truststore",
+      "version": "0.10.5",
+      "wheel": "truststore-0.10.5-py3-none-any.whl",
+      "archive_bytes": 19017,
+      "uncompressed_bytes": 63033,
+      "required_by_web": true
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.5",
+      "wheel": "typing_inspection-0.4.5-py3-none-any.whl",
+      "archive_bytes": 14874,
+      "uncompressed_bytes": 55266,
+      "required_by_web": true
+    },
+    {
+      "name": "vercel-oidc",
+      "version": "0.12.0",
+      "wheel": "vercel_oidc-0.12.0-py3-none-any.whl",
+      "archive_bytes": 17044,
+      "uncompressed_bytes": 52967,
+      "required_by_web": true
+    },
+    {
+      "name": "itsdangerous",
+      "version": "2.2.0",
+      "wheel": "itsdangerous-2.2.0-py3-none-any.whl",
+      "archive_bytes": 16234,
+      "uncompressed_bytes": 46856,
+      "required_by_web": true
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "wheel": "annotated_types-0.8.0-py3-none-any.whl",
+      "archive_bytes": 13427,
+      "uncompressed_bytes": 36347,
+      "required_by_web": true
+    },
+    {
+      "name": "pyproject-hooks",
+      "version": "1.3.3",
+      "wheel": "pyproject_hooks-1.3.3-py3-none-any.whl",
+      "archive_bytes": 10724,
+      "uncompressed_bytes": 33192,
+      "required_by_web": false
+    },
+    {
+      "name": "blinker",
+      "version": "1.9.0",
+      "wheel": "blinker-1.9.0-py3-none-any.whl",
+      "archive_bytes": 8458,
+      "uncompressed_bytes": 24487,
+      "required_by_web": true
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1",
+      "wheel": "cycler-0.12.1-py3-none-any.whl",
+      "archive_bytes": 8321,
+      "uncompressed_bytes": 22614,
+      "required_by_web": false
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.1",
+      "wheel": "iniconfig-2.3.1-py3-none-any.whl",
+      "archive_bytes": 7552,
+      "uncompressed_bytes": 18341,
+      "required_by_web": false
+    },
+    {
+      "name": "vercel-headers",
+      "version": "0.8.0",
+      "wheel": "vercel_headers-0.8.0-py3-none-any.whl",
+      "archive_bytes": 3920,
+      "uncompressed_bytes": 6770,
+      "required_by_web": true
+    }
+  ]
+}
