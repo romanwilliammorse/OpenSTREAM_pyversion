@@ -38,6 +38,27 @@
 #primary-downloads{column-gap:17px;row-gap:5px}
 .csv-download{white-space:nowrap}
 .downloads-panel{flex-wrap:wrap}
+.plot-format-editor,.primary-style-editor{margin:12px 0 16px}
+.plot-format-editor>summary,.primary-style-editor>summary,.series-style-editor>summary{color:var(--blue);font-size:12px;cursor:pointer;width:fit-content}
+.plot-format-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:12px 0}
+.axis-format-panel,.primary-series-style{border:1px solid var(--line);padding:12px 14px;margin:0;min-width:0}
+.axis-format-panel legend,.primary-series-style legend{font-size:12px;color:#555;padding:0 5px}
+.axis-format-panel label,.series-style-controls label{display:flex;flex-direction:column;gap:4px;font-size:10px;color:#777;min-width:0}
+.axis-format-panel>label{margin-bottom:10px}
+.axis-format-panel input,.axis-format-panel select,.series-style-controls input,.series-style-controls select{width:100%;font-size:11px;min-width:0;padding:5px 7px;min-height:31px}
+.axis-format-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px}
+.axis-format-positions label+label{margin-top:10px}
+.series-style-editor{margin-top:13px;padding-top:10px;border-top:1px solid var(--line)}
+.series-style-controls{display:grid;grid-template-columns:1.05fr 1fr .75fr 1.1fr .75fr 1.3fr auto;gap:10px;align-items:end;margin-top:10px}
+.primary-series-style{margin-top:12px;background:#f7f8f8}
+.primary-series-style .series-style-controls{margin-top:0}
+.series-style-controls .style-reset{align-self:center;margin-top:14px;white-space:nowrap;font-size:11px}
+.plot-color-controls{display:flex;gap:6px;align-items:center}
+.series-style-controls input[type=color]{width:34px;min-width:34px;height:31px;padding:2px;cursor:pointer}
+.plot-color-controls input[type=text]{font-family:Consolas,monospace;font-size:11px;min-width:75px}
+@media(max-width:1250px){.series-style-controls{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:850px){.series-style-controls{grid-template-columns:repeat(3,minmax(0,1fr))}.plot-format-grid{gap:12px}}
+@media(max-width:620px){.plot-format-grid{grid-template-columns:1fr}.series-style-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.axis-format-panel,.primary-series-style{padding:10px}}
 @media(max-width:1250px){.axis-controls{grid-template-columns:repeat(3,minmax(0,1fr))}.axis-controls label:nth-child(1),.axis-controls label:nth-child(2){grid-column:span 1}}
 @media(max-width:850px){.axis-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.custom-plot-canvas{height:400px}.series-heading{flex-wrap:wrap;gap:8px}.series-name{max-width:none}.plot-actions{gap:7px}}
 @media(max-width:620px){.custom-plot-canvas{height:360px}.plot-series{padding:10px}.plot-axis{grid-template-columns:12px minmax(0,1fr);gap:7px}.axis-controls{gap:8px}.axis-controls select{font-size:11px}.series-name{flex-basis:70%}.custom-plot-card>.panel-heading{align-items:flex-start}.plot-actions{justify-content:flex-end}.plot-actions .text-button{font-size:11px}.profile-figure h3,.custom-plot-card h3{font-size:16px}}

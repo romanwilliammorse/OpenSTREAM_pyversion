@@ -1,0 +1,104 @@
+{
+  "schema": "openstream-gui-plot-formatting-vector-audit-v1",
+  "passed": true,
+  "checked_at": "2026-11-16T00:43:18.065Z",
+  "source": "outputs/verification/gui-results-editor-01/fresh/20261115T234316Z-7f724d3d/01-FourField/plot_data.json",
+  "source_sha256": "a3b4f529c94e38cba46a1a42b402e6a16cc5e2f02e6292f74f08203f0d4c5e59",
+  "source_bytes_unchanged": true,
+  "data_in_memory_unchanged": true,
+  "records": [
+    {
+      "x_dataset": "precursor",
+      "x": "X",
+      "x_unit": "1",
+      "y_dataset": "physical",
+      "y": "film.base.W",
+      "y_unit": "kg/s",
+      "component_zero_based": [
+        0
+      ],
+      "pairs": 101,
+      "exact_saved_vector_equality": true,
+      "style": {
+        "mode": "lines+markers",
+        "dash": "dash",
+        "symbol": "square",
+        "color": "#d12f3a",
+        "width": 3,
+        "size": 8
+      },
+      "x_sha256_json": "59a36107e2e2ddd8d40ee6d4d960d5fd4c96e7890868b0c2b8d5b38d0d2e4e3d",
+      "y_sha256_json": "97b4fa00fe2c5cdcfb5c13548cabd46d6e25f62959b05458810b30c57228c4ce"
+    },
+    {
+      "x_dataset": "precursor",
+      "x": "X",
+      "x_unit": "1",
+      "y_dataset": "physical",
+      "y": "film.wave.W",
+      "y_unit": "kg/s",
+      "component_zero_based": [
+        0
+      ],
+      "pairs": 101,
+      "exact_saved_vector_equality": true,
+      "style": {
+        "mode": "markers",
+        "dash": "dot",
+        "symbol": "diamond",
+        "color": "#3157c4",
+        "width": 1.5,
+        "size": 6
+      },
+      "x_sha256_json": "59a36107e2e2ddd8d40ee6d4d960d5fd4c96e7890868b0c2b8d5b38d0d2e4e3d",
+      "y_sha256_json": "43053f746dcd2cb794f46f83282df9e354d32a8ce957eb28468cc892b39d826a"
+    },
+    {
+      "x_dataset": "precursor",
+      "x": "vapor.X",
+      "x_unit": "1",
+      "y_dataset": "physical",
+      "y": "film.base.W",
+      "y_unit": "kg/s",
+      "component_zero_based": [
+        0
+      ],
+      "pairs": 101,
+      "exact_saved_vector_equality": true,
+      "style": {
+        "mode": "lines+markers",
+        "dash": "dash",
+        "symbol": "square",
+        "color": "#d12f3a",
+        "width": 3,
+        "size": 8
+      },
+      "x_sha256_json": "59a36107e2e2ddd8d40ee6d4d960d5fd4c96e7890868b0c2b8d5b38d0d2e4e3d",
+      "y_sha256_json": "97b4fa00fe2c5cdcfb5c13548cabd46d6e25f62959b05458810b30c57228c4ce"
+    },
+    {
+      "x_dataset": "precursor",
+      "x": "vapor.X",
+      "x_unit": "1",
+      "y_dataset": "physical",
+      "y": "film.wave.W",
+      "y_unit": "kg/s",
+      "component_zero_based": [
+        0
+      ],
+      "pairs": 101,
+      "exact_saved_vector_equality": true,
+      "style": {
+        "mode": "markers",
+        "dash": "dot",
+        "symbol": "diamond",
+        "color": "#3157c4",
+        "width": 1.5,
+        "size": 6
+      },
+      "x_sha256_json": "59a36107e2e2ddd8d40ee6d4d960d5fd4c96e7890868b0c2b8d5b38d0d2e4e3d",
+      "y_sha256_json": "43053f746dcd2cb794f46f83282df9e354d32a8ce957eb28468cc892b39d826a"
+    }
+  ],
+  "scope": "Exact saved-vector fidelity under labels, ranges, ticks and independent series styles/colors; no solver execution or new physical-validation claim."
+}

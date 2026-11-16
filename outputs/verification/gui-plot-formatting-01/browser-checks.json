@@ -1,0 +1,40 @@
+{
+  "date_local": "2026-11-15",
+  "environment": "Chrome on Windows; local preview 127.0.0.1:8780",
+  "retained_run": "56c656bbe0bd4f6e908c190ab26d1f83",
+  "framework": "FourField",
+  "checks": {
+    "computed_tick_font": "\"Times New Roman\", Times, serif",
+    "primary_custom_label": "Channel position (m)",
+    "primary_manual_range": [0, 4],
+    "primary_tick_spacing": 1,
+    "invalid_minimum_5_maximum_4_rejected": true,
+    "automatic_reset_after_zoom": true,
+    "custom_x": "precursor.X",
+    "custom_y": ["physical.film.base.W", "physical.film.wave.W"],
+    "independent_colors": ["#0057b8", "#b31b1b"],
+    "independent_styles": ["dashed line and square markers", "triangle-up markers"],
+    "custom_x_range": [0, 0.8],
+    "custom_y_range_kg_per_s": [0, 0.04],
+    "custom_x_tick_spacing": 0.2,
+    "custom_y_tick_spacing": 0.01,
+    "custom_positions": [0, 0.4, 0.8],
+    "custom_labels": ["Start", "Middle", "End"],
+    "automatic_ticks_clear_custom_labels": true,
+    "console_errors": []
+  },
+  "png": {
+    "file": "formatted-figure.png",
+    "width_px": 2100,
+    "height_px": 1275,
+    "visually_inspected": true,
+    "title_absent": true,
+    "legend_inside_upper_left": true
+  },
+  "limitations": [
+    "Local retained numerical arrays; no new solver calculation was required for formatting.",
+    "Times New Roman uses the installed client font, with Times/serif fallback elsewhere.",
+    "Text fields were tested with keyboard input followed by Tab; the automation fill adapter did not emit native change events.",
+    "Download-event waiter timed out after the PNG had successfully downloaded; the completed file was inspected directly."
+  ]
+}

@@ -2,6 +2,23 @@
 
 The user's requested full native port is **not yet complete**. Continue implementation and verification without replacing the preserved source or changing equations to obtain passing tests.
 
+## GUI plot formatting — 2026-11-15 (locally verified; publication pending)
+
+Requested: Times New Roman as the default plot font; editable X/Y axis labels,
+limits and ticks; independent line/point styles and colors for each plotted
+series. Apply to the original profile figure and added figures. Keep all
+numerical data, governing equations, reference results and CSV exports unchanged.
+Reuse the existing Plotly renderer. Check raw-array preservation, automatic-axis
+reset, invalid settings, independent styling, browser rendering and PNG export
+before publication. Times New Roman is installed on this Windows machine;
+do not redistribute the proprietary font files. Presentation changes add no
+scientific acceptance or validation claim.
+
+Implemented and locally checked: 36 frontend tests, 61 focused Python tests,
+404 unchanged saved vector pairs, browser labels/limits/ticks/reset after zoom,
+independent colors/line/marker styles, and inspected 2100 by 1275 PNG export.
+See `GUI_PLOT_FORMATTING.md` and `outputs/verification/gui-plot-formatting-01/`.
+
 ## Results editor and CSV downloads — 2026-11-15 (deployed and verified)
 
 Requested: separate completed-run CSV downloads for inputs, boundary conditions,

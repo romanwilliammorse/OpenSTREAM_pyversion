@@ -50,5 +50,6 @@ outputs/verification/hosted-storage/** -text
 outputs/verification/hosted-release/** -text
 outputs/verification/hosted-git/** -text
 outputs/verification/gui-results-editor-01/** -text
+outputs/verification/gui-plot-formatting-01/** -text
 tools/verify_hosted_gui.py text eol=lf
 tools/prepare_cloud_deployment.py text eol=lf
