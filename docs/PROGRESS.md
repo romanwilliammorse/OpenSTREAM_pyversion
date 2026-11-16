@@ -2,7 +2,32 @@
 
 The user's requested full native port is **not yet complete**. Continue implementation and verification without replacing the preserved source or changing equations to obtain passing tests.
 
-## GUI plot formatting — 2026-11-15 (deployed and verified)
+## GUI rollback — 2026-11-15 (restoration in progress)
+
+The user requested returning to the version before the plot-formatting release
+because of reported slowness and `FUNCTION_INVOCATION_FAILED` in the hosted
+FourField input view. Restore GUI source from
+`ce67394295ac5b5de4a2cbb54b9c533e387dcd7d`; retain CSV downloads, multiple
+figures, internal legends and cross-dataset vector selection from that release.
+The added Times New Roman default and axis/per-series styling controls are
+withdrawn. Preserve their implementation and verification evidence in Git
+history and `outputs/verification/gui-plot-formatting-01/`.
+
+The runtime log for request `gbvgb-1794791551007-ea69aa433ef7` at
+`2026-11-16T01:12:33.992Z` identifies the failure on `POST /api/validate`:
+Vercel's runtime dependency installation failed while unpacking the Plotly
+7.1.0 wheel into its temporary cache with `No space left on device (os error
+28)`. The installer exited 2 and Python exited 1, before application validation
+or solver execution. Other observed failures mention NumPy, SciPy and CoolProp
+installation. Evidence is retained under `outputs/verification/gui-rollback-01/`.
+All Python modules and dependency declarations were unchanged by the formatting
+release; the logs do not establish that JavaScript changes caused disk pressure.
+Restored-release checks remain pending. Historical passing checks below did not
+cover every hosted failure or establish a performance baseline. No governing equation, closure model, solver input or scientific
+acceptance criterion is changed by this rollback. Keep saved runs intact.
+
+## GUI plot formatting — 2026-11-15 (withdrawn; historical verification)
+
 
 Requested: Times New Roman as the default plot font; editable X/Y axis labels,
 limits and ticks; independent line/point styles and colors for each plotted

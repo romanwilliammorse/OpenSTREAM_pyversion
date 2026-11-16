@@ -1,0 +1,63 @@
+{
+  "schema": "openstream-gui-startup-failure-diagnosis-v1",
+  "observed_at_utc": "2026-11-16T01:39:14Z",
+  "source": "Vercel get_runtime_logs; direct request-ID correlation",
+  "deployment": "dpl_36vDBqcvPKM7Hx5iu7eM6cwNV8yv",
+  "commit": "e09e11fb57865948ed82225a1dc9f697be6d0330",
+  "exact_request": {
+    "screenshot_id": "cle1::gbvgb-1794791551007-ea69aa433ef7",
+    "log_request_id": "gbvgb-1794791551007-ea69aa433ef7",
+    "time_utc": "2026-11-16T01:12:33.992Z",
+    "method": "POST",
+    "path": "/api/validate",
+    "phase": "Vercel runtime dependency installation, before Flask application starts",
+    "package": "plotly==7.1.0",
+    "failure": "No space left on device (os error 28) while writing a temporary wheel cache",
+    "installer_exit_code": 2,
+    "python_exit_code": 1,
+    "log_level": "info/function/stderr"
+  },
+  "sample": {
+    "query": "No space left on device",
+    "window": "2026-11-16T01:04:13.996Z to 2026-11-16T01:39:13.996Z",
+    "records": 15,
+    "headers": [
+      "### 2026-11-16T01:37:55.775Z GET / [info/function]",
+      "### 2026-11-16T01:37:45.763Z POST /auth/logout [info/function]",
+      "### 2026-11-16T01:37:40.019Z GET /files/5a59cdf152414d5fb522b6f179dfcd16/submitted_inputs.json [info/function]",
+      "### 2026-11-16T01:37:39.897Z GET /files/8b87b512f1594e08a6d59082e4de90a8/submitted_inputs.json [info/function]",
+      "### 2026-11-16T01:37:39.329Z GET /assets/app.js [info/function]",
+      "### 2026-11-16T01:37:38.118Z GET /files/31bdc0a96f194ec1a3dac210568e4b28/submitted_inputs.json [info/function]",
+      "### 2026-11-16T01:37:37.683Z GET /files/3d93cb801b014d5face5506027219f44/submitted_inputs.json [info/function]",
+      "### 2026-11-16T01:37:37.038Z GET /auth/session [info/function]",
+      "### 2026-11-16T01:37:34.317Z GET /files/4d0bb0a72b1d44e68d5424caa9bf0707/submitted_inputs.json [info/function]",
+      "### 2026-11-16T01:37:29.834Z GET /auth/session [info/function]",
+      "### 2026-11-16T01:12:33.992Z POST /api/validate [info/function]",
+      "### 2026-11-16T01:12:26.585Z GET /files/5a59cdf152414d5fb522b6f179dfcd16/submitted_inputs.json [info/function]",
+      "### 2026-11-16T01:12:16.184Z GET /assets/lato-bold.woff2 [info/function]",
+      "### 2026-11-16T01:12:13.415Z GET /login-assets/Roboto-Slab-Bold.woff2 [info/function]",
+      "### 2026-11-16T01:12:09.294Z GET / [info/function]"
+    ],
+    "note": "Count of returned matching log records, not an exhaustive failure rate."
+  },
+  "facts": [
+    "The failing request never reached input validation or solver execution.",
+    "Same deployment shows other startup extraction failures for SciPy, NumPy and CoolProp.",
+    "Successful runtime dependency installation messages of 2.35 s and 3.16 s also occurred; startup reliability is inconsistent.",
+    "Git comparison ce67394..e09e11f changes only app.js, index.html and style.css within src; app.py and dependency/configuration files are unchanged.",
+    "All governing-equation and numerical implementation files are unchanged."
+  ],
+  "interpretation": [
+    "Repeated runtime package installation contributes startup latency. Total user-observed slowdown has not been quantitatively partitioned.",
+    "The new plotting controls are not established as the cause of this server startup resource failure.",
+    "An older warm deployment may recover availability, but rollback alone does not establish that the shared heavyweight startup packaging is fixed."
+  ],
+  "recommended_followup": "Audit separation of the minimal web/API environment from the existing numerical worker environment, preserve numerical dependencies inside workers, and verify several independent cold starts and typical concurrent requests. Do not change governing equations.",
+  "limitations": [
+    "Level=error/fatal and runtime error-cluster queries found no records because these startup failures are emitted at info/stderr.",
+    "The first exact lookup including the regional cle1:: prefix did not match; the request ID without that prefix matched exactly.",
+    "The 1h query was rejected at the retention boundary; narrower 35m queries succeeded.",
+    "No deployment or source modification performed by this diagnostic task."
+  ],
+  "evidence": "exact-request-runtime-log.txt"
+}

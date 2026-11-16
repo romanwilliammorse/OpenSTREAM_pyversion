@@ -1,0 +1,35 @@
+## Runtime Logs
+
+**Project:** prj_tWK9pFywBrkziKMK9VXOK9Co6IEE
+**Time range:** 2026-11-16T01:04:14.041Z → 2026-11-16T01:39:14.041Z
+
+### 2026-11-16T01:12:33.992Z POST /api/validate [info/function]
+dep=dpl_36vDBqcvPKM7Hx5iu7eM6cwNV8yv branch=main request=gbvgb-1794791551007-ea69aa433ef7 domain=openstream-py.vercel.app environment=production region=cle1 runtime=python3.12 stream=stderr
+    Runtime dependency installation failed.
+    Command: /var/task/_uv/uv sync --inexact --active --frozen --no-dev --no-editable --no-install-project --no-build --no-cache --no-progress --link-mode hardlink
+    Exit code: 2
+    Installing runtime dependencies...
+    Downloading coolprop (10.3MiB)
+    Downloading numpy (16.0MiB)
+    Downloading pygments (1.2MiB)
+    Downloading pydantic-core (2.2MiB)
+    Downloading scipy (33.7MiB)
+    Downloading kiwisolver (1.4MiB)
+    Downloading matplotlib (9.4MiB)
+    Downloading plotly (9.2MiB)
+    Downloading pillow (6.8MiB)
+    Downloading fonttools (5.2MiB)
+    Downloaded pygments
+    Downloaded kiwisolver
+    Downloaded pydantic-core
+    Downloaded fonttools
+    Downloaded pillow
+    Downloaded plotly
+    error: Failed to download `plotly==7.1.0`
+    cause: Failed to write to the client cache
+    cause: failed to write to file `/tmp/[temporary wheel-cache path]`: No space left on device (os error 28)
+    hint: `plotly` (v7.1.0) was included because `app` (v0.1.0) depends on `plotly`
+    Runtime dependency installation failed.
+    Command: /var/task/_uv/uv sync --inexact --active --frozen --no-dev --no-editable --no-install-project --no-build --no-cache --no-progress --link-mode hardlink
+    Exit code: 2
+    Python process exited with exit status: 1. The logs above can help with debugging the issue.

@@ -1,5 +1,22 @@
 # GUI plot formatting verification
 
+**Release status: withdrawn at the user's request.** The user reported
+slowness and a hosted `FUNCTION_INVOCATION_FAILED` error after this release.
+The GUI is being restored to pre-formatting commit
+`ce67394295ac5b5de4a2cbb54b9c533e387dcd7d`. This document and its evidence
+are retained as a historical record, not a statement of current GUI features.
+The runtime log for request `gbvgb-1794791551007-ea69aa433ef7` at
+`2026-11-16T01:12:33.992Z` shows a dependency-installation failure on
+`POST /api/validate`: unpacking Plotly 7.1.0 into Vercel's temporary wheel cache
+failed with `No space left on device (os error 28)`, installer exit 2 and Python
+exit 1. This preceded application validation and solver execution. Other
+observed installation failures mention NumPy, SciPy and CoolProp. All Python
+modules and dependency declarations were unchanged; these logs do not prove
+that the JavaScript update caused disk pressure. See
+`outputs/verification/gui-rollback-01/`. Restored-release verification remains
+pending. Passing tests below do not establish performance or reliability for
+every hosted request.
+
 Date: 2026-11-15. This update changes browser presentation only. No Python
 module, solver equation, closure, physical input, numerical control, reference
 array, saved calculation or CSV export is changed.
@@ -71,7 +88,7 @@ Evidence is retained under `outputs/verification/gui-plot-formatting-01/`.
   inspected; this was an automation limitation, not an export failure.
 
 Published source commit: `2a10aa3ee39fae31cb04b0a2e3082610864a894b`.
-Vercel production deployment `dpl_6iqY9Bw79YnEA1RW2XyDir1UvZyX` is READY
+Vercel production deployment `dpl_6iqY9Bw79YnEA1RW2XyDir1UvZyX` was observed READY
 at https://openstream-py.vercel.app. `hosted-assets.json` records authenticated
 JavaScript/CSS equality against that Git commit, anonymous asset denial, and
 successful API access.
