@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-11-16T02:32:14.750870+00:00",
+  "passed": true,
+  "cases": [
+    {
+      "framework": "Mixture",
+      "case": "unchanged",
+      "http_status": 200,
+      "is_reference": true,
+      "change_count": 0
+    },
+    {
+      "framework": "Mixture",
+      "case": "changed",
+      "http_status": 200,
+      "is_reference": false,
+      "change_count": 1
+    },
+    {
+      "framework": "TwoFluid",
+      "case": "unchanged",
+      "http_status": 200,
+      "is_reference": true,
+      "change_count": 0
+    },
+    {
+      "framework": "TwoFluid",
+      "case": "changed",
+      "http_status": 200,
+      "is_reference": false,
+      "change_count": 1
+    },
+    {
+      "framework": "ThreeField",
+      "case": "unchanged",
+      "http_status": 200,
+      "is_reference": true,
+      "change_count": 0
+    },
+    {
+      "framework": "ThreeField",
+      "case": "changed",
+      "http_status": 200,
+      "is_reference": false,
+      "change_count": 1
+    },
+    {
+      "framework": "FourField",
+      "case": "unchanged",
+      "http_status": 200,
+      "is_reference": true,
+      "change_count": 0
+    },
+    {
+      "framework": "FourField",
+      "case": "changed",
+      "http_status": 200,
+      "is_reference": false,
+      "change_count": 1
+    }
+  ],
+  "scope": "Live input validation only; no calculations created and no saved inputs changed."
+}

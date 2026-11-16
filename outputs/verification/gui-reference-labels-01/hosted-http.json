@@ -1,0 +1,185 @@
+{
+  "origin": "https://openstream-py.vercel.app",
+  "started_at": "2026-11-16T02:31:38.907570+00:00",
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/",
+      "http_status": 200,
+      "elapsed_seconds": 0.635139900026843
+    },
+    {
+      "method": "GET",
+      "path": "/auth/session",
+      "http_status": 200,
+      "elapsed_seconds": 0.34429609996732324
+    },
+    {
+      "method": "POST",
+      "path": "/auth/login",
+      "http_status": 200,
+      "elapsed_seconds": 0.8694448999594897
+    },
+    {
+      "method": "GET",
+      "path": "/",
+      "http_status": 200,
+      "elapsed_seconds": 0.17820470000151545
+    },
+    {
+      "method": "GET",
+      "path": "/assets/app.js",
+      "http_status": 200,
+      "elapsed_seconds": 0.2228624999988824
+    },
+    {
+      "method": "GET",
+      "path": "/assets/style.css",
+      "http_status": 200,
+      "elapsed_seconds": 0.2681144999805838
+    },
+    {
+      "method": "GET",
+      "path": "/assets/plotly.min.js",
+      "http_status": 200,
+      "elapsed_seconds": 0.42329800000879914
+    },
+    {
+      "method": "GET",
+      "path": "/api/baseline/Mixture",
+      "http_status": 200,
+      "elapsed_seconds": 0.2184813999920152
+    },
+    {
+      "method": "POST",
+      "path": "/api/validate",
+      "http_status": 200,
+      "elapsed_seconds": 0.21314219996565953
+    },
+    {
+      "method": "GET",
+      "path": "/api/baseline/TwoFluid",
+      "http_status": 200,
+      "elapsed_seconds": 0.18841609999071807
+    },
+    {
+      "method": "POST",
+      "path": "/api/validate",
+      "http_status": 200,
+      "elapsed_seconds": 0.21013340004719794
+    },
+    {
+      "method": "GET",
+      "path": "/api/baseline/ThreeField",
+      "http_status": 200,
+      "elapsed_seconds": 0.1949822999886237
+    },
+    {
+      "method": "POST",
+      "path": "/api/validate",
+      "http_status": 200,
+      "elapsed_seconds": 0.35217290004948154
+    },
+    {
+      "method": "GET",
+      "path": "/api/baseline/FourField",
+      "http_status": 200,
+      "elapsed_seconds": 0.26555969996843487
+    },
+    {
+      "method": "POST",
+      "path": "/api/validate",
+      "http_status": 200,
+      "elapsed_seconds": 0.19238660001428798
+    },
+    {
+      "method": "GET",
+      "path": "/api/health",
+      "http_status": 200,
+      "elapsed_seconds": 0.21222060004947707
+    },
+    {
+      "method": "GET",
+      "path": "/api/health",
+      "http_status": 200,
+      "elapsed_seconds": 0.19120070000644773
+    },
+    {
+      "method": "GET",
+      "path": "/api/health",
+      "http_status": 200,
+      "elapsed_seconds": 0.20439609995810315
+    },
+    {
+      "method": "GET",
+      "path": "/api/schema?framework=FourField",
+      "http_status": 200,
+      "elapsed_seconds": 0.2589278999948874
+    },
+    {
+      "method": "GET",
+      "path": "/api/schema?framework=FourField",
+      "http_status": 200,
+      "elapsed_seconds": 0.2837312000337988
+    },
+    {
+      "method": "GET",
+      "path": "/api/schema?framework=FourField",
+      "http_status": 200,
+      "elapsed_seconds": 0.27901640004711226
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/afa655391ef8460caadf7c735b3f1db7/export/inputs.csv",
+      "http_status": 200,
+      "elapsed_seconds": 0.8386308000190184
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/afa655391ef8460caadf7c735b3f1db7/export/boundary-conditions.csv",
+      "http_status": 200,
+      "elapsed_seconds": 0.2654696000390686
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/afa655391ef8460caadf7c735b3f1db7/export/geometry.csv",
+      "http_status": 200,
+      "elapsed_seconds": 0.21342310000909492
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs/afa655391ef8460caadf7c735b3f1db7/export/results.csv",
+      "http_status": 200,
+      "elapsed_seconds": 3.000263499969151
+    },
+    {
+      "method": "POST",
+      "path": "/auth/logout",
+      "http_status": 200,
+      "elapsed_seconds": 0.2717164999921806
+    }
+  ],
+  "limitation": "Observed requests only; concurrency does not establish independent cold starts.",
+  "assets": [
+    {
+      "file": "app.js",
+      "sha256": "5370094dc9ccb3694db20a234068d787e0494e1bbea3a4ca163adb2fc5cc200f",
+      "bytes": 81911,
+      "matches_local_source": true
+    },
+    {
+      "file": "style.css",
+      "sha256": "f1c00629fc3765a941bb5788d174114fbc4b7b738a05005a1a9d11cf8e1f5711",
+      "bytes": 27050,
+      "matches_local_source": true
+    },
+    {
+      "file": "plotly.min.js",
+      "sha256": "3b6e15d45dbb7fca5bd2094291e961ddc5472cd887009e6009a56dab668d721f",
+      "bytes": 4815814,
+      "matches_local_source": true
+    }
+  ],
+  "passed": true,
+  "finished_at": "2026-11-16T02:31:48.841964+00:00"
+}

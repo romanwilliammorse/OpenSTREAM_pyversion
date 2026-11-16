@@ -47,6 +47,21 @@ focused Python checks passed (schema, reference, local GUI, frozen numerical
 source hashes and web isolation). Local browser inspection confirmed the short
 default-case label, expanded provenance and reference legend names. A saved
 FourField Run1 with two changed inputs had no visible reference card and only
-four native legend entries. Screenshots are `local-default.png` and
-`local-custom.png`. Production verification is pending. No scientific
-acceptance criterion or status is promoted by this presentation change.
+four native legend entries. Screenshots are `local-default.png`,
+`local-custom.png` and `local-custom-summary.png`.
+
+Production deployment `dpl_4zFCxCirTLYD1psbUtrWipiZw2EA`, commit
+`19edeca09c0d71eb837c1f6a4615f06626fa967d`, passed the 26-request HTTP campaign
+in `hosted-http.json`. Checks covered matching JavaScript/CSS after newline
+normalization, exact Plotly renderer bytes, authentication, all four baseline
+validations, saved FourField CSV delivery and six concurrent reads. The
+separate `hosted-reference-policy.json` passed all eight cases: each unchanged
+framework was reference-eligible and each version with `NNODES=200` was
+ineligible. No new calculation was submitted by these checks. Hosted API and
+asset checks are distinct from the local visual inspections above.
+
+GitHub CI workflow `43792594208` passed for the same source commit: 849 Python
+tests with two retained FourField numerical warnings, 38 frontend checks,
+isolated web-runtime/dependency checks and installable-package builds.
+The receipt is `github-ci.json`. No scientific acceptance criterion or status
+is promoted by this presentation change.

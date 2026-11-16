@@ -1,0 +1,13 @@
+{
+  "deployment_id": "dpl_4zFCxCirTLYD1psbUtrWipiZw2EA",
+  "commit": "19edeca09c0d71eb837c1f6a4615f06626fa967d",
+  "state": "READY",
+  "aliases": [
+    "openstream-py.vercel.app",
+    "openstream-py-rwmorse-8427.vercel.app",
+    "openstream-py-git-main-rwmorse-8427.vercel.app"
+  ],
+  "scope": "Shared GUI assets match the locally inspected and tested version. Eight unchanged/changed input eligibility checks passed; original numerical source and references preserved.",
+  "http_receipt": "hosted-http.json",
+  "reference_policy_receipt": "hosted-reference-policy.json"
+}

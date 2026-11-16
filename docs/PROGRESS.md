@@ -1,6 +1,6 @@
 # Progress and resume record
 
-## GUI manuscript labels - 2026-11-15 (verification in progress)
+## GUI manuscript labels - 2026-11-15 (deployed checks passed)
 
 The user requests concise author-year reference labels and no comparison for
 changed calculation settings. ThreeField/FourField use the coauthor-associated
@@ -13,7 +13,12 @@ comparison, independently of unsent editor changes. Numerical source, defaults,
 reference bytes, tolerances and stored results are unchanged. Thirty-eight
 frontend and 100 focused Python checks passed. Local browser inspection confirmed
 the default reference label/legend and a hidden comparison for a saved custom
-case. Production verification is pending.
+case. Production commit 19edeca passed 26 HTTP checks and eight reference-policy
+cases (four unchanged eligible, four with NNODES=200 ineligible); no new jobs
+were submitted. GitHub CI workflow 43792594208 passed for that source commit:
+849 Python tests (two retained FourField warnings), 38 frontend checks, isolated
+web-runtime/dependency checks and package builds. The receipt is github-ci.json
+in the evidence directory below.
 See GUI_REFERENCE_LABELS.md and outputs/verification/gui-reference-labels-01/.
 
 ## Hosted startup repair — 2026-11-15 (production recovered in tested scope)
