@@ -22,7 +22,18 @@ connection, external plotting service, or cloud execution is used.
    choosing the film's wall component. **Add series** adds another compatible
    curve to that figure. **Add legend** places its legend inside the upper-left
    plot bounds. Each added figure has its own **Save PNG** and removal controls.
-6. Download **Inputs CSV**, **Boundary conditions CSV**, **Geometry CSV**, or
+6. Expand **Plot settings** to edit either axis label, limits and ticks. Blank
+   labels use the automatic text; enter both limits or leave both blank. Ticks support automatic placement,
+   regular spacing, or specified positions with optional labels. **Reset axes**
+   restores automatic settings. These are display changes; they do not convert
+   units or change the saved values.
+7. Set each series' color, line pattern, marker symbol, line width and point
+   size independently. Select lines, points, or both for each series. The
+   original profile figure provides these controls in **Series styles**.
+   GUI plots and their PNG exports default to **Times New Roman**, including
+   axis labels, ticks and legends. The browser uses the installed font; systems
+   without it fall back to Times or another serif font.
+8. Download **Inputs CSV**, **Boundary conditions CSV**, **Geometry CSV**, or
    **Results CSV** independently. **Download ZIP** still provides the original
    arrays, metadata, inputs, convergence history, verification report and plots.
 

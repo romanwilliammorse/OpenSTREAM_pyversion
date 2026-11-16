@@ -233,3 +233,166 @@ test("legend is inside the upper-left plot area and cloud upload is disabled", (
   assert.equal(plotConfig("figure").showSendToCloud, false);
   assert.ok(plotConfig("figure").modeBarButtonsToRemove.includes("sendDataToCloud"));
 });
+
+const {
+  defaultAxisFormat, defaultPlotFormat, axisLayoutSettings, seriesStyle,
+  escapePlotText, applyTraceStyle,
+} = require("../src/openstream/gui_static/app.js");
+
+test("all GUI figures inherit Times New Roman without adding a figure title", () => {
+  const layout = plotLayout("X (1)", "Film flow (kg/s)", true, "run:plot");
+  assert.match(layout.font.family, /^['"]?Times New Roman['"]?(,|$)/);
+  for (const font of [layout.legend.font, layout.xaxis.tickfont, layout.yaxis.tickfont,
+    layout.xaxis.title.font, layout.yaxis.title.font, layout.hoverlabel?.font]) {
+    if (font?.family) assert.equal(font.family, layout.font.family);
+  }
+  assert.equal(layout.title, undefined);
+});
+
+test("blank axis formatting restores automatic limits and quantity-based labels", () => {
+  const axis = axisLayoutSettings(defaultAxisFormat(), "Quality (1)", "X");
+  assert.equal(axis.autorange, true);
+  assert.equal(axis.range, undefined);
+  assert.equal(axis.title.text, "Quality (1)");
+  assert.equal(axis.tickmode, "auto");
+  assert.equal(axis.tickvals, null);
+  assert.equal(axis.dtick, null);
+  assert.equal(axis.ticks, "outside");
+});
+
+test("manual limits preserve zero, negative values and scientific notation exactly", () => {
+  const input = {...defaultAxisFormat(), min: "0", max: "8e-1", label: "Vapor quality, x (1)"};
+  const frozen = JSON.stringify(input);
+  const x = axisLayoutSettings(input, "unused", "X");
+  assert.equal(x.autorange, false);
+  assert.deepEqual(x.range, [0, 0.8]);
+  assert.equal(x.title.text, input.label);
+  assert.equal(JSON.stringify(input), frozen);
+  const y = axisLayoutSettings({...defaultAxisFormat(), min: "-2.5e3", max: "1e4"}, "Pressure (Pa)", "Y");
+  assert.deepEqual(y.range, [-2500, 10000]);
+});
+
+test("invalid or incomplete limits fail instead of coercing to a plausible view", () => {
+  for (const [min, max] of [["1", "1"], ["2", "1"], ["NaN", "2"], ["0", "Infinity"],
+    ["garbage", "1"], ["0", "1e999"], ["-1e308", "1e308"], ["0", ""], ["", "1"]]) {
+    assert.throws(() => axisLayoutSettings({...defaultAxisFormat(), min, max}, "X", "X"));
+  }
+});
+
+test("regular ticks use an explicit origin and positive spacing in recorded axis units", () => {
+  const x = axisLayoutSettings({...defaultAxisFormat(), ticks: "spacing", start: "-0.2", step: "1e-1"}, "Quality (1)", "X");
+  assert.equal(x.tickmode, "linear");
+  assert.equal(x.tick0, -0.2);
+  assert.equal(x.dtick, 0.1);
+  assert.equal(x.tickvals, null);
+  for (const step of ["0", "-0.1", "", "NaN", "Infinity", "1e999", "not a number"]) {
+    assert.throws(() => axisLayoutSettings({...defaultAxisFormat(), ticks: "spacing", start: "0", step}, "X", "X"));
+  }
+  assert.throws(() => axisLayoutSettings({...defaultAxisFormat(), ticks: "spacing", start: "bad", step: "1"}, "X", "X"));
+});
+
+test("explicit tick positions and labels remain paired without resampling data", () => {
+  const input = {...defaultAxisFormat(), ticks: "positions", positions: "0, 0.25, 0.8", labels: "inlet, midpoint, outlet"};
+  const frozen = JSON.stringify(input);
+  const x = axisLayoutSettings(input, "X", "X");
+  assert.equal(x.tickmode, "array");
+  assert.deepEqual(x.tickvals, [0, 0.25, 0.8]);
+  assert.deepEqual(x.ticktext, ["inlet", "midpoint", "outlet"]);
+  assert.equal(JSON.stringify(input), frozen);
+  const numeric = axisLayoutSettings({...input, labels: ""}, "X", "X");
+  assert.equal(numeric.ticktext, null);
+  for (const positions of ["", "0,NaN,1", "0,Infinity", "0,,1", "0,one,1", "0,1,1", "1,0"]) {
+    assert.throws(() => axisLayoutSettings({...input, positions, labels: ""}, "X", "X"));
+  }
+  assert.throws(() => axisLayoutSettings({...input, labels: "one, two"}, "X", "X"));
+});
+
+test("user axis and tick labels remain literal text rather than Plotly markup", () => {
+  const input = {...defaultAxisFormat(), label: '<b>Quality</b> & "x"', ticks: "positions",
+    positions: "0,1", labels: "<i>inlet</i>,A&B"};
+  const x = axisLayoutSettings(input, "X", "X");
+  assert.equal(x.title.text, '&lt;b&gt;Quality&lt;/b&gt; &amp; "x"');
+  assert.deepEqual(x.ticktext, ["&lt;i&gt;inlet&lt;/i&gt;", "A&amp;B"]);
+  assert.equal(escapePlotText("ΔP < 0 & x > 0"), "ΔP &lt; 0 &amp; x &gt; 0");
+});
+
+test("formatting is independent between axes and figures and resets the zoom revision", () => {
+  const first = defaultPlotFormat(), second = defaultPlotFormat();
+  first.x.min = "0"; first.x.max = "1"; first.x.label = "First X";
+  assert.deepEqual(first.y, defaultAxisFormat());
+  assert.deepEqual(second, defaultPlotFormat());
+  const original = plotLayout("X", "Y", false, "run:plot", second);
+  const limited = plotLayout("X", "Y", false, "run:plot", first);
+  assert.notEqual(limited.uirevision, original.uirevision);
+  assert.deepEqual(limited.xaxis.range, [0, 1]);
+  assert.equal(limited.yaxis.autorange, true);
+  const reset = defaultPlotFormat(); reset.revision = 1;
+  const restored = plotLayout("X", "Y", false, "run:plot", reset);
+  assert.notEqual(restored.uirevision, original.uirevision);
+  assert.equal(restored.xaxis.autorange, true);
+  assert.equal(restored.xaxis.range, undefined);
+});
+
+test("each series has its own line, marker and color styles", () => {
+  const first = seriesStyle({mode: "lines+markers", dash: "dash", symbol: "square", color: "#ff0000", width: 3, size: 8}, 0);
+  const second = seriesStyle({mode: "markers", dash: "dot", symbol: "diamond", color: "#0000ff", width: 1, size: 5}, 1);
+  assert.equal(first.mode, "lines+markers");
+  assert.equal(first.line.dash, "dash"); assert.equal(first.line.width, 3);
+  assert.equal(first.marker.symbol, "square"); assert.equal(first.marker.size, 8);
+  assert.equal(first.line.color, "#ff0000"); assert.equal(first.marker.color, "#ff0000");
+  assert.equal(second.mode, "markers");
+  assert.equal(second.marker.symbol, "diamond"); assert.equal(second.marker.size, 5);
+  assert.equal(second.line.color, "#0000ff"); assert.equal(second.marker.color, "#0000ff");
+  first.line.color = "#00ff00";
+  assert.equal(second.line.color, "#0000ff");
+  assert.notEqual(seriesStyle({}, 0).line.color, seriesStyle({}, 1).line.color);
+});
+
+test("unknown line and marker styles, invalid colors and invalid sizes reject", () => {
+  for (const invalid of [{mode: "splines"}, {dash: "invented"}, {symbol: "invented"},
+    {color: "not-a-color"}, {color: "url(https://example.com/image)"},
+    {width: -1}, {width: Infinity}, {size: -1}, {size: NaN}]) {
+    assert.throws(() => seriesStyle(invalid, 0));
+  }
+});
+
+test("style overrides preserve native and reference trace data, hover units and gaps", () => {
+  const field = {values: [[1, null, 3]], unit: "kg/s"};
+  const reference = makeTraces(field, "film.W", [0, 0.5, 1], 0, "#123456", true)[0];
+  const frozen = JSON.stringify(reference);
+  const automatic = applyTraceStyle(reference, {}, 0);
+  assert.equal(automatic.line.dash, "dot");
+  assert.equal(automatic.line.width, 1.6);
+  assert.equal(automatic.line.color, "#123456");
+  const styled = applyTraceStyle(reference, {mode: "markers", symbol: "square", color: "#ff0000"}, 0);
+  assert.deepEqual(styled.x, [0, 0.5, 1]);
+  assert.deepEqual(styled.y, [1, null, 3]);
+  assert.equal(styled.connectgaps, false);
+  assert.equal(styled.hovertemplate, reference.hovertemplate);
+  assert.equal(styled.name, reference.name);
+  assert.equal(JSON.stringify(reference), frozen);
+});
+
+test("cross-stage multi-series formatting leaves stored numerical arrays and units unchanged", () => {
+  const data = vectorFixture(), frozen = JSON.stringify(data);
+  const first = {name: "Film", x: axis("precursor", "vapor.X"), y: axis("physical", "film.U", 0, [0]),
+    style: {mode: "lines+markers", dash: "dash", symbol: "square", color: "#ff0000"}};
+  const second = {name: "Precursor", x: axis("precursor", "vapor.X"), y: axis("precursor", "U"),
+    style: {mode: "markers", symbol: "diamond", color: "#0000ff"}};
+  const figure = buildCustomFigure(data, {series: [first, second]});
+  assert.deepEqual(figure.traces.map(trace => trace.x), [[0.2, 0.5, 0.8], [0.2, 0.5, 0.8]]);
+  assert.deepEqual(figure.traces.map(trace => trace.y), [[1, 2, 3], [8, 9, 10]]);
+  assert.equal(figure.traces[0].mode, "lines+markers");
+  assert.equal(figure.traces[0].line.dash, "dash");
+  assert.equal(figure.traces[0].marker.symbol, "square");
+  assert.equal(figure.traces[0].line.color, "#ff0000");
+  assert.equal(figure.traces[1].mode, "markers");
+  assert.equal(figure.traces[1].marker.symbol, "diamond");
+  assert.equal(figure.traces[1].marker.color, "#0000ff");
+  assert.equal(figure.yTitle, "Y (m/s)");
+  assert.match(figure.traces[0].hovertemplate, /m\/s/);
+  assert.equal(JSON.stringify(data), frozen);
+  const independent = newPlotSeries(data), another = newPlotSeries(data);
+  independent.style.color = "#ff0000";
+  assert.equal(another.style.color, undefined);
+});

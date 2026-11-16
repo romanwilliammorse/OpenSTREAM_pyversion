@@ -1,0 +1,13 @@
+{
+  "deployment": "dpl_36vDBqcvPKM7Hx5iu7eM6cwNV8yv",
+  "source_commit": "e09e11fb57865948ed82225a1dc9f697be6d0330",
+  "action": "Existing formatting deployment promoted after user withdrew rollback instruction",
+  "observations": [
+    "Production alias resolved to the formatting deployment in READY state.",
+    "Anonymous asset verification failed: expected HTTP 401, received HTTP 500.",
+    "A subsequent GET /assets/app.js also returned HTTP 500 FUNCTION_INVOCATION_FAILED."
+  ],
+  "request_id": "gr9hd-1794793414060-6028c7717ef2",
+  "next_action": "Republish the same formatting application source; do not remove plotting controls or change numerical code.",
+  "limitation": "READY deployment state does not establish healthy Python startup. Hosting packaging remains unresolved."
+}

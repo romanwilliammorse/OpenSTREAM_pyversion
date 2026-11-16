@@ -16,6 +16,9 @@ const pendingInputs = new Map();
 // Presentation preferences are isolated by saved run; numerical data stay immutable.
 const plotWorkspaces = new Map();
 const plotColors = ["#2980b9", "#8e44ad", "#d28b26", "#278b61", "#b45455", "#566c83", "#776b9e", "#977342"];
+const plotFont = '"Times New Roman", Times, serif';
+const lineDashChoices = ["solid", "dash", "dot", "dashdot", "longdash", "longdashdot"];
+const markerSymbolChoices = ["circle", "circle-open", "square", "square-open", "diamond", "diamond-open", "cross", "x", "triangle-up", "triangle-down", "star"];
 const datasetLabels = {physical: "Physical result", initialization: "Initialization (pseudo-time)", precursor: "Mixture precursor", precursor_initialization: "Mixture precursor initialization (pseudo-time)"};
 const frameworkNames = {Mixture: "Mixture", TwoFluid: "Two-fluid", ThreeField: "Three-field", FourField: "Four-field"};
 const terminalStates = new Set(["completed", "failed", "cancelled"]);
@@ -637,21 +640,100 @@ function renderPlot() {
     if (reference && referenceIndex >= 0) traces.push(...makeTraces(reference, key, dataset.reference_z || z, referenceIndex, colors[index % colors.length], true));
   });
   const annularNote = ["ThreeField", "FourField"].includes(state.selectedRun.framework) && !state.dataset.startsWith("precursor") ? "Before annular onset, fields are initialization quantities." : "";
-  const referenceNote = dataset.reference_fields ? referenceIndex >= 0 ? "Dotted: MATLAB archive at matching time." : "No archived state at this time; reference omitted." : "";
+  const referenceNote = dataset.reference_fields ? referenceIndex >= 0 ? "MATLAB archive at matching time." : "No archived state at this time; reference omitted." : "";
   $("plot-context").textContent = [pseudoTime(state.dataset, dataset) ? "Pseudo-time, not physical time." : "", annularNote, referenceNote].filter(Boolean).join(" ");
   $("plot-context").hidden = !$("plot-context").textContent;
   const legend = plotWorkspace()?.primaryLegend ?? true;
   $("profile-legend").textContent = legend ? "Remove legend" : "Add legend";
   $("profile-legend").setAttribute("aria-pressed", String(legend));
-  const layout = plotLayout("Axial position, z (m)", `${quantity.label}${unit && unit !== "1" ? ` (${unit})` : ""}`, legend,
-    `${state.selectedRun.id}:${state.dataset}:${$("quantity-select").value}`);
-  Plotly.react($("profile-plot"), traces, layout, plotConfig(`OpenSTREAM-${state.selectedRun.framework}-${quantity.label.replaceAll(" ", "-")}`));
+  const workspace = plotWorkspace();
+  if (!workspace) return;
+  workspace.primaryFigures ||= {};
+  const key = `${state.dataset}:${$("quantity-select").value}`;
+  const appearance = workspace.primaryFigures[key] ||= {format: defaultPlotFormat(), styles: {}};
+  renderPrimaryAppearance(appearance, traces, `${state.selectedRun.id}:${key}`);
+  try {
+    const layout = plotLayout("Axial position, z (m)", `${quantity.label}${unit && unit !== "1" ? ` (${unit})` : ""}`, legend,
+      `${state.selectedRun.id}:${key}`, appearance.format);
+    const styled = traces.map((trace, index) => applyTraceStyle(trace, appearance.styles[trace.name] || {}, index));
+    $("profile-plot-error").hidden = true; $("profile-plot").hidden = false; $("download-chart").disabled = false;
+    Plotly.react($("profile-plot"), styled, layout, plotConfig(`OpenSTREAM-${state.selectedRun.framework}-${quantity.label.replaceAll(" ", "-")}`));
+  } catch (error) {
+    $("profile-plot-error").textContent = error.message; $("profile-plot-error").hidden = false;
+    $("profile-plot").hidden = true; $("download-chart").disabled = true;
+    if ($("profile-plot").data) Plotly.purge($("profile-plot"));
+  }
 }
 
 function insideLegend() {
   return {orientation: "v", x: 0.02, y: 0.98, xref: "paper", yref: "paper",
     xanchor: "left", yanchor: "top", bgcolor: "rgba(252,252,252,0.88)",
-    bordercolor: "#d9dfe2", borderwidth: 1, font: {size: 11}};
+    bordercolor: "#d9dfe2", borderwidth: 1, font: {family: plotFont, size: 12}};
+}
+
+function escapePlotText(value) {
+  return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+}
+function defaultAxisFormat() {
+  return {label: "", min: "", max: "", ticks: "auto", start: "", step: "", positions: "", labels: ""};
+}
+function defaultPlotFormat() { return {x: defaultAxisFormat(), y: defaultAxisFormat(), revision: 0}; }
+function optionalPlotNumber(value, label) {
+  const text = String(value ?? "").trim();
+  if (!text) return null;
+  if (!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i.test(text) || !Number.isFinite(Number(text))) {
+    throw new Error(`${label} must be a finite number.`);
+  }
+  return Number(text);
+}
+function axisLayoutSettings(settings = {}, autoTitle = "", axisName = "X") {
+  const selected = {...defaultAxisFormat(), ...settings};
+  const result = {title: {text: escapePlotText(selected.label.trim() || autoTitle)}, autorange: true,
+    tickmode: "auto", tick0: null, dtick: null, tickvals: null, ticktext: null, ticks: "outside", tickfont: {family: plotFont}};
+  const min = optionalPlotNumber(selected.min, `${axisName} minimum`), max = optionalPlotNumber(selected.max, `${axisName} maximum`);
+  if ((min === null) !== (max === null)) throw new Error(`Enter both ${axisName} limits, or leave both blank for automatic limits.`);
+  if (min !== null) {
+    if (!(min < max)) throw new Error(`${axisName} minimum must be less than maximum.`);
+    if (!Number.isFinite(max - min)) throw new Error(`${axisName} limit span must be finite.`);
+    result.range = [min, max]; result.autorange = false;
+  }
+  if (selected.ticks === "spacing") {
+    const step = optionalPlotNumber(selected.step, `${axisName} tick spacing`);
+    if (step === null || step <= 0) throw new Error(`${axisName} tick spacing must be greater than zero.`);
+    const start = optionalPlotNumber(selected.start, `${axisName} first tick`);
+    result.tickmode = "linear"; result.dtick = step; result.tick0 = start ?? 0;
+  } else if (selected.ticks === "positions") {
+    const entries = selected.positions.split(",").map((value) => value.trim());
+    if (!entries.length || entries.length > 2000 || entries.some((value) => !value)) throw new Error(`${axisName} tick positions need 1–2000 comma-separated numbers.`);
+    const positions = entries.map((value) => optionalPlotNumber(value, `${axisName} tick position`));
+    if (positions.some((value, index) => index > 0 && value <= positions[index - 1])) throw new Error(`${axisName} tick positions must be strictly increasing.`);
+    result.tickmode = "array"; result.tickvals = positions;
+    if (selected.labels.trim()) {
+      const labels = selected.labels.split(",").map((value) => value.trim());
+      if (labels.length !== positions.length) throw new Error(`${axisName} tick labels must match the number of tick positions.`);
+      result.ticktext = labels.map(escapePlotText);
+    }
+  } else if (selected.ticks !== "auto") throw new Error(`${axisName} tick mode is unavailable.`);
+  return result;
+}
+function seriesStyle(style = {}, index = 0, fallback = {}) {
+  const mode = style.mode ?? fallback.mode ?? "lines";
+  const dash = style.dash ?? fallback.line?.dash ?? "solid";
+  const symbol = style.symbol ?? fallback.marker?.symbol ?? "circle";
+  if (!["lines", "markers", "lines+markers"].includes(mode)) throw new Error("Select lines, points, or lines + points.");
+  if (!lineDashChoices.includes(dash)) throw new Error("Select an available line type.");
+  if (!markerSymbolChoices.includes(symbol)) throw new Error("Select an available point type.");
+  const color = style.color ?? fallback.line?.color ?? fallback.marker?.color ?? plotColors[index % plotColors.length];
+  if (!/^#[\da-f]{6}$/i.test(color)) throw new Error("Color must be a six-digit hex value, such as #2980b9.");
+  const width = optionalPlotNumber(style.width ?? fallback.line?.width ?? 2.2, "Line width");
+  const size = optionalPlotNumber(style.size ?? fallback.marker?.size ?? 6, "Point size");
+  if (width === null || width <= 0 || width > 20) throw new Error("Line width must be greater than zero and at most 20 px.");
+  if (size === null || size <= 0 || size > 60) throw new Error("Point size must be greater than zero and at most 60 px.");
+  return {mode, line: {color, width, dash}, marker: {color, size, symbol}};
+}
+function applyTraceStyle(trace, style = {}, index = 0) {
+  const appearance = seriesStyle(style, index, trace);
+  return {...trace, ...appearance, line: {...trace.line, ...appearance.line}, marker: {...trace.marker, ...appearance.marker}};
 }
 
 function datasetsOf(data) { return data?.datasets || data || {}; }
@@ -774,13 +856,13 @@ function buildCustomFigure(data, plot) {
   if (pairs.some((pair) => pair.x.unit !== first.x.unit || pair.y.unit !== first.y.unit)) {
     throw new Error("Series on one plot must have the same recorded X units and Y units. Use another plot for different units.");
   }
-  const traces = pairs.map((pair, index) => ({
+  const traces = pairs.map((pair, index) => applyTraceStyle({
     x: pair.x.values, y: pair.y.values, type: "scatter", mode: plot.mode || "lines",
-    name: plot.series[index].name.trim() || `${pair.y.label} · ${datasetName(pair.y.dataset)}`,
+    name: escapePlotText(plot.series[index].name.trim() || `${pair.y.label} · ${datasetName(pair.y.dataset)}`),
     line: {color: plotColors[index % plotColors.length], width: 2.2},
     marker: {color: plotColors[index % plotColors.length], size: 6}, connectgaps: false,
     hovertemplate: `X = %{x:.7g} ${pair.x.unit}<br>Y = %{y:.7g} ${pair.y.unit}<extra>%{fullData.name}</extra>`,
-  }));
+  }, plot.series[index].style, index));
   const label = (axis) => {
     const names = [...new Set(pairs.map((pair) => pair[axis].label))];
     const unit = first[axis].unit;
@@ -796,13 +878,14 @@ function resizePlots() {
     if (node.data) Plotly.Plots.resize(node);
   }
 }
-function plotLayout(xTitle, yTitle, legend, revision) {
+function plotLayout(xTitle, yTitle, legend, revision, format = defaultPlotFormat()) {
   const axis = {gridcolor: "#e1e4e5", zerolinecolor: "#ccc", linecolor: "#ccc", showline: true, exponentformat: "e", automargin: true};
+  const x = axisLayoutSettings(format.x, xTitle, "X"), y = axisLayoutSettings(format.y, yTitle, "Y");
   return {margin: {l: 75, r: 22, t: 25, b: 70}, paper_bgcolor: "#fcfcfc", plot_bgcolor: "#fcfcfc",
-    font: {family: 'Lato,"Helvetica Neue",Arial,sans-serif', size: 12, color: "#404040"}, hovermode: "closest",
-    xaxis: {...axis, title: {text: xTitle, standoff: 12}},
-    yaxis: {...axis, title: {text: yTitle, standoff: 15}},
-    showlegend: Boolean(legend), legend: insideLegend(), uirevision: revision, autosize: true};
+    font: {family: plotFont, size: 14, color: "#404040"}, hovermode: "closest", hoverlabel: {font: {family: plotFont}},
+    xaxis: {...axis, ...x, title: {...x.title, standoff: 12, font: {family: plotFont}}},
+    yaxis: {...axis, ...y, title: {...y.title, standoff: 15, font: {family: plotFont}}},
+    showlegend: Boolean(legend), legend: insideLegend(), uirevision: `${revision}:${JSON.stringify(format)}`, autosize: true};
 }
 function plotConfig(filename) {
   return {responsive: true, displaylogo: false, showSendToCloud: false,
@@ -821,7 +904,7 @@ function renderCustomPlot(plot) {
     plot.nodes.context.textContent = figure.notes.join(" "); plot.nodes.context.hidden = !figure.notes.length;
     plot.nodes.save.disabled = false;
     Plotly.react(plot.nodes.canvas, figure.traces, plotLayout(figure.xTitle, figure.yTitle, plot.legend,
-      `${state.selectedRun.id}:${plot.id}:${JSON.stringify(plot.series.map((series) => [series.x, series.y]))}`),
+      `${state.selectedRun.id}:${plot.id}:${JSON.stringify(plot.series.map((series) => [series.x, series.y]))}`, plot.format),
       plotConfig(`OpenSTREAM-${state.selectedRun.framework}-plot-${plot.id}`));
   } catch (error) {
     plot.nodes.error.textContent = error.message; plot.nodes.error.hidden = false;
@@ -837,6 +920,91 @@ function labelledSelect(container, id, label, choices, value, onChange) {
   for (const choice of choices) { const option = element("option", "", choice.label); option.value = choice.value; control.append(option); }
   control.value = String(value); control.addEventListener("change", onChange);
   wrapper.append(control); container.append(wrapper); return control;
+}
+
+function labelledPlotInput(container, id, label, value, placeholder, onChange, {numeric = false, maxLength = 250} = {}) {
+  const wrapper = element("label", "", label); wrapper.htmlFor = id;
+  const control = element("input"); control.id = id; control.type = "text"; control.value = value ?? "";
+  control.placeholder = placeholder; control.maxLength = maxLength;
+  if (numeric) control.inputMode = "decimal";
+  control.addEventListener("change", onChange); wrapper.append(control); container.append(wrapper);
+  return control;
+}
+function renderPlotFormat(container, format, prefix, onChange) {
+  container.replaceChildren();
+  const settings = element("details", "plot-format-editor");
+  settings.append(element("summary", "", "Plot settings"));
+  const grid = element("div", "plot-format-grid"); settings.append(grid);
+  for (const axisName of ["x", "y"]) {
+    format[axisName] ||= defaultAxisFormat();
+    const axis = format[axisName], id = `${prefix}-${axisName}`;
+    const panel = element("fieldset", "axis-format-panel"); panel.append(element("legend", "", `${axisName.toUpperCase()} axis`));
+    const label = labelledPlotInput(panel, id + "-label", "Axis label", axis.label, "Automatic", (event) => {axis.label = event.target.value; onChange();});
+    label.title = "Display label only; saved quantities and units are unchanged.";
+    const limits = element("div", "axis-format-row"); panel.append(limits);
+    for (const [key, text] of [["min", "Minimum"], ["max", "Maximum"]]) {
+      labelledPlotInput(limits, id + "-" + key, text, axis[key], "Automatic", (event) => {axis[key] = event.target.value; onChange();}, {numeric: true});
+    }
+    const spacing = element("div", "axis-format-row"), positions = element("div", "axis-format-positions");
+    labelledSelect(panel, id + "-ticks", "Ticks", [{value: "auto", label: "Automatic"}, {value: "spacing", label: "Spacing"}, {value: "positions", label: "Custom positions"}], axis.ticks,
+      (event) => {axis.ticks = event.target.value; spacing.hidden = axis.ticks !== "spacing"; positions.hidden = axis.ticks !== "positions"; onChange();});
+    labelledPlotInput(spacing, id + "-start", "First tick", axis.start, "0", (event) => {axis.start = event.target.value; onChange();}, {numeric: true});
+    labelledPlotInput(spacing, id + "-step", "Spacing", axis.step, "e.g. 0.1", (event) => {axis.step = event.target.value; onChange();}, {numeric: true});
+    labelledPlotInput(positions, id + "-positions", "Positions (comma-separated)", axis.positions, "0, 0.2, 0.4", (event) => {axis.positions = event.target.value; onChange();}, {maxLength: 24000});
+    labelledPlotInput(positions, id + "-labels", "Labels (optional, comma-separated)", axis.labels, "Automatic", (event) => {axis.labels = event.target.value; onChange();}, {maxLength: 24000});
+    spacing.hidden = axis.ticks !== "spacing"; positions.hidden = axis.ticks !== "positions";
+    panel.append(spacing, positions); grid.append(panel);
+  }
+  const reset = element("button", "text-button", "Reset axes"); reset.type = "button";
+  reset.addEventListener("click", () => {
+    const nextRevision = (format.revision || 0) + 1;
+    Object.assign(format, defaultPlotFormat(), {revision: nextRevision});
+    renderPlotFormat(container, format, prefix, onChange);
+    container.querySelector("details").open = true; onChange();
+  });
+  settings.append(reset); container.append(settings);
+}
+function renderStyleControls(container, style, prefix, index, onChange, fallback = {}) {
+  container.replaceChildren();
+  // Invalid pending text remains visible in the editor; the figure reports it.
+  const defaults = seriesStyle({}, index, fallback);
+  const current = {mode: style.mode ?? defaults.mode, dash: style.dash ?? defaults.line.dash,
+    symbol: style.symbol ?? defaults.marker.symbol, color: style.color ?? defaults.line.color,
+    width: style.width ?? defaults.line.width, size: style.size ?? defaults.marker.size};
+  const change = (property) => (event) => {style[property] = event.target.value; onChange();};
+  labelledSelect(container, prefix + "-mode", "Style", [{value: "lines", label: "Lines"}, {value: "markers", label: "Points"}, {value: "lines+markers", label: "Lines + points"}], current.mode, change("mode"));
+  const readable = {solid: "Solid", dash: "Dashed", dot: "Dotted", dashdot: "Dash-dot", longdash: "Long dash", longdashdot: "Long dash-dot"};
+  labelledSelect(container, prefix + "-dash", "Line type", lineDashChoices.map((value) => ({value, label: readable[value]})), current.dash, change("dash"));
+  labelledPlotInput(container, prefix + "-width", "Line width (px)", current.width, "2.2", change("width"), {numeric: true, maxLength: 12});
+  labelledSelect(container, prefix + "-symbol", "Point type", markerSymbolChoices.map((value) => ({value, label: value.replaceAll("-", " ").replace(/^./, (letter) => letter.toUpperCase())})), current.symbol, change("symbol"));
+  labelledPlotInput(container, prefix + "-size", "Point size (px)", current.size, "6", change("size"), {numeric: true, maxLength: 12});
+  const colorLabel = element("label", "plot-color-label", "Color"); colorLabel.htmlFor = prefix + "-color";
+  const colorControls = element("span", "plot-color-controls");
+  const swatch = element("input"); swatch.type = "color"; swatch.id = prefix + "-swatch";
+  swatch.setAttribute("aria-label", "Color picker"); swatch.value = /^#[\da-f]{6}$/i.test(current.color) ? current.color : defaults.line.color;
+  const hex = element("input"); hex.type = "text"; hex.id = prefix + "-color"; hex.value = current.color; hex.maxLength = 7;
+  hex.spellcheck = false; hex.setAttribute("aria-label", "Color hex value");
+  swatch.addEventListener("input", () => {style.color = swatch.value; hex.value = swatch.value; onChange();});
+  hex.addEventListener("change", () => {style.color = hex.value.trim(); if (/^#[\da-f]{6}$/i.test(style.color)) swatch.value = style.color; onChange();});
+  colorControls.append(swatch, hex); colorLabel.append(colorControls); container.append(colorLabel);
+  const reset = element("button", "text-button style-reset", "Reset style"); reset.type = "button";
+  reset.addEventListener("click", () => {for (const key of Object.keys(style)) delete style[key]; renderStyleControls(container, style, prefix, index, onChange, fallback); onChange();});
+  container.append(reset);
+}
+function renderPrimaryAppearance(appearance, traces, key) {
+  const container = $("profile-settings"), signature = `${key}:${traces.map((trace) => trace.name).join("|")}`;
+  if (container.dataset.signature === signature) return;
+  container.dataset.signature = signature; container.replaceChildren();
+  const axes = element("div"); container.append(axes);
+  renderPlotFormat(axes, appearance.format, "profile-format", renderPlot);
+  const editor = element("details", "primary-style-editor"); editor.append(element("summary", "", "Series styles"));
+  traces.forEach((trace, index) => {
+    const row = element("fieldset", "primary-series-style"); row.append(element("legend", "", trace.name));
+    const controls = element("div", "series-style-controls"); row.append(controls);
+    renderStyleControls(controls, appearance.styles[trace.name] ||= {}, `profile-series-${index}`, index, renderPlot, trace);
+    editor.append(row);
+  });
+  container.append(editor);
 }
 
 function renderAxisControls(container, plot, series, axisName, seriesIndex) {
@@ -888,6 +1056,9 @@ function renderSeriesControls(plot) {
     }
     row.append(heading);
     for (const axis of ["x", "y"]) {const container = element("div", "plot-axis"); row.append(container); renderAxisControls(container, plot, series, axis, index);}
+    const appearance = element("details", "series-style-editor"); appearance.append(element("summary", "", "Series style"));
+    const controls = element("div", "series-style-controls"); appearance.append(controls); row.append(appearance);
+    renderStyleControls(controls, series.style ||= {}, `plot-${plot.id}-series-${index}-style`, index, () => renderCustomPlot(plot), {mode: plot.mode || "lines"});
     plot.nodes.series.append(row);
   });
 }
@@ -895,12 +1066,12 @@ function newPlotSeries(data) {
   const dataset = datasetsOf(data).physical ? "physical" : Object.keys(datasetsOf(data))[0];
   const fields = datasetsOf(data)[dataset]?.fields || {};
   const field = fields.U ? "U" : Object.keys(fields)[0];
-  return {name: "", x: defaultAxis(data, {dataset, field: "Z"}), y: defaultAxis(data, {dataset, field})};
+  return {name: "", style: {}, x: defaultAxis(data, {dataset, field: "Z"}), y: defaultAxis(data, {dataset, field})};
 }
 function addPlot() {
   const workspace = plotWorkspace();
   if (!workspace || !state.data) return;
-  const plot = {id: workspace.nextId++, series: [newPlotSeries(state.data)], legend: false, mode: "lines", nodes: null};
+  const plot = {id: workspace.nextId++, series: [newPlotSeries(state.data)], legend: false, format: defaultPlotFormat(), nodes: null};
   workspace.plots.push(plot); renderPlotBuilderCards();
   plot.nodes.card.scrollIntoView({block: "start", behavior: "smooth"});
 }
@@ -925,10 +1096,14 @@ function renderPlotBuilderCards() {
     const series = element("div", "plot-series-list"); editor.append(series);
     const footer = element("div", "plot-editor-footer");
     const addSeries = element("button", "button secondary compact", "Add series"); addSeries.type = "button";
-    addSeries.addEventListener("click", () => {plot.series.push(copy(plot.series.at(-1))); renderSeriesControls(plot); renderCustomPlot(plot);});
+    addSeries.addEventListener("click", () => {
+      const series = copy(plot.series.at(-1)); series.style ||= {}; delete series.style.color;
+      plot.series.push(series); renderSeriesControls(plot); renderCustomPlot(plot);
+    });
     footer.append(addSeries);
-    labelledSelect(footer, `plot-${plot.id}-mode`, "Style", [{value: "lines", label: "Lines"}, {value: "markers", label: "Points"}, {value: "lines+markers", label: "Lines + points"}], plot.mode, (event) => {plot.mode = event.target.value; renderCustomPlot(plot);});
     editor.append(footer); card.append(editor);
+    const appearance = element("div"); card.append(appearance);
+    renderPlotFormat(appearance, plot.format ||= defaultPlotFormat(), `plot-${plot.id}-format`, () => renderCustomPlot(plot));
     const error = element("p", "notice error"); error.hidden = true; error.setAttribute("role", "alert");
     const context = element("p", "plot-context"); context.hidden = true;
     const canvas = element("div", "custom-plot-canvas"); canvas.id = `custom-plot-${plot.id}`; canvas.setAttribute("role", "img"); canvas.setAttribute("aria-label", `Custom numerical plot ${plot.id}`);
@@ -985,7 +1160,7 @@ function bindEvents() {
 }
 
 // These pure adapters are exported only to the dependency-free Node checks.
-if (typeof module !== "undefined" && module.exports) module.exports = {inputCaseName, runCaseName, physicalDisplay, primaryQuantityFields, referenceIndexForTime, assertInputDocumentVersion, makeTraces, insideLegend, rectangularShape, componentIndices, defaultAxis, normalizeAxis, outputVector, pairOutputVectors, buildCustomFigure, plotLayout, plotConfig, newPlotSeries};
+if (typeof module !== "undefined" && module.exports) module.exports = {inputCaseName, runCaseName, physicalDisplay, primaryQuantityFields, referenceIndexForTime, assertInputDocumentVersion, makeTraces, insideLegend, rectangularShape, componentIndices, defaultAxis, normalizeAxis, outputVector, pairOutputVectors, buildCustomFigure, plotLayout, plotConfig, newPlotSeries, escapePlotText, defaultAxisFormat, defaultPlotFormat, axisLayoutSettings, seriesStyle, applyTraceStyle};
 if (typeof document !== "undefined") {
   bindEvents();
   let collapsed = false;

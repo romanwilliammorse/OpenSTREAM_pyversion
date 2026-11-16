@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-11-16T01:41:47.836597+00:00",
+  "restored_source": "ce67394295ac5b5de4a2cbb54b9c533e387dcd7d",
+  "release_commit": "253951f27de772989edaf7777df303889f88e2d8",
+  "checks": [
+    {
+      "check": "anonymous asset denied",
+      "http_status": 401,
+      "elapsed_seconds": 0.39,
+      "passed": true
+    },
+    {
+      "check": "restored app.js",
+      "http_status": 200,
+      "elapsed_seconds": 0.301,
+      "passed": true
+    },
+    {
+      "check": "restored style.css",
+      "http_status": 200,
+      "elapsed_seconds": 0.238,
+      "passed": true
+    },
+    {
+      "check": "FourField reference validation 1",
+      "http_status": 200,
+      "elapsed_seconds": 0.192,
+      "passed": true
+    },
+    {
+      "check": "FourField reference validation 2",
+      "http_status": 200,
+      "elapsed_seconds": 0.21,
+      "passed": true
+    },
+    {
+      "check": "FourField reference validation 3",
+      "http_status": 200,
+      "elapsed_seconds": 0.213,
+      "passed": true
+    }
+  ],
+  "limitation": "Observed requests only; no guarantee of independent cold-start reliability or total performance recovery."
+}

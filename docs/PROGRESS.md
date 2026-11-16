@@ -2,16 +2,17 @@
 
 The user's requested full native port is **not yet complete**. Continue implementation and verification without replacing the preserved source or changing equations to obtain passing tests.
 
-## GUI rollback — 2026-11-15 (restoration in progress)
+## Hosted failure and rollback reversal — 2026-11-15
 
-The user requested returning to the version before the plot-formatting release
-because of reported slowness and `FUNCTION_INVOCATION_FAILED` in the hosted
-FourField input view. Restore GUI source from
-`ce67394295ac5b5de4a2cbb54b9c533e387dcd7d`; retain CSV downloads, multiple
-figures, internal legends and cross-dataset vector selection from that release.
-The added Times New Roman default and axis/per-series styling controls are
-withdrawn. Preserve their implementation and verification evidence in Git
-history and `outputs/verification/gui-plot-formatting-01/`.
+Latest user instruction: retain the formatting update because the reported
+failure is a Vercel runtime error. Rollback commit `253951f` had already reached
+production when this instruction arrived. That rollback was then reversed by
+promoting existing formatting deployment `dpl_36vDBqcvPKM7Hx5iu7eM6cwNV8yv`
+(source `e09e11f`) back to production. Local GUI source, tests and GUI guide are
+also restored to that version. Times New Roman, editable axes and independent
+series colors/styles remain current features. Preserve the rollback and all
+verification records as history; do not introduce backend or governing-equation
+changes as part of this reversal.
 
 The runtime log for request `gbvgb-1794791551007-ea69aa433ef7` at
 `2026-11-16T01:12:33.992Z` identifies the failure on `POST /api/validate`:
@@ -22,11 +23,15 @@ or solver execution. Other observed failures mention NumPy, SciPy and CoolProp
 installation. Evidence is retained under `outputs/verification/gui-rollback-01/`.
 All Python modules and dependency declarations were unchanged by the formatting
 release; the logs do not establish that JavaScript changes caused disk pressure.
-Restored-release checks remain pending. Historical passing checks below did not
-cover every hosted failure or establish a performance baseline. No governing equation, closure model, solver input or scientific
-acceptance criterion is changed by this rollback. Keep saved runs intact.
 
-## GUI plot formatting — 2026-11-15 (withdrawn; historical verification)
+The brief rollback release returned HTTP 200 for three validation requests in
+approximately 0.2 seconds each; see `restored-release-checks.json` in that evidence
+directory. Those checks do not establish general reliability or fix the runtime
+packaging/disk-exhaustion issue. That cold-start failure remains unresolved and
+requires a separately verified deployment-packaging remedy. Saved runs, scientific
+criteria, status axes, governing equations and closure models remain unchanged.
+
+## GUI plot formatting — 2026-11-15 (retained after rollback reversal)
 
 
 Requested: Times New Roman as the default plot font; editable X/Y axis labels,

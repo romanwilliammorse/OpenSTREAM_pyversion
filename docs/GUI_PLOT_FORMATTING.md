@@ -1,10 +1,12 @@
 # GUI plot formatting verification
 
-**Release status: withdrawn at the user's request.** The user reported
-slowness and a hosted `FUNCTION_INVOCATION_FAILED` error after this release.
-The GUI is being restored to pre-formatting commit
-`ce67394295ac5b5de4a2cbb54b9c533e387dcd7d`. This document and its evidence
-are retained as a historical record, not a statement of current GUI features.
+**Release status: retained under the user's latest instruction.** The user
+initially requested rollback after slowness and a hosted
+`FUNCTION_INVOCATION_FAILED` error. Rollback commit `253951f` reached production
+before the user clarified that the update should remain if the failure was a
+Vercel error. The rollback was reversed by promoting existing formatting
+deployment `dpl_36vDBqcvPKM7Hx5iu7eM6cwNV8yv` (source `e09e11f`) back to
+production. The formatting capabilities described below remain current.
 The runtime log for request `gbvgb-1794791551007-ea69aa433ef7` at
 `2026-11-16T01:12:33.992Z` shows a dependency-installation failure on
 `POST /api/validate`: unpacking Plotly 7.1.0 into Vercel's temporary wheel cache
@@ -13,9 +15,12 @@ exit 1. This preceded application validation and solver execution. Other
 observed installation failures mention NumPy, SciPy and CoolProp. All Python
 modules and dependency declarations were unchanged; these logs do not prove
 that the JavaScript update caused disk pressure. See
-`outputs/verification/gui-rollback-01/`. Restored-release verification remains
-pending. Passing tests below do not establish performance or reliability for
-every hosted request.
+`outputs/verification/gui-rollback-01/`. Three validation requests on the brief
+rollback release returned HTTP 200 in approximately 0.2 seconds each; the
+`restored-release-checks.json` receipt preserves this limited observation.
+The runtime packaging/disk-exhaustion issue remains unresolved; neither those
+checks nor the passing tests below establish reliability for every hosted
+request. No backend or governing-equation change is included in this reversal.
 
 Date: 2026-11-15. This update changes browser presentation only. No Python
 module, solver equation, closure, physical input, numerical control, reference
